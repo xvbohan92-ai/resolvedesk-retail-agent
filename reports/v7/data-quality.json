@@ -1,0 +1,31 @@
+{
+  "splits": {
+    "train": {
+      "rows": 96,
+      "unique_interactions": 96,
+      "unique_worlds": 96,
+      "unique_initial_requests": 96,
+      "unique_entities": 868
+    },
+    "valid": {
+      "rows": 48,
+      "unique_interactions": 48,
+      "unique_worlds": 48,
+      "unique_initial_requests": 48,
+      "unique_entities": 434
+    },
+    "test": {
+      "rows": 48,
+      "unique_interactions": 48,
+      "unique_worlds": 48,
+      "unique_initial_requests": 48,
+      "unique_entities": 434
+    }
+  },
+  "physical_training_pairs": 824,
+  "unique_training_pairs": 824,
+  "analysis_plan_sha256": "07052642e5a803cf4ec736be8bd2cb3949c86debb1cf159a0c39bbb373ca99cf",
+  "analysis_plan_precedes_test_events": true,
+  "physical_training_pairs_deduplicated": true,
+  "prior_worlds_not_reused": true
+}

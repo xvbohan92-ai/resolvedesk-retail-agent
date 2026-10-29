@@ -1,0 +1,83 @@
+{
+  "identity": {
+    "provider": "ollama",
+    "model": "resolvedesk-qwen3:4b",
+    "digest": "cba69c01b2ca0cec9b5b4e20519432714353c5ff4f4de983cbdf7a79403c3ddd",
+    "version": "0.34.2",
+    "transport": "application JSON dispatch"
+  },
+  "case": "valid-return-00",
+  "state": {
+    "case_id": "valid-return-00",
+    "customer": {
+      "email": "shopper20200@retail.example",
+      "gift_card": {
+        "balance_cents": 8000,
+        "id": "gift_20200"
+      },
+      "id": "u_20200"
+    },
+    "id": "837106c672f28774f46c0930",
+    "messages": [
+      {
+        "content": "Could you handle the following for me? Please return the shirt and refund it to the original payment method. Order ORD-20200. My email is shopper20200@retail.example.",
+        "role": "customer"
+      }
+    ],
+    "observations": [
+      {
+        "action": null,
+        "raw": "We are given a customer message that asks to return a shirt and refund to original payment method for order ORD-20200, and the customer provides email: shopper20200@retail.example.\n\nFirst, we must identify the customer using the email. The tool `identify_customer` requires the email. We have the email from the customer.\n\nSo, the next step is to call `identify_customer` with the provided email.\n\nWe do not have any observations, so we just use the customer's message.\n\nTherefore, the tool to call is `identify_customer` with the email: \"shopper2`20200@retail.example\"\n\nBut note: the email in the customer message is: \"shopper20200@retail.example",
+        "result": {
+          "detail": "1 validation error for Action\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='We are given a customer ...per20200@retail.example', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v",
+          "error": "invalid_action_json"
+        },
+        "timing": {
+          "finish_reason": "length",
+          "input_tokens": 536,
+          "latency_ms": 3785.61,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 160,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      }
+    ],
+    "order_keys": {
+      "ORD-20200": "837106c672f28774f46c0930:ORD-20200"
+    },
+    "products": {
+      "p_20231": {
+        "name": "Everyday shirt",
+        "product_id": "p_20231",
+        "variants": [
+          {
+            "available": true,
+            "item_id": "item_20207",
+            "option": "black / M",
+            "price_cents": 3200
+          },
+          {
+            "available": true,
+            "item_id": "item_20219",
+            "option": "navy / XL",
+            "price_cents": 3700
+          },
+          {
+            "available": true,
+            "item_id": "item_20243",
+            "option": "white / S",
+            "price_cents": 2900
+          }
+        ]
+      }
+    },
+    "proposal": null,
+    "read_orders": {},
+    "revision": 1,
+    "status": "failed",
+    "user_id": null
+  },
+  "orders_unchanged": true,
+  "scope": "Actual Ollama inference on a validation fixture; profile closes thinking prefix only, no SFT in Ollama."
+}

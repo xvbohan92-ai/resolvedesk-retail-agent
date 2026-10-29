@@ -1,0 +1,23 @@
+{
+  "url": "http://127.0.0.1:8771/",
+  "experiment": "v4",
+  "observation": "Actual CUA browser screenshot and read-only rendered DOM inspection",
+  "evaluation_sha256": "3a19cf2d2cdc9b9203489cb8842563bd5685a409cfc602342dd4a9a08079aa53",
+  "screenshot_sha256": "7cbf03b80ad7100ec2ce5f1c7ea831afc74c25aad8e0d9774eb12853143c0979",
+  "screenshot_size": [
+    65536,
+    4292542531
+  ],
+  "four_figures_loaded": true,
+  "natural_widths": [
+    2240,
+    2240,
+    3200,
+    3520
+  ],
+  "body_width": 1280,
+  "viewport_width": 1280,
+  "horizontal_page_overflow": false,
+  "fallback_incomplete_notice_visible": true,
+  "pending_customer_proposal_not_confirmed_during_page_verification": true
+}

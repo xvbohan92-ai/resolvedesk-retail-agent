@@ -1,0 +1,83 @@
+{
+  "identity": {
+    "provider": "ollama",
+    "model": "qwen3:4b",
+    "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "version": "0.34.2",
+    "transport": "application JSON dispatch"
+  },
+  "case": "valid-return-00",
+  "state": {
+    "case_id": "valid-return-00",
+    "customer": {
+      "email": "shopper20200@retail.example",
+      "gift_card": {
+        "balance_cents": 8000,
+        "id": "gift_20200"
+      },
+      "id": "u_20200"
+    },
+    "id": "77cc868d026fc0d3a6147cd3",
+    "messages": [
+      {
+        "content": "Could you handle the following for me? Please return the shirt and refund it to the original payment method. Order ORD-20200. My email is shopper20200@retail.example.",
+        "role": "customer"
+      }
+    ],
+    "observations": [
+      {
+        "action": null,
+        "raw": "Okay, let's see. The customer wants to return a shirt and get a refund to the original payment method. The order ID is ORD-20200, and their email is shopper20200@retail.example.\n\nFirst, I need to identify the customer using their email. The tool identify_customer requires the email. So I should call that first. Wait, the customer already provided their email, so maybe I can use that. But according to the tools, identify_customer is required before any order lookup. So the next step is to use identify_customer with the email they gave.\n\nWait, the customer message says \"My email is shopper2020:retail.example.\" Wait, the email is shopper20200@retail.example. So",
+        "result": {
+          "detail": "1 validation error for Action\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Okay, let\\'s see. The cu...0200@retail.example. So', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v",
+          "error": "invalid_action_json"
+        },
+        "timing": {
+          "finish_reason": "length",
+          "input_tokens": 534,
+          "latency_ms": 19966.54,
+          "model": "qwen3:4b",
+          "output_tokens": 160,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      }
+    ],
+    "order_keys": {
+      "ORD-20200": "77cc868d026fc0d3a6147cd3:ORD-20200"
+    },
+    "products": {
+      "p_20231": {
+        "name": "Everyday shirt",
+        "product_id": "p_20231",
+        "variants": [
+          {
+            "available": true,
+            "item_id": "item_20207",
+            "option": "black / M",
+            "price_cents": 3200
+          },
+          {
+            "available": true,
+            "item_id": "item_20219",
+            "option": "navy / XL",
+            "price_cents": 3700
+          },
+          {
+            "available": true,
+            "item_id": "item_20243",
+            "option": "white / S",
+            "price_cents": 2900
+          }
+        ]
+      }
+    },
+    "proposal": null,
+    "read_orders": {},
+    "revision": 1,
+    "status": "failed",
+    "user_id": null
+  },
+  "orders_unchanged": true,
+  "scope": "Validation fixture only; no confirmation or order mutation. Actual local inference."
+}

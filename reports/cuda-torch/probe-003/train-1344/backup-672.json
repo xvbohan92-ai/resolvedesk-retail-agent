@@ -1,0 +1,9 @@
+{
+  "backed_up_at_utc": "2026-10-28T21:03:38.462419+00:00",
+  "checkpoint_iteration": 672,
+  "adapter_sha256": "047b82cb401bf642227417177f9230d75a754edab9dd1c4cf9d05db740b4b00d",
+  "training_status": "training",
+  "actual_updates_at_backup": 741,
+  "purpose": "Backup only; final1344 remains the predeclared evaluation candidate",
+  "snapshot_sha256": "2f0409ce731e1b455c4e4b9ccd8bb30d8bcb6c43ddf2feb14d9baf977ff1f21c"
+}

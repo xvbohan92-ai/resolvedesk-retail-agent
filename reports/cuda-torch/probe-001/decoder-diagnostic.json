@@ -1,0 +1,62 @@
+{
+  "scope": "actual three source slices, diagnostic only",
+  "checks": [
+    {
+      "source": "model.embed_tokens",
+      "mlx_dtype": "mlx.core.bfloat16",
+      "values": 5120,
+      "variants": {
+        "f32_once": {
+          "mismatches": 2635,
+          "max_abs_error": 0.00048828125
+        },
+        "bf16_separate": {
+          "mismatches": 0,
+          "max_abs_error": 0.0
+        },
+        "f32_mul_bf16_add": {
+          "mismatches": 0,
+          "max_abs_error": 0.0
+        }
+      }
+    },
+    {
+      "source": "model.layers.28.self_attn.q_proj",
+      "mlx_dtype": "mlx.core.bfloat16",
+      "values": 5120,
+      "variants": {
+        "f32_once": {
+          "mismatches": 2279,
+          "max_abs_error": 0.000244140625
+        },
+        "bf16_separate": {
+          "mismatches": 0,
+          "max_abs_error": 0.0
+        },
+        "f32_mul_bf16_add": {
+          "mismatches": 0,
+          "max_abs_error": 0.0
+        }
+      }
+    },
+    {
+      "source": "model.layers.35.mlp.down_proj",
+      "mlx_dtype": "mlx.core.bfloat16",
+      "values": 19456,
+      "variants": {
+        "f32_once": {
+          "mismatches": 10433,
+          "max_abs_error": 0.0078125
+        },
+        "bf16_separate": {
+          "mismatches": 0,
+          "max_abs_error": 0.0
+        },
+        "f32_mul_bf16_add": {
+          "mismatches": 0,
+          "max_abs_error": 0.0
+        }
+      }
+    }
+  ]
+}

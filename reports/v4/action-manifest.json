@@ -1,0 +1,14 @@
+{
+  "original_sft_manifest_sha256": "251d5e3c82f2de3cfc759eed9c3a6e3a04c0245807df84090c8c1de23853b52f",
+  "original_preference_manifest_sha256": "c4709fbd4850fcdd1cc57fc89aaaf0f4e71c21328c397096aa8ad1455825dfcc",
+  "failed_validation_sha256": "2b79184c70809e9d07fb65f5f196ec6eda25ab80ddc66abfdd3dae5b5c31f1d8",
+  "files": {
+    "training/v4/action_preference.py": "b0ea48ccde59709cd777ed089d4864027e6dfed37fbb5f9171b182c53a49269c",
+    "training/v4/action-preference-protocol.json": "d87bfc086dcaee805bf2a0cbe0506567c2942c23e84573c0aa269fe643c40dea",
+    "training/v4/datasets/action-preference.jsonl": "25d5a9c1caf4448c1a0862d45de1b64fc4d58d51f8ed2540ebd5f4c129405523",
+    "training/v4/action_select.py": "bc52db69590528285ce284f4850c852698ad486a5ab4bff0c675a9205f6e5a7e"
+  },
+  "sft_480_sha256": "bb3aa1e1cc85d6d1c1223746852f41df206984ec3e9b47011241226649ecc89c",
+  "test_inference_started_at_freeze": false,
+  "pair_count": 136
+}

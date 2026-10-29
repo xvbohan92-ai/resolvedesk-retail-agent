@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "ready_pending_github_write_authorization",
+  "checked_at_utc": "2026-10-29T15:55:02.593668+00:00",
+  "public_core_tests": {
+    "passed": 150,
+    "skipped": 0,
+    "failed": 0,
+    "scope": "API, boundaries, workflows and resolution controllers; original private archive tests are outside the public CI scope"
+  },
+  "locked_fresh_environment_install": "passed",
+  "python": "3.12",
+  "ruff": "passed",
+  "frontend_javascript_syntax": "passed",
+  "front_document_relative_links": "all present",
+  "lossless_public_archives_verified": 75,
+  "public_projection_reconciliation": {
+    "status": "public_projection_consistent",
+    "counts": {
+      "cases": 48,
+      "arms": 2,
+      "records": 96,
+      "completed_model_calls": 509,
+      "csv_rows": 96,
+      "chart_groups": 6
+    },
+    "receipt_sha256": "65b13b512708a04b27fc3f1989ab5af83a4911c8c231fc2bfea4ab609f11c384"
+  },
+  "privacy_redactions_ledger_sha256": "09ab7334e018c4f6da4e7cf80c7b58ba47332612af3cf572ad09b3fb1da166f2",
+  "private_original_seal_recertified": false,
+  "private_receipts_weights_databases_credentials_published": false,
+  "v8": {
+    "actual_smoke_updates": 4,
+    "formal_updates": 0,
+    "evaluation_model_calls": 0,
+    "quality_results_available": false
+  },
+  "remote_ci": "not_started_until_upload",
+  "private_build_path_followup": {
+    "checked_at_utc": "2026-10-29T17:45:44.424639+00:00",
+    "portable_interpreter_path_fields": 3,
+    "private_absolute_user_paths_or_private_notebook_urls_remaining": 0,
+    "scientific_reconciliation_status": "public_projection_consistent",
+    "reconciliation_counts": {
+      "cases": 48,
+      "arms": 2,
+      "records": 96,
+      "completed_model_calls": 509,
+      "csv_rows": 96,
+      "chart_groups": 6
+    },
+    "prior_public_reconciliation_receipt_sha256": "c1ef9124bcf47dc42696827cc95b16425c574e6418e1dc77f576aed34a0ab437",
+    "current_public_reconciliation_receipt_sha256": "65b13b512708a04b27fc3f1989ab5af83a4911c8c231fc2bfea4ab609f11c384",
+    "only_changed_reconciliation_input": "public-redactions.json",
+    "all18_scientific_reconciliation_inputs_unchanged": true,
+    "all_model_results_failures_scoring_token_checks_unchanged": true,
+    "public_core_tests_rerun": false,
+    "model_or_cloud_calls": 0,
+    "scope": "Privacy-only metadata and publication-wording follow-up. The prior150-test result is retained, not re-run. Reconciliation was re-executed because its ledger-input hash changed; every scientific input and result is identical."
+  }
+}

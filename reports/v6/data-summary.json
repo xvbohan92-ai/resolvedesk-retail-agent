@@ -1,0 +1,26 @@
+{
+  "tasks": {
+    "train": 96,
+    "valid": 48,
+    "test": 48
+  },
+  "rows": {
+    "train": 590,
+    "valid": 255,
+    "test": 255
+  },
+  "recovery_trajectories": 16,
+  "train_actions": {
+    "get_order": 112,
+    "record_request": 122,
+    "identify_customer": 112,
+    "handoff": 48,
+    "get_product": 76,
+    "ask_customer": 56,
+    "propose_return": 28,
+    "propose_exchange": 28,
+    "propose_cancel": 8
+  },
+  "all_reference_tasks_pass": true,
+  "scope": "Self-authored synthetic worlds and language. Intentional within-split counterfactual sharing; recovery states are not new tasks or wrong supervised labels."
+}

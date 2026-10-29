@@ -1,0 +1,20 @@
+{
+  "analysis_plan_sha256": "b5abd64ec3f84c11f2eb588cb1e4d89335d7168f7785d3fa289ad2c0a816b860",
+  "severity": "Training duplicates disclosed; final evaluation has no exact duplicates",
+  "raw_rows": {
+    "valid": 48,
+    "test": 48
+  },
+  "unique_interactions": {
+    "valid": 48,
+    "test": 48
+  },
+  "unique_test_worlds": 28,
+  "training_snapshots": {
+    "rows": 590,
+    "unique_prompt_completion_pairs": 510
+  },
+  "first_source_selection_verified": true,
+  "analysis_plan_precedes_test_events": true,
+  "remediation": "The duplicate V6 test plan was retired without inference. Final validation/test each have 48 unique interactions. Actual SFT inputs remain disclosed."
+}

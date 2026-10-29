@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "scope": "Three real source tensor slices only, not full-base numerical equivalence",
+  "checks": [
+    {
+      "source": "model.embed_tokens",
+      "values": 5120,
+      "logical_bf16_exact": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "source": "model.layers.28.self_attn.q_proj",
+      "values": 5120,
+      "logical_bf16_exact": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "source": "model.layers.35.mlp.down_proj",
+      "values": 19456,
+      "logical_bf16_exact": true,
+      "max_abs_error": 0.0
+    }
+  ]
+}

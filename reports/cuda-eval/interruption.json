@@ -1,0 +1,62 @@
+{
+  "status": "interrupted",
+  "observed_at_utc": "2026-10-28T23:43:01.051695+00:00",
+  "observation": "Colab displayed runtime disconnected due to inactivity or duration limit; Manage sessions showed no active sessions. Free quota had previously shown exhausted. Exact termination time and later outputs are unknown.",
+  "analysis_plan_sha256": "cb08373c73938335659c018b13bd2ca31e76dda43a96b73e34bc3b0e30ce5866",
+  "last_verified_snapshot_at_utc": "2026-10-28T23:34:30.716348+00:00",
+  "last_verified_completed_cases": 84,
+  "last_verified_completed_by_arm": {
+    "predecessor_fp16": 48,
+    "cloud1344_fp16": 36
+  },
+  "complete_record_calls": 744,
+  "retained_journal_entries": 755,
+  "retained_completed_journal_entries": 754,
+  "retained_started_journal_entries": 1,
+  "pending_case": {
+    "variant": "cloud1344_fp16",
+    "case_id": "cuda-fresh-test-exchange_stockout_negative_quote-00",
+    "started_at_utc": "2026-10-28T23:33:07.179213+00:00"
+  },
+  "unresolved_call": {
+    "variant": "cloud1344_fp16",
+    "case_id": "cuda-fresh-test-exchange_stockout_negative_quote-00",
+    "call_index": 11,
+    "started_at_utc": "2026-10-28T23:34:27.932738+00:00",
+    "status": "started",
+    "request_sha256": "9604345fa02aa3fbf9a99bf4471a08e249862534fb3d26fc5cac2db87362d4ea"
+  },
+  "complete_96_record_evidence_available": false,
+  "later_actual_progress_known": false,
+  "automatic_model_replay_allowed": false,
+  "model_replayed": false,
+  "checkpoint_selection_performed": false,
+  "raw_snapshot": {
+    "path": "../exports/resolvedesk-colab-eval-ready/resolvedesk-cuda-eval-midrun-20261028T233430Z.zip",
+    "sha256": "5f94ca79b20997987d09d5849d645b9761fc000462f8de1a9e91801bcd6fc741",
+    "bytes": 7517931,
+    "member_sha256": {
+      "evaluation-partial.json": "813a71c2ac92ad45226c9cbbeecf51ba8f4841bb8e4ec03bba5b46b39ec95656",
+      "analysis-plan.json": "cb08373c73938335659c018b13bd2ca31e76dda43a96b73e34bc3b0e30ce5866",
+      "artifact-identity.json": "5cc119b4bfcd9792579fcc6fa8d4ca3ac2a04d35a601ee0c02b6cc91b10fd5dd",
+      "call-journal.json": "7bc732855f10b9b457e1015a1033d794f23f077c9c94a7216c55edab8c993914",
+      "evaluation-launch.json": "8e9cc7d8f41af9316a0cbed443c101977cfd4b8f57c0bdfc8d5be8c90b402a5d",
+      "evaluation-console.log": "4235b376561b215b09b6416882fc8e087be9290b16d8a5c9a46ef665ffd0b777",
+      "seal-console.log": "5cc119b4bfcd9792579fcc6fa8d4ca3ac2a04d35a601ee0c02b6cc91b10fd5dd"
+    }
+  },
+  "training": {
+    "status": "completed",
+    "updates": 1344,
+    "independent_numeric_values_checked": true,
+    "verification_path": "reports/cuda-torch/probe-003/train-1344/verification.json",
+    "adapter_sha256": "33fe5c505ddf08cd8cb4032dbd9d350fa205134417ec0f1f90648f4af658e053"
+  },
+  "evidence_image": "docs/colab-cuda-evaluation-interrupted.png",
+  "limitations": [
+    "84 is the last verified snapshot count, not a known final completed count.",
+    "No complete paired 48-versus-48 accuracy or six final result charts are published.",
+    "An issued call without an observed completion cannot be assumed unexecuted.",
+    "A separate future run must not be merged into this interrupted run or relabeled as fresh blind data when reusing its test cases."
+  ]
+}

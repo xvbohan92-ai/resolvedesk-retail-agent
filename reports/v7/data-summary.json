@@ -1,0 +1,95 @@
+{
+  "tasks": {
+    "train": 96,
+    "valid": 48,
+    "test": 48
+  },
+  "rows": {
+    "train": 824,
+    "valid": 252,
+    "test": 252
+  },
+  "raw_train_rows_before_deduplication": 940,
+  "duplicate_training_pairs_removed": 116,
+  "recovery_trajectories": 76,
+  "recovery_types": {
+    "enum_cancel": 8,
+    "stale_evidence": 12,
+    "enum_exchange": 24,
+    "repeat_ask": 16,
+    "false_yes": 16
+  },
+  "train_actions": {
+    "record_request": 158,
+    "get_product": 100,
+    "identify_customer": 152,
+    "propose_return": 50,
+    "propose_cancel": 18,
+    "ask_customer": 90,
+    "get_order": 152,
+    "propose_exchange": 44,
+    "handoff": 60
+  },
+  "train_sample_roles": {
+    "initial_record": 96,
+    "tool_action": 666,
+    "record_recovery": 62
+  },
+  "permissions": {
+    "train": {
+      "unknown": 48,
+      "yes": 24,
+      "no": 24
+    },
+    "valid": {
+      "unknown": 24,
+      "yes": 12,
+      "no": 12
+    },
+    "test": {
+      "unknown": 24,
+      "yes": 12,
+      "no": 12
+    }
+  },
+  "training_record_permission_targets": {
+    "unknown": 72,
+    "yes": 46,
+    "no": 40
+  },
+  "all_reference_tasks_pass": true,
+  "unique_interactions": {
+    "train": 96,
+    "valid": 48,
+    "test": 48
+  },
+  "unique_initial_model_prompts": {
+    "train": 96,
+    "valid": 48,
+    "test": 48
+  },
+  "unique_order_worlds": {
+    "train": 96,
+    "valid": 48,
+    "test": 48
+  },
+  "unique_entities": {
+    "train": 868,
+    "valid": 434,
+    "test": 434
+  },
+  "unique_training_prompt_completion_pairs": 824,
+  "split_entities_and_initial_inputs_disjoint": true,
+  "no_prior_order_worlds_reused": true,
+  "no_prior_entities_or_initial_messages_reused": true,
+  "interaction_fields": [
+    "initial_message",
+    "customer",
+    "orders",
+    "products",
+    "answers",
+    "confirmation",
+    "required_answers"
+  ],
+  "scope": "Self-authored synthetic language and independent worlds. Wrong synthetic actions are recovery input state only, never supervised labels. Repeated inputs are physically removed from SFT; sampling repetitions during optimization must be reported separately."
+}

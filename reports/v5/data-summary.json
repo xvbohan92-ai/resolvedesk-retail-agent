@@ -1,0 +1,27 @@
+{
+  "tasks": {
+    "train": 64,
+    "valid": 32,
+    "test": 32
+  },
+  "rows": {
+    "train": 344,
+    "valid": 164,
+    "test": 164
+  },
+  "duplicated_contrast_snapshots": 16,
+  "train_actions": {
+    "identify_customer": 64,
+    "get_order": 64,
+    "handoff": 16,
+    "record_request": 84,
+    "record_request_contrast_repeat": 16,
+    "propose_exchange": 20,
+    "get_product": 32,
+    "propose_cancel": 8,
+    "ask_customer": 20,
+    "propose_return": 20
+  },
+  "all_reference_tasks_pass": true,
+  "scope": "Self-authored synthetic scenarios. Counterfactual worlds share IDs within a split only."
+}

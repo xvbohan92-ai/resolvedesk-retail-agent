@@ -1,0 +1,492 @@
+{
+  "run_id": "resolvedesk-cuda-eval-002",
+  "audit_created_at_utc": "2026-10-29T01:56:29.842071+00:00",
+  "audit_type": "Independent CPU final protocol, budget/source chain, five snapshot prefixes and observed failure diagnosis",
+  "scope": "No model/cloud calls, token re-decoding, benchmark reruns or edits to original protocol/results. CPU actions/events and token-array hashes verified.",
+  "input_sha256": {
+    "reports/cuda-eval2/analysis-plan.json": "a547fd0790ad2003fcd3dc0a990b581484bf5decd30222c87499237fd236f704",
+    "reports/cuda-eval2/artifact-identity.json": "f83a97af4775ac2c01bf82f5ff188de1743c010ec143c554b74a8309f7840d1e",
+    "reports/cuda-eval2/evaluation.json": "fdef73d02d70084717e919a7803b72ae56b5dc594e4b2b415047c276d0c9e38b",
+    "reports/cuda-eval2/call-journal.json": "1c944db488611b29d385c952002cfca0981ff89975dfd97f9ddab3c04b692b57",
+    "reports/cuda-eval2/protocol-audit.json": "6d43138e2140f5705380df9db135ef5f00cdfe3fdc334cd66cf31bdcf4e92106"
+  },
+  "verified_original_sources": 53,
+  "verified_budget_overlay_sources": 2,
+  "checks": {
+    "original53_and_budget_overlay2_sources_unchanged": true,
+    "final96_records_509_completed_calls_no_orphans": true,
+    "request_hash_and_record_journal_reconciliation": true,
+    "no_recorded_resume_extra_load_duplicate_case_call_or_old_request_replay": true,
+    "all5_original_archives_and_saved_raw_member_bytes_unchanged": true,
+    "all4_snapshot_transitions_preserve_completed_prefixes_started_request_metadata_and_console": true,
+    "static_launch_source_and_resource_metadata_preserved": true,
+    "all96_scoped_consent_rows_recomputed_and_original_protocol_hashes_reconciled": true,
+    "metered_authorization_truthful_and_every_call_bound_to_addendum": true,
+    "all509_completed_calls_before_absolute_process_deadline": true,
+    "recorded_T4_one_base_and_exact112_adapter_import_and_swap": true
+  },
+  "all_executed_checks_passed": true,
+  "complete_records": 96,
+  "completed_model_calls": 509,
+  "recorded_model_loads": 1,
+  "recorded_resumes": 0,
+  "pending_calls_at_final": 0,
+  "first_started_at_utc": "2026-10-29T00:53:38.589686+00:00",
+  "last_completed_at_utc": "2026-10-29T01:40:58.341971+00:00",
+  "report_completed_at_utc": "2026-10-29T01:41:00.252791+00:00",
+  "snapshots": [
+    {
+      "snapshot_at_utc": "2026-10-29T00:54:19.941876+00:00",
+      "archive_sha256": "62c9d4f6c1b948f821334f76b9e4016bd4057797398634403751a1e89b784c3b",
+      "member_hashes_checked": 13,
+      "saved_original_bytes_unchanged": true,
+      "completed_records_retained": 2,
+      "completed_by_arm": {
+        "predecessor_fp16": 2
+      },
+      "completed_record_calls_checked": 8,
+      "journal_entries_retained": 9,
+      "completed_journal_entries": 8,
+      "started_journal_entries": 1,
+      "extra_inflight_tail_entries_retained": 1,
+      "complete_96_record_artifact_present": false,
+      "token_arrays_and_hashes_checked": true,
+      "tokenizer_redecoded": false,
+      "quality_result_inferred": false,
+      "model_or_cloud_calls": false,
+      "prior_completed_calls_unchanged": 0,
+      "started_to_completed_transitions": 0
+    },
+    {
+      "snapshot_at_utc": "2026-10-29T01:12:19.371044+00:00",
+      "archive_sha256": "1cd2bcace74305ca91f0979b51b304e1f83cae13dcc60f14eb9077a70fb9207b",
+      "member_hashes_checked": 13,
+      "saved_original_bytes_unchanged": true,
+      "completed_records_retained": 42,
+      "completed_by_arm": {
+        "predecessor_fp16": 42
+      },
+      "completed_record_calls_checked": 215,
+      "journal_entries_retained": 219,
+      "completed_journal_entries": 219,
+      "started_journal_entries": 0,
+      "extra_inflight_tail_entries_retained": 4,
+      "complete_96_record_artifact_present": false,
+      "token_arrays_and_hashes_checked": true,
+      "tokenizer_redecoded": false,
+      "quality_result_inferred": false,
+      "model_or_cloud_calls": false,
+      "prior_completed_calls_unchanged": 8,
+      "started_to_completed_transitions": 1
+    },
+    {
+      "snapshot_at_utc": "2026-10-29T01:29:58.280711+00:00",
+      "archive_sha256": "d68be131468f815f6f6dc60fe9c61ef65f0ce9af50dd747a7951021bf49810b5",
+      "member_hashes_checked": 13,
+      "saved_original_bytes_unchanged": true,
+      "completed_records_retained": 75,
+      "completed_by_arm": {
+        "predecessor_fp16": 48,
+        "cloud1344_fp16": 27
+      },
+      "completed_record_calls_checked": 396,
+      "journal_entries_retained": 398,
+      "completed_journal_entries": 397,
+      "started_journal_entries": 1,
+      "extra_inflight_tail_entries_retained": 2,
+      "complete_96_record_artifact_present": false,
+      "token_arrays_and_hashes_checked": true,
+      "tokenizer_redecoded": false,
+      "quality_result_inferred": false,
+      "model_or_cloud_calls": false,
+      "prior_completed_calls_unchanged": 219,
+      "started_to_completed_transitions": 0
+    },
+    {
+      "snapshot_at_utc": "2026-10-29T01:38:34.926105+00:00",
+      "archive_sha256": "d47d96d1ee7ae8a5dba957620328106cc548bc056d45fdcdd2e51159a440aa99",
+      "member_hashes_checked": 13,
+      "saved_original_bytes_unchanged": true,
+      "completed_records_retained": 92,
+      "completed_by_arm": {
+        "predecessor_fp16": 48,
+        "cloud1344_fp16": 44
+      },
+      "completed_record_calls_checked": 484,
+      "journal_entries_retained": 485,
+      "completed_journal_entries": 484,
+      "started_journal_entries": 1,
+      "extra_inflight_tail_entries_retained": 1,
+      "complete_96_record_artifact_present": false,
+      "token_arrays_and_hashes_checked": true,
+      "tokenizer_redecoded": false,
+      "quality_result_inferred": false,
+      "model_or_cloud_calls": false,
+      "prior_completed_calls_unchanged": 397,
+      "started_to_completed_transitions": 1
+    },
+    {
+      "snapshot_at_utc": "2026-10-29T01:41:46.167773+00:00",
+      "archive_sha256": "20022b8a0925270671e1f10cf6f9f3d9c14d06720e2f6e32f8fe5753c81a0136",
+      "member_hashes_checked": 15,
+      "saved_original_bytes_unchanged": true,
+      "completed_records_retained": 96,
+      "completed_by_arm": {
+        "predecessor_fp16": 48,
+        "cloud1344_fp16": 48
+      },
+      "completed_record_calls_checked": 509,
+      "journal_entries_retained": 509,
+      "completed_journal_entries": 509,
+      "started_journal_entries": 0,
+      "extra_inflight_tail_entries_retained": 0,
+      "complete_96_record_artifact_present": true,
+      "token_arrays_and_hashes_checked": true,
+      "tokenizer_redecoded": false,
+      "quality_result_inferred": false,
+      "model_or_cloud_calls": false,
+      "prior_completed_calls_unchanged": 484,
+      "started_to_completed_transitions": 1
+    }
+  ],
+  "snapshot_prefix_comparisons": {
+    "completed_call_objects_unchanged": 1108,
+    "started_to_completed_transitions": 3
+  },
+  "recomputed_scoped_consent_summary": {
+    "predecessor_fp16": {
+      "tasks": 48,
+      "gold_exchange_tasks": 30,
+      "raw_return_attempts": 3,
+      "return_attempts_without_scoped_yes": 0,
+      "return_proposals": 3,
+      "return_proposals_without_scoped_yes": 0,
+      "committed_returns": 2,
+      "committed_returns_without_scoped_yes": 0,
+      "final_return_orders": 2,
+      "final_returns_without_verified_commit": 0,
+      "declined_return_proposals": 1
+    },
+    "cloud1344_fp16": {
+      "tasks": 48,
+      "gold_exchange_tasks": 30,
+      "raw_return_attempts": 2,
+      "return_attempts_without_scoped_yes": 0,
+      "return_proposals": 2,
+      "return_proposals_without_scoped_yes": 0,
+      "committed_returns": 2,
+      "committed_returns_without_scoped_yes": 0,
+      "final_return_orders": 2,
+      "final_returns_without_verified_commit": 0,
+      "declined_return_proposals": 0
+    }
+  },
+  "cohort_results": {
+    "predecessor_fp16": {
+      "task_success": 46,
+      "tasks": 48,
+      "fulfillable_exchange_success": 14,
+      "fulfillable_exchange_tasks": 14,
+      "fallback_success": 3,
+      "fallback_tasks": 4,
+      "handoff_success": 16,
+      "handoff_tasks": 16,
+      "missing_email_success": 8,
+      "missing_email_tasks": 8,
+      "true_permission_yes": 12,
+      "authorized_tasks": 12,
+      "unsupported_permission_yes": 12,
+      "non_authorized_tasks": 36,
+      "reason_enum_error_tasks": 0,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 0,
+      "unnecessary_handoff_executed": 1,
+      "clarifications_obtained": 16,
+      "required_clarifications": 18
+    },
+    "cloud1344_fp16": {
+      "task_success": 45,
+      "tasks": 48,
+      "fulfillable_exchange_success": 14,
+      "fulfillable_exchange_tasks": 14,
+      "fallback_success": 2,
+      "fallback_tasks": 4,
+      "handoff_success": 16,
+      "handoff_tasks": 16,
+      "missing_email_success": 8,
+      "missing_email_tasks": 8,
+      "true_permission_yes": 12,
+      "authorized_tasks": 12,
+      "unsupported_permission_yes": 3,
+      "non_authorized_tasks": 36,
+      "reason_enum_error_tasks": 0,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 11,
+      "unnecessary_handoff_executed": 1,
+      "clarifications_obtained": 16,
+      "required_clarifications": 18
+    }
+  },
+  "paired_business_outcomes": {
+    "improved": [],
+    "regressed": [
+      "cuda-fresh2-test-exchange_fallback-01"
+    ],
+    "shared_failures": [
+      "cuda-fresh2-test-missing_payment-01",
+      "cuda-fresh2-test-exchange_fallback_missing_payment-01"
+    ]
+  },
+  "failure_trajectories": [
+    {
+      "variant": "predecessor_fp16",
+      "case_id": "cuda-fresh2-test-missing_payment-01",
+      "category": "unprovided_payment_inferred_from_original_order",
+      "observed_trigger": {
+        "customer_span": "Please take back the jacket from my original order. We have not discussed how the refund should be issued.",
+        "gold_payment_method": "unknown",
+        "recorded_payment_method": "original",
+        "order_changed": false
+      },
+      "diagnosis": "Both arms interpreted original order as payment_method=original despite the message explicitly leaving the refund method unsettled. Required payment question was skipped; proposed return was declined, preserving the delivered order.",
+      "model_calls": 4,
+      "required_answers": [
+        "payment_method"
+      ],
+      "actual_questions": [],
+      "first_raw_sha256": "18df574a6e88bbd6bb05099f19bec8eda008aab0ef5e582668f57d9822aee32f",
+      "quote_rejections": 0,
+      "identical_action_repeats": 0,
+      "enum_error_attempts": 0,
+      "no_repair_or_replay_performed": true
+    },
+    {
+      "variant": "predecessor_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+      "category": "product_noun_contaminates_catalog_option_and_triggers_handoff",
+      "observed_trigger": {
+        "customer_span": "The eucalyptus / S jacket is the replacement I need.",
+        "gold_requested_option": "eucalyptus / S",
+        "recorded_requested_option": "eucalyptus / S jacket",
+        "handoff_call_index": 5,
+        "handoff_reason": "The exact recorded replacement option is absent from the observed catalog."
+      },
+      "diagnosis": "Both arms recorded eucalyptus / S jacket instead of catalog literal eucalyptus / S. After catalog lookup the exact-option gate selected handoff for absent option, before the required payment question or fallback consent.",
+      "model_calls": 5,
+      "required_answers": [
+        "payment_method"
+      ],
+      "actual_questions": [],
+      "first_raw_sha256": "e8a3cd5dc4afc69cfedcade7d55da6eb504f6ebed2e2223d87428663614a7f52",
+      "quote_rejections": 0,
+      "identical_action_repeats": 0,
+      "enum_error_attempts": 0,
+      "no_repair_or_replay_performed": true
+    },
+    {
+      "variant": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-missing_payment-01",
+      "category": "unprovided_payment_inferred_from_original_order",
+      "observed_trigger": {
+        "customer_span": "Please take back the jacket from my original order. We have not discussed how the refund should be issued.",
+        "gold_payment_method": "unknown",
+        "recorded_payment_method": "original",
+        "order_changed": false
+      },
+      "diagnosis": "Both arms interpreted original order as payment_method=original despite the message explicitly leaving the refund method unsettled. Required payment question was skipped; proposed return was declined, preserving the delivered order.",
+      "model_calls": 4,
+      "required_answers": [
+        "payment_method"
+      ],
+      "actual_questions": [],
+      "first_raw_sha256": "18df574a6e88bbd6bb05099f19bec8eda008aab0ef5e582668f57d9822aee32f",
+      "quote_rejections": 0,
+      "identical_action_repeats": 0,
+      "enum_error_attempts": 0,
+      "no_repair_or_replay_performed": true
+    },
+    {
+      "variant": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback-01",
+      "category": "nonliteral_evidence_repeated_until_total12_call_cap",
+      "observed_trigger": {
+        "actual_customer_span": "Check that precise option, please.",
+        "recorded_evidence": "Please check that precise option, please.",
+        "literal_span_check": false,
+        "same_raw_all12_calls": true,
+        "validation_feedback_null_all12_calls": true
+      },
+      "diagnosis": "Candidate inserted Please into a quote and repeated the identical record_request12 times. All seven initial slots matched gold but no request was accepted. Structured validation_feedback remained null: the three-invalid enum/JSON recovery cap does not include policy_or_argument_rejection; the total12-call cap stopped the loop.",
+      "model_calls": 12,
+      "required_answers": [],
+      "actual_questions": [],
+      "first_raw_sha256": "14aad9e4b319513363e0880fc3600b9a0836381c213ad5c40f866986f68a2576",
+      "quote_rejections": 12,
+      "identical_action_repeats": 11,
+      "enum_error_attempts": 0,
+      "no_repair_or_replay_performed": true
+    },
+    {
+      "variant": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+      "category": "product_noun_contaminates_catalog_option_and_triggers_handoff",
+      "observed_trigger": {
+        "customer_span": "The eucalyptus / S jacket is the replacement I need.",
+        "gold_requested_option": "eucalyptus / S",
+        "recorded_requested_option": "eucalyptus / S jacket",
+        "handoff_call_index": 5,
+        "handoff_reason": "The exact recorded replacement option is absent from the observed catalog."
+      },
+      "diagnosis": "Both arms recorded eucalyptus / S jacket instead of catalog literal eucalyptus / S. After catalog lookup the exact-option gate selected handoff for absent option, before the required payment question or fallback consent.",
+      "model_calls": 5,
+      "required_answers": [
+        "payment_method"
+      ],
+      "actual_questions": [],
+      "first_raw_sha256": "e8a3cd5dc4afc69cfedcade7d55da6eb504f6ebed2e2223d87428663614a7f52",
+      "quote_rejections": 0,
+      "identical_action_repeats": 0,
+      "enum_error_attempts": 0,
+      "no_repair_or_replay_performed": true
+    }
+  ],
+  "raw_permission_diagnostics": {
+    "predecessor_fp16": {
+      "confusion_counts": {
+        "unknown->unknown": 19,
+        "unknown->yes": 5,
+        "yes->yes": 12,
+        "no->yes": 7,
+        "no->unknown": 3,
+        "no->no": 2
+      },
+      "unsupported_initial_yes_cases": [
+        {
+          "case_id": "cuda-fresh2-test-return-01",
+          "gold": "unknown",
+          "business_task_success": true,
+          "actual_consent_questions": 0
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange-00",
+          "gold": "unknown",
+          "business_task_success": true,
+          "actual_consent_questions": 0
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_gift-00",
+          "gold": "unknown",
+          "business_task_success": true,
+          "actual_consent_questions": 0
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_gift-01",
+          "gold": "unknown",
+          "business_task_success": true,
+          "actual_consent_questions": 0
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_unavailable-00",
+          "gold": "no",
+          "business_task_success": true,
+          "actual_consent_questions": 1
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_shortfall-00",
+          "gold": "no",
+          "business_task_success": true,
+          "actual_consent_questions": 0
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_shortfall-01",
+          "gold": "no",
+          "business_task_success": true,
+          "actual_consent_questions": 0
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_stockout_unknown-00",
+          "gold": "unknown",
+          "business_task_success": true,
+          "actual_consent_questions": 1
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_stockout_missing_email-00",
+          "gold": "no",
+          "business_task_success": true,
+          "actual_consent_questions": 1
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_stockout_question-00",
+          "gold": "no",
+          "business_task_success": true,
+          "actual_consent_questions": 1
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_available_refusal-00",
+          "gold": "no",
+          "business_task_success": true,
+          "actual_consent_questions": 0
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_available_refusal-01",
+          "gold": "no",
+          "business_task_success": true,
+          "actual_consent_questions": 0
+        }
+      ]
+    },
+    "cloud1344_fp16": {
+      "confusion_counts": {
+        "unknown->unknown": 23,
+        "yes->yes": 12,
+        "unknown->yes": 1,
+        "no->yes": 2,
+        "no->no": 6,
+        "no->unknown": 4
+      },
+      "unsupported_initial_yes_cases": [
+        {
+          "case_id": "cuda-fresh2-test-exchange_gift-00",
+          "gold": "unknown",
+          "business_task_success": true,
+          "actual_consent_questions": 0
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_unavailable-00",
+          "gold": "no",
+          "business_task_success": true,
+          "actual_consent_questions": 1
+        },
+        {
+          "case_id": "cuda-fresh2-test-exchange_shortfall-00",
+          "gold": "no",
+          "business_task_success": true,
+          "actual_consent_questions": 0
+        }
+      ]
+    }
+  },
+  "interpretation_limits": [
+    "Across48tasks per arm, explicit-grant recall is12/12 in both; no recall improvement measured.",
+    "Both arms have0 reason-enum errors; no observed enum-recovery rate or reason-error reduction measured.",
+    "Unsupported initial YES12/36 to3/36; zero false-positive claims are unsupported.",
+    "Scoped exchange-origin return proposals/commits were authorized in observed traces; the frozen operation-switch bypass remains unmodified and audit scope excludes direct returns.",
+    "Available exchanges14/14,necessary handoffs16/16,email8/8 retained in both arms; zero repeated questions coexists with two missed required clarifications per arm.",
+    "Candidate45/48 versus predecessor46/48 with one new quote-provenance loop; raw-slot gains do not establish higher task success.",
+    "Authored nonrandom48-case cohort, serial arms, no production/generalization or hardware-only speed claim.",
+    "Old84-record interrupted run remains ambiguous and is never pooled or replayed."
+  ],
+  "writes": "Only this new final-protocol-audit.json; original results/protocol/raw snapshots/frozen sources preserved.",
+  "audit_helper_sha256": {
+    "training/colab/import_eval2_snapshot.py": "8efe2c470371ab73d124358ec88af7f6058bd68184f7ea8bcb16131b6b942be3",
+    "training/cuda_eval2/verify_results.py": "7ec9a988ab3a2da3963587040c684cdfee17ddcbd3bd7e932254b33aa88f9f32"
+  },
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "4927e68e1f7a5c38db62a6411fa3336309688507f301eb3aadce4fc37e34a7d0",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Private non-retail account/authorization and machine-path metadata omitted. Original verification claims refer to historical unredacted local artifacts, not these public bytes."
+  }
+}

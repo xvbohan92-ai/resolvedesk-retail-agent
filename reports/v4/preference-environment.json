@@ -1,0 +1,16 @@
+{
+  "architecture": "arm64",
+  "python": "3.12.14",
+  "versions": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "transformers": "5.21.0",
+    "tokenizers": "0.23.3"
+  },
+  "preference_manifest_sha256": "0c98770f11c18d0cdb00d8f32ea78ca96f739598845b79cad6f3823782ad9501",
+  "successful_preflight_sha256": "a16ebff250f26b0d9bcecd3e1b9bb7eb2487521f3ff68fedaec9e499fc118aae",
+  "sft_initialization": "Pinned base; fresh rank-8 adapter",
+  "preference_initialization": "Completed SFT480 adapter; preflight and six abandoned eager updates not reused",
+  "test_inference_at_receipt": false,
+  "cloud_compute_used": false
+}

@@ -1,0 +1,9 @@
+{
+  "evaluation_sha256": "70e46fe0c307a6005050f75fd14c0535f878d2210969bfa88d52f09a7ae27f2c",
+  "source_sha256": "8a3ac8406fce79ba8abb6c16b5e83d1381acd8d0dd640297367c5bb105e0b239",
+  "paired_records": 144,
+  "new_tasks_per_arm": 48,
+  "candidate_selection_uses_validation_only": true,
+  "semantic_metrics_and_business_state_checks_pass": true,
+  "scope": "Source/trajectory/CSV/figure reconciliation, not independent human adjudication."
+}

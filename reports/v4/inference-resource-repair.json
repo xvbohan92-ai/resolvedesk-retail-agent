@@ -1,0 +1,18 @@
+{
+  "failure_stage": "calibration validation before the first completed case",
+  "error": "MLX Metal command buffer insufficient memory",
+  "test_inference_started_at_repair": false,
+  "completed_validation_cases_before_retry": 0,
+  "trained_weights_reused_without_updates": true,
+  "calibration_adapter_sha256": "b34cdea713fda890840097cb884bb256b6a815c1bc294f57037be981965c820e",
+  "repair": "A separate launcher sets wired allocation to 6 GiB and free-buffer cache to 256 MiB before entering unchanged frozen selectors/evaluators.",
+  "wire_limit_bytes": 6442450944,
+  "cache_limit_bytes": 268435456,
+  "generation_decoding_budget_inputs_and_selection_unchanged": true,
+  "applied_to_all_four_test_arms": true,
+  "launcher_source_sha256": "84cc78cd1ecfc803ac98516240a35413c044180da4fe994eda178004bbce69a3",
+  "cache_only_retry_also_failed_before_first_case": true,
+  "other_loaded_ollama_vram_bytes_at_failure": 9343619562,
+  "other_model_caches_unloaded_by_agent": false,
+  "retry_condition": "Ollama /api/ps became empty; unchanged validation and all test arms run with 6 GiB wired / 256 MiB cache limits."
+}

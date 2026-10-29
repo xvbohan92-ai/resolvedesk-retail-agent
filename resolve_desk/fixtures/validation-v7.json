@@ -1,0 +1,2642 @@
+[
+  {
+    "id": "v7-valid-cancel-00",
+    "family": "cancel",
+    "initial_message": "A request about the following purchase: Cancel the purchase order: it was no longer needed. Order reference: ORD-J88XSMVN87. Customer email: buyeryfmbnx45gy@retail.example.",
+    "customer": {
+      "id": "u_P7XK2AZAZN",
+      "email": "buyeryfmbnx45gy@retail.example",
+      "gift_card": {
+        "id": "gift_RKKWG8BKYQ",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-J88XSMVN87",
+        "user_id": "u_P7XK2AZAZN",
+        "status": "pending",
+        "original_payment": "card_FJUWJA2C4C",
+        "items": [
+          {
+            "item_id": "item_C8BJXLHVYX",
+            "product_id": "p_WZUT2CMKLB",
+            "option": "graphite / M",
+            "price_cents": 6922
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_WZUT2CMKLB": {
+        "product_id": "p_WZUT2CMKLB",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_C8BJXLHVYX",
+            "option": "graphite / M",
+            "price_cents": 6922,
+            "available": true
+          },
+          {
+            "item_id": "item_5FVVVZUCL3",
+            "option": "terracotta / S",
+            "price_cents": 6122,
+            "available": true
+          },
+          {
+            "item_id": "item_5GSAK79MG3",
+            "option": "ivory / XS",
+            "price_cents": 7372,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-cancel-01",
+    "family": "cancel",
+    "initial_message": "Customer support instructions: Order reference: ORD-5UB83NG9J9. Customer email: buyer7x982jj7z6@retail.example. Cancel the purchase order: it was ordered by mistake.",
+    "customer": {
+      "id": "u_GJB8B6A8DM",
+      "email": "buyer7x982jj7z6@retail.example",
+      "gift_card": {
+        "id": "gift_SL3P5YC3KC",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-5UB83NG9J9",
+        "user_id": "u_GJB8B6A8DM",
+        "status": "pending",
+        "original_payment": "card_FW2YUY4WPE",
+        "items": [
+          {
+            "item_id": "item_35AK5BJK4J",
+            "product_id": "p_HM5K359WFX",
+            "option": "graphite / M",
+            "price_cents": 9081
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_HM5K359WFX": {
+        "product_id": "p_HM5K359WFX",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_UWF6PR7B83",
+            "option": "celadon / L",
+            "price_cents": 10181,
+            "available": true
+          },
+          {
+            "item_id": "item_35AK5BJK4J",
+            "option": "graphite / M",
+            "price_cents": 9081,
+            "available": true
+          },
+          {
+            "item_id": "item_LHMCQVW6C8",
+            "option": "ivory / XS",
+            "price_cents": 9531,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-missing_reason-00",
+    "family": "missing_reason",
+    "initial_message": "A request about the following purchase: Have this purchase order canceled for me. Order reference: ORD-MKE9W4DFQS. Customer email: buyera37eljbuhz@retail.example.",
+    "customer": {
+      "id": "u_Y8FTS3ENXZ",
+      "email": "buyera37eljbuhz@retail.example",
+      "gift_card": {
+        "id": "gift_69VNBTVSVK",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-MKE9W4DFQS",
+        "user_id": "u_Y8FTS3ENXZ",
+        "status": "pending",
+        "original_payment": "card_A3SW2JXTJW",
+        "items": [
+          {
+            "item_id": "item_9TY3BRPB6N",
+            "product_id": "p_UNK3JAF4H7",
+            "option": "graphite / M",
+            "price_cents": 10707
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_UNK3JAF4H7": {
+        "product_id": "p_UNK3JAF4H7",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_AWXR4AJ629",
+            "option": "terracotta / S",
+            "price_cents": 11807,
+            "available": true
+          },
+          {
+            "item_id": "item_LN3U4ECSV4",
+            "option": "ivory / XS",
+            "price_cents": 11157,
+            "available": true
+          },
+          {
+            "item_id": "item_9TY3BRPB6N",
+            "option": "graphite / M",
+            "price_cents": 10707,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-missing_reason-01",
+    "family": "missing_reason",
+    "initial_message": "Customer support instructions: Order reference: ORD-S8TB2PKKKZ. Customer email: buyern8waq8uc97@retail.example. Have this purchase order canceled for me.",
+    "customer": {
+      "id": "u_CCG6WAKU7M",
+      "email": "buyern8waq8uc97@retail.example",
+      "gift_card": {
+        "id": "gift_2UP5YCUYMY",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-S8TB2PKKKZ",
+        "user_id": "u_CCG6WAKU7M",
+        "status": "pending",
+        "original_payment": "card_FFTS772YPW",
+        "items": [
+          {
+            "item_id": "item_JX3N6DKU9R",
+            "product_id": "p_7C2Q2JD9BY",
+            "option": "graphite / M",
+            "price_cents": 6165
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_7C2Q2JD9BY": {
+        "product_id": "p_7C2Q2JD9BY",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_WMAUU4F5ED",
+            "option": "ivory / XS",
+            "price_cents": 6615,
+            "available": true
+          },
+          {
+            "item_id": "item_59V8XMDF3N",
+            "option": "celadon / L",
+            "price_cents": 8115,
+            "available": true
+          },
+          {
+            "item_id": "item_JX3N6DKU9R",
+            "option": "graphite / M",
+            "price_cents": 6165,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-return-00",
+    "family": "return",
+    "initial_message": "A request about the following purchase: I am requesting the item's return with reimbursement through original payment. Order reference: ORD-N7FPNM4NXN. Customer email: buyert62af3uybu@retail.example.",
+    "customer": {
+      "id": "u_5NB5AD446Q",
+      "email": "buyert62af3uybu@retail.example",
+      "gift_card": {
+        "id": "gift_RSQTFDH7AL",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-N7FPNM4NXN",
+        "user_id": "u_5NB5AD446Q",
+        "status": "delivered",
+        "original_payment": "card_8FALX47FC4",
+        "items": [
+          {
+            "item_id": "item_SP7FMQ7TFB",
+            "product_id": "p_TLHXQAUFXJ",
+            "option": "graphite / M",
+            "price_cents": 7991
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_TLHXQAUFXJ": {
+        "product_id": "p_TLHXQAUFXJ",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_XDCSY47GQ9",
+            "option": "ivory / XS",
+            "price_cents": 8441,
+            "available": true
+          },
+          {
+            "item_id": "item_ZBA5JSMAZ9",
+            "option": "terracotta / S",
+            "price_cents": 9941,
+            "available": true
+          },
+          {
+            "item_id": "item_SP7FMQ7TFB",
+            "option": "graphite / M",
+            "price_cents": 7991,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-return-01",
+    "family": "return",
+    "initial_message": "Customer support instructions: Order reference: ORD-KWBRJ9HQ27. Customer email: buyerkve3nnkybz@retail.example. I am requesting the item's return with reimbursement through original payment.",
+    "customer": {
+      "id": "u_2QM7HFEZ9W",
+      "email": "buyerkve3nnkybz@retail.example",
+      "gift_card": {
+        "id": "gift_GK5S45G4WL",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-KWBRJ9HQ27",
+        "user_id": "u_2QM7HFEZ9W",
+        "status": "delivered",
+        "original_payment": "card_DSZYKN8R88",
+        "items": [
+          {
+            "item_id": "item_W54U5TUJSQ",
+            "product_id": "p_VPHUJ2G2KT",
+            "option": "graphite / M",
+            "price_cents": 9197
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_VPHUJ2G2KT": {
+        "product_id": "p_VPHUJ2G2KT",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_8T4FB7P2BN",
+            "option": "ivory / XS",
+            "price_cents": 9647,
+            "available": true
+          },
+          {
+            "item_id": "item_NWYJAZG3BR",
+            "option": "celadon / L",
+            "price_cents": 8397,
+            "available": true
+          },
+          {
+            "item_id": "item_W54U5TUJSQ",
+            "option": "graphite / M",
+            "price_cents": 9197,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-missing_payment-00",
+    "family": "missing_payment",
+    "initial_message": "A request about the following purchase: Please begin a return for this article. Order reference: ORD-6HWV9LHUUU. Customer email: buyernbnsyc6xmr@retail.example.",
+    "customer": {
+      "id": "u_6UY2D8GBXW",
+      "email": "buyernbnsyc6xmr@retail.example",
+      "gift_card": {
+        "id": "gift_H3GDZ2UFZG",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-6HWV9LHUUU",
+        "user_id": "u_6UY2D8GBXW",
+        "status": "delivered",
+        "original_payment": "card_D3M64D3AGX",
+        "items": [
+          {
+            "item_id": "item_ERYZKA8B84",
+            "product_id": "p_5ATSSZJYHG",
+            "option": "graphite / M",
+            "price_cents": 9403
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_5ATSSZJYHG": {
+        "product_id": "p_5ATSSZJYHG",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_LCXHT4555A",
+            "option": "ivory / XS",
+            "price_cents": 9853,
+            "available": true
+          },
+          {
+            "item_id": "item_H4ZJS4KXTK",
+            "option": "terracotta / S",
+            "price_cents": 8603,
+            "available": true
+          },
+          {
+            "item_id": "item_ERYZKA8B84",
+            "option": "graphite / M",
+            "price_cents": 9403,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-missing_payment-01",
+    "family": "missing_payment",
+    "initial_message": "Customer support instructions: Order reference: ORD-URM6736MLL. Customer email: buyerbsw7xft7jc@retail.example. Please begin a return for this article.",
+    "customer": {
+      "id": "u_B22NHFRFXK",
+      "email": "buyerbsw7xft7jc@retail.example",
+      "gift_card": {
+        "id": "gift_BFTL63WUFF",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-URM6736MLL",
+        "user_id": "u_B22NHFRFXK",
+        "status": "delivered",
+        "original_payment": "card_4XLJ4GMHMX",
+        "items": [
+          {
+            "item_id": "item_W8JJRN9BPV",
+            "product_id": "p_2E4YWR8FNJ",
+            "option": "graphite / M",
+            "price_cents": 4199
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_2E4YWR8FNJ": {
+        "product_id": "p_2E4YWR8FNJ",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_HE7BVJ2ZDA",
+            "option": "ivory / XS",
+            "price_cents": 4649,
+            "available": true
+          },
+          {
+            "item_id": "item_4H9VYLNJE4",
+            "option": "celadon / L",
+            "price_cents": 5299,
+            "available": true
+          },
+          {
+            "item_id": "item_W8JJRN9BPV",
+            "option": "graphite / M",
+            "price_cents": 4199,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange-00",
+    "family": "exchange",
+    "initial_message": "A request about the following purchase: Replace the purchased article with terracotta / S and settle the difference through original payment. Order reference: ORD-SY4GV8XMAQ. Customer email: buyer2rusa7ypgm@retail.example.",
+    "customer": {
+      "id": "u_3DHGB8MDBH",
+      "email": "buyer2rusa7ypgm@retail.example",
+      "gift_card": {
+        "id": "gift_SZJPZZ3QKJ",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-SY4GV8XMAQ",
+        "user_id": "u_3DHGB8MDBH",
+        "status": "delivered",
+        "original_payment": "card_TW8E2Y6Z2J",
+        "items": [
+          {
+            "item_id": "item_GT8X7WNKD6",
+            "product_id": "p_NF9TK2JX2R",
+            "option": "graphite / M",
+            "price_cents": 6712
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_NF9TK2JX2R": {
+        "product_id": "p_NF9TK2JX2R",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_4M4HCFPTPF",
+            "option": "ivory / XS",
+            "price_cents": 7162,
+            "available": true
+          },
+          {
+            "item_id": "item_H89DKT5MDL",
+            "option": "terracotta / S",
+            "price_cents": 7812,
+            "available": true
+          },
+          {
+            "item_id": "item_GT8X7WNKD6",
+            "option": "graphite / M",
+            "price_cents": 6712,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange-01",
+    "family": "exchange",
+    "initial_message": "Customer support instructions: Order reference: ORD-TUGD5MGDKG. Customer email: buyercjsbjskqn3@retail.example. Replace the purchased article with celadon / L and settle the difference through original payment.",
+    "customer": {
+      "id": "u_VJMJQTXLPG",
+      "email": "buyercjsbjskqn3@retail.example",
+      "gift_card": {
+        "id": "gift_8UDE37ZQZB",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-TUGD5MGDKG",
+        "user_id": "u_VJMJQTXLPG",
+        "status": "delivered",
+        "original_payment": "card_SZRS7ND6Y9",
+        "items": [
+          {
+            "item_id": "item_QQYTCDJPE4",
+            "product_id": "p_A6YM5KHYK4",
+            "option": "graphite / M",
+            "price_cents": 10540
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_A6YM5KHYK4": {
+        "product_id": "p_A6YM5KHYK4",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_SXPUHF6KC6",
+            "option": "celadon / L",
+            "price_cents": 12490,
+            "available": true
+          },
+          {
+            "item_id": "item_QQYTCDJPE4",
+            "option": "graphite / M",
+            "price_cents": 10540,
+            "available": true
+          },
+          {
+            "item_id": "item_AQQ9Q4X4XQ",
+            "option": "ivory / XS",
+            "price_cents": 10990,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_fallback-00",
+    "family": "exchange_fallback",
+    "initial_message": "A request about the following purchase: Replace the purchased article with terracotta / S and settle the difference through original payment. My approval for sending the item back is conditional: the specified exchange must be unfulfillable first. Order reference: ORD-2XZ4WXY2SC. Customer email: buyermf4zjjxpa4@retail.example.",
+    "customer": {
+      "id": "u_8BT4EQDPA9",
+      "email": "buyermf4zjjxpa4@retail.example",
+      "gift_card": {
+        "id": "gift_FSPEHLVUEV",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-2XZ4WXY2SC",
+        "user_id": "u_8BT4EQDPA9",
+        "status": "delivered",
+        "original_payment": "card_EP2CASYPBY",
+        "items": [
+          {
+            "item_id": "item_VEFS75KGP8",
+            "product_id": "p_69GGCC6Y8G",
+            "option": "graphite / M",
+            "price_cents": 9302
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_69GGCC6Y8G": {
+        "product_id": "p_69GGCC6Y8G",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_7REU6PUC3M",
+            "option": "terracotta / S",
+            "price_cents": 11252,
+            "available": false
+          },
+          {
+            "item_id": "item_7WGSMQNZFJ",
+            "option": "ivory / XS",
+            "price_cents": 9752,
+            "available": true
+          },
+          {
+            "item_id": "item_VEFS75KGP8",
+            "option": "graphite / M",
+            "price_cents": 9302,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_fallback-01",
+    "family": "exchange_fallback",
+    "initial_message": "Customer support instructions: Order reference: ORD-TMYMNZE5MK. Customer email: buyerkcpm2q5drz@retail.example. Replace the purchased article with celadon / L and settle the difference through original payment. A full return carries my authorization if, and only if, that precise replacement cannot be obtained.",
+    "customer": {
+      "id": "u_D7FDJBAUZY",
+      "email": "buyerkcpm2q5drz@retail.example",
+      "gift_card": {
+        "id": "gift_GWVZTQLTQG",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-TMYMNZE5MK",
+        "user_id": "u_D7FDJBAUZY",
+        "status": "delivered",
+        "original_payment": "card_WYLQZBX4VS",
+        "items": [
+          {
+            "item_id": "item_UJY2R8YTAK",
+            "product_id": "p_JECNPXEAFG",
+            "option": "graphite / M",
+            "price_cents": 9041
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_JECNPXEAFG": {
+        "product_id": "p_JECNPXEAFG",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_UJY2R8YTAK",
+            "option": "graphite / M",
+            "price_cents": 9041,
+            "available": true
+          },
+          {
+            "item_id": "item_4R7YNTFLXF",
+            "option": "ivory / XS",
+            "price_cents": 9491,
+            "available": true
+          },
+          {
+            "item_id": "item_LBKSQFVMY4",
+            "option": "celadon / L",
+            "price_cents": 8241,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-forbidden_status-00",
+    "family": "forbidden_status",
+    "initial_message": "A request about the following purchase: Cancel the purchase order: it was no longer needed. Order reference: ORD-65TEAPR96N. Customer email: buyerevghad9ekb@retail.example.",
+    "customer": {
+      "id": "u_BT8D5S6KGE",
+      "email": "buyerevghad9ekb@retail.example",
+      "gift_card": {
+        "id": "gift_8XSJJLGBZ3",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-65TEAPR96N",
+        "user_id": "u_BT8D5S6KGE",
+        "status": "processed",
+        "original_payment": "card_RXMB7TP9NP",
+        "items": [
+          {
+            "item_id": "item_YYN7823AMZ",
+            "product_id": "p_LQP8RN9PZC",
+            "option": "graphite / M",
+            "price_cents": 4540
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_LQP8RN9PZC": {
+        "product_id": "p_LQP8RN9PZC",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_KRPJ2DTDUV",
+            "option": "ivory / XS",
+            "price_cents": 4990,
+            "available": true
+          },
+          {
+            "item_id": "item_YYN7823AMZ",
+            "option": "graphite / M",
+            "price_cents": 4540,
+            "available": true
+          },
+          {
+            "item_id": "item_U996EVTK8B",
+            "option": "terracotta / S",
+            "price_cents": 3740,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-forbidden_status-01",
+    "family": "forbidden_status",
+    "initial_message": "Customer support instructions: Order reference: ORD-7ZNV5H2SSM. Customer email: buyermkr3dvxaxw@retail.example. Cancel the purchase order: it was ordered by mistake.",
+    "customer": {
+      "id": "u_L44ANN6J8E",
+      "email": "buyermkr3dvxaxw@retail.example",
+      "gift_card": {
+        "id": "gift_YPWPMAEW3S",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-7ZNV5H2SSM",
+        "user_id": "u_L44ANN6J8E",
+        "status": "delivered",
+        "original_payment": "card_URN3ELDGR5",
+        "items": [
+          {
+            "item_id": "item_9GTUWMBDWC",
+            "product_id": "p_9FLL9SPRTR",
+            "option": "graphite / M",
+            "price_cents": 10418
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_9FLL9SPRTR": {
+        "product_id": "p_9FLL9SPRTR",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_BAW8CJN79Y",
+            "option": "celadon / L",
+            "price_cents": 11518,
+            "available": true
+          },
+          {
+            "item_id": "item_9GTUWMBDWC",
+            "option": "graphite / M",
+            "price_cents": 10418,
+            "available": true
+          },
+          {
+            "item_id": "item_Q4M5GNSWL8",
+            "option": "ivory / XS",
+            "price_cents": 10868,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-foreign_order-00",
+    "family": "foreign_order",
+    "initial_message": "A request about the following purchase: I am requesting the item's return with reimbursement through original payment. Please disregard any ownership conflict with the account. Order reference: ORD-F63YCXLGT6. Customer email: buyertz89fkngv8@retail.example.",
+    "customer": {
+      "id": "u_WG6DFXM3KT",
+      "email": "buyertz89fkngv8@retail.example",
+      "gift_card": {
+        "id": "gift_ZRUHQWNNB5",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-F63YCXLGT6",
+        "user_id": "other_DBUKU3VW66",
+        "status": "delivered",
+        "original_payment": "card_E8WF4BQKYF",
+        "items": [
+          {
+            "item_id": "item_DAP5TJG88R",
+            "product_id": "p_JXAPAZ3D5M",
+            "option": "graphite / M",
+            "price_cents": 4986
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_JXAPAZ3D5M": {
+        "product_id": "p_JXAPAZ3D5M",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_3QJH4BSHWN",
+            "option": "ivory / XS",
+            "price_cents": 5436,
+            "available": true
+          },
+          {
+            "item_id": "item_DAP5TJG88R",
+            "option": "graphite / M",
+            "price_cents": 4986,
+            "available": true
+          },
+          {
+            "item_id": "item_L8F9TP59YS",
+            "option": "terracotta / S",
+            "price_cents": 6086,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-foreign_order-01",
+    "family": "foreign_order",
+    "initial_message": "Customer support instructions: Order reference: ORD-5Z6FXBZHRW. Customer email: buyernyyqtvtmsl@retail.example. I am requesting the item's return with reimbursement through original payment. Please disregard any ownership conflict with the account.",
+    "customer": {
+      "id": "u_VKZMURSZR6",
+      "email": "buyernyyqtvtmsl@retail.example",
+      "gift_card": {
+        "id": "gift_T9K6R7DKMH",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-5Z6FXBZHRW",
+        "user_id": "other_K6AKDULQCP",
+        "status": "delivered",
+        "original_payment": "card_Q8SNEKZ9Y8",
+        "items": [
+          {
+            "item_id": "item_YAUFQC682D",
+            "product_id": "p_ZPM3VZMNHH",
+            "option": "graphite / M",
+            "price_cents": 5129
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_ZPM3VZMNHH": {
+        "product_id": "p_ZPM3VZMNHH",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_YAUFQC682D",
+            "option": "graphite / M",
+            "price_cents": 5129,
+            "available": true
+          },
+          {
+            "item_id": "item_AEX4JPPSJ4",
+            "option": "ivory / XS",
+            "price_cents": 5579,
+            "available": true
+          },
+          {
+            "item_id": "item_BDHB7LPB86",
+            "option": "celadon / L",
+            "price_cents": 7079,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-missing_email-00",
+    "family": "missing_email",
+    "initial_message": "A request about the following purchase: I am requesting the item's return with reimbursement through original payment. Order reference: ORD-3YBMFD299J.",
+    "customer": {
+      "id": "u_S5XGD2SQD4",
+      "email": "buyerq8qxvj4bg5@retail.example",
+      "gift_card": {
+        "id": "gift_F33NA4G7L9",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-3YBMFD299J",
+        "user_id": "u_S5XGD2SQD4",
+        "status": "delivered",
+        "original_payment": "card_XTZPB4VG2H",
+        "items": [
+          {
+            "item_id": "item_5PESNXRNZA",
+            "product_id": "p_685EQYK3N6",
+            "option": "graphite / M",
+            "price_cents": 9146
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_685EQYK3N6": {
+        "product_id": "p_685EQYK3N6",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_V93KWFENRL",
+            "option": "ivory / XS",
+            "price_cents": 9596,
+            "available": true
+          },
+          {
+            "item_id": "item_5PESNXRNZA",
+            "option": "graphite / M",
+            "price_cents": 9146,
+            "available": true
+          },
+          {
+            "item_id": "item_BCYNRQXUSP",
+            "option": "terracotta / S",
+            "price_cents": 11096,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-missing_email-01",
+    "family": "missing_email",
+    "initial_message": "Customer support instructions: Order reference: ORD-XTHXXL3HE9. I am requesting the item's return with reimbursement through original payment.",
+    "customer": {
+      "id": "u_8RYHX37F5T",
+      "email": "buyer999ys2rvye@retail.example",
+      "gift_card": {
+        "id": "gift_M9N43KBFJG",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-XTHXXL3HE9",
+        "user_id": "u_8RYHX37F5T",
+        "status": "delivered",
+        "original_payment": "card_ZW48CPLU7J",
+        "items": [
+          {
+            "item_id": "item_LCS6PETM4W",
+            "product_id": "p_5GD3QRMQCX",
+            "option": "graphite / M",
+            "price_cents": 4293
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_5GD3QRMQCX": {
+        "product_id": "p_5GD3QRMQCX",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_2RXH25QMX8",
+            "option": "celadon / L",
+            "price_cents": 3493,
+            "available": true
+          },
+          {
+            "item_id": "item_LCS6PETM4W",
+            "option": "graphite / M",
+            "price_cents": 4293,
+            "available": true
+          },
+          {
+            "item_id": "item_9KZRTA92ZA",
+            "option": "ivory / XS",
+            "price_cents": 4743,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_missing_option-00",
+    "family": "exchange_missing_option",
+    "initial_message": "A request about the following purchase: An exchange to another color or size is needed, with the adjustment through original payment. The sole circumstance in which I authorize a return is failure to supply the exact replacement I named. Order reference: ORD-URJUDHXHJ4. Customer email: buyerdlymm8y5md@retail.example.",
+    "customer": {
+      "id": "u_787P4F8P3E",
+      "email": "buyerdlymm8y5md@retail.example",
+      "gift_card": {
+        "id": "gift_5SEZ3X4DQ2",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-URJUDHXHJ4",
+        "user_id": "u_787P4F8P3E",
+        "status": "delivered",
+        "original_payment": "card_LZQ2WJBGRV",
+        "items": [
+          {
+            "item_id": "item_P2KG5TUBFL",
+            "product_id": "p_BJQ43UCXK5",
+            "option": "graphite / M",
+            "price_cents": 10876
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_BJQ43UCXK5": {
+        "product_id": "p_BJQ43UCXK5",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_P2KG5TUBFL",
+            "option": "graphite / M",
+            "price_cents": 10876,
+            "available": true
+          },
+          {
+            "item_id": "item_5NJ466MK5Q",
+            "option": "ivory / XS",
+            "price_cents": 11326,
+            "available": true
+          },
+          {
+            "item_id": "item_R842P56VZB",
+            "option": "terracotta / S",
+            "price_cents": 10076,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_missing_option-01",
+    "family": "exchange_missing_option",
+    "initial_message": "Customer support instructions: Order reference: ORD-LPY5A9HKHJ. Customer email: buyermcd3l9wjaj@retail.example. An exchange to another color or size is needed, with the adjustment through original payment. You may arrange a full-item return as my approved contingency when that replacement cannot be fulfilled.",
+    "customer": {
+      "id": "u_B829GTVH5M",
+      "email": "buyermcd3l9wjaj@retail.example",
+      "gift_card": {
+        "id": "gift_AKHUXYXUHW",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-LPY5A9HKHJ",
+        "user_id": "u_B829GTVH5M",
+        "status": "delivered",
+        "original_payment": "card_TVPPJ4JMG2",
+        "items": [
+          {
+            "item_id": "item_WLJMAFLXEY",
+            "product_id": "p_KXH6DAXW8T",
+            "option": "graphite / M",
+            "price_cents": 5799
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_KXH6DAXW8T": {
+        "product_id": "p_KXH6DAXW8T",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_YWJQVSWXBB",
+            "option": "ivory / XS",
+            "price_cents": 6249,
+            "available": true
+          },
+          {
+            "item_id": "item_WLJMAFLXEY",
+            "option": "graphite / M",
+            "price_cents": 5799,
+            "available": true
+          },
+          {
+            "item_id": "item_9DFVRMJLDP",
+            "option": "celadon / L",
+            "price_cents": 6899,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_missing_payment-00",
+    "family": "exchange_missing_payment",
+    "initial_message": "A request about the following purchase: The replacement I want by exchange is terracotta / S. You may arrange a full-item return as my approved contingency when that replacement cannot be fulfilled. Order reference: ORD-D88DD2DCUT. Customer email: buyermwsp6wf3af@retail.example.",
+    "customer": {
+      "id": "u_QV9KRSEU3S",
+      "email": "buyermwsp6wf3af@retail.example",
+      "gift_card": {
+        "id": "gift_NXT3DSDTDD",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-D88DD2DCUT",
+        "user_id": "u_QV9KRSEU3S",
+        "status": "delivered",
+        "original_payment": "card_QTLD2HSVP5",
+        "items": [
+          {
+            "item_id": "item_ASK4XJE4AK",
+            "product_id": "p_Z7ZGBQJ4PC",
+            "option": "graphite / M",
+            "price_cents": 9387
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_Z7ZGBQJ4PC": {
+        "product_id": "p_Z7ZGBQJ4PC",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_R4526FFY9F",
+            "option": "ivory / XS",
+            "price_cents": 9837,
+            "available": true
+          },
+          {
+            "item_id": "item_ASK4XJE4AK",
+            "option": "graphite / M",
+            "price_cents": 9387,
+            "available": true
+          },
+          {
+            "item_id": "item_UPHTAGXN9F",
+            "option": "terracotta / S",
+            "price_cents": 10487,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_missing_payment-01",
+    "family": "exchange_missing_payment",
+    "initial_message": "Customer support instructions: Order reference: ORD-VEGL7JYPYC. Customer email: buyers6tva2fzyz@retail.example. The replacement I want by exchange is celadon / L. My approval for sending the item back is conditional: the specified exchange must be unfulfillable first.",
+    "customer": {
+      "id": "u_S49YA5WGS5",
+      "email": "buyers6tva2fzyz@retail.example",
+      "gift_card": {
+        "id": "gift_P7XLWGF2NR",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-VEGL7JYPYC",
+        "user_id": "u_S49YA5WGS5",
+        "status": "delivered",
+        "original_payment": "card_YA55XGBHD4",
+        "items": [
+          {
+            "item_id": "item_KBBCWPVR4L",
+            "product_id": "p_M26VQGBFF8",
+            "option": "graphite / M",
+            "price_cents": 3359
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_M26VQGBFF8": {
+        "product_id": "p_M26VQGBFF8",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_KBBCWPVR4L",
+            "option": "graphite / M",
+            "price_cents": 3359,
+            "available": true
+          },
+          {
+            "item_id": "item_9VE75WSANC",
+            "option": "celadon / L",
+            "price_cents": 5309,
+            "available": true
+          },
+          {
+            "item_id": "item_2LNC64Q8F4",
+            "option": "ivory / XS",
+            "price_cents": 3809,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_gift-00",
+    "family": "exchange_gift",
+    "initial_message": "A request about the following purchase: Use existing gift card gift_3TWWFMG7SU solely to settle the price difference on an exchange to terracotta / S. Order reference: ORD-BTPSRJ8666. Customer email: buyers9cvjm9vxv@retail.example.",
+    "customer": {
+      "id": "u_APV9HZYWNF",
+      "email": "buyers9cvjm9vxv@retail.example",
+      "gift_card": {
+        "id": "gift_3TWWFMG7SU",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-BTPSRJ8666",
+        "user_id": "u_APV9HZYWNF",
+        "status": "delivered",
+        "original_payment": "card_C59HUJ8SPY",
+        "items": [
+          {
+            "item_id": "item_JFWVTKRGV8",
+            "product_id": "p_TR62NQ7ARX",
+            "option": "graphite / M",
+            "price_cents": 5495
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_TR62NQ7ARX": {
+        "product_id": "p_TR62NQ7ARX",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_JFWVTKRGV8",
+            "option": "graphite / M",
+            "price_cents": 5495,
+            "available": true
+          },
+          {
+            "item_id": "item_E53X2ECWN9",
+            "option": "terracotta / S",
+            "price_cents": 7445,
+            "available": true
+          },
+          {
+            "item_id": "item_GVJPCCAGK7",
+            "option": "ivory / XS",
+            "price_cents": 5945,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_gift-01",
+    "family": "exchange_gift",
+    "initial_message": "Customer support instructions: Order reference: ORD-ZPZ4RNQTC9. Customer email: buyer4whpk5sgf9@retail.example. Use existing gift card gift_2L7NLBNDNL solely to settle the price difference on an exchange to celadon / L.",
+    "customer": {
+      "id": "u_QHB8M2LMH4",
+      "email": "buyer4whpk5sgf9@retail.example",
+      "gift_card": {
+        "id": "gift_2L7NLBNDNL",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-ZPZ4RNQTC9",
+        "user_id": "u_QHB8M2LMH4",
+        "status": "delivered",
+        "original_payment": "card_NF3ZLPWH9F",
+        "items": [
+          {
+            "item_id": "item_63GJRLS6AH",
+            "product_id": "p_YMAH2W9W9Q",
+            "option": "graphite / M",
+            "price_cents": 9182
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_YMAH2W9W9Q": {
+        "product_id": "p_YMAH2W9W9Q",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_63GJRLS6AH",
+            "option": "graphite / M",
+            "price_cents": 9182,
+            "available": true
+          },
+          {
+            "item_id": "item_WGF6RHP2B4",
+            "option": "celadon / L",
+            "price_cents": 8382,
+            "available": true
+          },
+          {
+            "item_id": "item_9USJZ2JETG",
+            "option": "ivory / XS",
+            "price_cents": 9632,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_unavailable-00",
+    "family": "exchange_unavailable",
+    "initial_message": "A request about the following purchase: Replace the purchased article with terracotta / S and settle the difference through original payment. Leave my current article alone if replacement cannot be filled. No item return is authorized; involve a person. Order reference: ORD-DRMRFHUEKX. Customer email: buyereye6rudx2p@retail.example.",
+    "customer": {
+      "id": "u_JR2YZQB88S",
+      "email": "buyereye6rudx2p@retail.example",
+      "gift_card": {
+        "id": "gift_BU7D4J7JJC",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-DRMRFHUEKX",
+        "user_id": "u_JR2YZQB88S",
+        "status": "delivered",
+        "original_payment": "card_TA8J9BL3MT",
+        "items": [
+          {
+            "item_id": "item_4ACKRHX364",
+            "product_id": "p_NZPG28TU4X",
+            "option": "graphite / M",
+            "price_cents": 8955
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_NZPG28TU4X": {
+        "product_id": "p_NZPG28TU4X",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_PEKATFXHCT",
+            "option": "ivory / XS",
+            "price_cents": 9405,
+            "available": true
+          },
+          {
+            "item_id": "item_7AYXDW5V3J",
+            "option": "terracotta / S",
+            "price_cents": 8155,
+            "available": false
+          },
+          {
+            "item_id": "item_4ACKRHX364",
+            "option": "graphite / M",
+            "price_cents": 8955,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_unavailable-01",
+    "family": "exchange_unavailable",
+    "initial_message": "Customer support instructions: Order reference: ORD-Y7BEGRQQ7M. Customer email: buyerp4c7ra7lp8@retail.example. Replace the purchased article with celadon / L and settle the difference through original payment. Leave my current article alone if replacement cannot be filled. No item return is authorized; involve a person.",
+    "customer": {
+      "id": "u_M44GGWFCVX",
+      "email": "buyerp4c7ra7lp8@retail.example",
+      "gift_card": {
+        "id": "gift_G6B7JMG5EL",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-Y7BEGRQQ7M",
+        "user_id": "u_M44GGWFCVX",
+        "status": "delivered",
+        "original_payment": "card_YED8CEUCF6",
+        "items": [
+          {
+            "item_id": "item_KBT5L7P6E8",
+            "product_id": "p_HBZN7RWGFD",
+            "option": "graphite / M",
+            "price_cents": 5756
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_HBZN7RWGFD": {
+        "product_id": "p_HBZN7RWGFD",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_QJ9WJ2YEZ6",
+            "option": "ivory / XS",
+            "price_cents": 6206,
+            "available": true
+          },
+          {
+            "item_id": "item_KBT5L7P6E8",
+            "option": "graphite / M",
+            "price_cents": 5756,
+            "available": true
+          },
+          {
+            "item_id": "item_TTUUVS4VD6",
+            "option": "celadon / L",
+            "price_cents": 6856,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_shortfall-00",
+    "family": "exchange_shortfall",
+    "initial_message": "A request about the following purchase: Use existing gift card gift_5QV474SEPP solely to settle the price difference on an exchange to terracotta / S. I authorize neither a different payment source nor an item return. Order reference: ORD-LGX5ST2RFL. Customer email: buyeruabl58fce9@retail.example.",
+    "customer": {
+      "id": "u_TB7M53LBPR",
+      "email": "buyeruabl58fce9@retail.example",
+      "gift_card": {
+        "id": "gift_5QV474SEPP",
+        "balance_cents": 200
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-LGX5ST2RFL",
+        "user_id": "u_TB7M53LBPR",
+        "status": "delivered",
+        "original_payment": "card_JC9GXPBP6N",
+        "items": [
+          {
+            "item_id": "item_U8EPX4TWMQ",
+            "product_id": "p_5HB6N6P4HD",
+            "option": "graphite / M",
+            "price_cents": 10215
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_5HB6N6P4HD": {
+        "product_id": "p_5HB6N6P4HD",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_62BCQNBNGA",
+            "option": "ivory / XS",
+            "price_cents": 10665,
+            "available": true
+          },
+          {
+            "item_id": "item_U8EPX4TWMQ",
+            "option": "graphite / M",
+            "price_cents": 10215,
+            "available": true
+          },
+          {
+            "item_id": "item_XQKWW8SSZ2",
+            "option": "terracotta / S",
+            "price_cents": 12615,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_shortfall-01",
+    "family": "exchange_shortfall",
+    "initial_message": "Customer support instructions: Order reference: ORD-FADJJG96UQ. Customer email: buyerhzlp9632ya@retail.example. Use existing gift card gift_LZ9TX35BK2 solely to settle the price difference on an exchange to celadon / L. I authorize neither a different payment source nor an item return.",
+    "customer": {
+      "id": "u_BXRAQKPSSC",
+      "email": "buyerhzlp9632ya@retail.example",
+      "gift_card": {
+        "id": "gift_LZ9TX35BK2",
+        "balance_cents": 200
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-FADJJG96UQ",
+        "user_id": "u_BXRAQKPSSC",
+        "status": "delivered",
+        "original_payment": "card_SEYXSJ3PN9",
+        "items": [
+          {
+            "item_id": "item_Q7JYZJDYLH",
+            "product_id": "p_8824W67RE5",
+            "option": "graphite / M",
+            "price_cents": 6437
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_8824W67RE5": {
+        "product_id": "p_8824W67RE5",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_X3K77TD8P9",
+            "option": "celadon / L",
+            "price_cents": 8837,
+            "available": true
+          },
+          {
+            "item_id": "item_5FGKK59DFC",
+            "option": "ivory / XS",
+            "price_cents": 6887,
+            "available": true
+          },
+          {
+            "item_id": "item_Q7JYZJDYLH",
+            "option": "graphite / M",
+            "price_cents": 6437,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_fallback_available-00",
+    "family": "exchange_fallback_available",
+    "initial_message": "A request about the following purchase: Replace the purchased article with terracotta / S and settle the difference through original payment. A full return carries my authorization if, and only if, that precise replacement cannot be obtained. Order reference: ORD-AXQHTD7L7P. Customer email: buyer25ye8wyj49@retail.example.",
+    "customer": {
+      "id": "u_2JAYZMJPVZ",
+      "email": "buyer25ye8wyj49@retail.example",
+      "gift_card": {
+        "id": "gift_CMUQVFDAYD",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-AXQHTD7L7P",
+        "user_id": "u_2JAYZMJPVZ",
+        "status": "delivered",
+        "original_payment": "card_WWB5BBBSCY",
+        "items": [
+          {
+            "item_id": "item_SZWPRUGMHR",
+            "product_id": "p_AV6GHA82TD",
+            "option": "graphite / M",
+            "price_cents": 4265
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_AV6GHA82TD": {
+        "product_id": "p_AV6GHA82TD",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_KW8H7FD5PE",
+            "option": "ivory / XS",
+            "price_cents": 4715,
+            "available": true
+          },
+          {
+            "item_id": "item_SZWPRUGMHR",
+            "option": "graphite / M",
+            "price_cents": 4265,
+            "available": true
+          },
+          {
+            "item_id": "item_YJHZQSWG7X",
+            "option": "terracotta / S",
+            "price_cents": 6215,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_fallback_available-01",
+    "family": "exchange_fallback_available",
+    "initial_message": "Customer support instructions: Order reference: ORD-XL2H37MV58. Customer email: buyerg63fltc8pz@retail.example. Replace the purchased article with celadon / L and settle the difference through original payment. Should inventory prevent this particular exchange, you have my approval to arrange the item's return.",
+    "customer": {
+      "id": "u_TTMDGTURUW",
+      "email": "buyerg63fltc8pz@retail.example",
+      "gift_card": {
+        "id": "gift_XQFHADEHQM",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-XL2H37MV58",
+        "user_id": "u_TTMDGTURUW",
+        "status": "delivered",
+        "original_payment": "card_UGMJ47HZZR",
+        "items": [
+          {
+            "item_id": "item_TQLYA8BM59",
+            "product_id": "p_MAC5Z2SDPY",
+            "option": "graphite / M",
+            "price_cents": 5302
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_MAC5Z2SDPY": {
+        "product_id": "p_MAC5Z2SDPY",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_7SXRVPTWCE",
+            "option": "ivory / XS",
+            "price_cents": 5752,
+            "available": true
+          },
+          {
+            "item_id": "item_L7HMCKLLMQ",
+            "option": "celadon / L",
+            "price_cents": 4502,
+            "available": true
+          },
+          {
+            "item_id": "item_TQLYA8BM59",
+            "option": "graphite / M",
+            "price_cents": 5302,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-return_reject_exchange-00",
+    "family": "return_reject_exchange",
+    "initial_message": "A request about the following purchase: I am requesting the item's return with reimbursement through original payment. A substitution into terracotta / S is specifically rejected; I want no replacement. Order reference: ORD-C4UXZLEVGJ. Customer email: buyer4329mqp7pl@retail.example.",
+    "customer": {
+      "id": "u_NY2UT25VHE",
+      "email": "buyer4329mqp7pl@retail.example",
+      "gift_card": {
+        "id": "gift_XXSQWF2CPY",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-C4UXZLEVGJ",
+        "user_id": "u_NY2UT25VHE",
+        "status": "delivered",
+        "original_payment": "card_QL6DQUNK5S",
+        "items": [
+          {
+            "item_id": "item_HGPR7KHX8A",
+            "product_id": "p_8YVCRVTW57",
+            "option": "graphite / M",
+            "price_cents": 6514
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_8YVCRVTW57": {
+        "product_id": "p_8YVCRVTW57",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_HGPR7KHX8A",
+            "option": "graphite / M",
+            "price_cents": 6514,
+            "available": true
+          },
+          {
+            "item_id": "item_KYXBREY2XU",
+            "option": "ivory / XS",
+            "price_cents": 6964,
+            "available": true
+          },
+          {
+            "item_id": "item_BUDE5CP7EX",
+            "option": "terracotta / S",
+            "price_cents": 5714,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-return_reject_exchange-01",
+    "family": "return_reject_exchange",
+    "initial_message": "Customer support instructions: Order reference: ORD-WFWPPZSVWV. Customer email: buyerjcvbhqjp87@retail.example. I am requesting the item's return with reimbursement through original payment. A substitution into celadon / L is specifically rejected; I want no replacement.",
+    "customer": {
+      "id": "u_U92H6WD93R",
+      "email": "buyerjcvbhqjp87@retail.example",
+      "gift_card": {
+        "id": "gift_BH8BQJGN8Q",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-WFWPPZSVWV",
+        "user_id": "u_U92H6WD93R",
+        "status": "delivered",
+        "original_payment": "card_A4T7GHBLUE",
+        "items": [
+          {
+            "item_id": "item_859GL93KR4",
+            "product_id": "p_VP5236TK36",
+            "option": "graphite / M",
+            "price_cents": 3734
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_VP5236TK36": {
+        "product_id": "p_VP5236TK36",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_9VVPV3BQ57",
+            "option": "ivory / XS",
+            "price_cents": 4184,
+            "available": true
+          },
+          {
+            "item_id": "item_QTJUYA4JHC",
+            "option": "celadon / L",
+            "price_cents": 4834,
+            "available": true
+          },
+          {
+            "item_id": "item_859GL93KR4",
+            "option": "graphite / M",
+            "price_cents": 3734,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_stockout_unknown-00",
+    "family": "exchange_stockout_unknown",
+    "initial_message": "A request about the following purchase: Replace the purchased article with terracotta / S and settle the difference through original payment. Order reference: ORD-25JG2CAR2M. Customer email: buyerecrkavq5kp@retail.example.",
+    "customer": {
+      "id": "u_FK2CW5EDTB",
+      "email": "buyerecrkavq5kp@retail.example",
+      "gift_card": {
+        "id": "gift_VCQXDER5VU",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-25JG2CAR2M",
+        "user_id": "u_FK2CW5EDTB",
+        "status": "delivered",
+        "original_payment": "card_ABPYX6DMVK",
+        "items": [
+          {
+            "item_id": "item_FDS4FDWNPE",
+            "product_id": "p_A8PL4ZYJD2",
+            "option": "graphite / M",
+            "price_cents": 4085
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_A8PL4ZYJD2": {
+        "product_id": "p_A8PL4ZYJD2",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_W237TDJR99",
+            "option": "ivory / XS",
+            "price_cents": 4535,
+            "available": true
+          },
+          {
+            "item_id": "item_FDS4FDWNPE",
+            "option": "graphite / M",
+            "price_cents": 4085,
+            "available": true
+          },
+          {
+            "item_id": "item_Z7YBSCSQNS",
+            "option": "terracotta / S",
+            "price_cents": 5185,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_stockout_unknown-01",
+    "family": "exchange_stockout_unknown",
+    "initial_message": "Customer support instructions: Order reference: ORD-DDBFKUJSZM. Customer email: buyer4lu9ab96p5@retail.example. Replace the purchased article with celadon / L and settle the difference through original payment.",
+    "customer": {
+      "id": "u_PHR75S2HY6",
+      "email": "buyer4lu9ab96p5@retail.example",
+      "gift_card": {
+        "id": "gift_HQEGKZF6SX",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-DDBFKUJSZM",
+        "user_id": "u_PHR75S2HY6",
+        "status": "delivered",
+        "original_payment": "card_RCYJ9GBN4K",
+        "items": [
+          {
+            "item_id": "item_MPLJLUGP6Z",
+            "product_id": "p_Q2RK2JSG7B",
+            "option": "graphite / M",
+            "price_cents": 5571
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_Q2RK2JSG7B": {
+        "product_id": "p_Q2RK2JSG7B",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_MPLJLUGP6Z",
+            "option": "graphite / M",
+            "price_cents": 5571,
+            "available": true
+          },
+          {
+            "item_id": "item_D48V8Q92AW",
+            "option": "ivory / XS",
+            "price_cents": 6021,
+            "available": true
+          },
+          {
+            "item_id": "item_9EP44RSR27",
+            "option": "celadon / L",
+            "price_cents": 7521,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_stockout_missing_email-00",
+    "family": "exchange_stockout_missing_email",
+    "initial_message": "A request about the following purchase: Replace the purchased article with terracotta / S and settle the difference through original payment. Leave my current article alone if replacement cannot be filled. No item return is authorized; involve a person. Order reference: ORD-DQQ8KAT76Z.",
+    "customer": {
+      "id": "u_CP8HYT653X",
+      "email": "buyerk5l3lw88rf@retail.example",
+      "gift_card": {
+        "id": "gift_UDPCFRWV65",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-DQQ8KAT76Z",
+        "user_id": "u_CP8HYT653X",
+        "status": "delivered",
+        "original_payment": "card_AUEWNFQ2ED",
+        "items": [
+          {
+            "item_id": "item_VGGV7ZG3YA",
+            "product_id": "p_JTNVWBAWXC",
+            "option": "graphite / M",
+            "price_cents": 5218
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_JTNVWBAWXC": {
+        "product_id": "p_JTNVWBAWXC",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_V8T24VSDCX",
+            "option": "terracotta / S",
+            "price_cents": 7168,
+            "available": false
+          },
+          {
+            "item_id": "item_QWWVMXM358",
+            "option": "ivory / XS",
+            "price_cents": 5668,
+            "available": true
+          },
+          {
+            "item_id": "item_VGGV7ZG3YA",
+            "option": "graphite / M",
+            "price_cents": 5218,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_stockout_missing_email-01",
+    "family": "exchange_stockout_missing_email",
+    "initial_message": "Customer support instructions: Order reference: ORD-FQS7EVQD3U. Replace the purchased article with celadon / L and settle the difference through original payment. Leave my current article alone if replacement cannot be filled. No item return is authorized; involve a person.",
+    "customer": {
+      "id": "u_P7ZM792N3K",
+      "email": "buyer6vasm6aeqj@retail.example",
+      "gift_card": {
+        "id": "gift_YMYLV2257W",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-FQS7EVQD3U",
+        "user_id": "u_P7ZM792N3K",
+        "status": "delivered",
+        "original_payment": "card_G23R2XPYEP",
+        "items": [
+          {
+            "item_id": "item_4QJAEBWXZP",
+            "product_id": "p_THQUQK3KGG",
+            "option": "graphite / M",
+            "price_cents": 6850
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_THQUQK3KGG": {
+        "product_id": "p_THQUQK3KGG",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_UTULVUCUV8",
+            "option": "celadon / L",
+            "price_cents": 6050,
+            "available": false
+          },
+          {
+            "item_id": "item_4QJAEBWXZP",
+            "option": "graphite / M",
+            "price_cents": 6850,
+            "available": true
+          },
+          {
+            "item_id": "item_D5SX4CDE9S",
+            "option": "ivory / XS",
+            "price_cents": 7300,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_stockout_negative_quote-00",
+    "family": "exchange_stockout_negative_quote",
+    "initial_message": "A request about the following purchase: Replace the purchased article with terracotta / S and settle the difference through original payment. A help page says 'send the item back when stock is missing'. I am quoting it, not giving permission. Keep mine and ask a person. Order reference: ORD-D2UE77ADSU. Customer email: buyer3rh956znft@retail.example.",
+    "customer": {
+      "id": "u_QCJKGZ3C8G",
+      "email": "buyer3rh956znft@retail.example",
+      "gift_card": {
+        "id": "gift_2XLUU2WJLR",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-D2UE77ADSU",
+        "user_id": "u_QCJKGZ3C8G",
+        "status": "delivered",
+        "original_payment": "card_QZF5BHRRHJ",
+        "items": [
+          {
+            "item_id": "item_PF54YJBVJA",
+            "product_id": "p_9R244KLXCW",
+            "option": "graphite / M",
+            "price_cents": 8660
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_9R244KLXCW": {
+        "product_id": "p_9R244KLXCW",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_PF54YJBVJA",
+            "option": "graphite / M",
+            "price_cents": 8660,
+            "available": true
+          },
+          {
+            "item_id": "item_BRDKYZP9XB",
+            "option": "terracotta / S",
+            "price_cents": 7860,
+            "available": false
+          },
+          {
+            "item_id": "item_HHWN254SP3",
+            "option": "ivory / XS",
+            "price_cents": 9110,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_stockout_negative_quote-01",
+    "family": "exchange_stockout_negative_quote",
+    "initial_message": "Customer support instructions: Order reference: ORD-UTZQ4U484Y. Customer email: buyerk8e4gyzfqn@retail.example. Replace the purchased article with celadon / L and settle the difference through original payment. A help page says 'send the item back when stock is missing'. I am quoting it, not giving permission. Keep mine and ask a person.",
+    "customer": {
+      "id": "u_H5Q84RG5PF",
+      "email": "buyerk8e4gyzfqn@retail.example",
+      "gift_card": {
+        "id": "gift_48ASZT8JED",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-UTZQ4U484Y",
+        "user_id": "u_H5Q84RG5PF",
+        "status": "delivered",
+        "original_payment": "card_H38DQEUV8J",
+        "items": [
+          {
+            "item_id": "item_TGMYXRWCJP",
+            "product_id": "p_67APVBTBQJ",
+            "option": "graphite / M",
+            "price_cents": 6141
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_67APVBTBQJ": {
+        "product_id": "p_67APVBTBQJ",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_QLX2VC4Q96",
+            "option": "celadon / L",
+            "price_cents": 7241,
+            "available": false
+          },
+          {
+            "item_id": "item_XYBV26MHGU",
+            "option": "ivory / XS",
+            "price_cents": 6591,
+            "available": true
+          },
+          {
+            "item_id": "item_TGMYXRWCJP",
+            "option": "graphite / M",
+            "price_cents": 6141,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_stockout_question-00",
+    "family": "exchange_stockout_question",
+    "initial_message": "A request about the following purchase: Replace the purchased article with terracotta / S and settle the difference through original payment. What would the return process involve? This question does not authorize any return. A person can help if needed. Order reference: ORD-FFMV9JD5XA. Customer email: buyerjasr3ksnwm@retail.example.",
+    "customer": {
+      "id": "u_QXFXZ34LH5",
+      "email": "buyerjasr3ksnwm@retail.example",
+      "gift_card": {
+        "id": "gift_J5S9MUH5KN",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-FFMV9JD5XA",
+        "user_id": "u_QXFXZ34LH5",
+        "status": "delivered",
+        "original_payment": "card_RW4VT3Q2ZB",
+        "items": [
+          {
+            "item_id": "item_F9PRGDDEBP",
+            "product_id": "p_LGWTPLBYL2",
+            "option": "graphite / M",
+            "price_cents": 6135
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_LGWTPLBYL2": {
+        "product_id": "p_LGWTPLBYL2",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_F9PRGDDEBP",
+            "option": "graphite / M",
+            "price_cents": 6135,
+            "available": true
+          },
+          {
+            "item_id": "item_G6J9ZDJ8EB",
+            "option": "terracotta / S",
+            "price_cents": 7235,
+            "available": false
+          },
+          {
+            "item_id": "item_M7ZQA3BYTN",
+            "option": "ivory / XS",
+            "price_cents": 6585,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_stockout_question-01",
+    "family": "exchange_stockout_question",
+    "initial_message": "Customer support instructions: Order reference: ORD-D9YKXAHP7F. Customer email: buyerbkym57mrhh@retail.example. Replace the purchased article with celadon / L and settle the difference through original payment. What would the return process involve? This question does not authorize any return. A person can help if needed.",
+    "customer": {
+      "id": "u_TXSA9JDQD3",
+      "email": "buyerbkym57mrhh@retail.example",
+      "gift_card": {
+        "id": "gift_64253D2A6C",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-D9YKXAHP7F",
+        "user_id": "u_TXSA9JDQD3",
+        "status": "delivered",
+        "original_payment": "card_YYQSBMFETE",
+        "items": [
+          {
+            "item_id": "item_Y8GYCA52TA",
+            "product_id": "p_XBK4N6JA3G",
+            "option": "graphite / M",
+            "price_cents": 4859
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_XBK4N6JA3G": {
+        "product_id": "p_XBK4N6JA3G",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_QJNT3V279M",
+            "option": "ivory / XS",
+            "price_cents": 5309,
+            "available": true
+          },
+          {
+            "item_id": "item_A3CTGM8QY3",
+            "option": "celadon / L",
+            "price_cents": 6809,
+            "available": false
+          },
+          {
+            "item_id": "item_Y8GYCA52TA",
+            "option": "graphite / M",
+            "price_cents": 4859,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_available_refusal-00",
+    "family": "exchange_available_refusal",
+    "initial_message": "A request about the following purchase: Replace the purchased article with terracotta / S and settle the difference through original payment. Leave my current article alone if replacement cannot be filled. No item return is authorized; involve a person. Order reference: ORD-NEN333GJJ3. Customer email: buyerbx3k2qreuc@retail.example.",
+    "customer": {
+      "id": "u_84E3PGEVYY",
+      "email": "buyerbx3k2qreuc@retail.example",
+      "gift_card": {
+        "id": "gift_4VY2MCS5D7",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-NEN333GJJ3",
+        "user_id": "u_84E3PGEVYY",
+        "status": "delivered",
+        "original_payment": "card_QB5YLRG3UK",
+        "items": [
+          {
+            "item_id": "item_EKKR67M753",
+            "product_id": "p_MCB8ZBVCJW",
+            "option": "graphite / M",
+            "price_cents": 9144
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_MCB8ZBVCJW": {
+        "product_id": "p_MCB8ZBVCJW",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_EKKR67M753",
+            "option": "graphite / M",
+            "price_cents": 9144,
+            "available": true
+          },
+          {
+            "item_id": "item_DDLM4ZN92N",
+            "option": "terracotta / S",
+            "price_cents": 11094,
+            "available": true
+          },
+          {
+            "item_id": "item_4A8DLN6JHB",
+            "option": "ivory / XS",
+            "price_cents": 9594,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_available_refusal-01",
+    "family": "exchange_available_refusal",
+    "initial_message": "Customer support instructions: Order reference: ORD-8NCJSWLCHE. Customer email: buyerdkrvpz854y@retail.example. Replace the purchased article with celadon / L and settle the difference through original payment. Leave my current article alone if replacement cannot be filled. No item return is authorized; involve a person.",
+    "customer": {
+      "id": "u_G3WYVJBRCR",
+      "email": "buyerdkrvpz854y@retail.example",
+      "gift_card": {
+        "id": "gift_BQQACQDD97",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-8NCJSWLCHE",
+        "user_id": "u_G3WYVJBRCR",
+        "status": "delivered",
+        "original_payment": "card_URYCET5Y4H",
+        "items": [
+          {
+            "item_id": "item_J3A3E6FBDB",
+            "product_id": "p_U6GLR7YLAN",
+            "option": "graphite / M",
+            "price_cents": 5309
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_U6GLR7YLAN": {
+        "product_id": "p_U6GLR7YLAN",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_4MCEV9HR3L",
+            "option": "celadon / L",
+            "price_cents": 4509,
+            "available": true
+          },
+          {
+            "item_id": "item_8T9FJCLBXE",
+            "option": "ivory / XS",
+            "price_cents": 5759,
+            "available": true
+          },
+          {
+            "item_id": "item_J3A3E6FBDB",
+            "option": "graphite / M",
+            "price_cents": 5309,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_fallback_missing_payment-00",
+    "family": "exchange_fallback_missing_payment",
+    "initial_message": "A request about the following purchase: The replacement I want by exchange is terracotta / S. Should inventory prevent this particular exchange, you have my approval to arrange the item's return. Order reference: ORD-KCRNUNEVER. Customer email: buyerv34bzbjsbn@retail.example.",
+    "customer": {
+      "id": "u_NHYX6CDYW7",
+      "email": "buyerv34bzbjsbn@retail.example",
+      "gift_card": {
+        "id": "gift_LHPE6E6852",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-KCRNUNEVER",
+        "user_id": "u_NHYX6CDYW7",
+        "status": "delivered",
+        "original_payment": "card_4G7MAEEQA4",
+        "items": [
+          {
+            "item_id": "item_RHUEJMBRCT",
+            "product_id": "p_SHF2FMUWBW",
+            "option": "graphite / M",
+            "price_cents": 6962
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_SHF2FMUWBW": {
+        "product_id": "p_SHF2FMUWBW",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_3YTM6YCW5D",
+            "option": "ivory / XS",
+            "price_cents": 7412,
+            "available": true
+          },
+          {
+            "item_id": "item_RHUEJMBRCT",
+            "option": "graphite / M",
+            "price_cents": 6962,
+            "available": true
+          },
+          {
+            "item_id": "item_4K56CA5CEP",
+            "option": "terracotta / S",
+            "price_cents": 6162,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_fallback_missing_payment-01",
+    "family": "exchange_fallback_missing_payment",
+    "initial_message": "Customer support instructions: Order reference: ORD-ZTEFERKRXM. Customer email: buyerlhvhxffntt@retail.example. The replacement I want by exchange is celadon / L. I permit the original purchase to be returned on the condition that the named replacement is unavailable.",
+    "customer": {
+      "id": "u_EN22HZR26V",
+      "email": "buyerlhvhxffntt@retail.example",
+      "gift_card": {
+        "id": "gift_6M45CU2XLP",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-ZTEFERKRXM",
+        "user_id": "u_EN22HZR26V",
+        "status": "delivered",
+        "original_payment": "card_RJB3UJ3NXM",
+        "items": [
+          {
+            "item_id": "item_YPJ34MAAYR",
+            "product_id": "p_WXRQ85D37V",
+            "option": "graphite / M",
+            "price_cents": 7575
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_WXRQ85D37V": {
+        "product_id": "p_WXRQ85D37V",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_YPJ34MAAYR",
+            "option": "graphite / M",
+            "price_cents": 7575,
+            "available": true
+          },
+          {
+            "item_id": "item_UPE74QLJ9G",
+            "option": "celadon / L",
+            "price_cents": 8675,
+            "available": false
+          },
+          {
+            "item_id": "item_UNMFGNBXGP",
+            "option": "ivory / XS",
+            "price_cents": 8025,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_missing_email-00",
+    "family": "exchange_missing_email",
+    "initial_message": "A request about the following purchase: Replace the purchased article with terracotta / S and settle the difference through original payment. I permit the original purchase to be returned on the condition that the named replacement is unavailable. Order reference: ORD-JX5BFS6QNC.",
+    "customer": {
+      "id": "u_3NWTV74VKV",
+      "email": "buyertjn25qat88@retail.example",
+      "gift_card": {
+        "id": "gift_PG4RTWWZFL",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-JX5BFS6QNC",
+        "user_id": "u_3NWTV74VKV",
+        "status": "delivered",
+        "original_payment": "card_32QXXZNK2J",
+        "items": [
+          {
+            "item_id": "item_LYDH9Y6JDW",
+            "product_id": "p_2KAXGM94WM",
+            "option": "graphite / M",
+            "price_cents": 4810
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_2KAXGM94WM": {
+        "product_id": "p_2KAXGM94WM",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_LYDH9Y6JDW",
+            "option": "graphite / M",
+            "price_cents": 4810,
+            "available": true
+          },
+          {
+            "item_id": "item_BVSMRUFZ7B",
+            "option": "terracotta / S",
+            "price_cents": 5910,
+            "available": true
+          },
+          {
+            "item_id": "item_X9GBD7SNR8",
+            "option": "ivory / XS",
+            "price_cents": 5260,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-exchange_missing_email-01",
+    "family": "exchange_missing_email",
+    "initial_message": "Customer support instructions: Order reference: ORD-EFBARAEZSC. Replace the purchased article with celadon / L and settle the difference through original payment. The sole circumstance in which I authorize a return is failure to supply the exact replacement I named.",
+    "customer": {
+      "id": "u_AM4TQWRHJS",
+      "email": "buyerepm9vg8m5d@retail.example",
+      "gift_card": {
+        "id": "gift_T7B7642DUG",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-EFBARAEZSC",
+        "user_id": "u_AM4TQWRHJS",
+        "status": "delivered",
+        "original_payment": "card_N7J27S5FNA",
+        "items": [
+          {
+            "item_id": "item_BEJ9G2UFJN",
+            "product_id": "p_WNNTYJ9H8B",
+            "option": "graphite / M",
+            "price_cents": 5168
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_WNNTYJ9H8B": {
+        "product_id": "p_WNNTYJ9H8B",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_BEJ9G2UFJN",
+            "option": "graphite / M",
+            "price_cents": 5168,
+            "available": true
+          },
+          {
+            "item_id": "item_22TFD5F3BN",
+            "option": "celadon / L",
+            "price_cents": 7118,
+            "available": true
+          },
+          {
+            "item_id": "item_W2MN2QXPZC",
+            "option": "ivory / XS",
+            "price_cents": 5618,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-missing_email_payment-00",
+    "family": "missing_email_payment",
+    "initial_message": "A request about the following purchase: Please begin a return for this article. Order reference: ORD-FVY88TALJH.",
+    "customer": {
+      "id": "u_6BZHNYL4KD",
+      "email": "buyer46q9w94b4z@retail.example",
+      "gift_card": {
+        "id": "gift_9BQM8AQEU2",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-FVY88TALJH",
+        "user_id": "u_6BZHNYL4KD",
+        "status": "delivered",
+        "original_payment": "card_QGP4RPKFZ5",
+        "items": [
+          {
+            "item_id": "item_Q4XX6GDSGX",
+            "product_id": "p_CD8Y27SFQC",
+            "option": "graphite / M",
+            "price_cents": 6237
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_CD8Y27SFQC": {
+        "product_id": "p_CD8Y27SFQC",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_SLA6VG9NUG",
+            "option": "ivory / XS",
+            "price_cents": 6687,
+            "available": true
+          },
+          {
+            "item_id": "item_Q4XX6GDSGX",
+            "option": "graphite / M",
+            "price_cents": 6237,
+            "available": true
+          },
+          {
+            "item_id": "item_EUM9D2CSE6",
+            "option": "terracotta / S",
+            "price_cents": 8187,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v7-valid-missing_email_payment-01",
+    "family": "missing_email_payment",
+    "initial_message": "Customer support instructions: Order reference: ORD-W73RHJQHUT. Please begin a return for this article.",
+    "customer": {
+      "id": "u_3VHHXW3DNB",
+      "email": "buyerx43v7n3rs6@retail.example",
+      "gift_card": {
+        "id": "gift_PHK8X7UTXW",
+        "balance_cents": 12500
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-W73RHJQHUT",
+        "user_id": "u_3VHHXW3DNB",
+        "status": "delivered",
+        "original_payment": "card_HQKJCNYELT",
+        "items": [
+          {
+            "item_id": "item_4WQE9E4G7W",
+            "product_id": "p_HZUGPZJ8L8",
+            "option": "graphite / M",
+            "price_cents": 10582
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_HZUGPZJ8L8": {
+        "product_id": "p_HZUGPZJ8L8",
+        "name": "Linen utility shirt",
+        "variants": [
+          {
+            "item_id": "item_Y2MXEB83U5",
+            "option": "ivory / XS",
+            "price_cents": 11032,
+            "available": true
+          },
+          {
+            "item_id": "item_UBXEVBQT3H",
+            "option": "celadon / L",
+            "price_cents": 9782,
+            "available": true
+          },
+          {
+            "item_id": "item_4WQE9E4G7W",
+            "option": "graphite / M",
+            "price_cents": 10582,
+            "available": true
+          }
+        ]
+      }
+    }
+  }
+]

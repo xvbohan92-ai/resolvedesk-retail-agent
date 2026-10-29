@@ -1,0 +1,66 @@
+{
+  "status": "failed",
+  "kind": "smoke",
+  "scope": "Separate CUDA PyTorch/PEFT FP16 performance path on the unchanged 824 V7 training pairs. The same weighted next-token objective retains full context; projection changes 512 to 192, backend/precision/gradient scaling/checkpointing differ. This is not an isolated GPU hardware speed comparison, a fresh held-out experiment, or evidence of accuracy. Smoke weights are discarded.",
+  "plan_sha256": "ea273af1a91b4888988aa15e82e912f596b06e13d1fb8ff47ac6ba9928cf7685",
+  "source_inputs_sha256": {
+    "training/cuda_torch/train.py": "5fd31a634f382364639db238331a1e7cd2082430a06a99918cc554fc904364ff",
+    "training/cuda_torch/model.py": "d14b21fbccf93099168cf459313b77cfa8da470d8139497c74b507c25cb4dbea",
+    "training/v7/config.json": "199d48a5e96da7e790e60cbc76935c16971229173b69c4949cab0516814f72c5",
+    "training/v7/tokenization.py": "956ca58a86b9d3e93bf218906690a3c3be6b672efabca65eb6e8acaec27f70ce",
+    "training/v7/train.py": "5ce0ff7d78b32ad67a7e0756ffce522ca019968f3e6b8c26cd8a8cb69e2e1464",
+    "training/v4/tokenization.py": "946f01aab1b0ab6383025a552c474382ec68a8c4711739c08285f62465841fc3",
+    "training/base-model-spec.json": "bff5ee1bb595c89e629c7e0f93884c06ab66628f9cf6e61b8dfe02f87053a965",
+    "training/v7/datasets/manifest.json": "1bbb3aba1db64e0962842411d9cb5872269dde01922c2d8731de135bbc8908ae",
+    "training/v7/datasets/train.jsonl": "ea172ed3a9eee419a62bfbce43b2a67ab4600b33d05ea69c395d2d6d9ecff903",
+    "training/v7/datasets/cases.json": "0e92883c37678e342487137ff184a7d41d3376e46f35e2821d60f81ae7b36083"
+  },
+  "initializer_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+  "smoke_weights_discarded": true,
+  "smoke_weights_reused": false,
+  "completed_true_optimizer_updates": 0,
+  "metrics": [],
+  "candidates": [],
+  "all_gradients_finite": true,
+  "cloud_compute_used": true,
+  "test_used_for_selection": false,
+  "new_accuracy_claim": false,
+  "environment": {
+    "python": "3.12.13",
+    "gpu": "Tesla T4",
+    "cuda": "12.8",
+    "capability": [
+      7,
+      5
+    ],
+    "versions": {
+      "torch": "2.11.0+cu128",
+      "peft": "0.19.1",
+      "accelerate": "1.14.0",
+      "transformers": "5.21.0",
+      "safetensors": "0.8.0",
+      "numpy": "2.5.4"
+    }
+  },
+  "token_audit": {
+    "all_physical_rows_checked": 824,
+    "all_targets_covered": true,
+    "full_input_context_retained": true,
+    "longest_sequence": 2620,
+    "longest_completion": 115,
+    "maximum_tail_including_padding": 141,
+    "maximum_padding_tokens": 32,
+    "projection_window": 192,
+    "mlx_projection_window": 512,
+    "prompt_and_padding_weight": 0,
+    "ordinary_completion_weight": 1,
+    "permission_value_weight": 8,
+    "reason_value_weight": 4,
+    "permission_value_tokens": 158,
+    "reason_value_tokens": 194,
+    "projection_difference": "Only zero-weight logits omitted; no input token or supervised target dropped."
+  },
+  "error_type": "ImportError",
+  "error": "Found an incompatible version of torchao. Found version 0.10.0, but only versions above 0.16.0 are supported",
+  "failed_at_utc": "2026-10-28T19:50:11.304747+00:00"
+}

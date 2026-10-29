@@ -1,0 +1,8 @@
+{
+  "evaluation_sha256": "61f34bc006c22ee4f2f1c0b60378ee09f6af12f0560069f6fc58401d9c670f24",
+  "source_sha256": "2bfd72739ae49204a474d6195b6261eb634e3ca26cb7105bcd3f10a21f57c5bb",
+  "complete_paired_records": 126,
+  "frozen_cases_per_arm": 42,
+  "training_validation_and_business_state_checks_pass": true,
+  "scope": "Checks sources and business states; not a human or production evaluation."
+}

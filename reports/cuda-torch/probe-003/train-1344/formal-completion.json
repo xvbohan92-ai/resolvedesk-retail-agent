@@ -1,0 +1,10 @@
+{
+  "download_prepared_at_utc": "2026-10-28T21:53:00.941346+00:00",
+  "status": "completed",
+  "completed_updates": 1344,
+  "process_return_code": 0,
+  "report_sha256": "48dcc7e07f50ff9ca8ae06ad141a16d80dd837d1d9b841f24e933fb4373c4528",
+  "final_adapter_sha256": "33fe5c505ddf08cd8cb4032dbd9d350fa205134417ec0f1f90648f4af658e053",
+  "initial_peft_sha256": "2e220a2fe8e91aec5bf6a5b7ee7f58cfb5d8812c4d7a413486b5943683325ef1",
+  "purpose": "Completed formal training only; fresh comparison has not started"
+}

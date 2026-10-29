@@ -1,0 +1,2649 @@
+{
+  "evaluation_sha256": "3a19cf2d2cdc9b9203489cb8842563bd5685a409cfc602342dd4a9a08079aa53",
+  "records": [
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-exchange-01",
+      "repeated_question_attempts": 4,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "new_option",
+            "message": "Please provide your new option."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please provide your new option.\"}}",
+        "result": {
+          "field": "new_option",
+          "question": "Please provide your new option."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1156,
+          "latency_ms": 4016.48,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-exchange_fallback-00",
+      "repeated_question_attempts": 2,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_ETF5ZE",
+            "new_item_id": "item_9T3DUY",
+            "order_id": "ORD-SLLNFL",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-SLLNFL\",\"item_id\":\"item_ETF5ZE\",\"payment_method\":\"original\",\"new_item_id\":\"item_9T3DUY\"}}",
+        "result": {
+          "detail": "Inspect the product; select an available different same-product variant",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1447,
+          "latency_ms": 6122.02,
+          "output_tokens": 44,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-exchange_fallback-01",
+      "repeated_question_attempts": 1,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "new_option",
+            "message": "Please confirm your new option."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please confirm your new option.\"}}",
+        "result": {
+          "field": "new_option",
+          "question": "Please confirm your new option."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1500,
+          "latency_ms": 4900.56,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-forbidden_status-00",
+      "repeated_question_attempts": 5,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "reason",
+            "message": "Please provide your reason."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"reason\",\"message\":\"Please provide your reason.\"}}",
+        "result": {
+          "field": "reason",
+          "question": "Please provide your reason."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1141,
+          "latency_ms": 7930.4,
+          "output_tokens": 21,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-forbidden_status-01",
+      "repeated_question_attempts": 3,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "reason",
+            "message": "Please provide your reason."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"reason\",\"message\":\"Please provide your reason.\"}}",
+        "result": {
+          "field": "reason",
+          "question": "Please provide your reason."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1152,
+          "latency_ms": 3517.81,
+          "output_tokens": 21,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-foreign_order-00",
+      "repeated_question_attempts": 4,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "payment_method",
+            "message": "Please provide your payment method."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+        "result": {
+          "field": "payment_method",
+          "question": "Please provide your payment method."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1058,
+          "latency_ms": 8007.21,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-foreign_order-01",
+      "repeated_question_attempts": 4,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "payment_method",
+            "message": "Please provide your payment method."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+        "result": {
+          "field": "payment_method",
+          "question": "Please provide your payment method."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1047,
+          "latency_ms": 3640.76,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-missing_email-00",
+      "repeated_question_attempts": 1,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "customer@example.com"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"customer@example.com\"}}",
+        "result": {
+          "detail": "No matching demo customer",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 933,
+          "latency_ms": 6489.17,
+          "output_tokens": 15,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-missing_email-01",
+      "repeated_question_attempts": 2,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "original"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"original\"}}",
+        "result": {
+          "detail": "No matching demo customer",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 923,
+          "latency_ms": 2714.03,
+          "output_tokens": 13,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-exchange_missing_option-00",
+      "repeated_question_attempts": 4,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "product_id": "p_6YKFEQ"
+          },
+          "tool": "get_product"
+        },
+        "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_6YKFEQ\"}}",
+        "result": {
+          "exchange_candidates": [
+            {
+              "available": true,
+              "current_item_id": "item_463PB5",
+              "item_id": "item_VS575Z",
+              "option": "white / XS",
+              "order_id": "ORD-WQKYM5",
+              "price_cents": 3332,
+              "price_difference_cents": 225
+            },
+            {
+              "available": true,
+              "current_item_id": "item_463PB5",
+              "item_id": "item_U85JPY",
+              "option": "saffron / S",
+              "order_id": "ORD-WQKYM5",
+              "price_cents": 2582,
+              "price_difference_cents": -525
+            }
+          ],
+          "name": "Everyday shirt",
+          "product_id": "p_6YKFEQ",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_463PB5",
+              "option": "black / M",
+              "price_cents": 3107
+            },
+            {
+              "available": true,
+              "item_id": "item_VS575Z",
+              "option": "white / XS",
+              "price_cents": 3332
+            },
+            {
+              "available": true,
+              "item_id": "item_U85JPY",
+              "option": "saffron / S",
+              "price_cents": 2582
+            }
+          ]
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1170,
+          "latency_ms": 8004.71,
+          "output_tokens": 20,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-exchange_missing_payment-00",
+      "repeated_question_attempts": 2,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_CRRWM6",
+            "new_item_id": "item_D9E3KZ",
+            "order_id": "ORD-SGDQQQ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-SGDQQQ\",\"item_id\":\"item_CRRWM6\",\"payment_method\":\"original\",\"new_item_id\":\"item_D9E3KZ\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 875,
+            "arguments": {
+              "item_id": "item_CRRWM6",
+              "new_item_id": "item_D9E3KZ",
+              "order_id": "ORD-SGDQQQ",
+              "payment_method": "original"
+            },
+            "fingerprint": "6bb037a45a02ff1a9a637b06868fbd277cf11fde39079c53fa9d80c0c84d36b2",
+            "id": "84fcd2bf9611fe556cb637ffc2c2133d",
+            "item_id": "item_CRRWM6",
+            "kind": "exchange",
+            "new_item_id": "item_D9E3KZ",
+            "order_id": "ORD-SGDQQQ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1398,
+          "latency_ms": 13746.18,
+          "output_tokens": 45,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-exchange_unavailable-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": null,
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-8BX32D\",\"item_id\":\"item_B762VR\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "Unknown tool or incorrect argument keys",
+          "error": "invalid_action_json"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1412,
+          "latency_ms": 5584.32,
+          "output_tokens": 36,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-exchange_unavailable-01",
+      "repeated_question_attempts": 4,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "product_id": "p_QSZW8A"
+          },
+          "tool": "get_product"
+        },
+        "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_QSZW8A\"}}",
+        "result": {
+          "exchange_candidates": [
+            {
+              "available": true,
+              "current_item_id": "item_T7GBBP",
+              "item_id": "item_7D5DFU",
+              "option": "white / XS",
+              "order_id": "ORD-GNE88K",
+              "price_cents": 5533,
+              "price_difference_cents": 225
+            },
+            {
+              "available": false,
+              "current_item_id": "item_T7GBBP",
+              "item_id": "item_SBZV8Y",
+              "option": "charcoal / L",
+              "order_id": "ORD-GNE88K",
+              "price_cents": 6183,
+              "price_difference_cents": 875
+            }
+          ],
+          "name": "Everyday shirt",
+          "product_id": "p_QSZW8A",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_7D5DFU",
+              "option": "white / XS",
+              "price_cents": 5533
+            },
+            {
+              "available": false,
+              "item_id": "item_SBZV8Y",
+              "option": "charcoal / L",
+              "price_cents": 6183
+            },
+            {
+              "available": true,
+              "item_id": "item_T7GBBP",
+              "option": "black / M",
+              "price_cents": 5308
+            }
+          ]
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1161,
+          "latency_ms": 5109.02,
+          "output_tokens": 19,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-exchange_shortfall-00",
+      "repeated_question_attempts": 4,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "product_id": "p_CNMGP3"
+          },
+          "tool": "get_product"
+        },
+        "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_CNMGP3\"}}",
+        "result": {
+          "exchange_candidates": [
+            {
+              "available": true,
+              "current_item_id": "item_9UGKJL",
+              "item_id": "item_KFURSH",
+              "option": "saffron / S",
+              "order_id": "ORD-MWA3X6",
+              "price_cents": 7904,
+              "price_difference_cents": 1800
+            },
+            {
+              "available": true,
+              "current_item_id": "item_9UGKJL",
+              "item_id": "item_ZN8YTX",
+              "option": "white / XS",
+              "order_id": "ORD-MWA3X6",
+              "price_cents": 6329,
+              "price_difference_cents": 225
+            }
+          ],
+          "name": "Everyday shirt",
+          "product_id": "p_CNMGP3",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_KFURSH",
+              "option": "saffron / S",
+              "price_cents": 7904
+            },
+            {
+              "available": true,
+              "item_id": "item_ZN8YTX",
+              "option": "white / XS",
+              "price_cents": 6329
+            },
+            {
+              "available": true,
+              "item_id": "item_9UGKJL",
+              "option": "black / M",
+              "price_cents": 6104
+            }
+          ]
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1202,
+          "latency_ms": 3472.52,
+          "output_tokens": 18,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v4-test-exchange_shortfall-01",
+      "repeated_question_attempts": 2,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_8K94CA",
+            "order_id": "ORD-7WUBAC",
+            "payment_method": "gift_3FC2W8"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-7WUBAC\",\"item_id\":\"item_8K94CA\",\"payment_method\":\"gift_3FC2W8\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 3598,
+            "arguments": {
+              "item_id": "item_8K94CA",
+              "order_id": "ORD-7WUBAC",
+              "payment_method": "gift_3FC2W8"
+            },
+            "fingerprint": "252f267c7000902857ff8bed8c149730a4997c33b58e0f7ee45533a5e73e472a",
+            "id": "8846db298f4b032440db2031f4218aab",
+            "item_id": "item_8K94CA",
+            "kind": "return",
+            "order_id": "ORD-7WUBAC",
+            "order_revision": 0,
+            "payment_method": "gift_3FC2W8",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1454,
+          "latency_ms": 5488.33,
+          "output_tokens": 42,
+          "provider": "mlx",
+          "variant": "previous_old_flow",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-missing_reason-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-C97QD2",
+            "reason": "ordered by mistake"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-C97QD2\",\"reason\":\"ordered by mistake\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 7269,
+            "arguments": {
+              "order_id": "ORD-C97QD2",
+              "reason": "ordered by mistake"
+            },
+            "fingerprint": "7ffa9cf69a29d11d29aaa144782525608b2b2e2bd272cf12f86de564fe1e10c9",
+            "id": "824aaeb0a3a3488dc39b46f1e7db287b",
+            "kind": "cancel",
+            "order_id": "ORD-C97QD2",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1449,
+          "latency_ms": 4918.14,
+          "output_tokens": 27,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-missing_reason-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-63WCFP",
+            "reason": "ordered by mistake"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-63WCFP\",\"reason\":\"ordered by mistake\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 6640,
+            "arguments": {
+              "order_id": "ORD-63WCFP",
+              "reason": "ordered by mistake"
+            },
+            "fingerprint": "a09403f260aee17405aa77785f2148c11b9cfe7e7630d2bf1daccf4741aba91c",
+            "id": "05ce1ad5b7f90f13a4e14f5d0e84d1e3",
+            "kind": "cancel",
+            "order_id": "ORD-63WCFP",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1448,
+          "latency_ms": 4921.24,
+          "output_tokens": 27,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-missing_payment-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_WB2NY2",
+            "order_id": "ORD-GAW4V7",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-GAW4V7\",\"item_id\":\"item_WB2NY2\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 7276,
+            "arguments": {
+              "item_id": "item_WB2NY2",
+              "order_id": "ORD-GAW4V7",
+              "payment_method": "original"
+            },
+            "fingerprint": "60b9ae525064382deef6bd37f2824bf6707a0d14f690a1e0dd72a38f04ca4e15",
+            "id": "a3bec504c259310a9594a58542493889",
+            "item_id": "item_WB2NY2",
+            "kind": "return",
+            "order_id": "ORD-GAW4V7",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1450,
+          "latency_ms": 5943.91,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-missing_payment-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_V6BDLP",
+            "order_id": "ORD-LFEY2Q",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-LFEY2Q\",\"item_id\":\"item_V6BDLP\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4741,
+            "arguments": {
+              "item_id": "item_V6BDLP",
+              "order_id": "ORD-LFEY2Q",
+              "payment_method": "original"
+            },
+            "fingerprint": "08c18ab696cb0ca96070fd85ec77a6b02c6b52ca5eb232cb71a2b3b44d8755ad",
+            "id": "c670a3f132da6b7fd868e85af37a7ea0",
+            "item_id": "item_V6BDLP",
+            "kind": "return",
+            "order_id": "ORD-LFEY2Q",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1449,
+          "latency_ms": 5461.01,
+          "output_tokens": 34,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange-00",
+      "repeated_question_attempts": 4,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "new_option",
+            "message": "Please provide your new option."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please provide your new option.\"}}",
+        "result": {
+          "backend_executed": false,
+          "cached_customer_reply": {
+            "field": "new_option",
+            "question": "Please provide your new option.",
+            "reply": "saffron / S",
+            "reply_index": 1
+          },
+          "detail": "Reuse the reply or ask a different precise question.",
+          "error": "duplicate_clarification_blocked"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1787,
+          "latency_ms": 4933.88,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": null,
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-49LGQC\",\"item_id\":\"item_HSJB8T\",\"payment_method\":\"original\",\"new_item_id\":\"item_9Z7K9V\",\"new_option\":\"charcoal / L\"}}",
+        "result": {
+          "detail": "Unknown tool or incorrect argument keys",
+          "error": "invalid_action_json"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1532,
+          "latency_ms": 16698.52,
+          "output_tokens": 55,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_fallback-00",
+      "repeated_question_attempts": 3,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "product_id": "p_DAGU5X"
+          },
+          "tool": "get_product"
+        },
+        "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_DAGU5X\"}}",
+        "result": {
+          "exchange_candidates": [
+            {
+              "available": false,
+              "current_item_id": "item_ETF5ZE",
+              "item_id": "item_9T3DUY",
+              "option": "saffron / S",
+              "order_id": "ORD-SLLNFL",
+              "price_cents": 4633,
+              "price_difference_cents": 1450
+            },
+            {
+              "available": true,
+              "current_item_id": "item_ETF5ZE",
+              "item_id": "item_CBK2XS",
+              "option": "white / XS",
+              "order_id": "ORD-SLLNFL",
+              "price_cents": 3408,
+              "price_difference_cents": 225
+            }
+          ],
+          "name": "Everyday shirt",
+          "product_id": "p_DAGU5X",
+          "variants": [
+            {
+              "available": false,
+              "item_id": "item_9T3DUY",
+              "option": "saffron / S",
+              "price_cents": 4633
+            },
+            {
+              "available": true,
+              "item_id": "item_ETF5ZE",
+              "option": "black / M",
+              "price_cents": 3183
+            },
+            {
+              "available": true,
+              "item_id": "item_CBK2XS",
+              "option": "white / XS",
+              "price_cents": 3408
+            }
+          ]
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1789,
+          "latency_ms": 4503.42,
+          "output_tokens": 19,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_fallback-01",
+      "repeated_question_attempts": 2,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "product_id": "p_PCQ98Y"
+          },
+          "tool": "get_product"
+        },
+        "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_PCQ98Y\"}}",
+        "result": {
+          "exchange_candidates": [
+            {
+              "available": false,
+              "current_item_id": "item_Q293BX",
+              "item_id": "item_8QWJLX",
+              "option": "charcoal / L",
+              "order_id": "ORD-G7ZY5Q",
+              "price_cents": 4508,
+              "price_difference_cents": -525
+            },
+            {
+              "available": true,
+              "current_item_id": "item_Q293BX",
+              "item_id": "item_A9Y8VG",
+              "option": "white / XS",
+              "order_id": "ORD-G7ZY5Q",
+              "price_cents": 5258,
+              "price_difference_cents": 225
+            }
+          ],
+          "name": "Everyday shirt",
+          "product_id": "p_PCQ98Y",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_Q293BX",
+              "option": "black / M",
+              "price_cents": 5033
+            },
+            {
+              "available": false,
+              "item_id": "item_8QWJLX",
+              "option": "charcoal / L",
+              "price_cents": 4508
+            },
+            {
+              "available": true,
+              "item_id": "item_A9Y8VG",
+              "option": "white / XS",
+              "price_cents": 5258
+            }
+          ]
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1799,
+          "latency_ms": 4599.76,
+          "output_tokens": 19,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-forbidden_status-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_BELYHM",
+            "order_id": "ORD-YD2RV7",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-YD2RV7\",\"item_id\":\"item_BELYHM\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 5027,
+            "arguments": {
+              "item_id": "item_BELYHM",
+              "order_id": "ORD-YD2RV7",
+              "payment_method": "original"
+            },
+            "fingerprint": "d9a8a65db93ebc37fbd414f6c3f2bd4a758bee1020777f421865e27691def76d",
+            "id": "8102f9a3aa61e8b8f5f5c4a1fdbd30ea",
+            "item_id": "item_BELYHM",
+            "kind": "return",
+            "order_id": "ORD-YD2RV7",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1444,
+          "latency_ms": 4908.42,
+          "output_tokens": 33,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-missing_email-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-J7PYAU"
+          },
+          "tool": "get_order"
+        },
+        "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-J7PYAU\"}}",
+        "result": {
+          "allowed_tools": [
+            "identify_customer",
+            "ask_customer",
+            "handoff"
+          ],
+          "backend_executed": false,
+          "detail": "Inspect identity, order and exchange catalog before proposing.",
+          "error": "step_prerequisite_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1441,
+          "latency_ms": 13261.71,
+          "output_tokens": 18,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-missing_email-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-7GXZZE"
+          },
+          "tool": "get_order"
+        },
+        "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-7GXZZE\"}}",
+        "result": {
+          "allowed_tools": [
+            "identify_customer",
+            "ask_customer",
+            "handoff"
+          ],
+          "backend_executed": false,
+          "detail": "Inspect identity, order and exchange catalog before proposing.",
+          "error": "step_prerequisite_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1424,
+          "latency_ms": 4655.25,
+          "output_tokens": 19,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_missing_option-01",
+      "repeated_question_attempts": 4,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "new_option",
+            "message": "Please provide your new option."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please provide your new option.\"}}",
+        "result": {
+          "backend_executed": false,
+          "cached_customer_reply": {
+            "field": "new_option",
+            "question": "Please provide your new option.",
+            "reply": "charcoal / L",
+            "reply_index": 1
+          },
+          "detail": "Reuse the reply or ask a different precise question.",
+          "error": "duplicate_clarification_blocked"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1766,
+          "latency_ms": 14225.84,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_missing_payment-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_AKLGF2",
+            "new_item_id": "item_65EF4X",
+            "order_id": "ORD-BCPPF8",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-BCPPF8\",\"item_id\":\"item_AKLGF2\",\"payment_method\":\"original\",\"new_item_id\":\"item_65EF4X\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 1450,
+            "arguments": {
+              "item_id": "item_AKLGF2",
+              "new_item_id": "item_65EF4X",
+              "order_id": "ORD-BCPPF8",
+              "payment_method": "original"
+            },
+            "fingerprint": "a1d37704f01831713da01e67463ee5c74ec22b1386b34f716c268f6787533c82",
+            "id": "73e6cc601f79fc95f264f698877f7b1a",
+            "item_id": "item_AKLGF2",
+            "kind": "exchange",
+            "new_item_id": "item_65EF4X",
+            "order_id": "ORD-BCPPF8",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1946,
+          "latency_ms": 8165.85,
+          "output_tokens": 46,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_gift-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": null,
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-QUUS4E\",\"item_id\":\"item_LB9T2W\",\"payment_method\":\"gift_6PGMS3\",\"new_item_id\":\"item_LB9T2W\",\"new_option\":\"saffron / S\"}}",
+        "result": {
+          "detail": "Unknown tool or incorrect argument keys",
+          "error": "invalid_action_json"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1642,
+          "latency_ms": 8265.5,
+          "output_tokens": 62,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_gift-01",
+      "repeated_question_attempts": 4,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "new_option",
+            "message": "Please provide your new option."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please provide your new option.\"}}",
+        "result": {
+          "backend_executed": false,
+          "cached_customer_reply": {
+            "field": "new_option",
+            "question": "Please provide your new option.",
+            "reply": "charcoal / L",
+            "reply_index": 2
+          },
+          "detail": "Reuse the reply or ask a different precise question.",
+          "error": "duplicate_clarification_blocked"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1776,
+          "latency_ms": 6200.32,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_unavailable-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": null,
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-8BX32D\",\"item_id\":\"item_B762VR\",\"payment_method\":\"original\",\"new_item_id\":\"item_B762VR\",\"new_option\":\"saffron / S\"}}",
+        "result": {
+          "detail": "Unknown tool or incorrect argument keys",
+          "error": "invalid_action_json"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1480,
+          "latency_ms": 14215.56,
+          "output_tokens": 56,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_unavailable-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": null,
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-GNE88K\",\"item_id\":\"item_T7GBBP\",\"payment_method\":\"original\",\"new_item_id\":\"item_T7GBBP\",\"new_option\":\"charcoal / L\"}}",
+        "result": {
+          "detail": "Unknown tool or incorrect argument keys",
+          "error": "invalid_action_json"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1630,
+          "latency_ms": 8582.59,
+          "output_tokens": 52,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_shortfall-00",
+      "repeated_question_attempts": 1,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_9UGKJL",
+            "new_item_id": "item_KFURSH",
+            "order_id": "ORD-MWA3X6",
+            "payment_method": "gift_3QFAT2"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-MWA3X6\",\"item_id\":\"item_9UGKJL\",\"payment_method\":\"gift_3QFAT2\",\"new_item_id\":\"item_KFURSH\"}}",
+        "result": {
+          "detail": "Gift card cannot cover the price difference",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2211,
+          "latency_ms": 10831.28,
+          "output_tokens": 52,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_shortfall-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_8K94CA",
+            "new_item_id": "item_UNL5UD",
+            "order_id": "ORD-7WUBAC",
+            "payment_method": "gift_3FC2W8"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-7WUBAC\",\"item_id\":\"item_8K94CA\",\"payment_method\":\"gift_3FC2W8\",\"new_item_id\":\"item_UNL5UD\"}}",
+        "result": {
+          "detail": "Gift card cannot cover the price difference",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2187,
+          "latency_ms": 7922.0,
+          "output_tokens": 52,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_fallback_available-00",
+      "repeated_question_attempts": 3,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "product_id": "p_DAGU5X"
+          },
+          "tool": "get_product"
+        },
+        "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_DAGU5X\"}}",
+        "result": {
+          "exchange_candidates": [
+            {
+              "available": true,
+              "current_item_id": "item_ETF5ZE",
+              "item_id": "item_9T3DUY",
+              "option": "saffron / S",
+              "order_id": "ORD-SLLNFL",
+              "price_cents": 4633,
+              "price_difference_cents": 1450
+            },
+            {
+              "available": true,
+              "current_item_id": "item_ETF5ZE",
+              "item_id": "item_CBK2XS",
+              "option": "white / XS",
+              "order_id": "ORD-SLLNFL",
+              "price_cents": 3408,
+              "price_difference_cents": 225
+            }
+          ],
+          "name": "Everyday shirt",
+          "product_id": "p_DAGU5X",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_9T3DUY",
+              "option": "saffron / S",
+              "price_cents": 4633
+            },
+            {
+              "available": true,
+              "item_id": "item_ETF5ZE",
+              "option": "black / M",
+              "price_cents": 3183
+            },
+            {
+              "available": true,
+              "item_id": "item_CBK2XS",
+              "option": "white / XS",
+              "price_cents": 3408
+            }
+          ]
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1789,
+          "latency_ms": 4862.7,
+          "output_tokens": 19,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v4-test-exchange_fallback_available-01",
+      "repeated_question_attempts": 2,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "product_id": "p_PCQ98Y"
+          },
+          "tool": "get_product"
+        },
+        "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_PCQ98Y\"}}",
+        "result": {
+          "exchange_candidates": [
+            {
+              "available": true,
+              "current_item_id": "item_Q293BX",
+              "item_id": "item_8QWJLX",
+              "option": "charcoal / L",
+              "order_id": "ORD-G7ZY5Q",
+              "price_cents": 4508,
+              "price_difference_cents": -525
+            },
+            {
+              "available": true,
+              "current_item_id": "item_Q293BX",
+              "item_id": "item_A9Y8VG",
+              "option": "white / XS",
+              "order_id": "ORD-G7ZY5Q",
+              "price_cents": 5258,
+              "price_difference_cents": 225
+            }
+          ],
+          "name": "Everyday shirt",
+          "product_id": "p_PCQ98Y",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_Q293BX",
+              "option": "black / M",
+              "price_cents": 5033
+            },
+            {
+              "available": true,
+              "item_id": "item_8QWJLX",
+              "option": "charcoal / L",
+              "price_cents": 4508
+            },
+            {
+              "available": true,
+              "item_id": "item_A9Y8VG",
+              "option": "white / XS",
+              "price_cents": 5258
+            }
+          ]
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1799,
+          "latency_ms": 5121.37,
+          "output_tokens": 19,
+          "provider": "mlx",
+          "variant": "previous_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-missing_reason-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-C97QD2",
+            "reason": "ordered by mistake"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-C97QD2\",\"reason\":\"ordered by mistake\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 7269,
+            "arguments": {
+              "order_id": "ORD-C97QD2",
+              "reason": "ordered by mistake"
+            },
+            "fingerprint": "7ffa9cf69a29d11d29aaa144782525608b2b2e2bd272cf12f86de564fe1e10c9",
+            "id": "e05de90d1204092ee922ffc50f3c4d9c",
+            "kind": "cancel",
+            "order_id": "ORD-C97QD2",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1449,
+          "latency_ms": 4689.99,
+          "output_tokens": 27,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-missing_reason-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-63WCFP",
+            "reason": "ordered by mistake"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-63WCFP\",\"reason\":\"ordered by mistake\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 6640,
+            "arguments": {
+              "order_id": "ORD-63WCFP",
+              "reason": "ordered by mistake"
+            },
+            "fingerprint": "a09403f260aee17405aa77785f2148c11b9cfe7e7630d2bf1daccf4741aba91c",
+            "id": "a6d9e3b0ad71f05dd42c9f0f2acbaf06",
+            "kind": "cancel",
+            "order_id": "ORD-63WCFP",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1448,
+          "latency_ms": 4426.69,
+          "output_tokens": 27,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-missing_payment-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_WB2NY2",
+            "order_id": "ORD-GAW4V7",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-GAW4V7\",\"item_id\":\"item_WB2NY2\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 7276,
+            "arguments": {
+              "item_id": "item_WB2NY2",
+              "order_id": "ORD-GAW4V7",
+              "payment_method": "original"
+            },
+            "fingerprint": "60b9ae525064382deef6bd37f2824bf6707a0d14f690a1e0dd72a38f04ca4e15",
+            "id": "58cd4117fd031f4b634784a0c1271d8b",
+            "item_id": "item_WB2NY2",
+            "kind": "return",
+            "order_id": "ORD-GAW4V7",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1450,
+          "latency_ms": 6045.98,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-missing_payment-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_V6BDLP",
+            "order_id": "ORD-LFEY2Q",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-LFEY2Q\",\"item_id\":\"item_V6BDLP\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4741,
+            "arguments": {
+              "item_id": "item_V6BDLP",
+              "order_id": "ORD-LFEY2Q",
+              "payment_method": "original"
+            },
+            "fingerprint": "08c18ab696cb0ca96070fd85ec77a6b02c6b52ca5eb232cb71a2b3b44d8755ad",
+            "id": "56ab938a3811a29ab0acd70de4ddfe88",
+            "item_id": "item_V6BDLP",
+            "kind": "return",
+            "order_id": "ORD-LFEY2Q",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1449,
+          "latency_ms": 8835.9,
+          "output_tokens": 34,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_fallback-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_ETF5ZE",
+            "new_item_id": "item_CBK2XS",
+            "order_id": "ORD-SLLNFL",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-SLLNFL\",\"item_id\":\"item_ETF5ZE\",\"new_item_id\":\"item_CBK2XS\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_ETF5ZE",
+              "new_item_id": "item_CBK2XS",
+              "order_id": "ORD-SLLNFL",
+              "payment_method": "original"
+            },
+            "fingerprint": "db11bcd1c3d4819594a3f09b8e783dd3057e5b7e2bcc6184ba8fec04901fe09d",
+            "id": "32c12bf147c36d04b1c32980be5206c7",
+            "item_id": "item_ETF5ZE",
+            "kind": "exchange",
+            "new_item_id": "item_CBK2XS",
+            "order_id": "ORD-SLLNFL",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2022,
+          "latency_ms": 6442.42,
+          "output_tokens": 42,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_fallback-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_Q293BX",
+            "new_item_id": "item_8QWJLX",
+            "order_id": "ORD-G7ZY5Q",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-G7ZY5Q\",\"item_id\":\"item_Q293BX\",\"new_item_id\":\"item_8QWJLX\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "Inspect the product; select an available different same-product variant",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2115,
+          "latency_ms": 7111.72,
+          "output_tokens": 48,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-forbidden_status-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_BELYHM",
+            "order_id": "ORD-YD2RV7",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-YD2RV7\",\"item_id\":\"item_BELYHM\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 5027,
+            "arguments": {
+              "item_id": "item_BELYHM",
+              "order_id": "ORD-YD2RV7",
+              "payment_method": "original"
+            },
+            "fingerprint": "d9a8a65db93ebc37fbd414f6c3f2bd4a758bee1020777f421865e27691def76d",
+            "id": "8cbefa286037a4f2f121ad9dfa621a22",
+            "item_id": "item_BELYHM",
+            "kind": "return",
+            "order_id": "ORD-YD2RV7",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1444,
+          "latency_ms": 5824.36,
+          "output_tokens": 33,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-missing_email-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "reason": "Cannot process return without inspecting order and catalog details."
+          },
+          "tool": "handoff"
+        },
+        "raw": "{\"tool\":\"handoff\",\"arguments\":{\"reason\":\"Cannot process return without inspecting order and catalog details.\"}}",
+        "result": {
+          "handoff": true,
+          "reason": "Cannot process return without inspecting order and catalog details."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1475,
+          "latency_ms": 5672.93,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-missing_email-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "reason": "customer wants to return a delivered order for a refund to original payment"
+          },
+          "tool": "handoff"
+        },
+        "raw": "{\"tool\":\"handoff\",\"arguments\":{\"reason\":\"customer wants to return a delivered order for a refund to original payment\"}}",
+        "result": {
+          "handoff": true,
+          "reason": "customer wants to return a delivered order for a refund to original payment"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1275,
+          "latency_ms": 7966.93,
+          "output_tokens": 25,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_missing_option-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_463PB5",
+            "new_item_id": "item_VS575Z",
+            "order_id": "ORD-WQKYM5",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-WQKYM5\",\"item_id\":\"item_463PB5\",\"new_item_id\":\"item_VS575Z\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_463PB5",
+              "new_item_id": "item_VS575Z",
+              "order_id": "ORD-WQKYM5",
+              "payment_method": "original"
+            },
+            "fingerprint": "33bb9d9e6775aad881891e7b59297edb55a4cfcc97bc0844187bf7c6e345d6d2",
+            "id": "d51e37a355b8f3d86f7ec821a2f461c6",
+            "item_id": "item_463PB5",
+            "kind": "exchange",
+            "new_item_id": "item_VS575Z",
+            "order_id": "ORD-WQKYM5",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1884,
+          "latency_ms": 6480.71,
+          "output_tokens": 48,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_missing_option-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_B5H3EL",
+            "new_item_id": "item_9VH9HK",
+            "order_id": "ORD-HHKA4D",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-HHKA4D\",\"item_id\":\"item_B5H3EL\",\"new_item_id\":\"item_9VH9HK\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_B5H3EL",
+              "new_item_id": "item_9VH9HK",
+              "order_id": "ORD-HHKA4D",
+              "payment_method": "original"
+            },
+            "fingerprint": "2b9bce9778ac3b0fc3d99370a48f04d142d65a2e3f26cab39ba516ca3717446c",
+            "id": "0f11a9258fb6268aa59e92532f771ea8",
+            "item_id": "item_B5H3EL",
+            "kind": "exchange",
+            "new_item_id": "item_9VH9HK",
+            "order_id": "ORD-HHKA4D",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1873,
+          "latency_ms": 8912.59,
+          "output_tokens": 47,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_missing_payment-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_CRRWM6",
+            "new_item_id": "item_D9E3KZ",
+            "order_id": "ORD-SGDQQQ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-SGDQQQ\",\"item_id\":\"item_CRRWM6\",\"new_item_id\":\"item_D9E3KZ\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 875,
+            "arguments": {
+              "item_id": "item_CRRWM6",
+              "new_item_id": "item_D9E3KZ",
+              "order_id": "ORD-SGDQQQ",
+              "payment_method": "original"
+            },
+            "fingerprint": "6bb037a45a02ff1a9a637b06868fbd277cf11fde39079c53fa9d80c0c84d36b2",
+            "id": "7dbb7027126d2f706b6ad085d3d5c58a",
+            "item_id": "item_CRRWM6",
+            "kind": "exchange",
+            "new_item_id": "item_D9E3KZ",
+            "order_id": "ORD-SGDQQQ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1866,
+          "latency_ms": 13523.26,
+          "output_tokens": 45,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_missing_payment-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_AKLGF2",
+            "new_item_id": "item_65EF4X",
+            "order_id": "ORD-BCPPF8",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-BCPPF8\",\"item_id\":\"item_AKLGF2\",\"new_item_id\":\"item_65EF4X\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 1450,
+            "arguments": {
+              "item_id": "item_AKLGF2",
+              "new_item_id": "item_65EF4X",
+              "order_id": "ORD-BCPPF8",
+              "payment_method": "original"
+            },
+            "fingerprint": "a1d37704f01831713da01e67463ee5c74ec22b1386b34f716c268f6787533c82",
+            "id": "51b56f8010fd04a7d1f0f4c2dfb688d7",
+            "item_id": "item_AKLGF2",
+            "kind": "exchange",
+            "new_item_id": "item_65EF4X",
+            "order_id": "ORD-BCPPF8",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1863,
+          "latency_ms": 6073.73,
+          "output_tokens": 46,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_gift-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_YTGFK4",
+            "new_item_id": "item_BAQUUM",
+            "order_id": "ORD-QUUS4E",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-QUUS4E\",\"item_id\":\"item_YTGFK4\",\"new_item_id\":\"item_BAQUUM\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "item_id is not an item in this order",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2088,
+          "latency_ms": 8828.39,
+          "output_tokens": 44,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_gift-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_PJU67Q",
+            "new_item_id": "item_3DA8HT",
+            "order_id": "ORD-4DHHHZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-4DHHHZ\",\"item_id\":\"item_PJU67Q\",\"new_item_id\":\"item_3DA8HT\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": -525,
+            "arguments": {
+              "item_id": "item_PJU67Q",
+              "new_item_id": "item_3DA8HT",
+              "order_id": "ORD-4DHHHZ",
+              "payment_method": "original"
+            },
+            "fingerprint": "c01c325e83f464b74389bcd6aafca089ecda620c72cb170a27bdff05004552b0",
+            "id": "4506dc54f41d233d30c4af65adcdf86f",
+            "item_id": "item_PJU67Q",
+            "kind": "exchange",
+            "new_item_id": "item_3DA8HT",
+            "order_id": "ORD-4DHHHZ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1947,
+          "latency_ms": 6474.92,
+          "output_tokens": 47,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_unavailable-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_B762VR",
+            "new_item_id": "item_SR28SF",
+            "order_id": "ORD-8BX32D",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-8BX32D\",\"item_id\":\"item_B762VR\",\"new_item_id\":\"item_SR28SF\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "Inspect the product; select an available different same-product variant",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2112,
+          "latency_ms": 12976.7,
+          "output_tokens": 46,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_unavailable-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_T7GBBP",
+            "new_item_id": "item_SBZV8Y",
+            "order_id": "ORD-GNE88K",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-GNE88K\",\"item_id\":\"item_T7GBBP\",\"new_item_id\":\"item_SBZV8Y\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "Inspect the product; select an available different same-product variant",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2116,
+          "latency_ms": 7044.49,
+          "output_tokens": 45,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v4-test-exchange_shortfall-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_8K94CA",
+            "new_item_id": "item_UNL5UD",
+            "order_id": "ORD-7WUBAC",
+            "payment_method": "gift_3FC2W8"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-7WUBAC\",\"item_id\":\"item_8K94CA\",\"new_item_id\":\"item_UNL5UD\",\"payment_method\":\"gift_3FC2W8\"}}",
+        "result": {
+          "detail": "Gift card cannot cover the price difference",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2169,
+          "latency_ms": 8440.45,
+          "output_tokens": 52,
+          "provider": "mlx",
+          "variant": "base_new_flow",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v4",
+      "case_id": "v4-test-exchange_fallback-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "reason": "Requested variant is unavailable or the authorized payment is insufficient."
+          },
+          "tool": "handoff"
+        },
+        "raw": "{\"tool\":\"handoff\",\"arguments\":{\"reason\":\"Requested variant is unavailable or the authorized payment is insufficient.\"}}",
+        "result": {
+          "handoff": true,
+          "reason": "Requested variant is unavailable or the authorized payment is insufficient."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1953,
+          "latency_ms": 4983.29,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v4",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v4",
+      "case_id": "v4-test-exchange_fallback-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "reason": "Requested variant is unavailable or the authorized payment is insufficient."
+          },
+          "tool": "handoff"
+        },
+        "raw": "{\"tool\":\"handoff\",\"arguments\":{\"reason\":\"Requested variant is unavailable or the authorized payment is insufficient.\"}}",
+        "result": {
+          "handoff": true,
+          "reason": "Requested variant is unavailable or the authorized payment is insufficient."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2047,
+          "latency_ms": 5155.81,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v4",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v4",
+      "case_id": "v4-test-exchange_missing_option-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_463PB5",
+            "new_item_id": "item_VS575Z",
+            "order_id": "ORD-WQKYM5",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-WQKYM5\",\"item_id\":\"item_463PB5\",\"payment_method\":\"original\",\"new_item_id\":\"item_VS575Z\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_463PB5",
+              "new_item_id": "item_VS575Z",
+              "order_id": "ORD-WQKYM5",
+              "payment_method": "original"
+            },
+            "fingerprint": "33bb9d9e6775aad881891e7b59297edb55a4cfcc97bc0844187bf7c6e345d6d2",
+            "id": "7f8fbd37cf98b12b081c64de04dbecdd",
+            "item_id": "item_463PB5",
+            "kind": "exchange",
+            "new_item_id": "item_VS575Z",
+            "order_id": "ORD-WQKYM5",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1884,
+          "latency_ms": 7826.54,
+          "output_tokens": 48,
+          "provider": "mlx",
+          "variant": "qlora_v4",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v4",
+      "case_id": "v4-test-exchange_missing_option-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_B5H3EL",
+            "new_item_id": "item_9VH9HK",
+            "order_id": "ORD-HHKA4D",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-HHKA4D\",\"item_id\":\"item_B5H3EL\",\"payment_method\":\"original\",\"new_item_id\":\"item_9VH9HK\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_B5H3EL",
+              "new_item_id": "item_9VH9HK",
+              "order_id": "ORD-HHKA4D",
+              "payment_method": "original"
+            },
+            "fingerprint": "2b9bce9778ac3b0fc3d99370a48f04d142d65a2e3f26cab39ba516ca3717446c",
+            "id": "2030361e253521371f67720835f46fba",
+            "item_id": "item_B5H3EL",
+            "kind": "exchange",
+            "new_item_id": "item_9VH9HK",
+            "order_id": "ORD-HHKA4D",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1873,
+          "latency_ms": 8475.49,
+          "output_tokens": 47,
+          "provider": "mlx",
+          "variant": "qlora_v4",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v4",
+      "case_id": "v4-test-exchange_missing_payment-00",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_CRRWM6",
+            "new_item_id": "item_D9E3KZ",
+            "order_id": "ORD-SGDQQQ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-SGDQQQ\",\"item_id\":\"item_CRRWM6\",\"payment_method\":\"original\",\"new_item_id\":\"item_D9E3KZ\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 875,
+            "arguments": {
+              "item_id": "item_CRRWM6",
+              "new_item_id": "item_D9E3KZ",
+              "order_id": "ORD-SGDQQQ",
+              "payment_method": "original"
+            },
+            "fingerprint": "6bb037a45a02ff1a9a637b06868fbd277cf11fde39079c53fa9d80c0c84d36b2",
+            "id": "fa9d21ea299a68f4552237aa0d038620",
+            "item_id": "item_CRRWM6",
+            "kind": "exchange",
+            "new_item_id": "item_D9E3KZ",
+            "order_id": "ORD-SGDQQQ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1866,
+          "latency_ms": 14757.5,
+          "output_tokens": 45,
+          "provider": "mlx",
+          "variant": "qlora_v4",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v4",
+      "case_id": "v4-test-exchange_missing_payment-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": true,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_AKLGF2",
+            "new_item_id": "item_65EF4X",
+            "order_id": "ORD-BCPPF8",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-BCPPF8\",\"item_id\":\"item_AKLGF2\",\"payment_method\":\"original\",\"new_item_id\":\"item_65EF4X\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 1450,
+            "arguments": {
+              "item_id": "item_AKLGF2",
+              "new_item_id": "item_65EF4X",
+              "order_id": "ORD-BCPPF8",
+              "payment_method": "original"
+            },
+            "fingerprint": "a1d37704f01831713da01e67463ee5c74ec22b1386b34f716c268f6787533c82",
+            "id": "02c1d9d26c4dd6bf91c6705791e73897",
+            "item_id": "item_AKLGF2",
+            "kind": "exchange",
+            "new_item_id": "item_65EF4X",
+            "order_id": "ORD-BCPPF8",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1863,
+          "latency_ms": 7063.87,
+          "output_tokens": 46,
+          "provider": "mlx",
+          "variant": "qlora_v4",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v4",
+      "case_id": "v4-test-exchange_gift-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_PJU67Q",
+            "new_item_id": "item_3DA8HT",
+            "order_id": "ORD-4DHHHZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-4DHHHZ\",\"item_id\":\"item_PJU67Q\",\"payment_method\":\"original\",\"new_item_id\":\"item_3DA8HT\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": -525,
+            "arguments": {
+              "item_id": "item_PJU67Q",
+              "new_item_id": "item_3DA8HT",
+              "order_id": "ORD-4DHHHZ",
+              "payment_method": "original"
+            },
+            "fingerprint": "c01c325e83f464b74389bcd6aafca089ecda620c72cb170a27bdff05004552b0",
+            "id": "d4ad55371a7aa782e7b5f4a582193004",
+            "item_id": "item_PJU67Q",
+            "kind": "exchange",
+            "new_item_id": "item_3DA8HT",
+            "order_id": "ORD-4DHHHZ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1879,
+          "latency_ms": 16225.5,
+          "output_tokens": 47,
+          "provider": "mlx",
+          "variant": "qlora_v4",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v4",
+      "case_id": "v4-test-exchange_unavailable-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_T7GBBP",
+            "new_item_id": "item_7D5DFU",
+            "order_id": "ORD-GNE88K",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-GNE88K\",\"item_id\":\"item_T7GBBP\",\"payment_method\":\"original\",\"new_item_id\":\"item_7D5DFU\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_T7GBBP",
+              "new_item_id": "item_7D5DFU",
+              "order_id": "ORD-GNE88K",
+              "payment_method": "original"
+            },
+            "fingerprint": "6afa3621fee8d4081a9c3d83a4c0808956cad97ad42ddefd9dd13500abf6f73c",
+            "id": "101e098a40a39ffe1a7116394e5bd7b2",
+            "item_id": "item_T7GBBP",
+            "kind": "exchange",
+            "new_item_id": "item_7D5DFU",
+            "order_id": "ORD-GNE88K",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2110,
+          "latency_ms": 16936.29,
+          "output_tokens": 46,
+          "provider": "mlx",
+          "variant": "qlora_v4",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v4",
+      "case_id": "v4-test-exchange_shortfall-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-7WUBAC"
+          },
+          "tool": "get_order"
+        },
+        "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-7WUBAC\"}}",
+        "result": {
+          "id": "ORD-7WUBAC",
+          "items": [
+            {
+              "item_id": "item_8K94CA",
+              "option": "black / M",
+              "price_cents": 3598,
+              "product_id": "p_NA82Y7"
+            }
+          ],
+          "original_payment": "card_WXUNNA",
+          "revision": 0,
+          "status": "delivered",
+          "user_id": "u_YPGAFK"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1587,
+          "latency_ms": 9368.48,
+          "output_tokens": 19,
+          "provider": "mlx",
+          "variant": "qlora_v4",
+          "workflow": "v4"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v4",
+      "case_id": "v4-test-return_reject_exchange-01",
+      "repeated_question_attempts": 0,
+      "missing_required_reply": false,
+      "exchange_as_return": false,
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "reason": "This status does not permit cancellation."
+          },
+          "tool": "handoff"
+        },
+        "raw": "{\"tool\":\"handoff\",\"arguments\":{\"reason\":\"This status does not permit cancellation.\"}}",
+        "result": {
+          "handoff": true,
+          "reason": "This status does not permit cancellation."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1468,
+          "latency_ms": 4219.92,
+          "output_tokens": 19,
+          "provider": "mlx",
+          "variant": "qlora_v4",
+          "workflow": "v4"
+        }
+      }
+    }
+  ],
+  "scope": "All failed runs retained; overlapping raw-action diagnostics, no extra inference."
+}

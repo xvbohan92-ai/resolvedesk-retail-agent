@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-10-28T19:50:48.092720+00:00",
+  "scope": "Actual browser interaction corroborated by read-only sandbox database; excluded from accuracy",
+  "session_id": "c10423f7ff278e7821e850cc",
+  "case_id": "v7-valid-exchange_fallback-00",
+  "workflow_version": "v7",
+  "customer_reply": "NO",
+  "final_status": "handoff",
+  "actual_order_bodies_equal_initial_fixture": true,
+  "pending_proposal": false,
+  "model_calls": 6,
+  "session_sha256": "2d48421a3f4b1a661cb9adab56f6bc3b0b7443ebf5c0210ba77545d5d88e7a50"
+}

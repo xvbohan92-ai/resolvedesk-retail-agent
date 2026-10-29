@@ -1,0 +1,27 @@
+{
+  "method": "Recovery-state action-span preference plus chosen-completion NLL",
+  "beta": 2.0,
+  "margin": 0.5,
+  "sft_weight": 1.0,
+  "learning_rate": 3e-06,
+  "seed": 2026102743,
+  "updates": 80,
+  "batch_size": 1,
+  "projection_window": 256,
+  "max_seq_length": 3072,
+  "initialization": "data/finetuning/retail-qlora-v4/action-preference",
+  "output": "data/finetuning/retail-qlora-v4/recovery",
+  "best_path": "data/finetuning/retail-qlora-v4/best-recovery",
+  "selection": "Fixed 80-update recovery checkpoint before any new test inference.",
+  "training_pairs": {
+    "preserve_answered_continuation": 20,
+    "clarify_after_reads_instead_of_guessing": 20,
+    "authorized_stockout_return": 4,
+    "preserve_policy_handoff": 8,
+    "preserve_available_exchange": 8,
+    "handoff_vs_unsafe_exchange": 8,
+    "handoff_vs_unauthorized_return": 8,
+    "preserve_return": 4
+  },
+  "scope": "Original training worlds only. New states omit missing answers even after real order/catalog reads. No validation/test examples enter training. New facts are arithmetic over actual completed tool results for all candidates, never selected answers or intent routing."
+}

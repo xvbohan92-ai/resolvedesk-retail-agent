@@ -1,0 +1,2594 @@
+[
+  {
+    "id": "v8-valid-cancel-00",
+    "initial_message": "End this order before it ships. The explanation is that I no longer need it. The supplied reason is my cancellation reason. Purchase identifier ORD-V8DE9SCEBZCWBY. Account contact v8dev_buyer_vaca7gaj4hw@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_F2UMJ73V9TS",
+      "email": "v8dev_buyer_vaca7gaj4hw@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_K8TQD42BCR9",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DE9SCEBZCWBY",
+        "user_id": "v8dev_u_F2UMJ73V9TS",
+        "status": "pending",
+        "original_payment": "v8dev_card_DJAM3J4YLRY",
+        "items": [
+          {
+            "item_id": "v8dev_i_C83SJJ7JZLV",
+            "product_id": "v8dev_p_XX5P6GB6ZM4",
+            "option": "basalt / XXS",
+            "price_cents": 8231
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_XX5P6GB6ZM4": {
+        "product_id": "v8dev_p_XX5P6GB6ZM4",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_C83SJJ7JZLV",
+            "option": "basalt / XXS",
+            "price_cents": 8231,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_UKB4R28KHFZ",
+            "option": "tangerine / XXXL",
+            "price_cents": 8731,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_DXS2WUQM2XR",
+            "option": "malachite / L",
+            "price_cents": 7581,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-cancel-01",
+    "initial_message": "Purchase identifier ORD-V8DJMZKXMYZPGM. Account contact v8dev_buyer_8vm6mfmswat@purchase.example. Cancel this purchase rather than send it out; I placed it by mistake. This concerns cancellation before shipment.",
+    "customer": {
+      "id": "v8dev_u_2PTMPBJ2U8C",
+      "email": "v8dev_buyer_8vm6mfmswat@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_DXR9PVTJG4C",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DJMZKXMYZPGM",
+        "user_id": "v8dev_u_2PTMPBJ2U8C",
+        "status": "pending",
+        "original_payment": "v8dev_card_2SE7FEBTBCV",
+        "items": [
+          {
+            "item_id": "v8dev_i_MG8G34YPPYL",
+            "product_id": "v8dev_p_8QEMLRVHH22",
+            "option": "basalt / XXS",
+            "price_cents": 5309
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_8QEMLRVHH22": {
+        "product_id": "v8dev_p_8QEMLRVHH22",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_A8MGYY8KH5M",
+            "option": "sunflower / M",
+            "price_cents": 6159,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_57KLHYY2RBX",
+            "option": "tangerine / XXXL",
+            "price_cents": 5809,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_MG8G34YPPYL",
+            "option": "basalt / XXS",
+            "price_cents": 5309,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-missing_reason-00",
+    "initial_message": "I need this purchase canceled; please obtain my reason before proposing the cancellation. Please do not invent an explanation for me. Purchase identifier ORD-V8DJXNSVCBMKDG. Account contact v8dev_buyer_fdghe6ahnuw@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_XL3NXLJUEJC",
+      "email": "v8dev_buyer_fdghe6ahnuw@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_CXVSUB2PMW2",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DJXNSVCBMKDG",
+        "user_id": "v8dev_u_XL3NXLJUEJC",
+        "status": "pending",
+        "original_payment": "v8dev_card_TBEZQMJVL4D",
+        "items": [
+          {
+            "item_id": "v8dev_i_NWKYMNA5VHT",
+            "product_id": "v8dev_p_8P4JDQ53XYL",
+            "option": "basalt / XXS",
+            "price_cents": 11595
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_8P4JDQ53XYL": {
+        "product_id": "v8dev_p_8P4JDQ53XYL",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_V2J4JJCCSC9",
+            "option": "tangerine / XXXL",
+            "price_cents": 12095,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_NWKYMNA5VHT",
+            "option": "basalt / XXS",
+            "price_cents": 11595,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_FHNF5WSTWNU",
+            "option": "malachite / L",
+            "price_cents": 12445,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-missing_reason-01",
+    "initial_message": "Purchase identifier ORD-V8DJRUJZJ2HA29. Account contact v8dev_buyer_axr983s5s8q@purchase.example. The action I want is cancellation. You still need to find out why I am canceling. There is no cancellation explanation to infer yet.",
+    "customer": {
+      "id": "v8dev_u_PMF238LNEEU",
+      "email": "v8dev_buyer_axr983s5s8q@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_JKYZW9RV3X6",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DJRUJZJ2HA29",
+        "user_id": "v8dev_u_PMF238LNEEU",
+        "status": "pending",
+        "original_payment": "v8dev_card_Z6DYCER54K5",
+        "items": [
+          {
+            "item_id": "v8dev_i_73DFMCN2GZA",
+            "product_id": "v8dev_p_29CZ6DYPVJP",
+            "option": "basalt / XXS",
+            "price_cents": 6033
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_29CZ6DYPVJP": {
+        "product_id": "v8dev_p_29CZ6DYPVJP",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_H499Q66QQQL",
+            "option": "tangerine / XXXL",
+            "price_cents": 6533,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_73DFMCN2GZA",
+            "option": "basalt / XXS",
+            "price_cents": 6033,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_6AWXH458FG7",
+            "option": "sunflower / M",
+            "price_cents": 7783,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-return-00",
+    "initial_message": "Accept the purchased pullover as a return and route its refund to original payment. I am not asking for another size or color. Purchase identifier ORD-V8D79E2YHGLBZD. Account contact v8dev_buyer_8vvdegz2ylu@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_7JXTKEB4FD9",
+      "email": "v8dev_buyer_8vvdegz2ylu@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_BEPHPHGAHJW",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D79E2YHGLBZD",
+        "user_id": "v8dev_u_7JXTKEB4FD9",
+        "status": "delivered",
+        "original_payment": "v8dev_card_RECD2GNUM26",
+        "items": [
+          {
+            "item_id": "v8dev_i_43ZWLEQ3YQZ",
+            "product_id": "v8dev_p_VLN6MUNZ9L7",
+            "option": "basalt / XXS",
+            "price_cents": 11660
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_VLN6MUNZ9L7": {
+        "product_id": "v8dev_p_VLN6MUNZ9L7",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_ZTXZFH6DRKU",
+            "option": "malachite / L",
+            "price_cents": 13410,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_43ZWLEQ3YQZ",
+            "option": "basalt / XXS",
+            "price_cents": 11660,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_GS7ESELS75N",
+            "option": "tangerine / XXXL",
+            "price_cents": 12160,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-return-01",
+    "initial_message": "Purchase identifier ORD-V8DSJ5VDTDR3J5. Account contact v8dev_buyer_3dqz8j3kqnu@purchase.example. The resolution I choose is a full return of the pullover, credited through my original payment method. No exchange is part of this request.",
+    "customer": {
+      "id": "v8dev_u_VTJPM6L6T2E",
+      "email": "v8dev_buyer_3dqz8j3kqnu@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_2W7T3PLEUQV",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DSJ5VDTDR3J5",
+        "user_id": "v8dev_u_VTJPM6L6T2E",
+        "status": "delivered",
+        "original_payment": "v8dev_card_UUCWW3D9LKG",
+        "items": [
+          {
+            "item_id": "v8dev_i_P9A36DSNPKA",
+            "product_id": "v8dev_p_HD4LRRQAZXF",
+            "option": "basalt / XXS",
+            "price_cents": 5117
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_HD4LRRQAZXF": {
+        "product_id": "v8dev_p_HD4LRRQAZXF",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_967JEXXQXBT",
+            "option": "tangerine / XXXL",
+            "price_cents": 5617,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_NSD78DD7CP7",
+            "option": "sunflower / M",
+            "price_cents": 4467,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_P9A36DSNPKA",
+            "option": "basalt / XXS",
+            "price_cents": 5117,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-missing_payment-00",
+    "initial_message": "Take back the pullover associated with the original order. I am identifying the purchase, not selecting a payment channel. A stored card on the order is not my current refund choice. Purchase identifier ORD-V8DGQGMK5NHJ25. Account contact v8dev_buyer_geh4ae3yj49@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_RBCH43CHNUV",
+      "email": "v8dev_buyer_geh4ae3yj49@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_REGLAG9XKEM",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DGQGMK5NHJ25",
+        "user_id": "v8dev_u_RBCH43CHNUV",
+        "status": "delivered",
+        "original_payment": "v8dev_card_3TWMNFD8G8V",
+        "items": [
+          {
+            "item_id": "v8dev_i_BK8ZSZ2M4XS",
+            "product_id": "v8dev_p_CR54DKZJRGF",
+            "option": "basalt / XXS",
+            "price_cents": 4119
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_CR54DKZJRGF": {
+        "product_id": "v8dev_p_CR54DKZJRGF",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_CTKTY9MZEFT",
+            "option": "malachite / L",
+            "price_cents": 3469,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_A3W4G6X5KAX",
+            "option": "tangerine / XXXL",
+            "price_cents": 4619,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_BK8ZSZ2M4XS",
+            "option": "basalt / XXS",
+            "price_cents": 4119,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-missing_payment-01",
+    "initial_message": "Purchase identifier ORD-V8DHGG9KEVM83Q. Account contact v8dev_buyer_hmkne3b6j36@purchase.example. My original purchase needs an item return. Before the proposal, obtain my preference for receiving the refund. The order history must not stand in for my missing payment preference.",
+    "customer": {
+      "id": "v8dev_u_XG4QWWFBNQM",
+      "email": "v8dev_buyer_hmkne3b6j36@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_2BC3ZJMSV8A",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DHGG9KEVM83Q",
+        "user_id": "v8dev_u_XG4QWWFBNQM",
+        "status": "delivered",
+        "original_payment": "v8dev_card_AY93FYWJ82L",
+        "items": [
+          {
+            "item_id": "v8dev_i_GMBHSATG3JS",
+            "product_id": "v8dev_p_SMRQQSWV83S",
+            "option": "basalt / XXS",
+            "price_cents": 4601
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_SMRQQSWV83S": {
+        "product_id": "v8dev_p_SMRQQSWV83S",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_GMBHSATG3JS",
+            "option": "basalt / XXS",
+            "price_cents": 4601,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_ZYFYEW7XLJE",
+            "option": "sunflower / M",
+            "price_cents": 5451,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_XKEJRW6FGV8",
+            "option": "tangerine / XXXL",
+            "price_cents": 5101,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange-00",
+    "initial_message": "Replace the pullover I received with malachite / L pullover; my selected route for the adjustment is original payment. The replacement is my preferred outcome. Purchase identifier ORD-V8DTKX6RH2UFCA. Account contact v8dev_buyer_etgqs4bz5su@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_KLDU7G9G6GM",
+      "email": "v8dev_buyer_etgqs4bz5su@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_9LC8MDJ9EXY",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DTKX6RH2UFCA",
+        "user_id": "v8dev_u_KLDU7G9G6GM",
+        "status": "delivered",
+        "original_payment": "v8dev_card_S7AQJ83UQLH",
+        "items": [
+          {
+            "item_id": "v8dev_i_AVQELVPECFM",
+            "product_id": "v8dev_p_SAEVLJBBWC7",
+            "option": "basalt / XXS",
+            "price_cents": 5410
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_SAEVLJBBWC7": {
+        "product_id": "v8dev_p_SAEVLJBBWC7",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_AVQELVPECFM",
+            "option": "basalt / XXS",
+            "price_cents": 5410,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_ADXLEYSY49S",
+            "option": "malachite / L",
+            "price_cents": 6260,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_SU8832SHM85",
+            "option": "tangerine / XXXL",
+            "price_cents": 5910,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange-01",
+    "initial_message": "Purchase identifier ORD-V8DN5PBXAKNDZ9. Account contact v8dev_buyer_dwn92ynttnr@purchase.example. My requested replacement is sunflower / M, and I choose the original payment method to settle its price difference. Please fulfill the chosen exchange if it can be supplied.",
+    "customer": {
+      "id": "v8dev_u_XFF2XN2D7RK",
+      "email": "v8dev_buyer_dwn92ynttnr@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_USDYRRWS575",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DN5PBXAKNDZ9",
+        "user_id": "v8dev_u_XFF2XN2D7RK",
+        "status": "delivered",
+        "original_payment": "v8dev_card_E75YSE4PCN9",
+        "items": [
+          {
+            "item_id": "v8dev_i_DYR92MPTCWP",
+            "product_id": "v8dev_p_G8GGDZACBA7",
+            "option": "basalt / XXS",
+            "price_cents": 8123
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_G8GGDZACBA7": {
+        "product_id": "v8dev_p_G8GGDZACBA7",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_SCWN6J2VXBP",
+            "option": "tangerine / XXXL",
+            "price_cents": 8623,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_DYR92MPTCWP",
+            "option": "basalt / XXS",
+            "price_cents": 8123,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_FW2NGHHSVAL",
+            "option": "sunflower / M",
+            "price_cents": 9873,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_fallback-00",
+    "initial_message": "Replace the pullover I received with malachite / L pullover; my selected route for the adjustment is original payment. You have my conditional go-ahead for an item return should the precise replacement choice prove unavailable. Check the exact selected replacement before using that contingency. Purchase identifier ORD-V8D6H9LHGHZAWL. Account contact v8dev_buyer_68a67djv7jr@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_GTUJK8HV4QK",
+      "email": "v8dev_buyer_68a67djv7jr@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_FBJ3Y4KERC6",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D6H9LHGHZAWL",
+        "user_id": "v8dev_u_GTUJK8HV4QK",
+        "status": "delivered",
+        "original_payment": "v8dev_card_97KFB2TUYR8",
+        "items": [
+          {
+            "item_id": "v8dev_i_RLLN3LRXY73",
+            "product_id": "v8dev_p_LEMJG6YWDHF",
+            "option": "basalt / XXS",
+            "price_cents": 8017
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_LEMJG6YWDHF": {
+        "product_id": "v8dev_p_LEMJG6YWDHF",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_FHRV64DJ3X4",
+            "option": "malachite / L",
+            "price_cents": 9767,
+            "available": false
+          },
+          {
+            "item_id": "v8dev_i_RLLN3LRXY73",
+            "option": "basalt / XXS",
+            "price_cents": 8017,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_J7T758RELJV",
+            "option": "tangerine / XXXL",
+            "price_cents": 8517,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_fallback-01",
+    "initial_message": "Purchase identifier ORD-V8DXWLJSVJPV8A. Account contact v8dev_buyer_87s2h2tqmh8@purchase.example. My requested replacement is sunflower / M, and I choose the original payment method to settle its price difference. My consent covers returning this item only when the exact exchange I specified is impossible to fulfill. The stock decision must concern the replacement I named.",
+    "customer": {
+      "id": "v8dev_u_GDDDNQ3TWC9",
+      "email": "v8dev_buyer_87s2h2tqmh8@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_TG8DL69YFJX",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DXWLJSVJPV8A",
+        "user_id": "v8dev_u_GDDDNQ3TWC9",
+        "status": "delivered",
+        "original_payment": "v8dev_card_5WHYW37ZR85",
+        "items": [
+          {
+            "item_id": "v8dev_i_JK8KFZFZUCM",
+            "product_id": "v8dev_p_58HBJVXQN9R",
+            "option": "basalt / XXS",
+            "price_cents": 6322
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_58HBJVXQN9R": {
+        "product_id": "v8dev_p_58HBJVXQN9R",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_3Y7WV9JERCH",
+            "option": "tangerine / XXXL",
+            "price_cents": 6822,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_428M9EL83JX",
+            "option": "sunflower / M",
+            "price_cents": 5672,
+            "available": false
+          },
+          {
+            "item_id": "v8dev_i_JK8KFZFZUCM",
+            "option": "basalt / XXS",
+            "price_cents": 6322,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-forbidden_status-00",
+    "initial_message": "End this order before it ships. The explanation is that I no longer need it. Please check the actual fulfillment status before doing anything. Purchase identifier ORD-V8DSE9VAEVAYCW. Account contact v8dev_buyer_t9ekeu2pey5@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_JB6J3BB9DXA",
+      "email": "v8dev_buyer_t9ekeu2pey5@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_JBET7MFSEWG",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DSE9VAEVAYCW",
+        "user_id": "v8dev_u_JB6J3BB9DXA",
+        "status": "processed",
+        "original_payment": "v8dev_card_9H4MQ6E5PZT",
+        "items": [
+          {
+            "item_id": "v8dev_i_K6TS2MN5ZHR",
+            "product_id": "v8dev_p_TSFMYBNX94D",
+            "option": "basalt / XXS",
+            "price_cents": 12257
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_TSFMYBNX94D": {
+        "product_id": "v8dev_p_TSFMYBNX94D",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_HMFSZECQU9L",
+            "option": "malachite / L",
+            "price_cents": 11607,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_Q8H9ZPYDAHG",
+            "option": "tangerine / XXXL",
+            "price_cents": 12757,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_K6TS2MN5ZHR",
+            "option": "basalt / XXS",
+            "price_cents": 12257,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-forbidden_status-01",
+    "initial_message": "Purchase identifier ORD-V8D7N4GGULQ7HE. Account contact v8dev_buyer_dvwacngzpwy@purchase.example. Cancel this purchase rather than send it out; I placed it by mistake. Whether the order still permits cancellation must be verified.",
+    "customer": {
+      "id": "v8dev_u_QSV43WGBAVQ",
+      "email": "v8dev_buyer_dvwacngzpwy@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_WEQZNYLHEUU",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D7N4GGULQ7HE",
+        "user_id": "v8dev_u_QSV43WGBAVQ",
+        "status": "delivered",
+        "original_payment": "v8dev_card_PG7MC4PTS3S",
+        "items": [
+          {
+            "item_id": "v8dev_i_YWAZEJ75NE5",
+            "product_id": "v8dev_p_S3538VMJTMP",
+            "option": "basalt / XXS",
+            "price_cents": 6820
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_S3538VMJTMP": {
+        "product_id": "v8dev_p_S3538VMJTMP",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_YWAZEJ75NE5",
+            "option": "basalt / XXS",
+            "price_cents": 6820,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_ZEJC35FKH2C",
+            "option": "tangerine / XXXL",
+            "price_cents": 7320,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_MJTWKRNS5AW",
+            "option": "sunflower / M",
+            "price_cents": 7670,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-foreign_order-00",
+    "initial_message": "Accept the purchased pullover as a return and route its refund to original payment. I know the order may be registered to another customer, but I am asking anyway. Purchase identifier ORD-V8D9JEJUBNVRHT. Account contact v8dev_buyer_pgxb4endarv@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_BA4GQT44W5P",
+      "email": "v8dev_buyer_pgxb4endarv@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_UVYW6KAATTQ",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D9JEJUBNVRHT",
+        "user_id": "v8dev_foreign_Z5BJX6E9PFD",
+        "status": "delivered",
+        "original_payment": "v8dev_card_VGEKMBKAXG7",
+        "items": [
+          {
+            "item_id": "v8dev_i_JUF9XPZHMHT",
+            "product_id": "v8dev_p_BKJQKLMK4TW",
+            "option": "basalt / XXS",
+            "price_cents": 9993
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_BKJQKLMK4TW": {
+        "product_id": "v8dev_p_BKJQKLMK4TW",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_JUF9XPZHMHT",
+            "option": "basalt / XXS",
+            "price_cents": 9993,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_7ULFTZU7J5L",
+            "option": "tangerine / XXXL",
+            "price_cents": 10493,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_S88Y3VYMZ3Z",
+            "option": "malachite / L",
+            "price_cents": 10843,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-foreign_order-01",
+    "initial_message": "Purchase identifier ORD-V8DK69A3DY26XA. Account contact v8dev_buyer_eje6wbml4wl@purchase.example. The resolution I choose is a full return of the pullover, credited through my original payment method. The account on that order might be someone else's; do not skip the ownership check.",
+    "customer": {
+      "id": "v8dev_u_3A4Q393ECQK",
+      "email": "v8dev_buyer_eje6wbml4wl@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_37Q5D7HD86T",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DK69A3DY26XA",
+        "user_id": "v8dev_foreign_ZF8YCT8Z6X4",
+        "status": "delivered",
+        "original_payment": "v8dev_card_5CWJUWJBGR9",
+        "items": [
+          {
+            "item_id": "v8dev_i_UNXK3HCV8JH",
+            "product_id": "v8dev_p_D2BJKNFE82C",
+            "option": "basalt / XXS",
+            "price_cents": 4011
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_D2BJKNFE82C": {
+        "product_id": "v8dev_p_D2BJKNFE82C",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_UNXK3HCV8JH",
+            "option": "basalt / XXS",
+            "price_cents": 4011,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_KNUG6DX48R7",
+            "option": "sunflower / M",
+            "price_cents": 5761,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_Z7TB5RU8YHG",
+            "option": "tangerine / XXXL",
+            "price_cents": 4511,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-missing_email-00",
+    "initial_message": "Accept the purchased pullover as a return and route its refund to original payment. I have omitted the account email and expect you to ask for it. Purchase identifier ORD-V8DJPUFKSVNNC5.",
+    "customer": {
+      "id": "v8dev_u_LG7NS3V2UX6",
+      "email": "v8dev_buyer_3jyzud95ntm@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_8KM2MXQFTXG",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DJPUFKSVNNC5",
+        "user_id": "v8dev_u_LG7NS3V2UX6",
+        "status": "delivered",
+        "original_payment": "v8dev_card_XWQ4YQKF5Z9",
+        "items": [
+          {
+            "item_id": "v8dev_i_HGJCU649367",
+            "product_id": "v8dev_p_B4VFZYWVPU6",
+            "option": "basalt / XXS",
+            "price_cents": 7759
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_B4VFZYWVPU6": {
+        "product_id": "v8dev_p_B4VFZYWVPU6",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_HGJCU649367",
+            "option": "basalt / XXS",
+            "price_cents": 7759,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_J4E7DVCYNSP",
+            "option": "tangerine / XXXL",
+            "price_cents": 8259,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_9A8UV5H8ZM3",
+            "option": "malachite / L",
+            "price_cents": 9509,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-missing_email-01",
+    "initial_message": "Purchase identifier ORD-V8D7QCYKWRKQ8X. The resolution I choose is a full return of the pullover, credited through my original payment method. You still need my account email to locate me.",
+    "customer": {
+      "id": "v8dev_u_N9WVY6QN2HZ",
+      "email": "v8dev_buyer_n5wdfmt27tk@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_7SXURJXF6MM",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D7QCYKWRKQ8X",
+        "user_id": "v8dev_u_N9WVY6QN2HZ",
+        "status": "delivered",
+        "original_payment": "v8dev_card_UJG8LE3YVKK",
+        "items": [
+          {
+            "item_id": "v8dev_i_JUF2JQ384XZ",
+            "product_id": "v8dev_p_2JYHUFGPAYE",
+            "option": "basalt / XXS",
+            "price_cents": 6455
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_2JYHUFGPAYE": {
+        "product_id": "v8dev_p_2JYHUFGPAYE",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_TNRDE6SCECE",
+            "option": "sunflower / M",
+            "price_cents": 5805,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_NBNSKQBQ6PC",
+            "option": "tangerine / XXXL",
+            "price_cents": 6955,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_JUF2JQ384XZ",
+            "option": "basalt / XXS",
+            "price_cents": 6455,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_missing_option-00",
+    "initial_message": "I want a pullover exchange, with no definite replacement option yet. Apply the eventual price change to original payment. The sample label 'malachite / L' is quoted from a listing, not selected as my replacement. You have my conditional go-ahead for an item return should the precise replacement choice prove unavailable. The named possibilities must not be treated as a completed selection. Purchase identifier ORD-V8DQLDTJ23T95K. Account contact v8dev_buyer_nmsa2v8w2hs@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_DFZDRPPXA7U",
+      "email": "v8dev_buyer_nmsa2v8w2hs@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_STJ65JN2WWQ",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DQLDTJ23T95K",
+        "user_id": "v8dev_u_DFZDRPPXA7U",
+        "status": "delivered",
+        "original_payment": "v8dev_card_U6JFEQX368V",
+        "items": [
+          {
+            "item_id": "v8dev_i_AM45HYNLRL5",
+            "product_id": "v8dev_p_FZUL9WMVUXS",
+            "option": "basalt / XXS",
+            "price_cents": 7402
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_FZUL9WMVUXS": {
+        "product_id": "v8dev_p_FZUL9WMVUXS",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_AM45HYNLRL5",
+            "option": "basalt / XXS",
+            "price_cents": 7402,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_FAH46PZNAH4",
+            "option": "tangerine / XXXL",
+            "price_cents": 7902,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_WTJHSHHMPJ2",
+            "option": "malachite / L",
+            "price_cents": 6752,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_missing_option-01",
+    "initial_message": "Purchase identifier ORD-V8D8XTLW2WLTHJ. Account contact v8dev_buyer_uz4fezdnvdf@purchase.example. My shortlist is sunflower / M and tangerine / XXXL; that list is not a choice. An exchange is wanted and its adjustment should go to original payment. My consent covers returning this item only when the exact exchange I specified is impossible to fulfill. Ask for a single final variant instead of guessing one.",
+    "customer": {
+      "id": "v8dev_u_VGWZ2G79V47",
+      "email": "v8dev_buyer_uz4fezdnvdf@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_DCCMLZDN8UD",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D8XTLW2WLTHJ",
+        "user_id": "v8dev_u_VGWZ2G79V47",
+        "status": "delivered",
+        "original_payment": "v8dev_card_NR4B2LVCVTR",
+        "items": [
+          {
+            "item_id": "v8dev_i_MR6LW2BWA6W",
+            "product_id": "v8dev_p_2GX9SH4NNZL",
+            "option": "basalt / XXS",
+            "price_cents": 12440
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_2GX9SH4NNZL": {
+        "product_id": "v8dev_p_2GX9SH4NNZL",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_MR6LW2BWA6W",
+            "option": "basalt / XXS",
+            "price_cents": 12440,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_V2D5GC7YLVE",
+            "option": "sunflower / M",
+            "price_cents": 13290,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_TQFX6LUTML3",
+            "option": "tangerine / XXXL",
+            "price_cents": 12940,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_missing_payment-00",
+    "initial_message": "The malachite / L pullover is my replacement choice for this original purchase; I have yet to authorize an adjustment method. You have my conditional go-ahead for an item return should the precise replacement choice prove unavailable. Do not substitute order-history payment information for my answer. Purchase identifier ORD-V8DPEND3YFQF9D. Account contact v8dev_buyer_86rh7kh57vy@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_ZMPALFNQPBB",
+      "email": "v8dev_buyer_86rh7kh57vy@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_KYSK22DNY4Q",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DPEND3YFQF9D",
+        "user_id": "v8dev_u_ZMPALFNQPBB",
+        "status": "delivered",
+        "original_payment": "v8dev_card_RB83H8DC3KV",
+        "items": [
+          {
+            "item_id": "v8dev_i_2ZRYPUHU32U",
+            "product_id": "v8dev_p_7W9CV5S86GF",
+            "option": "basalt / XXS",
+            "price_cents": 5563
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_7W9CV5S86GF": {
+        "product_id": "v8dev_p_7W9CV5S86GF",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_2ZRYPUHU32U",
+            "option": "basalt / XXS",
+            "price_cents": 5563,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_H3Q5QGUPH9S",
+            "option": "malachite / L",
+            "price_cents": 6413,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_7GEM69RNZLG",
+            "option": "tangerine / XXXL",
+            "price_cents": 6063,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_missing_payment-01",
+    "initial_message": "Purchase identifier ORD-V8DEACP9YF33B5. Account contact v8dev_buyer_54f6gcvmtx5@purchase.example. For the pullover on my original order, arrange an exchange into sunflower / M. Which payment channel to use is a separate unanswered question. My consent covers returning this item only when the exact exchange I specified is impossible to fulfill. The payment selection has to come from me, not the order record.",
+    "customer": {
+      "id": "v8dev_u_MLRCYHVDV6C",
+      "email": "v8dev_buyer_54f6gcvmtx5@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_Q59WX2G6VJ2",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DEACP9YF33B5",
+        "user_id": "v8dev_u_MLRCYHVDV6C",
+        "status": "delivered",
+        "original_payment": "v8dev_card_R6AETRZVHG2",
+        "items": [
+          {
+            "item_id": "v8dev_i_BRHVKVYB843",
+            "product_id": "v8dev_p_EB7S2JP89QT",
+            "option": "basalt / XXS",
+            "price_cents": 8037
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_EB7S2JP89QT": {
+        "product_id": "v8dev_p_EB7S2JP89QT",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_UCPT84FMZBH",
+            "option": "sunflower / M",
+            "price_cents": 9787,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_BRHVKVYB843",
+            "option": "basalt / XXS",
+            "price_cents": 8037,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_R5ABZBUPHV7",
+            "option": "tangerine / XXXL",
+            "price_cents": 8537,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_gift-00",
+    "initial_message": "My selected replacement is malachite / L pullover and my chosen adjustment route is existing gift card v8dev_gift_MV7MQTV5N9M. My approval concerns the price adjustment only, not returning the item. Purchase identifier ORD-V8DUV693EFG4SM. Account contact v8dev_buyer_wuh9fts9lcw@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_ZKLCFTP6J3Q",
+      "email": "v8dev_buyer_wuh9fts9lcw@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_MV7MQTV5N9M",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DUV693EFG4SM",
+        "user_id": "v8dev_u_ZKLCFTP6J3Q",
+        "status": "delivered",
+        "original_payment": "v8dev_card_9BZ3GZFW25B",
+        "items": [
+          {
+            "item_id": "v8dev_i_XZR9UAFAB9T",
+            "product_id": "v8dev_p_2S66YX6E87A",
+            "option": "basalt / XXS",
+            "price_cents": 6868
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_2S66YX6E87A": {
+        "product_id": "v8dev_p_2S66YX6E87A",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_SGRCR3PM4TZ",
+            "option": "tangerine / XXXL",
+            "price_cents": 7368,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_JS6RUT3K272",
+            "option": "malachite / L",
+            "price_cents": 8618,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_XZR9UAFAB9T",
+            "option": "basalt / XXS",
+            "price_cents": 6868,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_gift-01",
+    "initial_message": "Purchase identifier ORD-V8DT83VHDGNN2Q. Account contact v8dev_buyer_5wsc923h89c@purchase.example. Exchange the pullover into sunflower / M. I select gift card v8dev_gift_YA5ZGJVSK6A for any difference in price. This gift-card permission is not permission for an item-return fallback.",
+    "customer": {
+      "id": "v8dev_u_J7534W48CU5",
+      "email": "v8dev_buyer_5wsc923h89c@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_YA5ZGJVSK6A",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DT83VHDGNN2Q",
+        "user_id": "v8dev_u_J7534W48CU5",
+        "status": "delivered",
+        "original_payment": "v8dev_card_ZCBUCKT64FN",
+        "items": [
+          {
+            "item_id": "v8dev_i_WKP2BQLUW59",
+            "product_id": "v8dev_p_6LWM4QNM3CL",
+            "option": "basalt / XXS",
+            "price_cents": 12032
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_6LWM4QNM3CL": {
+        "product_id": "v8dev_p_6LWM4QNM3CL",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_QBFCB2U93RJ",
+            "option": "sunflower / M",
+            "price_cents": 11382,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_E5EXY82TNEY",
+            "option": "tangerine / XXXL",
+            "price_cents": 12532,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_WKP2BQLUW59",
+            "option": "basalt / XXS",
+            "price_cents": 12032,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_unavailable-00",
+    "initial_message": "Replace the pullover I received with malachite / L pullover; my selected route for the adjustment is original payment. I forbid a return as the alternative to a stockout; let a human support agent resolve that situation. Do not choose an available substitute on my behalf. Purchase identifier ORD-V8DCY8FNVXPY67. Account contact v8dev_buyer_5sz3aqmctya@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_T62NTCSZJV9",
+      "email": "v8dev_buyer_5sz3aqmctya@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_DEX5F5MAXLA",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DCY8FNVXPY67",
+        "user_id": "v8dev_u_T62NTCSZJV9",
+        "status": "delivered",
+        "original_payment": "v8dev_card_TTA5AE57W8V",
+        "items": [
+          {
+            "item_id": "v8dev_i_K676GTURQ9K",
+            "product_id": "v8dev_p_XH6SYV944FJ",
+            "option": "basalt / XXS",
+            "price_cents": 7844
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_XH6SYV944FJ": {
+        "product_id": "v8dev_p_XH6SYV944FJ",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_K676GTURQ9K",
+            "option": "basalt / XXS",
+            "price_cents": 7844,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_HQ4UBFKEZ9P",
+            "option": "tangerine / XXXL",
+            "price_cents": 8344,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_E4JJZEQL3N9",
+            "option": "malachite / L",
+            "price_cents": 7194,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_unavailable-01",
+    "initial_message": "Purchase identifier ORD-V8D98YVCV7BC3B. Account contact v8dev_buyer_azx45e9zhu6@purchase.example. My requested replacement is sunflower / M, and I choose the original payment method to settle its price difference. My decision is no return when the replacement is missing. Preserve the item and involve a staff member. Another in-stock variant would not satisfy my selection.",
+    "customer": {
+      "id": "v8dev_u_3K6W2FFRG4E",
+      "email": "v8dev_buyer_azx45e9zhu6@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_UPVK3EABHT7",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D98YVCV7BC3B",
+        "user_id": "v8dev_u_3K6W2FFRG4E",
+        "status": "delivered",
+        "original_payment": "v8dev_card_LW9HUR6LHCL",
+        "items": [
+          {
+            "item_id": "v8dev_i_TWJPXT9YGUW",
+            "product_id": "v8dev_p_D9UHSESA7X6",
+            "option": "basalt / XXS",
+            "price_cents": 9374
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_D9UHSESA7X6": {
+        "product_id": "v8dev_p_D9UHSESA7X6",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_TWJPXT9YGUW",
+            "option": "basalt / XXS",
+            "price_cents": 9374,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_6KYXCUEBUA2",
+            "option": "sunflower / M",
+            "price_cents": 10224,
+            "available": false
+          },
+          {
+            "item_id": "v8dev_i_2QCX79FQZXH",
+            "option": "tangerine / XXXL",
+            "price_cents": 9874,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_shortfall-00",
+    "initial_message": "My selected replacement is malachite / L pullover and my chosen adjustment route is existing gift card v8dev_gift_BLKVVXZJPT7. I authorize neither an extra payment source nor an item return if the card falls short. Purchase identifier ORD-V8DGHHRWJ88SW2. Account contact v8dev_buyer_dwfm6439bv2@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_2EUEH5VWTWZ",
+      "email": "v8dev_buyer_dwfm6439bv2@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_BLKVVXZJPT7",
+        "balance_cents": 150
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DGHHRWJ88SW2",
+        "user_id": "v8dev_u_2EUEH5VWTWZ",
+        "status": "delivered",
+        "original_payment": "v8dev_card_74864TR4XA7",
+        "items": [
+          {
+            "item_id": "v8dev_i_MKRKNVRLEYZ",
+            "product_id": "v8dev_p_DKEBPJW5LL4",
+            "option": "basalt / XXS",
+            "price_cents": 9224
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_DKEBPJW5LL4": {
+        "product_id": "v8dev_p_DKEBPJW5LL4",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_MGYYU5T3DAX",
+            "option": "tangerine / XXXL",
+            "price_cents": 9724,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_9VENGF3C5AZ",
+            "option": "malachite / L",
+            "price_cents": 11924,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_MKRKNVRLEYZ",
+            "option": "basalt / XXS",
+            "price_cents": 9224,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_shortfall-01",
+    "initial_message": "Purchase identifier ORD-V8DKNV3HF64SDE. Account contact v8dev_buyer_qe2ybjbnywp@purchase.example. Exchange the pullover into sunflower / M. I select gift card v8dev_gift_HRUAU28MDKW for any difference in price. If the gift-card funds are inadequate, do not invent another charge source or return permission.",
+    "customer": {
+      "id": "v8dev_u_396A3QHM4NP",
+      "email": "v8dev_buyer_qe2ybjbnywp@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_HRUAU28MDKW",
+        "balance_cents": 150
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DKNV3HF64SDE",
+        "user_id": "v8dev_u_396A3QHM4NP",
+        "status": "delivered",
+        "original_payment": "v8dev_card_HEL8JHXS7VG",
+        "items": [
+          {
+            "item_id": "v8dev_i_S42SA62AYEE",
+            "product_id": "v8dev_p_JDVJUE2NZT2",
+            "option": "basalt / XXS",
+            "price_cents": 7117
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_JDVJUE2NZT2": {
+        "product_id": "v8dev_p_JDVJUE2NZT2",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_S42SA62AYEE",
+            "option": "basalt / XXS",
+            "price_cents": 7117,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_AJUD6LYKEVJ",
+            "option": "sunflower / M",
+            "price_cents": 9817,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_5WQPY8MNLEV",
+            "option": "tangerine / XXXL",
+            "price_cents": 7617,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_fallback_available-00",
+    "initial_message": "Replace the pullover I received with malachite / L pullover; my selected route for the adjustment is original payment. You have my conditional go-ahead for an item return should the precise replacement choice prove unavailable. An available exact replacement takes priority over the return contingency. Purchase identifier ORD-V8D6V32ANPDVHM. Account contact v8dev_buyer_ay298rhevt4@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_WXN2W5YD4QT",
+      "email": "v8dev_buyer_ay298rhevt4@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_TDJHTEKR4CU",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D6V32ANPDVHM",
+        "user_id": "v8dev_u_WXN2W5YD4QT",
+        "status": "delivered",
+        "original_payment": "v8dev_card_KMZ9QZP7P6D",
+        "items": [
+          {
+            "item_id": "v8dev_i_9XXG4SZ82QU",
+            "product_id": "v8dev_p_ZG34DKVVA56",
+            "option": "basalt / XXS",
+            "price_cents": 4885
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_ZG34DKVVA56": {
+        "product_id": "v8dev_p_ZG34DKVVA56",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_9V2GXDGEMNU",
+            "option": "malachite / L",
+            "price_cents": 6635,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_9XXG4SZ82QU",
+            "option": "basalt / XXS",
+            "price_cents": 4885,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_9TWNFKBHDW5",
+            "option": "tangerine / XXXL",
+            "price_cents": 5385,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_fallback_available-01",
+    "initial_message": "Purchase identifier ORD-V8DSTKFAMX8BWH. Account contact v8dev_buyer_xjgs2787nas@purchase.example. My requested replacement is sunflower / M, and I choose the original payment method to settle its price difference. My consent covers returning this item only when the exact exchange I specified is impossible to fulfill. The contingency does not replace an exchange that can actually be fulfilled.",
+    "customer": {
+      "id": "v8dev_u_4QZ2ZMZCYG6",
+      "email": "v8dev_buyer_xjgs2787nas@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_G2VNKR3Y74N",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DSTKFAMX8BWH",
+        "user_id": "v8dev_u_4QZ2ZMZCYG6",
+        "status": "delivered",
+        "original_payment": "v8dev_card_4VH8AZB9TSU",
+        "items": [
+          {
+            "item_id": "v8dev_i_QTK4WGGYQZ8",
+            "product_id": "v8dev_p_ZVNDUACRJJX",
+            "option": "basalt / XXS",
+            "price_cents": 10093
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_ZVNDUACRJJX": {
+        "product_id": "v8dev_p_ZVNDUACRJJX",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_QTK4WGGYQZ8",
+            "option": "basalt / XXS",
+            "price_cents": 10093,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_PY48F7PMLM8",
+            "option": "sunflower / M",
+            "price_cents": 9443,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_UJDY5DLPEVK",
+            "option": "tangerine / XXXL",
+            "price_cents": 10593,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-return_reject_exchange-00",
+    "initial_message": "Accept the purchased pullover as a return and route its refund to original payment. An exchange into malachite / L is explicitly rejected; I want the item returned. Purchase identifier ORD-V8DZDW2M7APYSE. Account contact v8dev_buyer_6rvets96n3g@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_QHPEBWY6HMU",
+      "email": "v8dev_buyer_6rvets96n3g@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_37F3T8PE3KU",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DZDW2M7APYSE",
+        "user_id": "v8dev_u_QHPEBWY6HMU",
+        "status": "delivered",
+        "original_payment": "v8dev_card_M9J9AZSJSNW",
+        "items": [
+          {
+            "item_id": "v8dev_i_DEMSFVR4H88",
+            "product_id": "v8dev_p_HXUFLGLUEN3",
+            "option": "basalt / XXS",
+            "price_cents": 11436
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_HXUFLGLUEN3": {
+        "product_id": "v8dev_p_HXUFLGLUEN3",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_DEMSFVR4H88",
+            "option": "basalt / XXS",
+            "price_cents": 11436,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_MMWP5RERR4Z",
+            "option": "malachite / L",
+            "price_cents": 10786,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_45HBAXAAEFR",
+            "option": "tangerine / XXXL",
+            "price_cents": 11936,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-return_reject_exchange-01",
+    "initial_message": "Purchase identifier ORD-V8DW5UEPMHS86N. Account contact v8dev_buyer_t876pj4ejen@purchase.example. The resolution I choose is a full return of the pullover, credited through my original payment method. Do not replace this with sunflower / M; my selection is a return, not an exchange.",
+    "customer": {
+      "id": "v8dev_u_85MYXRW9JDB",
+      "email": "v8dev_buyer_t876pj4ejen@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_HDNKVD2T4SX",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DW5UEPMHS86N",
+        "user_id": "v8dev_u_85MYXRW9JDB",
+        "status": "delivered",
+        "original_payment": "v8dev_card_PXU7HH3X845",
+        "items": [
+          {
+            "item_id": "v8dev_i_E9RXHYYUXAQ",
+            "product_id": "v8dev_p_QPF8PL7DJ3M",
+            "option": "basalt / XXS",
+            "price_cents": 4976
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_QPF8PL7DJ3M": {
+        "product_id": "v8dev_p_QPF8PL7DJ3M",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_PVV88LXNKU2",
+            "option": "tangerine / XXXL",
+            "price_cents": 5476,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_5VYNQXRBHZ2",
+            "option": "sunflower / M",
+            "price_cents": 5826,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_E9RXHYYUXAQ",
+            "option": "basalt / XXS",
+            "price_cents": 4976,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_stockout_unknown-00",
+    "initial_message": "Replace the pullover I received with malachite / L pullover; my selected route for the adjustment is original payment. Please check availability first. I am not making a decision about any other resolution here. Purchase identifier ORD-V8DK9ENBUMENR5. Account contact v8dev_buyer_pwq83ka5svk@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_SNLQAHZWGB3",
+      "email": "v8dev_buyer_pwq83ka5svk@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_6H2MCHXRUV9",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DK9ENBUMENR5",
+        "user_id": "v8dev_u_SNLQAHZWGB3",
+        "status": "delivered",
+        "original_payment": "v8dev_card_WX6TDVAMDG7",
+        "items": [
+          {
+            "item_id": "v8dev_i_AHKZHXM8GMZ",
+            "product_id": "v8dev_p_7WLPLMXXUKA",
+            "option": "basalt / XXS",
+            "price_cents": 11191
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_7WLPLMXXUKA": {
+        "product_id": "v8dev_p_7WLPLMXXUKA",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_AHKZHXM8GMZ",
+            "option": "basalt / XXS",
+            "price_cents": 11191,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_FRSW54TPVDU",
+            "option": "tangerine / XXXL",
+            "price_cents": 11691,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_SMMAFHDKJP2",
+            "option": "malachite / L",
+            "price_cents": 12041,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_stockout_unknown-01",
+    "initial_message": "Purchase identifier ORD-V8DEY3WPEWL2WG. Account contact v8dev_buyer_n6ajd6qzdqc@purchase.example. My requested replacement is sunflower / M, and I choose the original payment method to settle its price difference. I have only chosen the exchange and have made no statement about an alternative.",
+    "customer": {
+      "id": "v8dev_u_V9YHV4K7LF2",
+      "email": "v8dev_buyer_n6ajd6qzdqc@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_Y684RRTBWCR",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DEY3WPEWL2WG",
+        "user_id": "v8dev_u_V9YHV4K7LF2",
+        "status": "delivered",
+        "original_payment": "v8dev_card_MK4W5TULMG5",
+        "items": [
+          {
+            "item_id": "v8dev_i_LUAC7K7RRG5",
+            "product_id": "v8dev_p_NXFHTJJ64EV",
+            "option": "basalt / XXS",
+            "price_cents": 4368
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_NXFHTJJ64EV": {
+        "product_id": "v8dev_p_NXFHTJJ64EV",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_977RDCPREVS",
+            "option": "sunflower / M",
+            "price_cents": 6118,
+            "available": false
+          },
+          {
+            "item_id": "v8dev_i_PTWAY6G68Y5",
+            "option": "tangerine / XXXL",
+            "price_cents": 4868,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_LUAC7K7RRG5",
+            "option": "basalt / XXS",
+            "price_cents": 4368,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_stockout_missing_email-00",
+    "initial_message": "Replace the pullover I received with malachite / L pullover; my selected route for the adjustment is original payment. I forbid a return as the alternative to a stockout; let a human support agent resolve that situation. My email is not included; request it before looking up the order. Purchase identifier ORD-V8D9ZWXXATEWFB.",
+    "customer": {
+      "id": "v8dev_u_WLB4PVNJD7T",
+      "email": "v8dev_buyer_gkb9x33nbmq@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_S7ZE6ZHSWD6",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D9ZWXXATEWFB",
+        "user_id": "v8dev_u_WLB4PVNJD7T",
+        "status": "delivered",
+        "original_payment": "v8dev_card_LS7WLRMSYNY",
+        "items": [
+          {
+            "item_id": "v8dev_i_LZ5ATUMNFW9",
+            "product_id": "v8dev_p_PTXGP9QKFLQ",
+            "option": "basalt / XXS",
+            "price_cents": 9535
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_PTXGP9QKFLQ": {
+        "product_id": "v8dev_p_PTXGP9QKFLQ",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_LZ5ATUMNFW9",
+            "option": "basalt / XXS",
+            "price_cents": 9535,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_Z6YVZR57G22",
+            "option": "tangerine / XXXL",
+            "price_cents": 10035,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_VQ9T9VNDACB",
+            "option": "malachite / L",
+            "price_cents": 11285,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_stockout_missing_email-01",
+    "initial_message": "Purchase identifier ORD-V8DXCC7EGGZAPE. My requested replacement is sunflower / M, and I choose the original payment method to settle its price difference. My decision is no return when the replacement is missing. Preserve the item and involve a staff member. You need to collect the missing account email, even if stock cannot satisfy the replacement.",
+    "customer": {
+      "id": "v8dev_u_UTDLDRCVW29",
+      "email": "v8dev_buyer_7zk27et6hud@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_LWNCKT7YKCK",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DXCC7EGGZAPE",
+        "user_id": "v8dev_u_UTDLDRCVW29",
+        "status": "delivered",
+        "original_payment": "v8dev_card_E3PBGWA92WV",
+        "items": [
+          {
+            "item_id": "v8dev_i_L2AY4VG66RL",
+            "product_id": "v8dev_p_9P7CCFYZQ4A",
+            "option": "basalt / XXS",
+            "price_cents": 10541
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_9P7CCFYZQ4A": {
+        "product_id": "v8dev_p_9P7CCFYZQ4A",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_XUYQQ7AH2JL",
+            "option": "tangerine / XXXL",
+            "price_cents": 11041,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_L2AY4VG66RL",
+            "option": "basalt / XXS",
+            "price_cents": 10541,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_46QBA66KWM5",
+            "option": "sunflower / M",
+            "price_cents": 9891,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_stockout_negative_quote-00",
+    "initial_message": "Replace the pullover I received with malachite / L pullover; my selected route for the adjustment is original payment. A chatbot draft said 'authorize an item return if unavailable'; I reject that draft as an instruction for my order. I do not authorize any item return. Purchase identifier ORD-V8D39BAC8VBYBV. Account contact v8dev_buyer_sel5225zmdm@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_8DG2YAK3Y7T",
+      "email": "v8dev_buyer_sel5225zmdm@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_GBJHFLD9RY7",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D39BAC8VBYBV",
+        "user_id": "v8dev_u_8DG2YAK3Y7T",
+        "status": "delivered",
+        "original_payment": "v8dev_card_X48TN2H4HC6",
+        "items": [
+          {
+            "item_id": "v8dev_i_4SRXSFUVPPX",
+            "product_id": "v8dev_p_J4E7EEP9BGB",
+            "option": "basalt / XXS",
+            "price_cents": 11344
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_J4E7EEP9BGB": {
+        "product_id": "v8dev_p_J4E7EEP9BGB",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_4SRXSFUVPPX",
+            "option": "basalt / XXS",
+            "price_cents": 11344,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_74YWL5XC9ZJ",
+            "option": "malachite / L",
+            "price_cents": 10694,
+            "available": false
+          },
+          {
+            "item_id": "v8dev_i_D4RSWAA5WML",
+            "option": "tangerine / XXXL",
+            "price_cents": 11844,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_stockout_negative_quote-01",
+    "initial_message": "Purchase identifier ORD-V8DC26XNRRQBFP. Account contact v8dev_buyer_equ6tbkrmhf@purchase.example. My requested replacement is sunflower / M, and I choose the original payment method to settle its price difference. The phrase 'a stockout permits a return' came from someone else's note, not my consent. I do not authorize it.",
+    "customer": {
+      "id": "v8dev_u_47WVKFZ9WQK",
+      "email": "v8dev_buyer_equ6tbkrmhf@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_NWXMNGWVR9R",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DC26XNRRQBFP",
+        "user_id": "v8dev_u_47WVKFZ9WQK",
+        "status": "delivered",
+        "original_payment": "v8dev_card_K2NY7RJV7MX",
+        "items": [
+          {
+            "item_id": "v8dev_i_NBRE63TC6V9",
+            "product_id": "v8dev_p_4RTW5EMZ2P6",
+            "option": "basalt / XXS",
+            "price_cents": 10567
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_4RTW5EMZ2P6": {
+        "product_id": "v8dev_p_4RTW5EMZ2P6",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_V8NZAK6KGS9",
+            "option": "sunflower / M",
+            "price_cents": 11417,
+            "available": false
+          },
+          {
+            "item_id": "v8dev_i_NBRE63TC6V9",
+            "option": "basalt / XXS",
+            "price_cents": 10567,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_7MM5SUYJD9J",
+            "option": "tangerine / XXXL",
+            "price_cents": 11067,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_stockout_question-00",
+    "initial_message": "Replace the pullover I received with malachite / L pullover; my selected route for the adjustment is original payment. Does a return have a deadline if the exchange fails? I am asking for information and expressly not approving a return. Purchase identifier ORD-V8DSQGHHYSFY8T. Account contact v8dev_buyer_g4ld4ghqppt@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_8GQJNC2H4QQ",
+      "email": "v8dev_buyer_g4ld4ghqppt@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_3M3ZMR78RQ9",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DSQGHHYSFY8T",
+        "user_id": "v8dev_u_8GQJNC2H4QQ",
+        "status": "delivered",
+        "original_payment": "v8dev_card_6CXMDYCXWL4",
+        "items": [
+          {
+            "item_id": "v8dev_i_BBUPK9XGC6S",
+            "product_id": "v8dev_p_WB8DXY837FD",
+            "option": "basalt / XXS",
+            "price_cents": 5792
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_WB8DXY837FD": {
+        "product_id": "v8dev_p_WB8DXY837FD",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_D2WYVRMHQB8",
+            "option": "tangerine / XXXL",
+            "price_cents": 6292,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_3KBQ9X83N7T",
+            "option": "malachite / L",
+            "price_cents": 6642,
+            "available": false
+          },
+          {
+            "item_id": "v8dev_i_BBUPK9XGC6S",
+            "option": "basalt / XXS",
+            "price_cents": 5792,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_stockout_question-01",
+    "initial_message": "Purchase identifier ORD-V8DN2RT69DUPAC. Account contact v8dev_buyer_eg3stnbq5hx@purchase.example. My requested replacement is sunflower / M, and I choose the original payment method to settle its price difference. What would taking the item back involve? That question grants no permission; I decline a return for now.",
+    "customer": {
+      "id": "v8dev_u_GW7KHWLZVMB",
+      "email": "v8dev_buyer_eg3stnbq5hx@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_SNXHFWFJ3HA",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DN2RT69DUPAC",
+        "user_id": "v8dev_u_GW7KHWLZVMB",
+        "status": "delivered",
+        "original_payment": "v8dev_card_E9L68BAGP53",
+        "items": [
+          {
+            "item_id": "v8dev_i_7HTDJVSTQYB",
+            "product_id": "v8dev_p_ZDS2GA7FTNY",
+            "option": "basalt / XXS",
+            "price_cents": 4688
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_ZDS2GA7FTNY": {
+        "product_id": "v8dev_p_ZDS2GA7FTNY",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_B5SRTXBD9FB",
+            "option": "tangerine / XXXL",
+            "price_cents": 5188,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_7HTDJVSTQYB",
+            "option": "basalt / XXS",
+            "price_cents": 4688,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_9S6MAYTCJ7N",
+            "option": "sunflower / M",
+            "price_cents": 6438,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_available_refusal-00",
+    "initial_message": "Replace the pullover I received with malachite / L pullover; my selected route for the adjustment is original payment. I forbid a return as the alternative to a stockout; let a human support agent resolve that situation. My refusal of a return must not prevent an available exact exchange. Purchase identifier ORD-V8DUYYWQ3L8XTB. Account contact v8dev_buyer_868bv7eev4f@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_PR35JTRN9HR",
+      "email": "v8dev_buyer_868bv7eev4f@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_GLBNDKC9HN6",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DUYYWQ3L8XTB",
+        "user_id": "v8dev_u_PR35JTRN9HR",
+        "status": "delivered",
+        "original_payment": "v8dev_card_QVMWPN5NA9U",
+        "items": [
+          {
+            "item_id": "v8dev_i_QCT83HS3YXZ",
+            "product_id": "v8dev_p_CV6R6R8RE8M",
+            "option": "basalt / XXS",
+            "price_cents": 6528
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_CV6R6R8RE8M": {
+        "product_id": "v8dev_p_CV6R6R8RE8M",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_C5CWS6NG3PU",
+            "option": "malachite / L",
+            "price_cents": 8278,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_7VMVMWRB7GB",
+            "option": "tangerine / XXXL",
+            "price_cents": 7028,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_QCT83HS3YXZ",
+            "option": "basalt / XXS",
+            "price_cents": 6528,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_available_refusal-01",
+    "initial_message": "Purchase identifier ORD-V8DXRM43DKKZAU. Account contact v8dev_buyer_edyf64t6n7l@purchase.example. My requested replacement is sunflower / M, and I choose the original payment method to settle its price difference. My decision is no return when the replacement is missing. Preserve the item and involve a staff member. I still want the specified exchange when available, despite refusing a return alternative.",
+    "customer": {
+      "id": "v8dev_u_FYZ99F3J849",
+      "email": "v8dev_buyer_edyf64t6n7l@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_PTDNQR8TGW6",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DXRM43DKKZAU",
+        "user_id": "v8dev_u_FYZ99F3J849",
+        "status": "delivered",
+        "original_payment": "v8dev_card_A5HWYBGJGFB",
+        "items": [
+          {
+            "item_id": "v8dev_i_Y9C8MPYXMTA",
+            "product_id": "v8dev_p_VTL7X9F2F5F",
+            "option": "basalt / XXS",
+            "price_cents": 5276
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_VTL7X9F2F5F": {
+        "product_id": "v8dev_p_VTL7X9F2F5F",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_LLRKSDWNN9L",
+            "option": "tangerine / XXXL",
+            "price_cents": 5776,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_EVUKD2BYPJU",
+            "option": "sunflower / M",
+            "price_cents": 4626,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_Y9C8MPYXMTA",
+            "option": "basalt / XXS",
+            "price_cents": 5276,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_fallback_missing_payment-00",
+    "initial_message": "The malachite / L pullover is my replacement choice for this original purchase; I have yet to authorize an adjustment method. You have my conditional go-ahead for an item return should the precise replacement choice prove unavailable. Even with that return contingency, a payment choice is still missing. Purchase identifier ORD-V8DCTDM4DUDYJL. Account contact v8dev_buyer_sp87czketzc@purchase.example.",
+    "customer": {
+      "id": "v8dev_u_FYJVQHJQGMQ",
+      "email": "v8dev_buyer_sp87czketzc@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_FD4DTWYNZWN",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DCTDM4DUDYJL",
+        "user_id": "v8dev_u_FYJVQHJQGMQ",
+        "status": "delivered",
+        "original_payment": "v8dev_card_9MARAWMQGQ5",
+        "items": [
+          {
+            "item_id": "v8dev_i_HRDS574LTPH",
+            "product_id": "v8dev_p_VPJB6HFYJ4V",
+            "option": "basalt / XXS",
+            "price_cents": 11571
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_VPJB6HFYJ4V": {
+        "product_id": "v8dev_p_VPJB6HFYJ4V",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_MEDQA73FXUS",
+            "option": "malachite / L",
+            "price_cents": 10921,
+            "available": false
+          },
+          {
+            "item_id": "v8dev_i_HRDS574LTPH",
+            "option": "basalt / XXS",
+            "price_cents": 11571,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_848GRD9UKD6",
+            "option": "tangerine / XXXL",
+            "price_cents": 12071,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_fallback_missing_payment-01",
+    "initial_message": "Purchase identifier ORD-V8DUXYRNJAVUUD. Account contact v8dev_buyer_j2mshmey66s@purchase.example. For the pullover on my original order, arrange an exchange into sunflower / M. Which payment channel to use is a separate unanswered question. My consent covers returning this item only when the exact exchange I specified is impossible to fulfill. My contingency authorization does not select a payment method.",
+    "customer": {
+      "id": "v8dev_u_A2AW8EAQNDT",
+      "email": "v8dev_buyer_j2mshmey66s@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_4A99Y4Y5SNE",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DUXYRNJAVUUD",
+        "user_id": "v8dev_u_A2AW8EAQNDT",
+        "status": "delivered",
+        "original_payment": "v8dev_card_P6L8C9YKAPA",
+        "items": [
+          {
+            "item_id": "v8dev_i_YF882HNLYK7",
+            "product_id": "v8dev_p_HTSC3J5DUP5",
+            "option": "basalt / XXS",
+            "price_cents": 11790
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_HTSC3J5DUP5": {
+        "product_id": "v8dev_p_HTSC3J5DUP5",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_YF882HNLYK7",
+            "option": "basalt / XXS",
+            "price_cents": 11790,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_8HMM4FXQ83S",
+            "option": "tangerine / XXXL",
+            "price_cents": 12290,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_W2MY98ZQP2T",
+            "option": "sunflower / M",
+            "price_cents": 12640,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_missing_email-00",
+    "initial_message": "Replace the pullover I received with malachite / L pullover; my selected route for the adjustment is original payment. You have my conditional go-ahead for an item return should the precise replacement choice prove unavailable. The account email is absent from this request and must be collected. Purchase identifier ORD-V8DWVB6ZRU853V.",
+    "customer": {
+      "id": "v8dev_u_S5WYE32S6Q8",
+      "email": "v8dev_buyer_6777nat7gwp@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_B62DFPDAB55",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DWVB6ZRU853V",
+        "user_id": "v8dev_u_S5WYE32S6Q8",
+        "status": "delivered",
+        "original_payment": "v8dev_card_KTCQUSNUZKR",
+        "items": [
+          {
+            "item_id": "v8dev_i_M9H2A7ZKWH9",
+            "product_id": "v8dev_p_DPDGQCPFYGA",
+            "option": "basalt / XXS",
+            "price_cents": 11376
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_DPDGQCPFYGA": {
+        "product_id": "v8dev_p_DPDGQCPFYGA",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_M9H2A7ZKWH9",
+            "option": "basalt / XXS",
+            "price_cents": 11376,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_RVXGXRLNHJY",
+            "option": "tangerine / XXXL",
+            "price_cents": 11876,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_JYD3HF9K9XX",
+            "option": "malachite / L",
+            "price_cents": 12226,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-exchange_missing_email-01",
+    "initial_message": "Purchase identifier ORD-V8D3U8QHM47UAM. My requested replacement is sunflower / M, and I choose the original payment method to settle its price difference. My consent covers returning this item only when the exact exchange I specified is impossible to fulfill. I have not provided the email for identifying my account.",
+    "customer": {
+      "id": "v8dev_u_N5M38FVA7Z4",
+      "email": "v8dev_buyer_ps7y8l5cxu2@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_PQEQ25GENZT",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D3U8QHM47UAM",
+        "user_id": "v8dev_u_N5M38FVA7Z4",
+        "status": "delivered",
+        "original_payment": "v8dev_card_428ZMEFLVXB",
+        "items": [
+          {
+            "item_id": "v8dev_i_FMP4APAJV9Y",
+            "product_id": "v8dev_p_7FFQZQB8QLH",
+            "option": "basalt / XXS",
+            "price_cents": 9606
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_7FFQZQB8QLH": {
+        "product_id": "v8dev_p_7FFQZQB8QLH",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_AG4Y9NQRSN7",
+            "option": "tangerine / XXXL",
+            "price_cents": 10106,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_FMP4APAJV9Y",
+            "option": "basalt / XXS",
+            "price_cents": 9606,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_2HNAY4TKDUE",
+            "option": "sunflower / M",
+            "price_cents": 11356,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-missing_email_payment-00",
+    "initial_message": "Take back the pullover associated with the original order. I am identifying the purchase, not selecting a payment channel. Both the account email and the refund payment choice need separate answers. Purchase identifier ORD-V8D8HU3V89SUXN.",
+    "customer": {
+      "id": "v8dev_u_Z7KMKBK99B2",
+      "email": "v8dev_buyer_lr9pka858uf@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_6L9TNE5LCRN",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8D8HU3V89SUXN",
+        "user_id": "v8dev_u_Z7KMKBK99B2",
+        "status": "delivered",
+        "original_payment": "v8dev_card_4DCLAWH5ZKJ",
+        "items": [
+          {
+            "item_id": "v8dev_i_M5YUCWGPYEN",
+            "product_id": "v8dev_p_83T5NGKUHXG",
+            "option": "basalt / XXS",
+            "price_cents": 5295
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_83T5NGKUHXG": {
+        "product_id": "v8dev_p_83T5NGKUHXG",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_6MX5M75FAPH",
+            "option": "tangerine / XXXL",
+            "price_cents": 5795,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_TKPUJLWAX62",
+            "option": "malachite / L",
+            "price_cents": 7045,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_M5YUCWGPYEN",
+            "option": "basalt / XXS",
+            "price_cents": 5295,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v8-valid-missing_email_payment-01",
+    "initial_message": "Purchase identifier ORD-V8DKRGUYEF9594. My original purchase needs an item return. Before the proposal, obtain my preference for receiving the refund. Collect my omitted email as well as the unresolved payment preference.",
+    "customer": {
+      "id": "v8dev_u_BK6X8KNHERZ",
+      "email": "v8dev_buyer_afh6la6skvq@purchase.example",
+      "gift_card": {
+        "id": "v8dev_gift_YJCGW343WEF",
+        "balance_cents": 18000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DKRGUYEF9594",
+        "user_id": "v8dev_u_BK6X8KNHERZ",
+        "status": "delivered",
+        "original_payment": "v8dev_card_ABFAG77QPB2",
+        "items": [
+          {
+            "item_id": "v8dev_i_CH5UUFVLLWD",
+            "product_id": "v8dev_p_XYGMUHHCDXS",
+            "option": "basalt / XXS",
+            "price_cents": 11950
+          }
+        ]
+      }
+    ],
+    "products": {
+      "v8dev_p_XYGMUHHCDXS": {
+        "product_id": "v8dev_p_XYGMUHHCDXS",
+        "name": "Brookhaven zip-neck pullover",
+        "variants": [
+          {
+            "item_id": "v8dev_i_J9B9SUZBKJC",
+            "option": "tangerine / XXXL",
+            "price_cents": 12450,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_S5JEMXVJCDY",
+            "option": "sunflower / M",
+            "price_cents": 11300,
+            "available": true
+          },
+          {
+            "item_id": "v8dev_i_CH5UUFVLLWD",
+            "option": "basalt / XXS",
+            "price_cents": 11950,
+            "available": true
+          }
+        ]
+      }
+    }
+  }
+]

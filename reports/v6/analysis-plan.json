@@ -1,0 +1,287 @@
+{
+  "created_at_utc": "2026-10-28T04:31:19.212484+00:00",
+  "frozen_training_manifest_sha256": "d3568d30b14d7b2259bab06768260b3f029f72d01c9b38b8a690fc5510bc8db8",
+  "cases_sha256": "3818c03cc614f4a696f5afb20e57c9d9be61afc27b6f2642343e5215b3fab7c3",
+  "test_inference_started": false,
+  "group_fields": [
+    "initial_message",
+    "customer",
+    "orders",
+    "products",
+    "answers",
+    "confirmation",
+    "required_answers"
+  ],
+  "representative_rule": "First occurrence in frozen source order; no model results used.",
+  "splits": {
+    "train": {
+      "rows": 96,
+      "unique": 88,
+      "representatives": [
+        "v6-train-cancel-00",
+        "v6-train-cancel-01",
+        "v6-train-cancel-02",
+        "v6-train-cancel-03",
+        "v6-train-missing_reason-00",
+        "v6-train-missing_reason-01",
+        "v6-train-missing_reason-02",
+        "v6-train-missing_reason-03",
+        "v6-train-return-00",
+        "v6-train-return-01",
+        "v6-train-return-02",
+        "v6-train-return-03",
+        "v6-train-missing_payment-00",
+        "v6-train-missing_payment-01",
+        "v6-train-missing_payment-02",
+        "v6-train-missing_payment-03",
+        "v6-train-exchange-00",
+        "v6-train-exchange-01",
+        "v6-train-exchange-02",
+        "v6-train-exchange-03",
+        "v6-train-exchange_fallback-00",
+        "v6-train-exchange_fallback-01",
+        "v6-train-exchange_fallback-02",
+        "v6-train-exchange_fallback-03",
+        "v6-train-forbidden_status-00",
+        "v6-train-forbidden_status-01",
+        "v6-train-forbidden_status-02",
+        "v6-train-forbidden_status-03",
+        "v6-train-foreign_order-00",
+        "v6-train-foreign_order-01",
+        "v6-train-foreign_order-02",
+        "v6-train-foreign_order-03",
+        "v6-train-missing_email-00",
+        "v6-train-missing_email-01",
+        "v6-train-missing_email-02",
+        "v6-train-missing_email-03",
+        "v6-train-exchange_missing_option-00",
+        "v6-train-exchange_missing_option-01",
+        "v6-train-exchange_missing_option-02",
+        "v6-train-exchange_missing_option-03",
+        "v6-train-exchange_missing_payment-00",
+        "v6-train-exchange_missing_payment-01",
+        "v6-train-exchange_missing_payment-02",
+        "v6-train-exchange_missing_payment-03",
+        "v6-train-exchange_gift-00",
+        "v6-train-exchange_gift-01",
+        "v6-train-exchange_gift-02",
+        "v6-train-exchange_gift-03",
+        "v6-train-exchange_unavailable-00",
+        "v6-train-exchange_unavailable-01",
+        "v6-train-exchange_unavailable-02",
+        "v6-train-exchange_unavailable-03",
+        "v6-train-exchange_shortfall-00",
+        "v6-train-exchange_shortfall-01",
+        "v6-train-exchange_shortfall-02",
+        "v6-train-exchange_shortfall-03",
+        "v6-train-exchange_fallback_available-00",
+        "v6-train-exchange_fallback_available-01",
+        "v6-train-exchange_fallback_available-02",
+        "v6-train-exchange_fallback_available-03",
+        "v6-train-return_reject_exchange-00",
+        "v6-train-return_reject_exchange-01",
+        "v6-train-return_reject_exchange-02",
+        "v6-train-return_reject_exchange-03",
+        "v6-train-exchange_stockout_unknown-00",
+        "v6-train-exchange_stockout_unknown-01",
+        "v6-train-exchange_stockout_unknown-02",
+        "v6-train-exchange_stockout_unknown-03",
+        "v6-train-exchange_stockout_negative_quote-00",
+        "v6-train-exchange_stockout_negative_quote-01",
+        "v6-train-exchange_stockout_negative_quote-02",
+        "v6-train-exchange_stockout_negative_quote-03",
+        "v6-train-exchange_stockout_question-00",
+        "v6-train-exchange_stockout_question-01",
+        "v6-train-exchange_stockout_question-02",
+        "v6-train-exchange_stockout_question-03",
+        "v6-train-exchange_available_refusal-00",
+        "v6-train-exchange_available_refusal-01",
+        "v6-train-exchange_available_refusal-02",
+        "v6-train-exchange_available_refusal-03",
+        "v6-train-exchange_missing_email-00",
+        "v6-train-exchange_missing_email-01",
+        "v6-train-exchange_missing_email-02",
+        "v6-train-exchange_missing_email-03",
+        "v6-train-missing_email_payment-00",
+        "v6-train-missing_email_payment-01",
+        "v6-train-missing_email_payment-02",
+        "v6-train-missing_email_payment-03"
+      ],
+      "duplicate_groups": [
+        [
+          "v6-train-exchange_fallback-00",
+          "v6-train-exchange_fallback_scoped-00"
+        ],
+        [
+          "v6-train-exchange_fallback-01",
+          "v6-train-exchange_fallback_scoped-01"
+        ],
+        [
+          "v6-train-exchange_fallback-02",
+          "v6-train-exchange_fallback_scoped-02"
+        ],
+        [
+          "v6-train-exchange_fallback-03",
+          "v6-train-exchange_fallback_scoped-03"
+        ],
+        [
+          "v6-train-exchange_unavailable-00",
+          "v6-train-exchange_stockout_refusal-00"
+        ],
+        [
+          "v6-train-exchange_unavailable-01",
+          "v6-train-exchange_stockout_refusal-01"
+        ],
+        [
+          "v6-train-exchange_unavailable-02",
+          "v6-train-exchange_stockout_refusal-02"
+        ],
+        [
+          "v6-train-exchange_unavailable-03",
+          "v6-train-exchange_stockout_refusal-03"
+        ]
+      ]
+    },
+    "valid": {
+      "rows": 48,
+      "unique": 44,
+      "representatives": [
+        "v6-valid-cancel-00",
+        "v6-valid-cancel-01",
+        "v6-valid-missing_reason-00",
+        "v6-valid-missing_reason-01",
+        "v6-valid-return-00",
+        "v6-valid-return-01",
+        "v6-valid-missing_payment-00",
+        "v6-valid-missing_payment-01",
+        "v6-valid-exchange-00",
+        "v6-valid-exchange-01",
+        "v6-valid-exchange_fallback-00",
+        "v6-valid-exchange_fallback-01",
+        "v6-valid-forbidden_status-00",
+        "v6-valid-forbidden_status-01",
+        "v6-valid-foreign_order-00",
+        "v6-valid-foreign_order-01",
+        "v6-valid-missing_email-00",
+        "v6-valid-missing_email-01",
+        "v6-valid-exchange_missing_option-00",
+        "v6-valid-exchange_missing_option-01",
+        "v6-valid-exchange_missing_payment-00",
+        "v6-valid-exchange_missing_payment-01",
+        "v6-valid-exchange_gift-00",
+        "v6-valid-exchange_gift-01",
+        "v6-valid-exchange_unavailable-00",
+        "v6-valid-exchange_unavailable-01",
+        "v6-valid-exchange_shortfall-00",
+        "v6-valid-exchange_shortfall-01",
+        "v6-valid-exchange_fallback_available-00",
+        "v6-valid-exchange_fallback_available-01",
+        "v6-valid-return_reject_exchange-00",
+        "v6-valid-return_reject_exchange-01",
+        "v6-valid-exchange_stockout_unknown-00",
+        "v6-valid-exchange_stockout_unknown-01",
+        "v6-valid-exchange_stockout_negative_quote-00",
+        "v6-valid-exchange_stockout_negative_quote-01",
+        "v6-valid-exchange_stockout_question-00",
+        "v6-valid-exchange_stockout_question-01",
+        "v6-valid-exchange_available_refusal-00",
+        "v6-valid-exchange_available_refusal-01",
+        "v6-valid-exchange_missing_email-00",
+        "v6-valid-exchange_missing_email-01",
+        "v6-valid-missing_email_payment-00",
+        "v6-valid-missing_email_payment-01"
+      ],
+      "duplicate_groups": [
+        [
+          "v6-valid-exchange_fallback-00",
+          "v6-valid-exchange_fallback_scoped-00"
+        ],
+        [
+          "v6-valid-exchange_fallback-01",
+          "v6-valid-exchange_fallback_scoped-01"
+        ],
+        [
+          "v6-valid-exchange_unavailable-00",
+          "v6-valid-exchange_stockout_refusal-00"
+        ],
+        [
+          "v6-valid-exchange_unavailable-01",
+          "v6-valid-exchange_stockout_refusal-01"
+        ]
+      ]
+    },
+    "test": {
+      "rows": 48,
+      "unique": 44,
+      "representatives": [
+        "v6-test-cancel-00",
+        "v6-test-cancel-01",
+        "v6-test-missing_reason-00",
+        "v6-test-missing_reason-01",
+        "v6-test-return-00",
+        "v6-test-return-01",
+        "v6-test-missing_payment-00",
+        "v6-test-missing_payment-01",
+        "v6-test-exchange-00",
+        "v6-test-exchange-01",
+        "v6-test-exchange_fallback-00",
+        "v6-test-exchange_fallback-01",
+        "v6-test-forbidden_status-00",
+        "v6-test-forbidden_status-01",
+        "v6-test-foreign_order-00",
+        "v6-test-foreign_order-01",
+        "v6-test-missing_email-00",
+        "v6-test-missing_email-01",
+        "v6-test-exchange_missing_option-00",
+        "v6-test-exchange_missing_option-01",
+        "v6-test-exchange_missing_payment-00",
+        "v6-test-exchange_missing_payment-01",
+        "v6-test-exchange_gift-00",
+        "v6-test-exchange_gift-01",
+        "v6-test-exchange_unavailable-00",
+        "v6-test-exchange_unavailable-01",
+        "v6-test-exchange_shortfall-00",
+        "v6-test-exchange_shortfall-01",
+        "v6-test-exchange_fallback_available-00",
+        "v6-test-exchange_fallback_available-01",
+        "v6-test-return_reject_exchange-00",
+        "v6-test-return_reject_exchange-01",
+        "v6-test-exchange_stockout_unknown-00",
+        "v6-test-exchange_stockout_unknown-01",
+        "v6-test-exchange_stockout_negative_quote-00",
+        "v6-test-exchange_stockout_negative_quote-01",
+        "v6-test-exchange_stockout_question-00",
+        "v6-test-exchange_stockout_question-01",
+        "v6-test-exchange_available_refusal-00",
+        "v6-test-exchange_available_refusal-01",
+        "v6-test-exchange_missing_email-00",
+        "v6-test-exchange_missing_email-01",
+        "v6-test-missing_email_payment-00",
+        "v6-test-missing_email_payment-01"
+      ],
+      "duplicate_groups": [
+        [
+          "v6-test-exchange_fallback-00",
+          "v6-test-exchange_fallback_scoped-00"
+        ],
+        [
+          "v6-test-exchange_fallback-01",
+          "v6-test-exchange_fallback_scoped-01"
+        ],
+        [
+          "v6-test-exchange_unavailable-00",
+          "v6-test-exchange_stockout_refusal-00"
+        ],
+        [
+          "v6-test-exchange_unavailable-01",
+          "v6-test-exchange_stockout_refusal-01"
+        ]
+      ]
+    }
+  },
+  "train_snapshots": {
+    "rows": 590,
+    "unique_prompt_completion_pairs": 510
+  },
+  "scope": "Accidental exact aliases detected after training freeze, before held-out inference. Training data and raw 48-row validation selection/test are preserved. Primary reporting uses 44 unique test records; raw 192 four-arm records remain visible. This does not make the 28 shared test worlds independent."
+}

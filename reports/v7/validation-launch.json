@@ -1,0 +1,9 @@
+{
+  "stage": "validation_only",
+  "created_at_utc": "2026-10-28T17:31:15.497648+00:00",
+  "owned_training_pid_exited": 777,
+  "completed_updates": 1344,
+  "updates_sha256": "fd6cf5f0b00c1828906cdd348d8745bcfb0a3c2f7e8ba7079d8dbc369408fb96",
+  "manifest_sha256": "1bbb3aba1db64e0962842411d9cb5872269dde01922c2d8731de135bbc8908ae",
+  "test_will_not_run_automatically": true
+}

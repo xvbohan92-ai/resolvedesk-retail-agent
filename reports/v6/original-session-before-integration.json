@@ -1,0 +1,10 @@
+{
+  "scope": "Snapshot before V6 live/browser probes; original simulated pending proposal will not be accepted or declined.",
+  "sessions": [
+    {
+      "session_id": "af1240895e611b4f40a8c030",
+      "status": "awaiting_confirmation",
+      "body_sha256": "ac8ca059f6d26f05c64360966842a76e3e984801d5e0dcb19dedbce5d61a8637"
+    }
+  ]
+}

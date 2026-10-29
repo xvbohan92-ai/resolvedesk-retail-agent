@@ -1,0 +1,1067 @@
+{
+  "scope": "Actual browser integration on a validation case, not held-out model accuracy.",
+  "ollama_exchange": {
+    "case_id": "valid-exchange-00",
+    "status": "completed",
+    "model_calls": 5,
+    "proposal": {
+      "amount_cents": 500,
+      "arguments": {
+        "item_id": "item_20407",
+        "new_item_id": "item_20419",
+        "order_id": "ORD-20400",
+        "payment_method": "original"
+      },
+      "fingerprint": "348e4aa0f79ca7c0a6c09a53127bed677040694d0e74ed1314014a8a710db542",
+      "id": "6dc9215c3b5e7642d049ebf072b424d4",
+      "item_id": "item_20407",
+      "kind": "exchange",
+      "new_item_id": "item_20419",
+      "order_id": "ORD-20400",
+      "order_revision": 0,
+      "payment_method": "original",
+      "target_status": "exchange requested"
+    },
+    "receipt": {
+      "email_sent": false,
+      "money_moved": false,
+      "operation": {
+        "amount_cents": 500,
+        "arguments": {
+          "item_id": "item_20407",
+          "new_item_id": "item_20419",
+          "order_id": "ORD-20400",
+          "payment_method": "original"
+        },
+        "fingerprint": "348e4aa0f79ca7c0a6c09a53127bed677040694d0e74ed1314014a8a710db542",
+        "item_id": "item_20407",
+        "kind": "exchange",
+        "new_item_id": "item_20419",
+        "order_id": "ORD-20400",
+        "order_revision": 0,
+        "payment_method": "original",
+        "target_status": "exchange requested"
+      },
+      "order_id": "ORD-20400",
+      "order_status": "exchange requested",
+      "proposal_id": "6dc9215c3b5e7642d049ebf072b424d4",
+      "simulated": true,
+      "status": "committed"
+    },
+    "events": [
+      {
+        "id": 1,
+        "kind": "session_created",
+        "created": 1793061284.768571,
+        "detail": {
+          "case_id": "valid-exchange-00"
+        }
+      },
+      {
+        "id": 2,
+        "kind": "model_tool",
+        "created": 1793061287.740139,
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper20400@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20400@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8000,
+              "id": "gift_20400"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_20400"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 540,
+            "json_schema_constrained": true,
+            "latency_ms": 2964.82,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 23,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        }
+      },
+      {
+        "id": 3,
+        "kind": "model_tool",
+        "created": 1793061290.336939,
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper20400@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20400@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8000,
+              "id": "gift_20400"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_20400"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 609,
+            "json_schema_constrained": true,
+            "latency_ms": 2587.11,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 23,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        }
+      },
+      {
+        "id": 4,
+        "kind": "model_tool",
+        "created": 1793061292.4863381,
+        "detail": {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-20400"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-20400\"}}",
+          "result": {
+            "id": "ORD-20400",
+            "items": [
+              {
+                "item_id": "item_20407",
+                "option": "black / M",
+                "price_cents": 3200,
+                "product_id": "p_20431"
+              }
+            ],
+            "original_payment": "card_20400",
+            "revision": 0,
+            "status": "delivered",
+            "user_id": "u_20400"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 679,
+            "json_schema_constrained": true,
+            "latency_ms": 2144.66,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 20,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        }
+      },
+      {
+        "id": 5,
+        "kind": "model_tool",
+        "created": 1793061294.7962291,
+        "detail": {
+          "action": {
+            "arguments": {
+              "product_id": "p_20431"
+            },
+            "tool": "get_product"
+          },
+          "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_20431\"}}",
+          "result": {
+            "name": "Everyday shirt",
+            "product_id": "p_20431",
+            "variants": [
+              {
+                "available": true,
+                "item_id": "item_20407",
+                "option": "black / M",
+                "price_cents": 3200
+              },
+              {
+                "available": true,
+                "item_id": "item_20419",
+                "option": "navy / XL",
+                "price_cents": 3700
+              },
+              {
+                "available": true,
+                "item_id": "item_20443",
+                "option": "white / S",
+                "price_cents": 2900
+              }
+            ]
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 783,
+            "json_schema_constrained": true,
+            "latency_ms": 2306.13,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 21,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        }
+      },
+      {
+        "id": 6,
+        "kind": "model_tool",
+        "created": 1793061300.308977,
+        "detail": {
+          "action": {
+            "arguments": {
+              "item_id": "item_20407",
+              "new_item_id": "item_20419",
+              "order_id": "ORD-20400",
+              "payment_method": "original"
+            },
+            "tool": "propose_exchange"
+          },
+          "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-20400\",\"item_id\":\"item_20407\",\"new_item_id\":\"item_20419\",\"payment_method\":\"original\"}}",
+          "result": {
+            "proposal": {
+              "amount_cents": 500,
+              "arguments": {
+                "item_id": "item_20407",
+                "new_item_id": "item_20419",
+                "order_id": "ORD-20400",
+                "payment_method": "original"
+              },
+              "fingerprint": "348e4aa0f79ca7c0a6c09a53127bed677040694d0e74ed1314014a8a710db542",
+              "id": "6dc9215c3b5e7642d049ebf072b424d4",
+              "item_id": "item_20407",
+              "kind": "exchange",
+              "new_item_id": "item_20419",
+              "order_id": "ORD-20400",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "exchange requested"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 917,
+            "json_schema_constrained": true,
+            "latency_ms": 5506.2,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 49,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        }
+      },
+      {
+        "id": 7,
+        "kind": "operation_committed",
+        "created": 1793061403.113203,
+        "detail": {
+          "email_sent": false,
+          "money_moved": false,
+          "operation": {
+            "amount_cents": 500,
+            "arguments": {
+              "item_id": "item_20407",
+              "new_item_id": "item_20419",
+              "order_id": "ORD-20400",
+              "payment_method": "original"
+            },
+            "fingerprint": "348e4aa0f79ca7c0a6c09a53127bed677040694d0e74ed1314014a8a710db542",
+            "item_id": "item_20407",
+            "kind": "exchange",
+            "new_item_id": "item_20419",
+            "order_id": "ORD-20400",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "order_id": "ORD-20400",
+          "order_status": "exchange requested",
+          "proposal_id": "6dc9215c3b5e7642d049ebf072b424d4",
+          "simulated": true,
+          "status": "committed"
+        }
+      }
+    ]
+  },
+  "real_money_moved": false,
+  "real_email_sent": false,
+  "cloud_model_requests": 0,
+  "mlx_experimental_cancel": {
+    "case_id": "valid-cancel-00",
+    "status": "awaiting_customer",
+    "model_calls": 4,
+    "adapter_sha256": "cc2b0de9dcafb802e8a4b852a1aa82875c37f7f0608fa77baa92816c68b3f29b",
+    "order_unchanged_after_decline": true,
+    "browser_refresh_preserved_proposal_and_trace": true,
+    "trace": [
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper20000@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20000"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "adapter_sha256": "cc2b0de9dcafb802e8a4b852a1aa82875c37f7f0608fa77baa92816c68b3f29b",
+          "finish_reason": "stop",
+          "input_tokens": 533,
+          "latency_ms": 1768.23,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "finetuned"
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-20000"
+          },
+          "tool": "get_order"
+        },
+        "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-20000\"}}",
+        "result": {
+          "id": "ORD-20000",
+          "items": [
+            {
+              "item_id": "item_20007",
+              "option": "black / M",
+              "price_cents": 3200,
+              "product_id": "p_20031"
+            }
+          ],
+          "original_payment": "card_20000",
+          "revision": 0,
+          "status": "pending",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "adapter_sha256": "cc2b0de9dcafb802e8a4b852a1aa82875c37f7f0608fa77baa92816c68b3f29b",
+          "finish_reason": "stop",
+          "input_tokens": 602,
+          "latency_ms": 892.41,
+          "output_tokens": 20,
+          "provider": "mlx",
+          "variant": "finetuned"
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "field": "reason",
+            "message": "Please provide your reason."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"reason\",\"message\":\"Please provide your reason.\"}}",
+        "result": {
+          "field": "reason",
+          "question": "Please provide your reason."
+        },
+        "timing": {
+          "adapter_sha256": "cc2b0de9dcafb802e8a4b852a1aa82875c37f7f0608fa77baa92816c68b3f29b",
+          "finish_reason": "stop",
+          "input_tokens": 705,
+          "latency_ms": 1245.17,
+          "output_tokens": 21,
+          "provider": "mlx",
+          "variant": "finetuned"
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-20000",
+            "reason": "no longer needed"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-20000\",\"reason\":\"no longer needed\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 3200,
+            "arguments": {
+              "order_id": "ORD-20000",
+              "reason": "no longer needed"
+            },
+            "fingerprint": "c3143db1a3b3a65a9e54bf8e1a77312140f6d082a95393f9000da4078c8dbee9",
+            "id": "a23e7ab13b4fa3d8530bdf213f5b067c",
+            "kind": "cancel",
+            "order_id": "ORD-20000",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "adapter_sha256": "cc2b0de9dcafb802e8a4b852a1aa82875c37f7f0608fa77baa92816c68b3f29b",
+          "finish_reason": "stop",
+          "input_tokens": 751,
+          "latency_ms": 1210.77,
+          "output_tokens": 27,
+          "provider": "mlx",
+          "variant": "finetuned"
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 9,
+        "kind": "session_created",
+        "created": 1793062388.2853,
+        "detail": {
+          "case_id": "valid-cancel-00"
+        }
+      },
+      {
+        "id": 10,
+        "kind": "model_tool",
+        "created": 1793062390.0725162,
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper20000@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8000,
+              "id": "gift_20000"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_20000"
+          },
+          "timing": {
+            "adapter_sha256": "cc2b0de9dcafb802e8a4b852a1aa82875c37f7f0608fa77baa92816c68b3f29b",
+            "finish_reason": "stop",
+            "input_tokens": 533,
+            "latency_ms": 1768.23,
+            "output_tokens": 23,
+            "provider": "mlx",
+            "variant": "finetuned"
+          }
+        }
+      },
+      {
+        "id": 11,
+        "kind": "model_tool",
+        "created": 1793062390.976872,
+        "detail": {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-20000"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-20000\"}}",
+          "result": {
+            "id": "ORD-20000",
+            "items": [
+              {
+                "item_id": "item_20007",
+                "option": "black / M",
+                "price_cents": 3200,
+                "product_id": "p_20031"
+              }
+            ],
+            "original_payment": "card_20000",
+            "revision": 0,
+            "status": "pending",
+            "user_id": "u_20000"
+          },
+          "timing": {
+            "adapter_sha256": "cc2b0de9dcafb802e8a4b852a1aa82875c37f7f0608fa77baa92816c68b3f29b",
+            "finish_reason": "stop",
+            "input_tokens": 602,
+            "latency_ms": 892.41,
+            "output_tokens": 20,
+            "provider": "mlx",
+            "variant": "finetuned"
+          }
+        }
+      },
+      {
+        "id": 12,
+        "kind": "model_tool",
+        "created": 1793062392.22716,
+        "detail": {
+          "action": {
+            "arguments": {
+              "field": "reason",
+              "message": "Please provide your reason."
+            },
+            "tool": "ask_customer"
+          },
+          "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"reason\",\"message\":\"Please provide your reason.\"}}",
+          "result": {
+            "field": "reason",
+            "question": "Please provide your reason."
+          },
+          "timing": {
+            "adapter_sha256": "cc2b0de9dcafb802e8a4b852a1aa82875c37f7f0608fa77baa92816c68b3f29b",
+            "finish_reason": "stop",
+            "input_tokens": 705,
+            "latency_ms": 1245.17,
+            "output_tokens": 21,
+            "provider": "mlx",
+            "variant": "finetuned"
+          }
+        }
+      },
+      {
+        "id": 13,
+        "kind": "customer_message",
+        "created": 1793062416.0999749,
+        "detail": {
+          "content": "no longer needed"
+        }
+      },
+      {
+        "id": 14,
+        "kind": "model_tool",
+        "created": 1793062417.3179479,
+        "detail": {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-20000",
+              "reason": "no longer needed"
+            },
+            "tool": "propose_cancel"
+          },
+          "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-20000\",\"reason\":\"no longer needed\"}}",
+          "result": {
+            "proposal": {
+              "amount_cents": 3200,
+              "arguments": {
+                "order_id": "ORD-20000",
+                "reason": "no longer needed"
+              },
+              "fingerprint": "c3143db1a3b3a65a9e54bf8e1a77312140f6d082a95393f9000da4078c8dbee9",
+              "id": "a23e7ab13b4fa3d8530bdf213f5b067c",
+              "kind": "cancel",
+              "order_id": "ORD-20000",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "cancelled"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "adapter_sha256": "cc2b0de9dcafb802e8a4b852a1aa82875c37f7f0608fa77baa92816c68b3f29b",
+            "finish_reason": "stop",
+            "input_tokens": 751,
+            "latency_ms": 1210.77,
+            "output_tokens": 27,
+            "provider": "mlx",
+            "variant": "finetuned"
+          }
+        }
+      },
+      {
+        "id": 15,
+        "kind": "confirmation_declined",
+        "created": 1793062484.682643,
+        "detail": {
+          "proposal_id": "a23e7ab13b4fa3d8530bdf213f5b067c"
+        }
+      }
+    ],
+    "note": "The adapter unnecessarily asked again for a reason already in the request; this is retained as a pilot limitation."
+  },
+  "mlx_service_repair": {
+    "initial_error": "MLX stream unavailable in a FastAPI sync worker thread.",
+    "fix": "Run serialized generation on the same main thread that loads the model.",
+    "inference_protocol_or_weights_changed": false
+  },
+  "ollama_custom_request": {
+    "scope": "Additional live validation smoke, excluded from paired held-out scores.",
+    "request": "Please cancel order ORD-20000 because I placed a duplicate order. My email is shopper20000@retail.example.",
+    "backend_status": "running",
+    "model_calls": 8,
+    "outcome": "Tool-call budget exhausted after repeated identity lookup. No operation was committed.",
+    "observations": [
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper2000:retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper2000:retail.example\"}}",
+        "result": {
+          "detail": "No matching demo customer",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 523,
+          "json_schema_constrained": true,
+          "latency_ms": 16488.05,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 22,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper20000@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20000"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 562,
+          "json_schema_constrained": true,
+          "latency_ms": 672.19,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 23,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper20000@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20000"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 632,
+          "json_schema_constrained": true,
+          "latency_ms": 632.33,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 23,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper20000@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20000"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 702,
+          "json_schema_constrained": true,
+          "latency_ms": 621.14,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 23,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper20000@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\n  \"tool\": \"identify_customer\",\n  \"arguments\": {\n    \"email\": \"shopper20000@retail.example\"\n  }\n}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20000"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 772,
+          "json_schema_constrained": true,
+          "latency_ms": 940.82,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 35,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper20000@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20000"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 842,
+          "json_schema_constrained": true,
+          "latency_ms": 635.76,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 23,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper20000@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20000"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 912,
+          "json_schema_constrained": true,
+          "latency_ms": 643.48,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 23,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper20000@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\n  \"tool\": \"identify_customer\",\n  \"arguments\": {\n    \"email\": \"shopper20000@retail.example\"\n  }\n}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20000"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 982,
+          "json_schema_constrained": true,
+          "latency_ms": 1038.1,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 35,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      }
+    ],
+    "events": [
+      {
+        "kind": "session_created",
+        "detail": {
+          "case_id": "valid-cancel-00"
+        },
+        "created": 1793062758.228735
+      },
+      {
+        "kind": "model_tool",
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper2000:retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper2000:retail.example\"}}",
+          "result": {
+            "detail": "No matching demo customer",
+            "error": "policy_or_argument_rejection"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 523,
+            "json_schema_constrained": true,
+            "latency_ms": 16488.05,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 22,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        },
+        "created": 1793062774.723388
+      },
+      {
+        "kind": "model_tool",
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper20000@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8000,
+              "id": "gift_20000"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_20000"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 562,
+            "json_schema_constrained": true,
+            "latency_ms": 672.19,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 23,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        },
+        "created": 1793062775.404245
+      },
+      {
+        "kind": "model_tool",
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper20000@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8000,
+              "id": "gift_20000"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_20000"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 632,
+            "json_schema_constrained": true,
+            "latency_ms": 632.33,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 23,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        },
+        "created": 1793062776.043179
+      },
+      {
+        "kind": "model_tool",
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper20000@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8000,
+              "id": "gift_20000"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_20000"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 702,
+            "json_schema_constrained": true,
+            "latency_ms": 621.14,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 23,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        },
+        "created": 1793062776.6709409
+      },
+      {
+        "kind": "model_tool",
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper20000@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\n  \"tool\": \"identify_customer\",\n  \"arguments\": {\n    \"email\": \"shopper20000@retail.example\"\n  }\n}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8000,
+              "id": "gift_20000"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_20000"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 772,
+            "json_schema_constrained": true,
+            "latency_ms": 940.82,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 35,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        },
+        "created": 1793062777.6179469
+      },
+      {
+        "kind": "model_tool",
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper20000@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8000,
+              "id": "gift_20000"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_20000"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 842,
+            "json_schema_constrained": true,
+            "latency_ms": 635.76,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 23,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        },
+        "created": 1793062778.2600892
+      },
+      {
+        "kind": "model_tool",
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper20000@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8000,
+              "id": "gift_20000"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_20000"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 912,
+            "json_schema_constrained": true,
+            "latency_ms": 643.48,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 23,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        },
+        "created": 1793062778.909971
+      },
+      {
+        "kind": "model_tool",
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "shopper20000@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\n  \"tool\": \"identify_customer\",\n  \"arguments\": {\n    \"email\": \"shopper20000@retail.example\"\n  }\n}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8000,
+              "id": "gift_20000"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_20000"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 982,
+            "json_schema_constrained": true,
+            "latency_ms": 1038.1,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 35,
+            "provider": "ollama",
+            "thinking_returned": false
+          }
+        },
+        "created": 1793062779.955085
+      }
+    ]
+  }
+}

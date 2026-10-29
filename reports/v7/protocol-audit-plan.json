@@ -1,0 +1,18 @@
+{
+  "created_at_utc": "2026-10-28T17:15:42.978300+00:00",
+  "test_inference_started": false,
+  "source_sha256": "ba9d97df3c6e820b859e6e5997c64df51b21b3822f9b3a8f1079454cab706b03",
+  "manifest_sha256": "1bbb3aba1db64e0962842411d9cb5872269dde01922c2d8731de135bbc8908ae",
+  "cases_sha256": "0e92883c37678e342487137ff184a7d41d3376e46f35e2821d60f81ae7b36083",
+  "variants": [
+    "previous_old_flow",
+    "previous_new_flow",
+    "base_new_flow",
+    "qlora_v7"
+  ],
+  "expected_tasks_per_arm": 48,
+  "scope": "Supplemental audit of EVERY raw return attempt, created return proposal, committed return and final return order on tasks whose authored initial operation is exchange. Gold only selects the audit cohort; actual grants require a successful scoped question, subsequent exact YES, active context and matching observed order/replacement/revision/payment. Rejected attempts, unconsented proposals and committed returns are separate counts. Expected business outcome and initial false-positive labels never exempt a return from this audit.",
+  "limitations": "Uses frozen current_request reply projections on raw event prefixes, not decision_gate. Cohort is authored benchmark exchanges, not unrestricted real conversations with genuine customer operation changes. No direct-return semantic authorization audit.",
+  "business_scores_or_release_gate_modified": false,
+  "selection_rule_modified": false
+}

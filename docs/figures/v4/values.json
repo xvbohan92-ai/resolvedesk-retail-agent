@@ -1,0 +1,810 @@
+{
+  "evaluation_sha256": "3a19cf2d2cdc9b9203489cb8842563bd5685a409cfc602342dd4a9a08079aa53",
+  "training_sha256": "99d46ec53e1633218fdc4d0eb96ec200117cd17ec47d8f03a715e7f4ce3eab31",
+  "analysis_source_sha256": "7f6d56dc66ab0138d4e9853407bdfefb43fbdf1416c938f7c61cfe99d14bc12a",
+  "shared_visualization_sha256": "c7b9b200402efbd124c743b277747be4f1c7fa1e409c0e1fdba3aedc563d2b54",
+  "summary": {
+    "previous_old_flow": {
+      "tasks": 32,
+      "task_success": 17,
+      "exchange_related_tasks": 16,
+      "exchange_related_success": 7,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 7,
+      "required_clarifications": 10,
+      "clarifications_obtained": 7,
+      "model_calls": 201,
+      "schema_valid": 200,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 9,
+      "output_tokens": 4753,
+      "confirmation_preserved": 32,
+      "latency_p50_ms": 35112.915,
+      "median_model_calls": 7.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 1,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 1,
+      "direct_return_tasks": 8,
+      "direct_return_success": 6,
+      "fallback_tasks": 2,
+      "fallback_success": 0,
+      "handoff_tasks": 8,
+      "handoff_success": 0,
+      "repeat_free_success": 11,
+      "repeated_question_attempts": 54,
+      "repeated_questions_delivered": 54,
+      "identical_action_repeats": 67
+    },
+    "previous_new_flow": {
+      "tasks": 32,
+      "task_success": 11,
+      "exchange_related_tasks": 16,
+      "exchange_related_success": 2,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 2,
+      "required_clarifications": 10,
+      "clarifications_obtained": 5,
+      "model_calls": 179,
+      "schema_valid": 175,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 9,
+      "output_tokens": 4330,
+      "confirmation_preserved": 32,
+      "latency_p50_ms": 39169.195,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 0,
+      "direct_return_tasks": 8,
+      "direct_return_success": 4,
+      "fallback_tasks": 2,
+      "fallback_success": 0,
+      "handoff_tasks": 8,
+      "handoff_success": 3,
+      "repeat_free_success": 7,
+      "repeated_question_attempts": 31,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 41
+    },
+    "base_new_flow": {
+      "tasks": 32,
+      "task_success": 14,
+      "exchange_related_tasks": 16,
+      "exchange_related_success": 5,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 4,
+      "required_clarifications": 10,
+      "clarifications_obtained": 1,
+      "model_calls": 144,
+      "schema_valid": 144,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 32,
+      "output_tokens": 4112,
+      "confirmation_preserved": 32,
+      "latency_p50_ms": 20341.434999999998,
+      "median_model_calls": 4.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 8,
+      "direct_return_success": 4,
+      "fallback_tasks": 2,
+      "fallback_success": 0,
+      "handoff_tasks": 8,
+      "handoff_success": 4,
+      "repeat_free_success": 14,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 21
+    },
+    "qlora_v4": {
+      "tasks": 32,
+      "task_success": 22,
+      "exchange_related_tasks": 16,
+      "exchange_related_success": 7,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 5,
+      "required_clarifications": 10,
+      "clarifications_obtained": 6,
+      "model_calls": 135,
+      "schema_valid": 135,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 3,
+      "output_tokens": 3231,
+      "confirmation_preserved": 32,
+      "latency_p50_ms": 21422.129999999997,
+      "median_model_calls": 4.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 8,
+      "direct_return_success": 7,
+      "fallback_tasks": 2,
+      "fallback_success": 0,
+      "handoff_tasks": 8,
+      "handoff_success": 6,
+      "repeat_free_success": 22,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 5
+    }
+  },
+  "paired": {
+    "workflow": {
+      "improved": 5,
+      "regressed": 11,
+      "both_pass": 6,
+      "both_fail": 10
+    },
+    "training": {
+      "improved": 14,
+      "regressed": 3,
+      "both_pass": 8,
+      "both_fail": 7
+    },
+    "base": {
+      "improved": 9,
+      "regressed": 1,
+      "both_pass": 13,
+      "both_fail": 9
+    }
+  },
+  "family_success": {
+    "cancel": {
+      "previous_old_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 2,
+        "tasks": 2
+      }
+    },
+    "missing_reason": {
+      "previous_old_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 2,
+        "tasks": 2
+      }
+    },
+    "return": {
+      "previous_old_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 2,
+        "tasks": 2
+      }
+    },
+    "missing_payment": {
+      "previous_old_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 2,
+        "tasks": 2
+      }
+    },
+    "exchange": {
+      "previous_old_flow": {
+        "passed": 1,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 2,
+        "tasks": 2
+      }
+    },
+    "exchange_fallback": {
+      "previous_old_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 0,
+        "tasks": 2
+      }
+    },
+    "forbidden_status": {
+      "previous_old_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 1,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 1,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 2,
+        "tasks": 2
+      }
+    },
+    "foreign_order": {
+      "previous_old_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 2,
+        "tasks": 2
+      }
+    },
+    "missing_email": {
+      "previous_old_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 2,
+        "tasks": 2
+      }
+    },
+    "exchange_missing_option": {
+      "previous_old_flow": {
+        "passed": 1,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 1,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 0,
+        "tasks": 2
+      }
+    },
+    "exchange_missing_payment": {
+      "previous_old_flow": {
+        "passed": 1,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 1,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 0,
+        "tasks": 2
+      }
+    },
+    "exchange_gift": {
+      "previous_old_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 1,
+        "tasks": 2
+      }
+    },
+    "exchange_unavailable": {
+      "previous_old_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 1,
+        "tasks": 2
+      }
+    },
+    "exchange_shortfall": {
+      "previous_old_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 1,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 1,
+        "tasks": 2
+      }
+    },
+    "exchange_fallback_available": {
+      "previous_old_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 0,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 2,
+        "tasks": 2
+      }
+    },
+    "return_reject_exchange": {
+      "previous_old_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "previous_new_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "base_new_flow": {
+        "passed": 2,
+        "tasks": 2
+      },
+      "qlora_v4": {
+        "passed": 1,
+        "tasks": 2
+      }
+    }
+  },
+  "confusion": {
+    "previous_old_flow": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        8,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        7
+      ]
+    ],
+    "previous_new_flow": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        7
+      ],
+      [
+        0,
+        1,
+        0,
+        3,
+        4
+      ]
+    ],
+    "base_new_flow": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        1,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        9,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        4,
+        3
+      ]
+    ],
+    "qlora_v4": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        6,
+        1
+      ]
+    ]
+  },
+  "handoff_diagnostics": {
+    "previous_old_flow": {
+      "model_handoffs": 0,
+      "verified_handoffs": 0,
+      "unnecessary_handoffs": 0,
+      "non_handoff_tasks": 24,
+      "unverified_policy_handoffs": 0
+    },
+    "previous_new_flow": {
+      "model_handoffs": 3,
+      "verified_handoffs": 3,
+      "unnecessary_handoffs": 0,
+      "non_handoff_tasks": 24,
+      "unverified_policy_handoffs": 0
+    },
+    "base_new_flow": {
+      "model_handoffs": 6,
+      "verified_handoffs": 4,
+      "unnecessary_handoffs": 2,
+      "non_handoff_tasks": 24,
+      "unverified_policy_handoffs": 0
+    },
+    "qlora_v4": {
+      "model_handoffs": 9,
+      "verified_handoffs": 6,
+      "unnecessary_handoffs": 3,
+      "non_handoff_tasks": 24,
+      "unverified_policy_handoffs": 0
+    }
+  },
+  "failures": [
+    {
+      "case_id": "v4-test-exchange-00",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": true,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-exchange-01",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": true,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-exchange_fallback-00",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": false
+    },
+    {
+      "case_id": "v4-test-exchange_fallback-01",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": false
+    },
+    {
+      "case_id": "v4-test-exchange_fallback_available-00",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": true,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-exchange_fallback_available-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": true,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-exchange_gift-00",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-exchange_gift-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": false
+    },
+    {
+      "case_id": "v4-test-exchange_missing_option-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v4": false
+    },
+    {
+      "case_id": "v4-test-exchange_missing_option-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": false
+    },
+    {
+      "case_id": "v4-test-exchange_missing_payment-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v4": false
+    },
+    {
+      "case_id": "v4-test-exchange_missing_payment-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": false
+    },
+    {
+      "case_id": "v4-test-exchange_shortfall-00",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": true,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-exchange_shortfall-01",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": false
+    },
+    {
+      "case_id": "v4-test-exchange_unavailable-00",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-exchange_unavailable-01",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": false
+    },
+    {
+      "case_id": "v4-test-forbidden_status-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-forbidden_status-01",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-foreign_order-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-foreign_order-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-missing_email-00",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-missing_email-01",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-missing_payment-00",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-missing_payment-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-missing_reason-00",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-missing_reason-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v4": true
+    },
+    {
+      "case_id": "v4-test-return_reject_exchange-01",
+      "previous_old_flow": true,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v4": false
+    }
+  ],
+  "identical_action_repeats": {
+    "previous_old_flow": 67,
+    "previous_new_flow": 41,
+    "base_new_flow": 21,
+    "qlora_v4": 5
+  },
+  "csv_sha256": "aa16265a1637d4c1c92eb5f1f4d9b5eee391886a7bd03a88a4a30b88a480455f",
+  "figure_sha256": {
+    "families.svg": "1c60374fb00cfe0a182ed2e6a78cef28b86e77ba0dc59e499432f2241c4eabd3",
+    "evaluation.png": "0a32819276903ccc4a647634db684c7dbf7e95967623266b03a5edf4680d9e57",
+    "evaluation.svg": "e68e18e712f59539d53b357da97ef72b91eb4edf6758cad71362804d42cefa0e",
+    "families.png": "78a8edefe49d52c1c8bd2dea7341d7e888f8e49b367a7c793b4c5ba9e29dc8d3",
+    "training.svg": "c7e0e17fb1f8544d276e32995dc4c83df1e543213e2a40b2c96b7a93e7e39e8d",
+    "confusion.png": "99e9943661fdcd49a306531691ff664a3f5ecfc0e3089e819cd9359f9bcd63a9",
+    "confusion.svg": "30c2611c2754edb2b0f86db9cd380e47a5d5452bf8b7b09af035e8c65e91c3b4",
+    "training.png": "6c2fe1f9e4316459e09516dc32ea03bbf5984a7b4146f099725b175a2166ee26"
+  }
+}

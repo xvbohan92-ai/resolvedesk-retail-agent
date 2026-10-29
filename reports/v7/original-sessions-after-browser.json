@@ -1,0 +1,18 @@
+{
+  "scope": "Read-only database session canonical hashes after final new V7 browser NO probe; same Store.get projection as earlier HTTP snapshot",
+  "all_unchanged": true,
+  "sessions": [
+    {
+      "session_id": "d96e5e64bc595fb3dcb961b3",
+      "session_sha256": "86809e287263c53daa19f4112240880107a5a523a428f91b2e68b247b8536042",
+      "status": "awaiting_confirmation",
+      "unchanged": true
+    },
+    {
+      "session_id": "af1240895e611b4f40a8c030",
+      "session_sha256": "ac8ca059f6d26f05c64360966842a76e3e984801d5e0dcb19dedbce5d61a8637",
+      "status": "awaiting_confirmation",
+      "unchanged": true
+    }
+  ]
+}

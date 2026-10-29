@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-28T21:00:17.642387+00:00",
+  "python": "3.12.13",
+  "system": "Linux-6.6.159+-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "peft": "0.19.1",
+    "transformers": "5.21.0",
+    "accelerate": "1.14.0",
+    "numpy": "2.5.4",
+    "safetensors": "0.8.0",
+    "pydantic": "2.13.4",
+    "fastapi": "0.139.0",
+    "tokenizers": "0.23.3"
+  },
+  "scope": "Existing Colab environment recorded before any actual test generation"
+}

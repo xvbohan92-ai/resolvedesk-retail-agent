@@ -1,0 +1,13 @@
+{
+  "original_sft_manifest_sha256": "251d5e3c82f2de3cfc759eed9c3a6e3a04c0245807df84090c8c1de23853b52f",
+  "files": {
+    "training/v4/preference.py": "d9872e9d26b4025714d95b8c39bea58c8ccc9c347f0c148f8cd6f95e0bcb1125",
+    "training/v4/preference-protocol.json": "b55d2ba7e2ff78de562742da9f233a51cef878d3fd5f541084fc8d74dafdebdd",
+    "training/v4/datasets/preference.jsonl": "982a9f07c13e700e8a26f8b5c4f421c628258acc45e4c85ee7b0ea84a6fa0709",
+    "training/v4/preference_select.py": "5c7532baa95a9a54196d79850e16721c3a42083746cfa34bff8d3cae3f70f0a0"
+  },
+  "sft_480_sha256": "bb3aa1e1cc85d6d1c1223746852f41df206984ec3e9b47011241226649ecc89c",
+  "original_frozen_inputs": 31,
+  "test_inference_started_at_freeze": false,
+  "pair_count": 124
+}

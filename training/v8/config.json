@@ -1,0 +1,34 @@
+{
+  "model": "data/models/qwen3-4b-mlx",
+  "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+  "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+  "data": "training/v8/datasets",
+  "seed": 202610288,
+  "iters": 1344,
+  "batch_size": 1,
+  "learning_rate": 2e-06,
+  "num_layers": 8,
+  "lora_parameters": {
+    "rank": 8,
+    "dropout": 0.0,
+    "scale": 16.0
+  },
+  "max_seq_length": 3200,
+  "projection_window": 192,
+  "permission_slot_loss_weight": 8.0,
+  "reason_slot_loss_weight": 4.0,
+  "initialization": "reports/cuda-torch/probe-003/train-1344/adapter",
+  "initialization_sha256": "33fe5c505ddf08cd8cb4032dbd9d350fa205134417ec0f1f90648f4af658e053",
+  "legacy_loader_initialization": "data/finetuning/retail-qlora-v6_1/best",
+  "legacy_loader_initializer_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+  "generation_max_tokens": 512,
+  "max_total_calls_per_task": 12,
+  "checkpoint_selection": "Fixed final1344 only. No alternative checkpoint; no test-based selection or extra training.",
+  "evaluation_arms": [
+    "prior_weights_old_flow",
+    "prior_weights_new_flow",
+    "v8_weights_new_flow"
+  ],
+  "sampling_policy": "Alternating shuffled intent/repair and tool/reply pools. Actual unique row/case coverage is reported.",
+  "cloud_resource_authorization": "New explicit approval required; prior10-CU run002 allowance is not reused."
+}

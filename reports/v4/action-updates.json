@@ -1,0 +1,1421 @@
+{
+  "protocol": {
+    "method": "Action-name-span preference plus mean chosen-completion NLL",
+    "reference": "https://arxiv.org/html/2405.14734v2",
+    "formula": "softplus(-(beta * (action_logp_chosen - action_logp_rejected) - margin)) - sft_weight * completion_logp_chosen",
+    "beta": 2.0,
+    "margin": 0.5,
+    "sft_weight": 1.0,
+    "learning_rate": 3e-06,
+    "seed": 2026102742,
+    "updates": 136,
+    "batch_size": 1,
+    "initialization": "data/finetuning/retail-qlora-v4/run/candidates/480",
+    "output": "data/finetuning/retail-qlora-v4/action-preference",
+    "best_path": "data/finetuning/retail-qlora-v4/best-action",
+    "projection_window": 256,
+    "selection": "Fixed 136-update final checkpoint; complete business validation is diagnostic.",
+    "revision_reason": "Unregularized sequence preference regressed on validation. Contrast exact action-name tokens to remove negative-reason wording shortcuts; anchor all chosen completion tokens with NLL. Restart from SFT480, never the failed preference adapter. No new test inference before revision.",
+    "training_pairs": {
+      "avoid_unnecessary_handoff": 48,
+      "ask_missing_information": 20,
+      "continue_after_answer": 20,
+      "preserve_exchange_intent": 20,
+      "preserve_policy_handoff": 16,
+      "preserve_genuine_return": 12
+    },
+    "scope": "Original 124 train-only pairs plus 12 genuine-return contrasts from original training worlds. Preference uses exact action-name token masks; NLL covers every chosen completion/end-of-turn token. Prompt and padding masked. Tail projection omits only zero-loss positions, audited without truncating context or targets."
+  },
+  "manifest": {
+    "original_sft_manifest_sha256": "251d5e3c82f2de3cfc759eed9c3a6e3a04c0245807df84090c8c1de23853b52f",
+    "original_preference_manifest_sha256": "c4709fbd4850fcdd1cc57fc89aaaf0f4e71c21328c397096aa8ad1455825dfcc",
+    "failed_validation_sha256": "2b79184c70809e9d07fb65f5f196ec6eda25ab80ddc66abfdd3dae5b5c31f1d8",
+    "files": {
+      "training/v4/action_preference.py": "b0ea48ccde59709cd777ed089d4864027e6dfed37fbb5f9171b182c53a49269c",
+      "training/v4/action-preference-protocol.json": "d87bfc086dcaee805bf2a0cbe0506567c2942c23e84573c0aa269fe643c40dea",
+      "training/v4/datasets/action-preference.jsonl": "25d5a9c1caf4448c1a0862d45de1b64fc4d58d51f8ed2540ebd5f4c129405523",
+      "training/v4/action_select.py": "bc52db69590528285ce284f4850c852698ad486a5ab4bff0c675a9205f6e5a7e"
+    },
+    "sft_480_sha256": "bb3aa1e1cc85d6d1c1223746852f41df206984ec3e9b47011241226649ecc89c",
+    "test_inference_started_at_freeze": false,
+    "pair_count": 136
+  },
+  "metrics": [
+    {
+      "iteration": 1,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.1913162469863892,
+      "chosen_action_logp": -0.3647461235523224,
+      "rejected_action_logp": -0.21679693460464478,
+      "chosen_completion_nll": 0.023043707013130188,
+      "pre_update_mean_logp_gap": -0.1479491889476776,
+      "elapsed_seconds": 24.191
+    },
+    {
+      "iteration": 2,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.1187870502471924,
+      "chosen_action_logp": -0.3376058340072632,
+      "rejected_action_logp": -0.2421875,
+      "chosen_completion_nll": 0.02171451225876808,
+      "pre_update_mean_logp_gap": -0.09541833400726318,
+      "elapsed_seconds": 39.333
+    },
+    {
+      "iteration": 3,
+      "category": "ask_missing_information",
+      "loss": 0.11077374219894409,
+      "chosen_action_logp": -0.9219093322753906,
+      "rejected_action_logp": -2.859375,
+      "chosen_completion_nll": 0.07712576538324356,
+      "pre_update_mean_logp_gap": 1.9374656677246094,
+      "elapsed_seconds": 48.687
+    },
+    {
+      "iteration": 4,
+      "category": "continue_after_answer",
+      "loss": 0.006515633314847946,
+      "chosen_action_logp": -0.045329730957746506,
+      "rejected_action_logp": -3.5000200271606445,
+      "chosen_completion_nll": 0.004870942793786526,
+      "pre_update_mean_logp_gap": 3.454690296202898,
+      "elapsed_seconds": 60.186
+    },
+    {
+      "iteration": 5,
+      "category": "ask_missing_information",
+      "loss": 0.6045369505882263,
+      "chosen_action_logp": -0.8476859331130981,
+      "rejected_action_logp": -1.28125,
+      "chosen_completion_nll": 0.07819975167512894,
+      "pre_update_mean_logp_gap": 0.43356406688690186,
+      "elapsed_seconds": 70.741
+    },
+    {
+      "iteration": 6,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.04428949952125549,
+      "chosen_action_logp": -0.1797255277633667,
+      "rejected_action_logp": -2.203125,
+      "chosen_completion_nll": 0.015880146995186806,
+      "pre_update_mean_logp_gap": 2.0233994722366333,
+      "elapsed_seconds": 81.567
+    },
+    {
+      "iteration": 7,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.4583371579647064,
+      "chosen_action_logp": -0.115966796875,
+      "rejected_action_logp": -0.66015625,
+      "chosen_completion_nll": 0.0167158804833889,
+      "pre_update_mean_logp_gap": 0.544189453125,
+      "elapsed_seconds": 95.753
+    },
+    {
+      "iteration": 8,
+      "category": "continue_after_answer",
+      "loss": 0.00395836541429162,
+      "chosen_action_logp": -0.05090336129069328,
+      "rejected_action_logp": -3.9375743865966797,
+      "chosen_completion_nll": 0.003264816477894783,
+      "pre_update_mean_logp_gap": 3.8866710253059864,
+      "elapsed_seconds": 114.206
+    },
+    {
+      "iteration": 9,
+      "category": "preserve_policy_handoff",
+      "loss": 0.08441492915153503,
+      "chosen_action_logp": -0.498046875,
+      "rejected_action_logp": -2.3125503063201904,
+      "chosen_completion_nll": 0.041584163904190063,
+      "pre_update_mean_logp_gap": 1.8145034313201904,
+      "elapsed_seconds": 137.469
+    },
+    {
+      "iteration": 10,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.3844046890735626,
+      "chosen_action_logp": -0.1197916641831398,
+      "rejected_action_logp": -0.76171875,
+      "chosen_completion_nll": 0.008270473219454288,
+      "pre_update_mean_logp_gap": 0.6419270858168602,
+      "elapsed_seconds": 155.848
+    },
+    {
+      "iteration": 11,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.16017179191112518,
+      "chosen_action_logp": -0.0421346016228199,
+      "rejected_action_logp": -1.1796875,
+      "chosen_completion_nll": 0.0036249675322324038,
+      "pre_update_mean_logp_gap": 1.13755289837718,
+      "elapsed_seconds": 168.676
+    },
+    {
+      "iteration": 12,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.1421106606721878,
+      "chosen_action_logp": -0.0414225272834301,
+      "rejected_action_logp": -1.2421875,
+      "chosen_completion_nll": 0.002922837156802416,
+      "pre_update_mean_logp_gap": 1.20076497271657,
+      "elapsed_seconds": 180.297
+    },
+    {
+      "iteration": 13,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0034007644280791283,
+      "chosen_action_logp": -0.00994094181805849,
+      "rejected_action_logp": -3.265625,
+      "chosen_completion_nll": 0.0009530299575999379,
+      "pre_update_mean_logp_gap": 3.2556840581819415,
+      "elapsed_seconds": 191.602
+    },
+    {
+      "iteration": 14,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.48028838634490967,
+      "chosen_action_logp": -0.7770182490348816,
+      "rejected_action_logp": -1.359375,
+      "chosen_completion_nll": 0.06525526940822601,
+      "pre_update_mean_logp_gap": 0.5823567509651184,
+      "elapsed_seconds": 205.998
+    },
+    {
+      "iteration": 15,
+      "category": "preserve_exchange_intent",
+      "loss": 0.18867450952529907,
+      "chosen_action_logp": -0.0327962227165699,
+      "rejected_action_logp": -1.0752767324447632,
+      "chosen_completion_nll": 0.0022316251415759325,
+      "pre_update_mean_logp_gap": 1.0424805097281933,
+      "elapsed_seconds": 219.011
+    },
+    {
+      "iteration": 16,
+      "category": "preserve_genuine_return",
+      "loss": 0.04250624030828476,
+      "chosen_action_logp": -0.013214111328125,
+      "rejected_action_logp": -1.8450521230697632,
+      "chosen_completion_nll": 0.0011051410110667348,
+      "pre_update_mean_logp_gap": 1.8318380117416382,
+      "elapsed_seconds": 235.726
+    },
+    {
+      "iteration": 17,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.016726985573768616,
+      "chosen_action_logp": -0.0118408203125,
+      "rejected_action_logp": -2.328125,
+      "chosen_completion_nll": 0.0008126600878313184,
+      "pre_update_mean_logp_gap": 2.3162841796875,
+      "elapsed_seconds": 258.393
+    },
+    {
+      "iteration": 18,
+      "category": "ask_missing_information",
+      "loss": 0.0843520537018776,
+      "chosen_action_logp": -0.8515766263008118,
+      "rejected_action_logp": -3.703125,
+      "chosen_completion_nll": 0.07886761426925659,
+      "pre_update_mean_logp_gap": 2.8515483736991882,
+      "elapsed_seconds": 276.683
+    },
+    {
+      "iteration": 19,
+      "category": "continue_after_answer",
+      "loss": 0.011759743094444275,
+      "chosen_action_logp": -0.02588685415685177,
+      "rejected_action_logp": -2.593759536743164,
+      "chosen_completion_nll": 0.0021076009143143892,
+      "pre_update_mean_logp_gap": 2.5678726825863123,
+      "elapsed_seconds": 287.799
+    },
+    {
+      "iteration": 20,
+      "category": "preserve_exchange_intent",
+      "loss": 0.08686760067939758,
+      "chosen_action_logp": -0.009501139633357525,
+      "rejected_action_logp": -1.46343994140625,
+      "chosen_completion_nll": 0.0006842890288680792,
+      "pre_update_mean_logp_gap": 1.4539388017728925,
+      "elapsed_seconds": 299.811
+    },
+    {
+      "iteration": 21,
+      "category": "preserve_exchange_intent",
+      "loss": 0.21818305552005768,
+      "chosen_action_logp": -0.02555338479578495,
+      "rejected_action_logp": -0.9860026240348816,
+      "chosen_completion_nll": 0.0018652280559763312,
+      "pre_update_mean_logp_gap": 0.9604492392390966,
+      "elapsed_seconds": 313.247
+    },
+    {
+      "iteration": 22,
+      "category": "preserve_exchange_intent",
+      "loss": 0.07847367227077484,
+      "chosen_action_logp": -0.0050557455979287624,
+      "rejected_action_logp": -1.5432840585708618,
+      "chosen_completion_nll": 0.005183269269764423,
+      "pre_update_mean_logp_gap": 1.538228312972933,
+      "elapsed_seconds": 325.056
+    },
+    {
+      "iteration": 23,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0042791967280209064,
+      "chosen_action_logp": -0.03143863007426262,
+      "rejected_action_logp": -3.953125,
+      "chosen_completion_nll": 0.003632540814578533,
+      "pre_update_mean_logp_gap": 3.9216863699257374,
+      "elapsed_seconds": 334.221
+    },
+    {
+      "iteration": 24,
+      "category": "continue_after_answer",
+      "loss": 0.002772584557533264,
+      "chosen_action_logp": -0.00330130266956985,
+      "rejected_action_logp": -3.2500078678131104,
+      "chosen_completion_nll": 0.00028055906295776367,
+      "pre_update_mean_logp_gap": 3.2467065651435405,
+      "elapsed_seconds": 347.848
+    },
+    {
+      "iteration": 25,
+      "category": "preserve_exchange_intent",
+      "loss": 0.025346657261252403,
+      "chosen_action_logp": -0.0010528564453125,
+      "rejected_action_logp": -2.083684206008911,
+      "chosen_completion_nll": 7.133930921554565e-05,
+      "pre_update_mean_logp_gap": 2.0826313495635986,
+      "elapsed_seconds": 368.919
+    },
+    {
+      "iteration": 26,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.000840530323330313,
+      "chosen_action_logp": -0.009649991989135742,
+      "rejected_action_logp": -5.5,
+      "chosen_completion_nll": 0.0008124576415866613,
+      "pre_update_mean_logp_gap": 5.490350008010864,
+      "elapsed_seconds": 389.497
+    },
+    {
+      "iteration": 27,
+      "category": "preserve_policy_handoff",
+      "loss": 0.03510391712188721,
+      "chosen_action_logp": -0.011474609375,
+      "rejected_action_logp": -1.9453175067901611,
+      "chosen_completion_nll": 0.0012153625721111894,
+      "pre_update_mean_logp_gap": 1.9338428974151611,
+      "elapsed_seconds": 399.495
+    },
+    {
+      "iteration": 28,
+      "category": "continue_after_answer",
+      "loss": 0.000993237947113812,
+      "chosen_action_logp": -0.00173187255859375,
+      "rejected_action_logp": -3.8125040531158447,
+      "chosen_completion_nll": 0.00018604511569719762,
+      "pre_update_mean_logp_gap": 3.810772180557251,
+      "elapsed_seconds": 412.611
+    },
+    {
+      "iteration": 29,
+      "category": "ask_missing_information",
+      "loss": 0.0016998311039060354,
+      "chosen_action_logp": -0.015445053577423096,
+      "rejected_action_logp": -6.96875,
+      "chosen_completion_nll": 0.001698325970210135,
+      "pre_update_mean_logp_gap": 6.953304946422577,
+      "elapsed_seconds": 422.313
+    },
+    {
+      "iteration": 30,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0004681280115619302,
+      "chosen_action_logp": -0.00102996826171875,
+      "rejected_action_logp": -4.3125,
+      "chosen_completion_nll": 0.00017151680367533118,
+      "pre_update_mean_logp_gap": 4.311470031738281,
+      "elapsed_seconds": 435.781
+    },
+    {
+      "iteration": 31,
+      "category": "preserve_genuine_return",
+      "loss": 0.0034707924351096153,
+      "chosen_action_logp": -0.0035174686927348375,
+      "rejected_action_logp": -3.1284587383270264,
+      "chosen_completion_nll": 0.00029269332299008965,
+      "pre_update_mean_logp_gap": 3.1249412696342915,
+      "elapsed_seconds": 445.763
+    },
+    {
+      "iteration": 32,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.00022462420747615397,
+      "chosen_action_logp": -0.00045140585280023515,
+      "rejected_action_logp": -4.625,
+      "chosen_completion_nll": 6.603221845580265e-05,
+      "pre_update_mean_logp_gap": 4.6245485941472,
+      "elapsed_seconds": 466.847
+    },
+    {
+      "iteration": 33,
+      "category": "ask_missing_information",
+      "loss": 0.18933846056461334,
+      "chosen_action_logp": -0.8007859587669373,
+      "rejected_action_logp": -7.5,
+      "chosen_completion_nll": 0.18933595716953278,
+      "pre_update_mean_logp_gap": 6.699214041233063,
+      "elapsed_seconds": 483.116
+    },
+    {
+      "iteration": 34,
+      "category": "continue_after_answer",
+      "loss": 0.01622350700199604,
+      "chosen_action_logp": -0.005659937858581543,
+      "rejected_action_logp": -2.328127861022949,
+      "chosen_completion_nll": 0.000503259536344558,
+      "pre_update_mean_logp_gap": 2.3224679231643677,
+      "elapsed_seconds": 499.703
+    },
+    {
+      "iteration": 35,
+      "category": "preserve_genuine_return",
+      "loss": 0.011110239662230015,
+      "chosen_action_logp": -0.000652313232421875,
+      "rejected_action_logp": -2.50042986869812,
+      "chosen_completion_nll": 5.7604578614700586e-05,
+      "pre_update_mean_logp_gap": 2.4997775554656982,
+      "elapsed_seconds": 512.313
+    },
+    {
+      "iteration": 36,
+      "category": "ask_missing_information",
+      "loss": 0.07368502765893936,
+      "chosen_action_logp": -0.8515652418136597,
+      "rejected_action_logp": -7.65625,
+      "chosen_completion_nll": 0.073683001101017,
+      "pre_update_mean_logp_gap": 6.80468475818634,
+      "elapsed_seconds": 522.349
+    },
+    {
+      "iteration": 37,
+      "category": "ask_missing_information",
+      "loss": 0.0013419421156868339,
+      "chosen_action_logp": -0.011721372604370117,
+      "rejected_action_logp": -7.28125,
+      "chosen_completion_nll": 0.0013411424588412046,
+      "pre_update_mean_logp_gap": 7.26952862739563,
+      "elapsed_seconds": 530.453
+    },
+    {
+      "iteration": 38,
+      "category": "preserve_policy_handoff",
+      "loss": 1.1920623779296875,
+      "chosen_action_logp": -0.578125,
+      "rejected_action_logp": -0.45508211851119995,
+      "chosen_completion_nll": 0.05784820392727852,
+      "pre_update_mean_logp_gap": -0.12304288148880005,
+      "elapsed_seconds": 540.982
+    },
+    {
+      "iteration": 39,
+      "category": "preserve_policy_handoff",
+      "loss": 2.5712404251098633,
+      "chosen_action_logp": -4.0,
+      "rejected_action_logp": -3.1875038146972656,
+      "chosen_completion_nll": 0.33342495560646057,
+      "pre_update_mean_logp_gap": -0.8124961853027344,
+      "elapsed_seconds": 553.418
+    },
+    {
+      "iteration": 40,
+      "category": "preserve_policy_handoff",
+      "loss": 2.0964736938476562,
+      "chosen_action_logp": -3.5,
+      "rejected_action_logp": -2.9375057220458984,
+      "chosen_completion_nll": 0.2917385399341583,
+      "pre_update_mean_logp_gap": -0.5624942779541016,
+      "elapsed_seconds": 565.751
+    },
+    {
+      "iteration": 41,
+      "category": "ask_missing_information",
+      "loss": 0.08998354524374008,
+      "chosen_action_logp": -0.9023475050926208,
+      "rejected_action_logp": -7.09375,
+      "chosen_completion_nll": 0.08997663855552673,
+      "pre_update_mean_logp_gap": 6.191402494907379,
+      "elapsed_seconds": 582.978
+    },
+    {
+      "iteration": 42,
+      "category": "preserve_policy_handoff",
+      "loss": 0.007913144305348396,
+      "chosen_action_logp": -0.00250244140625,
+      "rejected_action_logp": -2.687504291534424,
+      "chosen_completion_nll": 0.00026909710140898824,
+      "pre_update_mean_logp_gap": 2.685001850128174,
+      "elapsed_seconds": 599.119
+    },
+    {
+      "iteration": 43,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.005695931613445282,
+      "chosen_action_logp": -0.004604339599609375,
+      "rejected_action_logp": -2.875,
+      "chosen_completion_nll": 0.0004138420626986772,
+      "pre_update_mean_logp_gap": 2.8703956604003906,
+      "elapsed_seconds": 616.483
+    },
+    {
+      "iteration": 44,
+      "category": "continue_after_answer",
+      "loss": 0.00021655469026882201,
+      "chosen_action_logp": -0.0008164644241333008,
+      "rejected_action_logp": -4.687505722045898,
+      "chosen_completion_nll": 7.649594044778496e-05,
+      "pre_update_mean_logp_gap": 4.686689257621765,
+      "elapsed_seconds": 626.549
+    },
+    {
+      "iteration": 45,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0010030019329860806,
+      "chosen_action_logp": -0.0041228532791137695,
+      "rejected_action_logp": -4.0,
+      "chosen_completion_nll": 0.00044549364247359335,
+      "pre_update_mean_logp_gap": 3.9958771467208862,
+      "elapsed_seconds": 636.133
+    },
+    {
+      "iteration": 46,
+      "category": "ask_missing_information",
+      "loss": 0.10698067396879196,
+      "chosen_action_logp": -1.179692029953003,
+      "rejected_action_logp": -6.1875,
+      "chosen_completion_nll": 0.10690698772668839,
+      "pre_update_mean_logp_gap": 5.007807970046997,
+      "elapsed_seconds": 646.207
+    },
+    {
+      "iteration": 47,
+      "category": "ask_missing_information",
+      "loss": 0.07838427275419235,
+      "chosen_action_logp": -0.9296926856040955,
+      "rejected_action_logp": -4.75,
+      "chosen_completion_nll": 0.07759232074022293,
+      "pre_update_mean_logp_gap": 3.8203073143959045,
+      "elapsed_seconds": 658.769
+    },
+    {
+      "iteration": 48,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.008992775343358517,
+      "chosen_action_logp": -0.0040995278395712376,
+      "rejected_action_logp": -2.625,
+      "chosen_completion_nll": 0.00030767673160880804,
+      "pre_update_mean_logp_gap": 2.6209004721604288,
+      "elapsed_seconds": 674.028
+    },
+    {
+      "iteration": 49,
+      "category": "preserve_genuine_return",
+      "loss": 0.016818083822727203,
+      "chosen_action_logp": -0.0009053547983057797,
+      "rejected_action_logp": -2.2921855449676514,
+      "chosen_completion_nll": 9.447183401789516e-05,
+      "pre_update_mean_logp_gap": 2.2912801901693456,
+      "elapsed_seconds": 703.4
+    },
+    {
+      "iteration": 50,
+      "category": "preserve_exchange_intent",
+      "loss": 0.06790758669376373,
+      "chosen_action_logp": -0.004852294921875,
+      "rejected_action_logp": -1.5852152109146118,
+      "chosen_completion_nll": 0.0003447634226176888,
+      "pre_update_mean_logp_gap": 1.5803629159927368,
+      "elapsed_seconds": 716.112
+    },
+    {
+      "iteration": 51,
+      "category": "preserve_policy_handoff",
+      "loss": 0.22124701738357544,
+      "chosen_action_logp": -2.375,
+      "rejected_action_logp": -4.50000524520874,
+      "chosen_completion_nll": 0.19800178706645966,
+      "pre_update_mean_logp_gap": 2.1250052452087402,
+      "elapsed_seconds": 727.965
+    },
+    {
+      "iteration": 52,
+      "category": "preserve_exchange_intent",
+      "loss": 0.04526246339082718,
+      "chosen_action_logp": -0.0045674643479287624,
+      "rejected_action_logp": -1.79461669921875,
+      "chosen_completion_nll": 0.0003323701093904674,
+      "pre_update_mean_logp_gap": 1.7900492348708212,
+      "elapsed_seconds": 741.058
+    },
+    {
+      "iteration": 53,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.00476031331345439,
+      "chosen_action_logp": -0.0011666218051686883,
+      "rejected_action_logp": -2.9375,
+      "chosen_completion_nll": 0.00012931654055137187,
+      "pre_update_mean_logp_gap": 2.9363333781948313,
+      "elapsed_seconds": 751.744
+    },
+    {
+      "iteration": 54,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0021868236362934113,
+      "chosen_action_logp": -0.008632580749690533,
+      "rejected_action_logp": -3.515625,
+      "chosen_completion_nll": 0.0007053613662719727,
+      "pre_update_mean_logp_gap": 3.5069924192503095,
+      "elapsed_seconds": 761.867
+    },
+    {
+      "iteration": 55,
+      "category": "preserve_policy_handoff",
+      "loss": 0.00020948960445821285,
+      "chosen_action_logp": -0.000766754150390625,
+      "rejected_action_logp": -5.093756198883057,
+      "chosen_completion_nll": 0.00014734268188476562,
+      "pre_update_mean_logp_gap": 5.092989444732666,
+      "elapsed_seconds": 778.868
+    },
+    {
+      "iteration": 56,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.00104624405503273,
+      "chosen_action_logp": -0.0013021230697631836,
+      "rejected_action_logp": -3.75,
+      "chosen_completion_nll": 0.0001324017794104293,
+      "pre_update_mean_logp_gap": 3.748697876930237,
+      "elapsed_seconds": 796.812
+    },
+    {
+      "iteration": 57,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.004204859025776386,
+      "chosen_action_logp": -0.0010134378680959344,
+      "rejected_action_logp": -3.0,
+      "chosen_completion_nll": 0.00011815669859061018,
+      "pre_update_mean_logp_gap": 2.998986562131904,
+      "elapsed_seconds": 810.328
+    },
+    {
+      "iteration": 58,
+      "category": "preserve_genuine_return",
+      "loss": 0.015467949211597443,
+      "chosen_action_logp": -0.0008138020639307797,
+      "rejected_action_logp": -2.3337886333465576,
+      "chosen_completion_nll": 7.210551120806485e-05,
+      "pre_update_mean_logp_gap": 2.332974831282627,
+      "elapsed_seconds": 823.255
+    },
+    {
+      "iteration": 59,
+      "category": "continue_after_answer",
+      "loss": 0.00026562338462099433,
+      "chosen_action_logp": -0.0008742014761082828,
+      "rejected_action_logp": -4.562502384185791,
+      "chosen_completion_nll": 8.576597610954195e-05,
+      "pre_update_mean_logp_gap": 4.561628182709683,
+      "elapsed_seconds": 834.535
+    },
+    {
+      "iteration": 60,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.004194185137748718,
+      "chosen_action_logp": -0.0009964704513549805,
+      "rejected_action_logp": -3.0,
+      "chosen_completion_nll": 0.00010762132296804339,
+      "pre_update_mean_logp_gap": 2.999003529548645,
+      "elapsed_seconds": 845.122
+    },
+    {
+      "iteration": 61,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.007782438304275274,
+      "chosen_action_logp": -0.0017973581561818719,
+      "rejected_action_logp": -2.6875,
+      "chosen_completion_nll": 0.0001490547292632982,
+      "pre_update_mean_logp_gap": 2.685702641843818,
+      "elapsed_seconds": 865.679
+    },
+    {
+      "iteration": 62,
+      "category": "preserve_genuine_return",
+      "loss": 0.0010328757343813777,
+      "chosen_action_logp": -0.0004785855708178133,
+      "rejected_action_logp": -3.7087860107421875,
+      "chosen_completion_nll": 4.2187202780041844e-05,
+      "pre_update_mean_logp_gap": 3.7083074251713697,
+      "elapsed_seconds": 887.586
+    },
+    {
+      "iteration": 63,
+      "category": "preserve_genuine_return",
+      "loss": 0.04165085405111313,
+      "chosen_action_logp": -0.0024820964317768812,
+      "rejected_action_logp": -1.8343912363052368,
+      "chosen_completion_nll": 0.0002555356186348945,
+      "pre_update_mean_logp_gap": 1.83190913987346,
+      "elapsed_seconds": 900.852
+    },
+    {
+      "iteration": 64,
+      "category": "preserve_policy_handoff",
+      "loss": 0.00027045438764616847,
+      "chosen_action_logp": -0.0002079010009765625,
+      "rejected_action_logp": -4.437505722045898,
+      "chosen_completion_nll": 3.982782436651178e-05,
+      "pre_update_mean_logp_gap": 4.437297821044922,
+      "elapsed_seconds": 911.322
+    },
+    {
+      "iteration": 65,
+      "category": "preserve_exchange_intent",
+      "loss": 0.030151890590786934,
+      "chosen_action_logp": -0.0040181479416787624,
+      "rejected_action_logp": -2.0031535625457764,
+      "chosen_completion_nll": 0.00035074600600637496,
+      "pre_update_mean_logp_gap": 1.9991354146040976,
+      "elapsed_seconds": 924.019
+    },
+    {
+      "iteration": 66,
+      "category": "ask_missing_information",
+      "loss": 0.1411156803369522,
+      "chosen_action_logp": -1.5234403610229492,
+      "rejected_action_logp": -4.75,
+      "chosen_completion_nll": 0.13852132856845856,
+      "pre_update_mean_logp_gap": 3.226559638977051,
+      "elapsed_seconds": 934.092
+    },
+    {
+      "iteration": 67,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.002426507417112589,
+      "chosen_action_logp": -0.0018970966339111328,
+      "rejected_action_logp": -3.3125,
+      "chosen_completion_nll": 0.00023310714459512383,
+      "pre_update_mean_logp_gap": 3.310602903366089,
+      "elapsed_seconds": 951.514
+    },
+    {
+      "iteration": 68,
+      "category": "preserve_policy_handoff",
+      "loss": 0.14372314512729645,
+      "chosen_action_logp": -1.703125,
+      "rejected_action_logp": -5.125006675720215,
+      "chosen_completion_nll": 0.1419670134782791,
+      "pre_update_mean_logp_gap": 3.421881675720215,
+      "elapsed_seconds": 972.428
+    },
+    {
+      "iteration": 69,
+      "category": "preserve_exchange_intent",
+      "loss": 0.007970789447426796,
+      "chosen_action_logp": -0.0028063456993550062,
+      "rejected_action_logp": -2.7110188007354736,
+      "chosen_completion_nll": 0.0006722165271639824,
+      "pre_update_mean_logp_gap": 2.7082124550361186,
+      "elapsed_seconds": 984.578
+    },
+    {
+      "iteration": 70,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.024031851440668106,
+      "chosen_action_logp": -0.00560760498046875,
+      "rejected_action_logp": -2.125,
+      "chosen_completion_nll": 0.00052727508591488,
+      "pre_update_mean_logp_gap": 2.1193923950195312,
+      "elapsed_seconds": 996.913
+    },
+    {
+      "iteration": 71,
+      "category": "preserve_exchange_intent",
+      "loss": 0.0045647090300917625,
+      "chosen_action_logp": -0.0013631185283884406,
+      "rejected_action_logp": -2.9596354961395264,
+      "chosen_completion_nll": 0.00013207881420385092,
+      "pre_update_mean_logp_gap": 2.958272377611138,
+      "elapsed_seconds": 1010.029
+    },
+    {
+      "iteration": 72,
+      "category": "continue_after_answer",
+      "loss": 0.0001881135394796729,
+      "chosen_action_logp": -0.0013891855487599969,
+      "rejected_action_logp": -6.718753814697266,
+      "chosen_completion_nll": 0.00018570075917523354,
+      "pre_update_mean_logp_gap": 6.717364629148506,
+      "elapsed_seconds": 1023.159
+    },
+    {
+      "iteration": 73,
+      "category": "ask_missing_information",
+      "loss": 0.4592117667198181,
+      "chosen_action_logp": -1.9531311988830566,
+      "rejected_action_logp": -2.765625,
+      "chosen_completion_nll": 0.17805860936641693,
+      "pre_update_mean_logp_gap": 0.8124938011169434,
+      "elapsed_seconds": 1031.871
+    },
+    {
+      "iteration": 74,
+      "category": "preserve_exchange_intent",
+      "loss": 0.008868337608873844,
+      "chosen_action_logp": -0.0035451252479106188,
+      "rejected_action_logp": -2.6283977031707764,
+      "chosen_completion_nll": 0.0002513242943678051,
+      "pre_update_mean_logp_gap": 2.6248525779228657,
+      "elapsed_seconds": 1061.289
+    },
+    {
+      "iteration": 75,
+      "category": "preserve_policy_handoff",
+      "loss": 0.00014025616110302508,
+      "chosen_action_logp": -0.00014781951904296875,
+      "rejected_action_logp": -4.81250524520874,
+      "chosen_completion_nll": 3.1322240829467773e-05,
+      "pre_update_mean_logp_gap": 4.812357425689697,
+      "elapsed_seconds": 1071.388
+    },
+    {
+      "iteration": 76,
+      "category": "preserve_genuine_return",
+      "loss": 0.010425813496112823,
+      "chosen_action_logp": -0.0029919941443949938,
+      "rejected_action_logp": -2.5444538593292236,
+      "chosen_completion_nll": 0.0002527784672565758,
+      "pre_update_mean_logp_gap": 2.5414618651848286,
+      "elapsed_seconds": 1091.469
+    },
+    {
+      "iteration": 77,
+      "category": "continue_after_answer",
+      "loss": 0.00017029039736371487,
+      "chosen_action_logp": -0.0013946294784545898,
+      "rejected_action_logp": -5.625004768371582,
+      "chosen_completion_nll": 0.00014878551883157343,
+      "pre_update_mean_logp_gap": 5.623610138893127,
+      "elapsed_seconds": 1115.994
+    },
+    {
+      "iteration": 78,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0037450571544468403,
+      "chosen_action_logp": -0.0014699697494506836,
+      "rejected_action_logp": -3.0625,
+      "chosen_completion_nll": 0.0001344014599453658,
+      "pre_update_mean_logp_gap": 3.0610300302505493,
+      "elapsed_seconds": 1127.153
+    },
+    {
+      "iteration": 79,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.026777071878314018,
+      "chosen_action_logp": -0.0064697265625,
+      "rejected_action_logp": -2.078125,
+      "chosen_completion_nll": 0.0009479570435360074,
+      "pre_update_mean_logp_gap": 2.0716552734375,
+      "elapsed_seconds": 1139.87
+    },
+    {
+      "iteration": 80,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.008817417547106743,
+      "chosen_action_logp": -0.0019683837890625,
+      "rejected_action_logp": -2.625,
+      "chosen_completion_nll": 0.00016909959958866239,
+      "pre_update_mean_logp_gap": 2.6230316162109375,
+      "elapsed_seconds": 1153.386
+    },
+    {
+      "iteration": 81,
+      "category": "preserve_policy_handoff",
+      "loss": 0.19282914698123932,
+      "chosen_action_logp": -2.25,
+      "rejected_action_logp": -5.125005722045898,
+      "chosen_completion_nll": 0.1875954121351242,
+      "pre_update_mean_logp_gap": 2.8750057220458984,
+      "elapsed_seconds": 1166.107
+    },
+    {
+      "iteration": 82,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.002024225192144513,
+      "chosen_action_logp": -0.0009593566064722836,
+      "rejected_action_logp": -3.375,
+      "chosen_completion_nll": 9.193080040859058e-05,
+      "pre_update_mean_logp_gap": 3.3740406433935277,
+      "elapsed_seconds": 1181.633
+    },
+    {
+      "iteration": 83,
+      "category": "preserve_genuine_return",
+      "loss": 0.0020009391009807587,
+      "chosen_action_logp": -0.0008293787832371891,
+      "rejected_action_logp": -3.375788450241089,
+      "chosen_completion_nll": 7.218784594442695e-05,
+      "pre_update_mean_logp_gap": 3.3749590714578517,
+      "elapsed_seconds": 1205.317
+    },
+    {
+      "iteration": 84,
+      "category": "ask_missing_information",
+      "loss": 0.1862768828868866,
+      "chosen_action_logp": -1.2890679836273193,
+      "rejected_action_logp": -2.859375,
+      "chosen_completion_nll": 0.11738772690296173,
+      "pre_update_mean_logp_gap": 1.5703070163726807,
+      "elapsed_seconds": 1214.72
+    },
+    {
+      "iteration": 85,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.016381394118070602,
+      "chosen_action_logp": -0.0035305023193359375,
+      "rejected_action_logp": -2.3125,
+      "chosen_completion_nll": 0.00023442506790161133,
+      "pre_update_mean_logp_gap": 2.308969497680664,
+      "elapsed_seconds": 1226.992
+    },
+    {
+      "iteration": 86,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.6091300845146179,
+      "chosen_action_logp": -1.5891927480697632,
+      "rejected_action_logp": -2.078125,
+      "chosen_completion_nll": 0.12663836777210236,
+      "pre_update_mean_logp_gap": 0.4889322519302368,
+      "elapsed_seconds": 1238.726
+    },
+    {
+      "iteration": 87,
+      "category": "preserve_genuine_return",
+      "loss": 0.006840766407549381,
+      "chosen_action_logp": -0.0011946359882131219,
+      "rejected_action_logp": -2.7510783672332764,
+      "chosen_completion_nll": 0.00012386185699142516,
+      "pre_update_mean_logp_gap": 2.7498837312450632,
+      "elapsed_seconds": 1250.738
+    },
+    {
+      "iteration": 88,
+      "category": "continue_after_answer",
+      "loss": 0.00012606271775439382,
+      "chosen_action_logp": -0.0009270111913792789,
+      "rejected_action_logp": -5.406255722045898,
+      "chosen_completion_nll": 9.278671495849267e-05,
+      "pre_update_mean_logp_gap": 5.405328710854519,
+      "elapsed_seconds": 1268.769
+    },
+    {
+      "iteration": 89,
+      "category": "continue_after_answer",
+      "loss": 0.00011824619286926463,
+      "chosen_action_logp": -0.0010929107666015625,
+      "rejected_action_logp": -6.656259059906006,
+      "chosen_completion_nll": 0.00011551380157470703,
+      "pre_update_mean_logp_gap": 6.655166149139404,
+      "elapsed_seconds": 1286.187
+    },
+    {
+      "iteration": 90,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.3028927743434906,
+      "chosen_action_logp": -1.3004354238510132,
+      "rejected_action_logp": -2.3125,
+      "chosen_completion_nll": 0.10583805292844772,
+      "pre_update_mean_logp_gap": 1.0120645761489868,
+      "elapsed_seconds": 1298.306
+    },
+    {
+      "iteration": 91,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0025540299247950315,
+      "chosen_action_logp": -0.0006647507543675601,
+      "rejected_action_logp": -3.25,
+      "chosen_completion_nll": 7.505501707782969e-05,
+      "pre_update_mean_logp_gap": 3.2493352492456324,
+      "elapsed_seconds": 1308.677
+    },
+    {
+      "iteration": 92,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0008651101961731911,
+      "chosen_action_logp": -0.00067901611328125,
+      "rejected_action_logp": -3.8125,
+      "chosen_completion_nll": 5.960795533610508e-05,
+      "pre_update_mean_logp_gap": 3.8118209838867188,
+      "elapsed_seconds": 1318.795
+    },
+    {
+      "iteration": 93,
+      "category": "preserve_policy_handoff",
+      "loss": 0.1793423295021057,
+      "chosen_action_logp": -2.078125,
+      "rejected_action_logp": -4.875006675720215,
+      "chosen_completion_nll": 0.17322617769241333,
+      "pre_update_mean_logp_gap": 2.796881675720215,
+      "elapsed_seconds": 1330.463
+    },
+    {
+      "iteration": 94,
+      "category": "continue_after_answer",
+      "loss": 0.00010018456669058651,
+      "chosen_action_logp": -0.00106048583984375,
+      "rejected_action_logp": -6.750009059906006,
+      "chosen_completion_nll": 9.791948104975745e-05,
+      "pre_update_mean_logp_gap": 6.748948574066162,
+      "elapsed_seconds": 1354.385
+    },
+    {
+      "iteration": 95,
+      "category": "preserve_exchange_intent",
+      "loss": 0.07416245341300964,
+      "chosen_action_logp": -0.0061848959885537624,
+      "rejected_action_logp": -1.54449462890625,
+      "chosen_completion_nll": 0.0008835459011606872,
+      "pre_update_mean_logp_gap": 1.5383097329176962,
+      "elapsed_seconds": 1368.815
+    },
+    {
+      "iteration": 96,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.009105417877435684,
+      "chosen_action_logp": -0.00494384765625,
+      "rejected_action_logp": -2.625,
+      "chosen_completion_nll": 0.0004057039914187044,
+      "pre_update_mean_logp_gap": 2.62005615234375,
+      "elapsed_seconds": 1380.488
+    },
+    {
+      "iteration": 97,
+      "category": "preserve_exchange_intent",
+      "loss": 0.018323581665754318,
+      "chosen_action_logp": -0.0016428629169240594,
+      "rejected_action_logp": -2.251220703125,
+      "chosen_completion_nll": 0.00015845450980123132,
+      "pre_update_mean_logp_gap": 2.249577840208076,
+      "elapsed_seconds": 1392.879
+    },
+    {
+      "iteration": 98,
+      "category": "ask_missing_information",
+      "loss": 0.14004069566726685,
+      "chosen_action_logp": -1.609378695487976,
+      "rejected_action_logp": -4.4375,
+      "chosen_completion_nll": 0.13429392874240875,
+      "pre_update_mean_logp_gap": 2.828121304512024,
+      "elapsed_seconds": 1402.98
+    },
+    {
+      "iteration": 99,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0025549596175551414,
+      "chosen_action_logp": -0.0006665388937108219,
+      "rejected_action_logp": -3.25,
+      "chosen_completion_nll": 7.597463263664395e-05,
+      "pre_update_mean_logp_gap": 3.249333461106289,
+      "elapsed_seconds": 1414.042
+    },
+    {
+      "iteration": 100,
+      "category": "ask_missing_information",
+      "loss": 0.004014414735138416,
+      "chosen_action_logp": -0.01965618133544922,
+      "rejected_action_logp": -4.46875,
+      "chosen_completion_nll": 0.003789164824411273,
+      "pre_update_mean_logp_gap": 4.449093818664551,
+      "elapsed_seconds": 1426.953
+    },
+    {
+      "iteration": 101,
+      "category": "preserve_policy_handoff",
+      "loss": 0.07643252611160278,
+      "chosen_action_logp": -0.53125,
+      "rejected_action_logp": -2.656255006790161,
+      "chosen_completion_nll": 0.0531872920691967,
+      "pre_update_mean_logp_gap": 2.125005006790161,
+      "elapsed_seconds": 1448.951
+    },
+    {
+      "iteration": 102,
+      "category": "preserve_exchange_intent",
+      "loss": 0.027581973001360893,
+      "chosen_action_logp": -0.0016733804950490594,
+      "rejected_action_logp": -2.042577028274536,
+      "chosen_completion_nll": 0.00013669501640833914,
+      "pre_update_mean_logp_gap": 2.040903647779487,
+      "elapsed_seconds": 1462.526
+    },
+    {
+      "iteration": 103,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.16656440496444702,
+      "chosen_action_logp": -0.9820963740348816,
+      "rejected_action_logp": -2.4375,
+      "chosen_completion_nll": 0.08062266558408737,
+      "pre_update_mean_logp_gap": 1.4554036259651184,
+      "elapsed_seconds": 1491.034
+    },
+    {
+      "iteration": 104,
+      "category": "ask_missing_information",
+      "loss": 0.006585114169865847,
+      "chosen_action_logp": -0.04297173023223877,
+      "rejected_action_logp": -4.375,
+      "chosen_completion_nll": 0.006300449371337891,
+      "pre_update_mean_logp_gap": 4.332028269767761,
+      "elapsed_seconds": 1516.378
+    },
+    {
+      "iteration": 105,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.07023125141859055,
+      "chosen_action_logp": -0.01577250100672245,
+      "rejected_action_logp": -1.5859375,
+      "chosen_completion_nll": 0.0013231734046712518,
+      "pre_update_mean_logp_gap": 1.5701649989932775,
+      "elapsed_seconds": 1529.2
+    },
+    {
+      "iteration": 106,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.014632058329880238,
+      "chosen_action_logp": -0.004018465522676706,
+      "rejected_action_logp": -2.375,
+      "chosen_completion_nll": 0.00035512124304659665,
+      "pre_update_mean_logp_gap": 2.3709815344773233,
+      "elapsed_seconds": 1542.179
+    },
+    {
+      "iteration": 107,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0011102177668362856,
+      "chosen_action_logp": -0.009402076713740826,
+      "rejected_action_logp": -4.25,
+      "chosen_completion_nll": 0.0007684456068091094,
+      "pre_update_mean_logp_gap": 4.240597923286259,
+      "elapsed_seconds": 1552.086
+    },
+    {
+      "iteration": 108,
+      "category": "ask_missing_information",
+      "loss": 0.11682959645986557,
+      "chosen_action_logp": -1.3515650033950806,
+      "rejected_action_logp": -5.25,
+      "chosen_completion_nll": 0.11615216732025146,
+      "pre_update_mean_logp_gap": 3.8984349966049194,
+      "elapsed_seconds": 1562.26
+    },
+    {
+      "iteration": 109,
+      "category": "continue_after_answer",
+      "loss": 0.00016545760445296764,
+      "chosen_action_logp": -0.0009714762563817203,
+      "rejected_action_logp": -6.281254768371582,
+      "chosen_completion_nll": 0.00015967449871823192,
+      "pre_update_mean_logp_gap": 6.2802832921152,
+      "elapsed_seconds": 1580.803
+    },
+    {
+      "iteration": 110,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.00048633432015776634,
+      "chosen_action_logp": -0.003094116924330592,
+      "rejected_action_logp": -4.4375,
+      "chosen_completion_nll": 0.0002543700684327632,
+      "pre_update_mean_logp_gap": 4.434405883075669,
+      "elapsed_seconds": 1595.854
+    },
+    {
+      "iteration": 111,
+      "category": "preserve_exchange_intent",
+      "loss": 0.021526511758565903,
+      "chosen_action_logp": -0.0010477701434865594,
+      "rejected_action_logp": -2.1671650409698486,
+      "chosen_completion_nll": 9.662034426582977e-05,
+      "pre_update_mean_logp_gap": 2.166117270826362,
+      "elapsed_seconds": 1607.872
+    },
+    {
+      "iteration": 112,
+      "category": "continue_after_answer",
+      "loss": 0.00014203663158696145,
+      "chosen_action_logp": -0.0016886392841115594,
+      "rejected_action_logp": -6.562503814697266,
+      "chosen_completion_nll": 0.00013873678108211607,
+      "pre_update_mean_logp_gap": 6.560815175413154,
+      "elapsed_seconds": 1620.045
+    },
+    {
+      "iteration": 113,
+      "category": "preserve_genuine_return",
+      "loss": 0.0736386850476265,
+      "chosen_action_logp": -0.0040283203125,
+      "rejected_action_logp": -1.5423787832260132,
+      "chosen_completion_nll": 0.0003655447799246758,
+      "pre_update_mean_logp_gap": 1.5383504629135132,
+      "elapsed_seconds": 1635.163
+    },
+    {
+      "iteration": 114,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0019875539001077414,
+      "chosen_action_logp": -0.0008138020639307797,
+      "rejected_action_logp": -3.375,
+      "chosen_completion_nll": 5.5822234571678564e-05,
+      "pre_update_mean_logp_gap": 3.374186197936069,
+      "elapsed_seconds": 1653.269
+    },
+    {
+      "iteration": 115,
+      "category": "continue_after_answer",
+      "loss": 0.00016759851132519543,
+      "chosen_action_logp": -0.0008520682458765805,
+      "rejected_action_logp": -5.031253337860107,
+      "chosen_completion_nll": 9.716473869048059e-05,
+      "pre_update_mean_logp_gap": 5.030401269614231,
+      "elapsed_seconds": 1662.752
+    },
+    {
+      "iteration": 116,
+      "category": "preserve_genuine_return",
+      "loss": 0.002159280236810446,
+      "chosen_action_logp": -0.00026623407029546797,
+      "rejected_action_logp": -3.3335673809051514,
+      "chosen_completion_nll": 6.312462937785313e-05,
+      "pre_update_mean_logp_gap": 3.333301146834856,
+      "elapsed_seconds": 1686.167
+    },
+    {
+      "iteration": 117,
+      "category": "preserve_exchange_intent",
+      "loss": 0.027605049312114716,
+      "chosen_action_logp": -0.0012054443359375,
+      "rejected_action_logp": -2.0421142578125,
+      "chosen_completion_nll": 0.00016005833458621055,
+      "pre_update_mean_logp_gap": 2.0409088134765625,
+      "elapsed_seconds": 1699.304
+    },
+    {
+      "iteration": 118,
+      "category": "ask_missing_information",
+      "loss": 0.07595447450876236,
+      "chosen_action_logp": -0.8984411358833313,
+      "rejected_action_logp": -4.625,
+      "chosen_completion_nll": 0.07499928027391434,
+      "pre_update_mean_logp_gap": 3.7265588641166687,
+      "elapsed_seconds": 1709.144
+    },
+    {
+      "iteration": 119,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.006083950400352478,
+      "chosen_action_logp": -0.01954142190515995,
+      "rejected_action_logp": -2.9375,
+      "chosen_completion_nll": 0.0012800160329788923,
+      "pre_update_mean_logp_gap": 2.91795857809484,
+      "elapsed_seconds": 1720.906
+    },
+    {
+      "iteration": 120,
+      "category": "preserve_exchange_intent",
+      "loss": 0.029914582148194313,
+      "chosen_action_logp": -0.0016530355205759406,
+      "rejected_action_logp": -2.000788450241089,
+      "chosen_completion_nll": 0.00011343775986460969,
+      "pre_update_mean_logp_gap": 1.999135414720513,
+      "elapsed_seconds": 1733.716
+    },
+    {
+      "iteration": 121,
+      "category": "ask_missing_information",
+      "loss": 0.10539039224386215,
+      "chosen_action_logp": -1.1796904802322388,
+      "rejected_action_logp": -5.21875,
+      "chosen_completion_nll": 0.1048789992928505,
+      "pre_update_mean_logp_gap": 4.039059519767761,
+      "elapsed_seconds": 1752.921
+    },
+    {
+      "iteration": 122,
+      "category": "preserve_exchange_intent",
+      "loss": 0.04156583547592163,
+      "chosen_action_logp": -0.00244140625,
+      "rejected_action_logp": -1.8343607187271118,
+      "chosen_completion_nll": 0.00017132666835095733,
+      "pre_update_mean_logp_gap": 1.8319193124771118,
+      "elapsed_seconds": 1766.817
+    },
+    {
+      "iteration": 123,
+      "category": "ask_missing_information",
+      "loss": 0.12142124027013779,
+      "chosen_action_logp": -1.2890657186508179,
+      "rejected_action_logp": -5.21875,
+      "chosen_completion_nll": 0.12078484147787094,
+      "pre_update_mean_logp_gap": 3.929684281349182,
+      "elapsed_seconds": 1776.952
+    },
+    {
+      "iteration": 124,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0013684174045920372,
+      "chosen_action_logp": -0.0072455802001059055,
+      "rejected_action_logp": -3.828125,
+      "chosen_completion_nll": 0.0005773713928647339,
+      "pre_update_mean_logp_gap": 3.820879419799894,
+      "elapsed_seconds": 1793.004
+    },
+    {
+      "iteration": 125,
+      "category": "continue_after_answer",
+      "loss": 5.578349737334065e-05,
+      "chosen_action_logp": -0.0003562370839063078,
+      "rejected_action_logp": -5.843753337860107,
+      "chosen_completion_nll": 4.192761116428301e-05,
+      "pre_update_mean_logp_gap": 5.843397100776201,
+      "elapsed_seconds": 1803.873
+    },
+    {
+      "iteration": 126,
+      "category": "preserve_policy_handoff",
+      "loss": 0.0002148773637600243,
+      "chosen_action_logp": -0.000152587890625,
+      "rejected_action_logp": -4.562504291534424,
+      "chosen_completion_nll": 3.5279990697745234e-05,
+      "pre_update_mean_logp_gap": 4.562351703643799,
+      "elapsed_seconds": 1815.934
+    },
+    {
+      "iteration": 127,
+      "category": "preserve_exchange_intent",
+      "loss": 0.016872858628630638,
+      "chosen_action_logp": -0.0008341471548192203,
+      "rejected_action_logp": -2.2921371459960938,
+      "chosen_completion_nll": 0.0001499982608947903,
+      "pre_update_mean_logp_gap": 2.2913029988412745,
+      "elapsed_seconds": 1829.338
+    },
+    {
+      "iteration": 128,
+      "category": "preserve_policy_handoff",
+      "loss": 0.2053491771221161,
+      "chosen_action_logp": -2.4375,
+      "rejected_action_logp": -5.750005722045898,
+      "chosen_completion_nll": 0.20316410064697266,
+      "pre_update_mean_logp_gap": 3.3125057220458984,
+      "elapsed_seconds": 1856.52
+    },
+    {
+      "iteration": 129,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0037113770376890898,
+      "chosen_action_logp": -0.0014546712627634406,
+      "rejected_action_logp": -3.0625,
+      "chosen_completion_nll": 0.00010083306551678106,
+      "pre_update_mean_logp_gap": 3.0610453287372366,
+      "elapsed_seconds": 1870.172
+    },
+    {
+      "iteration": 130,
+      "category": "continue_after_answer",
+      "loss": 4.4582375267054886e-05,
+      "chosen_action_logp": -0.0006306965951807797,
+      "rejected_action_logp": -7.250006675720215,
+      "chosen_completion_nll": 4.374980926513672e-05,
+      "pre_update_mean_logp_gap": 7.249375979125034,
+      "elapsed_seconds": 1884.377
+    },
+    {
+      "iteration": 131,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0010111057199537754,
+      "chosen_action_logp": -0.0016803344478830695,
+      "rejected_action_logp": -3.8125,
+      "chosen_completion_nll": 0.00020398916967678815,
+      "pre_update_mean_logp_gap": 3.810819665552117,
+      "elapsed_seconds": 1894.463
+    },
+    {
+      "iteration": 132,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.004204281140118837,
+      "chosen_action_logp": -0.0011517206439748406,
+      "rejected_action_logp": -3.0,
+      "chosen_completion_nll": 0.0001164509158115834,
+      "pre_update_mean_logp_gap": 2.998848279356025,
+      "elapsed_seconds": 1907.218
+    },
+    {
+      "iteration": 133,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0004681078135035932,
+      "chosen_action_logp": -0.00036493936204351485,
+      "rejected_action_logp": -4.125,
+      "chosen_completion_nll": 3.714362901519053e-05,
+      "pre_update_mean_logp_gap": 4.1246350606379565,
+      "elapsed_seconds": 1918.569
+    },
+    {
+      "iteration": 134,
+      "category": "continue_after_answer",
+      "loss": 0.00023037497885525227,
+      "chosen_action_logp": -0.0010093450546264648,
+      "rejected_action_logp": -4.687502861022949,
+      "chosen_completion_nll": 9.026130283018574e-05,
+      "pre_update_mean_logp_gap": 4.686493515968323,
+      "elapsed_seconds": 1931.04
+    },
+    {
+      "iteration": 135,
+      "category": "preserve_exchange_intent",
+      "loss": 0.02538558840751648,
+      "chosen_action_logp": -0.0011138916015625,
+      "rejected_action_logp": -2.083770751953125,
+      "chosen_completion_nll": 0.0001115482664317824,
+      "pre_update_mean_logp_gap": 2.0826568603515625,
+      "elapsed_seconds": 1954.881
+    },
+    {
+      "iteration": 136,
+      "category": "continue_after_answer",
+      "loss": 0.00010701927385525778,
+      "chosen_action_logp": -0.000706235587131232,
+      "rejected_action_logp": -5.500003814697266,
+      "chosen_completion_nll": 7.944447861518711e-05,
+      "pre_update_mean_logp_gap": 5.499297579110134,
+      "elapsed_seconds": 1966.352
+    }
+  ],
+  "completed_updates": 136,
+  "trainable_parameters": 3670016,
+  "adapter_l2_change_from_sft480": 0.356020503883513,
+  "adapter_sha256": "cc9c29aadfb6aac91a8f343c9d564ff6bbde8ef1ff34d90567e24cb8ce28a3f6",
+  "elapsed_seconds": 1966.45,
+  "peak_memory_bytes": 3892517892,
+  "preflight_only": false,
+  "gradient_audit": null,
+  "projection_audit": null,
+  "previous_wired_limit": 0,
+  "wired_limit_bytes": 6442450944,
+  "cache_limit_bytes": 268435456,
+  "previous_cache_limit": 16320875724,
+  "execution": "Compiled gradient with mutable input/output state capture; masked 32-token padding. Wired memory capped at 6 GiB, cache at 256 MiB, cleared after each pair. SFT480 initialization; failed unregularized preference weights not reused.",
+  "test_used_for_selection": false,
+  "cloud_compute_used": false
+}

@@ -1,0 +1,367 @@
+{
+  "status": "trained",
+  "config": {
+    "model": "data/models/qwen3-4b-mlx",
+    "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+    "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+    "data": "training/v2/datasets",
+    "adapter_path": "data/finetuning/retail-qlora-v2/run",
+    "best_path": "data/finetuning/retail-qlora-v2/best",
+    "seed": 20261027,
+    "iters": 280,
+    "num_layers": 8,
+    "batch_size": 2,
+    "learning_rate": 5e-05,
+    "lora_parameters": {
+      "rank": 8,
+      "dropout": 0.0,
+      "scale": 16.0
+    },
+    "max_seq_length": 3072,
+    "steps_per_report": 20,
+    "steps_per_eval": 70,
+    "save_every": 70,
+    "val_batches": -1,
+    "grad_checkpoint": true,
+    "grad_accumulation_steps": 1,
+    "mask_prompt": true,
+    "generation_max_tokens": 180,
+    "generation_temperature": 0,
+    "max_agent_steps": 8,
+    "checkpoint_selection": "Minimum full validation completion loss among positive-update checkpoints, including final update. Test is not used for selection.",
+    "evaluation_arms": [
+      "legacy_base",
+      "workflow_base",
+      "workflow_qlora_v2"
+    ],
+    "promotion_rule": "Candidate must improve overall task success and exchange success over workflow_base, preserve confirmation invariants on every case, have no additional paired non-exchange task regressions, and not increase rejected write attempts. Fixed before inference, a conservative local prototype rule rather than a statistical production gate."
+  },
+  "dataset": {
+    "cases": {
+      "train": 112,
+      "valid": 28,
+      "test": 42
+    },
+    "rows": {
+      "train": 864,
+      "valid": 108,
+      "test": 162
+    },
+    "files": {
+      "resolve_desk/workflow.py": "2c45094c90643020bddb8d66ef5a4dfc607522620d67c3c07744a99565c0afbc",
+      "resolve_desk/store.py": "01ced6a33f0995d9c3362fc18fd8123a59e523edc408382cd38cdd990285f5bb",
+      "resolve_desk/protocol.py": "7d48eca71522d12da7e889b0fcc3b939c1f8bae12460b64b8a8dc173ef6185a2",
+      "training/v2/fixtures.py": "178335d3cf882ddbb10bf0d8c330785632963ec91401e5438c69d58be7cf9b17",
+      "training/v2/prepare.py": "4aaa2acab31efd60b7b1df13bab83a2a4cc12b2638b4bd31249d1acb3a0046f1",
+      "training/v2/scoring.py": "4cf2b7fc6c281bcbc413f84a548ce35bd330c80ec17681242ffc3d5d02235bb4",
+      "training/v2/config.json": "c00b5c9f48098e8c18cd419c1ab309f31245f4bc53bc165fece422896c24c2b8",
+      "training/v2/evaluate.py": "420f041a6ca99fc98f778bb98ac3b177303d9789961713372c0b02d64554638a",
+      "training/v2/evaluation.py": "3fc5df34e22ce08d8e5e34d3ffe4a22c313906aceb271db9139b08a2c0fdead1",
+      "training/v2/train.py": "c08b4628188b1b1b28138edd605a2e2854654b6ae94831afcfd1dc36b66da0e7",
+      "training/v2/audit.py": "747d7e1ff125675cde91a98b05537f4bca3cbc6681b8d60cd56acd44d16c5d0f",
+      "training/v2/common.py": "97ff6fef37af5d94af31268373c77f446203f54881beba573b6f77d5eabc432e",
+      "training/common.py": "58b7ec8da02d4708625e8dc432fb56fa03c8ecd05c28cd9b5ba0ca1940644030",
+      "training/runtime.py": "70e60f56223f7161c430f6b601ae9f748548b740c9f1ee0172e7f65acdbf4531",
+      "training/scoring.py": "4408966c655a222f8d1a2aa1418594587a63163029c5477bebeacacd6db9eb6b",
+      "training/evaluate.py": "b7b327c05caff7d66c61f4cce7a9006fc108ae6c31321e0b905fb01e57cbc0cc",
+      "training/v2/datasets/train.jsonl": "14ee3e73032d6cd92395115ef20cff153c306c555cab5943fd83067137505a76",
+      "training/v2/datasets/test.jsonl": "219a5c24293874884fc8fc22e89cbe514e9db31ab35f41c54efd31a64db0f1e0",
+      "training/v2/datasets/cases.json": "b8835282f59a61829686576b653daa3015c2fefc1c5eb271572975a6788c3a5d",
+      "training/v2/datasets/valid.jsonl": "ce9193f5869fba079a38ad3f539e4dda7f3596e60dd63f4d0ba3d6257859abed"
+    },
+    "families": [
+      "cancel",
+      "missing_reason",
+      "return",
+      "missing_payment",
+      "exchange",
+      "exchange_fallback",
+      "forbidden_status",
+      "foreign_order",
+      "missing_email",
+      "exchange_missing_option",
+      "exchange_missing_payment",
+      "exchange_gift",
+      "exchange_unavailable",
+      "exchange_shortfall"
+    ],
+    "train_action_counts": {
+      "propose_return": 64,
+      "identify_customer": 224,
+      "get_order": 224,
+      "get_product": 112,
+      "propose_exchange": 64,
+      "ask_customer": 80,
+      "handoff": 64,
+      "propose_cancel": 32
+    },
+    "scope": "New self-authored synthetic task suite; v1 test errors informed design. Disjoint IDs, price draws, opening templates and requested colors across splits; shared author, policy, schema, task families and per-family request cores. Training includes clean and injected-error recovery demonstrations; no held-out model outputs before training/checkpoint selection. Not official tau-bench."
+  },
+  "config_sha256": "c00b5c9f48098e8c18cd419c1ab309f31245f4bc53bc165fece422896c24c2b8",
+  "model_source": {
+    "repo": "Qwen/Qwen3-4B-MLX-4bit",
+    "revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+    "files": [
+      {
+        "path": "model.safetensors",
+        "bytes": 2137326367,
+        "sha256": "e56a94b846a2dce7d1cc154ce58b9cfc4b8d99e8ffb74bfe256a265f4cbc7fb9"
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 11343,
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 9732,
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+      },
+      {
+        "path": "config.json",
+        "bytes": 988,
+        "sha256": "76eae114d67a444c7296be7a6bc0409ecc15c340e113f1bac7572cb7d0928b6f"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      {
+        "path": "README.md",
+        "bytes": 14708,
+        "sha256": "a3ac01d2a1fff2f02be25e1d2e9160f03db51dbee2cc17f13b774f646648adf9"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "bytes": 63924,
+        "sha256": "278844a566da15beab6e9068c57f606c50a99c440d4515206b871a8b5282b3de"
+      }
+    ],
+    "excluded_snapshot_metadata": [
+      ".gitattributes was absent in the inherited local checkout; it is not a model input."
+    ]
+  },
+  "best_checkpoint": {
+    "iteration": 279,
+    "val_loss": 0.018552646040916443,
+    "val_time": 146.55051495798398
+  },
+  "metrics": [
+    {
+      "kind": "valid",
+      "elapsed_seconds": 93.075,
+      "iteration": 0,
+      "val_loss": 1.9332233667373657,
+      "val_time": 92.95931541698519
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 172.407,
+      "iteration": 20,
+      "train_loss": 0.3039973497390747,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.2525606444997665,
+      "tokens_per_second": 12.981617127287999,
+      "trained_tokens": 1028,
+      "peak_memory": 5.249150446
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 240.941,
+      "iteration": 40,
+      "train_loss": 0.07106455564498901,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.29228596024357106,
+      "tokens_per_second": 15.505770190921444,
+      "trained_tokens": 2089,
+      "peak_memory": 5.249150446
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 310.621,
+      "iteration": 60,
+      "train_loss": 0.11168723106384278,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.2876935426256476,
+      "tokens_per_second": 14.499754548332639,
+      "trained_tokens": 3097,
+      "peak_memory": 5.249150446
+    },
+    {
+      "kind": "valid",
+      "elapsed_seconds": 465.33,
+      "iteration": 69,
+      "val_loss": 0.04489808529615402,
+      "val_time": 120.33035754098091
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 513.425,
+      "iteration": 80,
+      "train_loss": 0.0848541498184204,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.24311026250835138,
+      "tokens_per_second": 12.532334032305513,
+      "trained_tokens": 4128,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 590.85,
+      "iteration": 100,
+      "train_loss": 0.049079814553260805,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.2590487030100807,
+      "tokens_per_second": 11.77376355180817,
+      "trained_tokens": 5037,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 688.09,
+      "iteration": 120,
+      "train_loss": 0.05002198815345764,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.20623406594246896,
+      "tokens_per_second": 10.352950110311943,
+      "trained_tokens": 6041,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "valid",
+      "elapsed_seconds": 953.039,
+      "iteration": 139,
+      "val_loss": 0.02696511149406433,
+      "val_time": 159.1574483329896
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 958.784,
+      "iteration": 140,
+      "train_loss": 0.061265915632247925,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.18071421980139776,
+      "tokens_per_second": 8.80078250432807,
+      "trained_tokens": 7015,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 1071.432,
+      "iteration": 160,
+      "train_loss": 0.03371977210044861,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.1785819210514111,
+      "tokens_per_second": 9.223756222305385,
+      "trained_tokens": 8048,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 1171.611,
+      "iteration": 180,
+      "train_loss": 0.053271782398223874,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.20122352876662353,
+      "tokens_per_second": 10.061176438331175,
+      "trained_tokens": 9048,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 1290.233,
+      "iteration": 200,
+      "train_loss": 0.012237374484539033,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.17030836819216616,
+      "tokens_per_second": 8.472841317560267,
+      "trained_tokens": 10043,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "valid",
+      "elapsed_seconds": 1488.133,
+      "iteration": 209,
+      "val_loss": 0.01944481022655964,
+      "val_time": 151.48341087508015
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 1547.502,
+      "iteration": 220,
+      "train_loss": 0.01841060519218445,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.19028185463322486,
+      "tokens_per_second": 9.33332496975968,
+      "trained_tokens": 11024,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 1677.429,
+      "iteration": 240,
+      "train_loss": 0.006751170754432679,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.15574512894796194,
+      "tokens_per_second": 7.888490781214273,
+      "trained_tokens": 12037,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 1786.406,
+      "iteration": 260,
+      "train_loss": 0.0427886813879013,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.1842269468479588,
+      "tokens_per_second": 9.561378541409061,
+      "trained_tokens": 13075,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "valid",
+      "elapsed_seconds": 2030.411,
+      "iteration": 279,
+      "val_loss": 0.018552646040916443,
+      "val_time": 146.55051495798398
+    },
+    {
+      "kind": "train",
+      "elapsed_seconds": 2035.01,
+      "iteration": 280,
+      "train_loss": 0.020533418655395506,
+      "learning_rate": 4.999999873689376e-05,
+      "iterations_per_second": 0.196401772557101,
+      "tokens_per_second": 9.535306057647254,
+      "trained_tokens": 14046,
+      "peak_memory": 5.263765604
+    },
+    {
+      "kind": "valid",
+      "elapsed_seconds": 2167.324,
+      "iteration": 280,
+      "val_loss": 0.018619678914546967,
+      "val_time": null
+    }
+  ],
+  "initial_adapter_sha256": "c902495a302606c15ac1c70d42e7aad39457985224d7ac27413a1e3e698a3760",
+  "selected_adapter_sha256": "1dda68b7b7305086b7dfb9b0c981ba7e0dd5b20aece819176da370ab1e8d6f6a",
+  "adapter_tensor_count": 112,
+  "trainable_parameters": 3670016,
+  "adapter_l2_change": 4.262068385791629,
+  "elapsed_seconds": 2167.46,
+  "peak_memory_bytes": 5263765604,
+  "test_used_for_selection": false,
+  "cloud_compute_used": false
+}

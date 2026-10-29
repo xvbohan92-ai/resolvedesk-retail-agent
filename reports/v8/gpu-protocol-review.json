@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "round": "v8",
+  "report_type": "independent_cpu_code_and_protocol_review",
+  "created_at_utc": "2026-10-29T05:02:07.344376+00:00",
+  "reviewer": "v7_controller",
+  "status": "passed_no_blocking_findings_in_reviewed_scope",
+  "source_sha256": {
+    "training/v8/verify_training.py": "b17297a62ff0060f1cadc9a3f0cbdc857576edfabebe4968c6a79dafb2b1ccb5",
+    "training/v8/cuda_train.py": "cfcda039ede79b40af30679939182177e15fe324eb55f8769b07d5cd87e4cdb6",
+    "training/v8/cuda_evaluate.py": "0b05eb3dea9010c8595a17fac4408900887b0c03e463d94687a2809d0688a5fb",
+    "training/v8/resource_guard.py": "866366d65c92d73c80af819280e5038b556a61240046e5abc3f95c7b7317b323",
+    "training/v8/config.json": "c88a790e7bb463d2555b95f1fe07a65d8a3971f3b2f7ac4bca4e250fb7337b53",
+    "training/cuda_eval/evaluation.py": "c1f5f693bd73cd34bbc7e2b7ea82209df3581f14a592d22e8d342f55041cff4e",
+    "training/cuda_eval/provider.py": "75a1d587f31e8e8b0939424ff4af23f14256b809636cf22445b2e811cf111f4b",
+    "training/cuda_torch/model.py": "d14b21fbccf93099168cf459313b77cfa8da470d8139497c74b507c25cb4dbea",
+    "training/v7/train.py": "5ce0ff7d78b32ad67a7e0756ffce522ca019968f3e6b8c26cd8a8cb69e2e1464",
+    "training/v7/tokenization.py": "956ca58a86b9d3e93bf218906690a3c3be6b672efabca65eb6e8acaec27f70ce"
+  },
+  "checked": [
+    {
+      "area": "actual_predecessor_initialization",
+      "method": "source_review_and_CPU_saved_weight_tests",
+      "finding": "The legacy loader supplies the fixed base and LoRA structure; all112 F32 tensors from the actual prior33fe final1344 adapter are installed before initial-peft export and optimizer creation. Formal initialization is checked numerically against the physical prior adapter."
+    },
+    {
+      "area": "fixed_training_and_sampling",
+      "method": "independent_source_comparison",
+      "finding": "Fresh discarded4-step smoke and fresh1344-step formal training use LR2e-6; no checkpoint candidates, resume or test selection. recompute_data_audit reconstructs the seeded alternating shuffled pools independently and compares every schedule entry plus measured row/case coverage."
+    },
+    {
+      "area": "full_context_and_weighted_tail",
+      "method": "source_comparison_with_frozen_projection_and_tokenization_helpers",
+      "finding": "The independent padding formula matches projection_batch. Every physical training row is re-tokenized offline with the pinned local HF tokenizer, full3200-token bound, zero prompt supervision and all positive completion weights inside the192-position tail; permission8 and reason4 token totals are recomputed. This review did not execute the future post-training recomputation against a V8 training report."
+    },
+    {
+      "area": "optimizer_history",
+      "method": "source_review_and_corruption_tests",
+      "finding": "All recorded formal1344 and smoke4 updates require contiguous real-step counts, frozen sample indices/buckets, finite nonnegative loss, finite positive gradient norm and adapter change, finite elapsed times, nondecreasing scaler and bounded integer CUDA memory counters. CPU audit checks recorded evidence; it does not recompute gradients."
+    },
+    {
+      "area": "physical_proof_identity_chain",
+      "method": "source_review_and_CPU_numeric_and_detached_proof_tests",
+      "finding": "Physical prior/initial/final SHA, exact112 initialization tensors, finite F32 values and positive3,670,016-parameter update are checked. Proof initializer/final/training-plan/report SHA cross-bind to sealed identity and actual files before inference. Smoke tensors are independently checked and discarded."
+    },
+    {
+      "area": "matched_inference_and_raw_calls",
+      "method": "source_review_and_fake_provider_CPU_tests",
+      "finding": "One base load has a durable loader-audit receipt referenced by validation and test. Arm installation swaps all112 sealed tensors. Preserved greedy512-token provider and same12-total-call scorer retain raw output and journal a started call before generation. Interruption is retained without retry; every corrective call consumes the same budget."
+    },
+    {
+      "area": "resource_and_deadline_binding",
+      "method": "source_review_and_CPU_failure_injection_tests",
+      "finding": "A new V8 human resource receipt is required and hash-bound at phase start, each training step/model call and successful completion. The process deadline invokes stop in finally even if audit-file creation fails. A process stop is explicitly not a guarantee that the billed VM is released."
+    }
+  ],
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 training/.venv/bin/python -B -m pytest -q -p no:cacheprovider tests/test_v8_training_evidence.py tests/test_v8_saved_weight_proof.py tests/test_v8_evaluation_protocol.py tests/test_v8_resource_guard.py",
+    "result": "51 passed",
+    "execution": "CPU only; fake provider or controlled temporary proof/history fixtures; no full model instantiated",
+    "actual_new_V8_training_report_verified": false
+  },
+  "resolved_during_review": [
+    {
+      "finding": "Positive infinity in both recorded CUDA memory fields passed the prior range-only comparison.",
+      "resolution": "Parent added strict integer-byte validation and a corruption regression; final focused suite51 passed.",
+      "current_status": "resolved"
+    },
+    {
+      "finding": "Non-atomic report writes could expose a partial JSON document to a concurrent snapshot reader.",
+      "resolution": "write_json now delegates to the preserved write_atomic helper: flush/fsync a temporary file then replace the report. A CPU temporary-directory probe verified the old JSON stays intact until replacement and the new complete JSON is visible afterwards. This changes report IO only, not learning or evaluation.",
+      "current_status": "resolved"
+    }
+  ],
+  "open_blocking_findings": [],
+  "limitations": [
+    "No V8 CUDA smoke, formal training, validation or held-out inference was run by this review.",
+    "No future V8 training proof, weights or quality result is asserted by this receipt.",
+    "CPU history verification audits saved evidence and physical tensor values, not independently recomputed optimizer gradients.",
+    "UI consumption monitoring and VM release remain external resource controls; a wall-clock deadline is not an automatic compute-unit meter.",
+    "Synthetic cohort performance and direct-return/real-operation-change semantics remain subject to the separately declared evaluation scope."
+  ],
+  "source_edits_by_reviewer": [],
+  "model_or_cloud_calls": 0
+}

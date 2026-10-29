@@ -1,0 +1,27 @@
+{
+  "started_at_utc": "2026-10-28T20:00:14.663304+00:00",
+  "pid": 19023,
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "-B",
+    "-m",
+    "training.cuda_torch.train",
+    "--kind",
+    "train",
+    "--steps",
+    "1344"
+  ],
+  "source_zip_sha256": "77334c8ebba2c55c5a4e226c41e9a41bd76f65a6b3467a799132828f3e893a7b",
+  "smoke_report_sha256": "98c1e0ffd74f3ae247eb466fce4f9130bb0d96ef1feb30578b46fc891aafd940",
+  "free_gpu_only": true,
+  "fresh_predecessor_optimizer": true,
+  "smoke_weights_reused": false,
+  "scope": "Separate FP16 LoRA run, not a new accuracy benchmark",
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "372aed645cb57f8a8bd153aab6d98cad93bc14d199c723489e7c4dd61a28ccc3",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Private non-retail account/authorization and machine-path metadata omitted. Original verification claims refer to historical unredacted local artifacts, not these public bytes."
+  }
+}

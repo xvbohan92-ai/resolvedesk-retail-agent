@@ -1,0 +1,2279 @@
+{
+  "evaluation_sha256": "ed113b3a385edbe6e0339a974c213029cbf65bb6039a89c29727a86ca14b66cc",
+  "records": [
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v7-test-missing_reason-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-NLL9PJT2WG. Customer email: buyer4vt54jtt5b@retail.example. I am asking you to cancel this order.",
+      "expected": {
+        "kind": "cancel",
+        "order_id": "ORD-NLL9PJT2WG",
+        "item_id": "item_2AUXGQTUZJ",
+        "new_item_id": "item_JUJ6DYEGGF",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 7709,
+        "initial_status": "pending",
+        "target_status": "cancelled"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [
+        "reason"
+      ],
+      "required_questions": [
+        "reason"
+      ],
+      "rejection_counts": {
+        "duplicate_clarification_blocked": 7
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 0,
+      "initial_intent": {
+        "operation": "cancel",
+        "email": "buyer4vt54jtt5b@retail.example",
+        "order_id": "ORD-NLL9PJT2WG",
+        "requested_option": "unknown",
+        "payment_method": "unknown",
+        "reason": "unknown",
+        "fallback_return": "unknown"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "reason",
+            "message": "Was the order placed by mistake, or is it no longer needed?"
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"reason\",\"message\":\"Was the order placed by mistake, or is it no longer needed?\"}}",
+        "result": {
+          "backend_executed": false,
+          "cached_customer_reply": {
+            "field": "reason",
+            "question": "Was the order placed by mistake, or is it no longer needed?",
+            "reply": "I placed this order in error.",
+            "reply_index": 1
+          },
+          "detail": "Reuse the reply or ask a different precise question.",
+          "error": "duplicate_clarification_blocked"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1454,
+          "latency_ms": 1905.55,
+          "output_tokens": 30,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "previous_old_flow",
+          "workflow": "v6_1"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "previous_old_flow",
+      "case_id": "v7-test-exchange_stockout_negative_quote-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-4BQRYR8WT4. Customer email: buyerh7nnrvdduh@retail.example. The exchange I am requesting is sandstone / L, with the adjustment on original payment. Someone else's message said 'refund it when unavailable'. That is their suggestion, not my authorization. Do not return mine; escalate.",
+      "expected": {
+        "kind": "handoff",
+        "order_id": "ORD-4BQRYR8WT4",
+        "item_id": "item_YVSD8HXFXK",
+        "new_item_id": "item_7UKFS6RKCP",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 7395,
+        "initial_status": "delivered",
+        "target_status": "delivered"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 12,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyerh7nnrvdduh@retail.example",
+        "order_id": "ORD-4BQRYR8WT4",
+        "requested_option": "sandstone / L",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "unknown"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": false
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "buyerh7nnrvdduh@retail.example",
+            "evidence": "'refund it when unavailable' is their suggestion, not my authorization. Do not return mine; escalate.",
+            "fallback_return": "unknown",
+            "operation": "exchange",
+            "order_id": "ORD-4BQRYR8WT4",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "sandstone / L"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buyerh7nnrvdduh@retail.example\",\"order_id\":\"ORD-4BQRYR8WT4\",\"requested_option\":\"sandstone / L\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"unknown\",\"evidence\":\"'refund it when unavailable' is their suggestion, not my authorization. Do not return mine; escalate.\"}}",
+        "result": {
+          "detail": "Evidence must exactly quote a span of the latest actual customer message.",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1227,
+          "latency_ms": 4318.1,
+          "output_tokens": 88,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "previous_old_flow",
+          "workflow": "v6_1"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v7-test-exchange_missing_payment-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-THWLXVHD3S. Customer email: buyer73xgxtf2gt@retail.example. Arrange an item exchange into sandstone / L for me. Returning the original article is within my authorization, provided the exact exchange option cannot be supplied.",
+      "expected": {
+        "kind": "exchange",
+        "order_id": "ORD-THWLXVHD3S",
+        "item_id": "item_UVAEGVFYL4",
+        "new_item_id": "item_SY8S8CZNPU",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 1950,
+        "initial_status": "delivered",
+        "target_status": "exchange requested"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 10,
+      "actual_questions": [
+        "payment_method"
+      ],
+      "required_questions": [
+        "payment_method"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 2,
+        "invalid_action_json": 3
+      },
+      "quote_rejections": 2,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 5,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyer73xgxtf2gt@retail.example",
+        "order_id": "ORD-THWLXVHD3S",
+        "requested_option": "sandstone / L",
+        "payment_method": "unknown",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": null,
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"email\":\"buyer73xgxtf2gt@retail.example\",\"fallback_return\":\"yes\",\"operation\":\"exchange\",\"order_id\":\"ORD-THWLXVHD3S\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"requested_option\":\"sandstone / L\"}}",
+        "result": {
+          "backend_executed": false,
+          "detail": "Unknown tool or incorrect argument keys",
+          "error": "invalid_action_json",
+          "recovery": {
+            "exhausted": true,
+            "instruction": "Validation recovery budget exhausted; no operation was executed.",
+            "invalid_attempts_this_turn": 3,
+            "max_consecutive_invalid_actions": 3,
+            "remaining_correction_attempts": 0
+          },
+          "source_message_count": 2
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2105,
+          "latency_ms": 4860.57,
+          "output_tokens": 64,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "previous_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "failed"
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v7-test-exchange_stockout_question-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-NQKQJXCPHF. Customer email: buyert3bq823at5@retail.example. The exchange I am requesting is sandstone / L, with the adjustment on original payment. Could you describe the policy for a full return? I am requesting information and withholding authorization; contact a human if necessary.",
+      "expected": {
+        "kind": "handoff",
+        "order_id": "ORD-NQKQJXCPHF",
+        "item_id": "item_RG9DTNZT7X",
+        "new_item_id": "item_B37QN7XPKK",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 3516,
+        "initial_status": "delivered",
+        "target_status": "delivered"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 11,
+        "invalid_action_json": 1
+      },
+      "quote_rejections": 11,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyert3bq823at5@retail.example",
+        "order_id": "ORD-NQKQJXCPHF",
+        "requested_option": "sandstone / L",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "unknown"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": false
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "buyert3bq823at5@retail.example",
+            "evidence": "Please describe the policy for a full return?",
+            "fallback_return": "unknown",
+            "operation": "exchange",
+            "order_id": "ORD-NQKQJXCPHF",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "sandstone / L"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buyert3bq823at5@retail.example\",\"order_id\":\"ORD-NQKQJXCPHF\",\"requested_option\":\"sandstone / L\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"unknown\",\"evidence\":\"Please describe the policy for a full return?\"}}",
+        "result": {
+          "detail": "Evidence must exactly quote a span of the latest actual customer message.",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1546,
+          "latency_ms": 4474.37,
+          "output_tokens": 78,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.002,
+          "variant": "previous_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "previous_new_flow",
+      "case_id": "v7-test-exchange_fallback_missing_payment-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-T6EJNN6UM3. Customer email: buyerq6hrjv5fug@retail.example. Arrange an item exchange into sandstone / L for me. When inventory cannot support the named replacement, arranging a return has my explicit approval.",
+      "expected": {
+        "kind": "return",
+        "order_id": "ORD-T6EJNN6UM3",
+        "item_id": "item_5N5QFD2RXB",
+        "new_item_id": "item_6Z5FCRYJ48",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 4476,
+        "initial_status": "delivered",
+        "target_status": "return requested"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 11,
+      "actual_questions": [
+        "payment_method"
+      ],
+      "required_questions": [
+        "payment_method"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 3,
+        "invalid_action_json": 3
+      },
+      "quote_rejections": 3,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 6,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyerq6hrjv5fug@retail.example",
+        "order_id": "ORD-T6EJNN6UM3",
+        "requested_option": "sandstone / L",
+        "payment_method": "unknown",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": null,
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"email\":\"buyerq6hrjv5fug@retail.example\",\"fallback_return\":\"yes\",\"operation\":\"exchange\",\"order_id\":\"ORD-T6EJNN6UM3\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"requested_option\":\"sandstone / L\"}}",
+        "result": {
+          "backend_executed": false,
+          "detail": "Unknown tool or incorrect argument keys",
+          "error": "invalid_action_json",
+          "recovery": {
+            "exhausted": true,
+            "instruction": "Validation recovery budget exhausted; no operation was executed.",
+            "invalid_attempts_this_turn": 3,
+            "max_consecutive_invalid_actions": 3,
+            "remaining_correction_attempts": 0
+          },
+          "source_message_count": 2
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2114,
+          "latency_ms": 5021.17,
+          "output_tokens": 64,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "previous_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "failed"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-missing_reason-00",
+      "initial_request": "Requested handling of my purchase: I am asking you to cancel this order. Order reference: ORD-WYP7R9G73J. Customer email: buyeryup6s5m9v9@retail.example.",
+      "expected": {
+        "kind": "cancel",
+        "order_id": "ORD-WYP7R9G73J",
+        "item_id": "item_ZPG6XJQ6WL",
+        "new_item_id": "item_MFFPGMZJ76",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 6122,
+        "initial_status": "pending",
+        "target_status": "cancelled"
+      },
+      "observed_outcome": "cancel",
+      "model_calls": 5,
+      "actual_questions": [],
+      "required_questions": [
+        "reason"
+      ],
+      "rejection_counts": {
+        "resolution_gate_rejection": 1
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 1,
+      "initial_intent": {
+        "operation": "cancel",
+        "email": "buyeryup6s5m9v9@retail.example",
+        "order_id": "ORD-WYP7R9G73J",
+        "requested_option": "unknown",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "fallback_return": "unknown"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": false,
+        "reason": false,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-WYP7R9G73J",
+            "reason": "no longer needed"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-WYP7R9G73J\",\"reason\":\"no longer needed\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 6122,
+            "arguments": {
+              "order_id": "ORD-WYP7R9G73J",
+              "reason": "no longer needed"
+            },
+            "fingerprint": "93b8dcd1214d4aa2c591830eb019a9264c6597c227bd7cd63839057e69089ed7",
+            "id": "3408d08097053668d66698aea3b11226",
+            "kind": "cancel",
+            "order_id": "ORD-WYP7R9G73J",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1575,
+          "latency_ms": 2701.44,
+          "output_tokens": 30,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "completed"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-missing_reason-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-NLL9PJT2WG. Customer email: buyer4vt54jtt5b@retail.example. I am asking you to cancel this order.",
+      "expected": {
+        "kind": "cancel",
+        "order_id": "ORD-NLL9PJT2WG",
+        "item_id": "item_2AUXGQTUZJ",
+        "new_item_id": "item_JUJ6DYEGGF",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 7709,
+        "initial_status": "pending",
+        "target_status": "cancelled"
+      },
+      "observed_outcome": "cancel",
+      "model_calls": 5,
+      "actual_questions": [],
+      "required_questions": [
+        "reason"
+      ],
+      "rejection_counts": {
+        "resolution_gate_rejection": 1
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 0,
+      "initial_intent": {
+        "operation": "cancel",
+        "email": "buyer4vt54jtt5b@retail.example",
+        "order_id": "ORD-NLL9PJT2WG",
+        "requested_option": "unknown",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "fallback_return": "unknown"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": false,
+        "reason": false,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-NLL9PJT2WG",
+            "reason": "no longer needed"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-NLL9PJT2WG\",\"reason\":\"no longer needed\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 7709,
+            "arguments": {
+              "order_id": "ORD-NLL9PJT2WG",
+              "reason": "no longer needed"
+            },
+            "fingerprint": "c3942dcf32c703964abbf6c3ca3f473fb6c924d8f3c9615b88b6cc5c3a2b0f1c",
+            "id": "92e705d5737e2b03388628dbbce04186",
+            "kind": "cancel",
+            "order_id": "ORD-NLL9PJT2WG",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1510,
+          "latency_ms": 2534.54,
+          "output_tokens": 28,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "awaiting_customer"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-missing_payment-00",
+      "initial_request": "Requested handling of my purchase: The requested resolution is to return my purchased article. Order reference: ORD-J9WX3NGCZU. Customer email: buyerbkfqlnl96s@retail.example.",
+      "expected": {
+        "kind": "return",
+        "order_id": "ORD-J9WX3NGCZU",
+        "item_id": "item_TYDQHQPJHR",
+        "new_item_id": "item_S8NW4JLS2Q",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 6242,
+        "initial_status": "delivered",
+        "target_status": "return requested"
+      },
+      "observed_outcome": "return",
+      "model_calls": 4,
+      "actual_questions": [],
+      "required_questions": [
+        "payment_method"
+      ],
+      "rejection_counts": {},
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 0,
+      "initial_intent": {
+        "operation": "return",
+        "email": "buyerbkfqlnl96s@retail.example",
+        "order_id": "ORD-J9WX3NGCZU",
+        "requested_option": "unknown",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "unknown"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": false,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_TYDQHQPJHR",
+            "order_id": "ORD-J9WX3NGCZU",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-J9WX3NGCZU\",\"item_id\":\"item_TYDQHQPJHR\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 6242,
+            "arguments": {
+              "item_id": "item_TYDQHQPJHR",
+              "order_id": "ORD-J9WX3NGCZU",
+              "payment_method": "original"
+            },
+            "fingerprint": "268451108d4a5b53e24a04eb237258c40aad987321b3ef7dfe0018208c7eb1e6",
+            "id": "c5e1106eeb06e81d70ed201e4794d8de",
+            "item_id": "item_TYDQHQPJHR",
+            "kind": "return",
+            "order_id": "ORD-J9WX3NGCZU",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1409,
+          "latency_ms": 2616.75,
+          "output_tokens": 41,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "completed"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-missing_payment-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-ZPFVWCME8L. Customer email: buyer9tnvztkb68@retail.example. The requested resolution is to return my purchased article.",
+      "expected": {
+        "kind": "return",
+        "order_id": "ORD-ZPFVWCME8L",
+        "item_id": "item_78YULLAQ6Q",
+        "new_item_id": "item_8C2JB4CY7H",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 7584,
+        "initial_status": "delivered",
+        "target_status": "return requested"
+      },
+      "observed_outcome": "return",
+      "model_calls": 5,
+      "actual_questions": [],
+      "required_questions": [
+        "payment_method"
+      ],
+      "rejection_counts": {
+        "resolution_gate_rejection": 1
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 1,
+      "initial_intent": {
+        "operation": "return",
+        "email": "buyer9tnvztkb68@retail.example",
+        "order_id": "ORD-ZPFVWCME8L",
+        "requested_option": "unknown",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "unknown"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": false,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_78YULLAQ6Q",
+            "order_id": "ORD-ZPFVWCME8L",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-ZPFVWCME8L\",\"item_id\":\"item_78YULLAQ6Q\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 7584,
+            "arguments": {
+              "item_id": "item_78YULLAQ6Q",
+              "order_id": "ORD-ZPFVWCME8L",
+              "payment_method": "original"
+            },
+            "fingerprint": "edc7fc9163c389ad718a3776ed08b3f0ba851df02897cfd5a927a96e7dbd91f8",
+            "id": "e8fb091c65306816b61fa88cd5a0bce3",
+            "item_id": "item_78YULLAQ6Q",
+            "kind": "return",
+            "order_id": "ORD-ZPFVWCME8L",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1610,
+          "latency_ms": 3739.97,
+          "output_tokens": 40,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "awaiting_customer"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange-00",
+      "initial_request": "Requested handling of my purchase: The exchange I am requesting is amethyst / S, with the adjustment on original payment. Order reference: ORD-N4VRTP2JQT. Customer email: buyerpzvvhjmkvk@retail.example.",
+      "expected": {
+        "kind": "exchange",
+        "order_id": "ORD-N4VRTP2JQT",
+        "item_id": "item_6E4AM4JLTL",
+        "new_item_id": "item_HGXF59MJWR",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 1100,
+        "initial_status": "delivered",
+        "target_status": "exchange requested"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buypertzvvhjmkvk@retail.example",
+        "order_id": "ORD-N4VRTP2JQT",
+        "requested_option": "amethyst / S",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": false,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": false
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "buypertzvvhjmkvk@retail.example",
+            "evidence": "The exchange I am requesting is amethyst / S, with the adjustment on original payment.",
+            "fallback_return": "yes",
+            "operation": "exchange",
+            "order_id": "ORD-N4VRTP2JQT",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "amethyst / S"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buypertzvvhjmkvk@retail.example\",\"order_id\":\"ORD-N4VRTP2JQT\",\"requested_option\":\"amethyst / S\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"The exchange I am requesting is amethyst / S, with the adjustment on original payment.\"}}",
+        "result": {
+          "detail": "email is not grounded in actual customer text",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1449,
+          "latency_ms": 4077.71,
+          "output_tokens": 84,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-missing_email-00",
+      "initial_request": "Requested handling of my purchase: Arrange to take the entire purchased item back and credit original payment. Order reference: ORD-NBDCAKPQYP.",
+      "expected": {
+        "kind": "return",
+        "order_id": "ORD-NBDCAKPQYP",
+        "item_id": "item_8JW6XYGN88",
+        "new_item_id": "item_T3B7PSU28J",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 7347,
+        "initial_status": "delivered",
+        "target_status": "return requested"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [
+        "email"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "return",
+        "email": "customer@example.com",
+        "order_id": "ORD-NBDCAKPQYP",
+        "requested_option": "credit original payment",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": false,
+        "order_id": true,
+        "requested_option": false,
+        "payment_method": true,
+        "reason": false,
+        "fallback_return": false
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "customer@example.com",
+            "evidence": "Arrange to take the entire purchased item back and credit original payment.",
+            "fallback_return": "yes",
+            "operation": "return",
+            "order_id": "ORD-NBDCAKPQYP",
+            "payment_method": "original",
+            "reason": "no longer needed",
+            "requested_option": "credit original payment"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"return\",\"email\":\"customer@example.com\",\"order_id\":\"ORD-NBDCAKPQYP\",\"requested_option\":\"credit original payment\",\"payment_method\":\"original\",\"reason\":\"no longer needed\",\"fallback_return\":\"yes\",\"evidence\":\"Arrange to take the entire purchased item back and credit original payment.\"}}",
+        "result": {
+          "detail": "email is not grounded in actual customer text",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1385,
+          "latency_ms": 3905.31,
+          "output_tokens": 70,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange_missing_payment-00",
+      "initial_request": "Requested handling of my purchase: Arrange an item exchange into amethyst / S for me. A return is an approved alternative in the specific circumstance that you cannot fulfill my named replacement. Order reference: ORD-FC5YBTNKWQ. Customer email: buyer59bv4ajxhq@retail.example.",
+      "expected": {
+        "kind": "exchange",
+        "order_id": "ORD-FC5YBTNKWQ",
+        "item_id": "item_ZUQH9UWBNA",
+        "new_item_id": "item_422LKLQL3N",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 1100,
+        "initial_status": "delivered",
+        "target_status": "exchange requested"
+      },
+      "observed_outcome": "exchange",
+      "model_calls": 5,
+      "actual_questions": [],
+      "required_questions": [
+        "payment_method"
+      ],
+      "rejection_counts": {},
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 0,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyer59bv4ajxhq@retail.example",
+        "order_id": "ORD-FC5YBTNKWQ",
+        "requested_option": "amethyst / S",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": false,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_ZUQH9UWBNA",
+            "new_item_id": "item_422LKLQL3N",
+            "order_id": "ORD-FC5YBTNKWQ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-FC5YBTNKWQ\",\"item_id\":\"item_ZUQH9UWBNA\",\"new_item_id\":\"item_422LKLQL3N\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 1100,
+            "arguments": {
+              "item_id": "item_ZUQH9UWBNA",
+              "new_item_id": "item_422LKLQL3N",
+              "order_id": "ORD-FC5YBTNKWQ",
+              "payment_method": "original"
+            },
+            "fingerprint": "6309faa5030bfbf680a428ea529de6cfcc905abbf5699f26e604aab5c98b3a85",
+            "id": "720aea1e7a87b111201fdf1a6872e759",
+            "item_id": "item_ZUQH9UWBNA",
+            "kind": "exchange",
+            "new_item_id": "item_422LKLQL3N",
+            "order_id": "ORD-FC5YBTNKWQ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1734,
+          "latency_ms": 3558.12,
+          "output_tokens": 56,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "completed"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange_missing_payment-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-THWLXVHD3S. Customer email: buyer73xgxtf2gt@retail.example. Arrange an item exchange into sandstone / L for me. Returning the original article is within my authorization, provided the exact exchange option cannot be supplied.",
+      "expected": {
+        "kind": "exchange",
+        "order_id": "ORD-THWLXVHD3S",
+        "item_id": "item_UVAEGVFYL4",
+        "new_item_id": "item_SY8S8CZNPU",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 1950,
+        "initial_status": "delivered",
+        "target_status": "exchange requested"
+      },
+      "observed_outcome": "exchange",
+      "model_calls": 5,
+      "actual_questions": [],
+      "required_questions": [
+        "payment_method"
+      ],
+      "rejection_counts": {},
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 0,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyer73xgxtf2gt@retail.example",
+        "order_id": "ORD-THWLXVHD3S",
+        "requested_option": "sandstone / L",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": false,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_UVAEGVFYL4",
+            "new_item_id": "item_SY8S8CZNPU",
+            "order_id": "ORD-THWLXVHD3S",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-THWLXVHD3S\",\"item_id\":\"item_UVAEGVFYL4\",\"new_item_id\":\"item_SY8S8CZNPU\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 1950,
+            "arguments": {
+              "item_id": "item_UVAEGVFYL4",
+              "new_item_id": "item_SY8S8CZNPU",
+              "order_id": "ORD-THWLXVHD3S",
+              "payment_method": "original"
+            },
+            "fingerprint": "23645fbdb939cdf20855703ae6f23d96c423cf369dfa54a01900aec71cfcb9d7",
+            "id": "f3058dd9664878c9e030be7c8a83c3ed",
+            "item_id": "item_UVAEGVFYL4",
+            "kind": "exchange",
+            "new_item_id": "item_SY8S8CZNPU",
+            "order_id": "ORD-THWLXVHD3S",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1717,
+          "latency_ms": 3839.0,
+          "output_tokens": 52,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "awaiting_customer"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange_stockout_missing_email-00",
+      "initial_request": "Requested handling of my purchase: The exchange I am requesting is amethyst / S, with the adjustment on original payment. Retain my original article when replacement fails. Sending it back is forbidden; let a person handle the issue. Order reference: ORD-LDXD9D2EAD.",
+      "expected": {
+        "kind": "handoff",
+        "order_id": "ORD-LDXD9D2EAD",
+        "item_id": "item_XLVJVR3L7F",
+        "new_item_id": "item_FUZWLUFXVA",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 5223,
+        "initial_status": "delivered",
+        "target_status": "delivered"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [
+        "email"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "customer@example.com",
+        "order_id": "ORD-LDXD9D2EAD",
+        "requested_option": "amethyst / S",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": false,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": false
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "customer@example.com",
+            "evidence": "Retain my original article when replacement fails.",
+            "fallback_return": "yes",
+            "operation": "exchange",
+            "order_id": "ORD-LDXD9D2EAD",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "amethyst / S"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"customer@example.com\",\"order_id\":\"ORD-LDXD9D2EAD\",\"requested_option\":\"amethyst / S\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"Retain my original article when replacement fails.\"}}",
+        "result": {
+          "detail": "email is not grounded in actual customer text",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1405,
+          "latency_ms": 3458.02,
+          "output_tokens": 67,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange_stockout_missing_email-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-L2Z78RSQFF. The exchange I am requesting is sandstone / L, with the adjustment on original payment. Retain my original article when replacement fails. Sending it back is forbidden; let a person handle the issue.",
+      "expected": {
+        "kind": "handoff",
+        "order_id": "ORD-L2Z78RSQFF",
+        "item_id": "item_VH6KS5SCJ8",
+        "new_item_id": "item_2KQHCKU9UJ",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 4798,
+        "initial_status": "delivered",
+        "target_status": "delivered"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [
+        "email"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "customer@example.com",
+        "order_id": "ORD-L2Z78RSQFF",
+        "requested_option": "sandstone / L",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": false,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": false
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "customer@example.com",
+            "evidence": "Retain my original article when replacement fails.",
+            "fallback_return": "yes",
+            "operation": "exchange",
+            "order_id": "ORD-L2Z78RSQFF",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "sandstone / L"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"customer@example.com\",\"order_id\":\"ORD-L2Z78RSQFF\",\"requested_option\":\"sandstone / L\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"Retain my original article when replacement fails.\"}}",
+        "result": {
+          "detail": "email is not grounded in actual customer text",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1406,
+          "latency_ms": 3803.25,
+          "output_tokens": 67,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.002,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange_stockout_negative_quote-00",
+      "initial_request": "Requested handling of my purchase: The exchange I am requesting is amethyst / S, with the adjustment on original payment. Someone else's message said 'refund it when unavailable'. That is their suggestion, not my authorization. Do not return mine; escalate. Order reference: ORD-TTF7S37DNB. Customer email: buyer2fkua5el7w@retail.example.",
+      "expected": {
+        "kind": "handoff",
+        "order_id": "ORD-TTF7S37DNB",
+        "item_id": "item_829FJ89JSZ",
+        "new_item_id": "item_SDDFUF4NMA",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 9434,
+        "initial_status": "delivered",
+        "target_status": "delivered"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 12,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyer2fkua5el7w@retail.example",
+        "order_id": "ORD-TTF7S37DNB",
+        "requested_option": "amethyst / S",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": false
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "buyer2fkua5el7w@retail.example",
+            "evidence": "'refund it when unavailable' is their suggestion, not my authorization.",
+            "fallback_return": "yes",
+            "operation": "exchange",
+            "order_id": "ORD-TTF7S37DNB",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "amethyst / S"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buyer2fkua5el7w@retail.example\",\"order_id\":\"ORD-TTF7S37DNB\",\"requested_option\":\"amethyst / S\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"'refund it when unavailable' is their suggestion, not my authorization.\"}}",
+        "result": {
+          "detail": "Evidence must exactly quote a span of the latest actual customer message.",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1477,
+          "latency_ms": 4518.17,
+          "output_tokens": 80,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.004,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange_stockout_negative_quote-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-4BQRYR8WT4. Customer email: buyerh7nnrvdduh@retail.example. The exchange I am requesting is sandstone / L, with the adjustment on original payment. Someone else's message said 'refund it when unavailable'. That is their suggestion, not my authorization. Do not return mine; escalate.",
+      "expected": {
+        "kind": "handoff",
+        "order_id": "ORD-4BQRYR8WT4",
+        "item_id": "item_YVSD8HXFXK",
+        "new_item_id": "item_7UKFS6RKCP",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 7395,
+        "initial_status": "delivered",
+        "target_status": "delivered"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 12,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyerh7nnrvdduh@retail.example",
+        "order_id": "ORD-4BQRYR8WT4",
+        "requested_option": "sandstone / L",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "no"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "buyerh7nnrvdduh@retail.example",
+            "evidence": "'refund it when unavailable' is their suggestion, not my authorization. Do not return mine; escalate.",
+            "fallback_return": "no",
+            "operation": "exchange",
+            "order_id": "ORD-4BQRYR8WT4",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "sandstone / L"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buyerh7nnrvdduh@retail.example\",\"order_id\":\"ORD-4BQRYR8WT4\",\"requested_option\":\"sandstone / L\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"no\",\"evidence\":\"'refund it when unavailable' is their suggestion, not my authorization. Do not return mine; escalate.\"}}",
+        "result": {
+          "detail": "Evidence must exactly quote a span of the latest actual customer message.",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1499,
+          "latency_ms": 4472.69,
+          "output_tokens": 87,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.003,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange_fallback_missing_payment-00",
+      "initial_request": "Requested handling of my purchase: Arrange an item exchange into amethyst / S for me. I authorize a full-item return subject to a stockout of precisely the replacement requested here. Order reference: ORD-6F8UJHEECC. Customer email: buyertcb8wgshvw@retail.example.",
+      "expected": {
+        "kind": "return",
+        "order_id": "ORD-6F8UJHEECC",
+        "item_id": "item_LMEBNAQBFM",
+        "new_item_id": "item_2HJYF9KBKP",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 5075,
+        "initial_status": "delivered",
+        "target_status": "return requested"
+      },
+      "observed_outcome": "return",
+      "model_calls": 6,
+      "actual_questions": [
+        "fallback_return"
+      ],
+      "required_questions": [
+        "payment_method"
+      ],
+      "rejection_counts": {},
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 0,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyertcb8wgshvw@retail.example",
+        "order_id": "ORD-6F8UJHEECC",
+        "requested_option": "amethyst / S",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": false,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_LMEBNAQBFM",
+            "order_id": "ORD-6F8UJHEECC",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-6F8UJHEECC\",\"item_id\":\"item_LMEBNAQBFM\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 5075,
+            "arguments": {
+              "item_id": "item_LMEBNAQBFM",
+              "order_id": "ORD-6F8UJHEECC",
+              "payment_method": "original"
+            },
+            "fingerprint": "289cc2a93708161fea5294171147998901c632bfb54414b019093a9f7cbecfab",
+            "id": "340386562d6f917e6a982e47bd24b415",
+            "item_id": "item_LMEBNAQBFM",
+            "kind": "return",
+            "order_id": "ORD-6F8UJHEECC",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2060,
+          "latency_ms": 4678.69,
+          "output_tokens": 41,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.002,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "completed"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange_fallback_missing_payment-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-T6EJNN6UM3. Customer email: buyerq6hrjv5fug@retail.example. Arrange an item exchange into sandstone / L for me. When inventory cannot support the named replacement, arranging a return has my explicit approval.",
+      "expected": {
+        "kind": "return",
+        "order_id": "ORD-T6EJNN6UM3",
+        "item_id": "item_5N5QFD2RXB",
+        "new_item_id": "item_6Z5FCRYJ48",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 4476,
+        "initial_status": "delivered",
+        "target_status": "return requested"
+      },
+      "observed_outcome": "return",
+      "model_calls": 7,
+      "actual_questions": [
+        "fallback_return"
+      ],
+      "required_questions": [
+        "payment_method"
+      ],
+      "rejection_counts": {
+        "resolution_gate_rejection": 1
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 0,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyerq6hrjv5fug@retail.example",
+        "order_id": "ORD-T6EJNN6UM3",
+        "requested_option": "sandstone / L",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": false,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_5N5QFD2RXB",
+            "order_id": "ORD-T6EJNN6UM3",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-T6EJNN6UM3\",\"item_id\":\"item_5N5QFD2RXB\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4476,
+            "arguments": {
+              "item_id": "item_5N5QFD2RXB",
+              "order_id": "ORD-T6EJNN6UM3",
+              "payment_method": "original"
+            },
+            "fingerprint": "42f0387ef71e12221ad0f1cbdfac2722ac619dd258b3e23e46267ebb800761ce",
+            "id": "f6b1b7ac6f33fbb8e6a9e24b8049bcb5",
+            "item_id": "item_5N5QFD2RXB",
+            "kind": "return",
+            "order_id": "ORD-T6EJNN6UM3",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2250,
+          "latency_ms": 6132.88,
+          "output_tokens": 42,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.003,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "awaiting_customer"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange_missing_email-00",
+      "initial_request": "Requested handling of my purchase: The exchange I am requesting is amethyst / S, with the adjustment on original payment. When inventory cannot support the named replacement, arranging a return has my explicit approval. Order reference: ORD-WHAPHH8KHM.",
+      "expected": {
+        "kind": "exchange",
+        "order_id": "ORD-WHAPHH8KHM",
+        "item_id": "item_SG46FNPW3X",
+        "new_item_id": "item_H7BWJBM4UM",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 1100,
+        "initial_status": "delivered",
+        "target_status": "exchange requested"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [
+        "email"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "customer@example.com",
+        "order_id": "ORD-WHAPHH8KHM",
+        "requested_option": "amethyst / S",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": false,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "customer@example.com",
+            "evidence": "When inventory cannot support the named replacement, arranging a return has my explicit approval.",
+            "fallback_return": "yes",
+            "operation": "exchange",
+            "order_id": "ORD-WHAPHH8KHM",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "amethyst / S"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"customer@example.com\",\"order_id\":\"ORD-WHAPHH8KHM\",\"requested_option\":\"amethyst / S\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"When inventory cannot support the named replacement, arranging a return has my explicit approval.\"}}",
+        "result": {
+          "detail": "email is not grounded in actual customer text",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1416,
+          "latency_ms": 3982.63,
+          "output_tokens": 73,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.002,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-exchange_missing_email-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-B96D96HT8F. The exchange I am requesting is sandstone / L, with the adjustment on original payment. My authorization extends to the item's return only after the exact requested swap proves unavailable.",
+      "expected": {
+        "kind": "exchange",
+        "order_id": "ORD-B96D96HT8F",
+        "item_id": "item_BYSBTWRAYR",
+        "new_item_id": "item_YKHPYZMKWM",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 1950,
+        "initial_status": "delivered",
+        "target_status": "exchange requested"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [
+        "email"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "customer@example.com",
+        "order_id": "ORD-B96D96HT8F",
+        "requested_option": "sandstone / L",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": false,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "customer@example.com",
+            "evidence": "My authorization extends to the item's return only after the exact requested swap proves unavailable.",
+            "fallback_return": "yes",
+            "operation": "exchange",
+            "order_id": "ORD-B96D96HT8F",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "sandstone / L"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"customer@example.com\",\"order_id\":\"ORD-B96D96HT8F\",\"requested_option\":\"sandstone / L\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"My authorization extends to the item's return only after the exact requested swap proves unavailable.\"}}",
+        "result": {
+          "detail": "email is not grounded in actual customer text",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1429,
+          "latency_ms": 5169.92,
+          "output_tokens": 76,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.001,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-missing_email_payment-00",
+      "initial_request": "Requested handling of my purchase: The requested resolution is to return my purchased article. Order reference: ORD-5XATLSNELV.",
+      "expected": {
+        "kind": "return",
+        "order_id": "ORD-5XATLSNELV",
+        "item_id": "item_6M6KFSM9HY",
+        "new_item_id": "item_2Q83AVZRSU",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 4392,
+        "initial_status": "delivered",
+        "target_status": "return requested"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [
+        "email",
+        "payment_method"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "return",
+        "email": "customer@example.com",
+        "order_id": "ORD-5XATLSNELV",
+        "requested_option": "unknown",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "unknown"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": false,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": false,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "customer@example.com",
+            "evidence": "Requested handling of my purchase: The requested resolution is to return my purchased article.",
+            "fallback_return": "unknown",
+            "operation": "return",
+            "order_id": "ORD-5XATLSNELV",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "unknown"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"return\",\"email\":\"customer@example.com\",\"order_id\":\"ORD-5XATLSNELV\",\"requested_option\":\"unknown\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"unknown\",\"evidence\":\"Requested handling of my purchase: The requested resolution is to return my purchased article.\"}}",
+        "result": {
+          "detail": "email is not grounded in actual customer text",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1383,
+          "latency_ms": 4838.06,
+          "output_tokens": 70,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.003,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "base_new_flow",
+      "case_id": "v7-test-missing_email_payment-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-7HH9XKP8W5. The requested resolution is to return my purchased article.",
+      "expected": {
+        "kind": "return",
+        "order_id": "ORD-7HH9XKP8W5",
+        "item_id": "item_DFYAS6UR28",
+        "new_item_id": "item_6RX4FGULWW",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 8872,
+        "initial_status": "delivered",
+        "target_status": "return requested"
+      },
+      "observed_outcome": "return",
+      "model_calls": 8,
+      "actual_questions": [
+        "email"
+      ],
+      "required_questions": [
+        "email",
+        "payment_method"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 3
+      },
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 3,
+      "initial_intent": {
+        "operation": "return",
+        "email": "customer@example.com",
+        "order_id": "ORD-7HH9XKP8W5",
+        "requested_option": "unknown",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "unknown"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": false,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": false,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_DFYAS6UR28",
+            "order_id": "ORD-7HH9XKP8W5",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-7HH9XKP8W5\",\"item_id\":\"item_DFYAS6UR28\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 8872,
+            "arguments": {
+              "item_id": "item_DFYAS6UR28",
+              "order_id": "ORD-7HH9XKP8W5",
+              "payment_method": "original"
+            },
+            "fingerprint": "fd2a44f416b7c07a42ca8fe8f8df918bb84dcdbcfb3c7a4946857a8a4a9e469b",
+            "id": "4cd8fe34d2eebd511e0a4445e2bf9ff7",
+            "item_id": "item_DFYAS6UR28",
+            "kind": "return",
+            "order_id": "ORD-7HH9XKP8W5",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1743,
+          "latency_ms": 4405.57,
+          "output_tokens": 41,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.002,
+          "variant": "base_new_flow",
+          "workflow": "v7"
+        }
+      },
+      "status": "awaiting_customer"
+    },
+    {
+      "variant": "qlora_v7",
+      "case_id": "v7-test-exchange_missing_option-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-HX3MD4BT4T. Customer email: buyervvg7jh84h2@retail.example. I am requesting a different option by exchange. Settle its adjustment on original payment. A return is an approved alternative in the specific circumstance that you cannot fulfill my named replacement.",
+      "expected": {
+        "kind": "exchange",
+        "order_id": "ORD-HX3MD4BT4T",
+        "item_id": "item_CWY8NZESPE",
+        "new_item_id": "item_TVX9BQD6JU",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 1100,
+        "initial_status": "delivered",
+        "target_status": "exchange requested"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [
+        "new_option"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 12,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyervvg7jh84h2@retail.example",
+        "order_id": "ORD-HX3MD4BT4T",
+        "requested_option": "unknown",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "buyervvg7jh84h2@retail.example",
+            "evidence": "Exchange. Settle its adjustment on original payment. A return is an approved alternative in the specific circumstance that you cannot fulfill my named replacement.",
+            "fallback_return": "yes",
+            "operation": "exchange",
+            "order_id": "ORD-HX3MD4BT4T",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "unknown"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buyervvg7jh84h2@retail.example\",\"order_id\":\"ORD-HX3MD4BT4T\",\"requested_option\":\"unknown\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"Exchange. Settle its adjustment on original payment. A return is an approved alternative in the specific circumstance that you cannot fulfill my named replacement.\"}}",
+        "result": {
+          "detail": "Evidence must exactly quote a span of the latest actual customer message.",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1508,
+          "latency_ms": 5603.44,
+          "output_tokens": 93,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.002,
+          "variant": "qlora_v7",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "qlora_v7",
+      "case_id": "v7-test-exchange_missing_payment-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-THWLXVHD3S. Customer email: buyer73xgxtf2gt@retail.example. Arrange an item exchange into sandstone / L for me. Returning the original article is within my authorization, provided the exact exchange option cannot be supplied.",
+      "expected": {
+        "kind": "exchange",
+        "order_id": "ORD-THWLXVHD3S",
+        "item_id": "item_UVAEGVFYL4",
+        "new_item_id": "item_SY8S8CZNPU",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 1950,
+        "initial_status": "delivered",
+        "target_status": "exchange requested"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [
+        "payment_method"
+      ],
+      "required_questions": [
+        "payment_method"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 7
+      },
+      "quote_rejections": 7,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 7,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyer73xgxtf2gt@retail.example",
+        "order_id": "ORD-THWLXVHD3S",
+        "requested_option": "sandstone / L",
+        "payment_method": "unknown",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "buyer73xgxtf2gt@retail.example",
+            "evidence": "Arrange an item exchange into sandstone / L for me. Returning the original article is within my authorization, provided the exact exchange option cannot be supplied.",
+            "fallback_return": "yes",
+            "operation": "exchange",
+            "order_id": "ORD-THWLXVHD3S",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "sandstone / L"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buyer73xgxtf2gt@retail.example\",\"order_id\":\"ORD-THWLXVHD3S\",\"requested_option\":\"sandstone / L\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"Arrange an item exchange into sandstone / L for me. Returning the original article is within my authorization, provided the exact exchange option cannot be supplied.\"}}",
+        "result": {
+          "detail": "Evidence must exactly quote a span of the latest actual customer message.",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2117,
+          "latency_ms": 8145.66,
+          "output_tokens": 98,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.002,
+          "variant": "qlora_v7",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "qlora_v7",
+      "case_id": "v7-test-exchange_stockout_question-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-NQKQJXCPHF. Customer email: buyert3bq823at5@retail.example. The exchange I am requesting is sandstone / L, with the adjustment on original payment. Could you describe the policy for a full return? I am requesting information and withholding authorization; contact a human if necessary.",
+      "expected": {
+        "kind": "handoff",
+        "order_id": "ORD-NQKQJXCPHF",
+        "item_id": "item_RG9DTNZT7X",
+        "new_item_id": "item_B37QN7XPKK",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 3516,
+        "initial_status": "delivered",
+        "target_status": "delivered"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [],
+      "required_questions": [],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 12
+      },
+      "quote_rejections": 12,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 12,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyert3bq823at5@retail.example",
+        "order_id": "ORD-NQKQJXCPHF",
+        "requested_option": "sandstone / L",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "unknown"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": false
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "buyert3bq823at5@retail.example",
+            "evidence": "Please describe the policy for a full return? I am requesting information and withholding authorization; contact a human if necessary.",
+            "fallback_return": "unknown",
+            "operation": "exchange",
+            "order_id": "ORD-NQKQJXCPHF",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "sandstone / L"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buyert3bq823at5@retail.example\",\"order_id\":\"ORD-NQKQJXCPHF\",\"requested_option\":\"sandstone / L\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"unknown\",\"evidence\":\"Please describe the policy for a full return? I am requesting information and withholding authorization; contact a human if necessary.\"}}",
+        "result": {
+          "detail": "Evidence must exactly quote a span of the latest actual customer message.",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1513,
+          "latency_ms": 6742.42,
+          "output_tokens": 92,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.002,
+          "variant": "qlora_v7",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    },
+    {
+      "variant": "qlora_v7",
+      "case_id": "v7-test-exchange_fallback_missing_payment-01",
+      "initial_request": "Please resolve the following order issue: Order reference: ORD-T6EJNN6UM3. Customer email: buyerq6hrjv5fug@retail.example. Arrange an item exchange into sandstone / L for me. When inventory cannot support the named replacement, arranging a return has my explicit approval.",
+      "expected": {
+        "kind": "return",
+        "order_id": "ORD-T6EJNN6UM3",
+        "item_id": "item_5N5QFD2RXB",
+        "new_item_id": "item_6Z5FCRYJ48",
+        "payment_method": "original",
+        "reason": "ordered by mistake",
+        "amount_cents": 4476,
+        "initial_status": "delivered",
+        "target_status": "return requested"
+      },
+      "observed_outcome": "unfinished",
+      "model_calls": 12,
+      "actual_questions": [
+        "payment_method"
+      ],
+      "required_questions": [
+        "payment_method"
+      ],
+      "rejection_counts": {
+        "policy_or_argument_rejection": 7
+      },
+      "quote_rejections": 7,
+      "slot_normalizations": 0,
+      "initial_raw_parse_failure": false,
+      "initial_enum_errors": {},
+      "enum_error_attempts": 0,
+      "enum_recovered": false,
+      "record_rejections": 7,
+      "initial_intent": {
+        "operation": "exchange",
+        "email": "buyerq6hrjv5fug@retail.example",
+        "order_id": "ORD-T6EJNN6UM3",
+        "requested_option": "sandstone / L",
+        "payment_method": "unknown",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      },
+      "intent_field_correct": {
+        "operation": true,
+        "email": true,
+        "order_id": true,
+        "requested_option": true,
+        "payment_method": true,
+        "reason": true,
+        "fallback_return": true
+      },
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "buyerq6hrjv5fug@retail.example",
+            "evidence": "Arrange an item exchange into sandstone / L for me. When inventory cannot support the named replacement, arranging a return has my explicit approval.",
+            "fallback_return": "yes",
+            "operation": "exchange",
+            "order_id": "ORD-T6EJNN6UM3",
+            "payment_method": "original",
+            "reason": "unknown",
+            "requested_option": "sandstone / L"
+          },
+          "tool": "record_request"
+        },
+        "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buyerq6hrjv5fug@retail.example\",\"order_id\":\"ORD-T6EJNN6UM3\",\"requested_option\":\"sandstone / L\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"Arrange an item exchange into sandstone / L for me. When inventory cannot support the named replacement, arranging a return has my explicit approval.\"}}",
+        "result": {
+          "detail": "Evidence must exactly quote a span of the latest actual customer message.",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 2122,
+          "latency_ms": 8486.57,
+          "output_tokens": 96,
+          "provider": "mlx",
+          "resource_wait_seconds": 0.002,
+          "variant": "qlora_v7",
+          "workflow": "v7"
+        }
+      },
+      "status": "running"
+    }
+  ],
+  "scope": "All failures retained; post-hoc diagnostics never select the checkpoint."
+}

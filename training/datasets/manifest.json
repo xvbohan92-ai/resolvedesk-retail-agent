@@ -1,0 +1,35 @@
+{
+  "cases": {
+    "train": 72,
+    "valid": 18,
+    "test": 27
+  },
+  "rows": {
+    "train": 256,
+    "valid": 64,
+    "test": 96
+  },
+  "files": {
+    "training/fixtures.py": "84a7c78eec2a4060ee858a93792a40de0be79c52610d1ade02dc0ce84577294b",
+    "training/prepare.py": "475b8cff1266a6ebf3d96ed0f3f46ac551aa570aee8d8bcc325ae1df2eefc1bc",
+    "training/scoring.py": "4408966c655a222f8d1a2aa1418594587a63163029c5477bebeacacd6db9eb6b",
+    "training/config.json": "3d68318d43e389b84763be509f1dc4491bff5413d0998d6a2078a5f43fa2b47d",
+    "resolve_desk/protocol.py": "7d48eca71522d12da7e889b0fcc3b939c1f8bae12460b64b8a8dc173ef6185a2",
+    "training/datasets/cases.json": "4175bcc6ac53b3ac267a9b001f630ef963424513d340f2475a2f7c37793492e3",
+    "training/datasets/train.jsonl": "88c58a44e0243341022698e95a46e18286e1b423d93efb86990509a2cf2fcff8",
+    "training/datasets/valid.jsonl": "9682e5339a693863c9a3beac4fc7ef475c4a2f8dd0c335c77241f7485743d99b",
+    "training/datasets/test.jsonl": "041f0f4f778b7285c4acd571fc03376455b3a5eafce652a70d11df89e78dc9a3"
+  },
+  "families": [
+    "cancel",
+    "missing_reason",
+    "return",
+    "missing_payment",
+    "exchange",
+    "exchange_fallback",
+    "forbidden_status",
+    "foreign_order",
+    "missing_email"
+  ],
+  "scope": "Self-authored synthetic English cases; disjoint IDs, numbers and request templates across splits; shared policy, schema, task families and author. Programmatic demonstrations; not human annotations, not official tau-bench scores, not real retailer outcomes."
+}

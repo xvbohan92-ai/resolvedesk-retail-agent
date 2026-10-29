@@ -1,0 +1,45 @@
+{
+  "model": "data/models/qwen3-4b-mlx",
+  "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+  "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+  "data": "training/v6_1/datasets",
+  "adapter_path": "data/finetuning/retail-qlora-v6/run",
+  "best_path": "data/finetuning/retail-qlora-v6_1/best",
+  "seed": 202610286,
+  "iters": 768,
+  "num_layers": 8,
+  "batch_size": 1,
+  "learning_rate": 8e-06,
+  "lora_parameters": {
+    "rank": 8,
+    "dropout": 0.0,
+    "scale": 16.0
+  },
+  "max_seq_length": 3072,
+  "steps_per_report": 16,
+  "steps_per_eval": 120,
+  "save_every": 240,
+  "tool_name_loss_weight": 1.0,
+  "generation_max_tokens": 512,
+  "generation_temperature": 0,
+  "max_agent_steps": 12,
+  "checkpoint_candidates_completed_updates": [
+    384,
+    768
+  ],
+  "checkpoint_selection": "Frozen validation-only: safety, unsupported affirmative permission predictions, balanced exchange/fallback/handoff/email success, overall, unnecessary handoff, repeats, calls. Ties choose earlier update.",
+  "evaluation_arms": [
+    "previous_old_flow",
+    "previous_new_flow",
+    "base_new_flow",
+    "qlora_v6"
+  ],
+  "runtime_policy": "V6 SFT weights; separately frozen validated scalar replies, literal option type checks and payment-before-consent workflow. Raw initial model slots are separately reported. All 48 new test interactions are unique.",
+  "promotion_rule": "All4fallback,14exchange,16handoff,8email; zero unsupported affirmative permission, unnecessary handoff, repeated field, exchange-as-return and unauthorized-return attempts; confirmations48; overall no lower than both new-flow comparators.",
+  "initialization": "data/finetuning/retail-qlora-v5/best",
+  "initialization_sha256": "a1ef4d4e201ba96e40286a19bf1e97d2ac8aee8b358b23f5586be580b4aadf6b",
+  "projection_window": 512,
+  "permission_slot_loss_weight": 8.0,
+  "training_updates_report": "reports/v6/updates.json",
+  "training_manifest": "training/v6/datasets/manifest.json"
+}

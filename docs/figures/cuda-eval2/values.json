@@ -1,0 +1,365 @@
+{
+  "summary": {
+    "predecessor_fp16": {
+      "tasks": 48,
+      "intent_tasks": 48,
+      "task_success": 46,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 14,
+      "fallback_tasks": 4,
+      "fallback_success": 3,
+      "handoff_tasks": 16,
+      "handoff_success": 16,
+      "missing_email_tasks": 8,
+      "missing_email_success": 8,
+      "authorized_tasks": 12,
+      "non_authorized_tasks": 36,
+      "true_permission_yes": 12,
+      "unsupported_permission_yes": 12,
+      "initial_raw_parse_failures": 0,
+      "initial_enum_error_tasks": 0,
+      "initial_reason_enum_error_tasks": 0,
+      "intent_field_correct": {
+        "operation": 48,
+        "email": 48,
+        "order_id": 48,
+        "requested_option": 47,
+        "payment_method": 47,
+        "reason": 48,
+        "fallback_return": 33
+      },
+      "intent_joint_correct": 31,
+      "declared_accept_choice_tasks": 24,
+      "declared_decline_choice_tasks": 24,
+      "accepted_confirmation_tasks": 16,
+      "declined_confirmation_tasks": 15,
+      "required_clarification_tasks": 18,
+      "required_clarification_fields": 20,
+      "required_clarification_tasks_obtained": 16,
+      "required_clarification_fields_obtained": 18,
+      "model_calls": 253,
+      "schema_valid": 253,
+      "initial_records_valid": 48,
+      "input_tokens": 360948,
+      "output_tokens": 11141,
+      "median_model_calls": 5.0,
+      "latency_p50_ms": 26420.120000000003,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 0,
+      "unnecessary_handoff_attempts": 1,
+      "unnecessary_handoff_executed": 1,
+      "enum_error_attempts": 0,
+      "reason_enum_errors": 0,
+      "record_rejections": 0,
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "policy_gate_rejections": 0,
+      "confirmation_preserved": 48,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "enum_error_tasks": 0,
+      "enum_recovered_tasks": 0,
+      "reason_enum_error_tasks": 0,
+      "reason_enum_recovered_tasks": 0
+    },
+    "cloud1344_fp16": {
+      "tasks": 48,
+      "intent_tasks": 48,
+      "task_success": 45,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 14,
+      "fallback_tasks": 4,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 16,
+      "missing_email_tasks": 8,
+      "missing_email_success": 8,
+      "authorized_tasks": 12,
+      "non_authorized_tasks": 36,
+      "true_permission_yes": 12,
+      "unsupported_permission_yes": 3,
+      "initial_raw_parse_failures": 0,
+      "initial_enum_error_tasks": 0,
+      "initial_reason_enum_error_tasks": 0,
+      "intent_field_correct": {
+        "operation": 48,
+        "email": 48,
+        "order_id": 48,
+        "requested_option": 47,
+        "payment_method": 47,
+        "reason": 48,
+        "fallback_return": 41
+      },
+      "intent_joint_correct": 39,
+      "declared_accept_choice_tasks": 24,
+      "declared_decline_choice_tasks": 24,
+      "accepted_confirmation_tasks": 16,
+      "declined_confirmation_tasks": 14,
+      "required_clarification_tasks": 18,
+      "required_clarification_fields": 20,
+      "required_clarification_tasks_obtained": 16,
+      "required_clarification_fields_obtained": 18,
+      "model_calls": 256,
+      "schema_valid": 256,
+      "initial_records_valid": 47,
+      "input_tokens": 361968,
+      "output_tokens": 11906,
+      "median_model_calls": 5.0,
+      "latency_p50_ms": 28424.585,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 11,
+      "unnecessary_handoff_attempts": 1,
+      "unnecessary_handoff_executed": 1,
+      "enum_error_attempts": 0,
+      "reason_enum_errors": 0,
+      "record_rejections": 12,
+      "quote_rejections": 12,
+      "slot_normalizations": 0,
+      "policy_gate_rejections": 0,
+      "confirmation_preserved": 48,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "enum_error_tasks": 0,
+      "enum_recovered_tasks": 0,
+      "reason_enum_error_tasks": 0,
+      "reason_enum_recovered_tasks": 0
+    }
+  },
+  "protocol_summary": {
+    "predecessor_fp16": {
+      "tasks": 48,
+      "gold_exchange_tasks": 30,
+      "raw_return_attempts": 3,
+      "return_attempts_without_scoped_yes": 0,
+      "return_proposals": 3,
+      "return_proposals_without_scoped_yes": 0,
+      "committed_returns": 2,
+      "committed_returns_without_scoped_yes": 0,
+      "final_return_orders": 2,
+      "final_returns_without_verified_commit": 0,
+      "declined_return_proposals": 1,
+      "rejected_return_attempts_without_scoped_yes": 0
+    },
+    "cloud1344_fp16": {
+      "tasks": 48,
+      "gold_exchange_tasks": 30,
+      "raw_return_attempts": 2,
+      "return_attempts_without_scoped_yes": 0,
+      "return_proposals": 2,
+      "return_proposals_without_scoped_yes": 0,
+      "committed_returns": 2,
+      "committed_returns_without_scoped_yes": 0,
+      "final_return_orders": 2,
+      "final_returns_without_verified_commit": 0,
+      "declined_return_proposals": 0,
+      "rejected_return_attempts_without_scoped_yes": 0
+    }
+  },
+  "paired": {
+    "both_pass": 45,
+    "both_fail": 2,
+    "improved": 0,
+    "regressed": 1
+  },
+  "family_success": {
+    "cancel": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_available_refusal": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_fallback": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 1
+    },
+    "exchange_fallback_available": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_fallback_missing_payment": {
+      "predecessor_fp16": 1,
+      "cloud1344_fp16": 1
+    },
+    "exchange_gift": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_missing_email": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_missing_option": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_missing_payment": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_shortfall": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_stockout_missing_email": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_stockout_negative_quote": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_stockout_question": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_stockout_unknown": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "exchange_unavailable": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "forbidden_status": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "foreign_order": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "missing_email": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "missing_email_payment": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "missing_payment": {
+      "predecessor_fp16": 1,
+      "cloud1344_fp16": 1
+    },
+    "missing_reason": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "return": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    },
+    "return_reject_exchange": {
+      "predecessor_fp16": 2,
+      "cloud1344_fp16": 2
+    }
+  },
+  "failures": [
+    {
+      "case_id": "cuda-fresh2-test-exchange_fallback-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": false
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+      "predecessor_fp16": false,
+      "cloud1344_fp16": false
+    },
+    {
+      "case_id": "cuda-fresh2-test-missing_payment-01",
+      "predecessor_fp16": false,
+      "cloud1344_fp16": false
+    }
+  ],
+  "failed_records": [
+    {
+      "variant": "predecessor_fp16",
+      "case_id": "cuda-fresh2-test-missing_payment-01",
+      "status": "awaiting_customer",
+      "model_calls": 4
+    },
+    {
+      "variant": "predecessor_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+      "status": "handoff",
+      "model_calls": 5
+    },
+    {
+      "variant": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-missing_payment-01",
+      "status": "awaiting_customer",
+      "model_calls": 4
+    },
+    {
+      "variant": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback-01",
+      "status": "running",
+      "model_calls": 12
+    },
+    {
+      "variant": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+      "status": "handoff",
+      "model_calls": 5
+    }
+  ],
+  "run_id": "resolvedesk-cuda-eval-002",
+  "previous_interrupted_run": {
+    "run_id": "resolvedesk-cuda-eval-001",
+    "status": "interrupted_final_state_unverified",
+    "analysis_plan_sha256": "cb08373c73938335659c018b13bd2ca31e76dda43a96b73e34bc3b0e30ce5866",
+    "archive_path": "../exports/resolvedesk-colab-eval-ready/resolvedesk-cuda-eval-midrun-20261028T233430Z.zip",
+    "archive_sha256": "5f94ca79b20997987d09d5849d645b9761fc000462f8de1a9e91801bcd6fc741",
+    "interruption_path": "reports/cuda-eval/interruption.json",
+    "interruption_sha256": "c13d710647e4599194e2667f2233a4efa962b8152f703688495d4acadd4ac209",
+    "snapshot_audit_path": "reports/cuda-eval/interrupted-snapshot-audit.json",
+    "snapshot_audit_sha256": "bbe4940ffc41c215c17cf4a0c578f5e4e19f5590776ef2ace6d49ce551fdeece",
+    "last_verified_completed_records": 84,
+    "last_verified_completed_record_calls": 744,
+    "last_verified_journal_entries": 755,
+    "last_verified_completed_journal_entries": 754,
+    "last_verified_started_journal_entries": 1,
+    "unresolved_call": {
+      "variant": "cloud1344_fp16",
+      "case_id": "cuda-fresh-test-exchange_stockout_negative_quote-00",
+      "call_index": 11,
+      "started_at_utc": "2026-10-28T23:34:27.932738+00:00",
+      "status": "started",
+      "request_sha256": "9604345fa02aa3fbf9a99bf4471a08e249862534fb3d26fc5cac2db87362d4ea"
+    },
+    "automatic_resume_allowed": false,
+    "old_outputs_pooled_or_replaced": false,
+    "scope": "Last snapshot only; later actual progress unknown. Original ambiguous calls never replayed."
+  },
+  "evaluation_sha256": "fdef73d02d70084717e919a7803b72ae56b5dc594e4b2b415047c276d0c9e38b",
+  "protocol_audit_sha256": "6d43138e2140f5705380df9db135ef5f00cdfe3fdc334cd66cf31bdcf4e92106",
+  "analysis_plan_sha256": "a547fd0790ad2003fcd3dc0a990b581484bf5decd30222c87499237fd236f704",
+  "verification_sha256": "a14ecbc3b00e436e7d880614e1c029ae1440ccf30a5c1cc8d092db0a8c65df15",
+  "training_report_sha256": "48dcc7e07f50ff9ca8ae06ad141a16d80dd837d1d9b841f24e933fb4373c4528",
+  "training_proof_sha256": "d64cbe9c016ae90401ae355bb0525d3cafebf10dda653cc20b1d79b8dc9042bd",
+  "artifact_identity_sha256": "f83a97af4775ac2c01bf82f5ff188de1743c010ec143c554b74a8309f7840d1e",
+  "analysis_source_sha256": "e38c78d6ca3fbcf3a1c5179ac065de258793ae4cac720d27316fd1edafb33111",
+  "metrics_source_sha256": "c602befafb4c288f283c2aa8e2feeb4ddaea478c1839e23f3c088460d343cd48",
+  "csv_sha256": "f8255949ff4e5538e4f2c1e3d76e4a2b49729699d4f5f054d613a93a2f3a020b",
+  "figure_sha256": {
+    "evaluation.png": "123c510f3ffff1388d768d50af5ac42e8090fcb086cffa265fdc5dc638bd0676",
+    "evaluation.svg": "2b08fd3549bb0e0da9b3c8dff5fdee86ddf5f90d4537de874156a52b43d005c0",
+    "intent.png": "2d955d3235f68df3c92f29be9b8d55c0854daba8528cbf725a0915ee40c67ba8",
+    "intent.svg": "4a3da5803ecfae1f0ed66f8d164b81d922e2f5f8429bbcfc281d5efa7cf63ebf",
+    "recovery.png": "79e61bb169251e0ceb3cf12c6bfadfcb7c5e934577ba36547c1a0a782afff3d6",
+    "recovery.svg": "0fc52925f6e98263c7ef23a6c493fade9e81fcbd7c06501cd7189ea6c1e13d01",
+    "families.png": "06ce5453a1a75c6385dfd78aebd8dafd789e070c4a16c60ef31e3b468aa5769b",
+    "families.svg": "a946287a5509feb27c663bcd7706be291b5517840ac227095cbd1c44b251256e",
+    "consent.png": "0e888d831b69cb791bf29210053b07f5b59696f5e4386caffa86756d5c6f93a6",
+    "consent.svg": "4fcc6d37cc93b018aa5859919f67e70650d8205591d9596770ec7373d968dbbd",
+    "training.png": "41274596e100b17d8536efe84087091b7b93d1cf88aa394d970f0c82c11da2b1",
+    "training.svg": "010a0b17628b1f3a9179e9c855653fd7932544e4b81a2d97dc3d4952a4568286"
+  }
+}

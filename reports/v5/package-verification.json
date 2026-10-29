@@ -1,0 +1,13 @@
+{
+  "installed_version": "0.5.0",
+  "packaged_worlds": 126,
+  "source_tree_imported": false,
+  "absent_reports_handled": true,
+  "test_worlds_blocked": true,
+  "wheel_sha256": "dd85e4c400c49134afd2818cf6fe1e285a1f2ee002201b3d638baff513200609",
+  "sdist_sha256": "86f9faad4822dc871bbd8719bf7ab18e9f84e0d7fa958ea7bd0b95d67a25149c",
+  "source_sha256": "75bd389a279fd7f7c6a967972adaf895852ffc06c51c9d0ee58ced34e12ff27b",
+  "offline_install": true,
+  "weights_and_credentials_excluded": true,
+  "build_receipt_excluded_from_own_archive": true
+}

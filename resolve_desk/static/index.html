@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ResolveDesk · Retail service workspace</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="/"
+        >r<span class="brand-dot">.</span> <span>resolvedesk</span></a
+      >
+      <p class="eyebrow side-label">SERVICE OPERATIONS</p>
+      <nav>
+        <button id="nav-work" class="nav active">
+          <span>▧</span> Case workspace <small>01</small>
+        </button>
+        <button id="nav-eval" class="nav">
+          <span>▥</span> Model evaluation <small>02</small>
+        </button>
+      </nav>
+      <div class="side-note">
+        <span class="tiny-dot"></span> LOCAL BY DESIGN
+        <p>A clear path from<br />request to resolution.</p>
+      </div>
+      <footer>RETAIL SANDBOX <span>v0.7.0</span></footer>
+    </aside>
+    <main>
+      <header>
+        <span>Workspace <b>/</b> Retail service</span>
+        <div id="health" class="health">Checking local models…</div>
+      </header>
+      <section id="work-page">
+        <div class="intro">
+          <div>
+            <p class="eyebrow">UNDERSTAND. ACT. VERIFY.</p>
+            <h1>Every request.<br /><em>A considered resolution.</em></h1>
+            <p class="lede">
+              A local retail agent that checks the order, proposes a clear
+              action,<br />and waits for your confirmation.
+            </p>
+          </div>
+          <div class="intro-stamp">
+            <span>RD</span>
+            <p>ENGLISH RETAIL<br />TEXT WORKSPACE</p>
+          </div>
+        </div>
+        <div class="notice">
+          Self-authored demo cases. Orders and payments are simulated; no money
+          moves and no email is sent.
+        </div>
+        <div class="workspace">
+          <section class="queue panel">
+            <div class="panel-heading">
+              <h2>Case library</h2>
+              <span class="count" id="case-count">—</span>
+            </div>
+            <p class="quiet small">
+              Validation examples · fresh sandbox per case
+            </p>
+            <div id="cases"></div>
+          </section>
+          <section class="conversation panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">CUSTOMER CONVERSATION</p>
+                <h2 id="case-title">Choose a case</h2>
+              </div>
+              <span id="status" class="status">Ready</span>
+            </div>
+            <div class="model-row">
+              <label for="provider">Local model</label
+              ><select id="provider">
+                <option value="ollama">Qwen3 · Ollama</option>
+                <option value="finetuned">QLoRA round 7 · enum recovery</option>
+              </select>
+            </div>
+            <p id="model-note" class="quiet small" hidden>
+              This selection opts into scoped consent with bounded intent
+              correction. Inspect its local evaluation and review each proposed
+              action. Default Ollama sessions retain the previous workflow.
+            </p>
+            <div id="conversation" class="messages">
+              <div class="empty">
+                Select a retail request to inspect its details.
+              </div>
+            </div>
+            <div id="intent-summary"></div>
+            <div id="consent-choice"></div>
+            <div id="proposal"></div>
+            <div id="request-edit">
+              <label for="initial-request" class="eyebrow"
+                >CUSTOMER REQUEST</label
+              >
+              <textarea
+                id="initial-request"
+                rows="4"
+                maxlength="2000"
+                placeholder="Write an English retail request for this sandbox customer…"
+              ></textarea>
+            </div>
+            <button id="start" class="primary wide" disabled>
+              Start this case <span>↗</span>
+            </button>
+            <form id="reply-form" hidden>
+              <label for="reply" class="eyebrow">YOUR REPLY</label
+              ><textarea
+                id="reply"
+                rows="2"
+                maxlength="2000"
+                placeholder="Provide the requested information, or change your request…"
+              ></textarea
+              ><button class="primary" id="send">Send reply ↗</button>
+            </form>
+            <div id="error" role="alert"></div>
+          </section>
+          <aside class="evidence-column">
+            <section class="panel order-panel">
+              <p class="eyebrow">ORDER STATE</p>
+              <h2>Changes you can inspect.</h2>
+              <div id="orders">
+                <p class="quiet">
+                  The sandbox order appears when the case starts.
+                </p>
+              </div>
+            </section>
+            <section class="panel trace-panel">
+              <div class="panel-heading">
+                <h2>Execution trace</h2>
+                <span id="trace-count" class="count">0</span>
+              </div>
+              <div id="trace">
+                <p class="quiet small">
+                  Actual model decisions and tool results appear here.
+                </p>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+      <section id="eval-page" hidden>
+        <div class="intro">
+          <div>
+            <p class="eyebrow">MEASURE THE OUTCOME</p>
+            <h1>From model updates<br /><em>to verified actions.</em></h1>
+            <p class="lede">
+              Separate workflow changes from model training. Final order state
+              matters.
+            </p>
+          </div>
+        </div>
+        <div class="model-row">
+          <label for="experiment">Experiment</label>
+          <select id="experiment">
+            <option value="v7">Round 7 · fresh 48-case test</option>
+            <option value="cuda_eval">Colab FP16 · round 1 interrupted</option>
+            <option value="cuda_eval2">Colab FP16 · independent round 2</option>
+            <option value="v6_1">Round 6 · archived 48-case test</option>
+            <option value="v6">Round 6 · retired development plan</option>
+            <option value="v5">Round 5 · archived 32-case test</option>
+            <option value="v4">Round 4 · archived 32-case test</option>
+            <option value="v3">Round 3 · archived 48-case test</option>
+            <option value="v2">Round 2 · archived 42-case test</option>
+            <option value="v1">Round 1 · archived 27-case test</option>
+          </select>
+        </div>
+        <div id="evaluation"></div>
+      </section>
+      <div class="bottom-note">
+        <span
+          >Local inference · Explicit confirmation · Inspectable evidence</span
+        ><span>RESOLVEDESK / RETAIL</span>
+      </div>
+    </main>
+    <script type="module" src="/static/app.js?v=21784689dd5c"></script>
+  </body>
+</html>

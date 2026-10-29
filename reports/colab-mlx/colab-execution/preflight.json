@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "started_at_utc": "2026-10-28T19:04:00.632180+00:00",
+  "run_identity": "resolvedesk-cuda-repro-001",
+  "scope": "CUDA reproduction of the existing authored V7 test",
+  "cloud_compute_used": true,
+  "backend": "mlx_cuda12",
+  "not_resume": true,
+  "fresh_heldout_benchmark": false,
+  "mode": "preflight",
+  "wrapper_sha256": "b74ec68723b00990c4d56f53a87f3f51cc674dccb902f24a6dc1b4c47a90f1b3",
+  "source_manifest_sha256": "2c8ca8118440c760e84c0d702f08d6cff207cde01d9a7e9aabd399afa660d15e",
+  "gpu": {
+    "name": "Tesla T4",
+    "driver": "580.82.07",
+    "memory_total_mib": 15360,
+    "memory_free_mib": 14913,
+    "compute_capability": "7.5",
+    "device_index": 0
+  },
+  "platform": {
+    "python": "3.12.13",
+    "system": "Linux",
+    "glibc": "2.35",
+    "cuda_toolkit": "12.8"
+  },
+  "package_versions": {
+    "mlx": "0.32.4",
+    "mlx-cuda-12": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "transformers": "5.21.0",
+    "numpy": "2.5.4",
+    "safetensors": "0.8.0"
+  },
+  "adaptations": [
+    "Skip Metal-only wired-memory policy on CUDA; no model/loss/data change",
+    "Replace localhost Ollama wait with bounded NVIDIA free-memory checks; never unload models",
+    "Correct hardcoded local reporting identity to cloud_compute_used=true and retain wrapper SHA"
+  ],
+  "completed_at_utc": "2026-10-28T19:09:32.774863+00:00"
+}

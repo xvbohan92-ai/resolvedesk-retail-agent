@@ -1,0 +1,857 @@
+{
+  "scope": "Actual application/adapter integration on validation worlds; not new test accuracy.",
+  "source_sha256": "de0f2a358a6c0fc8293eb6fc42290dff837f165636f64043f4b92611b9afef7a",
+  "selected_adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+  "records": [
+    {
+      "family": "exchange_fallback_available",
+      "proposal_correct": false,
+      "before_confirmation": {
+        "session": {
+          "case_id": "v3-valid-exchange_fallback_available-00",
+          "customer": {
+            "email": "buyertlsydc@retail.example",
+            "gift_card": {
+              "balance_cents": 9000,
+              "id": "gift_ZP7KNG"
+            },
+            "id": "u_58RM9D"
+          },
+          "id": "2e0474de35c9334e03b711f1",
+          "messages": [
+            {
+              "content": "Please resolve this purchase issue. Order ORD-VCX6AE. Email buyertlsydc@retail.example. Replace this variant with teal / S. Settle only the difference on the original payment. A return is acceptable only when the requested replacement is out of stock.",
+              "role": "customer"
+            }
+          ],
+          "observations": [
+            {
+              "action": {
+                "arguments": {
+                  "email": "buyertlsydc@retail.example"
+                },
+                "tool": "identify_customer"
+              },
+              "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyertlsydc@retail.example\"}}",
+              "result": {
+                "gift_card": {
+                  "balance_cents": 9000,
+                  "id": "gift_ZP7KNG"
+                },
+                "note": "Demo identity lookup only; not production authentication",
+                "user_id": "u_58RM9D"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 830,
+                "latency_ms": 1373.57,
+                "output_tokens": 21,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            },
+            {
+              "action": {
+                "arguments": {
+                  "order_id": "ORD-VCX6AE"
+                },
+                "tool": "get_order"
+              },
+              "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-VCX6AE\"}}",
+              "result": {
+                "id": "ORD-VCX6AE",
+                "items": [
+                  {
+                    "item_id": "item_JUGSSS",
+                    "option": "black / M",
+                    "price_cents": 6935,
+                    "product_id": "p_7RLYDU"
+                  }
+                ],
+                "original_payment": "card_LHQ8Z3",
+                "revision": 0,
+                "status": "delivered",
+                "user_id": "u_58RM9D"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 896,
+                "latency_ms": 1204.94,
+                "output_tokens": 19,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            },
+            {
+              "action": {
+                "arguments": {
+                  "field": "new_option",
+                  "message": "Please provide your new option."
+                },
+                "tool": "ask_customer"
+              },
+              "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please provide your new option.\"}}",
+              "result": {
+                "field": "new_option",
+                "question": "Please provide your new option."
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 1001,
+                "latency_ms": 1394.88,
+                "output_tokens": 23,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          ],
+          "order_keys": {
+            "ORD-VCX6AE": "2e0474de35c9334e03b711f1:ORD-VCX6AE"
+          },
+          "products": {
+            "p_7RLYDU": {
+              "name": "Everyday shirt",
+              "product_id": "p_7RLYDU",
+              "variants": [
+                {
+                  "available": true,
+                  "item_id": "item_JUGSSS",
+                  "option": "black / M",
+                  "price_cents": 6935
+                },
+                {
+                  "available": true,
+                  "item_id": "item_7PTRAH",
+                  "option": "teal / S",
+                  "price_cents": 8185
+                },
+                {
+                  "available": true,
+                  "item_id": "item_EMTJCR",
+                  "option": "white / XS",
+                  "price_cents": 7160
+                }
+              ]
+            }
+          },
+          "proposal": null,
+          "read_orders": {
+            "ORD-VCX6AE": 0
+          },
+          "revision": 3,
+          "status": "awaiting_customer",
+          "user_id": "u_58RM9D"
+        },
+        "orders": [
+          {
+            "id": "ORD-VCX6AE",
+            "items": [
+              {
+                "item_id": "item_JUGSSS",
+                "option": "black / M",
+                "price_cents": 6935,
+                "product_id": "p_7RLYDU"
+              }
+            ],
+            "original_payment": "card_LHQ8Z3",
+            "status": "delivered",
+            "user_id": "u_58RM9D"
+          }
+        ],
+        "timeline": [
+          {
+            "id": 41,
+            "kind": "session_created",
+            "created": 1793124556.491868,
+            "detail": {
+              "case_id": "v3-valid-exchange_fallback_available-00"
+            }
+          },
+          {
+            "id": 42,
+            "kind": "model_tool",
+            "created": 1793124557.889416,
+            "detail": {
+              "action": {
+                "arguments": {
+                  "email": "buyertlsydc@retail.example"
+                },
+                "tool": "identify_customer"
+              },
+              "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyertlsydc@retail.example\"}}",
+              "result": {
+                "gift_card": {
+                  "balance_cents": 9000,
+                  "id": "gift_ZP7KNG"
+                },
+                "note": "Demo identity lookup only; not production authentication",
+                "user_id": "u_58RM9D"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 830,
+                "latency_ms": 1373.57,
+                "output_tokens": 21,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          },
+          {
+            "id": 43,
+            "kind": "model_tool",
+            "created": 1793124559.107075,
+            "detail": {
+              "action": {
+                "arguments": {
+                  "order_id": "ORD-VCX6AE"
+                },
+                "tool": "get_order"
+              },
+              "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-VCX6AE\"}}",
+              "result": {
+                "id": "ORD-VCX6AE",
+                "items": [
+                  {
+                    "item_id": "item_JUGSSS",
+                    "option": "black / M",
+                    "price_cents": 6935,
+                    "product_id": "p_7RLYDU"
+                  }
+                ],
+                "original_payment": "card_LHQ8Z3",
+                "revision": 0,
+                "status": "delivered",
+                "user_id": "u_58RM9D"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 896,
+                "latency_ms": 1204.94,
+                "output_tokens": 19,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          },
+          {
+            "id": 44,
+            "kind": "model_tool",
+            "created": 1793124560.5141408,
+            "detail": {
+              "action": {
+                "arguments": {
+                  "field": "new_option",
+                  "message": "Please provide your new option."
+                },
+                "tool": "ask_customer"
+              },
+              "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please provide your new option.\"}}",
+              "result": {
+                "field": "new_option",
+                "question": "Please provide your new option."
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 1001,
+                "latency_ms": 1394.88,
+                "output_tokens": 23,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          }
+        ]
+      },
+      "after_confirmation": null,
+      "confirmation_replay": null
+    },
+    {
+      "family": "exchange_fallback",
+      "proposal_correct": false,
+      "before_confirmation": {
+        "session": {
+          "case_id": "v3-valid-exchange_fallback-00",
+          "customer": {
+            "email": "buyertlsydc@retail.example",
+            "gift_card": {
+              "balance_cents": 9000,
+              "id": "gift_ZP7KNG"
+            },
+            "id": "u_58RM9D"
+          },
+          "id": "87741515273a1b5b212b0e8c",
+          "messages": [
+            {
+              "content": "Please resolve this purchase issue. Order ORD-VCX6AE. Email buyertlsydc@retail.example. Replace this variant with teal / S. Settle only the difference on the original payment. A return is acceptable only when the requested replacement is out of stock.",
+              "role": "customer"
+            }
+          ],
+          "observations": [
+            {
+              "action": {
+                "arguments": {
+                  "email": "buyertlsydc@retail.example"
+                },
+                "tool": "identify_customer"
+              },
+              "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyertlsydc@retail.example\"}}",
+              "result": {
+                "gift_card": {
+                  "balance_cents": 9000,
+                  "id": "gift_ZP7KNG"
+                },
+                "note": "Demo identity lookup only; not production authentication",
+                "user_id": "u_58RM9D"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 830,
+                "latency_ms": 1173.88,
+                "output_tokens": 21,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            },
+            {
+              "action": {
+                "arguments": {
+                  "order_id": "ORD-VCX6AE"
+                },
+                "tool": "get_order"
+              },
+              "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-VCX6AE\"}}",
+              "result": {
+                "id": "ORD-VCX6AE",
+                "items": [
+                  {
+                    "item_id": "item_JUGSSS",
+                    "option": "black / M",
+                    "price_cents": 6935,
+                    "product_id": "p_7RLYDU"
+                  }
+                ],
+                "original_payment": "card_LHQ8Z3",
+                "revision": 0,
+                "status": "delivered",
+                "user_id": "u_58RM9D"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 896,
+                "latency_ms": 1178.74,
+                "output_tokens": 19,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            },
+            {
+              "action": {
+                "arguments": {
+                  "field": "new_option",
+                  "message": "Please provide your new option."
+                },
+                "tool": "ask_customer"
+              },
+              "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please provide your new option.\"}}",
+              "result": {
+                "field": "new_option",
+                "question": "Please provide your new option."
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 1001,
+                "latency_ms": 1348.81,
+                "output_tokens": 23,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          ],
+          "order_keys": {
+            "ORD-VCX6AE": "87741515273a1b5b212b0e8c:ORD-VCX6AE"
+          },
+          "products": {
+            "p_7RLYDU": {
+              "name": "Everyday shirt",
+              "product_id": "p_7RLYDU",
+              "variants": [
+                {
+                  "available": true,
+                  "item_id": "item_JUGSSS",
+                  "option": "black / M",
+                  "price_cents": 6935
+                },
+                {
+                  "available": false,
+                  "item_id": "item_7PTRAH",
+                  "option": "teal / S",
+                  "price_cents": 8185
+                },
+                {
+                  "available": true,
+                  "item_id": "item_EMTJCR",
+                  "option": "white / XS",
+                  "price_cents": 7160
+                }
+              ]
+            }
+          },
+          "proposal": null,
+          "read_orders": {
+            "ORD-VCX6AE": 0
+          },
+          "revision": 3,
+          "status": "awaiting_customer",
+          "user_id": "u_58RM9D"
+        },
+        "orders": [
+          {
+            "id": "ORD-VCX6AE",
+            "items": [
+              {
+                "item_id": "item_JUGSSS",
+                "option": "black / M",
+                "price_cents": 6935,
+                "product_id": "p_7RLYDU"
+              }
+            ],
+            "original_payment": "card_LHQ8Z3",
+            "status": "delivered",
+            "user_id": "u_58RM9D"
+          }
+        ],
+        "timeline": [
+          {
+            "id": 45,
+            "kind": "session_created",
+            "created": 1793124560.5215979,
+            "detail": {
+              "case_id": "v3-valid-exchange_fallback-00"
+            }
+          },
+          {
+            "id": 46,
+            "kind": "model_tool",
+            "created": 1793124561.7036312,
+            "detail": {
+              "action": {
+                "arguments": {
+                  "email": "buyertlsydc@retail.example"
+                },
+                "tool": "identify_customer"
+              },
+              "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyertlsydc@retail.example\"}}",
+              "result": {
+                "gift_card": {
+                  "balance_cents": 9000,
+                  "id": "gift_ZP7KNG"
+                },
+                "note": "Demo identity lookup only; not production authentication",
+                "user_id": "u_58RM9D"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 830,
+                "latency_ms": 1173.88,
+                "output_tokens": 21,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          },
+          {
+            "id": 47,
+            "kind": "model_tool",
+            "created": 1793124562.893719,
+            "detail": {
+              "action": {
+                "arguments": {
+                  "order_id": "ORD-VCX6AE"
+                },
+                "tool": "get_order"
+              },
+              "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-VCX6AE\"}}",
+              "result": {
+                "id": "ORD-VCX6AE",
+                "items": [
+                  {
+                    "item_id": "item_JUGSSS",
+                    "option": "black / M",
+                    "price_cents": 6935,
+                    "product_id": "p_7RLYDU"
+                  }
+                ],
+                "original_payment": "card_LHQ8Z3",
+                "revision": 0,
+                "status": "delivered",
+                "user_id": "u_58RM9D"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 896,
+                "latency_ms": 1178.74,
+                "output_tokens": 19,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          },
+          {
+            "id": 48,
+            "kind": "model_tool",
+            "created": 1793124564.256039,
+            "detail": {
+              "action": {
+                "arguments": {
+                  "field": "new_option",
+                  "message": "Please provide your new option."
+                },
+                "tool": "ask_customer"
+              },
+              "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please provide your new option.\"}}",
+              "result": {
+                "field": "new_option",
+                "question": "Please provide your new option."
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 1001,
+                "latency_ms": 1348.81,
+                "output_tokens": 23,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          }
+        ]
+      },
+      "after_confirmation": null,
+      "confirmation_replay": null
+    },
+    {
+      "family": "return_reject_exchange",
+      "proposal_correct": false,
+      "before_confirmation": {
+        "session": {
+          "case_id": "v3-valid-return_reject_exchange-00",
+          "customer": {
+            "email": "buyere3kxfs@retail.example",
+            "gift_card": {
+              "balance_cents": 9000,
+              "id": "gift_G39JTY"
+            },
+            "id": "u_Q7QX6Z"
+          },
+          "id": "2b731550bb8ffa6e05ee9c17",
+          "messages": [
+            {
+              "content": "Please resolve this purchase issue. Order ORD-6CME6L. Email buyere3kxfs@retail.example. I want a return of the purchased item, refunded to original payment. Do not exchange it for teal / S; I do not want a replacement.",
+              "role": "customer"
+            }
+          ],
+          "observations": [
+            {
+              "action": {
+                "arguments": {
+                  "email": "buyere3kxfs@retail.example"
+                },
+                "tool": "identify_customer"
+              },
+              "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyere3kxfs@retail.example\"}}",
+              "result": {
+                "gift_card": {
+                  "balance_cents": 9000,
+                  "id": "gift_G39JTY"
+                },
+                "note": "Demo identity lookup only; not production authentication",
+                "user_id": "u_Q7QX6Z"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 830,
+                "latency_ms": 1154.73,
+                "output_tokens": 22,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            },
+            {
+              "action": {
+                "arguments": {
+                  "order_id": "ORD-6CME6L"
+                },
+                "tool": "get_order"
+              },
+              "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-6CME6L\"}}",
+              "result": {
+                "id": "ORD-6CME6L",
+                "items": [
+                  {
+                    "item_id": "item_QJW82Q",
+                    "option": "black / M",
+                    "price_cents": 4891,
+                    "product_id": "p_4F3C5Y"
+                  }
+                ],
+                "original_payment": "card_TS8Y4D",
+                "revision": 0,
+                "status": "delivered",
+                "user_id": "u_Q7QX6Z"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 897,
+                "latency_ms": 1164.37,
+                "output_tokens": 20,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            },
+            {
+              "action": {
+                "arguments": {
+                  "field": "payment_method",
+                  "message": "Please provide your payment method."
+                },
+                "tool": "ask_customer"
+              },
+              "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+              "result": {
+                "field": "payment_method",
+                "question": "Please provide your payment method."
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 1008,
+                "latency_ms": 1355.26,
+                "output_tokens": 23,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          ],
+          "order_keys": {
+            "ORD-6CME6L": "2b731550bb8ffa6e05ee9c17:ORD-6CME6L"
+          },
+          "products": {
+            "p_4F3C5Y": {
+              "name": "Everyday shirt",
+              "product_id": "p_4F3C5Y",
+              "variants": [
+                {
+                  "available": true,
+                  "item_id": "item_VFKWXU",
+                  "option": "white / XS",
+                  "price_cents": 5116
+                },
+                {
+                  "available": true,
+                  "item_id": "item_QJW82Q",
+                  "option": "black / M",
+                  "price_cents": 4891
+                },
+                {
+                  "available": true,
+                  "item_id": "item_2VPU4N",
+                  "option": "teal / S",
+                  "price_cents": 5441
+                }
+              ]
+            }
+          },
+          "proposal": null,
+          "read_orders": {
+            "ORD-6CME6L": 0
+          },
+          "revision": 3,
+          "status": "awaiting_customer",
+          "user_id": "u_Q7QX6Z"
+        },
+        "orders": [
+          {
+            "id": "ORD-6CME6L",
+            "items": [
+              {
+                "item_id": "item_QJW82Q",
+                "option": "black / M",
+                "price_cents": 4891,
+                "product_id": "p_4F3C5Y"
+              }
+            ],
+            "original_payment": "card_TS8Y4D",
+            "status": "delivered",
+            "user_id": "u_Q7QX6Z"
+          }
+        ],
+        "timeline": [
+          {
+            "id": 49,
+            "kind": "session_created",
+            "created": 1793124564.2616708,
+            "detail": {
+              "case_id": "v3-valid-return_reject_exchange-00"
+            }
+          },
+          {
+            "id": 50,
+            "kind": "model_tool",
+            "created": 1793124565.427488,
+            "detail": {
+              "action": {
+                "arguments": {
+                  "email": "buyere3kxfs@retail.example"
+                },
+                "tool": "identify_customer"
+              },
+              "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyere3kxfs@retail.example\"}}",
+              "result": {
+                "gift_card": {
+                  "balance_cents": 9000,
+                  "id": "gift_G39JTY"
+                },
+                "note": "Demo identity lookup only; not production authentication",
+                "user_id": "u_Q7QX6Z"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 830,
+                "latency_ms": 1154.73,
+                "output_tokens": 22,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          },
+          {
+            "id": 51,
+            "kind": "model_tool",
+            "created": 1793124566.607646,
+            "detail": {
+              "action": {
+                "arguments": {
+                  "order_id": "ORD-6CME6L"
+                },
+                "tool": "get_order"
+              },
+              "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-6CME6L\"}}",
+              "result": {
+                "id": "ORD-6CME6L",
+                "items": [
+                  {
+                    "item_id": "item_QJW82Q",
+                    "option": "black / M",
+                    "price_cents": 4891,
+                    "product_id": "p_4F3C5Y"
+                  }
+                ],
+                "original_payment": "card_TS8Y4D",
+                "revision": 0,
+                "status": "delivered",
+                "user_id": "u_Q7QX6Z"
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 897,
+                "latency_ms": 1164.37,
+                "output_tokens": 20,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          },
+          {
+            "id": 52,
+            "kind": "model_tool",
+            "created": 1793124567.9747682,
+            "detail": {
+              "action": {
+                "arguments": {
+                  "field": "payment_method",
+                  "message": "Please provide your payment method."
+                },
+                "tool": "ask_customer"
+              },
+              "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+              "result": {
+                "field": "payment_method",
+                "question": "Please provide your payment method."
+              },
+              "timing": {
+                "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+                "finish_reason": "stop",
+                "input_tokens": 1008,
+                "latency_ms": 1355.26,
+                "output_tokens": 23,
+                "provider": "mlx",
+                "variant": "qlora_v3",
+                "workflow": "v2"
+              }
+            }
+          }
+        ]
+      },
+      "after_confirmation": null,
+      "confirmation_replay": null
+    }
+  ],
+  "identity": {
+    "models": {
+      "ollama": {
+        "available": true,
+        "provider": "ollama",
+        "model": "resolvedesk-qwen3:4b",
+        "digest": "cba69c01b2ca0cec9b5b4e20519432714353c5ff4f4de983cbdf7a79403c3ddd",
+        "version": "0.34.2",
+        "transport": "application JSON dispatch"
+      },
+      "finetuned": {
+        "available": true,
+        "provider": "mlx",
+        "variant": "qlora_v3",
+        "base": "Qwen/Qwen3-4B-MLX-4bit",
+        "base_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+        "adapter_sha256": "426298e78fe4355ced7df8995984eb4025e7356eed0215709852faba6fe08098",
+        "training_report_sha256": "42a55d54732286c6c1b6fee20927a34782a405a8012ec07c6ab9d9f0d666ba66",
+        "cloud_api": false,
+        "workflow": "v2",
+        "workflow_sha256": "2c45094c90643020bddb8d66ef5a4dfc607522620d67c3c07744a99565c0afbc"
+      }
+    },
+    "simulated": true
+  }
+}

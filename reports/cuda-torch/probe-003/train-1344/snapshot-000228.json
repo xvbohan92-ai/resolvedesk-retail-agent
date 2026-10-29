@@ -1,0 +1,8 @@
+{
+  "snapshot_at_utc": "2026-10-28T20:21:29.743619+00:00",
+  "status": "training",
+  "completed_updates": 228,
+  "planned_updates": 1344,
+  "actual_report_sha256": "d1efeb41862090208f0e9e9bd25ea13111a8d7de06262327d19f037b977050b5",
+  "scope": "Incomplete formal run snapshot, not a completed training or accuracy result"
+}

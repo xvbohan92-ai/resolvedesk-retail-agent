@@ -1,0 +1,12 @@
+{
+  "promoted": false,
+  "checks": {
+    "task_success_not_lower": false,
+    "all_actions_schema_valid": false,
+    "rejected_writes_not_higher": false
+  },
+  "evaluation_sha256": "516fd38f9f73bce49c2962f0e72f449718c39c99b9065c192b0a8ae1b32fd4a9",
+  "rule_source_sha256": "deb070308a14b9bfb4c1ff518f5d39e5c1d76999476df2dc5ccc436f10dace11",
+  "default_provider": "ollama",
+  "scope": "Local prototype rollout guard, implemented after the initial comparison. Not a preregistered statistical test or evidence of production readiness. The Ollama path is a separate integration, not established superior by the MLX comparison."
+}

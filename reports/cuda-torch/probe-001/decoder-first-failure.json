@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "source_zip_sha256": "f9087d0f7cc9f5ec13bd3059e604f1038aa42a24c9dbdf4ccaf9fa724c74e776",
+  "reason": "Real MLX dequant logical BF16 mismatch on first source slice",
+  "max_abs_error": 0.00048828125,
+  "code_sha256": "69abef68f7bc8af4b11e92faeadb640d43b820e31836207dbdedd37f4b1f2328",
+  "returncode": 1
+}

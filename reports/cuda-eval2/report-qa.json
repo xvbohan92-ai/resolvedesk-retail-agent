@@ -1,0 +1,167 @@
+{
+  "run_id": "resolvedesk-cuda-eval-002",
+  "created_at_utc": "2026-10-29T01:58:26.620138+00:00",
+  "status": "passed",
+  "scope": "Independent read-only reporting QA; no model/tokenizer/cloud calls, no scorer/source edits. Business totals count preserved scores; existing full action/token/consent replay receipts and sibling independent audit remain separate.",
+  "records_counted": 96,
+  "journal_calls_counted": 509,
+  "raw_initial_fields_independently_counted": true,
+  "token_id_counts_and_hashes_independently_checked": 509,
+  "manual_summary": {
+    "predecessor_fp16": {
+      "tasks": 48,
+      "task_success": 46,
+      "true_permission_yes": 12,
+      "unsupported_permission_yes": 12,
+      "intent_joint_correct": 31,
+      "initial_raw_parse_failures": 0,
+      "initial_reason_enum_error_tasks": 0,
+      "identical_action_repeats": 0,
+      "model_calls": 253,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 14,
+      "fallback_tasks": 4,
+      "fallback_success": 3,
+      "handoff_tasks": 16,
+      "handoff_success": 16,
+      "missing_email_tasks": 8,
+      "missing_email_success": 8
+    },
+    "cloud1344_fp16": {
+      "tasks": 48,
+      "task_success": 45,
+      "true_permission_yes": 12,
+      "unsupported_permission_yes": 3,
+      "intent_joint_correct": 39,
+      "initial_raw_parse_failures": 0,
+      "initial_reason_enum_error_tasks": 0,
+      "identical_action_repeats": 11,
+      "model_calls": 256,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 14,
+      "fallback_tasks": 4,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 16,
+      "missing_email_tasks": 8,
+      "missing_email_success": 8
+    }
+  },
+  "paired": {
+    "both_pass": 45,
+    "both_fail": 2,
+    "improved": 0,
+    "regressed": 1
+  },
+  "failed_records": [
+    {
+      "arm": "predecessor_fp16",
+      "case_id": "cuda-fresh2-test-missing_payment-01",
+      "calls": 4,
+      "status": "awaiting_customer"
+    },
+    {
+      "arm": "predecessor_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+      "calls": 5,
+      "status": "handoff"
+    },
+    {
+      "arm": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-missing_payment-01",
+      "calls": 4,
+      "status": "awaiting_customer"
+    },
+    {
+      "arm": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback-01",
+      "calls": 12,
+      "status": "running"
+    },
+    {
+      "arm": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+      "calls": 5,
+      "status": "handoff"
+    }
+  ],
+  "source_inputs_hashes_checked": 53,
+  "supplementary_sources_hashes_checked": 2,
+  "csv_pairs_checked": 96,
+  "figure_files_hash_checked": 12,
+  "svg_data_labels_checked": true,
+  "pngs_visually_inspected": [
+    "evaluation",
+    "intent",
+    "recovery",
+    "families",
+    "consent",
+    "training"
+  ],
+  "visual_findings": "No obvious clipping/overlap, hidden regression or mislabeled denominator. Narrow consent scope and non-accuracy training loss caveats are visible.",
+  "local_links": {
+    "cuda-evaluation2.md": {
+      "checked": 20,
+      "missing": []
+    },
+    "cuda-evaluation2.zh-CN.md": {
+      "checked": 27,
+      "missing": []
+    }
+  },
+  "headline_decline_explicit_in_both_languages": true,
+  "displayed_difference_units": "1.14",
+  "exact_per_job_cost_claimed": false,
+  "material_findings": [],
+  "residual_failure_notes": {
+    "new_regression": "cloud1344_fp16 exchange_fallback-01 made12 identical record_request attempts with a non-exact evidence quote; all12 rejected,11 action repeats, total-call budget exhausted. Not a reason-enum error.",
+    "shared_missing_payment": "Both arms infer original refund payment from original-order wording and omit required payment question.",
+    "shared_fallback_missing_payment": "Both record eucalyptus / S jacket rather than exact catalog eucalyptus / S, then hand off instead of clarifying payment."
+  },
+  "limitations_retained": [
+    "Authored48 synthetic worlds, one product/two options; not external benchmark.",
+    "Already fine-tuned V6.1 predecessor versus fixed final1344 under matched FP16.",
+    "Known operation-rewrite bypass remains; zero observed scope violations is not production safety.",
+    "Serial arm order, trajectories and logging do not isolate speed effects."
+  ],
+  "artifact_sha256": {
+    "reports/cuda-eval2/analysis-plan.json": "a547fd0790ad2003fcd3dc0a990b581484bf5decd30222c87499237fd236f704",
+    "reports/cuda-eval2/artifact-identity.json": "f83a97af4775ac2c01bf82f5ff188de1743c010ec143c554b74a8309f7840d1e",
+    "reports/cuda-eval2/evaluation.json": "fdef73d02d70084717e919a7803b72ae56b5dc594e4b2b415047c276d0c9e38b",
+    "reports/cuda-eval2/call-journal.json": "1c944db488611b29d385c952002cfca0981ff89975dfd97f9ddab3c04b692b57",
+    "reports/cuda-eval2/protocol-audit.json": "6d43138e2140f5705380df9db135ef5f00cdfe3fdc334cd66cf31bdcf4e92106",
+    "reports/cuda-eval2/verification.json": "a14ecbc3b00e436e7d880614e1c029ae1440ccf30a5c1cc8d092db0a8c65df15",
+    "reports/cuda-eval2/figure-verification.json": "928c85064ef03253e0eb1d48cca060092a44af3811d7a2fb0f6cd38ab5b62c47",
+    "reports/cuda-eval2/final-independent-audit.json": "57985f564217f454c9bc774efec3056f592542ec58e93b31cf060c948a63c4ad",
+    "docs/cuda-evaluation2.md": "5fc651875b34cea4c0954bab380a34638b59d3d0da8ce238d83ffe1775bb0a60",
+    "docs/cuda-evaluation2.zh-CN.md": "87234a9d5e0e5b6e92471101dd0e6ce8135a0a77d092b653a269a8ac3dd9e081",
+    "docs/figures/cuda-eval2/values.json": "063e41d36b29fc5319a298058e2d450afca8088e1c250e1db55718a1f5b89d03",
+    "docs/figures/cuda-eval2/per-case.csv": "f8255949ff4e5538e4f2c1e3d76e4a2b49729699d4f5f054d613a93a2f3a020b",
+    "docs/figures/cuda-eval2/evaluation.png": "123c510f3ffff1388d768d50af5ac42e8090fcb086cffa265fdc5dc638bd0676",
+    "docs/figures/cuda-eval2/evaluation.svg": "2b08fd3549bb0e0da9b3c8dff5fdee86ddf5f90d4537de874156a52b43d005c0",
+    "docs/figures/cuda-eval2/intent.png": "2d955d3235f68df3c92f29be9b8d55c0854daba8528cbf725a0915ee40c67ba8",
+    "docs/figures/cuda-eval2/intent.svg": "4a3da5803ecfae1f0ed66f8d164b81d922e2f5f8429bbcfc281d5efa7cf63ebf",
+    "docs/figures/cuda-eval2/recovery.png": "79e61bb169251e0ceb3cf12c6bfadfcb7c5e934577ba36547c1a0a782afff3d6",
+    "docs/figures/cuda-eval2/recovery.svg": "0fc52925f6e98263c7ef23a6c493fade9e81fcbd7c06501cd7189ea6c1e13d01",
+    "docs/figures/cuda-eval2/families.png": "06ce5453a1a75c6385dfd78aebd8dafd789e070c4a16c60ef31e3b468aa5769b",
+    "docs/figures/cuda-eval2/families.svg": "a946287a5509feb27c663bcd7706be291b5517840ac227095cbd1c44b251256e",
+    "docs/figures/cuda-eval2/consent.png": "0e888d831b69cb791bf29210053b07f5b59696f5e4386caffa86756d5c6f93a6",
+    "docs/figures/cuda-eval2/consent.svg": "4fcc6d37cc93b018aa5859919f67e70650d8205591d9596770ec7373d968dbbd",
+    "docs/figures/cuda-eval2/training.png": "41274596e100b17d8536efe84087091b7b93d1cf88aa394d970f0c82c11da2b1",
+    "docs/figures/cuda-eval2/training.svg": "010a0b17628b1f3a9179e9c855653fd7932544e4b81a2d97dc3d4952a4568286",
+    "docs/colab-cuda-eval2-post-release.png": "3aa486574a7735aa56714e2eb51f22e110c4c73e17bc8dd1ed8dfe7a2440b176",
+    "docs/colab-cuda-eval2-runtime-released.png": "25b56ad38049183047c2da6918326de3e527597ff7154b9f6783d9cb1349bfa8",
+    "training/cuda_eval2/write_summary.py": "1383cf5a3db17cabc539e91f2bd83c9ad4e60c36c5543568917a09fe7a1633c5",
+    "training/cuda_eval2/write_chinese.py": "c32f61bf82b8bb7c3e34066f7d2ad70efffe49b67de91105edc840fea8b0bb14"
+  },
+  "last_updated_at_utc": "2026-10-29T02:04:18.775416+00:00",
+  "three_failure_types_explicit_in_both_documents": true,
+  "later_displayed_difference_units": "1.23",
+  "original_release_observation_retained_unchanged": true,
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "187393f15a5c620b27713b2b4001bffafcc36d279a91d627a2140ea0bb6b53f0",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Private non-retail account/authorization and machine-path metadata omitted. Original verification claims refer to historical unredacted local artifacts, not these public bytes."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "reason": "Pre-training string line wrap only; no updates or test inference.",
+  "before": {
+    "original_action_manifest_sha256": "64861ee5bf396a4794ee862f4cbc161da5c9e3cf76847ab0a3c94c79ce93125f",
+    "initial_weights_sha256": "cc9c29aadfb6aac91a8f343c9d564ff6bbde8ef1ff34d90567e24cb8ce28a3f6",
+    "previous_validation_sha256": "2ab27a65b86e4692706125dcbae3ba9ebdf456b323ece5bf259f14b72784c1c0",
+    "files": {
+      "training/v4/recovery.py": "a18096f305edd5f089a5914377b254586d04c94b078b85804df033de626e078c",
+      "training/v4/recovery-protocol.json": "4e69544e5b04a556e62e6b91354f29ba6f5a15b68bf5583293502ee27344f578",
+      "training/v4/datasets/recovery.jsonl": "fc5246755ebc8c4d3417190423dbcc96632a38383a6885c4573d71296dc67b16",
+      "training/v4/recovery_select.py": "aa87baf542b59d20a983672fe6690c6b37c4d5a2ecd1c9a41aaa2239e352b8d5",
+      "training/v4/facts_evaluate.py": "b0750cc1e314708a9adcd1618ca08f1f1b6bc5f1008edcb9c001227d1a16ecd3",
+      "training/v4/facts_provider.py": "15a0284855ffbc00e31d4f04a87cf111da9d9434c076f7457340de87b5f7caf3",
+      "resolve_desk/decision_facts.py": "21ec556e50500de2e42d94226ebce28088fe4ae091f3f618fc0361bd288856f2",
+      "resolve_desk/agent.py": "ef9c6b9825b43247502e06bd9cd1cb9864f18277ee82cb8071f579a36285f276"
+    },
+    "pair_count": 80,
+    "test_inference_started_at_freeze": false
+  },
+  "after": {
+    "original_action_manifest_sha256": "64861ee5bf396a4794ee862f4cbc161da5c9e3cf76847ab0a3c94c79ce93125f",
+    "initial_weights_sha256": "cc9c29aadfb6aac91a8f343c9d564ff6bbde8ef1ff34d90567e24cb8ce28a3f6",
+    "previous_validation_sha256": "2ab27a65b86e4692706125dcbae3ba9ebdf456b323ece5bf259f14b72784c1c0",
+    "files": {
+      "training/v4/recovery.py": "36cc2125f8ac1d0e973eacf3dc0c754e2584ebf1debd15acd0ab89a961a0a305",
+      "training/v4/recovery-protocol.json": "4e69544e5b04a556e62e6b91354f29ba6f5a15b68bf5583293502ee27344f578",
+      "training/v4/datasets/recovery.jsonl": "fc5246755ebc8c4d3417190423dbcc96632a38383a6885c4573d71296dc67b16",
+      "training/v4/recovery_select.py": "aa87baf542b59d20a983672fe6690c6b37c4d5a2ecd1c9a41aaa2239e352b8d5",
+      "training/v4/facts_evaluate.py": "b0750cc1e314708a9adcd1618ca08f1f1b6bc5f1008edcb9c001227d1a16ecd3",
+      "training/v4/facts_provider.py": "15a0284855ffbc00e31d4f04a87cf111da9d9434c076f7457340de87b5f7caf3",
+      "resolve_desk/decision_facts.py": "21ec556e50500de2e42d94226ebce28088fe4ae091f3f618fc0361bd288856f2",
+      "resolve_desk/agent.py": "ef9c6b9825b43247502e06bd9cd1cb9864f18277ee82cb8071f579a36285f276"
+    },
+    "pair_count": 80,
+    "test_inference_started_at_freeze": false,
+    "source_cases": 52
+  }
+}

@@ -1,0 +1,7082 @@
+{
+  "created_at_utc": "2026-10-28T20:00:22.981488+00:00",
+  "scope": "Separate CUDA PyTorch/PEFT FP16 performance path on the unchanged 824 V7 training pairs. The same weighted next-token objective retains full context; projection changes 512 to 192, backend/precision/gradient scaling/checkpointing differ. This is not an isolated GPU hardware speed comparison, a fresh held-out experiment, or evidence of accuracy. Smoke weights are discarded.",
+  "kind": "train",
+  "planned_true_optimizer_updates": 1344,
+  "smoke_weights_discarded": true,
+  "fresh_predecessor_initialization": true,
+  "smoke_weights_reused": false,
+  "source_inputs_sha256": {
+    "training/cuda_torch/train.py": "48d9839fa635bd060f42270f697a7db0dbf016870853cd8921901acd9665b6c9",
+    "training/cuda_torch/model.py": "d14b21fbccf93099168cf459313b77cfa8da470d8139497c74b507c25cb4dbea",
+    "training/v7/config.json": "199d48a5e96da7e790e60cbc76935c16971229173b69c4949cab0516814f72c5",
+    "training/v7/tokenization.py": "956ca58a86b9d3e93bf218906690a3c3be6b672efabca65eb6e8acaec27f70ce",
+    "training/v7/train.py": "5ce0ff7d78b32ad67a7e0756ffce522ca019968f3e6b8c26cd8a8cb69e2e1464",
+    "training/v4/tokenization.py": "946f01aab1b0ab6383025a552c474382ec68a8c4711739c08285f62465841fc3",
+    "training/base-model-spec.json": "bff5ee1bb595c89e629c7e0f93884c06ab66628f9cf6e61b8dfe02f87053a965",
+    "training/v7/datasets/manifest.json": "1bbb3aba1db64e0962842411d9cb5872269dde01922c2d8731de135bbc8908ae",
+    "training/v7/datasets/train.jsonl": "ea172ed3a9eee419a62bfbce43b2a67ab4600b33d05ea69c395d2d6d9ecff903",
+    "training/v7/datasets/cases.json": "0e92883c37678e342487137ff184a7d41d3376e46f35e2821d60f81ae7b36083"
+  },
+  "manifest_sha256": "1bbb3aba1db64e0962842411d9cb5872269dde01922c2d8731de135bbc8908ae",
+  "frozen_manifest": {
+    "files": {
+      "training/v7/common.py": "8b25564f67037332d2de786b86b0fec99ecdb0e5d499d7a1d95647a297e46e3a",
+      "training/v7/fixtures.py": "d84c6281cfc5229a303dd5a9f4fddfef8d5ffaca501f637a302a3ad7c21c0bb8",
+      "training/v7/scoring.py": "40ba2399da1fc7cfa5539334af9459b995b4520dd3989bd829a8d143e1ac8fa3",
+      "training/v7/prepare.py": "0192fb56b65d462ab20299e155e678495967f56245adeebeb6871d71e465c311",
+      "training/v7/evaluation.py": "6c7e80245fbf06c8b97cfa826e3c91632343aa7303621d1afd7905812728a6d6",
+      "training/v7/evaluate.py": "e73cfe755cf98debb1ac1bbcbfad6131802d2089ce3dd14b716979660b17f740",
+      "training/v7/select.py": "469098345c99aa2521a0e386b0fcf1b0c1dfb3a95140e378bd33f4625b4f22c8",
+      "training/v7/provider.py": "b16785a9699f03b82423189c9c37104f8e35b6a83f68575f7515e28644b91b75",
+      "training/v7/resources.py": "e58f48171c8f6e2b3269ee458978168567d2dc5ed4565bed890177591ac8b949",
+      "training/v7/train.py": "5ce0ff7d78b32ad67a7e0756ffce522ca019968f3e6b8c26cd8a8cb69e2e1464",
+      "training/v7/tokenization.py": "956ca58a86b9d3e93bf218906690a3c3be6b672efabca65eb6e8acaec27f70ce",
+      "training/v7/config.json": "199d48a5e96da7e790e60cbc76935c16971229173b69c4949cab0516814f72c5",
+      "resolve_desk/resolution_v7.py": "d878f176fad914b8525c12dd2facb72c611545855078f9cb4620dfe8739d6505",
+      "resolve_desk/agent_v7.py": "b09c947a2c708ba0553f2cfc0ceae900e51d623c0b8c1197d8ff1db66cee1ffc",
+      "resolve_desk/resolution_v6_1.py": "1f8c3d053e23cb8b93bbb3c052a10904b740ad9057aba5f48f11bc406c446a15",
+      "training/runtime.py": "70e60f56223f7161c430f6b601ae9f748548b740c9f1ee0172e7f65acdbf4531",
+      "training/v4/tokenization.py": "946f01aab1b0ab6383025a552c474382ec68a8c4711739c08285f62465841fc3",
+      "training/v4/evaluation.py": "c83ad22d23a1a9563975e0265cec5ba1a463fbd678f8be6484ea3baca3c8901b",
+      "training/v6/scoring.py": "d1af5058f167848849d96da8ca2cca1fa386fbcdc228fac179cbb033a347410c",
+      "training/v6_1/datasets/manifest.json": "36d4100038d683de7121ff0e494304954bd7a3bbba1f68004a12fdfa6d490426",
+      "reports/v6_1/training.json": "eb9760f58ddaf5cbebc2a1a28688d3993706f511a565ada332776c13080d12a3",
+      "training/base-model-spec.json": "bff5ee1bb595c89e629c7e0f93884c06ab66628f9cf6e61b8dfe02f87053a965",
+      "reports/v7/analysis-plan.json": "07052642e5a803cf4ec736be8bd2cb3949c86debb1cf159a0c39bbb373ca99cf",
+      "training/v7/datasets/test.jsonl": "91b73847f4bf4114eabc06d470cd09cb02803fc84eb816525ec308ac454926e2",
+      "training/v7/datasets/train.jsonl": "ea172ed3a9eee419a62bfbce43b2a67ab4600b33d05ea69c395d2d6d9ecff903",
+      "training/v7/datasets/valid.jsonl": "cd221befa8172212b52b13841ae0f151fce3a9395e4539978d46e54c9158cf4c",
+      "training/v7/datasets/cases.json": "0e92883c37678e342487137ff184a7d41d3376e46f35e2821d60f81ae7b36083"
+    },
+    "data": {
+      "tasks": {
+        "train": 96,
+        "valid": 48,
+        "test": 48
+      },
+      "rows": {
+        "train": 824,
+        "valid": 252,
+        "test": 252
+      },
+      "raw_train_rows_before_deduplication": 940,
+      "duplicate_training_pairs_removed": 116,
+      "recovery_trajectories": 76,
+      "recovery_types": {
+        "enum_cancel": 8,
+        "stale_evidence": 12,
+        "enum_exchange": 24,
+        "repeat_ask": 16,
+        "false_yes": 16
+      },
+      "train_actions": {
+        "record_request": 158,
+        "get_product": 100,
+        "identify_customer": 152,
+        "propose_return": 50,
+        "propose_cancel": 18,
+        "ask_customer": 90,
+        "get_order": 152,
+        "propose_exchange": 44,
+        "handoff": 60
+      },
+      "train_sample_roles": {
+        "initial_record": 96,
+        "tool_action": 666,
+        "record_recovery": 62
+      },
+      "permissions": {
+        "train": {
+          "unknown": 48,
+          "yes": 24,
+          "no": 24
+        },
+        "valid": {
+          "unknown": 24,
+          "yes": 12,
+          "no": 12
+        },
+        "test": {
+          "unknown": 24,
+          "yes": 12,
+          "no": 12
+        }
+      },
+      "training_record_permission_targets": {
+        "unknown": 72,
+        "yes": 46,
+        "no": 40
+      },
+      "all_reference_tasks_pass": true,
+      "unique_interactions": {
+        "train": 96,
+        "valid": 48,
+        "test": 48
+      },
+      "unique_initial_model_prompts": {
+        "train": 96,
+        "valid": 48,
+        "test": 48
+      },
+      "unique_order_worlds": {
+        "train": 96,
+        "valid": 48,
+        "test": 48
+      },
+      "unique_entities": {
+        "train": 868,
+        "valid": 434,
+        "test": 434
+      },
+      "unique_training_prompt_completion_pairs": 824,
+      "split_entities_and_initial_inputs_disjoint": true,
+      "no_prior_order_worlds_reused": true,
+      "no_prior_entities_or_initial_messages_reused": true,
+      "interaction_fields": [
+        "initial_message",
+        "customer",
+        "orders",
+        "products",
+        "answers",
+        "confirmation",
+        "required_answers"
+      ],
+      "scope": "Self-authored synthetic language and independent worlds. Wrong synthetic actions are recovery input state only, never supervised labels. Repeated inputs are physically removed from SFT; sampling repetitions during optimization must be reported separately."
+    },
+    "initial_adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+    "previous_manifest_sha256": "36d4100038d683de7121ff0e494304954bd7a3bbba1f68004a12fdfa6d490426",
+    "previous_training_sha256": "eb9760f58ddaf5cbebc2a1a28688d3993706f511a565ada332776c13080d12a3",
+    "test_inference_started_at_freeze": false,
+    "scope": "One new V7 SFT run and separately held-out four-arm evaluation; no test-based selection."
+  },
+  "initializer_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+  "base_spec": {
+    "repo": "Qwen/Qwen3-4B-MLX-4bit",
+    "revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+    "files": [
+      {
+        "path": "model.safetensors",
+        "bytes": 2137326367,
+        "sha256": "e56a94b846a2dce7d1cc154ce58b9cfc4b8d99e8ffb74bfe256a265f4cbc7fb9"
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 11343,
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 9732,
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+      },
+      {
+        "path": "config.json",
+        "bytes": 988,
+        "sha256": "76eae114d67a444c7296be7a6bc0409ecc15c340e113f1bac7572cb7d0928b6f"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      {
+        "path": "README.md",
+        "bytes": 14708,
+        "sha256": "a3ac01d2a1fff2f02be25e1d2e9160f03db51dbee2cc17f13b774f646648adf9"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "bytes": 63924,
+        "sha256": "278844a566da15beab6e9068c57f606c50a99c440d4515206b871a8b5282b3de"
+      }
+    ],
+    "excluded_snapshot_metadata": [
+      ".gitattributes was absent in the inherited local checkout; it is not a model input."
+    ]
+  },
+  "frozen_config": {
+    "model": "data/models/qwen3-4b-mlx",
+    "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+    "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+    "data": "training/v7/datasets",
+    "adapter_path": "data/finetuning/retail-qlora-v7/run",
+    "best_path": "data/finetuning/retail-qlora-v7/best",
+    "seed": 202610287,
+    "iters": 1344,
+    "num_layers": 8,
+    "batch_size": 1,
+    "learning_rate": 6e-06,
+    "lora_parameters": {
+      "rank": 8,
+      "dropout": 0.0,
+      "scale": 16.0
+    },
+    "max_seq_length": 3072,
+    "steps_per_report": 16,
+    "steps_per_eval": 672,
+    "save_every": 672,
+    "tool_name_loss_weight": 1.0,
+    "generation_max_tokens": 512,
+    "generation_temperature": 0,
+    "max_agent_steps": 12,
+    "checkpoint_candidates_completed_updates": [
+      672,
+      1344
+    ],
+    "checkpoint_selection": "Validation only: safety, zero unsupported affirmative permission, positive permission recall, balanced exchange/fallback/handoff/email success, overall, enum validity, unnecessary handoff, repeats, calls. Ties prefer earlier checkpoint.",
+    "evaluation_arms": [
+      "previous_old_flow",
+      "previous_new_flow",
+      "base_new_flow",
+      "qlora_v7"
+    ],
+    "runtime_policy": "V7 observed validation feedback and bounded model repair. Model issues all actions; earliest raw slots scored before recovery; scoped actual YES and separate proposal confirmation remain.",
+    "promotion_rule": "All4fallback,14exchange,16handoff,8email and12initialexplicitgrants; zero unsupported affirmative, initial parse failures, initial enum errors, reason enum errors, unnecessary handoff, repeated-field attempts, exchange-as-return, unauthorized returns; confirmation48 and overall no lower than both new-flow comparators.",
+    "initialization": "data/finetuning/retail-qlora-v6_1/best",
+    "initialization_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+    "projection_window": 512,
+    "permission_slot_loss_weight": 8.0,
+    "training_updates_report": "reports/v7/updates.json",
+    "training_manifest": "training/v7/datasets/manifest.json",
+    "reason_slot_loss_weight": 4.0,
+    "sampling_policy": "50% initial record/record repair targets; 50% other execution/reply targets. Physical training rows deduplicated; sampling coverage reported."
+  },
+  "compute_config": {
+    "backend": "pytorch_cuda_peft",
+    "base_dtype": "float16",
+    "lora_master_dtype": "float32",
+    "autocast_dtype": "float16",
+    "projection_window": 192,
+    "original_mlx_projection_window": 512,
+    "attention": "sdpa_causal",
+    "gradient_checkpointing": "nonreentrant",
+    "force_embedding_output_gradients": false,
+    "use_cache": false,
+    "optimizer": "Adam",
+    "learning_rate": 6e-06,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "gradient_clipping": false,
+    "grad_scaler_initial_scale": 128.0,
+    "batch_size": 1,
+    "seed": 202610287,
+    "generation_or_evaluation": false
+  },
+  "package_pins": {
+    "torch": "2.11.0+cu128",
+    "peft": "0.19.1",
+    "accelerate": "1.14.0",
+    "transformers": "5.21.0",
+    "safetensors": "0.8.0",
+    "numpy": "2.5.4"
+  },
+  "dependency_environment": {
+    "python": "3.12.13",
+    "sys_version": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "executable": "/usr/bin/python3",
+    "platform": "linux",
+    "required_packages": {
+      "torch": "2.11.0+cu128",
+      "peft": "0.19.1",
+      "accelerate": "1.14.0",
+      "transformers": "5.21.0",
+      "safetensors": "0.8.0",
+      "numpy": "2.5.4"
+    },
+    "optional_packages": {
+      "torchao": null,
+      "bitsandbytes": null,
+      "triton": "3.6.0",
+      "xformers": null,
+      "flash-attn": null,
+      "torchvision": "0.26.0+cu128",
+      "torchaudio": "2.11.0+cu128",
+      "mlx": "0.32.4",
+      "mlx-cuda-12": "0.32.4",
+      "mlx-lm": "0.32.2",
+      "huggingface-hub": "2.3.0",
+      "tokenizers": "0.23.3",
+      "packaging": "26.2"
+    },
+    "torchao": {
+      "distribution_version": null,
+      "module_discoverable": false,
+      "module_origin": null,
+      "module_probe_error": null,
+      "in_sys_modules": false
+    },
+    "torchao_policy": "Must be genuinely uninstalled; no import masking or module stubbing."
+  },
+  "planned_schedule": [
+    {
+      "iteration": 1,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 364
+    },
+    {
+      "iteration": 2,
+      "bucket": "execution_and_reply",
+      "sample_index": 370
+    },
+    {
+      "iteration": 3,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 523
+    },
+    {
+      "iteration": 4,
+      "bucket": "execution_and_reply",
+      "sample_index": 612
+    },
+    {
+      "iteration": 5,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 341
+    },
+    {
+      "iteration": 6,
+      "bucket": "execution_and_reply",
+      "sample_index": 312
+    },
+    {
+      "iteration": 7,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 445
+    },
+    {
+      "iteration": 8,
+      "bucket": "execution_and_reply",
+      "sample_index": 738
+    },
+    {
+      "iteration": 9,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 69
+    },
+    {
+      "iteration": 10,
+      "bucket": "execution_and_reply",
+      "sample_index": 715
+    },
+    {
+      "iteration": 11,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 552
+    },
+    {
+      "iteration": 12,
+      "bucket": "execution_and_reply",
+      "sample_index": 226
+    },
+    {
+      "iteration": 13,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 62
+    },
+    {
+      "iteration": 14,
+      "bucket": "execution_and_reply",
+      "sample_index": 81
+    },
+    {
+      "iteration": 15,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 47
+    },
+    {
+      "iteration": 16,
+      "bucket": "execution_and_reply",
+      "sample_index": 696
+    },
+    {
+      "iteration": 17,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 383
+    },
+    {
+      "iteration": 18,
+      "bucket": "execution_and_reply",
+      "sample_index": 393
+    },
+    {
+      "iteration": 19,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 736
+    },
+    {
+      "iteration": 20,
+      "bucket": "execution_and_reply",
+      "sample_index": 818
+    },
+    {
+      "iteration": 21,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 355
+    },
+    {
+      "iteration": 22,
+      "bucket": "execution_and_reply",
+      "sample_index": 594
+    },
+    {
+      "iteration": 23,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 462
+    },
+    {
+      "iteration": 24,
+      "bucket": "execution_and_reply",
+      "sample_index": 750
+    },
+    {
+      "iteration": 25,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 143
+    },
+    {
+      "iteration": 26,
+      "bucket": "execution_and_reply",
+      "sample_index": 808
+    },
+    {
+      "iteration": 27,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 404
+    },
+    {
+      "iteration": 28,
+      "bucket": "execution_and_reply",
+      "sample_index": 512
+    },
+    {
+      "iteration": 29,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 87
+    },
+    {
+      "iteration": 30,
+      "bucket": "execution_and_reply",
+      "sample_index": 205
+    },
+    {
+      "iteration": 31,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 149
+    },
+    {
+      "iteration": 32,
+      "bucket": "execution_and_reply",
+      "sample_index": 625
+    },
+    {
+      "iteration": 33,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 654
+    },
+    {
+      "iteration": 34,
+      "bucket": "execution_and_reply",
+      "sample_index": 127
+    },
+    {
+      "iteration": 35,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 582
+    },
+    {
+      "iteration": 36,
+      "bucket": "execution_and_reply",
+      "sample_index": 716
+    },
+    {
+      "iteration": 37,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 301
+    },
+    {
+      "iteration": 38,
+      "bucket": "execution_and_reply",
+      "sample_index": 702
+    },
+    {
+      "iteration": 39,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 458
+    },
+    {
+      "iteration": 40,
+      "bucket": "execution_and_reply",
+      "sample_index": 698
+    },
+    {
+      "iteration": 41,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 743
+    },
+    {
+      "iteration": 42,
+      "bucket": "execution_and_reply",
+      "sample_index": 484
+    },
+    {
+      "iteration": 43,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 451
+    },
+    {
+      "iteration": 44,
+      "bucket": "execution_and_reply",
+      "sample_index": 399
+    },
+    {
+      "iteration": 45,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 608
+    },
+    {
+      "iteration": 46,
+      "bucket": "execution_and_reply",
+      "sample_index": 314
+    },
+    {
+      "iteration": 47,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 151
+    },
+    {
+      "iteration": 48,
+      "bucket": "execution_and_reply",
+      "sample_index": 188
+    },
+    {
+      "iteration": 49,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 212
+    },
+    {
+      "iteration": 50,
+      "bucket": "execution_and_reply",
+      "sample_index": 37
+    },
+    {
+      "iteration": 51,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 657
+    },
+    {
+      "iteration": 52,
+      "bucket": "execution_and_reply",
+      "sample_index": 106
+    },
+    {
+      "iteration": 53,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 288
+    },
+    {
+      "iteration": 54,
+      "bucket": "execution_and_reply",
+      "sample_index": 443
+    },
+    {
+      "iteration": 55,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 760
+    },
+    {
+      "iteration": 56,
+      "bucket": "execution_and_reply",
+      "sample_index": 373
+    },
+    {
+      "iteration": 57,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 606
+    },
+    {
+      "iteration": 58,
+      "bucket": "execution_and_reply",
+      "sample_index": 174
+    },
+    {
+      "iteration": 59,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 129
+    },
+    {
+      "iteration": 60,
+      "bucket": "execution_and_reply",
+      "sample_index": 613
+    },
+    {
+      "iteration": 61,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 545
+    },
+    {
+      "iteration": 62,
+      "bucket": "execution_and_reply",
+      "sample_index": 553
+    },
+    {
+      "iteration": 63,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 639
+    },
+    {
+      "iteration": 64,
+      "bucket": "execution_and_reply",
+      "sample_index": 460
+    },
+    {
+      "iteration": 65,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 120
+    },
+    {
+      "iteration": 66,
+      "bucket": "execution_and_reply",
+      "sample_index": 195
+    },
+    {
+      "iteration": 67,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 693
+    },
+    {
+      "iteration": 68,
+      "bucket": "execution_and_reply",
+      "sample_index": 562
+    },
+    {
+      "iteration": 69,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 358
+    },
+    {
+      "iteration": 70,
+      "bucket": "execution_and_reply",
+      "sample_index": 200
+    },
+    {
+      "iteration": 71,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 517
+    },
+    {
+      "iteration": 72,
+      "bucket": "execution_and_reply",
+      "sample_index": 453
+    },
+    {
+      "iteration": 73,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 761
+    },
+    {
+      "iteration": 74,
+      "bucket": "execution_and_reply",
+      "sample_index": 428
+    },
+    {
+      "iteration": 75,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 325
+    },
+    {
+      "iteration": 76,
+      "bucket": "execution_and_reply",
+      "sample_index": 196
+    },
+    {
+      "iteration": 77,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 419
+    },
+    {
+      "iteration": 78,
+      "bucket": "execution_and_reply",
+      "sample_index": 24
+    },
+    {
+      "iteration": 79,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 684
+    },
+    {
+      "iteration": 80,
+      "bucket": "execution_and_reply",
+      "sample_index": 240
+    },
+    {
+      "iteration": 81,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 706
+    },
+    {
+      "iteration": 82,
+      "bucket": "execution_and_reply",
+      "sample_index": 89
+    },
+    {
+      "iteration": 83,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 498
+    },
+    {
+      "iteration": 84,
+      "bucket": "execution_and_reply",
+      "sample_index": 352
+    },
+    {
+      "iteration": 85,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 376
+    },
+    {
+      "iteration": 86,
+      "bucket": "execution_and_reply",
+      "sample_index": 432
+    },
+    {
+      "iteration": 87,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 51
+    },
+    {
+      "iteration": 88,
+      "bucket": "execution_and_reply",
+      "sample_index": 754
+    },
+    {
+      "iteration": 89,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 483
+    },
+    {
+      "iteration": 90,
+      "bucket": "execution_and_reply",
+      "sample_index": 514
+    },
+    {
+      "iteration": 91,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 96
+    },
+    {
+      "iteration": 92,
+      "bucket": "execution_and_reply",
+      "sample_index": 340
+    },
+    {
+      "iteration": 93,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 19
+    },
+    {
+      "iteration": 94,
+      "bucket": "execution_and_reply",
+      "sample_index": 628
+    },
+    {
+      "iteration": 95,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 473
+    },
+    {
+      "iteration": 96,
+      "bucket": "execution_and_reply",
+      "sample_index": 374
+    },
+    {
+      "iteration": 97,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 187
+    },
+    {
+      "iteration": 98,
+      "bucket": "execution_and_reply",
+      "sample_index": 422
+    },
+    {
+      "iteration": 99,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 420
+    },
+    {
+      "iteration": 100,
+      "bucket": "execution_and_reply",
+      "sample_index": 4
+    },
+    {
+      "iteration": 101,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 472
+    },
+    {
+      "iteration": 102,
+      "bucket": "execution_and_reply",
+      "sample_index": 700
+    },
+    {
+      "iteration": 103,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 32
+    },
+    {
+      "iteration": 104,
+      "bucket": "execution_and_reply",
+      "sample_index": 88
+    },
+    {
+      "iteration": 105,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 107
+    },
+    {
+      "iteration": 106,
+      "bucket": "execution_and_reply",
+      "sample_index": 634
+    },
+    {
+      "iteration": 107,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 396
+    },
+    {
+      "iteration": 108,
+      "bucket": "execution_and_reply",
+      "sample_index": 29
+    },
+    {
+      "iteration": 109,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 164
+    },
+    {
+      "iteration": 110,
+      "bucket": "execution_and_reply",
+      "sample_index": 598
+    },
+    {
+      "iteration": 111,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 377
+    },
+    {
+      "iteration": 112,
+      "bucket": "execution_and_reply",
+      "sample_index": 461
+    },
+    {
+      "iteration": 113,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 184
+    },
+    {
+      "iteration": 114,
+      "bucket": "execution_and_reply",
+      "sample_index": 595
+    },
+    {
+      "iteration": 115,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 490
+    },
+    {
+      "iteration": 116,
+      "bucket": "execution_and_reply",
+      "sample_index": 189
+    },
+    {
+      "iteration": 117,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 522
+    },
+    {
+      "iteration": 118,
+      "bucket": "execution_and_reply",
+      "sample_index": 687
+    },
+    {
+      "iteration": 119,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 171
+    },
+    {
+      "iteration": 120,
+      "bucket": "execution_and_reply",
+      "sample_index": 446
+    },
+    {
+      "iteration": 121,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 296
+    },
+    {
+      "iteration": 122,
+      "bucket": "execution_and_reply",
+      "sample_index": 85
+    },
+    {
+      "iteration": 123,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 655
+    },
+    {
+      "iteration": 124,
+      "bucket": "execution_and_reply",
+      "sample_index": 724
+    },
+    {
+      "iteration": 125,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 147
+    },
+    {
+      "iteration": 126,
+      "bucket": "execution_and_reply",
+      "sample_index": 816
+    },
+    {
+      "iteration": 127,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 759
+    },
+    {
+      "iteration": 128,
+      "bucket": "execution_and_reply",
+      "sample_index": 794
+    },
+    {
+      "iteration": 129,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 623
+    },
+    {
+      "iteration": 130,
+      "bucket": "execution_and_reply",
+      "sample_index": 209
+    },
+    {
+      "iteration": 131,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 814
+    },
+    {
+      "iteration": 132,
+      "bucket": "execution_and_reply",
+      "sample_index": 701
+    },
+    {
+      "iteration": 133,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 379
+    },
+    {
+      "iteration": 134,
+      "bucket": "execution_and_reply",
+      "sample_index": 303
+    },
+    {
+      "iteration": 135,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 680
+    },
+    {
+      "iteration": 136,
+      "bucket": "execution_and_reply",
+      "sample_index": 295
+    },
+    {
+      "iteration": 137,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 57
+    },
+    {
+      "iteration": 138,
+      "bucket": "execution_and_reply",
+      "sample_index": 800
+    },
+    {
+      "iteration": 139,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 54
+    },
+    {
+      "iteration": 140,
+      "bucket": "execution_and_reply",
+      "sample_index": 116
+    },
+    {
+      "iteration": 141,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 618
+    },
+    {
+      "iteration": 142,
+      "bucket": "execution_and_reply",
+      "sample_index": 152
+    },
+    {
+      "iteration": 143,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 30
+    },
+    {
+      "iteration": 144,
+      "bucket": "execution_and_reply",
+      "sample_index": 566
+    },
+    {
+      "iteration": 145,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 108
+    },
+    {
+      "iteration": 146,
+      "bucket": "execution_and_reply",
+      "sample_index": 678
+    },
+    {
+      "iteration": 147,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 73
+    },
+    {
+      "iteration": 148,
+      "bucket": "execution_and_reply",
+      "sample_index": 9
+    },
+    {
+      "iteration": 149,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 821
+    },
+    {
+      "iteration": 150,
+      "bucket": "execution_and_reply",
+      "sample_index": 48
+    },
+    {
+      "iteration": 151,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 12
+    },
+    {
+      "iteration": 152,
+      "bucket": "execution_and_reply",
+      "sample_index": 299
+    },
+    {
+      "iteration": 153,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 688
+    },
+    {
+      "iteration": 154,
+      "bucket": "execution_and_reply",
+      "sample_index": 71
+    },
+    {
+      "iteration": 155,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 780
+    },
+    {
+      "iteration": 156,
+      "bucket": "execution_and_reply",
+      "sample_index": 811
+    },
+    {
+      "iteration": 157,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 475
+    },
+    {
+      "iteration": 158,
+      "bucket": "execution_and_reply",
+      "sample_index": 663
+    },
+    {
+      "iteration": 159,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 435
+    },
+    {
+      "iteration": 160,
+      "bucket": "execution_and_reply",
+      "sample_index": 384
+    },
+    {
+      "iteration": 161,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 162
+    },
+    {
+      "iteration": 162,
+      "bucket": "execution_and_reply",
+      "sample_index": 50
+    },
+    {
+      "iteration": 163,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 66
+    },
+    {
+      "iteration": 164,
+      "bucket": "execution_and_reply",
+      "sample_index": 481
+    },
+    {
+      "iteration": 165,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 63
+    },
+    {
+      "iteration": 166,
+      "bucket": "execution_and_reply",
+      "sample_index": 589
+    },
+    {
+      "iteration": 167,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 797
+    },
+    {
+      "iteration": 168,
+      "bucket": "execution_and_reply",
+      "sample_index": 550
+    },
+    {
+      "iteration": 169,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 492
+    },
+    {
+      "iteration": 170,
+      "bucket": "execution_and_reply",
+      "sample_index": 600
+    },
+    {
+      "iteration": 171,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 79
+    },
+    {
+      "iteration": 172,
+      "bucket": "execution_and_reply",
+      "sample_index": 729
+    },
+    {
+      "iteration": 173,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 430
+    },
+    {
+      "iteration": 174,
+      "bucket": "execution_and_reply",
+      "sample_index": 17
+    },
+    {
+      "iteration": 175,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 620
+    },
+    {
+      "iteration": 176,
+      "bucket": "execution_and_reply",
+      "sample_index": 604
+    },
+    {
+      "iteration": 177,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 381
+    },
+    {
+      "iteration": 178,
+      "bucket": "execution_and_reply",
+      "sample_index": 282
+    },
+    {
+      "iteration": 179,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 813
+    },
+    {
+      "iteration": 180,
+      "bucket": "execution_and_reply",
+      "sample_index": 801
+    },
+    {
+      "iteration": 181,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 46
+    },
+    {
+      "iteration": 182,
+      "bucket": "execution_and_reply",
+      "sample_index": 423
+    },
+    {
+      "iteration": 183,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 823
+    },
+    {
+      "iteration": 184,
+      "bucket": "execution_and_reply",
+      "sample_index": 459
+    },
+    {
+      "iteration": 185,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 573
+    },
+    {
+      "iteration": 186,
+      "bucket": "execution_and_reply",
+      "sample_index": 316
+    },
+    {
+      "iteration": 187,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 537
+    },
+    {
+      "iteration": 188,
+      "bucket": "execution_and_reply",
+      "sample_index": 448
+    },
+    {
+      "iteration": 189,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 644
+    },
+    {
+      "iteration": 190,
+      "bucket": "execution_and_reply",
+      "sample_index": 359
+    },
+    {
+      "iteration": 191,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 334
+    },
+    {
+      "iteration": 192,
+      "bucket": "execution_and_reply",
+      "sample_index": 731
+    },
+    {
+      "iteration": 193,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 92
+    },
+    {
+      "iteration": 194,
+      "bucket": "execution_and_reply",
+      "sample_index": 222
+    },
+    {
+      "iteration": 195,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 502
+    },
+    {
+      "iteration": 196,
+      "bucket": "execution_and_reply",
+      "sample_index": 251
+    },
+    {
+      "iteration": 197,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 140
+    },
+    {
+      "iteration": 198,
+      "bucket": "execution_and_reply",
+      "sample_index": 590
+    },
+    {
+      "iteration": 199,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 470
+    },
+    {
+      "iteration": 200,
+      "bucket": "execution_and_reply",
+      "sample_index": 269
+    },
+    {
+      "iteration": 201,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 525
+    },
+    {
+      "iteration": 202,
+      "bucket": "execution_and_reply",
+      "sample_index": 349
+    },
+    {
+      "iteration": 203,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 429
+    },
+    {
+      "iteration": 204,
+      "bucket": "execution_and_reply",
+      "sample_index": 407
+    },
+    {
+      "iteration": 205,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 158
+    },
+    {
+      "iteration": 206,
+      "bucket": "execution_and_reply",
+      "sample_index": 173
+    },
+    {
+      "iteration": 207,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 796
+    },
+    {
+      "iteration": 208,
+      "bucket": "execution_and_reply",
+      "sample_index": 213
+    },
+    {
+      "iteration": 209,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 441
+    },
+    {
+      "iteration": 210,
+      "bucket": "execution_and_reply",
+      "sample_index": 670
+    },
+    {
+      "iteration": 211,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 682
+    },
+    {
+      "iteration": 212,
+      "bucket": "execution_and_reply",
+      "sample_index": 579
+    },
+    {
+      "iteration": 213,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 42
+    },
+    {
+      "iteration": 214,
+      "bucket": "execution_and_reply",
+      "sample_index": 277
+    },
+    {
+      "iteration": 215,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 132
+    },
+    {
+      "iteration": 216,
+      "bucket": "execution_and_reply",
+      "sample_index": 667
+    },
+    {
+      "iteration": 217,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 98
+    },
+    {
+      "iteration": 218,
+      "bucket": "execution_and_reply",
+      "sample_index": 642
+    },
+    {
+      "iteration": 219,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 322
+    },
+    {
+      "iteration": 220,
+      "bucket": "execution_and_reply",
+      "sample_index": 660
+    },
+    {
+      "iteration": 221,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 661
+    },
+    {
+      "iteration": 222,
+      "bucket": "execution_and_reply",
+      "sample_index": 285
+    },
+    {
+      "iteration": 223,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 506
+    },
+    {
+      "iteration": 224,
+      "bucket": "execution_and_reply",
+      "sample_index": 289
+    },
+    {
+      "iteration": 225,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 389
+    },
+    {
+      "iteration": 226,
+      "bucket": "execution_and_reply",
+      "sample_index": 271
+    },
+    {
+      "iteration": 227,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 97
+    },
+    {
+      "iteration": 228,
+      "bucket": "execution_and_reply",
+      "sample_index": 712
+    },
+    {
+      "iteration": 229,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 807
+    },
+    {
+      "iteration": 230,
+      "bucket": "execution_and_reply",
+      "sample_index": 640
+    },
+    {
+      "iteration": 231,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 33
+    },
+    {
+      "iteration": 232,
+      "bucket": "execution_and_reply",
+      "sample_index": 596
+    },
+    {
+      "iteration": 233,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 123
+    },
+    {
+      "iteration": 234,
+      "bucket": "execution_and_reply",
+      "sample_index": 233
+    },
+    {
+      "iteration": 235,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 669
+    },
+    {
+      "iteration": 236,
+      "bucket": "execution_and_reply",
+      "sample_index": 145
+    },
+    {
+      "iteration": 237,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 406
+    },
+    {
+      "iteration": 238,
+      "bucket": "execution_and_reply",
+      "sample_index": 476
+    },
+    {
+      "iteration": 239,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 559
+    },
+    {
+      "iteration": 240,
+      "bucket": "execution_and_reply",
+      "sample_index": 795
+    },
+    {
+      "iteration": 241,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 264
+    },
+    {
+      "iteration": 242,
+      "bucket": "execution_and_reply",
+      "sample_index": 199
+    },
+    {
+      "iteration": 243,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 78
+    },
+    {
+      "iteration": 244,
+      "bucket": "execution_and_reply",
+      "sample_index": 437
+    },
+    {
+      "iteration": 245,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 772
+    },
+    {
+      "iteration": 246,
+      "bucket": "execution_and_reply",
+      "sample_index": 638
+    },
+    {
+      "iteration": 247,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 232
+    },
+    {
+      "iteration": 248,
+      "bucket": "execution_and_reply",
+      "sample_index": 298
+    },
+    {
+      "iteration": 249,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 35
+    },
+    {
+      "iteration": 250,
+      "bucket": "execution_and_reply",
+      "sample_index": 344
+    },
+    {
+      "iteration": 251,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 390
+    },
+    {
+      "iteration": 252,
+      "bucket": "execution_and_reply",
+      "sample_index": 554
+    },
+    {
+      "iteration": 253,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 178
+    },
+    {
+      "iteration": 254,
+      "bucket": "execution_and_reply",
+      "sample_index": 735
+    },
+    {
+      "iteration": 255,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 704
+    },
+    {
+      "iteration": 256,
+      "bucket": "execution_and_reply",
+      "sample_index": 810
+    },
+    {
+      "iteration": 257,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 11
+    },
+    {
+      "iteration": 258,
+      "bucket": "execution_and_reply",
+      "sample_index": 425
+    },
+    {
+      "iteration": 259,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 408
+    },
+    {
+      "iteration": 260,
+      "bucket": "execution_and_reply",
+      "sample_index": 414
+    },
+    {
+      "iteration": 261,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 764
+    },
+    {
+      "iteration": 262,
+      "bucket": "execution_and_reply",
+      "sample_index": 591
+    },
+    {
+      "iteration": 263,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 499
+    },
+    {
+      "iteration": 264,
+      "bucket": "execution_and_reply",
+      "sample_index": 426
+    },
+    {
+      "iteration": 265,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 603
+    },
+    {
+      "iteration": 266,
+      "bucket": "execution_and_reply",
+      "sample_index": 812
+    },
+    {
+      "iteration": 267,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 90
+    },
+    {
+      "iteration": 268,
+      "bucket": "execution_and_reply",
+      "sample_index": 313
+    },
+    {
+      "iteration": 269,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 6
+    },
+    {
+      "iteration": 270,
+      "bucket": "execution_and_reply",
+      "sample_index": 118
+    },
+    {
+      "iteration": 271,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 327
+    },
+    {
+      "iteration": 272,
+      "bucket": "execution_and_reply",
+      "sample_index": 255
+    },
+    {
+      "iteration": 273,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 343
+    },
+    {
+      "iteration": 274,
+      "bucket": "execution_and_reply",
+      "sample_index": 186
+    },
+    {
+      "iteration": 275,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 262
+    },
+    {
+      "iteration": 276,
+      "bucket": "execution_and_reply",
+      "sample_index": 111
+    },
+    {
+      "iteration": 277,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 741
+    },
+    {
+      "iteration": 278,
+      "bucket": "execution_and_reply",
+      "sample_index": 65
+    },
+    {
+      "iteration": 279,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 167
+    },
+    {
+      "iteration": 280,
+      "bucket": "execution_and_reply",
+      "sample_index": 231
+    },
+    {
+      "iteration": 281,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 293
+    },
+    {
+      "iteration": 282,
+      "bucket": "execution_and_reply",
+      "sample_index": 672
+    },
+    {
+      "iteration": 283,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 18
+    },
+    {
+      "iteration": 284,
+      "bucket": "execution_and_reply",
+      "sample_index": 238
+    },
+    {
+      "iteration": 285,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 0
+    },
+    {
+      "iteration": 286,
+      "bucket": "execution_and_reply",
+      "sample_index": 201
+    },
+    {
+      "iteration": 287,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 631
+    },
+    {
+      "iteration": 288,
+      "bucket": "execution_and_reply",
+      "sample_index": 170
+    },
+    {
+      "iteration": 289,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 632
+    },
+    {
+      "iteration": 290,
+      "bucket": "execution_and_reply",
+      "sample_index": 692
+    },
+    {
+      "iteration": 291,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 122
+    },
+    {
+      "iteration": 292,
+      "bucket": "execution_and_reply",
+      "sample_index": 783
+    },
+    {
+      "iteration": 293,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 330
+    },
+    {
+      "iteration": 294,
+      "bucket": "execution_and_reply",
+      "sample_index": 781
+    },
+    {
+      "iteration": 295,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 646
+    },
+    {
+      "iteration": 296,
+      "bucket": "execution_and_reply",
+      "sample_index": 413
+    },
+    {
+      "iteration": 297,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 247
+    },
+    {
+      "iteration": 298,
+      "bucket": "execution_and_reply",
+      "sample_index": 547
+    },
+    {
+      "iteration": 299,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 575
+    },
+    {
+      "iteration": 300,
+      "bucket": "execution_and_reply",
+      "sample_index": 723
+    },
+    {
+      "iteration": 301,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 789
+    },
+    {
+      "iteration": 302,
+      "bucket": "execution_and_reply",
+      "sample_index": 241
+    },
+    {
+      "iteration": 303,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 695
+    },
+    {
+      "iteration": 304,
+      "bucket": "execution_and_reply",
+      "sample_index": 274
+    },
+    {
+      "iteration": 305,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 689
+    },
+    {
+      "iteration": 306,
+      "bucket": "execution_and_reply",
+      "sample_index": 148
+    },
+    {
+      "iteration": 307,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 191
+    },
+    {
+      "iteration": 308,
+      "bucket": "execution_and_reply",
+      "sample_index": 20
+    },
+    {
+      "iteration": 309,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 444
+    },
+    {
+      "iteration": 310,
+      "bucket": "execution_and_reply",
+      "sample_index": 309
+    },
+    {
+      "iteration": 311,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 694
+    },
+    {
+      "iteration": 312,
+      "bucket": "execution_and_reply",
+      "sample_index": 401
+    },
+    {
+      "iteration": 313,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 197
+    },
+    {
+      "iteration": 314,
+      "bucket": "execution_and_reply",
+      "sample_index": 497
+    },
+    {
+      "iteration": 315,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 331
+    },
+    {
+      "iteration": 316,
+      "bucket": "execution_and_reply",
+      "sample_index": 1
+    },
+    {
+      "iteration": 317,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 63
+    },
+    {
+      "iteration": 318,
+      "bucket": "execution_and_reply",
+      "sample_index": 737
+    },
+    {
+      "iteration": 319,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 631
+    },
+    {
+      "iteration": 320,
+      "bucket": "execution_and_reply",
+      "sample_index": 402
+    },
+    {
+      "iteration": 321,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 264
+    },
+    {
+      "iteration": 322,
+      "bucket": "execution_and_reply",
+      "sample_index": 320
+    },
+    {
+      "iteration": 323,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 330
+    },
+    {
+      "iteration": 324,
+      "bucket": "execution_and_reply",
+      "sample_index": 225
+    },
+    {
+      "iteration": 325,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 162
+    },
+    {
+      "iteration": 326,
+      "bucket": "execution_and_reply",
+      "sample_index": 267
+    },
+    {
+      "iteration": 327,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 355
+    },
+    {
+      "iteration": 328,
+      "bucket": "execution_and_reply",
+      "sample_index": 501
+    },
+    {
+      "iteration": 329,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 506
+    },
+    {
+      "iteration": 330,
+      "bucket": "execution_and_reply",
+      "sample_index": 610
+    },
+    {
+      "iteration": 331,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 191
+    },
+    {
+      "iteration": 332,
+      "bucket": "execution_and_reply",
+      "sample_index": 67
+    },
+    {
+      "iteration": 333,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 140
+    },
+    {
+      "iteration": 334,
+      "bucket": "execution_and_reply",
+      "sample_index": 86
+    },
+    {
+      "iteration": 335,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 741
+    },
+    {
+      "iteration": 336,
+      "bucket": "execution_and_reply",
+      "sample_index": 117
+    },
+    {
+      "iteration": 337,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 184
+    },
+    {
+      "iteration": 338,
+      "bucket": "execution_and_reply",
+      "sample_index": 154
+    },
+    {
+      "iteration": 339,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 444
+    },
+    {
+      "iteration": 340,
+      "bucket": "execution_and_reply",
+      "sample_index": 513
+    },
+    {
+      "iteration": 341,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 483
+    },
+    {
+      "iteration": 342,
+      "bucket": "execution_and_reply",
+      "sample_index": 568
+    },
+    {
+      "iteration": 343,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 537
+    },
+    {
+      "iteration": 344,
+      "bucket": "execution_and_reply",
+      "sample_index": 217
+    },
+    {
+      "iteration": 345,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 30
+    },
+    {
+      "iteration": 346,
+      "bucket": "execution_and_reply",
+      "sample_index": 744
+    },
+    {
+      "iteration": 347,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 129
+    },
+    {
+      "iteration": 348,
+      "bucket": "execution_and_reply",
+      "sample_index": 109
+    },
+    {
+      "iteration": 349,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 582
+    },
+    {
+      "iteration": 350,
+      "bucket": "execution_and_reply",
+      "sample_index": 683
+    },
+    {
+      "iteration": 351,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 390
+    },
+    {
+      "iteration": 352,
+      "bucket": "execution_and_reply",
+      "sample_index": 617
+    },
+    {
+      "iteration": 353,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 164
+    },
+    {
+      "iteration": 354,
+      "bucket": "execution_and_reply",
+      "sample_index": 266
+    },
+    {
+      "iteration": 355,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 158
+    },
+    {
+      "iteration": 356,
+      "bucket": "execution_and_reply",
+      "sample_index": 722
+    },
+    {
+      "iteration": 357,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 823
+    },
+    {
+      "iteration": 358,
+      "bucket": "execution_and_reply",
+      "sample_index": 583
+    },
+    {
+      "iteration": 359,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 364
+    },
+    {
+      "iteration": 360,
+      "bucket": "execution_and_reply",
+      "sample_index": 745
+    },
+    {
+      "iteration": 361,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 764
+    },
+    {
+      "iteration": 362,
+      "bucket": "execution_and_reply",
+      "sample_index": 321
+    },
+    {
+      "iteration": 363,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 606
+    },
+    {
+      "iteration": 364,
+      "bucket": "execution_and_reply",
+      "sample_index": 185
+    },
+    {
+      "iteration": 365,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 147
+    },
+    {
+      "iteration": 366,
+      "bucket": "execution_and_reply",
+      "sample_index": 714
+    },
+    {
+      "iteration": 367,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 706
+    },
+    {
+      "iteration": 368,
+      "bucket": "execution_and_reply",
+      "sample_index": 748
+    },
+    {
+      "iteration": 369,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 680
+    },
+    {
+      "iteration": 370,
+      "bucket": "execution_and_reply",
+      "sample_index": 380
+    },
+    {
+      "iteration": 371,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 759
+    },
+    {
+      "iteration": 372,
+      "bucket": "execution_and_reply",
+      "sample_index": 268
+    },
+    {
+      "iteration": 373,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 639
+    },
+    {
+      "iteration": 374,
+      "bucket": "execution_and_reply",
+      "sample_index": 44
+    },
+    {
+      "iteration": 375,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 796
+    },
+    {
+      "iteration": 376,
+      "bucket": "execution_and_reply",
+      "sample_index": 101
+    },
+    {
+      "iteration": 377,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 420
+    },
+    {
+      "iteration": 378,
+      "bucket": "execution_and_reply",
+      "sample_index": 774
+    },
+    {
+      "iteration": 379,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 632
+    },
+    {
+      "iteration": 380,
+      "bucket": "execution_and_reply",
+      "sample_index": 218
+    },
+    {
+      "iteration": 381,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 451
+    },
+    {
+      "iteration": 382,
+      "bucket": "execution_and_reply",
+      "sample_index": 782
+    },
+    {
+      "iteration": 383,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 789
+    },
+    {
+      "iteration": 384,
+      "bucket": "execution_and_reply",
+      "sample_index": 356
+    },
+    {
+      "iteration": 385,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 247
+    },
+    {
+      "iteration": 386,
+      "bucket": "execution_and_reply",
+      "sample_index": 455
+    },
+    {
+      "iteration": 387,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 655
+    },
+    {
+      "iteration": 388,
+      "bucket": "execution_and_reply",
+      "sample_index": 16
+    },
+    {
+      "iteration": 389,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 523
+    },
+    {
+      "iteration": 390,
+      "bucket": "execution_and_reply",
+      "sample_index": 721
+    },
+    {
+      "iteration": 391,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 32
+    },
+    {
+      "iteration": 392,
+      "bucket": "execution_and_reply",
+      "sample_index": 533
+    },
+    {
+      "iteration": 393,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 73
+    },
+    {
+      "iteration": 394,
+      "bucket": "execution_and_reply",
+      "sample_index": 353
+    },
+    {
+      "iteration": 395,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 151
+    },
+    {
+      "iteration": 396,
+      "bucket": "execution_and_reply",
+      "sample_index": 457
+    },
+    {
+      "iteration": 397,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 499
+    },
+    {
+      "iteration": 398,
+      "bucket": "execution_and_reply",
+      "sample_index": 767
+    },
+    {
+      "iteration": 399,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 608
+    },
+    {
+      "iteration": 400,
+      "bucket": "execution_and_reply",
+      "sample_index": 765
+    },
+    {
+      "iteration": 401,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 98
+    },
+    {
+      "iteration": 402,
+      "bucket": "execution_and_reply",
+      "sample_index": 105
+    },
+    {
+      "iteration": 403,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 646
+    },
+    {
+      "iteration": 404,
+      "bucket": "execution_and_reply",
+      "sample_index": 351
+    },
+    {
+      "iteration": 405,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 552
+    },
+    {
+      "iteration": 406,
+      "bucket": "execution_and_reply",
+      "sample_index": 417
+    },
+    {
+      "iteration": 407,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 559
+    },
+    {
+      "iteration": 408,
+      "bucket": "execution_and_reply",
+      "sample_index": 234
+    },
+    {
+      "iteration": 409,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 694
+    },
+    {
+      "iteration": 410,
+      "bucket": "execution_and_reply",
+      "sample_index": 305
+    },
+    {
+      "iteration": 411,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 689
+    },
+    {
+      "iteration": 412,
+      "bucket": "execution_and_reply",
+      "sample_index": 487
+    },
+    {
+      "iteration": 413,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 343
+    },
+    {
+      "iteration": 414,
+      "bucket": "execution_and_reply",
+      "sample_index": 43
+    },
+    {
+      "iteration": 415,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 743
+    },
+    {
+      "iteration": 416,
+      "bucket": "execution_and_reply",
+      "sample_index": 409
+    },
+    {
+      "iteration": 417,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 293
+    },
+    {
+      "iteration": 418,
+      "bucket": "execution_and_reply",
+      "sample_index": 624
+    },
+    {
+      "iteration": 419,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 441
+    },
+    {
+      "iteration": 420,
+      "bucket": "execution_and_reply",
+      "sample_index": 798
+    },
+    {
+      "iteration": 421,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 358
+    },
+    {
+      "iteration": 422,
+      "bucket": "execution_and_reply",
+      "sample_index": 179
+    },
+    {
+      "iteration": 423,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 187
+    },
+    {
+      "iteration": 424,
+      "bucket": "execution_and_reply",
+      "sample_index": 508
+    },
+    {
+      "iteration": 425,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 66
+    },
+    {
+      "iteration": 426,
+      "bucket": "execution_and_reply",
+      "sample_index": 756
+    },
+    {
+      "iteration": 427,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 623
+    },
+    {
+      "iteration": 428,
+      "bucket": "execution_and_reply",
+      "sample_index": 253
+    },
+    {
+      "iteration": 429,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 408
+    },
+    {
+      "iteration": 430,
+      "bucket": "execution_and_reply",
+      "sample_index": 93
+    },
+    {
+      "iteration": 431,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 813
+    },
+    {
+      "iteration": 432,
+      "bucket": "execution_and_reply",
+      "sample_index": 144
+    },
+    {
+      "iteration": 433,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 35
+    },
+    {
+      "iteration": 434,
+      "bucket": "execution_and_reply",
+      "sample_index": 709
+    },
+    {
+      "iteration": 435,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 171
+    },
+    {
+      "iteration": 436,
+      "bucket": "execution_and_reply",
+      "sample_index": 328
+    },
+    {
+      "iteration": 437,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 33
+    },
+    {
+      "iteration": 438,
+      "bucket": "execution_and_reply",
+      "sample_index": 477
+    },
+    {
+      "iteration": 439,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 97
+    },
+    {
+      "iteration": 440,
+      "bucket": "execution_and_reply",
+      "sample_index": 442
+    },
+    {
+      "iteration": 441,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 197
+    },
+    {
+      "iteration": 442,
+      "bucket": "execution_and_reply",
+      "sample_index": 569
+    },
+    {
+      "iteration": 443,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 797
+    },
+    {
+      "iteration": 444,
+      "bucket": "execution_and_reply",
+      "sample_index": 38
+    },
+    {
+      "iteration": 445,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 108
+    },
+    {
+      "iteration": 446,
+      "bucket": "execution_and_reply",
+      "sample_index": 68
+    },
+    {
+      "iteration": 447,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 684
+    },
+    {
+      "iteration": 448,
+      "bucket": "execution_and_reply",
+      "sample_index": 671
+    },
+    {
+      "iteration": 449,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 379
+    },
+    {
+      "iteration": 450,
+      "bucket": "execution_and_reply",
+      "sample_index": 13
+    },
+    {
+      "iteration": 451,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 122
+    },
+    {
+      "iteration": 452,
+      "bucket": "execution_and_reply",
+      "sample_index": 113
+    },
+    {
+      "iteration": 453,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 383
+    },
+    {
+      "iteration": 454,
+      "bucket": "execution_and_reply",
+      "sample_index": 318
+    },
+    {
+      "iteration": 455,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 654
+    },
+    {
+      "iteration": 456,
+      "bucket": "execution_and_reply",
+      "sample_index": 214
+    },
+    {
+      "iteration": 457,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 0
+    },
+    {
+      "iteration": 458,
+      "bucket": "execution_and_reply",
+      "sample_index": 469
+    },
+    {
+      "iteration": 459,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 377
+    },
+    {
+      "iteration": 460,
+      "bucket": "execution_and_reply",
+      "sample_index": 679
+    },
+    {
+      "iteration": 461,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 435
+    },
+    {
+      "iteration": 462,
+      "bucket": "execution_and_reply",
+      "sample_index": 169
+    },
+    {
+      "iteration": 463,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 212
+    },
+    {
+      "iteration": 464,
+      "bucket": "execution_and_reply",
+      "sample_index": 557
+    },
+    {
+      "iteration": 465,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 688
+    },
+    {
+      "iteration": 466,
+      "bucket": "execution_and_reply",
+      "sample_index": 155
+    },
+    {
+      "iteration": 467,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 19
+    },
+    {
+      "iteration": 468,
+      "bucket": "execution_and_reply",
+      "sample_index": 275
+    },
+    {
+      "iteration": 469,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 18
+    },
+    {
+      "iteration": 470,
+      "bucket": "execution_and_reply",
+      "sample_index": 436
+    },
+    {
+      "iteration": 471,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 618
+    },
+    {
+      "iteration": 472,
+      "bucket": "execution_and_reply",
+      "sample_index": 576
+    },
+    {
+      "iteration": 473,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 120
+    },
+    {
+      "iteration": 474,
+      "bucket": "execution_and_reply",
+      "sample_index": 74
+    },
+    {
+      "iteration": 475,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 772
+    },
+    {
+      "iteration": 476,
+      "bucket": "execution_and_reply",
+      "sample_index": 15
+    },
+    {
+      "iteration": 477,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 620
+    },
+    {
+      "iteration": 478,
+      "bucket": "execution_and_reply",
+      "sample_index": 768
+    },
+    {
+      "iteration": 479,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 419
+    },
+    {
+      "iteration": 480,
+      "bucket": "execution_and_reply",
+      "sample_index": 531
+    },
+    {
+      "iteration": 481,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 178
+    },
+    {
+      "iteration": 482,
+      "bucket": "execution_and_reply",
+      "sample_index": 259
+    },
+    {
+      "iteration": 483,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 490
+    },
+    {
+      "iteration": 484,
+      "bucket": "execution_and_reply",
+      "sample_index": 633
+    },
+    {
+      "iteration": 485,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 669
+    },
+    {
+      "iteration": 486,
+      "bucket": "execution_and_reply",
+      "sample_index": 648
+    },
+    {
+      "iteration": 487,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 821
+    },
+    {
+      "iteration": 488,
+      "bucket": "execution_and_reply",
+      "sample_index": 427
+    },
+    {
+      "iteration": 489,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 525
+    },
+    {
+      "iteration": 490,
+      "bucket": "execution_and_reply",
+      "sample_index": 465
+    },
+    {
+      "iteration": 491,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 445
+    },
+    {
+      "iteration": 492,
+      "bucket": "execution_and_reply",
+      "sample_index": 206
+    },
+    {
+      "iteration": 493,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 807
+    },
+    {
+      "iteration": 494,
+      "bucket": "execution_and_reply",
+      "sample_index": 819
+    },
+    {
+      "iteration": 495,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 341
+    },
+    {
+      "iteration": 496,
+      "bucket": "execution_and_reply",
+      "sample_index": 466
+    },
+    {
+      "iteration": 497,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 502
+    },
+    {
+      "iteration": 498,
+      "bucket": "execution_and_reply",
+      "sample_index": 211
+    },
+    {
+      "iteration": 499,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 760
+    },
+    {
+      "iteration": 500,
+      "bucket": "execution_and_reply",
+      "sample_index": 210
+    },
+    {
+      "iteration": 501,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 6
+    },
+    {
+      "iteration": 502,
+      "bucket": "execution_and_reply",
+      "sample_index": 41
+    },
+    {
+      "iteration": 503,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 149
+    },
+    {
+      "iteration": 504,
+      "bucket": "execution_and_reply",
+      "sample_index": 703
+    },
+    {
+      "iteration": 505,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 644
+    },
+    {
+      "iteration": 506,
+      "bucket": "execution_and_reply",
+      "sample_index": 555
+    },
+    {
+      "iteration": 507,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 42
+    },
+    {
+      "iteration": 508,
+      "bucket": "execution_and_reply",
+      "sample_index": 599
+    },
+    {
+      "iteration": 509,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 12
+    },
+    {
+      "iteration": 510,
+      "bucket": "execution_and_reply",
+      "sample_index": 611
+    },
+    {
+      "iteration": 511,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 761
+    },
+    {
+      "iteration": 512,
+      "bucket": "execution_and_reply",
+      "sample_index": 405
+    },
+    {
+      "iteration": 513,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 87
+    },
+    {
+      "iteration": 514,
+      "bucket": "execution_and_reply",
+      "sample_index": 332
+    },
+    {
+      "iteration": 515,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 682
+    },
+    {
+      "iteration": 516,
+      "bucket": "execution_and_reply",
+      "sample_index": 246
+    },
+    {
+      "iteration": 517,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 736
+    },
+    {
+      "iteration": 518,
+      "bucket": "execution_and_reply",
+      "sample_index": 52
+    },
+    {
+      "iteration": 519,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 325
+    },
+    {
+      "iteration": 520,
+      "bucket": "execution_and_reply",
+      "sample_index": 125
+    },
+    {
+      "iteration": 521,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 573
+    },
+    {
+      "iteration": 522,
+      "bucket": "execution_and_reply",
+      "sample_index": 180
+    },
+    {
+      "iteration": 523,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 62
+    },
+    {
+      "iteration": 524,
+      "bucket": "execution_and_reply",
+      "sample_index": 333
+    },
+    {
+      "iteration": 525,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 143
+    },
+    {
+      "iteration": 526,
+      "bucket": "execution_and_reply",
+      "sample_index": 83
+    },
+    {
+      "iteration": 527,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 545
+    },
+    {
+      "iteration": 528,
+      "bucket": "execution_and_reply",
+      "sample_index": 528
+    },
+    {
+      "iteration": 529,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 695
+    },
+    {
+      "iteration": 530,
+      "bucket": "execution_and_reply",
+      "sample_index": 3
+    },
+    {
+      "iteration": 531,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 288
+    },
+    {
+      "iteration": 532,
+      "bucket": "execution_and_reply",
+      "sample_index": 220
+    },
+    {
+      "iteration": 533,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 458
+    },
+    {
+      "iteration": 534,
+      "bucket": "execution_and_reply",
+      "sample_index": 776
+    },
+    {
+      "iteration": 535,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 814
+    },
+    {
+      "iteration": 536,
+      "bucket": "execution_and_reply",
+      "sample_index": 775
+    },
+    {
+      "iteration": 537,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 79
+    },
+    {
+      "iteration": 538,
+      "bucket": "execution_and_reply",
+      "sample_index": 609
+    },
+    {
+      "iteration": 539,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 657
+    },
+    {
+      "iteration": 540,
+      "bucket": "execution_and_reply",
+      "sample_index": 388
+    },
+    {
+      "iteration": 541,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 92
+    },
+    {
+      "iteration": 542,
+      "bucket": "execution_and_reply",
+      "sample_index": 250
+    },
+    {
+      "iteration": 543,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 51
+    },
+    {
+      "iteration": 544,
+      "bucket": "execution_and_reply",
+      "sample_index": 548
+    },
+    {
+      "iteration": 545,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 780
+    },
+    {
+      "iteration": 546,
+      "bucket": "execution_and_reply",
+      "sample_index": 302
+    },
+    {
+      "iteration": 547,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 396
+    },
+    {
+      "iteration": 548,
+      "bucket": "execution_and_reply",
+      "sample_index": 270
+    },
+    {
+      "iteration": 549,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 381
+    },
+    {
+      "iteration": 550,
+      "bucket": "execution_and_reply",
+      "sample_index": 543
+    },
+    {
+      "iteration": 551,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 47
+    },
+    {
+      "iteration": 552,
+      "bucket": "execution_and_reply",
+      "sample_index": 621
+    },
+    {
+      "iteration": 553,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 429
+    },
+    {
+      "iteration": 554,
+      "bucket": "execution_and_reply",
+      "sample_index": 726
+    },
+    {
+      "iteration": 555,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 693
+    },
+    {
+      "iteration": 556,
+      "bucket": "execution_and_reply",
+      "sample_index": 677
+    },
+    {
+      "iteration": 557,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 57
+    },
+    {
+      "iteration": 558,
+      "bucket": "execution_and_reply",
+      "sample_index": 100
+    },
+    {
+      "iteration": 559,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 389
+    },
+    {
+      "iteration": 560,
+      "bucket": "execution_and_reply",
+      "sample_index": 36
+    },
+    {
+      "iteration": 561,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 322
+    },
+    {
+      "iteration": 562,
+      "bucket": "execution_and_reply",
+      "sample_index": 366
+    },
+    {
+      "iteration": 563,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 11
+    },
+    {
+      "iteration": 564,
+      "bucket": "execution_and_reply",
+      "sample_index": 686
+    },
+    {
+      "iteration": 565,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 69
+    },
+    {
+      "iteration": 566,
+      "bucket": "execution_and_reply",
+      "sample_index": 59
+    },
+    {
+      "iteration": 567,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 430
+    },
+    {
+      "iteration": 568,
+      "bucket": "execution_and_reply",
+      "sample_index": 584
+    },
+    {
+      "iteration": 569,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 498
+    },
+    {
+      "iteration": 570,
+      "bucket": "execution_and_reply",
+      "sample_index": 799
+    },
+    {
+      "iteration": 571,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 262
+    },
+    {
+      "iteration": 572,
+      "bucket": "execution_and_reply",
+      "sample_index": 257
+    },
+    {
+      "iteration": 573,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 522
+    },
+    {
+      "iteration": 574,
+      "bucket": "execution_and_reply",
+      "sample_index": 141
+    },
+    {
+      "iteration": 575,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 462
+    },
+    {
+      "iteration": 576,
+      "bucket": "execution_and_reply",
+      "sample_index": 339
+    },
+    {
+      "iteration": 577,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 575
+    },
+    {
+      "iteration": 578,
+      "bucket": "execution_and_reply",
+      "sample_index": 91
+    },
+    {
+      "iteration": 579,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 167
+    },
+    {
+      "iteration": 580,
+      "bucket": "execution_and_reply",
+      "sample_index": 734
+    },
+    {
+      "iteration": 581,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 517
+    },
+    {
+      "iteration": 582,
+      "bucket": "execution_and_reply",
+      "sample_index": 439
+    },
+    {
+      "iteration": 583,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 107
+    },
+    {
+      "iteration": 584,
+      "bucket": "execution_and_reply",
+      "sample_index": 202
+    },
+    {
+      "iteration": 585,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 473
+    },
+    {
+      "iteration": 586,
+      "bucket": "execution_and_reply",
+      "sample_index": 45
+    },
+    {
+      "iteration": 587,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 78
+    },
+    {
+      "iteration": 588,
+      "bucket": "execution_and_reply",
+      "sample_index": 431
+    },
+    {
+      "iteration": 589,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 232
+    },
+    {
+      "iteration": 590,
+      "bucket": "execution_and_reply",
+      "sample_index": 130
+    },
+    {
+      "iteration": 591,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 492
+    },
+    {
+      "iteration": 592,
+      "bucket": "execution_and_reply",
+      "sample_index": 310
+    },
+    {
+      "iteration": 593,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 123
+    },
+    {
+      "iteration": 594,
+      "bucket": "execution_and_reply",
+      "sample_index": 593
+    },
+    {
+      "iteration": 595,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 404
+    },
+    {
+      "iteration": 596,
+      "bucket": "execution_and_reply",
+      "sample_index": 342
+    },
+    {
+      "iteration": 597,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 96
+    },
+    {
+      "iteration": 598,
+      "bucket": "execution_and_reply",
+      "sample_index": 254
+    },
+    {
+      "iteration": 599,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 331
+    },
+    {
+      "iteration": 600,
+      "bucket": "execution_and_reply",
+      "sample_index": 412
+    },
+    {
+      "iteration": 601,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 661
+    },
+    {
+      "iteration": 602,
+      "bucket": "execution_and_reply",
+      "sample_index": 128
+    },
+    {
+      "iteration": 603,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 470
+    },
+    {
+      "iteration": 604,
+      "bucket": "execution_and_reply",
+      "sample_index": 2
+    },
+    {
+      "iteration": 605,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 54
+    },
+    {
+      "iteration": 606,
+      "bucket": "execution_and_reply",
+      "sample_index": 53
+    },
+    {
+      "iteration": 607,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 334
+    },
+    {
+      "iteration": 608,
+      "bucket": "execution_and_reply",
+      "sample_index": 21
+    },
+    {
+      "iteration": 609,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 406
+    },
+    {
+      "iteration": 610,
+      "bucket": "execution_and_reply",
+      "sample_index": 228
+    },
+    {
+      "iteration": 611,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 704
+    },
+    {
+      "iteration": 612,
+      "bucket": "execution_and_reply",
+      "sample_index": 784
+    },
+    {
+      "iteration": 613,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 132
+    },
+    {
+      "iteration": 614,
+      "bucket": "execution_and_reply",
+      "sample_index": 224
+    },
+    {
+      "iteration": 615,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 301
+    },
+    {
+      "iteration": 616,
+      "bucket": "execution_and_reply",
+      "sample_index": 239
+    },
+    {
+      "iteration": 617,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 327
+    },
+    {
+      "iteration": 618,
+      "bucket": "execution_and_reply",
+      "sample_index": 242
+    },
+    {
+      "iteration": 619,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 376
+    },
+    {
+      "iteration": 620,
+      "bucket": "execution_and_reply",
+      "sample_index": 72
+    },
+    {
+      "iteration": 621,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 603
+    },
+    {
+      "iteration": 622,
+      "bucket": "execution_and_reply",
+      "sample_index": 766
+    },
+    {
+      "iteration": 623,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 296
+    },
+    {
+      "iteration": 624,
+      "bucket": "execution_and_reply",
+      "sample_index": 505
+    },
+    {
+      "iteration": 625,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 472
+    },
+    {
+      "iteration": 626,
+      "bucket": "execution_and_reply",
+      "sample_index": 103
+    },
+    {
+      "iteration": 627,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 90
+    },
+    {
+      "iteration": 628,
+      "bucket": "execution_and_reply",
+      "sample_index": 614
+    },
+    {
+      "iteration": 629,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 46
+    },
+    {
+      "iteration": 630,
+      "bucket": "execution_and_reply",
+      "sample_index": 809
+    },
+    {
+      "iteration": 631,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 475
+    },
+    {
+      "iteration": 632,
+      "bucket": "execution_and_reply",
+      "sample_index": 133
+    },
+    {
+      "iteration": 633,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 430
+    },
+    {
+      "iteration": 634,
+      "bucket": "execution_and_reply",
+      "sample_index": 392
+    },
+    {
+      "iteration": 635,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 639
+    },
+    {
+      "iteration": 636,
+      "bucket": "execution_and_reply",
+      "sample_index": 411
+    },
+    {
+      "iteration": 637,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 499
+    },
+    {
+      "iteration": 638,
+      "bucket": "execution_and_reply",
+      "sample_index": 230
+    },
+    {
+      "iteration": 639,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 706
+    },
+    {
+      "iteration": 640,
+      "bucket": "execution_and_reply",
+      "sample_index": 372
+    },
+    {
+      "iteration": 641,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 404
+    },
+    {
+      "iteration": 642,
+      "bucket": "execution_and_reply",
+      "sample_index": 450
+    },
+    {
+      "iteration": 643,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 644
+    },
+    {
+      "iteration": 644,
+      "bucket": "execution_and_reply",
+      "sample_index": 585
+    },
+    {
+      "iteration": 645,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 262
+    },
+    {
+      "iteration": 646,
+      "bucket": "execution_and_reply",
+      "sample_index": 26
+    },
+    {
+      "iteration": 647,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 396
+    },
+    {
+      "iteration": 648,
+      "bucket": "execution_and_reply",
+      "sample_index": 61
+    },
+    {
+      "iteration": 649,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 376
+    },
+    {
+      "iteration": 650,
+      "bucket": "execution_and_reply",
+      "sample_index": 49
+    },
+    {
+      "iteration": 651,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 559
+    },
+    {
+      "iteration": 652,
+      "bucket": "execution_and_reply",
+      "sample_index": 229
+    },
+    {
+      "iteration": 653,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 684
+    },
+    {
+      "iteration": 654,
+      "bucket": "execution_and_reply",
+      "sample_index": 752
+    },
+    {
+      "iteration": 655,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 506
+    },
+    {
+      "iteration": 656,
+      "bucket": "execution_and_reply",
+      "sample_index": 237
+    },
+    {
+      "iteration": 657,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 646
+    },
+    {
+      "iteration": 658,
+      "bucket": "execution_and_reply",
+      "sample_index": 668
+    },
+    {
+      "iteration": 659,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 517
+    },
+    {
+      "iteration": 660,
+      "bucket": "execution_and_reply",
+      "sample_index": 172
+    },
+    {
+      "iteration": 661,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 69
+    },
+    {
+      "iteration": 662,
+      "bucket": "execution_and_reply",
+      "sample_index": 278
+    },
+    {
+      "iteration": 663,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 6
+    },
+    {
+      "iteration": 664,
+      "bucket": "execution_and_reply",
+      "sample_index": 447
+    },
+    {
+      "iteration": 665,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 92
+    },
+    {
+      "iteration": 666,
+      "bucket": "execution_and_reply",
+      "sample_index": 541
+    },
+    {
+      "iteration": 667,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 381
+    },
+    {
+      "iteration": 668,
+      "bucket": "execution_and_reply",
+      "sample_index": 534
+    },
+    {
+      "iteration": 669,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 796
+    },
+    {
+      "iteration": 670,
+      "bucket": "execution_and_reply",
+      "sample_index": 204
+    },
+    {
+      "iteration": 671,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 147
+    },
+    {
+      "iteration": 672,
+      "bucket": "execution_and_reply",
+      "sample_index": 338
+    },
+    {
+      "iteration": 673,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 264
+    },
+    {
+      "iteration": 674,
+      "bucket": "execution_and_reply",
+      "sample_index": 177
+    },
+    {
+      "iteration": 675,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 54
+    },
+    {
+      "iteration": 676,
+      "bucket": "execution_and_reply",
+      "sample_index": 153
+    },
+    {
+      "iteration": 677,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 780
+    },
+    {
+      "iteration": 678,
+      "bucket": "execution_and_reply",
+      "sample_index": 725
+    },
+    {
+      "iteration": 679,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 502
+    },
+    {
+      "iteration": 680,
+      "bucket": "execution_and_reply",
+      "sample_index": 245
+    },
+    {
+      "iteration": 681,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 525
+    },
+    {
+      "iteration": 682,
+      "bucket": "execution_and_reply",
+      "sample_index": 317
+    },
+    {
+      "iteration": 683,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 32
+    },
+    {
+      "iteration": 684,
+      "bucket": "execution_and_reply",
+      "sample_index": 39
+    },
+    {
+      "iteration": 685,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 772
+    },
+    {
+      "iteration": 686,
+      "bucket": "execution_and_reply",
+      "sample_index": 119
+    },
+    {
+      "iteration": 687,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 331
+    },
+    {
+      "iteration": 688,
+      "bucket": "execution_and_reply",
+      "sample_index": 260
+    },
+    {
+      "iteration": 689,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 760
+    },
+    {
+      "iteration": 690,
+      "bucket": "execution_and_reply",
+      "sample_index": 403
+    },
+    {
+      "iteration": 691,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 47
+    },
+    {
+      "iteration": 692,
+      "bucket": "execution_and_reply",
+      "sample_index": 788
+    },
+    {
+      "iteration": 693,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 408
+    },
+    {
+      "iteration": 694,
+      "bucket": "execution_and_reply",
+      "sample_index": 665
+    },
+    {
+      "iteration": 695,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 63
+    },
+    {
+      "iteration": 696,
+      "bucket": "execution_and_reply",
+      "sample_index": 387
+    },
+    {
+      "iteration": 697,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 164
+    },
+    {
+      "iteration": 698,
+      "bucket": "execution_and_reply",
+      "sample_index": 347
+    },
+    {
+      "iteration": 699,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 355
+    },
+    {
+      "iteration": 700,
+      "bucket": "execution_and_reply",
+      "sample_index": 769
+    },
+    {
+      "iteration": 701,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 334
+    },
+    {
+      "iteration": 702,
+      "bucket": "execution_and_reply",
+      "sample_index": 771
+    },
+    {
+      "iteration": 703,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 66
+    },
+    {
+      "iteration": 704,
+      "bucket": "execution_and_reply",
+      "sample_index": 619
+    },
+    {
+      "iteration": 705,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 689
+    },
+    {
+      "iteration": 706,
+      "bucket": "execution_and_reply",
+      "sample_index": 175
+    },
+    {
+      "iteration": 707,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 122
+    },
+    {
+      "iteration": 708,
+      "bucket": "execution_and_reply",
+      "sample_index": 348
+    },
+    {
+      "iteration": 709,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 158
+    },
+    {
+      "iteration": 710,
+      "bucket": "execution_and_reply",
+      "sample_index": 755
+    },
+    {
+      "iteration": 711,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 444
+    },
+    {
+      "iteration": 712,
+      "bucket": "execution_and_reply",
+      "sample_index": 471
+    },
+    {
+      "iteration": 713,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 184
+    },
+    {
+      "iteration": 714,
+      "bucket": "execution_and_reply",
+      "sample_index": 558
+    },
+    {
+      "iteration": 715,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 736
+    },
+    {
+      "iteration": 716,
+      "bucket": "execution_and_reply",
+      "sample_index": 546
+    },
+    {
+      "iteration": 717,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 764
+    },
+    {
+      "iteration": 718,
+      "bucket": "execution_and_reply",
+      "sample_index": 397
+    },
+    {
+      "iteration": 719,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 46
+    },
+    {
+      "iteration": 720,
+      "bucket": "execution_and_reply",
+      "sample_index": 326
+    },
+    {
+      "iteration": 721,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 429
+    },
+    {
+      "iteration": 722,
+      "bucket": "execution_and_reply",
+      "sample_index": 542
+    },
+    {
+      "iteration": 723,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 473
+    },
+    {
+      "iteration": 724,
+      "bucket": "execution_and_reply",
+      "sample_index": 287
+    },
+    {
+      "iteration": 725,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 51
+    },
+    {
+      "iteration": 726,
+      "bucket": "execution_and_reply",
+      "sample_index": 565
+    },
+    {
+      "iteration": 727,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 492
+    },
+    {
+      "iteration": 728,
+      "bucket": "execution_and_reply",
+      "sample_index": 7
+    },
+    {
+      "iteration": 729,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 149
+    },
+    {
+      "iteration": 730,
+      "bucket": "execution_and_reply",
+      "sample_index": 708
+    },
+    {
+      "iteration": 731,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 603
+    },
+    {
+      "iteration": 732,
+      "bucket": "execution_and_reply",
+      "sample_index": 416
+    },
+    {
+      "iteration": 733,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 743
+    },
+    {
+      "iteration": 734,
+      "bucket": "execution_and_reply",
+      "sample_index": 806
+    },
+    {
+      "iteration": 735,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 657
+    },
+    {
+      "iteration": 736,
+      "bucket": "execution_and_reply",
+      "sample_index": 749
+    },
+    {
+      "iteration": 737,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 358
+    },
+    {
+      "iteration": 738,
+      "bucket": "execution_and_reply",
+      "sample_index": 707
+    },
+    {
+      "iteration": 739,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 694
+    },
+    {
+      "iteration": 740,
+      "bucket": "execution_and_reply",
+      "sample_index": 792
+    },
+    {
+      "iteration": 741,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 654
+    },
+    {
+      "iteration": 742,
+      "bucket": "execution_and_reply",
+      "sample_index": 134
+    },
+    {
+      "iteration": 743,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 472
+    },
+    {
+      "iteration": 744,
+      "bucket": "execution_and_reply",
+      "sample_index": 518
+    },
+    {
+      "iteration": 745,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 419
+    },
+    {
+      "iteration": 746,
+      "bucket": "execution_and_reply",
+      "sample_index": 307
+    },
+    {
+      "iteration": 747,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 390
+    },
+    {
+      "iteration": 748,
+      "bucket": "execution_and_reply",
+      "sample_index": 424
+    },
+    {
+      "iteration": 749,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 523
+    },
+    {
+      "iteration": 750,
+      "bucket": "execution_and_reply",
+      "sample_index": 586
+    },
+    {
+      "iteration": 751,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 178
+    },
+    {
+      "iteration": 752,
+      "bucket": "execution_and_reply",
+      "sample_index": 496
+    },
+    {
+      "iteration": 753,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 151
+    },
+    {
+      "iteration": 754,
+      "bucket": "execution_and_reply",
+      "sample_index": 649
+    },
+    {
+      "iteration": 755,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 35
+    },
+    {
+      "iteration": 756,
+      "bucket": "execution_and_reply",
+      "sample_index": 793
+    },
+    {
+      "iteration": 757,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 197
+    },
+    {
+      "iteration": 758,
+      "bucket": "execution_and_reply",
+      "sample_index": 102
+    },
+    {
+      "iteration": 759,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 296
+    },
+    {
+      "iteration": 760,
+      "bucket": "execution_and_reply",
+      "sample_index": 198
+    },
+    {
+      "iteration": 761,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 797
+    },
+    {
+      "iteration": 762,
+      "bucket": "execution_and_reply",
+      "sample_index": 651
+    },
+    {
+      "iteration": 763,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 120
+    },
+    {
+      "iteration": 764,
+      "bucket": "execution_and_reply",
+      "sample_index": 650
+    },
+    {
+      "iteration": 765,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 108
+    },
+    {
+      "iteration": 766,
+      "bucket": "execution_and_reply",
+      "sample_index": 519
+    },
+    {
+      "iteration": 767,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 682
+    },
+    {
+      "iteration": 768,
+      "bucket": "execution_and_reply",
+      "sample_index": 478
+    },
+    {
+      "iteration": 769,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 695
+    },
+    {
+      "iteration": 770,
+      "bucket": "execution_and_reply",
+      "sample_index": 28
+    },
+    {
+      "iteration": 771,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 343
+    },
+    {
+      "iteration": 772,
+      "bucket": "execution_and_reply",
+      "sample_index": 55
+    },
+    {
+      "iteration": 773,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 470
+    },
+    {
+      "iteration": 774,
+      "bucket": "execution_and_reply",
+      "sample_index": 699
+    },
+    {
+      "iteration": 775,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 606
+    },
+    {
+      "iteration": 776,
+      "bucket": "execution_and_reply",
+      "sample_index": 577
+    },
+    {
+      "iteration": 777,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 545
+    },
+    {
+      "iteration": 778,
+      "bucket": "execution_and_reply",
+      "sample_index": 159
+    },
+    {
+      "iteration": 779,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 62
+    },
+    {
+      "iteration": 780,
+      "bucket": "execution_and_reply",
+      "sample_index": 290
+    },
+    {
+      "iteration": 781,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 813
+    },
+    {
+      "iteration": 782,
+      "bucket": "execution_and_reply",
+      "sample_index": 121
+    },
+    {
+      "iteration": 783,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 90
+    },
+    {
+      "iteration": 784,
+      "bucket": "execution_and_reply",
+      "sample_index": 163
+    },
+    {
+      "iteration": 785,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 232
+    },
+    {
+      "iteration": 786,
+      "bucket": "execution_and_reply",
+      "sample_index": 386
+    },
+    {
+      "iteration": 787,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 327
+    },
+    {
+      "iteration": 788,
+      "bucket": "execution_and_reply",
+      "sample_index": 131
+    },
+    {
+      "iteration": 789,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 688
+    },
+    {
+      "iteration": 790,
+      "bucket": "execution_and_reply",
+      "sample_index": 820
+    },
+    {
+      "iteration": 791,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 552
+    },
+    {
+      "iteration": 792,
+      "bucket": "execution_and_reply",
+      "sample_index": 662
+    },
+    {
+      "iteration": 793,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 608
+    },
+    {
+      "iteration": 794,
+      "bucket": "execution_and_reply",
+      "sample_index": 803
+    },
+    {
+      "iteration": 795,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 655
+    },
+    {
+      "iteration": 796,
+      "bucket": "execution_and_reply",
+      "sample_index": 8
+    },
+    {
+      "iteration": 797,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 451
+    },
+    {
+      "iteration": 798,
+      "bucket": "execution_and_reply",
+      "sample_index": 400
+    },
+    {
+      "iteration": 799,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 693
+    },
+    {
+      "iteration": 800,
+      "bucket": "execution_and_reply",
+      "sample_index": 480
+    },
+    {
+      "iteration": 801,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 573
+    },
+    {
+      "iteration": 802,
+      "bucket": "execution_and_reply",
+      "sample_index": 236
+    },
+    {
+      "iteration": 803,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 96
+    },
+    {
+      "iteration": 804,
+      "bucket": "execution_and_reply",
+      "sample_index": 124
+    },
+    {
+      "iteration": 805,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 42
+    },
+    {
+      "iteration": 806,
+      "bucket": "execution_and_reply",
+      "sample_index": 58
+    },
+    {
+      "iteration": 807,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 441
+    },
+    {
+      "iteration": 808,
+      "bucket": "execution_and_reply",
+      "sample_index": 486
+    },
+    {
+      "iteration": 809,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 293
+    },
+    {
+      "iteration": 810,
+      "bucket": "execution_and_reply",
+      "sample_index": 740
+    },
+    {
+      "iteration": 811,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 814
+    },
+    {
+      "iteration": 812,
+      "bucket": "execution_and_reply",
+      "sample_index": 244
+    },
+    {
+      "iteration": 813,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 406
+    },
+    {
+      "iteration": 814,
+      "bucket": "execution_and_reply",
+      "sample_index": 276
+    },
+    {
+      "iteration": 815,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 661
+    },
+    {
+      "iteration": 816,
+      "bucket": "execution_and_reply",
+      "sample_index": 538
+    },
+    {
+      "iteration": 817,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 761
+    },
+    {
+      "iteration": 818,
+      "bucket": "execution_and_reply",
+      "sample_index": 742
+    },
+    {
+      "iteration": 819,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 759
+    },
+    {
+      "iteration": 820,
+      "bucket": "execution_and_reply",
+      "sample_index": 746
+    },
+    {
+      "iteration": 821,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 490
+    },
+    {
+      "iteration": 822,
+      "bucket": "execution_and_reply",
+      "sample_index": 146
+    },
+    {
+      "iteration": 823,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 30
+    },
+    {
+      "iteration": 824,
+      "bucket": "execution_and_reply",
+      "sample_index": 778
+    },
+    {
+      "iteration": 825,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 475
+    },
+    {
+      "iteration": 826,
+      "bucket": "execution_and_reply",
+      "sample_index": 785
+    },
+    {
+      "iteration": 827,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 364
+    },
+    {
+      "iteration": 828,
+      "bucket": "execution_and_reply",
+      "sample_index": 190
+    },
+    {
+      "iteration": 829,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 420
+    },
+    {
+      "iteration": 830,
+      "bucket": "execution_and_reply",
+      "sample_index": 283
+    },
+    {
+      "iteration": 831,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 87
+    },
+    {
+      "iteration": 832,
+      "bucket": "execution_and_reply",
+      "sample_index": 710
+    },
+    {
+      "iteration": 833,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 97
+    },
+    {
+      "iteration": 834,
+      "bucket": "execution_and_reply",
+      "sample_index": 626
+    },
+    {
+      "iteration": 835,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 389
+    },
+    {
+      "iteration": 836,
+      "bucket": "execution_and_reply",
+      "sample_index": 139
+    },
+    {
+      "iteration": 837,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 575
+    },
+    {
+      "iteration": 838,
+      "bucket": "execution_and_reply",
+      "sample_index": 272
+    },
+    {
+      "iteration": 839,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 18
+    },
+    {
+      "iteration": 840,
+      "bucket": "execution_and_reply",
+      "sample_index": 787
+    },
+    {
+      "iteration": 841,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 212
+    },
+    {
+      "iteration": 842,
+      "bucket": "execution_and_reply",
+      "sample_index": 306
+    },
+    {
+      "iteration": 843,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 78
+    },
+    {
+      "iteration": 844,
+      "bucket": "execution_and_reply",
+      "sample_index": 34
+    },
+    {
+      "iteration": 845,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 341
+    },
+    {
+      "iteration": 846,
+      "bucket": "execution_and_reply",
+      "sample_index": 27
+    },
+    {
+      "iteration": 847,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 132
+    },
+    {
+      "iteration": 848,
+      "bucket": "execution_and_reply",
+      "sample_index": 207
+    },
+    {
+      "iteration": 849,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 435
+    },
+    {
+      "iteration": 850,
+      "bucket": "execution_and_reply",
+      "sample_index": 674
+    },
+    {
+      "iteration": 851,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 330
+    },
+    {
+      "iteration": 852,
+      "bucket": "execution_and_reply",
+      "sample_index": 258
+    },
+    {
+      "iteration": 853,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 620
+    },
+    {
+      "iteration": 854,
+      "bucket": "execution_and_reply",
+      "sample_index": 676
+    },
+    {
+      "iteration": 855,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 0
+    },
+    {
+      "iteration": 856,
+      "bucket": "execution_and_reply",
+      "sample_index": 329
+    },
+    {
+      "iteration": 857,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 379
+    },
+    {
+      "iteration": 858,
+      "bucket": "execution_and_reply",
+      "sample_index": 572
+    },
+    {
+      "iteration": 859,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 445
+    },
+    {
+      "iteration": 860,
+      "bucket": "execution_and_reply",
+      "sample_index": 286
+    },
+    {
+      "iteration": 861,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 582
+    },
+    {
+      "iteration": 862,
+      "bucket": "execution_and_reply",
+      "sample_index": 727
+    },
+    {
+      "iteration": 863,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 789
+    },
+    {
+      "iteration": 864,
+      "bucket": "execution_and_reply",
+      "sample_index": 156
+    },
+    {
+      "iteration": 865,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 167
+    },
+    {
+      "iteration": 866,
+      "bucket": "execution_and_reply",
+      "sample_index": 571
+    },
+    {
+      "iteration": 867,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 98
+    },
+    {
+      "iteration": 868,
+      "bucket": "execution_and_reply",
+      "sample_index": 304
+    },
+    {
+      "iteration": 869,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 187
+    },
+    {
+      "iteration": 870,
+      "bucket": "execution_and_reply",
+      "sample_index": 70
+    },
+    {
+      "iteration": 871,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 618
+    },
+    {
+      "iteration": 872,
+      "bucket": "execution_and_reply",
+      "sample_index": 378
+    },
+    {
+      "iteration": 873,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 171
+    },
+    {
+      "iteration": 874,
+      "bucket": "execution_and_reply",
+      "sample_index": 324
+    },
+    {
+      "iteration": 875,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 458
+    },
+    {
+      "iteration": 876,
+      "bucket": "execution_and_reply",
+      "sample_index": 539
+    },
+    {
+      "iteration": 877,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 537
+    },
+    {
+      "iteration": 878,
+      "bucket": "execution_and_reply",
+      "sample_index": 452
+    },
+    {
+      "iteration": 879,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 57
+    },
+    {
+      "iteration": 880,
+      "bucket": "execution_and_reply",
+      "sample_index": 291
+    },
+    {
+      "iteration": 881,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 129
+    },
+    {
+      "iteration": 882,
+      "bucket": "execution_and_reply",
+      "sample_index": 219
+    },
+    {
+      "iteration": 883,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 704
+    },
+    {
+      "iteration": 884,
+      "bucket": "execution_and_reply",
+      "sample_index": 544
+    },
+    {
+      "iteration": 885,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 623
+    },
+    {
+      "iteration": 886,
+      "bucket": "execution_and_reply",
+      "sample_index": 261
+    },
+    {
+      "iteration": 887,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 823
+    },
+    {
+      "iteration": 888,
+      "bucket": "execution_and_reply",
+      "sample_index": 160
+    },
+    {
+      "iteration": 889,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 73
+    },
+    {
+      "iteration": 890,
+      "bucket": "execution_and_reply",
+      "sample_index": 138
+    },
+    {
+      "iteration": 891,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 322
+    },
+    {
+      "iteration": 892,
+      "bucket": "execution_and_reply",
+      "sample_index": 515
+    },
+    {
+      "iteration": 893,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 522
+    },
+    {
+      "iteration": 894,
+      "bucket": "execution_and_reply",
+      "sample_index": 516
+    },
+    {
+      "iteration": 895,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 33
+    },
+    {
+      "iteration": 896,
+      "bucket": "execution_and_reply",
+      "sample_index": 602
+    },
+    {
+      "iteration": 897,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 377
+    },
+    {
+      "iteration": 898,
+      "bucket": "execution_and_reply",
+      "sample_index": 733
+    },
+    {
+      "iteration": 899,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 807
+    },
+    {
+      "iteration": 900,
+      "bucket": "execution_and_reply",
+      "sample_index": 556
+    },
+    {
+      "iteration": 901,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 462
+    },
+    {
+      "iteration": 902,
+      "bucket": "execution_and_reply",
+      "sample_index": 114
+    },
+    {
+      "iteration": 903,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 498
+    },
+    {
+      "iteration": 904,
+      "bucket": "execution_and_reply",
+      "sample_index": 711
+    },
+    {
+      "iteration": 905,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 821
+    },
+    {
+      "iteration": 906,
+      "bucket": "execution_and_reply",
+      "sample_index": 256
+    },
+    {
+      "iteration": 907,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 123
+    },
+    {
+      "iteration": 908,
+      "bucket": "execution_and_reply",
+      "sample_index": 804
+    },
+    {
+      "iteration": 909,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 383
+    },
+    {
+      "iteration": 910,
+      "bucket": "execution_and_reply",
+      "sample_index": 560
+    },
+    {
+      "iteration": 911,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 191
+    },
+    {
+      "iteration": 912,
+      "bucket": "execution_and_reply",
+      "sample_index": 137
+    },
+    {
+      "iteration": 913,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 680
+    },
+    {
+      "iteration": 914,
+      "bucket": "execution_and_reply",
+      "sample_index": 653
+    },
+    {
+      "iteration": 915,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 79
+    },
+    {
+      "iteration": 916,
+      "bucket": "execution_and_reply",
+      "sample_index": 94
+    },
+    {
+      "iteration": 917,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 162
+    },
+    {
+      "iteration": 918,
+      "bucket": "execution_and_reply",
+      "sample_index": 817
+    },
+    {
+      "iteration": 919,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 325
+    },
+    {
+      "iteration": 920,
+      "bucket": "execution_and_reply",
+      "sample_index": 463
+    },
+    {
+      "iteration": 921,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 107
+    },
+    {
+      "iteration": 922,
+      "bucket": "execution_and_reply",
+      "sample_index": 524
+    },
+    {
+      "iteration": 923,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 19
+    },
+    {
+      "iteration": 924,
+      "bucket": "execution_and_reply",
+      "sample_index": 728
+    },
+    {
+      "iteration": 925,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 631
+    },
+    {
+      "iteration": 926,
+      "bucket": "execution_and_reply",
+      "sample_index": 489
+    },
+    {
+      "iteration": 927,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 140
+    },
+    {
+      "iteration": 928,
+      "bucket": "execution_and_reply",
+      "sample_index": 791
+    },
+    {
+      "iteration": 929,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 12
+    },
+    {
+      "iteration": 930,
+      "bucket": "execution_and_reply",
+      "sample_index": 581
+    },
+    {
+      "iteration": 931,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 669
+    },
+    {
+      "iteration": 932,
+      "bucket": "execution_and_reply",
+      "sample_index": 719
+    },
+    {
+      "iteration": 933,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 301
+    },
+    {
+      "iteration": 934,
+      "bucket": "execution_and_reply",
+      "sample_index": 645
+    },
+    {
+      "iteration": 935,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 143
+    },
+    {
+      "iteration": 936,
+      "bucket": "execution_and_reply",
+      "sample_index": 454
+    },
+    {
+      "iteration": 937,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 632
+    },
+    {
+      "iteration": 938,
+      "bucket": "execution_and_reply",
+      "sample_index": 56
+    },
+    {
+      "iteration": 939,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 247
+    },
+    {
+      "iteration": 940,
+      "bucket": "execution_and_reply",
+      "sample_index": 503
+    },
+    {
+      "iteration": 941,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 483
+    },
+    {
+      "iteration": 942,
+      "bucket": "execution_and_reply",
+      "sample_index": 150
+    },
+    {
+      "iteration": 943,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 741
+    },
+    {
+      "iteration": 944,
+      "bucket": "execution_and_reply",
+      "sample_index": 449
+    },
+    {
+      "iteration": 945,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 288
+    },
+    {
+      "iteration": 946,
+      "bucket": "execution_and_reply",
+      "sample_index": 394
+    },
+    {
+      "iteration": 947,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 11
+    },
+    {
+      "iteration": 948,
+      "bucket": "execution_and_reply",
+      "sample_index": 248
+    },
+    {
+      "iteration": 949,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 0
+    },
+    {
+      "iteration": 950,
+      "bucket": "execution_and_reply",
+      "sample_index": 335
+    },
+    {
+      "iteration": 951,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 796
+    },
+    {
+      "iteration": 952,
+      "bucket": "execution_and_reply",
+      "sample_index": 762
+    },
+    {
+      "iteration": 953,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 631
+    },
+    {
+      "iteration": 954,
+      "bucket": "execution_and_reply",
+      "sample_index": 495
+    },
+    {
+      "iteration": 955,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 171
+    },
+    {
+      "iteration": 956,
+      "bucket": "execution_and_reply",
+      "sample_index": 14
+    },
+    {
+      "iteration": 957,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 603
+    },
+    {
+      "iteration": 958,
+      "bucket": "execution_and_reply",
+      "sample_index": 474
+    },
+    {
+      "iteration": 959,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 149
+    },
+    {
+      "iteration": 960,
+      "bucket": "execution_and_reply",
+      "sample_index": 371
+    },
+    {
+      "iteration": 961,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 187
+    },
+    {
+      "iteration": 962,
+      "bucket": "execution_and_reply",
+      "sample_index": 23
+    },
+    {
+      "iteration": 963,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 490
+    },
+    {
+      "iteration": 964,
+      "bucket": "execution_and_reply",
+      "sample_index": 641
+    },
+    {
+      "iteration": 965,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 96
+    },
+    {
+      "iteration": 966,
+      "bucket": "execution_and_reply",
+      "sample_index": 509
+    },
+    {
+      "iteration": 967,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 79
+    },
+    {
+      "iteration": 968,
+      "bucket": "execution_and_reply",
+      "sample_index": 636
+    },
+    {
+      "iteration": 969,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 390
+    },
+    {
+      "iteration": 970,
+      "bucket": "execution_and_reply",
+      "sample_index": 391
+    },
+    {
+      "iteration": 971,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 334
+    },
+    {
+      "iteration": 972,
+      "bucket": "execution_and_reply",
+      "sample_index": 464
+    },
+    {
+      "iteration": 973,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 11
+    },
+    {
+      "iteration": 974,
+      "bucket": "execution_and_reply",
+      "sample_index": 223
+    },
+    {
+      "iteration": 975,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 151
+    },
+    {
+      "iteration": 976,
+      "bucket": "execution_and_reply",
+      "sample_index": 10
+    },
+    {
+      "iteration": 977,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 706
+    },
+    {
+      "iteration": 978,
+      "bucket": "execution_and_reply",
+      "sample_index": 601
+    },
+    {
+      "iteration": 979,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 107
+    },
+    {
+      "iteration": 980,
+      "bucket": "execution_and_reply",
+      "sample_index": 705
+    },
+    {
+      "iteration": 981,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 408
+    },
+    {
+      "iteration": 982,
+      "bucket": "execution_and_reply",
+      "sample_index": 597
+    },
+    {
+      "iteration": 983,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 178
+    },
+    {
+      "iteration": 984,
+      "bucket": "execution_and_reply",
+      "sample_index": 815
+    },
+    {
+      "iteration": 985,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 296
+    },
+    {
+      "iteration": 986,
+      "bucket": "execution_and_reply",
+      "sample_index": 779
+    },
+    {
+      "iteration": 987,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 655
+    },
+    {
+      "iteration": 988,
+      "bucket": "execution_and_reply",
+      "sample_index": 718
+    },
+    {
+      "iteration": 989,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 87
+    },
+    {
+      "iteration": 990,
+      "bucket": "execution_and_reply",
+      "sample_index": 713
+    },
+    {
+      "iteration": 991,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 823
+    },
+    {
+      "iteration": 992,
+      "bucket": "execution_and_reply",
+      "sample_index": 664
+    },
+    {
+      "iteration": 993,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 383
+    },
+    {
+      "iteration": 994,
+      "bucket": "execution_and_reply",
+      "sample_index": 243
+    },
+    {
+      "iteration": 995,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 140
+    },
+    {
+      "iteration": 996,
+      "bucket": "execution_and_reply",
+      "sample_index": 84
+    },
+    {
+      "iteration": 997,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 695
+    },
+    {
+      "iteration": 998,
+      "bucket": "execution_and_reply",
+      "sample_index": 104
+    },
+    {
+      "iteration": 999,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 364
+    },
+    {
+      "iteration": 1000,
+      "bucket": "execution_and_reply",
+      "sample_index": 500
+    },
+    {
+      "iteration": 1001,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 379
+    },
+    {
+      "iteration": 1002,
+      "bucket": "execution_and_reply",
+      "sample_index": 165
+    },
+    {
+      "iteration": 1003,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 760
+    },
+    {
+      "iteration": 1004,
+      "bucket": "execution_and_reply",
+      "sample_index": 215
+    },
+    {
+      "iteration": 1005,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 522
+    },
+    {
+      "iteration": 1006,
+      "bucket": "execution_and_reply",
+      "sample_index": 521
+    },
+    {
+      "iteration": 1007,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 376
+    },
+    {
+      "iteration": 1008,
+      "bucket": "execution_and_reply",
+      "sample_index": 350
+    },
+    {
+      "iteration": 1009,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 247
+    },
+    {
+      "iteration": 1010,
+      "bucket": "execution_and_reply",
+      "sample_index": 82
+    },
+    {
+      "iteration": 1011,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 682
+    },
+    {
+      "iteration": 1012,
+      "bucket": "execution_and_reply",
+      "sample_index": 315
+    },
+    {
+      "iteration": 1013,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 162
+    },
+    {
+      "iteration": 1014,
+      "bucket": "execution_and_reply",
+      "sample_index": 488
+    },
+    {
+      "iteration": 1015,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 78
+    },
+    {
+      "iteration": 1016,
+      "bucket": "execution_and_reply",
+      "sample_index": 284
+    },
+    {
+      "iteration": 1017,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 743
+    },
+    {
+      "iteration": 1018,
+      "bucket": "execution_and_reply",
+      "sample_index": 564
+    },
+    {
+      "iteration": 1019,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 293
+    },
+    {
+      "iteration": 1020,
+      "bucket": "execution_and_reply",
+      "sample_index": 802
+    },
+    {
+      "iteration": 1021,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 797
+    },
+    {
+      "iteration": 1022,
+      "bucket": "execution_and_reply",
+      "sample_index": 629
+    },
+    {
+      "iteration": 1023,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 492
+    },
+    {
+      "iteration": 1024,
+      "bucket": "execution_and_reply",
+      "sample_index": 805
+    },
+    {
+      "iteration": 1025,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 322
+    },
+    {
+      "iteration": 1026,
+      "bucket": "execution_and_reply",
+      "sample_index": 112
+    },
+    {
+      "iteration": 1027,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 639
+    },
+    {
+      "iteration": 1028,
+      "bucket": "execution_and_reply",
+      "sample_index": 673
+    },
+    {
+      "iteration": 1029,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 327
+    },
+    {
+      "iteration": 1030,
+      "bucket": "execution_and_reply",
+      "sample_index": 526
+    },
+    {
+      "iteration": 1031,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 341
+    },
+    {
+      "iteration": 1032,
+      "bucket": "execution_and_reply",
+      "sample_index": 182
+    },
+    {
+      "iteration": 1033,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 618
+    },
+    {
+      "iteration": 1034,
+      "bucket": "execution_and_reply",
+      "sample_index": 685
+    },
+    {
+      "iteration": 1035,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 120
+    },
+    {
+      "iteration": 1036,
+      "bucket": "execution_and_reply",
+      "sample_index": 652
+    },
+    {
+      "iteration": 1037,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 780
+    },
+    {
+      "iteration": 1038,
+      "bucket": "execution_and_reply",
+      "sample_index": 587
+    },
+    {
+      "iteration": 1039,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 444
+    },
+    {
+      "iteration": 1040,
+      "bucket": "execution_and_reply",
+      "sample_index": 739
+    },
+    {
+      "iteration": 1041,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 772
+    },
+    {
+      "iteration": 1042,
+      "bucket": "execution_and_reply",
+      "sample_index": 786
+    },
+    {
+      "iteration": 1043,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 684
+    },
+    {
+      "iteration": 1044,
+      "bucket": "execution_and_reply",
+      "sample_index": 252
+    },
+    {
+      "iteration": 1045,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 807
+    },
+    {
+      "iteration": 1046,
+      "bucket": "execution_and_reply",
+      "sample_index": 265
+    },
+    {
+      "iteration": 1047,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 63
+    },
+    {
+      "iteration": 1048,
+      "bucket": "execution_and_reply",
+      "sample_index": 532
+    },
+    {
+      "iteration": 1049,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 693
+    },
+    {
+      "iteration": 1050,
+      "bucket": "execution_and_reply",
+      "sample_index": 336
+    },
+    {
+      "iteration": 1051,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 661
+    },
+    {
+      "iteration": 1052,
+      "bucket": "execution_and_reply",
+      "sample_index": 438
+    },
+    {
+      "iteration": 1053,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 404
+    },
+    {
+      "iteration": 1054,
+      "bucket": "execution_and_reply",
+      "sample_index": 753
+    },
+    {
+      "iteration": 1055,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 132
+    },
+    {
+      "iteration": 1056,
+      "bucket": "execution_and_reply",
+      "sample_index": 410
+    },
+    {
+      "iteration": 1057,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 470
+    },
+    {
+      "iteration": 1058,
+      "bucket": "execution_and_reply",
+      "sample_index": 221
+    },
+    {
+      "iteration": 1059,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 191
+    },
+    {
+      "iteration": 1060,
+      "bucket": "execution_and_reply",
+      "sample_index": 115
+    },
+    {
+      "iteration": 1061,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 381
+    },
+    {
+      "iteration": 1062,
+      "bucket": "execution_and_reply",
+      "sample_index": 323
+    },
+    {
+      "iteration": 1063,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 389
+    },
+    {
+      "iteration": 1064,
+      "bucket": "execution_and_reply",
+      "sample_index": 561
+    },
+    {
+      "iteration": 1065,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 814
+    },
+    {
+      "iteration": 1066,
+      "bucket": "execution_and_reply",
+      "sample_index": 40
+    },
+    {
+      "iteration": 1067,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 458
+    },
+    {
+      "iteration": 1068,
+      "bucket": "execution_and_reply",
+      "sample_index": 369
+    },
+    {
+      "iteration": 1069,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 264
+    },
+    {
+      "iteration": 1070,
+      "bucket": "execution_and_reply",
+      "sample_index": 510
+    },
+    {
+      "iteration": 1071,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 736
+    },
+    {
+      "iteration": 1072,
+      "bucket": "execution_and_reply",
+      "sample_index": 491
+    },
+    {
+      "iteration": 1073,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 741
+    },
+    {
+      "iteration": 1074,
+      "bucket": "execution_and_reply",
+      "sample_index": 360
+    },
+    {
+      "iteration": 1075,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 108
+    },
+    {
+      "iteration": 1076,
+      "bucket": "execution_and_reply",
+      "sample_index": 168
+    },
+    {
+      "iteration": 1077,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 680
+    },
+    {
+      "iteration": 1078,
+      "bucket": "execution_and_reply",
+      "sample_index": 192
+    },
+    {
+      "iteration": 1079,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 498
+    },
+    {
+      "iteration": 1080,
+      "bucket": "execution_and_reply",
+      "sample_index": 535
+    },
+    {
+      "iteration": 1081,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 606
+    },
+    {
+      "iteration": 1082,
+      "bucket": "execution_and_reply",
+      "sample_index": 717
+    },
+    {
+      "iteration": 1083,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 430
+    },
+    {
+      "iteration": 1084,
+      "bucket": "execution_and_reply",
+      "sample_index": 588
+    },
+    {
+      "iteration": 1085,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 197
+    },
+    {
+      "iteration": 1086,
+      "bucket": "execution_and_reply",
+      "sample_index": 216
+    },
+    {
+      "iteration": 1087,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 12
+    },
+    {
+      "iteration": 1088,
+      "bucket": "execution_and_reply",
+      "sample_index": 181
+    },
+    {
+      "iteration": 1089,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 694
+    },
+    {
+      "iteration": 1090,
+      "bucket": "execution_and_reply",
+      "sample_index": 337
+    },
+    {
+      "iteration": 1091,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 30
+    },
+    {
+      "iteration": 1092,
+      "bucket": "execution_and_reply",
+      "sample_index": 504
+    },
+    {
+      "iteration": 1093,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 325
+    },
+    {
+      "iteration": 1094,
+      "bucket": "execution_and_reply",
+      "sample_index": 375
+    },
+    {
+      "iteration": 1095,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 35
+    },
+    {
+      "iteration": 1096,
+      "bucket": "execution_and_reply",
+      "sample_index": 183
+    },
+    {
+      "iteration": 1097,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 158
+    },
+    {
+      "iteration": 1098,
+      "bucket": "execution_and_reply",
+      "sample_index": 80
+    },
+    {
+      "iteration": 1099,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 473
+    },
+    {
+      "iteration": 1100,
+      "bucket": "execution_and_reply",
+      "sample_index": 354
+    },
+    {
+      "iteration": 1101,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 167
+    },
+    {
+      "iteration": 1102,
+      "bucket": "execution_and_reply",
+      "sample_index": 630
+    },
+    {
+      "iteration": 1103,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 552
+    },
+    {
+      "iteration": 1104,
+      "bucket": "execution_and_reply",
+      "sample_index": 273
+    },
+    {
+      "iteration": 1105,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 646
+    },
+    {
+      "iteration": 1106,
+      "bucket": "execution_and_reply",
+      "sample_index": 730
+    },
+    {
+      "iteration": 1107,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 582
+    },
+    {
+      "iteration": 1108,
+      "bucket": "execution_and_reply",
+      "sample_index": 757
+    },
+    {
+      "iteration": 1109,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 441
+    },
+    {
+      "iteration": 1110,
+      "bucket": "execution_and_reply",
+      "sample_index": 567
+    },
+    {
+      "iteration": 1111,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 184
+    },
+    {
+      "iteration": 1112,
+      "bucket": "execution_and_reply",
+      "sample_index": 142
+    },
+    {
+      "iteration": 1113,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 499
+    },
+    {
+      "iteration": 1114,
+      "bucket": "execution_and_reply",
+      "sample_index": 235
+    },
+    {
+      "iteration": 1115,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 620
+    },
+    {
+      "iteration": 1116,
+      "bucket": "execution_and_reply",
+      "sample_index": 616
+    },
+    {
+      "iteration": 1117,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 33
+    },
+    {
+      "iteration": 1118,
+      "bucket": "execution_and_reply",
+      "sample_index": 540
+    },
+    {
+      "iteration": 1119,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 47
+    },
+    {
+      "iteration": 1120,
+      "bucket": "execution_and_reply",
+      "sample_index": 551
+    },
+    {
+      "iteration": 1121,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 343
+    },
+    {
+      "iteration": 1122,
+      "bucket": "execution_and_reply",
+      "sample_index": 346
+    },
+    {
+      "iteration": 1123,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 764
+    },
+    {
+      "iteration": 1124,
+      "bucket": "execution_and_reply",
+      "sample_index": 95
+    },
+    {
+      "iteration": 1125,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 129
+    },
+    {
+      "iteration": 1126,
+      "bucket": "execution_and_reply",
+      "sample_index": 166
+    },
+    {
+      "iteration": 1127,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 506
+    },
+    {
+      "iteration": 1128,
+      "bucket": "execution_and_reply",
+      "sample_index": 479
+    },
+    {
+      "iteration": 1129,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 789
+    },
+    {
+      "iteration": 1130,
+      "bucket": "execution_and_reply",
+      "sample_index": 294
+    },
+    {
+      "iteration": 1131,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 462
+    },
+    {
+      "iteration": 1132,
+      "bucket": "execution_and_reply",
+      "sample_index": 433
+    },
+    {
+      "iteration": 1133,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 358
+    },
+    {
+      "iteration": 1134,
+      "bucket": "execution_and_reply",
+      "sample_index": 75
+    },
+    {
+      "iteration": 1135,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 122
+    },
+    {
+      "iteration": 1136,
+      "bucket": "execution_and_reply",
+      "sample_index": 385
+    },
+    {
+      "iteration": 1137,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 517
+    },
+    {
+      "iteration": 1138,
+      "bucket": "execution_and_reply",
+      "sample_index": 777
+    },
+    {
+      "iteration": 1139,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 537
+    },
+    {
+      "iteration": 1140,
+      "bucket": "execution_and_reply",
+      "sample_index": 647
+    },
+    {
+      "iteration": 1141,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 164
+    },
+    {
+      "iteration": 1142,
+      "bucket": "execution_and_reply",
+      "sample_index": 363
+    },
+    {
+      "iteration": 1143,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 420
+    },
+    {
+      "iteration": 1144,
+      "bucket": "execution_and_reply",
+      "sample_index": 656
+    },
+    {
+      "iteration": 1145,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 761
+    },
+    {
+      "iteration": 1146,
+      "bucket": "execution_and_reply",
+      "sample_index": 440
+    },
+    {
+      "iteration": 1147,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 559
+    },
+    {
+      "iteration": 1148,
+      "bucket": "execution_and_reply",
+      "sample_index": 697
+    },
+    {
+      "iteration": 1149,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 688
+    },
+    {
+      "iteration": 1150,
+      "bucket": "execution_and_reply",
+      "sample_index": 563
+    },
+    {
+      "iteration": 1151,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 73
+    },
+    {
+      "iteration": 1152,
+      "bucket": "execution_and_reply",
+      "sample_index": 790
+    },
+    {
+      "iteration": 1153,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 759
+    },
+    {
+      "iteration": 1154,
+      "bucket": "execution_and_reply",
+      "sample_index": 263
+    },
+    {
+      "iteration": 1155,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 330
+    },
+    {
+      "iteration": 1156,
+      "bucket": "execution_and_reply",
+      "sample_index": 5
+    },
+    {
+      "iteration": 1157,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 46
+    },
+    {
+      "iteration": 1158,
+      "bucket": "execution_and_reply",
+      "sample_index": 520
+    },
+    {
+      "iteration": 1159,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 483
+    },
+    {
+      "iteration": 1160,
+      "bucket": "execution_and_reply",
+      "sample_index": 732
+    },
+    {
+      "iteration": 1161,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 212
+    },
+    {
+      "iteration": 1162,
+      "bucket": "execution_and_reply",
+      "sample_index": 193
+    },
+    {
+      "iteration": 1163,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 654
+    },
+    {
+      "iteration": 1164,
+      "bucket": "execution_and_reply",
+      "sample_index": 60
+    },
+    {
+      "iteration": 1165,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 92
+    },
+    {
+      "iteration": 1166,
+      "bucket": "execution_and_reply",
+      "sample_index": 203
+    },
+    {
+      "iteration": 1167,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 608
+    },
+    {
+      "iteration": 1168,
+      "bucket": "execution_and_reply",
+      "sample_index": 421
+    },
+    {
+      "iteration": 1169,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 147
+    },
+    {
+      "iteration": 1170,
+      "bucket": "execution_and_reply",
+      "sample_index": 690
+    },
+    {
+      "iteration": 1171,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 331
+    },
+    {
+      "iteration": 1172,
+      "bucket": "execution_and_reply",
+      "sample_index": 675
+    },
+    {
+      "iteration": 1173,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 575
+    },
+    {
+      "iteration": 1174,
+      "bucket": "execution_and_reply",
+      "sample_index": 367
+    },
+    {
+      "iteration": 1175,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 123
+    },
+    {
+      "iteration": 1176,
+      "bucket": "execution_and_reply",
+      "sample_index": 592
+    },
+    {
+      "iteration": 1177,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 19
+    },
+    {
+      "iteration": 1178,
+      "bucket": "execution_and_reply",
+      "sample_index": 292
+    },
+    {
+      "iteration": 1179,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 573
+    },
+    {
+      "iteration": 1180,
+      "bucket": "execution_and_reply",
+      "sample_index": 658
+    },
+    {
+      "iteration": 1181,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 62
+    },
+    {
+      "iteration": 1182,
+      "bucket": "execution_and_reply",
+      "sample_index": 607
+    },
+    {
+      "iteration": 1183,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 355
+    },
+    {
+      "iteration": 1184,
+      "bucket": "execution_and_reply",
+      "sample_index": 770
+    },
+    {
+      "iteration": 1185,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 475
+    },
+    {
+      "iteration": 1186,
+      "bucket": "execution_and_reply",
+      "sample_index": 308
+    },
+    {
+      "iteration": 1187,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 66
+    },
+    {
+      "iteration": 1188,
+      "bucket": "execution_and_reply",
+      "sample_index": 758
+    },
+    {
+      "iteration": 1189,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 669
+    },
+    {
+      "iteration": 1190,
+      "bucket": "execution_and_reply",
+      "sample_index": 227
+    },
+    {
+      "iteration": 1191,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 689
+    },
+    {
+      "iteration": 1192,
+      "bucket": "execution_and_reply",
+      "sample_index": 297
+    },
+    {
+      "iteration": 1193,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 632
+    },
+    {
+      "iteration": 1194,
+      "bucket": "execution_and_reply",
+      "sample_index": 176
+    },
+    {
+      "iteration": 1195,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 644
+    },
+    {
+      "iteration": 1196,
+      "bucket": "execution_and_reply",
+      "sample_index": 468
+    },
+    {
+      "iteration": 1197,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 419
+    },
+    {
+      "iteration": 1198,
+      "bucket": "execution_and_reply",
+      "sample_index": 681
+    },
+    {
+      "iteration": 1199,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 445
+    },
+    {
+      "iteration": 1200,
+      "bucket": "execution_and_reply",
+      "sample_index": 398
+    },
+    {
+      "iteration": 1201,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 232
+    },
+    {
+      "iteration": 1202,
+      "bucket": "execution_and_reply",
+      "sample_index": 482
+    },
+    {
+      "iteration": 1203,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 472
+    },
+    {
+      "iteration": 1204,
+      "bucket": "execution_and_reply",
+      "sample_index": 319
+    },
+    {
+      "iteration": 1205,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 813
+    },
+    {
+      "iteration": 1206,
+      "bucket": "execution_and_reply",
+      "sample_index": 527
+    },
+    {
+      "iteration": 1207,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 143
+    },
+    {
+      "iteration": 1208,
+      "bucket": "execution_and_reply",
+      "sample_index": 194
+    },
+    {
+      "iteration": 1209,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 57
+    },
+    {
+      "iteration": 1210,
+      "bucket": "execution_and_reply",
+      "sample_index": 135
+    },
+    {
+      "iteration": 1211,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 54
+    },
+    {
+      "iteration": 1212,
+      "bucket": "execution_and_reply",
+      "sample_index": 691
+    },
+    {
+      "iteration": 1213,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 6
+    },
+    {
+      "iteration": 1214,
+      "bucket": "execution_and_reply",
+      "sample_index": 822
+    },
+    {
+      "iteration": 1215,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 51
+    },
+    {
+      "iteration": 1216,
+      "bucket": "execution_and_reply",
+      "sample_index": 136
+    },
+    {
+      "iteration": 1217,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 525
+    },
+    {
+      "iteration": 1218,
+      "bucket": "execution_and_reply",
+      "sample_index": 434
+    },
+    {
+      "iteration": 1219,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 18
+    },
+    {
+      "iteration": 1220,
+      "bucket": "execution_and_reply",
+      "sample_index": 110
+    },
+    {
+      "iteration": 1221,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 69
+    },
+    {
+      "iteration": 1222,
+      "bucket": "execution_and_reply",
+      "sample_index": 622
+    },
+    {
+      "iteration": 1223,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 435
+    },
+    {
+      "iteration": 1224,
+      "bucket": "execution_and_reply",
+      "sample_index": 161
+    },
+    {
+      "iteration": 1225,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 821
+    },
+    {
+      "iteration": 1226,
+      "bucket": "execution_and_reply",
+      "sample_index": 720
+    },
+    {
+      "iteration": 1227,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 288
+    },
+    {
+      "iteration": 1228,
+      "bucket": "execution_and_reply",
+      "sample_index": 627
+    },
+    {
+      "iteration": 1229,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 97
+    },
+    {
+      "iteration": 1230,
+      "bucket": "execution_and_reply",
+      "sample_index": 659
+    },
+    {
+      "iteration": 1231,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 429
+    },
+    {
+      "iteration": 1232,
+      "bucket": "execution_and_reply",
+      "sample_index": 763
+    },
+    {
+      "iteration": 1233,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 90
+    },
+    {
+      "iteration": 1234,
+      "bucket": "execution_and_reply",
+      "sample_index": 64
+    },
+    {
+      "iteration": 1235,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 451
+    },
+    {
+      "iteration": 1236,
+      "bucket": "execution_and_reply",
+      "sample_index": 77
+    },
+    {
+      "iteration": 1237,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 396
+    },
+    {
+      "iteration": 1238,
+      "bucket": "execution_and_reply",
+      "sample_index": 208
+    },
+    {
+      "iteration": 1239,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 42
+    },
+    {
+      "iteration": 1240,
+      "bucket": "execution_and_reply",
+      "sample_index": 300
+    },
+    {
+      "iteration": 1241,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 301
+    },
+    {
+      "iteration": 1242,
+      "bucket": "execution_and_reply",
+      "sample_index": 357
+    },
+    {
+      "iteration": 1243,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 623
+    },
+    {
+      "iteration": 1244,
+      "bucket": "execution_and_reply",
+      "sample_index": 157
+    },
+    {
+      "iteration": 1245,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 406
+    },
+    {
+      "iteration": 1246,
+      "bucket": "execution_and_reply",
+      "sample_index": 605
+    },
+    {
+      "iteration": 1247,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 32
+    },
+    {
+      "iteration": 1248,
+      "bucket": "execution_and_reply",
+      "sample_index": 494
+    },
+    {
+      "iteration": 1249,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 98
+    },
+    {
+      "iteration": 1250,
+      "bucket": "execution_and_reply",
+      "sample_index": 456
+    },
+    {
+      "iteration": 1251,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 262
+    },
+    {
+      "iteration": 1252,
+      "bucket": "execution_and_reply",
+      "sample_index": 249
+    },
+    {
+      "iteration": 1253,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 502
+    },
+    {
+      "iteration": 1254,
+      "bucket": "execution_and_reply",
+      "sample_index": 578
+    },
+    {
+      "iteration": 1255,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 545
+    },
+    {
+      "iteration": 1256,
+      "bucket": "execution_and_reply",
+      "sample_index": 511
+    },
+    {
+      "iteration": 1257,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 657
+    },
+    {
+      "iteration": 1258,
+      "bucket": "execution_and_reply",
+      "sample_index": 345
+    },
+    {
+      "iteration": 1259,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 377
+    },
+    {
+      "iteration": 1260,
+      "bucket": "execution_and_reply",
+      "sample_index": 574
+    },
+    {
+      "iteration": 1261,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 704
+    },
+    {
+      "iteration": 1262,
+      "bucket": "execution_and_reply",
+      "sample_index": 549
+    },
+    {
+      "iteration": 1263,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 523
+    },
+    {
+      "iteration": 1264,
+      "bucket": "execution_and_reply",
+      "sample_index": 362
+    },
+    {
+      "iteration": 1265,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 325
+    },
+    {
+      "iteration": 1266,
+      "bucket": "execution_and_reply",
+      "sample_index": 368
+    },
+    {
+      "iteration": 1267,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 473
+    },
+    {
+      "iteration": 1268,
+      "bucket": "execution_and_reply",
+      "sample_index": 99
+    },
+    {
+      "iteration": 1269,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 523
+    },
+    {
+      "iteration": 1270,
+      "bucket": "execution_and_reply",
+      "sample_index": 76
+    },
+    {
+      "iteration": 1271,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 288
+    },
+    {
+      "iteration": 1272,
+      "bucket": "execution_and_reply",
+      "sample_index": 643
+    },
+    {
+      "iteration": 1273,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 33
+    },
+    {
+      "iteration": 1274,
+      "bucket": "execution_and_reply",
+      "sample_index": 485
+    },
+    {
+      "iteration": 1275,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 797
+    },
+    {
+      "iteration": 1276,
+      "bucket": "execution_and_reply",
+      "sample_index": 25
+    },
+    {
+      "iteration": 1277,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 390
+    },
+    {
+      "iteration": 1278,
+      "bucket": "execution_and_reply",
+      "sample_index": 311
+    },
+    {
+      "iteration": 1279,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 90
+    },
+    {
+      "iteration": 1280,
+      "bucket": "execution_and_reply",
+      "sample_index": 635
+    },
+    {
+      "iteration": 1281,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 331
+    },
+    {
+      "iteration": 1282,
+      "bucket": "execution_and_reply",
+      "sample_index": 361
+    },
+    {
+      "iteration": 1283,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 736
+    },
+    {
+      "iteration": 1284,
+      "bucket": "execution_and_reply",
+      "sample_index": 126
+    },
+    {
+      "iteration": 1285,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 502
+    },
+    {
+      "iteration": 1286,
+      "bucket": "execution_and_reply",
+      "sample_index": 395
+    },
+    {
+      "iteration": 1287,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 644
+    },
+    {
+      "iteration": 1288,
+      "bucket": "execution_and_reply",
+      "sample_index": 467
+    },
+    {
+      "iteration": 1289,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 498
+    },
+    {
+      "iteration": 1290,
+      "bucket": "execution_and_reply",
+      "sample_index": 773
+    },
+    {
+      "iteration": 1291,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 66
+    },
+    {
+      "iteration": 1292,
+      "bucket": "execution_and_reply",
+      "sample_index": 280
+    },
+    {
+      "iteration": 1293,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 780
+    },
+    {
+      "iteration": 1294,
+      "bucket": "execution_and_reply",
+      "sample_index": 279
+    },
+    {
+      "iteration": 1295,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 162
+    },
+    {
+      "iteration": 1296,
+      "bucket": "execution_and_reply",
+      "sample_index": 365
+    },
+    {
+      "iteration": 1297,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 419
+    },
+    {
+      "iteration": 1298,
+      "bucket": "execution_and_reply",
+      "sample_index": 637
+    },
+    {
+      "iteration": 1299,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 657
+    },
+    {
+      "iteration": 1300,
+      "bucket": "execution_and_reply",
+      "sample_index": 530
+    },
+    {
+      "iteration": 1301,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 796
+    },
+    {
+      "iteration": 1302,
+      "bucket": "execution_and_reply",
+      "sample_index": 415
+    },
+    {
+      "iteration": 1303,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 462
+    },
+    {
+      "iteration": 1304,
+      "bucket": "execution_and_reply",
+      "sample_index": 281
+    },
+    {
+      "iteration": 1305,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 483
+    },
+    {
+      "iteration": 1306,
+      "bucket": "execution_and_reply",
+      "sample_index": 751
+    },
+    {
+      "iteration": 1307,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 620
+    },
+    {
+      "iteration": 1308,
+      "bucket": "execution_and_reply",
+      "sample_index": 382
+    },
+    {
+      "iteration": 1309,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 404
+    },
+    {
+      "iteration": 1310,
+      "bucket": "execution_and_reply",
+      "sample_index": 580
+    },
+    {
+      "iteration": 1311,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 490
+    },
+    {
+      "iteration": 1312,
+      "bucket": "execution_and_reply",
+      "sample_index": 418
+    },
+    {
+      "iteration": 1313,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 149
+    },
+    {
+      "iteration": 1314,
+      "bucket": "execution_and_reply",
+      "sample_index": 570
+    },
+    {
+      "iteration": 1315,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 383
+    },
+    {
+      "iteration": 1316,
+      "bucket": "execution_and_reply",
+      "sample_index": 31
+    },
+    {
+      "iteration": 1317,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 46
+    },
+    {
+      "iteration": 1318,
+      "bucket": "execution_and_reply",
+      "sample_index": 536
+    },
+    {
+      "iteration": 1319,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 499
+    },
+    {
+      "iteration": 1320,
+      "bucket": "execution_and_reply",
+      "sample_index": 493
+    },
+    {
+      "iteration": 1321,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 232
+    },
+    {
+      "iteration": 1322,
+      "bucket": "execution_and_reply",
+      "sample_index": 615
+    },
+    {
+      "iteration": 1323,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 62
+    },
+    {
+      "iteration": 1324,
+      "bucket": "execution_and_reply",
+      "sample_index": 666
+    },
+    {
+      "iteration": 1325,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 680
+    },
+    {
+      "iteration": 1326,
+      "bucket": "execution_and_reply",
+      "sample_index": 507
+    },
+    {
+      "iteration": 1327,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 47
+    },
+    {
+      "iteration": 1328,
+      "bucket": "execution_and_reply",
+      "sample_index": 529
+    },
+    {
+      "iteration": 1329,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 296
+    },
+    {
+      "iteration": 1330,
+      "bucket": "execution_and_reply",
+      "sample_index": 747
+    },
+    {
+      "iteration": 1331,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 54
+    },
+    {
+      "iteration": 1332,
+      "bucket": "execution_and_reply",
+      "sample_index": 22
+    },
+    {
+      "iteration": 1333,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 682
+    },
+    {
+      "iteration": 1334,
+      "bucket": "execution_and_reply",
+      "sample_index": 260
+    },
+    {
+      "iteration": 1335,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 18
+    },
+    {
+      "iteration": 1336,
+      "bucket": "execution_and_reply",
+      "sample_index": 627
+    },
+    {
+      "iteration": 1337,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 688
+    },
+    {
+      "iteration": 1338,
+      "bucket": "execution_and_reply",
+      "sample_index": 516
+    },
+    {
+      "iteration": 1339,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 582
+    },
+    {
+      "iteration": 1340,
+      "bucket": "execution_and_reply",
+      "sample_index": 302
+    },
+    {
+      "iteration": 1341,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 355
+    },
+    {
+      "iteration": 1342,
+      "bucket": "execution_and_reply",
+      "sample_index": 494
+    },
+    {
+      "iteration": 1343,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 191
+    },
+    {
+      "iteration": 1344,
+      "bucket": "execution_and_reply",
+      "sample_index": 817
+    }
+  ],
+  "planned_sampling": {
+    "physical_rows": 824,
+    "unique_rows_sampled": 824,
+    "unique_cases_sampled": 96,
+    "all_physical_rows_used": true,
+    "bucket_rows": {
+      "intent_and_record_repair": 158,
+      "execution_and_reply": 666
+    },
+    "bucket_updates": {
+      "intent_and_record_repair": 672,
+      "execution_and_reply": 672
+    }
+  },
+  "full_1344_sampling": {
+    "physical_rows": 824,
+    "unique_rows_sampled": 824,
+    "unique_cases_sampled": 96,
+    "all_physical_rows_used": true,
+    "bucket_rows": {
+      "intent_and_record_repair": 158,
+      "execution_and_reply": 666
+    },
+    "bucket_updates": {
+      "intent_and_record_repair": 672,
+      "execution_and_reply": 672
+    }
+  },
+  "checkpoints": [
+    672,
+    1344
+  ],
+  "cloud_compute_used": true,
+  "test_used_for_selection": false,
+  "new_accuracy_claim": false
+}

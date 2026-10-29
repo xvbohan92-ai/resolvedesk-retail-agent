@@ -1,0 +1,442 @@
+{
+  "evaluation_sha256": "61f34bc006c22ee4f2f1c0b60378ee09f6af12f0560069f6fc58401d9c670f24",
+  "training_sha256": "0edf6c30497a89a5cee9994d6a428c36079610bee52bc5b326ba49c09dd5b965",
+  "summary": {
+    "legacy_base": {
+      "tasks": 42,
+      "task_success": 13,
+      "exchange_related_tasks": 21,
+      "exchange_related_success": 2,
+      "fulfillable_exchange_tasks": 12,
+      "fulfillable_exchange_success": 1,
+      "required_clarifications": 15,
+      "clarifications_obtained": 2,
+      "model_calls": 232,
+      "schema_valid": 231,
+      "duplicate_read_attempts": 2,
+      "duplicate_read_executions": 2,
+      "rejected_write_attempts": 74,
+      "output_tokens": 6593,
+      "confirmation_preserved": 42,
+      "latency_p50_ms": 8498.785,
+      "median_model_calls": 6.0
+    },
+    "workflow_base": {
+      "tasks": 42,
+      "task_success": 17,
+      "exchange_related_tasks": 21,
+      "exchange_related_success": 5,
+      "fulfillable_exchange_tasks": 12,
+      "fulfillable_exchange_success": 3,
+      "required_clarifications": 15,
+      "clarifications_obtained": 1,
+      "model_calls": 194,
+      "schema_valid": 193,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 41,
+      "output_tokens": 5223,
+      "confirmation_preserved": 42,
+      "latency_p50_ms": 6929.045,
+      "median_model_calls": 4.0
+    },
+    "workflow_qlora_v2": {
+      "tasks": 42,
+      "task_success": 23,
+      "exchange_related_tasks": 21,
+      "exchange_related_success": 3,
+      "fulfillable_exchange_tasks": 12,
+      "fulfillable_exchange_success": 0,
+      "required_clarifications": 15,
+      "clarifications_obtained": 12,
+      "model_calls": 182,
+      "schema_valid": 182,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 4095,
+      "confirmation_preserved": 42,
+      "latency_p50_ms": 15228.46,
+      "median_model_calls": 4.0
+    }
+  },
+  "paired": {
+    "engineering": {
+      "improved": 6,
+      "regressed": 2,
+      "both_pass": 11,
+      "both_fail": 23
+    },
+    "training": {
+      "improved": 11,
+      "regressed": 5,
+      "both_pass": 12,
+      "both_fail": 14
+    }
+  },
+  "failures": [
+    {
+      "case_id": "v2-test-exchange-00",
+      "base": true,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange-01",
+      "base": true,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange-02",
+      "base": true,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_fallback-00",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "v2-test-exchange_fallback-01",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "v2-test-exchange_fallback-02",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "v2-test-exchange_gift-00",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_gift-01",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_gift-02",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_missing_option-00",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_missing_option-01",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_missing_option-02",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_missing_payment-00",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_missing_payment-01",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_missing_payment-02",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_shortfall-00",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_shortfall-01",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_shortfall-02",
+      "base": true,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_unavailable-00",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_unavailable-01",
+      "base": true,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-exchange_unavailable-02",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-missing_email-00",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "v2-test-missing_email-01",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "v2-test-missing_email-02",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "v2-test-missing_payment-00",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "v2-test-missing_payment-01",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "v2-test-missing_payment-02",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "v2-test-missing_reason-00",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "v2-test-missing_reason-01",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "v2-test-missing_reason-02",
+      "base": false,
+      "finetuned": true
+    }
+  ],
+  "identical_action_repeats": {
+    "legacy_base": 39,
+    "workflow_base": 25,
+    "workflow_qlora_v2": 4
+  },
+  "family_success": {
+    "cancel": {
+      "legacy_base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "missing_reason": {
+      "legacy_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "return": {
+      "legacy_base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "missing_payment": {
+      "legacy_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "exchange": {
+      "legacy_base": {
+        "passed": 1,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "exchange_fallback": {
+      "legacy_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "forbidden_status": {
+      "legacy_base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "foreign_order": {
+      "legacy_base": {
+        "passed": 1,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "missing_email": {
+      "legacy_base": {
+        "passed": 1,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 2,
+        "tasks": 3
+      }
+    },
+    "exchange_missing_option": {
+      "legacy_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "exchange_missing_payment": {
+      "legacy_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "exchange_gift": {
+      "legacy_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "exchange_unavailable": {
+      "legacy_base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 1,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "exchange_shortfall": {
+      "legacy_base": {
+        "passed": 1,
+        "tasks": 3
+      },
+      "workflow_base": {
+        "passed": 1,
+        "tasks": 3
+      },
+      "workflow_qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      }
+    }
+  },
+  "analysis_source_sha256": "c7b9b200402efbd124c743b277747be4f1c7fa1e409c0e1fdba3aedc563d2b54",
+  "csv_sha256": "f7333f77cd6d395d024e257f9685b889f4ca4813f7119867dfcf8fadabdda864",
+  "figure_sha256": {
+    "families.svg": "c520ba29d27fb09f7b85ce0064796c32b859b5899f5b014b9f0fca7bd807b975",
+    "evaluation.png": "ca4e33435fbc8a8e40cfd1346cccd5821e86b595192119eb22088cab84965809",
+    "evaluation.svg": "947c8d83c5c32449e475003af315aeffba4f5de4b94a89dfdc6da114f8e18a70",
+    "families.png": "999d0a1a10fe201d1a092e50e538f479d4710082c65950452e3e6b2a454a4e21",
+    "training.svg": "26d4b0f08890715d3f8a8e5a3861cb22b8d3f506a08e3ce3bc985243b7a222b3",
+    "training.png": "29823c9b64ab946358cde922c021db84fdfe74352c6a665174ea537522157cf4"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "status": "updates_complete",
+  "config": {
+    "model": "data/models/qwen3-4b-mlx",
+    "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+    "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+    "data": "training/v4/datasets",
+    "adapter_path": "data/finetuning/retail-qlora-v4/run",
+    "best_path": "data/finetuning/retail-qlora-v4/best",
+    "seed": 202610274,
+    "iters": 480,
+    "num_layers": 8,
+    "batch_size": 1,
+    "learning_rate": 3e-05,
+    "lora_parameters": {
+      "rank": 8,
+      "dropout": 0.0,
+      "scale": 16.0
+    },
+    "max_seq_length": 2560,
+    "steps_per_report": 40,
+    "steps_per_eval": 120,
+    "save_every": 240,
+    "tool_name_loss_weight": 2.0,
+    "generation_max_tokens": 180,
+    "generation_temperature": 0,
+    "max_agent_steps": 8,
+    "checkpoint_candidates_completed_updates": [
+      240,
+      480
+    ],
+    "checkpoint_selection": "Export after exactly 240/480 completed optimizer updates; finish training and exit before loading validation models. Select on 32 full validation tasks: zero available-exchange return errors, minimum success rate across available exchanges/fallback/handoff, overall success, fewer repeated-field attempts, then lower validation loss. No test inference before selection.",
+    "evaluation_arms": [
+      "previous_old_flow",
+      "previous_new_flow",
+      "base_new_flow",
+      "qlora_v4"
+    ],
+    "runtime_policy": "Previous adapter old vs new flow separates engineering; previous vs new adapter under the identical v4 flow measures the bundled training recipe. Base + v4 is a quality comparator. All arms use greedy unconstrained generation and eight total model calls.",
+    "promotion_rule": "V4 overall, exchange completion, fallback and handoff success must each be at least both new-flow comparators; repeated field attempts lower than previous_new_flow; zero available-exchange return attempts; all confirmation invariants. No claim of production readiness."
+  },
+  "dataset": {
+    "cases": {
+      "train": 64,
+      "valid": 32,
+      "test": 32
+    },
+    "rows": {
+      "train": 356,
+      "valid": 124,
+      "test": 124
+    },
+    "files": {
+      "training/v4/objective.py": "a9a7552e38a56d4fb94a80ef6776c78f94d52518b7a0a91cadb135babe784c19",
+      "training/v4/audit.py": "6b4c0e1d8a22061852e2985e28fcb5c9b85c550fdebd857b2e2deb914b668415",
+      "training/v4/evaluation.py": "c83ad22d23a1a9563975e0265cec5ba1a463fbd678f8be6484ea3baca3c8901b",
+      "training/v4/__init__.py": "3e99b5358bff86b34694b5ed4d8c1b2b103670a427da888d6f0274fcc5dc1485",
+      "training/v4/tokenization.py": "946f01aab1b0ab6383025a552c474382ec68a8c4711739c08285f62465841fc3",
+      "training/v4/common.py": "2afccd6ea82c791b1f73b6b5e0ec9dcd4da152babf7577856cbb216c0ec27542",
+      "training/v4/train.py": "58fa32d901891d827d1eb97b4f4be270b64a83d0b9f5880baefd4cfe42bd117d",
+      "training/v4/evaluate.py": "e3b5822f7b469738c45d574ddc4923f403266b311d649a2ad99238be6066706c",
+      "training/v4/select.py": "526179f2edaa9be9e99a0d3950ba66c2196df76acd167715cdc3e494377e2702",
+      "training/v4/prepare.py": "ed6a0d3668521025b88f5a41a64e01c4215c95fc4e914d974af52592fe6dcf8e",
+      "training/v4/fixtures.py": "24d67289bcfca79b6cd68bbba638aa339c2835089811b993e90b52e8ee689ad8",
+      "training/v4/config.json": "906f182ce502b68b7fd73107463cac3f7c2883cba3fb530679806f7bc585c9ec",
+      "training/base-model-spec.json": "bff5ee1bb595c89e629c7e0f93884c06ab66628f9cf6e61b8dfe02f87053a965",
+      "resolve_desk/progress.py": "3caa54d31efa57537263d9d819d7b0be32d71404267973e25868357751f139c0",
+      "resolve_desk/workflow.py": "2c45094c90643020bddb8d66ef5a4dfc607522620d67c3c07744a99565c0afbc",
+      "resolve_desk/store.py": "01ced6a33f0995d9c3362fc18fd8123a59e523edc408382cd38cdd990285f5bb",
+      "resolve_desk/protocol.py": "7d48eca71522d12da7e889b0fcc3b939c1f8bae12460b64b8a8dc173ef6185a2",
+      "training/common.py": "58b7ec8da02d4708625e8dc432fb56fa03c8ecd05c28cd9b5ba0ca1940644030",
+      "training/runtime.py": "70e60f56223f7161c430f6b601ae9f748548b740c9f1ee0172e7f65acdbf4531",
+      "training/evaluate.py": "b7b327c05caff7d66c61f4cce7a9006fc108ae6c31321e0b905fb01e57cbc0cc",
+      "training/scoring.py": "4408966c655a222f8d1a2aa1418594587a63163029c5477bebeacacd6db9eb6b",
+      "training/v2/scoring.py": "4cf2b7fc6c281bcbc413f84a548ce35bd330c80ec17681242ffc3d5d02235bb4",
+      "training/v2/fixtures.py": "178335d3cf882ddbb10bf0d8c330785632963ec91401e5438c69d58be7cf9b17",
+      "training/v3/fixtures.py": "f66e1a09230eed3c2b93aecf89c7602306064b8d848b77994b04c69eb00469e8",
+      "training/v3/prepare.py": "5e3709fa73c3295beb99a871322532f37560a21caef75253c0deb4db322eb401",
+      "training/v3/evaluation.py": "218c2e586a162db5a994990ea6b18e5fef8049fa7c6e2a7f01d17298e547a3db",
+      "training/v2/evaluation.py": "3fc5df34e22ce08d8e5e34d3ffe4a22c313906aceb271db9139b08a2c0fdead1",
+      "training/v4/datasets/train.jsonl": "a86ab627e861f221a6a1912ad8a084c60860b1c8961b5d08dfc4cfd277b26b66",
+      "training/v4/datasets/test.jsonl": "f4c93f9224b67dd35bbf6fbff724c61b77edde80902350629ab40d1ad128db95",
+      "training/v4/datasets/cases.json": "0b4490550e06a7f9fb57bcc08b281a78c106e2a3a31b363c6e55ac3b39164123",
+      "training/v4/datasets/valid.jsonl": "d558f607fa8c14d5107f6ed99da99df8c5b72c497451be0a68aa64fdb3cfcaac"
+    },
+    "families": [
+      "cancel",
+      "missing_reason",
+      "return",
+      "missing_payment",
+      "exchange",
+      "exchange_fallback",
+      "forbidden_status",
+      "foreign_order",
+      "missing_email",
+      "exchange_missing_option",
+      "exchange_missing_payment",
+      "exchange_gift",
+      "exchange_unavailable",
+      "exchange_shortfall",
+      "exchange_fallback_available",
+      "return_reject_exchange"
+    ],
+    "training_origins": {
+      "complete_prefix": 184,
+      "answered_question_recovery": 20,
+      "clean_terminal": 100,
+      "preserve_exchange_intent": 20,
+      "unavailable_fallback_recovery": 4,
+      "policy_boundary_after_unnecessary_question": 16,
+      "preserve_return_after_catalog": 12
+    },
+    "training_actions": {
+      "get_product": 36,
+      "get_order": 64,
+      "ask_customer": 20,
+      "propose_cancel": 12,
+      "identify_customer": 64,
+      "handoff": 48,
+      "propose_exchange": 68,
+      "propose_return": 44
+    },
+    "scope": "Fresh synthetic six-character entities and split-specific phrasing. 16 shared families; within-split counterfactual worlds intentionally shared. Full clean trajectories, one extra handoff/exchange terminal, and targeted recovery labels; erroneous actions never supervised. Old tests are development evidence; new tests never select weights."
+  },
+  "metrics": [
+    {
+      "elapsed_seconds": 1.955,
+      "iteration": 1,
+      "train_loss": 0.8394536375999451,
+      "learning_rate": 2.9999999242136255e-05,
+      "iterations_per_second": 0.5778420402306286,
+      "tokens_per_second": 10.978998764381943,
+      "trained_tokens": 19,
+      "peak_memory": 3.691400038
+    }
+  ],
+  "candidates": [],
+  "completed_updates": 1,
+  "initial_adapter_sha256": "5cd4027ce8fb6de6965fd70d910dd132d8a66d27e480ef85f4f474305ad11b57",
+  "final_adapter_sha256": "9edbbbf9b6b2f3cc0c70b8fcaa77164ac4bbd8bc14098b5b72b6a48d1d9327d8",
+  "adapter_l2_change_final": 0.13261188203513838,
+  "trainable_parameters": 3670016,
+  "elapsed_seconds": 2.04,
+  "peak_memory_bytes": 3691400038,
+  "preflight_only": true,
+  "initialization": "Pinned base; no previous or preflight adapter reused",
+  "versions": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "transformers": "5.21.0",
+    "tokenizers": "0.23.3"
+  },
+  "test_used_for_selection": false,
+  "cloud_compute_used": false
+}

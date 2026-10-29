@@ -1,0 +1,82 @@
+{
+  "scope": "CPU tokenizer and deterministic schedule audit, not training or model-quality evidence.",
+  "model_or_test_inference_performed": false,
+  "initial_adapter_sha256": "33fe5c505ddf08cd8cb4032dbd9d350fa205134417ec0f1f90648f4af658e053",
+  "projection_window": 192,
+  "max_seq_length": 3200,
+  "sequence_length_decision": {
+    "initial_limit": 3072,
+    "chosen_limit": 3200,
+    "reason": "Before model training or V8 test inference, retain every authored operation-change recovery and all context/targets. Two training rows exceeded 3072; the parent explicitly chose 3200 instead of deleting complex trajectories or truncating inputs.",
+    "test_inputs_or_candidate_outputs_used": false
+  },
+  "tokenizer_class": "Qwen2Tokenizer",
+  "tokenizer_inputs_sha256": {
+    "data/models/qwen3-4b-mlx/config.json": "76eae114d67a444c7296be7a6bc0409ecc15c340e113f1bac7572cb7d0928b6f",
+    "data/models/qwen3-4b-mlx/model.safetensors.index.json": "278844a566da15beab6e9068c57f606c50a99c440d4515206b871a8b5282b3de",
+    "data/models/qwen3-4b-mlx/tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "data/models/qwen3-4b-mlx/tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "data/models/qwen3-4b-mlx/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "config_sha256": "c88a790e7bb463d2555b95f1fe07a65d8a3971f3b2f7ac4bca4e250fb7337b53",
+  "splits": {
+    "train": {
+      "physical_rows": 1100,
+      "data_sha256": "478885c98a638b2127500ddd529ffd9283cc82512302da9408005b204fe288da",
+      "longest_sequence": 3143,
+      "longest_completion": 112,
+      "maximum_tail_including_padding": 135,
+      "maximum_padding_tokens": 32,
+      "original_3072_limit_exceeded_rows": [
+        {
+          "case_id": "v8-train-exchange_missing_option-01",
+          "trajectory": "operation_change",
+          "origin": "ask_customer",
+          "sequence_tokens": 3143,
+          "completion_tokens": 28
+        },
+        {
+          "case_id": "v8-train-exchange_missing_option-03",
+          "trajectory": "operation_change",
+          "origin": "ask_customer",
+          "sequence_tokens": 3135,
+          "completion_tokens": 28
+        }
+      ],
+      "all_inputs_and_supervised_targets_retained": true,
+      "all_prompt_and_padding_weights_zero": true,
+      "permission_value_tokens": 216,
+      "reason_value_tokens": 268
+    },
+    "valid": {
+      "physical_rows": 262,
+      "data_sha256": "981b7a3c6dfe2129892fc003e20054580970c00ec5175f844a3c2c8a30596dfd",
+      "longest_sequence": 2670,
+      "longest_completion": 108,
+      "maximum_tail_including_padding": 132,
+      "maximum_padding_tokens": 32,
+      "original_3072_limit_exceeded_rows": [],
+      "all_inputs_and_supervised_targets_retained": true,
+      "all_prompt_and_padding_weights_zero": true,
+      "permission_value_tokens": 58,
+      "reason_value_tokens": 70
+    }
+  },
+  "sampling": {
+    "updates": 1344,
+    "physical_rows": 1100,
+    "unique_rows_sampled": 888,
+    "unique_cases_sampled": 96,
+    "all_physical_rows_used": false,
+    "bucket_rows": {
+      "intent_and_record_repair": 216,
+      "execution_and_reply": 884
+    },
+    "bucket_updates": {
+      "intent_and_record_repair": 672,
+      "execution_and_reply": 672
+    },
+    "schedule_sha256": "ab1266f768807aa5fd9989079101e8e3ee688c8340f9fa87ad9dee930e38362e",
+    "scope": "Sampling repetitions are optimizer exposures, not additional unique training pairs."
+  }
+}

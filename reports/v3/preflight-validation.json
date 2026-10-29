@@ -1,0 +1,361 @@
+{
+  "completed_updates": 1,
+  "adapter_sha256": "57264b72d2414a4300f7e3019d2408541d0f00602b2da46451ea905e3bea52be",
+  "config_sha256": "8b0d64436000d9f875b98f7d39e3749fdada03f40fb8f441975a03479d941f0e",
+  "source_sha256": "fa1cade5b2964c03f4f83f62fc950b63e152421b71e10601d461516e339de303",
+  "preflight_only": true,
+  "summary": {
+    "tasks": 1,
+    "task_success": 1,
+    "exchange_related_tasks": 0,
+    "exchange_related_success": 0,
+    "fulfillable_exchange_tasks": 0,
+    "fulfillable_exchange_success": 0,
+    "required_clarifications": 0,
+    "clarifications_obtained": 0,
+    "model_calls": 3,
+    "schema_valid": 3,
+    "duplicate_read_attempts": 0,
+    "duplicate_read_executions": 0,
+    "rejected_write_attempts": 0,
+    "output_tokens": 66,
+    "confirmation_preserved": 1,
+    "latency_p50_ms": 3917.39,
+    "median_model_calls": 3,
+    "exchange_as_return": 0,
+    "unauthorized_return": 0,
+    "ordinary_exchange_tasks": 0,
+    "ordinary_exchange_success": 0,
+    "direct_return_tasks": 0,
+    "direct_return_success": 0
+  },
+  "records": [
+    {
+      "case_id": "v3-valid-cancel-00",
+      "family": "cancel",
+      "expected": {
+        "kind": "cancel",
+        "order_id": "ORD-5LVPVE",
+        "item_id": "item_66A6U4",
+        "new_item_id": "item_F8NRAW",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 6172,
+        "initial_status": "pending",
+        "target_status": "cancelled"
+      },
+      "confirmation": true,
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true,
+      "raw_task_success": true,
+      "required_clarification": null,
+      "clarification_obtained": true,
+      "identity_and_order_checked": true,
+      "catalog_inspected": true,
+      "status_before_confirmation": "awaiting_confirmation",
+      "status_final": "completed",
+      "model_calls": 3,
+      "schema_valid": 3,
+      "rejected_write_attempts": 0,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "latency_ms": 3917.39,
+      "output_tokens": 66,
+      "questions": [],
+      "trace": [
+        {
+          "action": {
+            "arguments": {
+              "email": "buyer92suah@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyer92suah@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 9000,
+              "id": "gift_85JHWK"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_GBQ8BU"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 808,
+            "latency_ms": 1424.7,
+            "output_tokens": 21,
+            "provider": "mlx",
+            "variant": "validation_candidate",
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-5LVPVE"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-5LVPVE\"}}",
+          "result": {
+            "id": "ORD-5LVPVE",
+            "items": [
+              {
+                "item_id": "item_66A6U4",
+                "option": "black / M",
+                "price_cents": 6172,
+                "product_id": "p_4GR52V"
+              }
+            ],
+            "original_payment": "card_MP9N4H",
+            "revision": 0,
+            "status": "pending",
+            "user_id": "u_GBQ8BU"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 873,
+            "latency_ms": 1117.63,
+            "output_tokens": 19,
+            "provider": "mlx",
+            "variant": "validation_candidate",
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-5LVPVE",
+              "reason": "no longer needed"
+            },
+            "tool": "propose_cancel"
+          },
+          "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-5LVPVE\",\"reason\":\"no longer needed\"}}",
+          "result": {
+            "proposal": {
+              "amount_cents": 6172,
+              "arguments": {
+                "order_id": "ORD-5LVPVE",
+                "reason": "no longer needed"
+              },
+              "fingerprint": "0428821ecc61714b0671346d01b04caa534cd2be41b4d4eb8be3695919263307",
+              "id": "b38fcfc5df28c4c1d38c15e0da1a7f4b",
+              "kind": "cancel",
+              "order_id": "ORD-5LVPVE",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "cancelled"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 976,
+            "latency_ms": 1350.14,
+            "output_tokens": 26,
+            "provider": "mlx",
+            "variant": "validation_candidate",
+            "workflow": "v2"
+          }
+        }
+      ],
+      "order_before_confirmation": [
+        {
+          "id": "ORD-5LVPVE",
+          "items": [
+            {
+              "item_id": "item_66A6U4",
+              "option": "black / M",
+              "price_cents": 6172,
+              "product_id": "p_4GR52V"
+            }
+          ],
+          "original_payment": "card_MP9N4H",
+          "status": "pending",
+          "user_id": "u_GBQ8BU"
+        }
+      ],
+      "order_after_confirmation": [
+        {
+          "id": "ORD-5LVPVE",
+          "items": [
+            {
+              "item_id": "item_66A6U4",
+              "option": "black / M",
+              "price_cents": 6172,
+              "product_id": "p_4GR52V"
+            }
+          ],
+          "operation": {
+            "amount_cents": 6172,
+            "arguments": {
+              "order_id": "ORD-5LVPVE",
+              "reason": "no longer needed"
+            },
+            "fingerprint": "0428821ecc61714b0671346d01b04caa534cd2be41b4d4eb8be3695919263307",
+            "kind": "cancel",
+            "order_id": "ORD-5LVPVE",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "original_payment": "card_MP9N4H",
+          "status": "cancelled",
+          "user_id": "u_GBQ8BU"
+        }
+      ],
+      "events": [
+        {
+          "id": 1,
+          "kind": "session_created",
+          "created": 1793120153.627261,
+          "detail": {
+            "case_id": "v3-valid-cancel-00"
+          }
+        },
+        {
+          "id": 2,
+          "kind": "model_tool",
+          "created": 1793120155.0620859,
+          "detail": {
+            "action": {
+              "arguments": {
+                "email": "buyer92suah@retail.example"
+              },
+              "tool": "identify_customer"
+            },
+            "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyer92suah@retail.example\"}}",
+            "result": {
+              "gift_card": {
+                "balance_cents": 9000,
+                "id": "gift_85JHWK"
+              },
+              "note": "Demo identity lookup only; not production authentication",
+              "user_id": "u_GBQ8BU"
+            },
+            "timing": {
+              "finish_reason": "stop",
+              "input_tokens": 808,
+              "latency_ms": 1424.7,
+              "output_tokens": 21,
+              "provider": "mlx",
+              "variant": "validation_candidate",
+              "workflow": "v2"
+            }
+          }
+        },
+        {
+          "id": 3,
+          "kind": "model_tool",
+          "created": 1793120156.1849961,
+          "detail": {
+            "action": {
+              "arguments": {
+                "order_id": "ORD-5LVPVE"
+              },
+              "tool": "get_order"
+            },
+            "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-5LVPVE\"}}",
+            "result": {
+              "id": "ORD-5LVPVE",
+              "items": [
+                {
+                  "item_id": "item_66A6U4",
+                  "option": "black / M",
+                  "price_cents": 6172,
+                  "product_id": "p_4GR52V"
+                }
+              ],
+              "original_payment": "card_MP9N4H",
+              "revision": 0,
+              "status": "pending",
+              "user_id": "u_GBQ8BU"
+            },
+            "timing": {
+              "finish_reason": "stop",
+              "input_tokens": 873,
+              "latency_ms": 1117.63,
+              "output_tokens": 19,
+              "provider": "mlx",
+              "variant": "validation_candidate",
+              "workflow": "v2"
+            }
+          }
+        },
+        {
+          "id": 4,
+          "kind": "model_tool",
+          "created": 1793120157.543401,
+          "detail": {
+            "action": {
+              "arguments": {
+                "order_id": "ORD-5LVPVE",
+                "reason": "no longer needed"
+              },
+              "tool": "propose_cancel"
+            },
+            "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-5LVPVE\",\"reason\":\"no longer needed\"}}",
+            "result": {
+              "proposal": {
+                "amount_cents": 6172,
+                "arguments": {
+                  "order_id": "ORD-5LVPVE",
+                  "reason": "no longer needed"
+                },
+                "fingerprint": "0428821ecc61714b0671346d01b04caa534cd2be41b4d4eb8be3695919263307",
+                "id": "b38fcfc5df28c4c1d38c15e0da1a7f4b",
+                "kind": "cancel",
+                "order_id": "ORD-5LVPVE",
+                "order_revision": 0,
+                "payment_method": "original",
+                "target_status": "cancelled"
+              },
+              "requires_customer_confirmation": true
+            },
+            "timing": {
+              "finish_reason": "stop",
+              "input_tokens": 976,
+              "latency_ms": 1350.14,
+              "output_tokens": 26,
+              "provider": "mlx",
+              "variant": "validation_candidate",
+              "workflow": "v2"
+            }
+          }
+        },
+        {
+          "id": 5,
+          "kind": "operation_committed",
+          "created": 1793120157.5443468,
+          "detail": {
+            "email_sent": false,
+            "money_moved": false,
+            "operation": {
+              "amount_cents": 6172,
+              "arguments": {
+                "order_id": "ORD-5LVPVE",
+                "reason": "no longer needed"
+              },
+              "fingerprint": "0428821ecc61714b0671346d01b04caa534cd2be41b4d4eb8be3695919263307",
+              "kind": "cancel",
+              "order_id": "ORD-5LVPVE",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "cancelled"
+            },
+            "order_id": "ORD-5LVPVE",
+            "order_status": "cancelled",
+            "proposal_id": "b38fcfc5df28c4c1d38c15e0da1a7f4b",
+            "simulated": true,
+            "status": "committed"
+          }
+        }
+      ],
+      "exchange_as_return": false,
+      "unauthorized_return": false,
+      "direct_return": false,
+      "predicted_outcome": "cancel"
+    }
+  ]
+}

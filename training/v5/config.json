@@ -1,0 +1,42 @@
+{
+  "model": "data/models/qwen3-4b-mlx",
+  "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+  "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+  "data": "training/v5/datasets",
+  "adapter_path": "data/finetuning/retail-qlora-v5/run",
+  "best_path": "data/finetuning/retail-qlora-v5/best",
+  "seed": 202610275,
+  "iters": 512,
+  "num_layers": 8,
+  "batch_size": 1,
+  "learning_rate": 1e-05,
+  "lora_parameters": {
+    "rank": 8,
+    "dropout": 0.0,
+    "scale": 16.0
+  },
+  "max_seq_length": 3072,
+  "steps_per_report": 16,
+  "steps_per_eval": 120,
+  "save_every": 240,
+  "tool_name_loss_weight": 1.0,
+  "generation_max_tokens": 512,
+  "generation_temperature": 0,
+  "max_agent_steps": 12,
+  "checkpoint_candidates_completed_updates": [
+    256,
+    512
+  ],
+  "checkpoint_selection": "Validation-only frozen lexicographic business balance, safety, overall, unnecessary handoffs, repeated asks, total calls. Two candidates 256/512. No test inference before selection.",
+  "evaluation_arms": [
+    "previous_old_flow",
+    "previous_new_flow",
+    "base_new_flow",
+    "qlora_v5"
+  ],
+  "runtime_policy": "Typed intent is model-extracted and unverified. Exact quotation provenance only; policy gate uses completed tools, never gold labels. Both protocol changes and bundled SFT are separately compared. All actual generation calls counted, twelve total per arm, greedy unconstrained generation.",
+  "promotion_rule": "All fallback tasks correct; >=8/10 exchanges; >=7/8 handoffs; <=1 unnecessary handoff; zero repeated field/exchange-as-return/unauthorized-return attempts; all confirmations; overall not below both new-flow comparators. Frozen before training/test.",
+  "initialization": "data/finetuning/retail-qlora-v4/best-recovery",
+  "initialization_sha256": "4cef852b19f8e493226cffdf147decc7bab3017343d2f0732e0160695befd5e4",
+  "projection_window": 512
+}

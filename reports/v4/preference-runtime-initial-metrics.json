@@ -1,0 +1,44 @@
+[
+  {
+    "iteration": 1,
+    "category": "continue_after_answer",
+    "loss": 0.5785219563932181,
+    "pre_update_mean_logp_gap": 0.3720555854961276,
+    "elapsed_seconds": 9.324
+  },
+  {
+    "iteration": 2,
+    "category": "preserve_exchange_intent",
+    "loss": 0.8611826820229327,
+    "pre_update_mean_logp_gap": 0.09407228045165539,
+    "elapsed_seconds": 35.458
+  },
+  {
+    "iteration": 3,
+    "category": "avoid_unnecessary_handoff",
+    "loss": 0.08892095057578697,
+    "pre_update_mean_logp_gap": 1.4376087952405214,
+    "elapsed_seconds": 63.835
+  },
+  {
+    "iteration": 4,
+    "category": "avoid_unnecessary_handoff",
+    "loss": 0.048976686370291615,
+    "pre_update_mean_logp_gap": 1.7459112973883748,
+    "elapsed_seconds": 91.256
+  },
+  {
+    "iteration": 5,
+    "category": "preserve_policy_handoff",
+    "loss": 0.1994407490845864,
+    "pre_update_mean_logp_gap": 1.005430449731648,
+    "elapsed_seconds": 127.342
+  },
+  {
+    "iteration": 6,
+    "category": "avoid_unnecessary_handoff",
+    "loss": 0.007576738911228064,
+    "pre_update_mean_logp_gap": 2.689440816640854,
+    "elapsed_seconds": 152.8
+  }
+]

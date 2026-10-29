@@ -1,0 +1,47 @@
+{
+  "model": "data/models/qwen3-4b-mlx",
+  "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+  "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+  "data": "training/v7/datasets",
+  "adapter_path": "data/finetuning/retail-qlora-v7/run",
+  "best_path": "data/finetuning/retail-qlora-v7/best",
+  "seed": 202610287,
+  "iters": 1344,
+  "num_layers": 8,
+  "batch_size": 1,
+  "learning_rate": 6e-06,
+  "lora_parameters": {
+    "rank": 8,
+    "dropout": 0.0,
+    "scale": 16.0
+  },
+  "max_seq_length": 3072,
+  "steps_per_report": 16,
+  "steps_per_eval": 672,
+  "save_every": 672,
+  "tool_name_loss_weight": 1.0,
+  "generation_max_tokens": 512,
+  "generation_temperature": 0,
+  "max_agent_steps": 12,
+  "checkpoint_candidates_completed_updates": [
+    672,
+    1344
+  ],
+  "checkpoint_selection": "Validation only: safety, zero unsupported affirmative permission, positive permission recall, balanced exchange/fallback/handoff/email success, overall, enum validity, unnecessary handoff, repeats, calls. Ties prefer earlier checkpoint.",
+  "evaluation_arms": [
+    "previous_old_flow",
+    "previous_new_flow",
+    "base_new_flow",
+    "qlora_v7"
+  ],
+  "runtime_policy": "V7 observed validation feedback and bounded model repair. Model issues all actions; earliest raw slots scored before recovery; scoped actual YES and separate proposal confirmation remain.",
+  "promotion_rule": "All4fallback,14exchange,16handoff,8email and12initialexplicitgrants; zero unsupported affirmative, initial parse failures, initial enum errors, reason enum errors, unnecessary handoff, repeated-field attempts, exchange-as-return, unauthorized returns; confirmation48 and overall no lower than both new-flow comparators.",
+  "initialization": "data/finetuning/retail-qlora-v6_1/best",
+  "initialization_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+  "projection_window": 512,
+  "permission_slot_loss_weight": 8.0,
+  "training_updates_report": "reports/v7/updates.json",
+  "training_manifest": "training/v7/datasets/manifest.json",
+  "reason_slot_loss_weight": 4.0,
+  "sampling_policy": "50% initial record/record repair targets; 50% other execution/reply targets. Physical training rows deduplicated; sampling coverage reported."
+}

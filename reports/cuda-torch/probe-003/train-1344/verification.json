@@ -1,0 +1,62 @@
+{
+  "completed_true_optimizer_updates": 1344,
+  "actual_sampling": {
+    "physical_rows": 824,
+    "unique_rows_sampled": 824,
+    "unique_cases_sampled": 96,
+    "all_physical_rows_used": true,
+    "bucket_rows": {
+      "intent_and_record_repair": 158,
+      "execution_and_reply": 666
+    },
+    "bucket_updates": {
+      "intent_and_record_repair": 672,
+      "execution_and_reply": 672
+    }
+  },
+  "recorded_initializer_exact_equality": true,
+  "recorded_initializer_tensor_count": 112,
+  "recorded_trainable_parameters": 3670016,
+  "timing": {
+    "first_update_seconds": 3.489511,
+    "steps_2_through_n": {
+      "updates": 1343,
+      "median_seconds": 4.287824,
+      "mean_seconds": 4.864307797468355,
+      "minimum_seconds": 3.247048,
+      "maximum_seconds": 11.299184
+    },
+    "synchronized_run_seconds": 6589.48607,
+    "scope": "Synchronized run wall time includes report/checkpoint/export/audit overhead; excludes model loading/tokenization and is not kernel-only time.",
+    "full_run_throughput_established_by_smoke": false
+  },
+  "memory": {
+    "peak_allocated_bytes": 12454042112,
+    "peak_reserved_bytes": 15116271616,
+    "peak_allocated_gib": 11.598730564117432,
+    "peak_reserved_gib": 14.078125,
+    "scope": "CUDA allocator counters include the loaded model; distinct from total GPU/OS memory."
+  },
+  "accuracy_validated": false,
+  "scope": "CPU artifact consistency verification; four smoke updates do not establish full-run stability, accuracy or isolated hardware speedup.",
+  "tensor_audit": {
+    "available": true,
+    "numeric_values_independently_checked": true,
+    "tensor_count": 112,
+    "parameter_count": 3670016,
+    "predecessor_to_saved_initial_exact_after_transpose": true,
+    "all_values_finite": true,
+    "independent_final_adapter_l2_change": 0.6083016451749128,
+    "files_sha256": {
+      "predecessor": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+      "saved_initial": "2e220a2fe8e91aec5bf6a5b7ee7f58cfb5d8812c4d7a413486b5943683325ef1",
+      "final_adapter": "33fe5c505ddf08cd8cb4032dbd9d350fa205134417ec0f1f90648f4af658e053"
+    },
+    "scope": "CPU NumPy/safetensors tensor reads only; no model loaded and no tensor contents exported."
+  },
+  "report_sha256": "48dcc7e07f50ff9ca8ae06ad141a16d80dd837d1d9b841f24e933fb4373c4528",
+  "plan_sha256": "d21bc5847e669834061cc809ac1b70e9629ef566a46dc8f4daf5da6e755c5ea9",
+  "verifier_sha256": "43b57b4e67cc6ce08688063ba02b63fc4a21f1f9c9a2bc42789ddc78ae9da088",
+  "source_inputs_reconciled": 10,
+  "source_plan_and_training_files_modified": false
+}

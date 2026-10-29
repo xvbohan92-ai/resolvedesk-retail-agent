@@ -1,0 +1,13 @@
+{
+  "recorded_at_utc": "2026-10-27T19:37:38.822804+00:00",
+  "original_sft_completed_updates": 480,
+  "original_sft_manifest_sha256": "251d5e3c82f2de3cfc759eed9c3a6e3a04c0245807df84090c8c1de23853b52f",
+  "sft_updates_report_sha256": "f10580399e66594b7ab332994f844f79a8f22f0695a5e22b007ee08406cdab75",
+  "full_sft240_validation_sha256": "40d7ab064e8f5455678af59b8ece27ef5f67bf08c90c569ab9581eb9c271e6a5",
+  "sft480_validation": "Interrupted after similar exchange/fallback failures; no full aggregate reported.",
+  "preference_manifest_sha256": "cc02070e83cf204008bc5634185b8a9038677c38ecf406b79d9d8b3b48d19350",
+  "reason": "Over-escalation on validation. Add fixed train-only pairwise preference phase from SFT480.",
+  "new_test_inference_started": false,
+  "test_used_to_design_revision": false,
+  "final_checkpoint_rule": "Fixed 480 SFT + 124 preference updates; no test or preference-checkpoint selection."
+}

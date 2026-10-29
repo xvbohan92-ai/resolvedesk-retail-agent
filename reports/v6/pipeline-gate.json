@@ -1,0 +1,5 @@
+{
+  "owned_shell_pid": 85905,
+  "status": "paused_after_validation_before_heldout",
+  "reason": "Inspect validation acceptance before spending held-out test."
+}

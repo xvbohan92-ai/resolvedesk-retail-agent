@@ -1,0 +1,61 @@
+{
+  "cases": {
+    "train": 112,
+    "valid": 28,
+    "test": 42
+  },
+  "rows": {
+    "train": 864,
+    "valid": 108,
+    "test": 162
+  },
+  "files": {
+    "resolve_desk/workflow.py": "2c45094c90643020bddb8d66ef5a4dfc607522620d67c3c07744a99565c0afbc",
+    "resolve_desk/store.py": "01ced6a33f0995d9c3362fc18fd8123a59e523edc408382cd38cdd990285f5bb",
+    "resolve_desk/protocol.py": "7d48eca71522d12da7e889b0fcc3b939c1f8bae12460b64b8a8dc173ef6185a2",
+    "training/v2/fixtures.py": "178335d3cf882ddbb10bf0d8c330785632963ec91401e5438c69d58be7cf9b17",
+    "training/v2/prepare.py": "4aaa2acab31efd60b7b1df13bab83a2a4cc12b2638b4bd31249d1acb3a0046f1",
+    "training/v2/scoring.py": "4cf2b7fc6c281bcbc413f84a548ce35bd330c80ec17681242ffc3d5d02235bb4",
+    "training/v2/config.json": "c00b5c9f48098e8c18cd419c1ab309f31245f4bc53bc165fece422896c24c2b8",
+    "training/v2/evaluate.py": "420f041a6ca99fc98f778bb98ac3b177303d9789961713372c0b02d64554638a",
+    "training/v2/evaluation.py": "3fc5df34e22ce08d8e5e34d3ffe4a22c313906aceb271db9139b08a2c0fdead1",
+    "training/v2/train.py": "c08b4628188b1b1b28138edd605a2e2854654b6ae94831afcfd1dc36b66da0e7",
+    "training/v2/audit.py": "747d7e1ff125675cde91a98b05537f4bca3cbc6681b8d60cd56acd44d16c5d0f",
+    "training/v2/common.py": "97ff6fef37af5d94af31268373c77f446203f54881beba573b6f77d5eabc432e",
+    "training/common.py": "58b7ec8da02d4708625e8dc432fb56fa03c8ecd05c28cd9b5ba0ca1940644030",
+    "training/runtime.py": "70e60f56223f7161c430f6b601ae9f748548b740c9f1ee0172e7f65acdbf4531",
+    "training/scoring.py": "4408966c655a222f8d1a2aa1418594587a63163029c5477bebeacacd6db9eb6b",
+    "training/evaluate.py": "b7b327c05caff7d66c61f4cce7a9006fc108ae6c31321e0b905fb01e57cbc0cc",
+    "training/v2/datasets/train.jsonl": "14ee3e73032d6cd92395115ef20cff153c306c555cab5943fd83067137505a76",
+    "training/v2/datasets/test.jsonl": "219a5c24293874884fc8fc22e89cbe514e9db31ab35f41c54efd31a64db0f1e0",
+    "training/v2/datasets/cases.json": "b8835282f59a61829686576b653daa3015c2fefc1c5eb271572975a6788c3a5d",
+    "training/v2/datasets/valid.jsonl": "ce9193f5869fba079a38ad3f539e4dda7f3596e60dd63f4d0ba3d6257859abed"
+  },
+  "families": [
+    "cancel",
+    "missing_reason",
+    "return",
+    "missing_payment",
+    "exchange",
+    "exchange_fallback",
+    "forbidden_status",
+    "foreign_order",
+    "missing_email",
+    "exchange_missing_option",
+    "exchange_missing_payment",
+    "exchange_gift",
+    "exchange_unavailable",
+    "exchange_shortfall"
+  ],
+  "train_action_counts": {
+    "propose_return": 64,
+    "identify_customer": 224,
+    "get_order": 224,
+    "get_product": 112,
+    "propose_exchange": 64,
+    "ask_customer": 80,
+    "handoff": 64,
+    "propose_cancel": 32
+  },
+  "scope": "New self-authored synthetic task suite; v1 test errors informed design. Disjoint IDs, price draws, opening templates and requested colors across splits; shared author, policy, schema, task families and per-family request cores. Training includes clean and injected-error recovery demonstrations; no held-out model outputs before training/checkpoint selection. Not official tau-bench."
+}

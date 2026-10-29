@@ -1,0 +1,12 @@
+[
+  {
+    "iteration": 1,
+    "category": "available_preserve_exchange",
+    "loss": 0.3817044198513031,
+    "chosen_action_logp": -0.3125,
+    "rejected_action_logp": -0.9778645634651184,
+    "chosen_completion_nll": 0.02002999372780323,
+    "pre_update_mean_logp_gap": 0.6653645634651184,
+    "elapsed_seconds": 17.393
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-10-29T00:08:57.559626+00:00",
+  "notebook": "training/colab/resolvedesk_cuda_eval2.ipynb",
+  "notebook_sha256": "6cbf468ed63aee4fc7b14b4fff7d319d3f52ece1dc114d59d4ad727323e47814",
+  "default_inspect_cells_executed": 5,
+  "validation": {
+    "format": "v4.5 structure checked; nbformat library unavailable",
+    "all_code_cells_compiled": true,
+    "cuda_executed": false
+  },
+  "model_inference_executed": false,
+  "cloud_gpu_execution_validated": false,
+  "execution_gap": "Free Colab GPU denied by quota. Setup/imported-identity checks/run/snapshot not executed in cloud.",
+  "rendered_preview_inspected": false,
+  "independent_code_review_passed": true
+}

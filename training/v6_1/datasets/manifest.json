@@ -1,0 +1,44 @@
+{
+  "files": {
+    "training/v6_1/common.py": "f9e9bd6e92a35ce2e6c9ebc848943d5e52d6477f0a542c6b6cf521dff4e3a710",
+    "training/v6_1/fixtures.py": "2b3086435a6a6351830527c74da8f0edd056c68bcc434413674a24b70142b009",
+    "training/v6_1/scoring.py": "389c06b4b6e3e21d04f0f7a5c5300e70266f40492b625dc599ebe5dccaeeb05f",
+    "training/v6_1/prepare.py": "40166e31cca7e5aeac458f8200a69eb2f7d2b69b982591647a904ae7c60e921b",
+    "training/v6_1/evaluation.py": "f5fc3b9a2864ac42afec96fed663e4c5eac5b719701fd868f73669a0bdd3d27d",
+    "training/v6_1/evaluate.py": "c023aa8f312769c86e133f3a847ed0f0e895c81a715ea3600c002e57eb6c1516",
+    "training/v6_1/select.py": "994cc6bba8ff6938d3ec99001b06d856cde08c16750c8a091c8b67a489d2511a",
+    "training/v6_1/provider.py": "3ff50d53665b69af07201bcbd3e1172338fb43b71928d8a87d4eeeef152a9275",
+    "training/v6_1/resources.py": "e58f48171c8f6e2b3269ee458978168567d2dc5ed4565bed890177591ac8b949",
+    "training/v6_1/config.json": "d0fecb868a52e24388973da1e75fd8177545f373baaf198eb28dba70622d6ad6",
+    "resolve_desk/resolution_v6_1.py": "1f8c3d053e23cb8b93bbb3c052a10904b740ad9057aba5f48f11bc406c446a15",
+    "resolve_desk/agent_v6_1.py": "e0bafd38be3d526cc3896f24fc43beb4ec84ab8b4be7b696f3dd879c01ec2866",
+    "resolve_desk/resolution.py": "6740724b752ddec813489c9fff68b2bc1ac825be19ad3004a24a04da49f74197",
+    "training/runtime.py": "70e60f56223f7161c430f6b601ae9f748548b740c9f1ee0172e7f65acdbf4531",
+    "training/v6/datasets/manifest.json": "d3568d30b14d7b2259bab06768260b3f029f72d01c9b38b8a690fc5510bc8db8",
+    "reports/v6/updates.json": "f3195417fb4ecc01f2ec431907eaaaa59adc197d214e2db94ac92ab0dbdfa999",
+    "reports/v6_1/analysis-plan.json": "b5abd64ec3f84c11f2eb588cb1e4d89335d7168f7785d3fa289ad2c0a816b860",
+    "training/v6/scoring.py": "d1af5058f167848849d96da8ca2cca1fa386fbcdc228fac179cbb033a347410c",
+    "training/v6_1/datasets/test.jsonl": "a6318358576d44266027c4e9dfa06cc3d2b837fba5f5fa72407b19620749f41d",
+    "training/v6_1/datasets/valid.jsonl": "e49430bab37d6356859092159cbcac6cb250ba37179b33d2eb19cbf72e24698b",
+    "training/v6_1/datasets/cases.json": "e2cdd91df36b60e7215708012975a33dab7a8728fe068e45d243fbfef18e8d68"
+  },
+  "data": {
+    "tasks": {
+      "valid": 48,
+      "test": 48
+    },
+    "rows": {
+      "valid": 246,
+      "test": 246
+    },
+    "recovery_trajectories": 0,
+    "train_actions": {},
+    "all_reference_tasks_pass": true,
+    "scope": "Self-authored synthetic worlds and language. Intentional within-split counterfactual sharing; recovery states are not new tasks or wrong supervised labels."
+  },
+  "training_manifest_sha256": "d3568d30b14d7b2259bab06768260b3f029f72d01c9b38b8a690fc5510bc8db8",
+  "training_updates_sha256": "f3195417fb4ecc01f2ec431907eaaaa59adc197d214e2db94ac92ab0dbdfa999",
+  "initial_adapter_sha256": "a1ef4d4e201ba96e40286a19bf1e97d2ac8aee8b358b23f5586be580b4aadf6b",
+  "test_inference_started_at_freeze": false,
+  "scope": "Evaluation/controller freeze after V6 validation-driven development. SFT weights are unchanged V6 candidates. No prior held-out inference is used."
+}

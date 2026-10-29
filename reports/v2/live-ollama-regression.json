@@ -1,0 +1,262 @@
+{
+  "scope": "Single validation integration; separate from the held-out MLX comparison.",
+  "request": "Please cancel order ORD-20000 because I placed a duplicate order. My email is shopper20000@retail.example.",
+  "identity": {
+    "provider": "ollama",
+    "model": "resolvedesk-qwen3:4b",
+    "digest": "cba69c01b2ca0cec9b5b4e20519432714353c5ff4f4de983cbdf7a79403c3ddd",
+    "version": "0.34.2",
+    "transport": "application JSON dispatch"
+  },
+  "source_sha256": "aee93a3acb57670870954c94a574da4d949532f4d72645320f2b08224e5e08c5",
+  "workflow_sha256": "2c45094c90643020bddb8d66ef5a4dfc607522620d67c3c07744a99565c0afbc",
+  "baseline_report_sha256": "110b7f8472b4dee9419f06eb42de0cae5ae0722e633539da988bf3840e242b1e",
+  "baseline_calls": 8,
+  "model_calls": 3,
+  "proposal_correct": true,
+  "status": "awaiting_confirmation",
+  "proposal": {
+    "amount_cents": 3200,
+    "arguments": {
+      "order_id": "ORD-20000",
+      "reason": "ordered by mistake"
+    },
+    "fingerprint": "a597a397943cd4fce3285fcdf8c1c5e40b0253b47857fc2db6d0a5ac9e653be0",
+    "id": "5c40dfefc956f67aca0dcc74015e16ba",
+    "kind": "cancel",
+    "order_id": "ORD-20000",
+    "order_revision": 0,
+    "payment_method": "original",
+    "target_status": "cancelled"
+  },
+  "order_unchanged": true,
+  "observations": [
+    {
+      "action": {
+        "arguments": {
+          "email": "shopper20000@retail.example"
+        },
+        "tool": "identify_customer"
+      },
+      "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+      "result": {
+        "gift_card": {
+          "balance_cents": 8000,
+          "id": "gift_20000"
+        },
+        "note": "Demo identity lookup only; not production authentication",
+        "user_id": "u_20000"
+      },
+      "timing": {
+        "finish_reason": "stop",
+        "input_tokens": 804,
+        "json_schema_constrained": true,
+        "latency_ms": 5529.97,
+        "model": "resolvedesk-qwen3:4b",
+        "output_tokens": 23,
+        "provider": "ollama",
+        "thinking_returned": false,
+        "workflow": "v2"
+      }
+    },
+    {
+      "action": {
+        "arguments": {
+          "order_id": "ORD-20000"
+        },
+        "tool": "get_order"
+      },
+      "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-20000\"}}",
+      "result": {
+        "id": "ORD-20000",
+        "items": [
+          {
+            "item_id": "item_20007",
+            "option": "black / M",
+            "price_cents": 3200,
+            "product_id": "p_20031"
+          }
+        ],
+        "original_payment": "card_20000",
+        "revision": 0,
+        "status": "pending",
+        "user_id": "u_20000"
+      },
+      "timing": {
+        "finish_reason": "stop",
+        "input_tokens": 873,
+        "json_schema_constrained": true,
+        "latency_ms": 1575.35,
+        "model": "resolvedesk-qwen3:4b",
+        "output_tokens": 20,
+        "provider": "ollama",
+        "thinking_returned": false,
+        "workflow": "v2"
+      }
+    },
+    {
+      "action": {
+        "arguments": {
+          "order_id": "ORD-20000",
+          "reason": "ordered by mistake"
+        },
+        "tool": "propose_cancel"
+      },
+      "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-20000\",\"reason\":\"ordered by mistake\"}}",
+      "result": {
+        "proposal": {
+          "amount_cents": 3200,
+          "arguments": {
+            "order_id": "ORD-20000",
+            "reason": "ordered by mistake"
+          },
+          "fingerprint": "a597a397943cd4fce3285fcdf8c1c5e40b0253b47857fc2db6d0a5ac9e653be0",
+          "id": "5c40dfefc956f67aca0dcc74015e16ba",
+          "kind": "cancel",
+          "order_id": "ORD-20000",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "cancelled"
+        },
+        "requires_customer_confirmation": true
+      },
+      "timing": {
+        "finish_reason": "stop",
+        "input_tokens": 980,
+        "json_schema_constrained": true,
+        "latency_ms": 4160.94,
+        "model": "resolvedesk-qwen3:4b",
+        "output_tokens": 28,
+        "provider": "ollama",
+        "thinking_returned": false,
+        "workflow": "v2"
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "kind": "session_created",
+      "created": 1793117425.044236,
+      "detail": {
+        "case_id": "valid-cancel-00"
+      }
+    },
+    {
+      "id": 2,
+      "kind": "model_tool",
+      "created": 1793117430.586014,
+      "detail": {
+        "action": {
+          "arguments": {
+            "email": "shopper20000@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20000@retail.example\"}}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20000"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 804,
+          "json_schema_constrained": true,
+          "latency_ms": 5529.97,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 23,
+          "provider": "ollama",
+          "thinking_returned": false,
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "kind": "model_tool",
+      "created": 1793117432.1732428,
+      "detail": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-20000"
+          },
+          "tool": "get_order"
+        },
+        "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-20000\"}}",
+        "result": {
+          "id": "ORD-20000",
+          "items": [
+            {
+              "item_id": "item_20007",
+              "option": "black / M",
+              "price_cents": 3200,
+              "product_id": "p_20031"
+            }
+          ],
+          "original_payment": "card_20000",
+          "revision": 0,
+          "status": "pending",
+          "user_id": "u_20000"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 873,
+          "json_schema_constrained": true,
+          "latency_ms": 1575.35,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 20,
+          "provider": "ollama",
+          "thinking_returned": false,
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "kind": "model_tool",
+      "created": 1793117436.345064,
+      "detail": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-20000",
+            "reason": "ordered by mistake"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-20000\",\"reason\":\"ordered by mistake\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 3200,
+            "arguments": {
+              "order_id": "ORD-20000",
+              "reason": "ordered by mistake"
+            },
+            "fingerprint": "a597a397943cd4fce3285fcdf8c1c5e40b0253b47857fc2db6d0a5ac9e653be0",
+            "id": "5c40dfefc956f67aca0dcc74015e16ba",
+            "kind": "cancel",
+            "order_id": "ORD-20000",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 980,
+          "json_schema_constrained": true,
+          "latency_ms": 4160.94,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 28,
+          "provider": "ollama",
+          "thinking_returned": false,
+          "workflow": "v2"
+        }
+      }
+    }
+  ]
+}

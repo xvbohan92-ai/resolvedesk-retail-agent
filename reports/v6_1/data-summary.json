@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "valid": 48,
+    "test": 48
+  },
+  "rows": {
+    "valid": 246,
+    "test": 246
+  },
+  "recovery_trajectories": 0,
+  "train_actions": {},
+  "all_reference_tasks_pass": true,
+  "scope": "Self-authored synthetic worlds and language. Intentional within-split counterfactual sharing; recovery states are not new tasks or wrong supervised labels."
+}

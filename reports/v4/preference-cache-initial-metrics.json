@@ -1,0 +1,128 @@
+[
+  {
+    "iteration": 1,
+    "category": "continue_after_answer",
+    "loss": 0.5741619237469842,
+    "pre_update_mean_logp_gap": 0.3770322445780039,
+    "elapsed_seconds": 4.517
+  },
+  {
+    "iteration": 2,
+    "category": "preserve_exchange_intent",
+    "loss": 0.861202090546668,
+    "pre_update_mean_logp_gap": 0.09405547194182873,
+    "elapsed_seconds": 10.452
+  },
+  {
+    "iteration": 3,
+    "category": "avoid_unnecessary_handoff",
+    "loss": 0.09061363032005237,
+    "pre_update_mean_logp_gap": 1.4277508612722158,
+    "elapsed_seconds": 16.231
+  },
+  {
+    "iteration": 4,
+    "category": "avoid_unnecessary_handoff",
+    "loss": 0.04784936801588302,
+    "pre_update_mean_logp_gap": 1.7578386440873146,
+    "elapsed_seconds": 23.139
+  },
+  {
+    "iteration": 5,
+    "category": "preserve_policy_handoff",
+    "loss": 0.1973787344190572,
+    "pre_update_mean_logp_gap": 1.0111593902111053,
+    "elapsed_seconds": 31.658
+  },
+  {
+    "iteration": 6,
+    "category": "avoid_unnecessary_handoff",
+    "loss": 0.008394256412197492,
+    "pre_update_mean_logp_gap": 2.6380037516355515,
+    "elapsed_seconds": 40.23
+  },
+  {
+    "iteration": 7,
+    "category": "preserve_policy_handoff",
+    "loss": 0.11982032695476022,
+    "pre_update_mean_logp_gap": 1.280626818537712,
+    "elapsed_seconds": 49.788
+  },
+  {
+    "iteration": 8,
+    "category": "ask_missing_information",
+    "loss": 0.00187416780782886,
+    "pre_update_mean_logp_gap": 3.38932666182518,
+    "elapsed_seconds": 58.912
+  },
+  {
+    "iteration": 9,
+    "category": "ask_missing_information",
+    "loss": 0.00012455715255774326,
+    "pre_update_mean_logp_gap": 4.745341805741191,
+    "elapsed_seconds": 66.716
+  },
+  {
+    "iteration": 10,
+    "category": "avoid_unnecessary_handoff",
+    "loss": 0.00026414418433504144,
+    "pre_update_mean_logp_gap": 4.3694416880607605,
+    "elapsed_seconds": 77.299
+  },
+  {
+    "iteration": 11,
+    "category": "preserve_exchange_intent",
+    "loss": 0.5789336203390898,
+    "pre_update_mean_logp_gap": 0.3715871348977089,
+    "elapsed_seconds": 88.897
+  },
+  {
+    "iteration": 12,
+    "category": "preserve_policy_handoff",
+    "loss": 0.016034248116329877,
+    "pre_update_mean_logp_gap": 2.312500250339326,
+    "elapsed_seconds": 101.252
+  },
+  {
+    "iteration": 13,
+    "category": "avoid_unnecessary_handoff",
+    "loss": 3.917172195488113e-05,
+    "pre_update_mean_logp_gap": 5.3237679321318865,
+    "elapsed_seconds": 111.439
+  },
+  {
+    "iteration": 14,
+    "category": "preserve_policy_handoff",
+    "loss": 0.009014791378911908,
+    "pre_update_mean_logp_gap": 2.60218889117823,
+    "elapsed_seconds": 172.858
+  },
+  {
+    "iteration": 15,
+    "category": "avoid_unnecessary_handoff",
+    "loss": 0.00014666731149759016,
+    "pre_update_mean_logp_gap": 4.663635194301605,
+    "elapsed_seconds": 185.917
+  },
+  {
+    "iteration": 16,
+    "category": "preserve_exchange_intent",
+    "loss": 0.4148972764537513,
+    "pre_update_mean_logp_gap": 0.5825567245483398,
+    "elapsed_seconds": 198.347
+  },
+  {
+    "iteration": 17,
+    "category": "continue_after_answer",
+    "loss": 0.002595848241620499,
+    "pre_update_mean_logp_gap": 3.226271867752075,
+    "elapsed_seconds": 210.622
+  },
+  {
+    "iteration": 18,
+    "category": "preserve_exchange_intent",
+    "loss": 0.2780274681615713,
+    "pre_update_mean_logp_gap": 0.8189014494419098,
+    "elapsed_seconds": 222.107
+  }
+]

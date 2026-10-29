@@ -1,0 +1,32 @@
+{
+  "reason": "Restart eager loop using compiled gradients, masked 32-token padding and the same official MLX recommended wired-memory setting as SFT. Original pairs, objective, initialization, optimizer, seed and 124 update budget unchanged.",
+  "abandoned_updates": 6,
+  "abandoned_weights_reused": false,
+  "test_inference_started": false,
+  "before": {
+    "original_sft_manifest_sha256": "251d5e3c82f2de3cfc759eed9c3a6e3a04c0245807df84090c8c1de23853b52f",
+    "files": {
+      "training/v4/preference.py": "a8a12b89c44690fd2e4d8cef2a7257b4a87c07dc3d5bcc227a862525bb0cfa4c",
+      "training/v4/preference-protocol.json": "b55d2ba7e2ff78de562742da9f233a51cef878d3fd5f541084fc8d74dafdebdd",
+      "training/v4/datasets/preference.jsonl": "982a9f07c13e700e8a26f8b5c4f421c628258acc45e4c85ee7b0ea84a6fa0709",
+      "training/v4/preference_select.py": "5c7532baa95a9a54196d79850e16721c3a42083746cfa34bff8d3cae3f70f0a0"
+    },
+    "sft_480_sha256": "bb3aa1e1cc85d6d1c1223746852f41df206984ec3e9b47011241226649ecc89c",
+    "original_frozen_inputs": 31,
+    "test_inference_started_at_freeze": false,
+    "pair_count": 124
+  },
+  "after": {
+    "original_sft_manifest_sha256": "251d5e3c82f2de3cfc759eed9c3a6e3a04c0245807df84090c8c1de23853b52f",
+    "files": {
+      "training/v4/preference.py": "3b80fc35ac3185ea5a3e82f95add1307656409eb4d18aaebfb9f48e642ad0b29",
+      "training/v4/preference-protocol.json": "b55d2ba7e2ff78de562742da9f233a51cef878d3fd5f541084fc8d74dafdebdd",
+      "training/v4/datasets/preference.jsonl": "982a9f07c13e700e8a26f8b5c4f421c628258acc45e4c85ee7b0ea84a6fa0709",
+      "training/v4/preference_select.py": "5c7532baa95a9a54196d79850e16721c3a42083746cfa34bff8d3cae3f70f0a0"
+    },
+    "sft_480_sha256": "bb3aa1e1cc85d6d1c1223746852f41df206984ec3e9b47011241226649ecc89c",
+    "original_frozen_inputs": 31,
+    "test_inference_started_at_freeze": false,
+    "pair_count": 124
+  }
+}

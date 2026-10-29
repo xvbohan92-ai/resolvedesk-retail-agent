@@ -1,0 +1,38 @@
+{
+  "model": "data/models/qwen3-4b-mlx",
+  "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+  "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+  "data": "training/v3/datasets",
+  "adapter_path": "data/finetuning/retail-qlora-v3/run",
+  "best_path": "data/finetuning/retail-qlora-v3/best",
+  "seed": 202610273,
+  "iters": 240,
+  "num_layers": 8,
+  "batch_size": 1,
+  "learning_rate": 5e-05,
+  "lora_parameters": {
+    "rank": 8,
+    "dropout": 0.0,
+    "scale": 16.0
+  },
+  "max_seq_length": 2048,
+  "steps_per_report": 20,
+  "steps_per_eval": 120,
+  "save_every": 120,
+  "tool_name_loss_weight": 8.0,
+  "generation_max_tokens": 180,
+  "generation_temperature": 0,
+  "max_agent_steps": 8,
+  "checkpoint_candidates_completed_updates": [
+    119,
+    239
+  ],
+  "checkpoint_selection": "Lexicographic maximum of full validation available-exchange task successes, overall task successes, negative exchange-as-return cases, negative weighted completion loss. Only positive callback checkpoints 119/239 are eligible. Final update 240 weights are retained but are not a selection candidate. No test output before selection finishes.",
+  "evaluation_arms": [
+    "base",
+    "qlora_v2",
+    "qlora_v3"
+  ],
+  "runtime_policy": "All three arms share the unchanged v2 WorkflowStore, prompt, tools, decoding and budgets. No keyword routing or forced exchange action.",
+  "promotion_rule": "Available exchange task success must improve over v2 and be no worse than base; zero exchange-as-return cases on available exchanges; overall task success no lower than either comparator; direct return success no worse than base; confirmation preserved on every task. A predeclared local prototype criterion, not a production or statistical guarantee. Ordinary exchanges must all pass; no paired non-exchange regressions against base."
+}

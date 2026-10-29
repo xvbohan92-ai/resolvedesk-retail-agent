@@ -1,0 +1,23 @@
+{
+  "method": "SimPO-style reference-free length-normalized preference objective",
+  "reference": "https://arxiv.org/html/2405.14734v2",
+  "formula": "softplus(-(beta * (mean_logp_chosen - mean_logp_rejected) - margin))",
+  "beta": 2.0,
+  "margin": 0.5,
+  "learning_rate": 1e-05,
+  "seed": 2026102741,
+  "updates": 124,
+  "batch_size": 1,
+  "initialization": "data/finetuning/retail-qlora-v4/run/candidates/480",
+  "output": "data/finetuning/retail-qlora-v4/preference",
+  "selection": "Fixed 124-update final checkpoint; validation is diagnostic, never test-based selection.",
+  "revision_reason": "SFT-240 validation over-handed off; SFT-480 validation interrupted after similar failures. Original SFT records retained. Revision frozen before any v4 test inference.",
+  "training_pairs": {
+    "avoid_unnecessary_handoff": 48,
+    "ask_missing_information": 20,
+    "continue_after_answer": 20,
+    "preserve_exchange_intent": 20,
+    "preserve_policy_handoff": 16
+  },
+  "scope": "Authored negatives from original training cases only; no validation or test examples used as preference pairs. Full completion mean includes end-of-turn tokens; prompt masked. Original tool-name 2x weighting applies to SFT only."
+}

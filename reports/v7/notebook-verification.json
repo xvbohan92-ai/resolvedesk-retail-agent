@@ -1,0 +1,35 @@
+{
+  "nbformat_valid": true,
+  "executed_mode": "inspect",
+  "local_platform": "darwin",
+  "code_cells_executed": 5,
+  "notebook_code_sha256": "4201d7b41e37d9eda94518b69ffbd4d67d59daac7692b4893180ffa22765a790",
+  "notebook_sha256": "60205bcbc912d2f3e36d00c0c48d917a6a642663641306fab6e226126d1d7d4e",
+  "packages": {
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "nbconvert": "7.17.2",
+    "ipykernel": "7.4.0"
+  },
+  "cloud_job_started": false,
+  "model_calls": 0,
+  "cuda_executed": false,
+  "gpu_validation_gap": "Requires a Linux Python 3.12 Colab GPU: setup, preflight, then explicit train/select/evaluate stages.",
+  "visual_check": {
+    "browser_checked": true,
+    "viewport_width": 1280,
+    "document_width": 1280,
+    "rendered_code_cells": 5,
+    "notebook_error_outputs": 0,
+    "browser_console_errors": 0,
+    "preinstall_gpu_probe_confirmed": true,
+    "screenshot": "docs/colab-notebook-preview.jpg",
+    "screenshot_sha256": "71cabd0b6687d38e890038c53ef9d8b1596b9e9053d7f70523e4c9f90b425de7"
+  },
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "2d9da61c04532af050c3646d4e02a4d7dfab1095ff5d44fc8c0056175f39f30d",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Private local HTML build-preview path omitted; original verification claims describe historical local evidence, not these public bytes."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "records_reconciled": 192,
+  "fresh_test_tasks": 48,
+  "unique_test_tasks": 48,
+  "analysis_plan_sha256": "b5abd64ec3f84c11f2eb588cb1e4d89335d7168f7785d3fa289ad2c0a816b860",
+  "no_test_based_selection": true,
+  "business_scores_recomputed": true,
+  "raw_actions_replayed": true,
+  "intent_and_attempt_metrics_reconciled": true,
+  "evaluation_sha256": "d5fb473360f6c26a82992982ef5dbdd352eb534d83c0aee36002291461797059",
+  "source_sha256": "43bd7db9554aff7cbb056d46d40ae93e2a500a9644b5458e6d7f42f1eb968413",
+  "scope": "Independent code/trace/export reconciliation; not independent human annotation."
+}

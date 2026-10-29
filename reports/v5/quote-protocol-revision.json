@@ -1,0 +1,6 @@
+{
+  "stage": "Development prototype, before formal freeze or any test inference",
+  "old_source_sha256": "6a5dd70974147dd1ca601109be530719afb66998fb435e1ca298159475ac03d6",
+  "reason": "Use exact contiguous customer-text quotations rather than redundant whole-message copying. Provenance is checked, semantics remain model predictions. Test rules and outcomes are not used.",
+  "old_development_report_archived": true
+}

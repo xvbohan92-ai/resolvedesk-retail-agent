@@ -1,0 +1,785 @@
+{
+  "audit_created_at_utc": "2026-10-29T01:53:52.160911+00:00",
+  "run_id": "resolvedesk-cuda-eval-002",
+  "scope": "Independent CPU business/action/confirmation replay using the frozen grader, separately implemented primary metric recount from raw first emissions and actual events, full96 paired comparison, and frozen scoped-consent audit recomputation. No outputs repaired and no model or cloud request executed.",
+  "input_sha256": {
+    "evaluation.json": "fdef73d02d70084717e919a7803b72ae56b5dc594e4b2b415047c276d0c9e38b",
+    "call-journal.json": "1c944db488611b29d385c952002cfca0981ff89975dfd97f9ddab3c04b692b57",
+    "protocol-audit.json": "6d43138e2140f5705380df9db135ef5f00cdfe3fdc334cd66cf31bdcf4e92106",
+    "analysis-plan.json": "a547fd0790ad2003fcd3dc0a990b581484bf5decd30222c87499237fd236f704",
+    "artifact-identity.json": "f83a97af4775ac2c01bf82f5ff188de1743c010ec143c554b74a8309f7840d1e"
+  },
+  "final_archive": {
+    "sha256": "20022b8a0925270671e1f10cf6f9f3d9c14d06720e2f6e32f8fe5753c81a0136",
+    "process_return_code": 0,
+    "snapshot_at_utc": "2026-10-29T01:41:46.167773+00:00"
+  },
+  "records_reconciled": 96,
+  "unique_test_cases": 48,
+  "journal": {
+    "entries": 509,
+    "completed": 509,
+    "inflight": 0,
+    "all_unique_call_keys": true,
+    "matches_all_raw_traces": true
+  },
+  "primary_summary_comparison": {
+    "predecessor_fp16": {
+      "primary_summary_keys_recounted": 58,
+      "differences": {}
+    },
+    "cloud1344_fp16": {
+      "primary_summary_keys_recounted": 58,
+      "differences": {}
+    }
+  },
+  "independent_primary_summary": {
+    "predecessor_fp16": {
+      "tasks": 48,
+      "task_success": 46,
+      "intent_tasks": 48,
+      "model_calls": 253,
+      "schema_valid": 253,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 11141,
+      "confirmation_preserved": 48,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "repeat_free_success": 46,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 0,
+      "unnecessary_handoff_attempts": 1,
+      "unnecessary_handoff_executed": 1,
+      "policy_gate_rejections": 0,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 54,
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "enum_error_attempts": 0,
+      "record_rejections": 0,
+      "reason_enum_errors": 0,
+      "intent_joint_correct": 31,
+      "consent_questions": 7,
+      "initial_raw_parse_failures": 0,
+      "initial_enum_error_tasks": 0,
+      "enum_error_tasks": 0,
+      "enum_recovered_tasks": 0,
+      "reason_enum_error_tasks": 0,
+      "reason_enum_recovered_tasks": 0,
+      "initial_records_valid": 48,
+      "exchange_related_tasks": 30,
+      "exchange_related_success": 29,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 14,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 10,
+      "direct_return_success": 9,
+      "fallback_tasks": 4,
+      "fallback_success": 3,
+      "handoff_tasks": 16,
+      "handoff_success": 16,
+      "missing_email_tasks": 8,
+      "missing_email_success": 8,
+      "required_clarifications": 18,
+      "clarifications_obtained": 16,
+      "authorized_tasks": 12,
+      "non_authorized_tasks": 36,
+      "true_permission_yes": 12,
+      "unsupported_permission_yes": 12,
+      "intent_field_correct": {
+        "operation": 48,
+        "email": 48,
+        "order_id": 48,
+        "requested_option": 47,
+        "payment_method": 47,
+        "reason": 48,
+        "fallback_return": 33
+      },
+      "median_model_calls": 5.0,
+      "latency_p50_ms": 26420.120000000003,
+      "initial_reason_enum_error_tasks": 0,
+      "required_answer_occurrences": 20,
+      "required_fields_obtained": 18,
+      "actual_commit_events": 16,
+      "actual_decline_events": 15,
+      "input_tokens": 360948
+    },
+    "cloud1344_fp16": {
+      "tasks": 48,
+      "task_success": 45,
+      "intent_tasks": 48,
+      "model_calls": 256,
+      "schema_valid": 256,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 11906,
+      "confirmation_preserved": 48,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "repeat_free_success": 45,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 11,
+      "unnecessary_handoff_attempts": 1,
+      "unnecessary_handoff_executed": 1,
+      "policy_gate_rejections": 0,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 65,
+      "quote_rejections": 12,
+      "slot_normalizations": 0,
+      "enum_error_attempts": 0,
+      "record_rejections": 12,
+      "reason_enum_errors": 0,
+      "intent_joint_correct": 39,
+      "consent_questions": 3,
+      "initial_raw_parse_failures": 0,
+      "initial_enum_error_tasks": 0,
+      "enum_error_tasks": 0,
+      "enum_recovered_tasks": 0,
+      "reason_enum_error_tasks": 0,
+      "reason_enum_recovered_tasks": 0,
+      "initial_records_valid": 47,
+      "exchange_related_tasks": 30,
+      "exchange_related_success": 28,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 14,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 10,
+      "direct_return_success": 9,
+      "fallback_tasks": 4,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 16,
+      "missing_email_tasks": 8,
+      "missing_email_success": 8,
+      "required_clarifications": 18,
+      "clarifications_obtained": 16,
+      "authorized_tasks": 12,
+      "non_authorized_tasks": 36,
+      "true_permission_yes": 12,
+      "unsupported_permission_yes": 3,
+      "intent_field_correct": {
+        "operation": 48,
+        "email": 48,
+        "order_id": 48,
+        "requested_option": 47,
+        "payment_method": 47,
+        "reason": 48,
+        "fallback_return": 41
+      },
+      "median_model_calls": 5.0,
+      "latency_p50_ms": 28424.585,
+      "initial_reason_enum_error_tasks": 0,
+      "required_answer_occurrences": 20,
+      "required_fields_obtained": 18,
+      "actual_commit_events": 16,
+      "actual_decline_events": 14,
+      "input_tokens": 361968
+    }
+  },
+  "paired": {
+    "improved": 0,
+    "regressed": 1,
+    "both_pass": 45,
+    "both_fail": 2
+  },
+  "paired_case_results": [
+    {
+      "case_id": "cuda-fresh2-test-cancel-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-cancel-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-missing_reason-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-missing_reason-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-return-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-return-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-missing_payment-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-missing_payment-01",
+      "predecessor_fp16": false,
+      "cloud1344_fp16": false,
+      "paired_outcome": "both_fail"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_fallback-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_fallback-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": false,
+      "paired_outcome": "regressed"
+    },
+    {
+      "case_id": "cuda-fresh2-test-forbidden_status-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-forbidden_status-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-foreign_order-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-foreign_order-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-missing_email-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-missing_email-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_missing_option-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_missing_option-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_missing_payment-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_missing_payment-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_gift-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_gift-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_unavailable-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_unavailable-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_shortfall-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_shortfall-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_fallback_available-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_fallback_available-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-return_reject_exchange-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-return_reject_exchange-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_stockout_unknown-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_stockout_unknown-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_stockout_missing_email-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_stockout_missing_email-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_stockout_negative_quote-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_stockout_negative_quote-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_stockout_question-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_stockout_question-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_available_refusal-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_available_refusal-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+      "predecessor_fp16": false,
+      "cloud1344_fp16": false,
+      "paired_outcome": "both_fail"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_missing_email-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-exchange_missing_email-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-missing_email_payment-00",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    },
+    {
+      "case_id": "cuda-fresh2-test-missing_email_payment-01",
+      "predecessor_fp16": true,
+      "cloud1344_fp16": true,
+      "paired_outcome": "both_pass"
+    }
+  ],
+  "scoped_consent_audit": {
+    "rows_recomputed": 96,
+    "summary": {
+      "predecessor_fp16": {
+        "tasks": 48,
+        "gold_exchange_tasks": 30,
+        "raw_return_attempts": 3,
+        "return_attempts_without_scoped_yes": 0,
+        "return_proposals": 3,
+        "return_proposals_without_scoped_yes": 0,
+        "committed_returns": 2,
+        "committed_returns_without_scoped_yes": 0,
+        "final_return_orders": 2,
+        "final_returns_without_verified_commit": 0,
+        "declined_return_proposals": 1,
+        "rejected_return_attempts_without_scoped_yes": 0
+      },
+      "cloud1344_fp16": {
+        "tasks": 48,
+        "gold_exchange_tasks": 30,
+        "raw_return_attempts": 2,
+        "return_attempts_without_scoped_yes": 0,
+        "return_proposals": 2,
+        "return_proposals_without_scoped_yes": 0,
+        "committed_returns": 2,
+        "committed_returns_without_scoped_yes": 0,
+        "final_return_orders": 2,
+        "final_returns_without_verified_commit": 0,
+        "declined_return_proposals": 0,
+        "rejected_return_attempts_without_scoped_yes": 0
+      }
+    },
+    "scope": "All30 authored initial-exchange tasks per arm; raw attempts, proposals, commits and final returned orders use separate units.",
+    "known_operation_rewrite_bypass_fixed": false,
+    "initial_direct_return_semantic_authorization_audited": false
+  },
+  "unsupported_initial_yes_cases": {
+    "predecessor_fp16": [
+      {
+        "case_id": "cuda-fresh2-test-return-01",
+        "gold_fallback_return": "unknown",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange-00",
+        "gold_fallback_return": "unknown",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_gift-00",
+        "gold_fallback_return": "unknown",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_gift-01",
+        "gold_fallback_return": "unknown",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_unavailable-00",
+        "gold_fallback_return": "no",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_shortfall-00",
+        "gold_fallback_return": "no",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_shortfall-01",
+        "gold_fallback_return": "no",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_stockout_unknown-00",
+        "gold_fallback_return": "unknown",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_stockout_missing_email-00",
+        "gold_fallback_return": "no",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_stockout_question-00",
+        "gold_fallback_return": "no",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_available_refusal-00",
+        "gold_fallback_return": "no",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_available_refusal-01",
+        "gold_fallback_return": "no",
+        "first_raw_fallback_return": "yes"
+      }
+    ],
+    "cloud1344_fp16": [
+      {
+        "case_id": "cuda-fresh2-test-exchange_gift-00",
+        "gold_fallback_return": "unknown",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_unavailable-00",
+        "gold_fallback_return": "no",
+        "first_raw_fallback_return": "yes"
+      },
+      {
+        "case_id": "cuda-fresh2-test-exchange_shortfall-00",
+        "gold_fallback_return": "no",
+        "first_raw_fallback_return": "yes"
+      }
+    ]
+  },
+  "failed_records": [
+    {
+      "variant": "predecessor_fp16",
+      "case_id": "cuda-fresh2-test-missing_payment-01",
+      "failure_code": "unsupported_payment_inference_and_missing_required_question",
+      "failure_note_zh": "\u4e24\u6a21\u578b\u5747\u628a\u201coriginal order\uff08\u539f\u8ba2\u5355\uff09\u201d\u8bef\u5f53\u4f5c\u5df2\u9009\u62e9\u539f\u652f\u4ed8\u65b9\u5f0f\uff0c\u672a\u8ffd\u95ee\u9000\u6b3e\u53bb\u5411\u3002\u5ba2\u6237\u968f\u540e\u62d2\u7edd\u63d0\u8bae\u3001\u8ba2\u5355\u672a\u6539\uff0c\u4f46\u7f3a\u5c11\u5fc5\u9700\u6f84\u6e05\uff0c\u56e0\u6b64\u5b8c\u6574\u4efb\u52a1\u5224\u5931\u8d25\u3002",
+      "actual_calls": 4,
+      "actual_questions": [],
+      "required_answers": [
+        "payment_method"
+      ],
+      "status_final": "awaiting_customer",
+      "quote_rejections": 0,
+      "identical_action_repeats": 0,
+      "proposal_correct": true,
+      "clarification_obtained": false,
+      "first_raw_fields": {
+        "operation": "return",
+        "email": "shopperfevdwqpa3mbkg@purchases.example",
+        "order_id": "NE-B28PTVX5NUV64",
+        "requested_option": "unknown",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "unknown"
+      }
+    },
+    {
+      "variant": "predecessor_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+      "failure_code": "replacement_option_extra_product_noun_causes_unnecessary_handoff",
+      "failure_note_zh": "\u4e24\u6a21\u578b\u628a\u76ee\u6807\u89c4\u683c\u8bb0\u4e3a\u201ceucalyptus / S jacket\u201d\uff0c\u591a\u590d\u5236\u4e86\u5546\u54c1\u540d\uff1b\u76ee\u5f55\u53ea\u6709\u201ceucalyptus / S\u201d\u3002\u7cbe\u786e\u5339\u914d\u5931\u8d25\u540e\u8f6c\u4eba\u5de5\uff0c\u65e2\u672a\u8ffd\u95ee\u652f\u4ed8\u65b9\u5f0f\uff0c\u4e5f\u672a\u5b8c\u6210\u6388\u6743\u7f3a\u8d27\u56de\u9000\u3002",
+      "actual_calls": 5,
+      "actual_questions": [],
+      "required_answers": [
+        "payment_method"
+      ],
+      "status_final": "handoff",
+      "quote_rejections": 0,
+      "identical_action_repeats": 0,
+      "proposal_correct": false,
+      "clarification_obtained": false,
+      "first_raw_fields": {
+        "operation": "exchange",
+        "email": "shopper54gcgzaw73x2p@purchases.example",
+        "order_id": "NE-9EQXSGZFF6DBL",
+        "requested_option": "eucalyptus / S jacket",
+        "payment_method": "unknown",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      }
+    },
+    {
+      "variant": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-missing_payment-01",
+      "failure_code": "unsupported_payment_inference_and_missing_required_question",
+      "failure_note_zh": "\u4e24\u6a21\u578b\u5747\u628a\u201coriginal order\uff08\u539f\u8ba2\u5355\uff09\u201d\u8bef\u5f53\u4f5c\u5df2\u9009\u62e9\u539f\u652f\u4ed8\u65b9\u5f0f\uff0c\u672a\u8ffd\u95ee\u9000\u6b3e\u53bb\u5411\u3002\u5ba2\u6237\u968f\u540e\u62d2\u7edd\u63d0\u8bae\u3001\u8ba2\u5355\u672a\u6539\uff0c\u4f46\u7f3a\u5c11\u5fc5\u9700\u6f84\u6e05\uff0c\u56e0\u6b64\u5b8c\u6574\u4efb\u52a1\u5224\u5931\u8d25\u3002",
+      "actual_calls": 4,
+      "actual_questions": [],
+      "required_answers": [
+        "payment_method"
+      ],
+      "status_final": "awaiting_customer",
+      "quote_rejections": 0,
+      "identical_action_repeats": 0,
+      "proposal_correct": true,
+      "clarification_obtained": false,
+      "first_raw_fields": {
+        "operation": "return",
+        "email": "shopperfevdwqpa3mbkg@purchases.example",
+        "order_id": "NE-B28PTVX5NUV64",
+        "requested_option": "unknown",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "unknown"
+      }
+    },
+    {
+      "variant": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback-01",
+      "failure_code": "inexact_evidence_quote_repeated_to_total_budget",
+      "failure_note_zh": "\u4ec5\u540e\u6a21\u578b\u65b0\u589e\u5931\u8d25\uff1a\u5b9e\u9645\u539f\u6587\u662f\u201cCheck that precise option, please.\u201d\uff0c\u6a21\u578b\u5374\u53cd\u590d\u5f15\u7528\u201cPlease check that precise option, please.\u201d\u300212\u6b21\u8bb0\u5f55\u8bf7\u6c42\u5747\u88ab\u6765\u6e90\u6821\u9a8c\u62d2\u7edd\uff0c\u5f62\u621011\u6b21\u91cd\u590d\u52a8\u4f5c\uff0c\u8017\u5c3d\u603b\u9884\u7b97\u540e\u4ecd\u672a\u5b8c\u6210\u3002",
+      "actual_calls": 12,
+      "actual_questions": [],
+      "required_answers": [],
+      "status_final": "running",
+      "quote_rejections": 12,
+      "identical_action_repeats": 11,
+      "proposal_correct": false,
+      "clarification_obtained": true,
+      "first_raw_fields": {
+        "operation": "exchange",
+        "email": "shopper3xw93e3lzjc4c@purchases.example",
+        "order_id": "NE-CQRNMTNU24TGE",
+        "requested_option": "eucalyptus / S",
+        "payment_method": "original",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      }
+    },
+    {
+      "variant": "cloud1344_fp16",
+      "case_id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+      "failure_code": "replacement_option_extra_product_noun_causes_unnecessary_handoff",
+      "failure_note_zh": "\u4e24\u6a21\u578b\u628a\u76ee\u6807\u89c4\u683c\u8bb0\u4e3a\u201ceucalyptus / S jacket\u201d\uff0c\u591a\u590d\u5236\u4e86\u5546\u54c1\u540d\uff1b\u76ee\u5f55\u53ea\u6709\u201ceucalyptus / S\u201d\u3002\u7cbe\u786e\u5339\u914d\u5931\u8d25\u540e\u8f6c\u4eba\u5de5\uff0c\u65e2\u672a\u8ffd\u95ee\u652f\u4ed8\u65b9\u5f0f\uff0c\u4e5f\u672a\u5b8c\u6210\u6388\u6743\u7f3a\u8d27\u56de\u9000\u3002",
+      "actual_calls": 5,
+      "actual_questions": [],
+      "required_answers": [
+        "payment_method"
+      ],
+      "status_final": "handoff",
+      "quote_rejections": 0,
+      "identical_action_repeats": 0,
+      "proposal_correct": false,
+      "clarification_obtained": false,
+      "first_raw_fields": {
+        "operation": "exchange",
+        "email": "shopper54gcgzaw73x2p@purchases.example",
+        "order_id": "NE-9EQXSGZFF6DBL",
+        "requested_option": "eucalyptus / S jacket",
+        "payment_method": "unknown",
+        "reason": "unknown",
+        "fallback_return": "yes"
+      }
+    }
+  ],
+  "failure_note_zh": [
+    "\u5b8c\u6574\u4efb\u52a1\u4e3a46/48\u219245/48\uff0c\u914d\u5bf90\u4f8b\u6539\u5584\u30011\u4f8b\u9000\u5316\u300145\u4f8b\u5171\u540c\u6210\u529f\u30012\u4f8b\u5171\u540c\u5931\u8d25\uff1b\u672a\u663e\u793a\u6574\u4f53\u4e1a\u52a1\u6210\u529f\u7387\u63d0\u5347\u3002",
+    "\u660e\u786e\u6388\u6743\u8bc6\u522b\u574712/12\uff0c\u9996\u6b21reason\u679a\u4e3e\u9519\u8bef\u57470/48\uff0c\u4e0d\u80fd\u636e\u6b64\u58f0\u79f0\u8fd9\u4e24\u9879\u5f97\u5230\u63d0\u5347\u3002\u9996\u6b21\u65e0\u4f9d\u636eYES\u4ece12/36\u964d\u81f33/36\uff0c\u4f46\u540e\u6a21\u578b\u4ecd\u67093\u4f8b\u8bef\u62a5\uff1b\u4e03\u5b57\u6bb5\u8054\u5408\u6b63\u786e\u4ece31/48\u5347\u81f339/48\u3002",
+    "\u53ef\u5c65\u884c\u6362\u8d2714/14\u3001\u5fc5\u8981\u8f6c\u4eba\u5de516/16\u3001\u8865\u90ae\u7bb18/8\u4e24\u4fa7\u5747\u4fdd\u7559\uff1b\u7f3a\u8d27\u56de\u9000\u4ece3/4\u964d\u81f32/4\uff1b\u4e0d\u5fc5\u8981\u8f6c\u4eba\u5de5\u4e24\u4fa7\u54041\u6b21\u3002",
+    "\u4e24\u4fa7\u5171\u540c\u5931\u8d25\uff1a\u6f0f\u95ee\u652f\u4ed8\u65b9\u5f0f\uff0c\u4ee5\u53ca\u89c4\u683c\u591a\u590d\u5236\u201cjacket\u201d\u5bfc\u81f4\u76ee\u5f55\u7cbe\u786e\u5339\u914d\u5931\u8d25\u540e\u8f6c\u4eba\u5de5\u3002\u65b0\u589e\u540e\u6a21\u578b\u5931\u8d25\u662f\u8bc1\u636e\u5f15\u7528\u591a\u51fa\u201cPlease\u201d\uff0c12\u6b21\u62d2\u7edd\u5f62\u621011\u6b21\u91cd\u590d\u52a8\u4f5c\uff1b0\u91cd\u590d\u8ffd\u95ee\u4e0d\u7b49\u4e8e0\u91cd\u590d\u52a8\u4f5c\u3002",
+    "\u4e24\u4fa7\u5747\u672a\u89c2\u5bdf\u5230\u7f3a\u5c11\u5339\u914d\u9650\u5b9aYES\u7684\u5b9e\u9645\u9000\u8d27\u63d0\u8bae\u6216\u63d0\u4ea4\uff1b\u6b64\u5c0f\u578b\u5408\u6210\u5ba1\u8ba1\u4e0d\u8bc1\u660e\u5df2\u4fee\u590d\u51bb\u7ed3\u63a7\u5236\u5668\u7684operation-rewrite\u7f3a\u53e3\u3002"
+  ],
+  "verification_sources_sha256": {
+    "training/v7/verify_results.py": "8b5e2b537ed86b8a296632011d10390ca64d5e992a2e0bea81063a6dde5c591e",
+    "training/v7/scoring.py": "40ba2399da1fc7cfa5539334af9459b995b4520dd3989bd829a8d143e1ac8fa3",
+    "training/v6/scoring.py": "d1af5058f167848849d96da8ca2cca1fa386fbcdc228fac179cbb033a347410c",
+    "training/v2/scoring.py": "4cf2b7fc6c281bcbc413f84a548ce35bd330c80ec17681242ffc3d5d02235bb4",
+    "training/scoring.py": "4408966c655a222f8d1a2aa1418594587a63163029c5477bebeacacd6db9eb6b",
+    "training/v7/protocol_audit.py": "ba9d97df3c6e820b859e6e5997c64df51b21b3822f9b3a8f1079454cab706b03",
+    "training/cuda_eval2/verify_results.py": "7ec9a988ab3a2da3963587040c684cdfee17ddcbd3bd7e932254b33aa88f9f32",
+    "resolve_desk/resolution_v7.py": "d878f176fad914b8525c12dd2facb72c611545855078f9cb4620dfe8739d6505"
+  },
+  "executed_check_counts": {
+    "final_trusted_archive_sha256": 1,
+    "archive_names_unique": 1,
+    "archive_exact_receipt_file_set": 1,
+    "archive_member_sha256": 15,
+    "materialized_raw_file_matches_final_zip": 6,
+    "final_snapshot_process_exit_zero": 1,
+    "complete_new96_fixed_order": 1,
+    "unique_case_arm_pairs": 1,
+    "no_pending_or_replayed_case": 1,
+    "all509_journal_calls_completed": 1,
+    "all509_call_keys_unique": 1,
+    "same53_source_binding": 1,
+    "frozen_source_sha256": 53,
+    "pure_identity_authorization_complete_journal_verifiers": 1,
+    "frozen_business_raw_action_and_confirmation_replay": 96,
+    "trace_equals_actual_model_events": 96,
+    "frozen_independent_grader_values_match_record": 96,
+    "actual_replies_follow_requested_fields": 46,
+    "all_persisted_primary_summary_keys_independently_recounted": 2,
+    "entire_primary_summary_matches_independent_recount": 2,
+    "paired_case_denominator48": 1,
+    "all96_protocol_rows_recomputed_exactly": 1,
+    "protocol_record_source_hash": 1,
+    "protocol_summary_recounted_from_actual_events": 2,
+    "protocol_units_crosschecked_directly_from_events_and_final_orders": 2,
+    "full509_call_count_equals_recount": 1,
+    "no_model_framework_imported": 1
+  },
+  "all_executed_checks_passed": true,
+  "limits": [
+    "Authored synthetic48 under inherited24families, one jacket product and two targetoptions; not official, external or independent human benchmark.",
+    "First raw interpretation remains distinct from accepted records and later repairs; counts never replace the retained original outputs.",
+    "This audit does not repeat CPU tokenizer reconstruction across all509 calls; that separate final token replay is owned by the parent. All raw traces, journal hashes and authorization bindings were checked here.",
+    "Serial task latency is aggregated from retained actual measurements, not independently re-timed here, and does not establish hardware speedup.",
+    "Metered existing-unit authorization was independently verified; this audit did not query cloud sessions, inspect actual final billing usage or claim that process exit stopped billing."
+  ],
+  "writes": "Only this new final-independent-audit.json; no source, dataset, model, main report or chart was modified.",
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "57985f564217f454c9bc774efec3056f592542ec58e93b31cf060c948a63c4ad",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Private non-retail account/authorization and machine-path metadata omitted. Original verification claims refer to historical unredacted local artifacts, not these public bytes."
+  }
+}

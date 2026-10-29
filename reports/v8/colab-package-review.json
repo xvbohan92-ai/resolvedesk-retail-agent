@@ -1,0 +1,113 @@
+{
+  "round": "v8",
+  "reviewed_at_utc": "2026-10-29T05:16:58.667481+00:00",
+  "status": "cpu_contracts_passed_prebuild",
+  "scope": "Read-only Colab packaging/orchestration review plus pure CPU toy snapshot and AST contracts. No Colab cell, upload, resource configuration, GPU or model call executed.",
+  "code_sha256": {
+    "training/v8/bundle.py": "791601369f5e07b8ad72653182d5670a34e5be7cfc798277abc347da3c85e1b6",
+    "training/v8/colab_cells.py": "cbee5caf822512e53a6563230f5c5cfb8529b0a0db103644b3e48f2d2fcb3270",
+    "training/v8/cloud_run.py": "81b3497b1ed6b4c09cd3bf0cf19ebd6d4baa5f69697353acef5c5d3e669d7943",
+    "training/v8/snapshot.py": "6088ed0cdaa35b7f3b6f00906e19d7e5fbd364698d04f2a27509339a7491a940",
+    "training/v8/cuda_train.py": "cfcda039ede79b40af30679939182177e15fe324eb55f8769b07d5cd87e4cdb6",
+    "tests/test_v8_colab_contract.py": "e3cd92c08d5dea36c2472d2720e93123877137ef2a28a96b3ccede5385287ff7"
+  },
+  "tests": {
+    "file": "tests/test_v8_colab_contract.py",
+    "passed": 20,
+    "actual_last_result": "20 passed in0.10s",
+    "ruff": "passed",
+    "temporary_cpu_archives_only": true
+  },
+  "notebook": {
+    "code_cells_ast_parsed": 4,
+    "operator_execute_default": false,
+    "colab_cells_executed": false,
+    "source_or_weight_packages_uploaded": false,
+    "old_run_allowance_reused": false
+  },
+  "resolved_findings": [
+    {
+      "issue": "Concurrent report writes could make STATUS JSON parsing fail and cancel a backup.",
+      "resolution": "Training JSON writes now atomic. Snapshot reads each selected file once, archives raw bytes even when JSON parsing fails, and derives progress from the same captured bytes.",
+      "cpu_coverage": "Malformed training-report prefix preserved; no repeated reads."
+    },
+    {
+      "issue": "Missing/corrupt final weights were silently skipped while a saved-weights download was still advertised.",
+      "resolution": "Four known smoke/formal initial/final weight paths are inventoried with expected/actual SHA and verified/missing/unverified states. Unverified known weight bytes are retained and completion is false.",
+      "cpu_coverage": "Matching full inventory; missing/corrupt initial and final; journals and all failed task outcomes retained."
+    },
+    {
+      "issue": "Launch marker exists-check followed by atomic replacement could clobber a racing launch provenance.",
+      "resolution": "cloud_run now reserves its first marker with exclusive creation, flush/fsync; later phase updates remain atomic. Fixed smoke4/fresh1344/CPUproof/validation48+test144 scope and no retry remain."
+    },
+    {
+      "issue": "Source name filter admitted nested env/database/key paths; backup paths could follow symlinks.",
+      "resolution": "Bundle rejects nested .env/git/ssh/aws and database/key/weight containers; project reads reject symlinks and outside boundaries. Snapshot opens each ancestor with no-follow directory FDs, reads only bounded regular files, excludes secrets/DB/base and unknown weights."
+    }
+  ],
+  "snapshot_contract": {
+    "api": "collect_snapshot(workspace,process_return_code)->(archive_bytes,receipt)",
+    "report_tree": "reports/v8 JSON/log only",
+    "known_weight_files": 4,
+    "fixed_metadata_files": [
+      "training/v8/datasets/manifest.json",
+      "v8-source-manifest.json",
+      "v8-initializer-manifest.json"
+    ],
+    "member_sha256_recorded": true,
+    "malformed_json_raw_preserved": true,
+    "unfinished_journal_preserved": true,
+    "all_outcomes_retained_including_failures": true,
+    "complete_artifacts_presence_requires": [
+      "successful process return",
+      "completed smoke4/formal1344 reports and plans/configs",
+      "matching known initial/final weight hashes",
+      "training proof and sealed identity hash bindings",
+      "complete unique ordered validation48 and three-arm test144",
+      "all corresponding journal entries completed and matched to trace",
+      "protocol rows and three input metadata files present"
+    ],
+    "independent_verification_performed": false,
+    "limitation": "This is structural backup inventory, not tensor/value/tokenizer/business/consent or model-quality verification. Actual source/weight packages are built and checked only after seal."
+  },
+  "extraction_review": {
+    "approved_archive_and_manifest_hash_checks_present": true,
+    "duplicate_path_and_oversize_checks_present": true,
+    "traversal_backslash_symlink_checks_present": true,
+    "manual_file_writes_no_extractall": true,
+    "receipt_and_snapshot_append_actual_newline": true
+  },
+  "scope_review": {
+    "phases": [
+      "discarded_smoke4",
+      "fixed_final1344",
+      "cpu_weight_proof",
+      "validation48_then_three_arm_test144"
+    ],
+    "automatic_retry_or_resume": false,
+    "checkpoints_selected_by_test": false,
+    "drive_mount_or_unrelated_cache_unload": false,
+    "process_and_vm_release_deadlines_distinguished": true,
+    "python_process_exit_claimed_to_stop_billing": false
+  },
+  "material_findings_remaining": [],
+  "not_claimed": [
+    "Actual Colab compatibility or package upload success",
+    "Successful GPU smoke/training/inference",
+    "Actual model quality or speed improvement",
+    "A new-round resource authorization",
+    "Independent correctness verification from snapshot presence alone"
+  ],
+  "next_steps_owned_by_parent": [
+    "Run full CPU suite",
+    "Seal final source/data/plan",
+    "Build and inspect actual package member hashes",
+    "Obtain explicit new-round upload/compute approval before configuring execution"
+  ],
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "f3452fd2613d7ac8629108d56523ca9d46539342f050a6c20244f94acf561a03",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Private non-retail account/authorization and machine-path metadata omitted. Original verification claims refer to historical unredacted local artifacts, not these public bytes."
+  }
+}

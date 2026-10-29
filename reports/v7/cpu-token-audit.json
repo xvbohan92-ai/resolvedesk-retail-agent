@@ -1,0 +1,9 @@
+{
+  "rows": 824,
+  "longest_sequence": 2620,
+  "longest_completion": 115,
+  "permission_tokens": 158,
+  "reason_tokens": 194,
+  "prompt_weights_all_zero": true,
+  "semantic_rows": 158
+}

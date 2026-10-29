@@ -1,0 +1,65 @@
+{
+  "files": {
+    "training/v5/__init__.py": "c25a5cc3f94c624054692fe74d8b4cadfa44d4c05f1bb38705fc5ad53bfb7186",
+    "training/v5/common.py": "d477277e24581cfff4cbdd3ef9ad7477e5d768dd2f6287fdc4346757a4ba3525",
+    "training/v5/development.py": "72bda5810e1cddeddebe5cba4aca7743fd4cf3e520f4bd594d41ad55f2340e96",
+    "training/v5/evaluate.py": "709a5701e4da24b91a5c3da425b59aa8bebdb586ec00cb40980b9ea9dd97b4d7",
+    "training/v5/evaluation.py": "1e7a145168178c64e5dc8a8cced7eeeedd397b073f20835d1f35176c4bb168d6",
+    "training/v5/fixtures.py": "2981cc79d3c52f1323a13782148b194d9bb9897d0a636a180b87d1ee41ce86d1",
+    "training/v5/prepare.py": "e15da23d31ac0a026e18e550811ea7b5abeb96e573ffb8b00aace9c22065df03",
+    "training/v5/provider.py": "9396c6d6571bfd7a7191b4b9e31df86436f4ea1f14a7ce6f44a6fb1bfb998b74",
+    "training/v5/resources.py": "e58f48171c8f6e2b3269ee458978168567d2dc5ed4565bed890177591ac8b949",
+    "training/v5/select.py": "5642c7fc29cefb10a834e5ef61db40ca10d2655070c9ee6855cb028dd656abe2",
+    "training/v5/train.py": "bd0f45e68651c4f065411011e302b00bca9fa6d9b1251bc09792e7eefd351bd5",
+    "training/v5/config.json": "b457ee96debdf12a3e93aa1c38537add89aa2f7233e6f9eaf32f87b3de912152",
+    "resolve_desk/resolution.py": "6740724b752ddec813489c9fff68b2bc1ac825be19ad3004a24a04da49f74197",
+    "resolve_desk/agent_v5.py": "392ab49dda116e38f82aaff451cf4feac09de1339f74f23b3631dd7706edc223",
+    "training/base-model-spec.json": "bff5ee1bb595c89e629c7e0f93884c06ab66628f9cf6e61b8dfe02f87053a965",
+    "training/runtime.py": "70e60f56223f7161c430f6b601ae9f748548b740c9f1ee0172e7f65acdbf4531",
+    "training/scoring.py": "4408966c655a222f8d1a2aa1418594587a63163029c5477bebeacacd6db9eb6b",
+    "training/v2/scoring.py": "4cf2b7fc6c281bcbc413f84a548ce35bd330c80ec17681242ffc3d5d02235bb4",
+    "training/v4/tokenization.py": "946f01aab1b0ab6383025a552c474382ec68a8c4711739c08285f62465841fc3",
+    "training/v4/evaluation.py": "c83ad22d23a1a9563975e0265cec5ba1a463fbd678f8be6484ea3baca3c8901b",
+    "training/v3/evaluation.py": "218c2e586a162db5a994990ea6b18e5fef8049fa7c6e2a7f01d17298e547a3db",
+    "training/v2/evaluation.py": "3fc5df34e22ce08d8e5e34d3ffe4a22c313906aceb271db9139b08a2c0fdead1",
+    "resolve_desk/progress.py": "3caa54d31efa57537263d9d819d7b0be32d71404267973e25868357751f139c0",
+    "resolve_desk/workflow.py": "2c45094c90643020bddb8d66ef5a4dfc607522620d67c3c07744a99565c0afbc",
+    "resolve_desk/store.py": "01ced6a33f0995d9c3362fc18fd8123a59e523edc408382cd38cdd990285f5bb",
+    "resolve_desk/protocol.py": "7d48eca71522d12da7e889b0fcc3b939c1f8bae12460b64b8a8dc173ef6185a2",
+    "training/v5/datasets/test.jsonl": "391d00b4816ae02a4c88ea3f65443d916a50e18bfd61226f2d478ade130c8c70",
+    "training/v5/datasets/train.jsonl": "1eafb4a85216d519c7c254d1c7ab04c84e544a1aef9a1ed4b4a67702f386e468",
+    "training/v5/datasets/valid.jsonl": "90761f72f9c0c63c4ab0b2b089d3be11e958dcaad94b77c55dbd6cd5e7a0d265",
+    "training/v5/datasets/cases.json": "b4cf68f9f4d3dc5c6488704efdedefc28668b548140f7db80ac830cef26d5092"
+  },
+  "data": {
+    "tasks": {
+      "train": 64,
+      "valid": 32,
+      "test": 32
+    },
+    "rows": {
+      "train": 344,
+      "valid": 164,
+      "test": 164
+    },
+    "duplicated_contrast_snapshots": 16,
+    "train_actions": {
+      "identify_customer": 64,
+      "get_order": 64,
+      "handoff": 16,
+      "record_request": 84,
+      "record_request_contrast_repeat": 16,
+      "propose_exchange": 20,
+      "get_product": 32,
+      "propose_cancel": 8,
+      "ask_customer": 20,
+      "propose_return": 20
+    },
+    "all_reference_tasks_pass": true,
+    "scope": "Self-authored synthetic scenarios. Counterfactual worlds share IDs within a split only."
+  },
+  "previous_training_sha256": "99d46ec53e1633218fdc4d0eb96ec200117cd17ec47d8f03a715e7f4ce3eab31",
+  "initial_adapter_sha256": "4cef852b19f8e493226cffdf147decc7bab3017343d2f0732e0160695befd5e4",
+  "test_inference_started_at_freeze": false,
+  "scope": "V4 test is development evidence. Fresh v5 test is held out until validation-only selection."
+}

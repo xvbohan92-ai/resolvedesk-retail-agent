@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "round": 8,
+  "created_at_utc": "2026-10-29T04:59:30.032609+00:00",
+  "scope": "Post-delivery code-version-only deterministic teacher/token/sampling re-execution; not renewed data authoring, model training, candidate inference or a test-informed revision.",
+  "test_already_read_only_for_isolation_before_this_refresh": true,
+  "authored_sources_cases_labels_recovery_design_unchanged_sha256": {
+    "training/v8/__init__.py": "6745b6663a535c3aca31a3474b70e778f515f12914020ac4199332788c665ac0",
+    "training/v8/common.py": "9a7b05966b2a4ee185c9b1171a91cc73b714dc1783708bd8d4dcaad7f14f00ce",
+    "training/v8/fixtures.py": "ae12a1ed8e79274f7c9086ff77a33bf6f94132b662bc8b7847faa74cf7fe2540",
+    "training/v8/prepare.py": "f59358c51cf60ea48397568ca6f51bf76cdbcdaa29697f936d3ae5c8657be6dc",
+    "tests/test_training_v8_data.py": "69dc182d612d0c5129bde4965f7125857b62ad49d711fe36a4ecf9c4e1b9c495",
+    "training/v8/datasets/cases.json": "d292e82fa690733f4f05a196cc6b0e6b3a25e1ee3b7c3e783100590442259aeb",
+    "training/v8/datasets/public-valid.json": "057eedc09263dfd85444c43bf48c3248be8fa414accf8119ee8de1f01bf9ef7a",
+    "training/v8/test_dataset.json": "35ddbcccef63671a1418fb22740b77398522e162d16659f59e7dad99f4d0557b"
+  },
+  "old_reference_controller_sha256": "e86d72b311d82dccff3c262f4459099fd9b42c68ed19ed9f80c30034932e8904",
+  "new_reference_controller_sha256": "e45974d6a4f8fa68d35ec09b384688e363ae3aad4dc901b81d99536e8425f091",
+  "generated_artifact_changes": {
+    "training/v8/datasets/v8-train.jsonl": {
+      "before_sha256": "478885c98a638b2127500ddd529ffd9283cc82512302da9408005b204fe288da",
+      "after_sha256": "478885c98a638b2127500ddd529ffd9283cc82512302da9408005b204fe288da",
+      "changed": false
+    },
+    "training/v8/datasets/v8-valid.jsonl": {
+      "before_sha256": "981b7a3c6dfe2129892fc003e20054580970c00ec5175f844a3c2c8a30596dfd",
+      "after_sha256": "981b7a3c6dfe2129892fc003e20054580970c00ec5175f844a3c2c8a30596dfd",
+      "changed": false
+    },
+    "training/v8/datasets/reference-audit.json": {
+      "before_sha256": "49d6daef48ebfa21dd69233c02fa0581629bbe7e858476951325561e4649c300",
+      "after_sha256": "3ef482cd62daaa048e6c106c0a87ef31fba79edea6d46578cb962d807e06e31c",
+      "changed": true
+    },
+    "training/v8/datasets/token-audit.json": {
+      "before_sha256": "81a40ff3a7d51b717f926e17c0c743758ea17d457c56866e47501299ee92e1f9",
+      "after_sha256": "81a40ff3a7d51b717f926e17c0c743758ea17d457c56866e47501299ee92e1f9",
+      "changed": false
+    },
+    "training/v8/datasets/data-summary.json": {
+      "before_sha256": "4fe03335a7892a2e8d79017c4abe658194c0764c112d2a33758b6964852c5988",
+      "after_sha256": "6d87091e6fbf79e1c876e0fc11895d18911aa55e1c2f1142edc4c5fd3db9b88a",
+      "changed": true
+    }
+  },
+  "reference_records": 278,
+  "all_reference_business_tasks_pass": true,
+  "maximum_total_calls_including_input_faults": 11,
+  "scoped_return_proposals_checked": 26,
+  "reference_records_equal_after_removing_generated_proposal_ids": true,
+  "reference_artifact_hash_change_reason": "Controller source binding changed, and fresh CPU sandbox proposal IDs are intentionally regenerated; IDs are not training targets. Normalized trajectory comparison is reported separately.",
+  "training_rows_bytes_unchanged": true,
+  "validation_rows_bytes_unchanged": true,
+  "token_audit_sha256": "81a40ff3a7d51b717f926e17c0c743758ea17d457c56866e47501299ee92e1f9",
+  "sampling": {
+    "updates": 1344,
+    "physical_rows": 1100,
+    "unique_rows_sampled": 888,
+    "unique_cases_sampled": 96,
+    "all_physical_rows_used": false,
+    "bucket_rows": {
+      "intent_and_record_repair": 216,
+      "execution_and_reply": 884
+    },
+    "bucket_updates": {
+      "intent_and_record_repair": 672,
+      "execution_and_reply": 672
+    },
+    "schedule_sha256": "ab1266f768807aa5fd9989079101e8e3ee688c8340f9fa87ad9dee930e38362e",
+    "scope": "Sampling repetitions are optimizer exposures, not additional unique training pairs."
+  },
+  "current_cross_split_audit_sha256": "873a518fd691600f22829a33668c50783d8dad39bd75f8a4af964ea4d9555504",
+  "prior_cross_split_audit_sha256": "396d8f0b9ed6b2d4ec922a489044a24c7ef6ee9a430529aa5ee5e85649aa32cc",
+  "cross_split_blockers": [],
+  "test_dataset_sha256": "35ddbcccef63671a1418fb22740b77398522e162d16659f59e7dad99f4d0557b",
+  "cpu_commands": [
+    {
+      "command": [
+        "<project-python>",
+        "-B",
+        "-m",
+        "training.v8.prepare",
+        "generate"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "bfad0cb55eb66d9e4b505a0f5f7dd81e205953f140798341253bbbf0633f64e5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "<tokenizer-python>",
+        "-B",
+        "-m",
+        "training.v8.prepare",
+        "audit-tokens"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "81a40ff3a7d51b717f926e17c0c743758ea17d457c56866e47501299ee92e1f9",
+      "stderr_sha256": "88f42bb579c3a9c6d82a03825953a7256cc748bbe7a902f241aacd55eff35988"
+    },
+    {
+      "command": [
+        "<project-python>",
+        "-B",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_training_v8_data.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "b58b9700c556077bfd3fa020072b12e47319d2eb86d263c50ad1b7cabbbba67f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "model_calls": 0,
+  "cloud_calls": 0,
+  "external_network_calls": 0,
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "7eaba89cd1897ec936119a0eb2e94369ae4956400ff54ce7b6b089b36f1a7ef7",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Only three private local interpreter paths are replaced by portable interpreter markers. Historical CPU execution and original verification claims describe the unredacted local receipt; these public markers are not original byte evidence."
+  }
+}

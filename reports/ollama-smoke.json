@@ -1,0 +1,211 @@
+{
+  "identity": {
+    "provider": "ollama",
+    "model": "resolvedesk-qwen3:4b",
+    "digest": "cba69c01b2ca0cec9b5b4e20519432714353c5ff4f4de983cbdf7a79403c3ddd",
+    "version": "0.34.2",
+    "transport": "application JSON dispatch"
+  },
+  "case": "valid-return-00",
+  "state": {
+    "case_id": "valid-return-00",
+    "customer": {
+      "email": "shopper20200@retail.example",
+      "gift_card": {
+        "balance_cents": 8000,
+        "id": "gift_20200"
+      },
+      "id": "u_20200"
+    },
+    "id": "db522478a7efea7d3aa2d6be",
+    "messages": [
+      {
+        "content": "Could you handle the following for me? Please return the shirt and refund it to the original payment method. Order ORD-20200. My email is shopper20200@retail.example.",
+        "role": "customer"
+      }
+    ],
+    "observations": [
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper20200@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20200@retail.example\"}}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20200"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20200"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 536,
+          "json_schema_constrained": true,
+          "latency_ms": 1338.54,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 23,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "email": "shopper20200@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"shopper20200@retail.example\"}}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 8000,
+            "id": "gift_20200"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_20200"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 605,
+          "json_schema_constrained": true,
+          "latency_ms": 676.16,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 23,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-20200"
+          },
+          "tool": "get_order"
+        },
+        "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-20200\"}}",
+        "result": {
+          "id": "ORD-20200",
+          "items": [
+            {
+              "item_id": "item_20207",
+              "option": "black / M",
+              "price_cents": 3200,
+              "product_id": "p_20231"
+            }
+          ],
+          "original_payment": "card_20200",
+          "revision": 0,
+          "status": "delivered",
+          "user_id": "u_20200"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 675,
+          "json_schema_constrained": true,
+          "latency_ms": 636.86,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 20,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      },
+      {
+        "action": {
+          "arguments": {
+            "item_id": "item_20207",
+            "order_id": "ORD-20200",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\n  \"tool\": \"propose_return\",\n  \"arguments\": {\n    \"order_id\": \"ORD-20200\",\n    \"item_id\": \"item_20207\",\n    \"payment_method\": \"original\"\n  }\n}",
+        "result": {
+          "proposal": {
+            "amount_cents": 3200,
+            "arguments": {
+              "item_id": "item_20207",
+              "order_id": "ORD-20200",
+              "payment_method": "original"
+            },
+            "fingerprint": "3ad9eb174e0e4eca7df116f2ee7a8aeb1dd88ed01503c4c1cbb36bda13699eb9",
+            "id": "b227a325259e363520c81f0ae732a081",
+            "item_id": "item_20207",
+            "kind": "return",
+            "order_id": "ORD-20200",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 779,
+          "json_schema_constrained": true,
+          "latency_ms": 4820.06,
+          "model": "resolvedesk-qwen3:4b",
+          "output_tokens": 55,
+          "provider": "ollama",
+          "thinking_returned": false
+        }
+      }
+    ],
+    "order_keys": {
+      "ORD-20200": "db522478a7efea7d3aa2d6be:ORD-20200"
+    },
+    "products": {
+      "p_20231": {
+        "name": "Everyday shirt",
+        "product_id": "p_20231",
+        "variants": [
+          {
+            "available": true,
+            "item_id": "item_20207",
+            "option": "black / M",
+            "price_cents": 3200
+          },
+          {
+            "available": true,
+            "item_id": "item_20219",
+            "option": "navy / XL",
+            "price_cents": 3700
+          },
+          {
+            "available": true,
+            "item_id": "item_20243",
+            "option": "white / S",
+            "price_cents": 2900
+          }
+        ]
+      }
+    },
+    "proposal": {
+      "amount_cents": 3200,
+      "arguments": {
+        "item_id": "item_20207",
+        "order_id": "ORD-20200",
+        "payment_method": "original"
+      },
+      "fingerprint": "3ad9eb174e0e4eca7df116f2ee7a8aeb1dd88ed01503c4c1cbb36bda13699eb9",
+      "id": "b227a325259e363520c81f0ae732a081",
+      "item_id": "item_20207",
+      "kind": "return",
+      "order_id": "ORD-20200",
+      "order_revision": 0,
+      "payment_method": "original",
+      "target_status": "return requested"
+    },
+    "read_orders": {
+      "ORD-20200": 0
+    },
+    "revision": 4,
+    "status": "awaiting_confirmation",
+    "user_id": "u_20200"
+  },
+  "orders_unchanged": true,
+  "scope": "Validation integration smoke with Ollama JSON Schema constraint; not an MLX training baseline. No weights changed in Ollama."
+}

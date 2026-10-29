@@ -1,0 +1,5024 @@
+[
+  {
+    "id": "v8-fresh-test-cancel-00",
+    "family": "cancel",
+    "split": "test",
+    "initial_message": "Receipt R8T-W95PPV96NRSNAX. Account email: v8testbuyergch7yeajtb2tl6@sample-retail.example.\nThe trip I ordered this overshirt for has been canceled. Cancel my purchase; I have no further use for it.",
+    "evidence_initial": "The trip I ordered this overshirt for has been canceled. Cancel my purchase; I have no further use for it.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only"
+    ],
+    "customer": {
+      "id": "v8test_user_XXVAURXJVDYGGV",
+      "email": "v8testbuyergch7yeajtb2tl6@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_DPRTAXUW5NK6T6",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_XEF289T6STAMSY": {
+        "product_id": "v8test_product_XEF289T6STAMSY",
+        "name": "Harborwick ripstop overshirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_KYW4FNPRW46DQV",
+            "option": "frosted teal / S",
+            "price_cents": 7570,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_EJLYKDNRGX8ZMC",
+            "option": "inkstone / M",
+            "price_cents": 6855,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_DS9KWWGSVG5PGX",
+            "option": "moonstone grey / L",
+            "price_cents": 8105,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-W95PPV96NRSNAX",
+        "user_id": "v8test_user_XXVAURXJVDYGGV",
+        "status": "pending",
+        "original_payment": "v8test_card_XQGX887YS25LEF",
+        "items": [
+          {
+            "item_id": "v8test_sku_EJLYKDNRGX8ZMC",
+            "product_id": "v8test_product_XEF289T6STAMSY",
+            "option": "inkstone / M",
+            "price_cents": 6855
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyergch7yeajtb2tl6@sample-retail.example>.",
+      "order_id": "R8T-W95PPV96NRSNAX",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_EJLYKDNRGX8ZMC",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8testbuyergch7yeajtb2tl6@sample-retail.example",
+      "order_id": "R8T-W95PPV96NRSNAX",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8testbuyergch7yeajtb2tl6@sample-retail.example",
+      "order_id": "R8T-W95PPV96NRSNAX",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "R8T-W95PPV96NRSNAX",
+      "item_id": "v8test_sku_EJLYKDNRGX8ZMC",
+      "new_item_id": "v8test_sku_DS9KWWGSVG5PGX",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 6855,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "v8-fresh-test-cancel-01",
+    "family": "cancel",
+    "split": "test",
+    "initial_message": "A duplicate checkout click bought this cardigan unintentionally. I need the order canceled.\nPurchase reference R8T-UZ5CMTMS35GB4K. Account email: v8testbuyerwyae9a99dqyzqw@sample-retail.example.",
+    "evidence_initial": "A duplicate checkout click bought this cardigan unintentionally. I need the order canceled.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only"
+    ],
+    "customer": {
+      "id": "v8test_user_8HM2FHF2D3G93R",
+      "email": "v8testbuyerwyae9a99dqyzqw@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_V6FS3QT8DGKNV9",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_2DMQRXJ644VDCX": {
+        "product_id": "v8test_product_2DMQRXJ644VDCX",
+        "name": "Morrowfield wool cardigan",
+        "variants": [
+          {
+            "item_id": "v8test_sku_EJWW3CYZY8D8JW",
+            "option": "frosted teal / S",
+            "price_cents": 11379,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_D6MRPL4AQMVCR8",
+            "option": "papaya / XS",
+            "price_cents": 9824,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_RC7CBAVNJGBL4Q",
+            "option": "inkstone / M",
+            "price_cents": 10664,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-UZ5CMTMS35GB4K",
+        "user_id": "v8test_user_8HM2FHF2D3G93R",
+        "status": "pending",
+        "original_payment": "v8test_card_UUBN6S3EVHTR5T",
+        "items": [
+          {
+            "item_id": "v8test_sku_RC7CBAVNJGBL4Q",
+            "product_id": "v8test_product_2DMQRXJ644VDCX",
+            "option": "inkstone / M",
+            "price_cents": 10664
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyerwyae9a99dqyzqw@sample-retail.example",
+      "order_id": "R8T-UZ5CMTMS35GB4K",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_RC7CBAVNJGBL4Q",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8testbuyerwyae9a99dqyzqw@sample-retail.example",
+      "order_id": "R8T-UZ5CMTMS35GB4K",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8testbuyerwyae9a99dqyzqw@sample-retail.example",
+      "order_id": "R8T-UZ5CMTMS35GB4K",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "R8T-UZ5CMTMS35GB4K",
+      "item_id": "v8test_sku_RC7CBAVNJGBL4Q",
+      "new_item_id": "v8test_sku_D6MRPL4AQMVCR8",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 10664,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "v8-fresh-test-missing_reason-00",
+    "family": "missing_reason",
+    "split": "test",
+    "initial_message": "Receipt R8T-LXPL2UFLX83H5U. Account email: v8testbuyerp9cep4chjvqvwz@sample-retail.example.\nI am requesting cancellation of the cardigan order. Get the reason from me before finishing it.",
+    "evidence_initial": "I am requesting cancellation of the cardigan order. Get the reason from me before finishing it.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote"
+    ],
+    "customer": {
+      "id": "v8test_user_FC4WRGJCWBRDYJ",
+      "email": "v8testbuyerp9cep4chjvqvwz@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_DZ2SUJQGJBF83F",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_GFBN3CA5LS9HDB": {
+        "product_id": "v8test_product_GFBN3CA5LS9HDB",
+        "name": "Morrowfield wool cardigan",
+        "variants": [
+          {
+            "item_id": "v8test_sku_SK9ENQ3UNR9U2Z",
+            "option": "frosted teal / S",
+            "price_cents": 11077,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_X33XBCGKJH2TQQ",
+            "option": "moonstone grey / L",
+            "price_cents": 9522,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_K5S8RMTSN632VL",
+            "option": "inkstone / M",
+            "price_cents": 10362,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-LXPL2UFLX83H5U",
+        "user_id": "v8test_user_FC4WRGJCWBRDYJ",
+        "status": "pending",
+        "original_payment": "v8test_card_CCYJT92NAQRRCH",
+        "items": [
+          {
+            "item_id": "v8test_sku_K5S8RMTSN632VL",
+            "product_id": "v8test_product_GFBN3CA5LS9HDB",
+            "option": "inkstone / M",
+            "price_cents": 10362
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerp9cep4chjvqvwz@sample-retail.example>.",
+      "order_id": "R8T-LXPL2UFLX83H5U",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_K5S8RMTSN632VL",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8testbuyerp9cep4chjvqvwz@sample-retail.example",
+      "order_id": "R8T-LXPL2UFLX83H5U",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8testbuyerp9cep4chjvqvwz@sample-retail.example",
+      "order_id": "R8T-LXPL2UFLX83H5U",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "reason",
+    "required_answers": [
+      "reason"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "R8T-LXPL2UFLX83H5U",
+      "item_id": "v8test_sku_K5S8RMTSN632VL",
+      "new_item_id": "v8test_sku_X33XBCGKJH2TQQ",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 10362,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "v8-fresh-test-missing_reason-01",
+    "family": "missing_reason",
+    "split": "test",
+    "initial_message": "Would you cancel the pullover purchase? The explanation is something I have yet to provide.\nPurchase reference R8T-WV6FBZDLYLEKRS. Account email: v8testbuyertqa7nw2xfcj9rf@sample-retail.example.",
+    "evidence_initial": "Would you cancel the pullover purchase? The explanation is something I have yet to provide.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote"
+    ],
+    "customer": {
+      "id": "v8test_user_BDYSFAECKFDJTX",
+      "email": "v8testbuyertqa7nw2xfcj9rf@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_CDJHWZEZ5AP8Q7",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_8GHVYL3ZRRX5T8": {
+        "product_id": "v8test_product_8GHVYL3ZRRX5T8",
+        "name": "Sundrift jersey pullover",
+        "variants": [
+          {
+            "item_id": "v8test_sku_EEYGQVBNUAQGWH",
+            "option": "frosted teal / S",
+            "price_cents": 14937,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_7WTRFF8HZP2W8X",
+            "option": "inkstone / M",
+            "price_cents": 14222,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_YM46YVDEA2ZED2",
+            "option": "papaya / XS",
+            "price_cents": 16197,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-WV6FBZDLYLEKRS",
+        "user_id": "v8test_user_BDYSFAECKFDJTX",
+        "status": "pending",
+        "original_payment": "v8test_card_7ME3MK52L3PQSU",
+        "items": [
+          {
+            "item_id": "v8test_sku_7WTRFF8HZP2W8X",
+            "product_id": "v8test_product_8GHVYL3ZRRX5T8",
+            "option": "inkstone / M",
+            "price_cents": 14222
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyertqa7nw2xfcj9rf@sample-retail.example",
+      "order_id": "R8T-WV6FBZDLYLEKRS",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_7WTRFF8HZP2W8X",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8testbuyertqa7nw2xfcj9rf@sample-retail.example",
+      "order_id": "R8T-WV6FBZDLYLEKRS",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8testbuyertqa7nw2xfcj9rf@sample-retail.example",
+      "order_id": "R8T-WV6FBZDLYLEKRS",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "reason",
+    "required_answers": [
+      "reason"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "R8T-WV6FBZDLYLEKRS",
+      "item_id": "v8test_sku_7WTRFF8HZP2W8X",
+      "new_item_id": "v8test_sku_YM46YVDEA2ZED2",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 14222,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "v8-fresh-test-return-00",
+    "family": "return",
+    "split": "test",
+    "initial_message": "Receipt R8T-3YSZUGMA3ZDR82. Account email: v8testbuyerm898d7f5na8j8j@sample-retail.example.\nThe whole pullover should go back for reimbursement to original payment. That is the resolution I choose.",
+    "evidence_initial": "The whole pullover should go back for reimbursement to original payment. That is the resolution I choose.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only"
+    ],
+    "customer": {
+      "id": "v8test_user_NQRMKF8FC5PLW4",
+      "email": "v8testbuyerm898d7f5na8j8j@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_EXFFLDD65J4QX6",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_7Y2SW86NKV2JQ8": {
+        "product_id": "v8test_product_7Y2SW86NKV2JQ8",
+        "name": "Sundrift jersey pullover",
+        "variants": [
+          {
+            "item_id": "v8test_sku_3FVPBPYU4LVYRH",
+            "option": "inkstone / M",
+            "price_cents": 11222,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_SAMGUYWKVPX2GZ",
+            "option": "moonstone grey / L",
+            "price_cents": 13197,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_Y6CF35TVP54C7A",
+            "option": "frosted teal / S",
+            "price_cents": 11937,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-3YSZUGMA3ZDR82",
+        "user_id": "v8test_user_NQRMKF8FC5PLW4",
+        "status": "delivered",
+        "original_payment": "v8test_card_K27BY6QMDTWYP8",
+        "items": [
+          {
+            "item_id": "v8test_sku_3FVPBPYU4LVYRH",
+            "product_id": "v8test_product_7Y2SW86NKV2JQ8",
+            "option": "inkstone / M",
+            "price_cents": 11222
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerm898d7f5na8j8j@sample-retail.example>.",
+      "order_id": "R8T-3YSZUGMA3ZDR82",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_3FVPBPYU4LVYRH",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8testbuyerm898d7f5na8j8j@sample-retail.example",
+      "order_id": "R8T-3YSZUGMA3ZDR82",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyerm898d7f5na8j8j@sample-retail.example",
+      "order_id": "R8T-3YSZUGMA3ZDR82",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-3YSZUGMA3ZDR82",
+      "item_id": "v8test_sku_3FVPBPYU4LVYRH",
+      "new_item_id": "v8test_sku_SAMGUYWKVPX2GZ",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 11222,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-return-01",
+    "family": "return",
+    "split": "test",
+    "initial_message": "I would like a full refund to original payment for returning the linen shirt, with no variant replacement.\nPurchase reference R8T-SRQXWXH3MGXVBY. Account email: v8testbuyer27xs4vltxpm58e@sample-retail.example.",
+    "evidence_initial": "I would like a full refund to original payment for returning the linen shirt, with no variant replacement.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only"
+    ],
+    "customer": {
+      "id": "v8test_user_GGEYR8ZBFYCM56",
+      "email": "v8testbuyer27xs4vltxpm58e@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_QJHQRES5YEYRUT",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_XXCX8AH8MPPAYW": {
+        "product_id": "v8test_product_XXCX8AH8MPPAYW",
+        "name": "Kestrelbay linen shirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_SG8DY2BH8AMZNB",
+            "option": "frosted teal / S",
+            "price_cents": 15563,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_WQKXGBX899KXY8",
+            "option": "inkstone / M",
+            "price_cents": 14848,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_E92JNXZD954RG6",
+            "option": "papaya / XS",
+            "price_cents": 16098,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-SRQXWXH3MGXVBY",
+        "user_id": "v8test_user_GGEYR8ZBFYCM56",
+        "status": "delivered",
+        "original_payment": "v8test_card_S4CXUP5J9Y8E7D",
+        "items": [
+          {
+            "item_id": "v8test_sku_WQKXGBX899KXY8",
+            "product_id": "v8test_product_XXCX8AH8MPPAYW",
+            "option": "inkstone / M",
+            "price_cents": 14848
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyer27xs4vltxpm58e@sample-retail.example",
+      "order_id": "R8T-SRQXWXH3MGXVBY",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_WQKXGBX899KXY8",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8testbuyer27xs4vltxpm58e@sample-retail.example",
+      "order_id": "R8T-SRQXWXH3MGXVBY",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyer27xs4vltxpm58e@sample-retail.example",
+      "order_id": "R8T-SRQXWXH3MGXVBY",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-SRQXWXH3MGXVBY",
+      "item_id": "v8test_sku_WQKXGBX899KXY8",
+      "new_item_id": "v8test_sku_E92JNXZD954RG6",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 14848,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-missing_payment-00",
+    "family": "missing_payment",
+    "split": "test",
+    "initial_message": "Receipt R8T-GZBPNZNM5BK6QD. Account email: v8testbuyermffsc3x4kbyh4u@sample-retail.example.\nReturn the linen shirt on my original order. I have not selected where the refund should go; collect that choice from me.",
+    "evidence_initial": "Return the linen shirt on my original order. I have not selected where the refund should go; collect that choice from me.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "original_order_is_not_payment"
+    ],
+    "customer": {
+      "id": "v8test_user_NLKD69DDEQTMT7",
+      "email": "v8testbuyermffsc3x4kbyh4u@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_2VY5FM2ALP3663",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_VEMM423ZA4UDF5": {
+        "product_id": "v8test_product_VEMM423ZA4UDF5",
+        "name": "Kestrelbay linen shirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_GSFYWX3HMCN6QY",
+            "option": "frosted teal / S",
+            "price_cents": 8456,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_52M8WPDRC2THCP",
+            "option": "moonstone grey / L",
+            "price_cents": 8991,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_9QE5REXKLNGBT3",
+            "option": "inkstone / M",
+            "price_cents": 7741,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-GZBPNZNM5BK6QD",
+        "user_id": "v8test_user_NLKD69DDEQTMT7",
+        "status": "delivered",
+        "original_payment": "v8test_card_XUK8WXHLVG6L9H",
+        "items": [
+          {
+            "item_id": "v8test_sku_9QE5REXKLNGBT3",
+            "product_id": "v8test_product_VEMM423ZA4UDF5",
+            "option": "inkstone / M",
+            "price_cents": 7741
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyermffsc3x4kbyh4u@sample-retail.example>.",
+      "order_id": "R8T-GZBPNZNM5BK6QD",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_9QE5REXKLNGBT3",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8testbuyermffsc3x4kbyh4u@sample-retail.example",
+      "order_id": "R8T-GZBPNZNM5BK6QD",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyermffsc3x4kbyh4u@sample-retail.example",
+      "order_id": "R8T-GZBPNZNM5BK6QD",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-GZBPNZNM5BK6QD",
+      "item_id": "v8test_sku_9QE5REXKLNGBT3",
+      "new_item_id": "v8test_sku_52M8WPDRC2THCP",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 7741,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-missing_payment-01",
+    "family": "missing_payment",
+    "split": "test",
+    "initial_message": "The original purchase of this hoodie is the one I am returning. My refund preference is still undecided, not original payment by default.\nPurchase reference R8T-LHR6MXQVATHEBB. Account email: v8testbuyers9g6p4zrdrlxat@sample-retail.example.",
+    "evidence_initial": "The original purchase of this hoodie is the one I am returning. My refund preference is still undecided, not original payment by default.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "original_order_is_not_payment"
+    ],
+    "customer": {
+      "id": "v8test_user_KUQKKAZMBX3DR7",
+      "email": "v8testbuyers9g6p4zrdrlxat@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_FBFZC48AAT479T",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_MUM6TXF4J9XN6W": {
+        "product_id": "v8test_product_MUM6TXF4J9XN6W",
+        "name": "Pebblegrove cotton hoodie",
+        "variants": [
+          {
+            "item_id": "v8test_sku_DZHHP25876DKPV",
+            "option": "papaya / XS",
+            "price_cents": 14360,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_5VFMQQ674LUDY4",
+            "option": "inkstone / M",
+            "price_cents": 15200,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_K94GF8SR86J22U",
+            "option": "frosted teal / S",
+            "price_cents": 15915,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-LHR6MXQVATHEBB",
+        "user_id": "v8test_user_KUQKKAZMBX3DR7",
+        "status": "delivered",
+        "original_payment": "v8test_card_D6ZK3SCE2RZC57",
+        "items": [
+          {
+            "item_id": "v8test_sku_5VFMQQ674LUDY4",
+            "product_id": "v8test_product_MUM6TXF4J9XN6W",
+            "option": "inkstone / M",
+            "price_cents": 15200
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyers9g6p4zrdrlxat@sample-retail.example",
+      "order_id": "R8T-LHR6MXQVATHEBB",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_5VFMQQ674LUDY4",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8testbuyers9g6p4zrdrlxat@sample-retail.example",
+      "order_id": "R8T-LHR6MXQVATHEBB",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyers9g6p4zrdrlxat@sample-retail.example",
+      "order_id": "R8T-LHR6MXQVATHEBB",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-LHR6MXQVATHEBB",
+      "item_id": "v8test_sku_5VFMQQ674LUDY4",
+      "new_item_id": "v8test_sku_DZHHP25876DKPV",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 15200,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange-00",
+    "family": "exchange",
+    "split": "test",
+    "initial_message": "Receipt R8T-X28LZ9NPZ9T5PP. Account email: v8testbuyer2cag7p49ndl6n2@sample-retail.example.\nUse original payment to settle a swap into the moonstone grey / L hoodie. Match the color and size together; another variant is not my request.",
+    "evidence_initial": "Use original payment to settle a swap into the moonstone grey / L hoodie. Match the color and size together; another variant is not my request.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_F84936NQU4HUXH",
+      "email": "v8testbuyer2cag7p49ndl6n2@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_3PW5MMZY28W3BL",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_WACEFUHF53TYSU": {
+        "product_id": "v8test_product_WACEFUHF53TYSU",
+        "name": "Pebblegrove cotton hoodie",
+        "variants": [
+          {
+            "item_id": "v8test_sku_FLLLG6DED6WJTL",
+            "option": "inkstone / M",
+            "price_cents": 15184,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_MVCBZGC2EAWJCR",
+            "option": "frosted teal / S",
+            "price_cents": 15899,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_2S7GMSUNV4DHGU",
+            "option": "moonstone grey / L",
+            "price_cents": 14344,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-X28LZ9NPZ9T5PP",
+        "user_id": "v8test_user_F84936NQU4HUXH",
+        "status": "delivered",
+        "original_payment": "v8test_card_ATMS6CZFWCBQC9",
+        "items": [
+          {
+            "item_id": "v8test_sku_FLLLG6DED6WJTL",
+            "product_id": "v8test_product_WACEFUHF53TYSU",
+            "option": "inkstone / M",
+            "price_cents": 15184
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyer2cag7p49ndl6n2@sample-retail.example>.",
+      "order_id": "R8T-X28LZ9NPZ9T5PP",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_FLLLG6DED6WJTL",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyer2cag7p49ndl6n2@sample-retail.example",
+      "order_id": "R8T-X28LZ9NPZ9T5PP",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyer2cag7p49ndl6n2@sample-retail.example",
+      "order_id": "R8T-X28LZ9NPZ9T5PP",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-X28LZ9NPZ9T5PP",
+      "item_id": "v8test_sku_FLLLG6DED6WJTL",
+      "new_item_id": "v8test_sku_2S7GMSUNV4DHGU",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -840,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange-01",
+    "family": "exchange",
+    "split": "test",
+    "initial_message": "For the softshell vest on this order, I am selecting papaya / XS as its replacement. Settle the exchange adjustment through original payment.\nPurchase reference R8T-FY649QR83STRM9. Account email: v8testbuyernzfvfuw442s335@sample-retail.example.",
+    "evidence_initial": "For the softshell vest on this order, I am selecting papaya / XS as its replacement. Settle the exchange adjustment through original payment.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_F2JXNHYQN6XJ65",
+      "email": "v8testbuyernzfvfuw442s335@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_ZHCHNB2DL7VS8Q",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_65AQQHZUET8KG3": {
+        "product_id": "v8test_product_65AQQHZUET8KG3",
+        "name": "Estuary softshell vest",
+        "variants": [
+          {
+            "item_id": "v8test_sku_3NS8M7Z4JDLVYV",
+            "option": "frosted teal / S",
+            "price_cents": 16097,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_LH8LW4Z7XH5VTA",
+            "option": "papaya / XS",
+            "price_cents": 17357,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_CLQBWJBLWEWJG8",
+            "option": "inkstone / M",
+            "price_cents": 15382,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-FY649QR83STRM9",
+        "user_id": "v8test_user_F2JXNHYQN6XJ65",
+        "status": "delivered",
+        "original_payment": "v8test_card_VCW9CPR886F6UQ",
+        "items": [
+          {
+            "item_id": "v8test_sku_CLQBWJBLWEWJG8",
+            "product_id": "v8test_product_65AQQHZUET8KG3",
+            "option": "inkstone / M",
+            "price_cents": 15382
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyernzfvfuw442s335@sample-retail.example",
+      "order_id": "R8T-FY649QR83STRM9",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_CLQBWJBLWEWJG8",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyernzfvfuw442s335@sample-retail.example",
+      "order_id": "R8T-FY649QR83STRM9",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyernzfvfuw442s335@sample-retail.example",
+      "order_id": "R8T-FY649QR83STRM9",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-FY649QR83STRM9",
+      "item_id": "v8test_sku_CLQBWJBLWEWJG8",
+      "new_item_id": "v8test_sku_LH8LW4Z7XH5VTA",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1975,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_fallback-00",
+    "family": "exchange_fallback",
+    "split": "test",
+    "initial_message": "Receipt R8T-RG4U9J8EUAX89M. Account email: v8testbuyerdlfz2b8m2yxpj9@sample-retail.example.\nCheck stock for the moonstone grey / L softshell vest; original payment will settle the adjustment. Inventory first, please. Only when the exact replacement I settle on cannot be supplied do I authorize returning the item.",
+    "evidence_initial": "Check stock for the moonstone grey / L softshell vest; original payment will settle the adjustment. Inventory first, please. Only when the exact replacement I settle on cannot be supplied do I authorize returning the item.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_NXYT7B8MMWCEG9",
+      "email": "v8testbuyerdlfz2b8m2yxpj9@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_GGBB4X8J4L5KEJ",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_TSDQWZA5LYYJMJ": {
+        "product_id": "v8test_product_TSDQWZA5LYYJMJ",
+        "name": "Estuary softshell vest",
+        "variants": [
+          {
+            "item_id": "v8test_sku_5GCPUGX29RLEE3",
+            "option": "inkstone / M",
+            "price_cents": 12291,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_33JFBP3GJ9GSXK",
+            "option": "frosted teal / S",
+            "price_cents": 13006,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_A25ETT4A4Y8AXS",
+            "option": "moonstone grey / L",
+            "price_cents": 14266,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-RG4U9J8EUAX89M",
+        "user_id": "v8test_user_NXYT7B8MMWCEG9",
+        "status": "delivered",
+        "original_payment": "v8test_card_LDFCZ68QS7V5EY",
+        "items": [
+          {
+            "item_id": "v8test_sku_5GCPUGX29RLEE3",
+            "product_id": "v8test_product_TSDQWZA5LYYJMJ",
+            "option": "inkstone / M",
+            "price_cents": 12291
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerdlfz2b8m2yxpj9@sample-retail.example>.",
+      "order_id": "R8T-RG4U9J8EUAX89M",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_5GCPUGX29RLEE3",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerdlfz2b8m2yxpj9@sample-retail.example",
+      "order_id": "R8T-RG4U9J8EUAX89M",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerdlfz2b8m2yxpj9@sample-retail.example",
+      "order_id": "R8T-RG4U9J8EUAX89M",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-RG4U9J8EUAX89M",
+      "item_id": "v8test_sku_5GCPUGX29RLEE3",
+      "new_item_id": "v8test_sku_A25ETT4A4Y8AXS",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 12291,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_fallback-01",
+    "family": "exchange_fallback",
+    "split": "test",
+    "initial_message": "I choose a overshirt exchange in papaya / XS, funded by original payment. Check that exact combination; substitutions are not requested. An unavailable match for my selected variant is the condition under which I permit an item return.\nPurchase reference R8T-U9QC5SEAYUBEW2. Account email: v8testbuyer55r38vj4u4ew7a@sample-retail.example.",
+    "evidence_initial": "I choose a overshirt exchange in papaya / XS, funded by original payment. Check that exact combination; substitutions are not requested. An unavailable match for my selected variant is the condition under which I permit an item return.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_MP4WCPTTN35P6Q",
+      "email": "v8testbuyer55r38vj4u4ew7a@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_ZTCC7UA2AQBTB5",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_A4PX5EJU46HY8K": {
+        "product_id": "v8test_product_A4PX5EJU46HY8K",
+        "name": "Harborwick ripstop overshirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_CAY2HA7EPASQ3D",
+            "option": "papaya / XS",
+            "price_cents": 14573,
+            "available": false
+          },
+          {
+            "item_id": "v8test_sku_4QDG9VQ47AADMB",
+            "option": "frosted teal / S",
+            "price_cents": 14038,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_X5DW86F5DRGW8B",
+            "option": "inkstone / M",
+            "price_cents": 13323,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-U9QC5SEAYUBEW2",
+        "user_id": "v8test_user_MP4WCPTTN35P6Q",
+        "status": "delivered",
+        "original_payment": "v8test_card_SGBUWVMC6FLH6V",
+        "items": [
+          {
+            "item_id": "v8test_sku_X5DW86F5DRGW8B",
+            "product_id": "v8test_product_A4PX5EJU46HY8K",
+            "option": "inkstone / M",
+            "price_cents": 13323
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyer55r38vj4u4ew7a@sample-retail.example",
+      "order_id": "R8T-U9QC5SEAYUBEW2",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_X5DW86F5DRGW8B",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyer55r38vj4u4ew7a@sample-retail.example",
+      "order_id": "R8T-U9QC5SEAYUBEW2",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyer55r38vj4u4ew7a@sample-retail.example",
+      "order_id": "R8T-U9QC5SEAYUBEW2",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-U9QC5SEAYUBEW2",
+      "item_id": "v8test_sku_X5DW86F5DRGW8B",
+      "new_item_id": "v8test_sku_CAY2HA7EPASQ3D",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 13323,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-forbidden_status-00",
+    "family": "forbidden_status",
+    "split": "test",
+    "initial_message": "Receipt R8T-7F4FCTD6DQ7RH7. Account email: v8testbuyerafxusv5nnltjeu@sample-retail.example.\nThe overshirt is no longer needed, so I want cancellation. Have a person handle it if fulfillment prevents that.",
+    "evidence_initial": "The overshirt is no longer needed, so I want cancellation. Have a person handle it if fulfillment prevents that.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only"
+    ],
+    "customer": {
+      "id": "v8test_user_URF24TGFMMD6T9",
+      "email": "v8testbuyerafxusv5nnltjeu@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_D5CF6AZ87AMGFC",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_G4N4DJ65Y99QZY": {
+        "product_id": "v8test_product_G4N4DJ65Y99QZY",
+        "name": "Harborwick ripstop overshirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_A9SGXU6F78X5PC",
+            "option": "frosted teal / S",
+            "price_cents": 14651,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_9PWMRD7BQR8KND",
+            "option": "inkstone / M",
+            "price_cents": 13936,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_VFUW5N7XRLKK7E",
+            "option": "moonstone grey / L",
+            "price_cents": 15186,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-7F4FCTD6DQ7RH7",
+        "user_id": "v8test_user_URF24TGFMMD6T9",
+        "status": "processed",
+        "original_payment": "v8test_card_E44HP7Q4ZKYBLQ",
+        "items": [
+          {
+            "item_id": "v8test_sku_9PWMRD7BQR8KND",
+            "product_id": "v8test_product_G4N4DJ65Y99QZY",
+            "option": "inkstone / M",
+            "price_cents": 13936
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerafxusv5nnltjeu@sample-retail.example>.",
+      "order_id": "R8T-7F4FCTD6DQ7RH7",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_9PWMRD7BQR8KND",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8testbuyerafxusv5nnltjeu@sample-retail.example",
+      "order_id": "R8T-7F4FCTD6DQ7RH7",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8testbuyerafxusv5nnltjeu@sample-retail.example",
+      "order_id": "R8T-7F4FCTD6DQ7RH7",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-7F4FCTD6DQ7RH7",
+      "item_id": "v8test_sku_9PWMRD7BQR8KND",
+      "new_item_id": "v8test_sku_VFUW5N7XRLKK7E",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 13936,
+      "initial_status": "processed",
+      "target_status": "processed"
+    }
+  },
+  {
+    "id": "v8-fresh-test-forbidden_status-01",
+    "family": "forbidden_status",
+    "split": "test",
+    "initial_message": "I ordered the cardigan accidentally. Please cancel, or refer the status restriction to a human.\nPurchase reference R8T-S6CJTVSRAU2748. Account email: v8testbuyerpnjzx93wq3k33x@sample-retail.example.",
+    "evidence_initial": "I ordered the cardigan accidentally. Please cancel, or refer the status restriction to a human.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only"
+    ],
+    "customer": {
+      "id": "v8test_user_LZ5S2PCVMQXS3C",
+      "email": "v8testbuyerpnjzx93wq3k33x@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_EHESX5EBMFWATV",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_67GEL43PK2T5UY": {
+        "product_id": "v8test_product_67GEL43PK2T5UY",
+        "name": "Morrowfield wool cardigan",
+        "variants": [
+          {
+            "item_id": "v8test_sku_GA2FBVQ6MEDEER",
+            "option": "papaya / XS",
+            "price_cents": 13726,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_4PS9Y8VPPFPN6Y",
+            "option": "frosted teal / S",
+            "price_cents": 15281,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_VWWL3KWNYGZGTX",
+            "option": "inkstone / M",
+            "price_cents": 14566,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-S6CJTVSRAU2748",
+        "user_id": "v8test_user_LZ5S2PCVMQXS3C",
+        "status": "delivered",
+        "original_payment": "v8test_card_SRL86C47HHAPK3",
+        "items": [
+          {
+            "item_id": "v8test_sku_VWWL3KWNYGZGTX",
+            "product_id": "v8test_product_67GEL43PK2T5UY",
+            "option": "inkstone / M",
+            "price_cents": 14566
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyerpnjzx93wq3k33x@sample-retail.example",
+      "order_id": "R8T-S6CJTVSRAU2748",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_VWWL3KWNYGZGTX",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8testbuyerpnjzx93wq3k33x@sample-retail.example",
+      "order_id": "R8T-S6CJTVSRAU2748",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8testbuyerpnjzx93wq3k33x@sample-retail.example",
+      "order_id": "R8T-S6CJTVSRAU2748",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-S6CJTVSRAU2748",
+      "item_id": "v8test_sku_VWWL3KWNYGZGTX",
+      "new_item_id": "v8test_sku_GA2FBVQ6MEDEER",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 14566,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-foreign_order-00",
+    "family": "foreign_order",
+    "split": "test",
+    "initial_message": "Receipt R8T-D76CEPDHBLL7E8. Account email: v8testbuyerh8j57asd4bvv2v@sample-retail.example.\nI am asking for a complete cardigan return credited to original payment. Confirm the account owner before transacting.",
+    "evidence_initial": "I am asking for a complete cardigan return credited to original payment. Confirm the account owner before transacting.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only"
+    ],
+    "customer": {
+      "id": "v8test_user_5FWPSJS94DW44A",
+      "email": "v8testbuyerh8j57asd4bvv2v@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_3ME6GHCWPHUYRL",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_55TS84LV8B3CC4": {
+        "product_id": "v8test_product_55TS84LV8B3CC4",
+        "name": "Morrowfield wool cardigan",
+        "variants": [
+          {
+            "item_id": "v8test_sku_JB9S2ENGDNZXY8",
+            "option": "inkstone / M",
+            "price_cents": 14078,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_Y7FXJG3XMX4ESY",
+            "option": "frosted teal / S",
+            "price_cents": 14793,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_WE2SR3AA78JJV8",
+            "option": "moonstone grey / L",
+            "price_cents": 13238,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-D76CEPDHBLL7E8",
+        "user_id": "v8test_other_P6E4ZSPSFGVZTJ",
+        "status": "delivered",
+        "original_payment": "v8test_card_7L8XQS4JAFSJAD",
+        "items": [
+          {
+            "item_id": "v8test_sku_JB9S2ENGDNZXY8",
+            "product_id": "v8test_product_55TS84LV8B3CC4",
+            "option": "inkstone / M",
+            "price_cents": 14078
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerh8j57asd4bvv2v@sample-retail.example>.",
+      "order_id": "R8T-D76CEPDHBLL7E8",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_JB9S2ENGDNZXY8",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8testbuyerh8j57asd4bvv2v@sample-retail.example",
+      "order_id": "R8T-D76CEPDHBLL7E8",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyerh8j57asd4bvv2v@sample-retail.example",
+      "order_id": "R8T-D76CEPDHBLL7E8",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-D76CEPDHBLL7E8",
+      "item_id": "v8test_sku_JB9S2ENGDNZXY8",
+      "new_item_id": "v8test_sku_WE2SR3AA78JJV8",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 14078,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-foreign_order-01",
+    "family": "foreign_order",
+    "split": "test",
+    "initial_message": "Return this pullover to original payment only after matching the order owner to my account; staff should handle a mismatch.\nPurchase reference R8T-CGZ8HZ2ZL9363H. Account email: v8testbuyer7k53eedt7w43sg@sample-retail.example.",
+    "evidence_initial": "Return this pullover to original payment only after matching the order owner to my account; staff should handle a mismatch.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only"
+    ],
+    "customer": {
+      "id": "v8test_user_G5W7ZX2KDX92ZM",
+      "email": "v8testbuyer7k53eedt7w43sg@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_U5BMHU78SXXE23",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_6CE73MXSV2Q9X9": {
+        "product_id": "v8test_product_6CE73MXSV2Q9X9",
+        "name": "Sundrift jersey pullover",
+        "variants": [
+          {
+            "item_id": "v8test_sku_XEKB4TJHC48ZGE",
+            "option": "papaya / XS",
+            "price_cents": 12086,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_GYHQV6PNFY55SZ",
+            "option": "frosted teal / S",
+            "price_cents": 10826,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_848X2Y8MNESPD8",
+            "option": "inkstone / M",
+            "price_cents": 10111,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-CGZ8HZ2ZL9363H",
+        "user_id": "v8test_other_4JS8P3CSKREG6U",
+        "status": "delivered",
+        "original_payment": "v8test_card_HXYUSNM4T4TW4R",
+        "items": [
+          {
+            "item_id": "v8test_sku_848X2Y8MNESPD8",
+            "product_id": "v8test_product_6CE73MXSV2Q9X9",
+            "option": "inkstone / M",
+            "price_cents": 10111
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyer7k53eedt7w43sg@sample-retail.example",
+      "order_id": "R8T-CGZ8HZ2ZL9363H",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_848X2Y8MNESPD8",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8testbuyer7k53eedt7w43sg@sample-retail.example",
+      "order_id": "R8T-CGZ8HZ2ZL9363H",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyer7k53eedt7w43sg@sample-retail.example",
+      "order_id": "R8T-CGZ8HZ2ZL9363H",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-CGZ8HZ2ZL9363H",
+      "item_id": "v8test_sku_848X2Y8MNESPD8",
+      "new_item_id": "v8test_sku_XEKB4TJHC48ZGE",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 10111,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-missing_email-00",
+    "family": "missing_email",
+    "split": "test",
+    "initial_message": "Receipt R8T-BQR2DEW8HY9X2V.\nI choose to return the complete pullover, reimbursing original payment. You must get my account email separately.",
+    "evidence_initial": "I choose to return the complete pullover, reimbursing original payment. You must get my account email separately.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote"
+    ],
+    "customer": {
+      "id": "v8test_user_CL3HQ2V928Y5D8",
+      "email": "v8testbuyerlq3d32hxm5rms8@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_NEE7KGFHGC37KS",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_ASJQ76DGBDVBJP": {
+        "product_id": "v8test_product_ASJQ76DGBDVBJP",
+        "name": "Sundrift jersey pullover",
+        "variants": [
+          {
+            "item_id": "v8test_sku_QN9F8BMDNS3PP3",
+            "option": "frosted teal / S",
+            "price_cents": 9484,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_CLYF32MCUEE2XD",
+            "option": "inkstone / M",
+            "price_cents": 8769,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_GTKQGGF4B37DJS",
+            "option": "moonstone grey / L",
+            "price_cents": 10744,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-BQR2DEW8HY9X2V",
+        "user_id": "v8test_user_CL3HQ2V928Y5D8",
+        "status": "delivered",
+        "original_payment": "v8test_card_D6Z5VKN8ZKCEC6",
+        "items": [
+          {
+            "item_id": "v8test_sku_CLYF32MCUEE2XD",
+            "product_id": "v8test_product_ASJQ76DGBDVBJP",
+            "option": "inkstone / M",
+            "price_cents": 8769
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerlq3d32hxm5rms8@sample-retail.example>.",
+      "order_id": "R8T-BQR2DEW8HY9X2V",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_CLYF32MCUEE2XD",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "R8T-BQR2DEW8HY9X2V",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyerlq3d32hxm5rms8@sample-retail.example",
+      "order_id": "R8T-BQR2DEW8HY9X2V",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-BQR2DEW8HY9X2V",
+      "item_id": "v8test_sku_CLYF32MCUEE2XD",
+      "new_item_id": "v8test_sku_GTKQGGF4B37DJS",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 8769,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-missing_email-01",
+    "family": "missing_email",
+    "split": "test",
+    "initial_message": "Please take this linen shirt back in full and credit original payment. My account contact is absent from this request.\nPurchase reference R8T-JPVKLE236J5XQ8.",
+    "evidence_initial": "Please take this linen shirt back in full and credit original payment. My account contact is absent from this request.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote"
+    ],
+    "customer": {
+      "id": "v8test_user_9ZY7GAUDRTH2ZT",
+      "email": "v8testbuyer8p2kp4q3vs8h9z@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_98G2ZVZCJ9KX5L",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_KG3N7HAEFZZTUC": {
+        "product_id": "v8test_product_KG3N7HAEFZZTUC",
+        "name": "Kestrelbay linen shirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_345DY96NQ6ZHZN",
+            "option": "inkstone / M",
+            "price_cents": 7968,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_BCBWG8FLATMDUN",
+            "option": "papaya / XS",
+            "price_cents": 9218,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_Z4XJV46EKJC22K",
+            "option": "frosted teal / S",
+            "price_cents": 8683,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-JPVKLE236J5XQ8",
+        "user_id": "v8test_user_9ZY7GAUDRTH2ZT",
+        "status": "delivered",
+        "original_payment": "v8test_card_4YDFE99L33S9XT",
+        "items": [
+          {
+            "item_id": "v8test_sku_345DY96NQ6ZHZN",
+            "product_id": "v8test_product_KG3N7HAEFZZTUC",
+            "option": "inkstone / M",
+            "price_cents": 7968
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyer8p2kp4q3vs8h9z@sample-retail.example",
+      "order_id": "R8T-JPVKLE236J5XQ8",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_345DY96NQ6ZHZN",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "R8T-JPVKLE236J5XQ8",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyer8p2kp4q3vs8h9z@sample-retail.example",
+      "order_id": "R8T-JPVKLE236J5XQ8",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-JPVKLE236J5XQ8",
+      "item_id": "v8test_sku_345DY96NQ6ZHZN",
+      "new_item_id": "v8test_sku_BCBWG8FLATMDUN",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 7968,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_missing_option-00",
+    "family": "exchange_missing_option",
+    "split": "test",
+    "initial_message": "Receipt R8T-ERY2AM4RCMQNRH. Account email: v8testbuyerm37r8hy4bsxsua@sample-retail.example.\nExchange the linen shirt, using original payment for any difference. I am considering both moonstone grey / L and frosted teal / S; I have not picked one. Ask which. Treat a confirmed lack of the chosen size and color as my consent to arrange a return.",
+    "evidence_initial": "Exchange the linen shirt, using original payment for any difference. I am considering both moonstone grey / L and frosted teal / S; I have not picked one. Ask which. Treat a confirmed lack of the chosen size and color as my consent to arrange a return.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "genuine_two_variant_ambiguity_requires_ask"
+    ],
+    "customer": {
+      "id": "v8test_user_QFA5LH6G45VM99",
+      "email": "v8testbuyerm37r8hy4bsxsua@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_CD4NZG7429YM7Q",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_G3UFL2CN4BQ2R8": {
+        "product_id": "v8test_product_G3UFL2CN4BQ2R8",
+        "name": "Kestrelbay linen shirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_D52NY8W8GEWHWF",
+            "option": "frosted teal / S",
+            "price_cents": 9290,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_AKZECRSXNJX8C4",
+            "option": "inkstone / M",
+            "price_cents": 8575,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_T9U4ZJZM5DTGKW",
+            "option": "moonstone grey / L",
+            "price_cents": 9825,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-ERY2AM4RCMQNRH",
+        "user_id": "v8test_user_QFA5LH6G45VM99",
+        "status": "delivered",
+        "original_payment": "v8test_card_CAWNHHY9TL4A34",
+        "items": [
+          {
+            "item_id": "v8test_sku_AKZECRSXNJX8C4",
+            "product_id": "v8test_product_G3UFL2CN4BQ2R8",
+            "option": "inkstone / M",
+            "price_cents": 8575
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerm37r8hy4bsxsua@sample-retail.example>.",
+      "order_id": "R8T-ERY2AM4RCMQNRH",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_AKZECRSXNJX8C4",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerm37r8hy4bsxsua@sample-retail.example",
+      "order_id": "R8T-ERY2AM4RCMQNRH",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerm37r8hy4bsxsua@sample-retail.example",
+      "order_id": "R8T-ERY2AM4RCMQNRH",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "new_option",
+    "required_answers": [
+      "new_option"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-ERY2AM4RCMQNRH",
+      "item_id": "v8test_sku_AKZECRSXNJX8C4",
+      "new_item_id": "v8test_sku_T9U4ZJZM5DTGKW",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 1250,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_missing_option-01",
+    "family": "exchange_missing_option",
+    "split": "test",
+    "initial_message": "For this hoodie swap, frosted teal / S and papaya / XS are both on my list and neither is chosen yet. Settle through original payment, but first obtain my variant decision. You are authorized to return this item in the specific event that the selected replacement is sold out.\nPurchase reference R8T-B44FRWHKJCLWZW. Account email: v8testbuyermhj4as6awdagq9@sample-retail.example.",
+    "evidence_initial": "For this hoodie swap, frosted teal / S and papaya / XS are both on my list and neither is chosen yet. Settle through original payment, but first obtain my variant decision. You are authorized to return this item in the specific event that the selected replacement is sold out.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "genuine_two_variant_ambiguity_requires_ask"
+    ],
+    "customer": {
+      "id": "v8test_user_EM4SFFK4EUVHMT",
+      "email": "v8testbuyermhj4as6awdagq9@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_GQSDGS42SU3Z92",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_K4R763RQZ2VRS2": {
+        "product_id": "v8test_product_K4R763RQZ2VRS2",
+        "name": "Pebblegrove cotton hoodie",
+        "variants": [
+          {
+            "item_id": "v8test_sku_HCFKK8QCYV4M4L",
+            "option": "frosted teal / S",
+            "price_cents": 7437,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_G76TYN52N5CXVU",
+            "option": "inkstone / M",
+            "price_cents": 6722,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_XFYFKFV6FJME6T",
+            "option": "papaya / XS",
+            "price_cents": 5882,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-B44FRWHKJCLWZW",
+        "user_id": "v8test_user_EM4SFFK4EUVHMT",
+        "status": "delivered",
+        "original_payment": "v8test_card_2RJ9EMS5CTY9MS",
+        "items": [
+          {
+            "item_id": "v8test_sku_G76TYN52N5CXVU",
+            "product_id": "v8test_product_K4R763RQZ2VRS2",
+            "option": "inkstone / M",
+            "price_cents": 6722
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyermhj4as6awdagq9@sample-retail.example",
+      "order_id": "R8T-B44FRWHKJCLWZW",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_G76TYN52N5CXVU",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyermhj4as6awdagq9@sample-retail.example",
+      "order_id": "R8T-B44FRWHKJCLWZW",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyermhj4as6awdagq9@sample-retail.example",
+      "order_id": "R8T-B44FRWHKJCLWZW",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "new_option",
+    "required_answers": [
+      "new_option"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-B44FRWHKJCLWZW",
+      "item_id": "v8test_sku_G76TYN52N5CXVU",
+      "new_item_id": "v8test_sku_XFYFKFV6FJME6T",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": -840,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_missing_payment-00",
+    "family": "exchange_missing_payment",
+    "split": "test",
+    "initial_message": "Receipt R8T-BP4XB2RGQRK9NC. Account email: v8testbuyerxhkbkvs6jlbb7d@sample-retail.example.\nThe moonstone grey / L hoodie is the swap I want for my original order. A payment method for its adjustment remains to be chosen. A full return is acceptable to me as the contingency for the exact replacement being unstocked.",
+    "evidence_initial": "The moonstone grey / L hoodie is the swap I want for my original order. A payment method for its adjustment remains to be chosen. A full return is acceptable to me as the contingency for the exact replacement being unstocked.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "variant_literal_with_product_noun_context",
+      "original_order_is_not_payment"
+    ],
+    "customer": {
+      "id": "v8test_user_LE9C5F66PVXJA9",
+      "email": "v8testbuyerxhkbkvs6jlbb7d@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_WQNJPQESW3Q5FL",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_NL9NWCWZZ25US7": {
+        "product_id": "v8test_product_NL9NWCWZZ25US7",
+        "name": "Pebblegrove cotton hoodie",
+        "variants": [
+          {
+            "item_id": "v8test_sku_QASG63XFQ63GT5",
+            "option": "inkstone / M",
+            "price_cents": 17126,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_RVPMBV9TABBEF3",
+            "option": "moonstone grey / L",
+            "price_cents": 16286,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_48TQ289UJUR3VD",
+            "option": "frosted teal / S",
+            "price_cents": 17841,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-BP4XB2RGQRK9NC",
+        "user_id": "v8test_user_LE9C5F66PVXJA9",
+        "status": "delivered",
+        "original_payment": "v8test_card_7VJU5KNZ7NTJ6Z",
+        "items": [
+          {
+            "item_id": "v8test_sku_QASG63XFQ63GT5",
+            "product_id": "v8test_product_NL9NWCWZZ25US7",
+            "option": "inkstone / M",
+            "price_cents": 17126
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerxhkbkvs6jlbb7d@sample-retail.example>.",
+      "order_id": "R8T-BP4XB2RGQRK9NC",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_QASG63XFQ63GT5",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerxhkbkvs6jlbb7d@sample-retail.example",
+      "order_id": "R8T-BP4XB2RGQRK9NC",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerxhkbkvs6jlbb7d@sample-retail.example",
+      "order_id": "R8T-BP4XB2RGQRK9NC",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-BP4XB2RGQRK9NC",
+      "item_id": "v8test_sku_QASG63XFQ63GT5",
+      "new_item_id": "v8test_sku_RVPMBV9TABBEF3",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -840,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_missing_payment-01",
+    "family": "exchange_missing_payment",
+    "split": "test",
+    "initial_message": "Exchange the original item for the softshell vest in papaya / XS. Original describes the order, not how to pay; ask for my settlement preference. Once you verify that the specified variant cannot be provided, I permit you to return the purchase.\nPurchase reference R8T-Z7VZJSJ3FD6P2V. Account email: v8testbuyergnxtvz4wgckhjs@sample-retail.example.",
+    "evidence_initial": "Exchange the original item for the softshell vest in papaya / XS. Original describes the order, not how to pay; ask for my settlement preference. Once you verify that the specified variant cannot be provided, I permit you to return the purchase.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "variant_literal_with_product_noun_context",
+      "original_order_is_not_payment"
+    ],
+    "customer": {
+      "id": "v8test_user_86M22AA9KW6HNF",
+      "email": "v8testbuyergnxtvz4wgckhjs@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_4WWXHA7Q9UUR6T",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_PZLGRQFUQAJCLC": {
+        "product_id": "v8test_product_PZLGRQFUQAJCLC",
+        "name": "Estuary softshell vest",
+        "variants": [
+          {
+            "item_id": "v8test_sku_W82N4TN52SF7KF",
+            "option": "frosted teal / S",
+            "price_cents": 13652,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_LNGF8KNP9QQSSV",
+            "option": "inkstone / M",
+            "price_cents": 12937,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_YQVNYTQEDV3Z33",
+            "option": "papaya / XS",
+            "price_cents": 14912,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-Z7VZJSJ3FD6P2V",
+        "user_id": "v8test_user_86M22AA9KW6HNF",
+        "status": "delivered",
+        "original_payment": "v8test_card_VZM3KQFSL2QVG3",
+        "items": [
+          {
+            "item_id": "v8test_sku_LNGF8KNP9QQSSV",
+            "product_id": "v8test_product_PZLGRQFUQAJCLC",
+            "option": "inkstone / M",
+            "price_cents": 12937
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyergnxtvz4wgckhjs@sample-retail.example",
+      "order_id": "R8T-Z7VZJSJ3FD6P2V",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_LNGF8KNP9QQSSV",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyergnxtvz4wgckhjs@sample-retail.example",
+      "order_id": "R8T-Z7VZJSJ3FD6P2V",
+      "requested_option": "papaya / XS",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyergnxtvz4wgckhjs@sample-retail.example",
+      "order_id": "R8T-Z7VZJSJ3FD6P2V",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-Z7VZJSJ3FD6P2V",
+      "item_id": "v8test_sku_LNGF8KNP9QQSSV",
+      "new_item_id": "v8test_sku_YQVNYTQEDV3Z33",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1975,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_gift-00",
+    "family": "exchange_gift",
+    "split": "test",
+    "initial_message": "Receipt R8T-YZ3NGYJ4L7VP6X. Account email: v8testbuyerej3wvafg49vl6k@sample-retail.example.\nSwap to the moonstone grey / L softshell vest; charge the difference to gift card v8test_gift_R7CBTDE2Y8QR74. This instruction concerns the swap payment alone.",
+    "evidence_initial": "Swap to the moonstone grey / L softshell vest; charge the difference to gift card v8test_gift_R7CBTDE2Y8QR74. This instruction concerns the swap payment alone.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_54Y9B4DLP2XRGQ",
+      "email": "v8testbuyerej3wvafg49vl6k@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_R7CBTDE2Y8QR74",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_UWDH95BYAGKFWS": {
+        "product_id": "v8test_product_UWDH95BYAGKFWS",
+        "name": "Estuary softshell vest",
+        "variants": [
+          {
+            "item_id": "v8test_sku_XWZWLCGZHSL5E4",
+            "option": "frosted teal / S",
+            "price_cents": 9603,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_BCJWPQBRBWTLMG",
+            "option": "inkstone / M",
+            "price_cents": 8888,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_33J7ATGE2DK2Y9",
+            "option": "moonstone grey / L",
+            "price_cents": 10863,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-YZ3NGYJ4L7VP6X",
+        "user_id": "v8test_user_54Y9B4DLP2XRGQ",
+        "status": "delivered",
+        "original_payment": "v8test_card_L8FRRVPYETNDK5",
+        "items": [
+          {
+            "item_id": "v8test_sku_BCJWPQBRBWTLMG",
+            "product_id": "v8test_product_UWDH95BYAGKFWS",
+            "option": "inkstone / M",
+            "price_cents": 8888
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerej3wvafg49vl6k@sample-retail.example>.",
+      "order_id": "R8T-YZ3NGYJ4L7VP6X",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_BCJWPQBRBWTLMG",
+      "payment_method": "v8test_gift_R7CBTDE2Y8QR74",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerej3wvafg49vl6k@sample-retail.example",
+      "order_id": "R8T-YZ3NGYJ4L7VP6X",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerej3wvafg49vl6k@sample-retail.example",
+      "order_id": "R8T-YZ3NGYJ4L7VP6X",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-YZ3NGYJ4L7VP6X",
+      "item_id": "v8test_sku_BCJWPQBRBWTLMG",
+      "new_item_id": "v8test_sku_33J7ATGE2DK2Y9",
+      "payment_method": "v8test_gift_R7CBTDE2Y8QR74",
+      "reason": "no longer needed",
+      "amount_cents": 1975,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_gift-01",
+    "family": "exchange_gift",
+    "split": "test",
+    "initial_message": "Please use gift card v8test_gift_2Q3MNKMZUWWKSB to settle an exchange into papaya / XS. I am requesting that overshirt variant.\nPurchase reference R8T-HKKWNWC3KZ7YUK. Account email: v8testbuyermdypvypzzhqypv@sample-retail.example.",
+    "evidence_initial": "Please use gift card v8test_gift_2Q3MNKMZUWWKSB to settle an exchange into papaya / XS. I am requesting that overshirt variant.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_MSKXMLFBZDGYCS",
+      "email": "v8testbuyermdypvypzzhqypv@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_2Q3MNKMZUWWKSB",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_8CE3CDB5S74MQM": {
+        "product_id": "v8test_product_8CE3CDB5S74MQM",
+        "name": "Harborwick ripstop overshirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_RG3NF399ZUZ6FT",
+            "option": "frosted teal / S",
+            "price_cents": 17552,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_R6HS8ZDUR355PJ",
+            "option": "papaya / XS",
+            "price_cents": 18087,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_UAQYMPXD678MJJ",
+            "option": "inkstone / M",
+            "price_cents": 16837,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-HKKWNWC3KZ7YUK",
+        "user_id": "v8test_user_MSKXMLFBZDGYCS",
+        "status": "delivered",
+        "original_payment": "v8test_card_7523BGTCUW2SQC",
+        "items": [
+          {
+            "item_id": "v8test_sku_UAQYMPXD678MJJ",
+            "product_id": "v8test_product_8CE3CDB5S74MQM",
+            "option": "inkstone / M",
+            "price_cents": 16837
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyermdypvypzzhqypv@sample-retail.example",
+      "order_id": "R8T-HKKWNWC3KZ7YUK",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_UAQYMPXD678MJJ",
+      "payment_method": "v8test_gift_2Q3MNKMZUWWKSB",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyermdypvypzzhqypv@sample-retail.example",
+      "order_id": "R8T-HKKWNWC3KZ7YUK",
+      "requested_option": "papaya / XS",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyermdypvypzzhqypv@sample-retail.example",
+      "order_id": "R8T-HKKWNWC3KZ7YUK",
+      "requested_option": "papaya / XS",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-HKKWNWC3KZ7YUK",
+      "item_id": "v8test_sku_UAQYMPXD678MJJ",
+      "new_item_id": "v8test_sku_R6HS8ZDUR355PJ",
+      "payment_method": "v8test_gift_2Q3MNKMZUWWKSB",
+      "reason": "ordered by mistake",
+      "amount_cents": 1250,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_unavailable-00",
+    "family": "exchange_unavailable",
+    "split": "test",
+    "initial_message": "Receipt R8T-R6DPGVKVSKPK5L. Account email: v8testbuyer5b2vkws98nkzmr@sample-retail.example.\nAn exchange into the moonstone grey / L overshirt is what I want; settle via original payment. If it is unavailable, no return is approved. Let staff take over.",
+    "evidence_initial": "An exchange into the moonstone grey / L overshirt is what I want; settle via original payment. If it is unavailable, no return is approved. Let staff take over.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_NZ9ED73V6JLDF8",
+      "email": "v8testbuyer5b2vkws98nkzmr@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_U2PQPTPJHMG37J",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_NSQ885RW3EM4J2": {
+        "product_id": "v8test_product_NSQ885RW3EM4J2",
+        "name": "Harborwick ripstop overshirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_64B4YNF7F9PGSN",
+            "option": "moonstone grey / L",
+            "price_cents": 13135,
+            "available": false
+          },
+          {
+            "item_id": "v8test_sku_HVTYSVNRA4NLWP",
+            "option": "frosted teal / S",
+            "price_cents": 12600,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_YGQQRCMJ4GJ3HK",
+            "option": "inkstone / M",
+            "price_cents": 11885,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-R6DPGVKVSKPK5L",
+        "user_id": "v8test_user_NZ9ED73V6JLDF8",
+        "status": "delivered",
+        "original_payment": "v8test_card_YA2S9QWTDELULV",
+        "items": [
+          {
+            "item_id": "v8test_sku_YGQQRCMJ4GJ3HK",
+            "product_id": "v8test_product_NSQ885RW3EM4J2",
+            "option": "inkstone / M",
+            "price_cents": 11885
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyer5b2vkws98nkzmr@sample-retail.example>.",
+      "order_id": "R8T-R6DPGVKVSKPK5L",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_YGQQRCMJ4GJ3HK",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyer5b2vkws98nkzmr@sample-retail.example",
+      "order_id": "R8T-R6DPGVKVSKPK5L",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyer5b2vkws98nkzmr@sample-retail.example",
+      "order_id": "R8T-R6DPGVKVSKPK5L",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-R6DPGVKVSKPK5L",
+      "item_id": "v8test_sku_YGQQRCMJ4GJ3HK",
+      "new_item_id": "v8test_sku_64B4YNF7F9PGSN",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 11885,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_unavailable-01",
+    "family": "exchange_unavailable",
+    "split": "test",
+    "initial_message": "Swap my cardigan to papaya / XS using original payment, if possible. I explicitly refuse an item return after a stockout and want a representative instead.\nPurchase reference R8T-M7LXURW7YVU67X. Account email: v8testbuyer9dmgzz96adch56@sample-retail.example.",
+    "evidence_initial": "Swap my cardigan to papaya / XS using original payment, if possible. I explicitly refuse an item return after a stockout and want a representative instead.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_5TJBRPRN7YVB8D",
+      "email": "v8testbuyer9dmgzz96adch56@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_EVAZXF7VFP7RPV",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_Z483JSPPVMXF8N": {
+        "product_id": "v8test_product_Z483JSPPVMXF8N",
+        "name": "Morrowfield wool cardigan",
+        "variants": [
+          {
+            "item_id": "v8test_sku_ZFNBVN5VD833BH",
+            "option": "frosted teal / S",
+            "price_cents": 17750,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_7C84DPQ6THL9L6",
+            "option": "inkstone / M",
+            "price_cents": 17035,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_QYZ4YUQBWBHUEJ",
+            "option": "papaya / XS",
+            "price_cents": 16195,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-M7LXURW7YVU67X",
+        "user_id": "v8test_user_5TJBRPRN7YVB8D",
+        "status": "delivered",
+        "original_payment": "v8test_card_UQURKRC2EVX3AY",
+        "items": [
+          {
+            "item_id": "v8test_sku_7C84DPQ6THL9L6",
+            "product_id": "v8test_product_Z483JSPPVMXF8N",
+            "option": "inkstone / M",
+            "price_cents": 17035
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyer9dmgzz96adch56@sample-retail.example",
+      "order_id": "R8T-M7LXURW7YVU67X",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_7C84DPQ6THL9L6",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyer9dmgzz96adch56@sample-retail.example",
+      "order_id": "R8T-M7LXURW7YVU67X",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyer9dmgzz96adch56@sample-retail.example",
+      "order_id": "R8T-M7LXURW7YVU67X",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-M7LXURW7YVU67X",
+      "item_id": "v8test_sku_7C84DPQ6THL9L6",
+      "new_item_id": "v8test_sku_QYZ4YUQBWBHUEJ",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 17035,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_shortfall-00",
+    "family": "exchange_shortfall",
+    "split": "test",
+    "initial_message": "Receipt R8T-BKD9Y3BGFTZAXB. Account email: v8testbuyerru3xgxf6zn8cy4@sample-retail.example.\nExchange into the moonstone grey / L cardigan, paying the difference from gift card v8test_gift_QCQ656S5LB9HET. Insufficient credit means staff assistance, not another payment source or a return.",
+    "evidence_initial": "Exchange into the moonstone grey / L cardigan, paying the difference from gift card v8test_gift_QCQ656S5LB9HET. Insufficient credit means staff assistance, not another payment source or a return.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_X4SUFXGZRHD9RP",
+      "email": "v8testbuyerru3xgxf6zn8cy4@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_QCQ656S5LB9HET",
+        "balance_cents": 250
+      }
+    },
+    "products": {
+      "v8test_product_QQQUNW6VRUNS99": {
+        "product_id": "v8test_product_QQQUNW6VRUNS99",
+        "name": "Morrowfield wool cardigan",
+        "variants": [
+          {
+            "item_id": "v8test_sku_WSVASKHPDLSXGB",
+            "option": "inkstone / M",
+            "price_cents": 10246,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_NN8CYU5RKVCRX9",
+            "option": "moonstone grey / L",
+            "price_cents": 13696,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_ZDJ4BG44HHWBPJ",
+            "option": "frosted teal / S",
+            "price_cents": 10961,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-BKD9Y3BGFTZAXB",
+        "user_id": "v8test_user_X4SUFXGZRHD9RP",
+        "status": "delivered",
+        "original_payment": "v8test_card_7DX5E9S6B5A6MN",
+        "items": [
+          {
+            "item_id": "v8test_sku_WSVASKHPDLSXGB",
+            "product_id": "v8test_product_QQQUNW6VRUNS99",
+            "option": "inkstone / M",
+            "price_cents": 10246
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerru3xgxf6zn8cy4@sample-retail.example>.",
+      "order_id": "R8T-BKD9Y3BGFTZAXB",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_WSVASKHPDLSXGB",
+      "payment_method": "v8test_gift_QCQ656S5LB9HET",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerru3xgxf6zn8cy4@sample-retail.example",
+      "order_id": "R8T-BKD9Y3BGFTZAXB",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerru3xgxf6zn8cy4@sample-retail.example",
+      "order_id": "R8T-BKD9Y3BGFTZAXB",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-BKD9Y3BGFTZAXB",
+      "item_id": "v8test_sku_WSVASKHPDLSXGB",
+      "new_item_id": "v8test_sku_NN8CYU5RKVCRX9",
+      "payment_method": "v8test_gift_QCQ656S5LB9HET",
+      "reason": "no longer needed",
+      "amount_cents": 10246,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_shortfall-01",
+    "family": "exchange_shortfall",
+    "split": "test",
+    "initial_message": "The papaya / XS pullover is my exchange choice and gift card v8test_gift_W6XFSDMUNPS5HT is my only payment instruction. If it falls short, I refuse both a return and alternative funding; involve support.\nPurchase reference R8T-4J8QYGCT6Q9ZA9. Account email: v8testbuyerwat9myufpu8nsp@sample-retail.example.",
+    "evidence_initial": "The papaya / XS pullover is my exchange choice and gift card v8test_gift_W6XFSDMUNPS5HT is my only payment instruction. If it falls short, I refuse both a return and alternative funding; involve support.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_GXFLTUXQ7ZJ96R",
+      "email": "v8testbuyerwat9myufpu8nsp@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_W6XFSDMUNPS5HT",
+        "balance_cents": 250
+      }
+    },
+    "products": {
+      "v8test_product_Y2D4V4EFBU652L": {
+        "product_id": "v8test_product_Y2D4V4EFBU652L",
+        "name": "Sundrift jersey pullover",
+        "variants": [
+          {
+            "item_id": "v8test_sku_DMJQKC6TLBSZNE",
+            "option": "papaya / XS",
+            "price_cents": 14283,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_DL5PDEQ9YNTLPY",
+            "option": "frosted teal / S",
+            "price_cents": 11548,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_5JHREY3GPENQBB",
+            "option": "inkstone / M",
+            "price_cents": 10833,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-4J8QYGCT6Q9ZA9",
+        "user_id": "v8test_user_GXFLTUXQ7ZJ96R",
+        "status": "delivered",
+        "original_payment": "v8test_card_EAEPESZCYVFWDQ",
+        "items": [
+          {
+            "item_id": "v8test_sku_5JHREY3GPENQBB",
+            "product_id": "v8test_product_Y2D4V4EFBU652L",
+            "option": "inkstone / M",
+            "price_cents": 10833
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyerwat9myufpu8nsp@sample-retail.example",
+      "order_id": "R8T-4J8QYGCT6Q9ZA9",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_5JHREY3GPENQBB",
+      "payment_method": "v8test_gift_W6XFSDMUNPS5HT",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerwat9myufpu8nsp@sample-retail.example",
+      "order_id": "R8T-4J8QYGCT6Q9ZA9",
+      "requested_option": "papaya / XS",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerwat9myufpu8nsp@sample-retail.example",
+      "order_id": "R8T-4J8QYGCT6Q9ZA9",
+      "requested_option": "papaya / XS",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-4J8QYGCT6Q9ZA9",
+      "item_id": "v8test_sku_5JHREY3GPENQBB",
+      "new_item_id": "v8test_sku_DMJQKC6TLBSZNE",
+      "payment_method": "v8test_gift_W6XFSDMUNPS5HT",
+      "reason": "ordered by mistake",
+      "amount_cents": 10833,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_fallback_available-00",
+    "family": "exchange_fallback_available",
+    "split": "test",
+    "initial_message": "Receipt R8T-WD5AM4RZZWMUZR. Account email: v8testbuyerp7zhuyc3hdyskf@sample-retail.example.\nTry the moonstone grey / L pullover as an exchange first, with any adjustment through original payment. Do not let the contingency replace a feasible swap. I give consent to a return as a backup, activated solely by a stockout of the chosen replacement.",
+    "evidence_initial": "Try the moonstone grey / L pullover as an exchange first, with any adjustment through original payment. Do not let the contingency replace a feasible swap. I give consent to a return as a backup, activated solely by a stockout of the chosen replacement.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_V3Z8RCM6LUV5VY",
+      "email": "v8testbuyerp7zhuyc3hdyskf@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_VEGPJACNZURUSS",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_DL7WRDDNWWHRGT": {
+        "product_id": "v8test_product_DL7WRDDNWWHRGT",
+        "name": "Sundrift jersey pullover",
+        "variants": [
+          {
+            "item_id": "v8test_sku_XSGZYPXWMZAYX5",
+            "option": "inkstone / M",
+            "price_cents": 12029,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_22UH42LM3SWUF5",
+            "option": "frosted teal / S",
+            "price_cents": 12744,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_STNWJ63K58U3XB",
+            "option": "moonstone grey / L",
+            "price_cents": 14004,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-WD5AM4RZZWMUZR",
+        "user_id": "v8test_user_V3Z8RCM6LUV5VY",
+        "status": "delivered",
+        "original_payment": "v8test_card_ABJ888KT8XBRUY",
+        "items": [
+          {
+            "item_id": "v8test_sku_XSGZYPXWMZAYX5",
+            "product_id": "v8test_product_DL7WRDDNWWHRGT",
+            "option": "inkstone / M",
+            "price_cents": 12029
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerp7zhuyc3hdyskf@sample-retail.example>.",
+      "order_id": "R8T-WD5AM4RZZWMUZR",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_XSGZYPXWMZAYX5",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerp7zhuyc3hdyskf@sample-retail.example",
+      "order_id": "R8T-WD5AM4RZZWMUZR",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerp7zhuyc3hdyskf@sample-retail.example",
+      "order_id": "R8T-WD5AM4RZZWMUZR",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-WD5AM4RZZWMUZR",
+      "item_id": "v8test_sku_XSGZYPXWMZAYX5",
+      "new_item_id": "v8test_sku_STNWJ63K58U3XB",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 1975,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_fallback_available-01",
+    "family": "exchange_fallback_available",
+    "split": "test",
+    "initial_message": "My first choice stays the linen shirt in papaya / XS, settled through original payment. The backup is conditional, not a request to skip inventory. If inventory rules out the replacement I specify, you have my approval to process a return instead.\nPurchase reference R8T-88RJTMWFT39W3K. Account email: v8testbuyerk69vcffaatkpal@sample-retail.example.",
+    "evidence_initial": "My first choice stays the linen shirt in papaya / XS, settled through original payment. The backup is conditional, not a request to skip inventory. If inventory rules out the replacement I specify, you have my approval to process a return instead.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_FQCN9WZPWRE5G3",
+      "email": "v8testbuyerk69vcffaatkpal@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_JWP5468JJHHVBU",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_7LPNE9C3SEY7JA": {
+        "product_id": "v8test_product_7LPNE9C3SEY7JA",
+        "name": "Kestrelbay linen shirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_5BWVSKFK5U69RZ",
+            "option": "papaya / XS",
+            "price_cents": 15342,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_6NDTPLUPPU52JN",
+            "option": "inkstone / M",
+            "price_cents": 14092,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_E6MY9UTSDXXYU8",
+            "option": "frosted teal / S",
+            "price_cents": 14807,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-88RJTMWFT39W3K",
+        "user_id": "v8test_user_FQCN9WZPWRE5G3",
+        "status": "delivered",
+        "original_payment": "v8test_card_BU7B85L6SLP89E",
+        "items": [
+          {
+            "item_id": "v8test_sku_6NDTPLUPPU52JN",
+            "product_id": "v8test_product_7LPNE9C3SEY7JA",
+            "option": "inkstone / M",
+            "price_cents": 14092
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyerk69vcffaatkpal@sample-retail.example",
+      "order_id": "R8T-88RJTMWFT39W3K",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_6NDTPLUPPU52JN",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerk69vcffaatkpal@sample-retail.example",
+      "order_id": "R8T-88RJTMWFT39W3K",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerk69vcffaatkpal@sample-retail.example",
+      "order_id": "R8T-88RJTMWFT39W3K",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-88RJTMWFT39W3K",
+      "item_id": "v8test_sku_6NDTPLUPPU52JN",
+      "new_item_id": "v8test_sku_5BWVSKFK5U69RZ",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1250,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-return_reject_exchange-00",
+    "family": "return_reject_exchange",
+    "split": "test",
+    "initial_message": "Receipt R8T-AFUYPTE3L392FH. Account email: v8testbuyerbsvlsuan5a99xr@sample-retail.example.\nOffering a moonstone grey / L linen shirt would not change my decision: no exchange. Return the whole item and refund original payment.",
+    "evidence_initial": "Offering a moonstone grey / L linen shirt would not change my decision: no exchange. Return the whole item and refund original payment.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only"
+    ],
+    "customer": {
+      "id": "v8test_user_TGS4HATY565MA4",
+      "email": "v8testbuyerbsvlsuan5a99xr@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_W8A8DB8YR2QCAP",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_TH3TUAZ9Z3NB78": {
+        "product_id": "v8test_product_TH3TUAZ9Z3NB78",
+        "name": "Kestrelbay linen shirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_4E7UNK6DYLXX8V",
+            "option": "moonstone grey / L",
+            "price_cents": 14999,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_65RNJXJ6J5VWWN",
+            "option": "frosted teal / S",
+            "price_cents": 14464,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_TAKUQYVDDXCZUY",
+            "option": "inkstone / M",
+            "price_cents": 13749,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-AFUYPTE3L392FH",
+        "user_id": "v8test_user_TGS4HATY565MA4",
+        "status": "delivered",
+        "original_payment": "v8test_card_GG2U9DHHJF9H7R",
+        "items": [
+          {
+            "item_id": "v8test_sku_TAKUQYVDDXCZUY",
+            "product_id": "v8test_product_TH3TUAZ9Z3NB78",
+            "option": "inkstone / M",
+            "price_cents": 13749
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerbsvlsuan5a99xr@sample-retail.example>.",
+      "order_id": "R8T-AFUYPTE3L392FH",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_TAKUQYVDDXCZUY",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8testbuyerbsvlsuan5a99xr@sample-retail.example",
+      "order_id": "R8T-AFUYPTE3L392FH",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyerbsvlsuan5a99xr@sample-retail.example",
+      "order_id": "R8T-AFUYPTE3L392FH",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-AFUYPTE3L392FH",
+      "item_id": "v8test_sku_TAKUQYVDDXCZUY",
+      "new_item_id": "v8test_sku_4E7UNK6DYLXX8V",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 13749,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-return_reject_exchange-01",
+    "family": "return_reject_exchange",
+    "split": "test",
+    "initial_message": "Rather than swapping into papaya / XS, refund original payment for returning my hoodie. The replacement suggestion is rejected.\nPurchase reference R8T-D9HWKXVZWP4KBW. Account email: v8testbuyerudpzlce4jgl25j@sample-retail.example.",
+    "evidence_initial": "Rather than swapping into papaya / XS, refund original payment for returning my hoodie. The replacement suggestion is rejected.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only"
+    ],
+    "customer": {
+      "id": "v8test_user_FNMPE32GS4VHUU",
+      "email": "v8testbuyerudpzlce4jgl25j@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_W7TM3YSAVSHNB2",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_5QNRUXC9LU5TMP": {
+        "product_id": "v8test_product_5QNRUXC9LU5TMP",
+        "name": "Pebblegrove cotton hoodie",
+        "variants": [
+          {
+            "item_id": "v8test_sku_5Q2RCX8V2TX279",
+            "option": "frosted teal / S",
+            "price_cents": 12608,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_P6H7EBTPRGJWLG",
+            "option": "inkstone / M",
+            "price_cents": 11893,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_F4JA33M6D3AU36",
+            "option": "papaya / XS",
+            "price_cents": 11053,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-D9HWKXVZWP4KBW",
+        "user_id": "v8test_user_FNMPE32GS4VHUU",
+        "status": "delivered",
+        "original_payment": "v8test_card_FN5GM93SJEG2E5",
+        "items": [
+          {
+            "item_id": "v8test_sku_P6H7EBTPRGJWLG",
+            "product_id": "v8test_product_5QNRUXC9LU5TMP",
+            "option": "inkstone / M",
+            "price_cents": 11893
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyerudpzlce4jgl25j@sample-retail.example",
+      "order_id": "R8T-D9HWKXVZWP4KBW",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_P6H7EBTPRGJWLG",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8testbuyerudpzlce4jgl25j@sample-retail.example",
+      "order_id": "R8T-D9HWKXVZWP4KBW",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyerudpzlce4jgl25j@sample-retail.example",
+      "order_id": "R8T-D9HWKXVZWP4KBW",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-D9HWKXVZWP4KBW",
+      "item_id": "v8test_sku_P6H7EBTPRGJWLG",
+      "new_item_id": "v8test_sku_F4JA33M6D3AU36",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 11893,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_stockout_unknown-00",
+    "family": "exchange_stockout_unknown",
+    "split": "test",
+    "initial_message": "Receipt R8T-Z2VXZ3GFWHVTFE. Account email: v8testbuyerjxsbe5lv6afeqb@sample-retail.example.\nLook for the moonstone grey / L hoodie as a swap, with the difference on original payment. I have made no backup decision if inventory cannot supply it.",
+    "evidence_initial": "Look for the moonstone grey / L hoodie as a swap, with the difference on original payment. I have made no backup decision if inventory cannot supply it.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_3ZEKHB6V8ND3QR",
+      "email": "v8testbuyerjxsbe5lv6afeqb@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_5DBKSAZBYGNBZU",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_VBCB2GZ2XKCLJG": {
+        "product_id": "v8test_product_VBCB2GZ2XKCLJG",
+        "name": "Pebblegrove cotton hoodie",
+        "variants": [
+          {
+            "item_id": "v8test_sku_89FY97NCD5YWA2",
+            "option": "inkstone / M",
+            "price_cents": 11704,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_SE5H67RZ7J7H93",
+            "option": "moonstone grey / L",
+            "price_cents": 10864,
+            "available": false
+          },
+          {
+            "item_id": "v8test_sku_LXM5KDMHAD5W2J",
+            "option": "frosted teal / S",
+            "price_cents": 12419,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-Z2VXZ3GFWHVTFE",
+        "user_id": "v8test_user_3ZEKHB6V8ND3QR",
+        "status": "delivered",
+        "original_payment": "v8test_card_XANMJZNF8K343D",
+        "items": [
+          {
+            "item_id": "v8test_sku_89FY97NCD5YWA2",
+            "product_id": "v8test_product_VBCB2GZ2XKCLJG",
+            "option": "inkstone / M",
+            "price_cents": 11704
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerjxsbe5lv6afeqb@sample-retail.example>.",
+      "order_id": "R8T-Z2VXZ3GFWHVTFE",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_89FY97NCD5YWA2",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerjxsbe5lv6afeqb@sample-retail.example",
+      "order_id": "R8T-Z2VXZ3GFWHVTFE",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerjxsbe5lv6afeqb@sample-retail.example",
+      "order_id": "R8T-Z2VXZ3GFWHVTFE",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-Z2VXZ3GFWHVTFE",
+      "item_id": "v8test_sku_89FY97NCD5YWA2",
+      "new_item_id": "v8test_sku_SE5H67RZ7J7H93",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 11704,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_stockout_unknown-01",
+    "family": "exchange_stockout_unknown",
+    "split": "test",
+    "initial_message": "My chosen exchange is papaya / XS for this softshell vest; use original payment for the adjustment. What follows a stockout is still undecided on my side.\nPurchase reference R8T-M3ARFAV59UQN3H. Account email: v8testbuyeryfv8sc4mp88upf@sample-retail.example.",
+    "evidence_initial": "My chosen exchange is papaya / XS for this softshell vest; use original payment for the adjustment. What follows a stockout is still undecided on my side.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_8PPLZWQYM4RYFF",
+      "email": "v8testbuyeryfv8sc4mp88upf@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_HQLMCRJCWK9DLZ",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_67CF8NKDMGXGC7": {
+        "product_id": "v8test_product_67CF8NKDMGXGC7",
+        "name": "Estuary softshell vest",
+        "variants": [
+          {
+            "item_id": "v8test_sku_Q95SNUCV4GNTQG",
+            "option": "papaya / XS",
+            "price_cents": 9324,
+            "available": false
+          },
+          {
+            "item_id": "v8test_sku_M3ZA6RLN93SJV5",
+            "option": "frosted teal / S",
+            "price_cents": 8064,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_8BYYF2JRPE5PKT",
+            "option": "inkstone / M",
+            "price_cents": 7349,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-M3ARFAV59UQN3H",
+        "user_id": "v8test_user_8PPLZWQYM4RYFF",
+        "status": "delivered",
+        "original_payment": "v8test_card_ZU8G59PWP6YYHE",
+        "items": [
+          {
+            "item_id": "v8test_sku_8BYYF2JRPE5PKT",
+            "product_id": "v8test_product_67CF8NKDMGXGC7",
+            "option": "inkstone / M",
+            "price_cents": 7349
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyeryfv8sc4mp88upf@sample-retail.example",
+      "order_id": "R8T-M3ARFAV59UQN3H",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_8BYYF2JRPE5PKT",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyeryfv8sc4mp88upf@sample-retail.example",
+      "order_id": "R8T-M3ARFAV59UQN3H",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyeryfv8sc4mp88upf@sample-retail.example",
+      "order_id": "R8T-M3ARFAV59UQN3H",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-M3ARFAV59UQN3H",
+      "item_id": "v8test_sku_8BYYF2JRPE5PKT",
+      "new_item_id": "v8test_sku_Q95SNUCV4GNTQG",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 7349,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_stockout_missing_email-00",
+    "family": "exchange_stockout_missing_email",
+    "split": "test",
+    "initial_message": "Receipt R8T-SM5Y25KY349BEW.\nI want the moonstone grey / L softshell vest through an original-payment exchange. Ask for my account email. A stockout must go to a person; I forbid a return.",
+    "evidence_initial": "I want the moonstone grey / L softshell vest through an original-payment exchange. Ask for my account email. A stockout must go to a person; I forbid a return.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_EDJ3ZFFL6SX3VM",
+      "email": "v8testbuyer78cpjl9xkf9mlz@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_AXURPBK6QQB5EJ",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_5TWAAWG3VQ9ETL": {
+        "product_id": "v8test_product_5TWAAWG3VQ9ETL",
+        "name": "Estuary softshell vest",
+        "variants": [
+          {
+            "item_id": "v8test_sku_U6YM8EJAE5KB94",
+            "option": "frosted teal / S",
+            "price_cents": 16971,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_GLTPZ34E2YKWUJ",
+            "option": "moonstone grey / L",
+            "price_cents": 18231,
+            "available": false
+          },
+          {
+            "item_id": "v8test_sku_XJDCBL7ZZESTSH",
+            "option": "inkstone / M",
+            "price_cents": 16256,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-SM5Y25KY349BEW",
+        "user_id": "v8test_user_EDJ3ZFFL6SX3VM",
+        "status": "delivered",
+        "original_payment": "v8test_card_Z9KCFG3QS5UEPT",
+        "items": [
+          {
+            "item_id": "v8test_sku_XJDCBL7ZZESTSH",
+            "product_id": "v8test_product_5TWAAWG3VQ9ETL",
+            "option": "inkstone / M",
+            "price_cents": 16256
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyer78cpjl9xkf9mlz@sample-retail.example>.",
+      "order_id": "R8T-SM5Y25KY349BEW",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_XJDCBL7ZZESTSH",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "R8T-SM5Y25KY349BEW",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyer78cpjl9xkf9mlz@sample-retail.example",
+      "order_id": "R8T-SM5Y25KY349BEW",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-SM5Y25KY349BEW",
+      "item_id": "v8test_sku_XJDCBL7ZZESTSH",
+      "new_item_id": "v8test_sku_GLTPZ34E2YKWUJ",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 16256,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_stockout_missing_email-01",
+    "family": "exchange_stockout_missing_email",
+    "split": "test",
+    "initial_message": "Replace the overshirt with papaya / XS, adjusting original payment, after you collect my mailbox. I do not consent to a return if the exchange cannot be supplied; contact support.\nPurchase reference R8T-R5H5USEQB6SXF7.",
+    "evidence_initial": "Replace the overshirt with papaya / XS, adjusting original payment, after you collect my mailbox. I do not consent to a return if the exchange cannot be supplied; contact support.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_EXXGBKG36M22HV",
+      "email": "v8testbuyeryh4gn6au3hds8u@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_UA4CBL8SQFNFCF",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_67FN7EVKQ4PYF7": {
+        "product_id": "v8test_product_67FN7EVKQ4PYF7",
+        "name": "Harborwick ripstop overshirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_X72QA6958MEYLF",
+            "option": "frosted teal / S",
+            "price_cents": 13345,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_ZGUX49LFHJ72VE",
+            "option": "papaya / XS",
+            "price_cents": 13880,
+            "available": false
+          },
+          {
+            "item_id": "v8test_sku_PL9SSD4QDRR9JL",
+            "option": "inkstone / M",
+            "price_cents": 12630,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-R5H5USEQB6SXF7",
+        "user_id": "v8test_user_EXXGBKG36M22HV",
+        "status": "delivered",
+        "original_payment": "v8test_card_3PYS4W32GFVVCV",
+        "items": [
+          {
+            "item_id": "v8test_sku_PL9SSD4QDRR9JL",
+            "product_id": "v8test_product_67FN7EVKQ4PYF7",
+            "option": "inkstone / M",
+            "price_cents": 12630
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyeryh4gn6au3hds8u@sample-retail.example",
+      "order_id": "R8T-R5H5USEQB6SXF7",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_PL9SSD4QDRR9JL",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "R8T-R5H5USEQB6SXF7",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyeryh4gn6au3hds8u@sample-retail.example",
+      "order_id": "R8T-R5H5USEQB6SXF7",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-R5H5USEQB6SXF7",
+      "item_id": "v8test_sku_PL9SSD4QDRR9JL",
+      "new_item_id": "v8test_sku_ZGUX49LFHJ72VE",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 12630,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_stockout_negative_quote-00",
+    "family": "exchange_stockout_negative_quote",
+    "split": "test",
+    "initial_message": "Receipt R8T-58J5QKV6TWSSBY. Account email: v8testbuyer9geczkn93mgduk@sample-retail.example.\nI request the moonstone grey / L overshirt as an exchange using original payment. The printed script says 'YES, return it after a stockout'; those are not my words of consent. I decline a return and want staff help if needed.",
+    "evidence_initial": "I request the moonstone grey / L overshirt as an exchange using original payment. The printed script says 'YES, return it after a stockout'; those are not my words of consent. I decline a return and want staff help if needed.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context",
+      "quoted_permission_is_not_customer_consent"
+    ],
+    "customer": {
+      "id": "v8test_user_3RA8JL76KQH78Y",
+      "email": "v8testbuyer9geczkn93mgduk@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_CWUURA2PQZGRTB",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_R52JVD5XCNZWBX": {
+        "product_id": "v8test_product_R52JVD5XCNZWBX",
+        "name": "Harborwick ripstop overshirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_JASA6CYBVCPLDG",
+            "option": "frosted teal / S",
+            "price_cents": 16905,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_KEJ5QF2SREJEVU",
+            "option": "inkstone / M",
+            "price_cents": 16190,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_FSHDPCS6F26PYL",
+            "option": "moonstone grey / L",
+            "price_cents": 17440,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-58J5QKV6TWSSBY",
+        "user_id": "v8test_user_3RA8JL76KQH78Y",
+        "status": "delivered",
+        "original_payment": "v8test_card_X8ZYVMH8E4TW4K",
+        "items": [
+          {
+            "item_id": "v8test_sku_KEJ5QF2SREJEVU",
+            "product_id": "v8test_product_R52JVD5XCNZWBX",
+            "option": "inkstone / M",
+            "price_cents": 16190
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyer9geczkn93mgduk@sample-retail.example>.",
+      "order_id": "R8T-58J5QKV6TWSSBY",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_KEJ5QF2SREJEVU",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyer9geczkn93mgduk@sample-retail.example",
+      "order_id": "R8T-58J5QKV6TWSSBY",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyer9geczkn93mgduk@sample-retail.example",
+      "order_id": "R8T-58J5QKV6TWSSBY",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-58J5QKV6TWSSBY",
+      "item_id": "v8test_sku_KEJ5QF2SREJEVU",
+      "new_item_id": "v8test_sku_FSHDPCS6F26PYL",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 16190,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_stockout_negative_quote-01",
+    "family": "exchange_stockout_negative_quote",
+    "split": "test",
+    "initial_message": "Exchange my cardigan for papaya / XS, settling on original payment. A tutorial quote reads 'I authorize a return when stock runs out'. That quotation is not permission from me: do not return mine, ask a human.\nPurchase reference R8T-HZRSDB2TSHX4VV. Account email: v8testbuyerv72dnj6lsvwt6p@sample-retail.example.",
+    "evidence_initial": "Exchange my cardigan for papaya / XS, settling on original payment. A tutorial quote reads 'I authorize a return when stock runs out'. That quotation is not permission from me: do not return mine, ask a human.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context",
+      "quoted_permission_is_not_customer_consent"
+    ],
+    "customer": {
+      "id": "v8test_user_LVM9L8MBZP2LZX",
+      "email": "v8testbuyerv72dnj6lsvwt6p@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_483PZFPMPUS5D6",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_JYQ8FW2LHSE46Y": {
+        "product_id": "v8test_product_JYQ8FW2LHSE46Y",
+        "name": "Morrowfield wool cardigan",
+        "variants": [
+          {
+            "item_id": "v8test_sku_Y6NU8LPJURZK32",
+            "option": "papaya / XS",
+            "price_cents": 13807,
+            "available": false
+          },
+          {
+            "item_id": "v8test_sku_PR6HF4JZSTHR9V",
+            "option": "inkstone / M",
+            "price_cents": 14647,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_WLTVWH3NTQ89FW",
+            "option": "frosted teal / S",
+            "price_cents": 15362,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-HZRSDB2TSHX4VV",
+        "user_id": "v8test_user_LVM9L8MBZP2LZX",
+        "status": "delivered",
+        "original_payment": "v8test_card_LDVQ86PRBS54AG",
+        "items": [
+          {
+            "item_id": "v8test_sku_PR6HF4JZSTHR9V",
+            "product_id": "v8test_product_JYQ8FW2LHSE46Y",
+            "option": "inkstone / M",
+            "price_cents": 14647
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyerv72dnj6lsvwt6p@sample-retail.example",
+      "order_id": "R8T-HZRSDB2TSHX4VV",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_PR6HF4JZSTHR9V",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerv72dnj6lsvwt6p@sample-retail.example",
+      "order_id": "R8T-HZRSDB2TSHX4VV",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerv72dnj6lsvwt6p@sample-retail.example",
+      "order_id": "R8T-HZRSDB2TSHX4VV",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-HZRSDB2TSHX4VV",
+      "item_id": "v8test_sku_PR6HF4JZSTHR9V",
+      "new_item_id": "v8test_sku_Y6NU8LPJURZK32",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 14647,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_stockout_question-00",
+    "family": "exchange_stockout_question",
+    "split": "test",
+    "initial_message": "Receipt R8T-WD8VWD73FJD4ZG. Account email: v8testbuyerhq8gewes3u8n3x@sample-retail.example.\nSeek the moonstone grey / L cardigan exchange via original payment. What would a return involve if it is sold out? This is information gathering; I decline execution of a return and prefer staff assistance.",
+    "evidence_initial": "Seek the moonstone grey / L cardigan exchange via original payment. What would a return involve if it is sold out? This is information gathering; I decline execution of a return and prefer staff assistance.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_LQD3DBCWKCPFD6",
+      "email": "v8testbuyerhq8gewes3u8n3x@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_QALZT3QHCP4QMS",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_24QAQ4YQLS2UT8": {
+        "product_id": "v8test_product_24QAQ4YQLS2UT8",
+        "name": "Morrowfield wool cardigan",
+        "variants": [
+          {
+            "item_id": "v8test_sku_HDAZY3E8H6BS4W",
+            "option": "inkstone / M",
+            "price_cents": 14620,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_HT3MG742VH8P6A",
+            "option": "moonstone grey / L",
+            "price_cents": 13780,
+            "available": false
+          },
+          {
+            "item_id": "v8test_sku_4M7KF5NFA4FZ7J",
+            "option": "frosted teal / S",
+            "price_cents": 15335,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-WD8VWD73FJD4ZG",
+        "user_id": "v8test_user_LQD3DBCWKCPFD6",
+        "status": "delivered",
+        "original_payment": "v8test_card_EDEPFPL48TH64H",
+        "items": [
+          {
+            "item_id": "v8test_sku_HDAZY3E8H6BS4W",
+            "product_id": "v8test_product_24QAQ4YQLS2UT8",
+            "option": "inkstone / M",
+            "price_cents": 14620
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyerhq8gewes3u8n3x@sample-retail.example>.",
+      "order_id": "R8T-WD8VWD73FJD4ZG",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_HDAZY3E8H6BS4W",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerhq8gewes3u8n3x@sample-retail.example",
+      "order_id": "R8T-WD8VWD73FJD4ZG",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerhq8gewes3u8n3x@sample-retail.example",
+      "order_id": "R8T-WD8VWD73FJD4ZG",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-WD8VWD73FJD4ZG",
+      "item_id": "v8test_sku_HDAZY3E8H6BS4W",
+      "new_item_id": "v8test_sku_HT3MG742VH8P6A",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 14620,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_stockout_question-01",
+    "family": "exchange_stockout_question",
+    "split": "test",
+    "initial_message": "Can this pullover be swapped for papaya / XS, with original payment covering the adjustment? Is a refund possible after a stockout? My question is not consent; no return is allowed, so refer an unavailable swap to support.\nPurchase reference R8T-XHT6QUVATK3U55. Account email: v8testbuyerrme8ks6vq5j72b@sample-retail.example.",
+    "evidence_initial": "Can this pullover be swapped for papaya / XS, with original payment covering the adjustment? Is a refund possible after a stockout? My question is not consent; no return is allowed, so refer an unavailable swap to support.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_2GSP9TMWHFV4WQ",
+      "email": "v8testbuyerrme8ks6vq5j72b@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_G466ZJ37TMNZMP",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_8VQDM7SPWJHEMG": {
+        "product_id": "v8test_product_8VQDM7SPWJHEMG",
+        "name": "Sundrift jersey pullover",
+        "variants": [
+          {
+            "item_id": "v8test_sku_HVN8NEJTYZL8X5",
+            "option": "frosted teal / S",
+            "price_cents": 12570,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_8C7Y5EV2C2RCXK",
+            "option": "inkstone / M",
+            "price_cents": 11855,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_TDCYG2Q87HLFY3",
+            "option": "papaya / XS",
+            "price_cents": 13830,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-XHT6QUVATK3U55",
+        "user_id": "v8test_user_2GSP9TMWHFV4WQ",
+        "status": "delivered",
+        "original_payment": "v8test_card_4B8JU6UNN77UMQ",
+        "items": [
+          {
+            "item_id": "v8test_sku_8C7Y5EV2C2RCXK",
+            "product_id": "v8test_product_8VQDM7SPWJHEMG",
+            "option": "inkstone / M",
+            "price_cents": 11855
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyerrme8ks6vq5j72b@sample-retail.example",
+      "order_id": "R8T-XHT6QUVATK3U55",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_8C7Y5EV2C2RCXK",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerrme8ks6vq5j72b@sample-retail.example",
+      "order_id": "R8T-XHT6QUVATK3U55",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerrme8ks6vq5j72b@sample-retail.example",
+      "order_id": "R8T-XHT6QUVATK3U55",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8T-XHT6QUVATK3U55",
+      "item_id": "v8test_sku_8C7Y5EV2C2RCXK",
+      "new_item_id": "v8test_sku_TDCYG2Q87HLFY3",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 11855,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_available_refusal-00",
+    "family": "exchange_available_refusal",
+    "split": "test",
+    "initial_message": "Receipt R8T-4VSCZLZL2RVYUN. Account email: v8testbuyermemfx7xtzb55dx@sample-retail.example.\nFulfill the moonstone grey / L pullover swap through original payment when inventory permits. I refuse a full return; a feasible exchange is still my instruction.",
+    "evidence_initial": "Fulfill the moonstone grey / L pullover swap through original payment when inventory permits. I refuse a full return; a feasible exchange is still my instruction.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_JBDRYXGJHQ9UJ8",
+      "email": "v8testbuyermemfx7xtzb55dx@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_TZJMY784GWEYWU",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_JV373R2A7JYVYT": {
+        "product_id": "v8test_product_JV373R2A7JYVYT",
+        "name": "Sundrift jersey pullover",
+        "variants": [
+          {
+            "item_id": "v8test_sku_NGB9TJH2XNKFPQ",
+            "option": "frosted teal / S",
+            "price_cents": 16148,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_EX76UPRMAN4HRC",
+            "option": "moonstone grey / L",
+            "price_cents": 17408,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_X7N9HHXDYEMYHQ",
+            "option": "inkstone / M",
+            "price_cents": 15433,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-4VSCZLZL2RVYUN",
+        "user_id": "v8test_user_JBDRYXGJHQ9UJ8",
+        "status": "delivered",
+        "original_payment": "v8test_card_XUZ7D3DNU83UXA",
+        "items": [
+          {
+            "item_id": "v8test_sku_X7N9HHXDYEMYHQ",
+            "product_id": "v8test_product_JV373R2A7JYVYT",
+            "option": "inkstone / M",
+            "price_cents": 15433
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyermemfx7xtzb55dx@sample-retail.example>.",
+      "order_id": "R8T-4VSCZLZL2RVYUN",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_X7N9HHXDYEMYHQ",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyermemfx7xtzb55dx@sample-retail.example",
+      "order_id": "R8T-4VSCZLZL2RVYUN",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyermemfx7xtzb55dx@sample-retail.example",
+      "order_id": "R8T-4VSCZLZL2RVYUN",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-4VSCZLZL2RVYUN",
+      "item_id": "v8test_sku_X7N9HHXDYEMYHQ",
+      "new_item_id": "v8test_sku_EX76UPRMAN4HRC",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 1975,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_available_refusal-01",
+    "family": "exchange_available_refusal",
+    "split": "test",
+    "initial_message": "A linen shirt exchange into papaya / XS, adjusted on original payment, is the action I approve. Returning the item is expressly excluded.\nPurchase reference R8T-SH4YZDTCFMVUQH. Account email: v8testbuyerzv58ra2hczx7vp@sample-retail.example.",
+    "evidence_initial": "A linen shirt exchange into papaya / XS, adjusted on original payment, is the action I approve. Returning the item is expressly excluded.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "initial_turn_only",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_KCD7D5TRW32BJG",
+      "email": "v8testbuyerzv58ra2hczx7vp@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_A3BKSPHVM9J4JF",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_NX2PGM2D8WYJY6": {
+        "product_id": "v8test_product_NX2PGM2D8WYJY6",
+        "name": "Kestrelbay linen shirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_7UCPWZAFEWLT7B",
+            "option": "papaya / XS",
+            "price_cents": 13881,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_VFSNX5BZARZ3JR",
+            "option": "inkstone / M",
+            "price_cents": 12631,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_TL9T4NK6F48GXQ",
+            "option": "frosted teal / S",
+            "price_cents": 13346,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-SH4YZDTCFMVUQH",
+        "user_id": "v8test_user_KCD7D5TRW32BJG",
+        "status": "delivered",
+        "original_payment": "v8test_card_NGG9YR2KD6M25S",
+        "items": [
+          {
+            "item_id": "v8test_sku_VFSNX5BZARZ3JR",
+            "product_id": "v8test_product_NX2PGM2D8WYJY6",
+            "option": "inkstone / M",
+            "price_cents": 12631
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyerzv58ra2hczx7vp@sample-retail.example",
+      "order_id": "R8T-SH4YZDTCFMVUQH",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_VFSNX5BZARZ3JR",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyerzv58ra2hczx7vp@sample-retail.example",
+      "order_id": "R8T-SH4YZDTCFMVUQH",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyerzv58ra2hczx7vp@sample-retail.example",
+      "order_id": "R8T-SH4YZDTCFMVUQH",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-SH4YZDTCFMVUQH",
+      "item_id": "v8test_sku_VFSNX5BZARZ3JR",
+      "new_item_id": "v8test_sku_7UCPWZAFEWLT7B",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1250,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_fallback_missing_payment-00",
+    "family": "exchange_fallback_missing_payment",
+    "split": "test",
+    "initial_message": "Receipt R8T-PQVGMQJJ332HGL. Account email: v8testbuyermzwf28dgkd7jby@sample-retail.example.\nFind a moonstone grey / L linen shirt to replace the one on my original order. I have not stated a funding or refund route. My permission to send this back applies only after you establish that the requested swap is sold out.",
+    "evidence_initial": "Find a moonstone grey / L linen shirt to replace the one on my original order. I have not stated a funding or refund route. My permission to send this back applies only after you establish that the requested swap is sold out.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "variant_literal_with_product_noun_context",
+      "original_order_is_not_payment"
+    ],
+    "customer": {
+      "id": "v8test_user_NT3CMFQWQTZMQV",
+      "email": "v8testbuyermzwf28dgkd7jby@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_77XUE4DVW9AF78",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_T8LCNNQP3788SP": {
+        "product_id": "v8test_product_T8LCNNQP3788SP",
+        "name": "Kestrelbay linen shirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_J9SZEXVPE7CA6A",
+            "option": "inkstone / M",
+            "price_cents": 9914,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_HTHU7HEWQ2GGBH",
+            "option": "frosted teal / S",
+            "price_cents": 10629,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_CVT47Q9Z5EUEZ4",
+            "option": "moonstone grey / L",
+            "price_cents": 11164,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-PQVGMQJJ332HGL",
+        "user_id": "v8test_user_NT3CMFQWQTZMQV",
+        "status": "delivered",
+        "original_payment": "v8test_card_FYPYBQ6L7J6622",
+        "items": [
+          {
+            "item_id": "v8test_sku_J9SZEXVPE7CA6A",
+            "product_id": "v8test_product_T8LCNNQP3788SP",
+            "option": "inkstone / M",
+            "price_cents": 9914
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyermzwf28dgkd7jby@sample-retail.example>.",
+      "order_id": "R8T-PQVGMQJJ332HGL",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_J9SZEXVPE7CA6A",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyermzwf28dgkd7jby@sample-retail.example",
+      "order_id": "R8T-PQVGMQJJ332HGL",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyermzwf28dgkd7jby@sample-retail.example",
+      "order_id": "R8T-PQVGMQJJ332HGL",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-PQVGMQJJ332HGL",
+      "item_id": "v8test_sku_J9SZEXVPE7CA6A",
+      "new_item_id": "v8test_sku_CVT47Q9Z5EUEZ4",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 9914,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_fallback_missing_payment-01",
+    "family": "exchange_fallback_missing_payment",
+    "split": "test",
+    "initial_message": "My replacement choice is the papaya / XS hoodie. Locate the original purchase first, then obtain my payment choice before a proposal. Failure to source the precise variant is the trigger for the return I approve here.\nPurchase reference R8T-7EGUD6S2S72DGF. Account email: v8testbuyercy8benq36wybg2@sample-retail.example.",
+    "evidence_initial": "My replacement choice is the papaya / XS hoodie. Locate the original purchase first, then obtain my payment choice before a proposal. Failure to source the precise variant is the trigger for the return I approve here.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "variant_literal_with_product_noun_context",
+      "original_order_is_not_payment"
+    ],
+    "customer": {
+      "id": "v8test_user_9XM6VDJR5TUN6W",
+      "email": "v8testbuyercy8benq36wybg2@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_F9K8AF4R2H45HL",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_6Y8GN56TRXZMN8": {
+        "product_id": "v8test_product_6Y8GN56TRXZMN8",
+        "name": "Pebblegrove cotton hoodie",
+        "variants": [
+          {
+            "item_id": "v8test_sku_Q8HX3NN7ZQK3D5",
+            "option": "frosted teal / S",
+            "price_cents": 10772,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_ZAD36WFWABCH28",
+            "option": "inkstone / M",
+            "price_cents": 10057,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_EL8TLRS59RQSB3",
+            "option": "papaya / XS",
+            "price_cents": 9217,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-7EGUD6S2S72DGF",
+        "user_id": "v8test_user_9XM6VDJR5TUN6W",
+        "status": "delivered",
+        "original_payment": "v8test_card_VZ4HVXJU9CJXGB",
+        "items": [
+          {
+            "item_id": "v8test_sku_ZAD36WFWABCH28",
+            "product_id": "v8test_product_6Y8GN56TRXZMN8",
+            "option": "inkstone / M",
+            "price_cents": 10057
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyercy8benq36wybg2@sample-retail.example",
+      "order_id": "R8T-7EGUD6S2S72DGF",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_ZAD36WFWABCH28",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8testbuyercy8benq36wybg2@sample-retail.example",
+      "order_id": "R8T-7EGUD6S2S72DGF",
+      "requested_option": "papaya / XS",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyercy8benq36wybg2@sample-retail.example",
+      "order_id": "R8T-7EGUD6S2S72DGF",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-7EGUD6S2S72DGF",
+      "item_id": "v8test_sku_ZAD36WFWABCH28",
+      "new_item_id": "v8test_sku_EL8TLRS59RQSB3",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 10057,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_missing_email-00",
+    "family": "exchange_missing_email",
+    "split": "test",
+    "initial_message": "Receipt R8T-28DGE6W869K4W9.\nArrange a swap to the moonstone grey / L hoodie and use original payment for the adjustment. My account email must be collected first. Should my confirmed replacement be out of stock, I explicitly allow a whole-item return.",
+    "evidence_initial": "Arrange a swap to the moonstone grey / L hoodie and use original payment for the adjustment. My account email must be collected first. Should my confirmed replacement be out of stock, I explicitly allow a whole-item return.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_6G76HV5MLW2N3Z",
+      "email": "v8testbuyer62xzjl37ls9vxn@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_XBXSVXNTSYH7A3",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_CVJLSEWJKC42HF": {
+        "product_id": "v8test_product_CVJLSEWJKC42HF",
+        "name": "Pebblegrove cotton hoodie",
+        "variants": [
+          {
+            "item_id": "v8test_sku_JXRE9A9WHKGH9Y",
+            "option": "inkstone / M",
+            "price_cents": 14167,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_KA4ZHNM2GPEXJA",
+            "option": "frosted teal / S",
+            "price_cents": 14882,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_8TAYLFUD6F76KW",
+            "option": "moonstone grey / L",
+            "price_cents": 13327,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-28DGE6W869K4W9",
+        "user_id": "v8test_user_6G76HV5MLW2N3Z",
+        "status": "delivered",
+        "original_payment": "v8test_card_S6FGS3PD64HQDT",
+        "items": [
+          {
+            "item_id": "v8test_sku_JXRE9A9WHKGH9Y",
+            "product_id": "v8test_product_CVJLSEWJKC42HF",
+            "option": "inkstone / M",
+            "price_cents": 14167
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyer62xzjl37ls9vxn@sample-retail.example>.",
+      "order_id": "R8T-28DGE6W869K4W9",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_JXRE9A9WHKGH9Y",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "R8T-28DGE6W869K4W9",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyer62xzjl37ls9vxn@sample-retail.example",
+      "order_id": "R8T-28DGE6W869K4W9",
+      "requested_option": "moonstone grey / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-28DGE6W869K4W9",
+      "item_id": "v8test_sku_JXRE9A9WHKGH9Y",
+      "new_item_id": "v8test_sku_8TAYLFUD6F76KW",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -840,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-exchange_missing_email-01",
+    "family": "exchange_missing_email",
+    "split": "test",
+    "initial_message": "I want the softshell vest in papaya / XS instead, with the difference on original payment. I have not supplied the account mailbox you need. I approve moving to a return only if the particular exchange option I choose is unavailable.\nPurchase reference R8T-CC9TEUDJ7NTVY9.",
+    "evidence_initial": "I want the softshell vest in papaya / XS instead, with the difference on original payment. I have not supplied the account mailbox you need. I approve moving to a return only if the particular exchange option I choose is unavailable.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "variant_literal_with_product_noun_context"
+    ],
+    "customer": {
+      "id": "v8test_user_ASN9T7JYUBNFL2",
+      "email": "v8testbuyer4zjbuhrfsjjuvj@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_YZ63T3X49RQB62",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_85YDVAMZHVTTHF": {
+        "product_id": "v8test_product_85YDVAMZHVTTHF",
+        "name": "Estuary softshell vest",
+        "variants": [
+          {
+            "item_id": "v8test_sku_JJ3MV2HBFT8J22",
+            "option": "inkstone / M",
+            "price_cents": 11603,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_HWYGL35ESXRT9C",
+            "option": "papaya / XS",
+            "price_cents": 13578,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_9XNTZ93JFCWTHC",
+            "option": "frosted teal / S",
+            "price_cents": 12318,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-CC9TEUDJ7NTVY9",
+        "user_id": "v8test_user_ASN9T7JYUBNFL2",
+        "status": "delivered",
+        "original_payment": "v8test_card_DQ5WMU7UTRW7BS",
+        "items": [
+          {
+            "item_id": "v8test_sku_JJ3MV2HBFT8J22",
+            "product_id": "v8test_product_85YDVAMZHVTTHF",
+            "option": "inkstone / M",
+            "price_cents": 11603
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyer4zjbuhrfsjjuvj@sample-retail.example",
+      "order_id": "R8T-CC9TEUDJ7NTVY9",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_JJ3MV2HBFT8J22",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "R8T-CC9TEUDJ7NTVY9",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8testbuyer4zjbuhrfsjjuvj@sample-retail.example",
+      "order_id": "R8T-CC9TEUDJ7NTVY9",
+      "requested_option": "papaya / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8T-CC9TEUDJ7NTVY9",
+      "item_id": "v8test_sku_JJ3MV2HBFT8J22",
+      "new_item_id": "v8test_sku_HWYGL35ESXRT9C",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1975,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-missing_email_payment-00",
+    "family": "missing_email_payment",
+    "split": "test",
+    "initial_message": "Receipt R8T-M9GXFY2DMWKKVB.\nReturn the softshell vest from the original order. Neither my account email nor my preferred refund destination is given.",
+    "evidence_initial": "Return the softshell vest from the original order. Neither my account email nor my preferred refund destination is given.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "original_order_is_not_payment"
+    ],
+    "customer": {
+      "id": "v8test_user_FTBBXXM4AMF8AP",
+      "email": "v8testbuyeryn9eae324pqpsj@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_9UUKDQVZTLD36W",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_W6LPX7MKFE8CST": {
+        "product_id": "v8test_product_W6LPX7MKFE8CST",
+        "name": "Estuary softshell vest",
+        "variants": [
+          {
+            "item_id": "v8test_sku_QBQV768TETKDVC",
+            "option": "moonstone grey / L",
+            "price_cents": 15115,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_VAQEU685UPL28G",
+            "option": "inkstone / M",
+            "price_cents": 13140,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_38C9YWX4BKD5VS",
+            "option": "frosted teal / S",
+            "price_cents": 13855,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-M9GXFY2DMWKKVB",
+        "user_id": "v8test_user_FTBBXXM4AMF8AP",
+        "status": "delivered",
+        "original_payment": "v8test_card_5B6W3YTUZKX4GK",
+        "items": [
+          {
+            "item_id": "v8test_sku_VAQEU685UPL28G",
+            "product_id": "v8test_product_W6LPX7MKFE8CST",
+            "option": "inkstone / M",
+            "price_cents": 13140
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My mailbox is <v8testbuyeryn9eae324pqpsj@sample-retail.example>.",
+      "order_id": "R8T-M9GXFY2DMWKKVB",
+      "reason": "I no longer have any need for that purchase.",
+      "new_option": "moonstone grey / L",
+      "item_id": "v8test_sku_VAQEU685UPL28G",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "R8T-M9GXFY2DMWKKVB",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyeryn9eae324pqpsj@sample-retail.example",
+      "order_id": "R8T-M9GXFY2DMWKKVB",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email",
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-M9GXFY2DMWKKVB",
+      "item_id": "v8test_sku_VAQEU685UPL28G",
+      "new_item_id": "v8test_sku_QBQV768TETKDVC",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 13140,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-fresh-test-missing_email_payment-01",
+    "family": "missing_email_payment",
+    "split": "test",
+    "initial_message": "The original item, a overshirt, is to be returned. Ask for my email and refund choice; the word original identifies the item only.\nPurchase reference R8T-8ZVTKNZ3P87MWH.",
+    "evidence_initial": "The original item, a overshirt, is to be returned. Ask for my email and refund choice; the word original identifies the item only.",
+    "coverage_tags": [
+      "verbatim_initial_quote",
+      "latest_reply_quote",
+      "original_order_is_not_payment"
+    ],
+    "customer": {
+      "id": "v8test_user_HUVWLZJVGTSZ8V",
+      "email": "v8testbuyeravmf6d8hdsdwl2@sample-retail.example",
+      "gift_card": {
+        "id": "v8test_gift_8X4C24LM7EQVS8",
+        "balance_cents": 19900
+      }
+    },
+    "products": {
+      "v8test_product_6FCP27XY8PKN7F": {
+        "product_id": "v8test_product_6FCP27XY8PKN7F",
+        "name": "Harborwick ripstop overshirt",
+        "variants": [
+          {
+            "item_id": "v8test_sku_KKWBTTJFLELUFW",
+            "option": "inkstone / M",
+            "price_cents": 12627,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_99R3NHVLZ8KX2E",
+            "option": "papaya / XS",
+            "price_cents": 13877,
+            "available": true
+          },
+          {
+            "item_id": "v8test_sku_BQ62SRUTS8WRPU",
+            "option": "frosted teal / S",
+            "price_cents": 13342,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8T-8ZVTKNZ3P87MWH",
+        "user_id": "v8test_user_HUVWLZJVGTSZ8V",
+        "status": "delivered",
+        "original_payment": "v8test_card_KAPS5RD3BV98ZS",
+        "items": [
+          {
+            "item_id": "v8test_sku_KKWBTTJFLELUFW",
+            "product_id": "v8test_product_6FCP27XY8PKN7F",
+            "option": "inkstone / M",
+            "price_cents": 12627
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Email = v8testbuyeravmf6d8hdsdwl2@sample-retail.example",
+      "order_id": "R8T-8ZVTKNZ3P87MWH",
+      "reason": "I submitted the order accidentally.",
+      "new_option": "papaya / XS",
+      "item_id": "v8test_sku_KKWBTTJFLELUFW",
+      "payment_method": "Use the original payment source for the refund or adjustment.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "R8T-8ZVTKNZ3P87MWH",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8testbuyeravmf6d8hdsdwl2@sample-retail.example",
+      "order_id": "R8T-8ZVTKNZ3P87MWH",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email",
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8T-8ZVTKNZ3P87MWH",
+      "item_id": "v8test_sku_KKWBTTJFLELUFW",
+      "new_item_id": "v8test_sku_99R3NHVLZ8KX2E",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 12627,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  }
+]

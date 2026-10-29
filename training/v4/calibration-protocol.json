@@ -1,0 +1,21 @@
+{
+  "method": "Balanced conditional action/payment-span preference plus chosen NLL",
+  "beta": 2.0,
+  "margin": 0.5,
+  "sft_weight": 1.0,
+  "learning_rate": 3e-06,
+  "seed": 2026102744,
+  "updates": 48,
+  "epochs": 2,
+  "batch_size": 1,
+  "projection_window": 256,
+  "max_seq_length": 3072,
+  "initialization": "data/finetuning/retail-qlora-v4/recovery",
+  "output": "data/finetuning/retail-qlora-v4/calibration",
+  "best_path": "data/finetuning/retail-qlora-v4/best-calibration",
+  "selection": "Validation-only compare recovery696 vs calibration744. Preserve exchange/H/clarification/return/overall counts and question repeats, zero exchange-as-return; then prefer fallback, overall, fewer questions/calls. Frozen choice helper defines exact rule. ",
+  "pair_count": 24,
+  "distinct_contexts": 20,
+  "source_worlds": 12,
+  "scope": "Training worlds only; stock/return permission counterfactuals share worlds. Eight return, eight exchange and eight handoff labels. Same-tool gift-card contrasts use only payment-value tokens as reward, never identical action tokens. Two repetitions of one seeded shuffled 24-pair order; no new independent tasks claimed. "
+}

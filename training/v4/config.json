@@ -1,0 +1,39 @@
+{
+  "model": "data/models/qwen3-4b-mlx",
+  "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+  "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+  "data": "training/v4/datasets",
+  "adapter_path": "data/finetuning/retail-qlora-v4/run",
+  "best_path": "data/finetuning/retail-qlora-v4/best",
+  "seed": 202610274,
+  "iters": 480,
+  "num_layers": 8,
+  "batch_size": 1,
+  "learning_rate": 3e-05,
+  "lora_parameters": {
+    "rank": 8,
+    "dropout": 0.0,
+    "scale": 16.0
+  },
+  "max_seq_length": 2560,
+  "steps_per_report": 40,
+  "steps_per_eval": 120,
+  "save_every": 240,
+  "tool_name_loss_weight": 2.0,
+  "generation_max_tokens": 180,
+  "generation_temperature": 0,
+  "max_agent_steps": 8,
+  "checkpoint_candidates_completed_updates": [
+    240,
+    480
+  ],
+  "checkpoint_selection": "Export after exactly 240/480 completed optimizer updates; finish training and exit before loading validation models. Select on 32 full validation tasks: zero available-exchange return errors, minimum success rate across available exchanges/fallback/handoff, overall success, fewer repeated-field attempts, then lower validation loss. No test inference before selection.",
+  "evaluation_arms": [
+    "previous_old_flow",
+    "previous_new_flow",
+    "base_new_flow",
+    "qlora_v4"
+  ],
+  "runtime_policy": "Previous adapter old vs new flow separates engineering; previous vs new adapter under the identical v4 flow measures the bundled training recipe. Base + v4 is a quality comparator. All arms use greedy unconstrained generation and eight total model calls.",
+  "promotion_rule": "V4 overall, exchange completion, fallback and handoff success must each be at least both new-flow comparators; repeated field attempts lower than previous_new_flow; zero available-exchange return attempts; all confirmation invariants. No claim of production readiness."
+}

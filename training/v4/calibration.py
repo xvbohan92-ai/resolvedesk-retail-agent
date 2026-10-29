@@ -1,0 +1,471 @@
+"""Balanced counterfactual calibration of stock, authorization and payment choice."""
+
+import argparse
+import copy
+import json
+import math
+import random
+import shutil
+import tempfile
+import time
+from pathlib import Path
+
+from resolve_desk.decision_facts import augment_messages
+from resolve_desk.progress import ProgressStore
+from training.common import ROOT, sha
+from training.v4.common import REPORTS
+from training.v4.fixtures import load_cases
+from training.v4.prepare import prefix
+from training.v4.prepare import row as plain_row
+
+PAIR_PATH = ROOT / "training/v4/datasets/calibration.jsonl"
+PROTOCOL = ROOT / "training/v4/calibration-protocol.json"
+MANIFEST = ROOT / "reports/v4/calibration-manifest.json"
+
+
+def row(state, action, origin):
+    example = plain_row(state, action, origin)
+    example["messages"] = augment_messages(example["messages"][:-1]) + example["messages"][-1:]
+    return example
+
+
+def prepare():
+    from training.v3.prepare import finish
+    from training.v4.recovery import MANIFEST as previous_manifest
+    from training.v4.recovery import verify_protocol as verify_previous
+
+    assert not MANIFEST.exists()
+    assert not (REPORTS / "evaluation-partial.json").exists() and not (REPORTS / "evaluation.json").exists()
+    verify_previous()
+    previous = json.loads((REPORTS / "recovery-updates.json").read_text())
+    assert len(json.loads((REPORTS / "validation-696.json").read_text())["records"]) == 32
+    pairs, audits = [], []
+
+    def add(state, chosen, rejected, case, scenario, field=None):
+        pairs.append(
+            {
+                "chosen": row(state, chosen, scenario),
+                "rejected": row(state, rejected, scenario),
+                "source_case_id": case["id"],
+                "category": scenario,
+                "contrast_field": field,
+            }
+        )
+
+    with tempfile.TemporaryDirectory() as tmp:
+        store = ProgressStore(Path(tmp) / "counterfactual.sqlite")
+        for original in load_cases("train"):
+            if original["family"] == "exchange_fallback":
+                for scenario, available, authorized, kind in [
+                    ("unavailable_authorized_return", False, True, "return"),
+                    ("available_preserve_exchange", True, True, "exchange"),
+                    ("unavailable_no_return_authorization", False, False, "handoff"),
+                ]:
+                    case = copy.deepcopy(original)
+                    variants = next(iter(case["products"].values()))["variants"]
+                    target = next(v for v in variants if v["option"] == case["answers"]["new_option"])
+                    target["available"] = available
+                    # Only observable stock and the actual customer instruction change.
+                    stem = (
+                        f"Please exchange item {case['answers']['item_id']} from order "
+                        f"{case['answers']['order_id']} for {target['option']}. "
+                        f"My email is {case['answers']['email']}. Use original payment. "
+                    )
+                    clause = (
+                        "If that exact option is unavailable, return the item and refund original payment. "
+                        "Do not substitute another variant."
+                        if authorized
+                        else "If that exact option is unavailable, do not return the item "
+                        "or substitute another variant; hand this to a person."
+                    )
+                    case["initial_message"] = stem + clause
+                    case["family"] = {
+                        "return": "exchange_fallback",
+                        "exchange": "exchange_fallback_available",
+                        "handoff": "exchange_unavailable",
+                    }[kind]
+                    old_price = case["orders"][0]["items"][0]["price_cents"]
+                    case["expected"].update(
+                        kind=kind,
+                        new_item_id=target["item_id"],
+                        amount_cents=target["price_cents"] - old_price if kind == "exchange" else old_price,
+                        target_status={
+                            "return": "return requested",
+                            "exchange": "exchange requested",
+                            "handoff": "delivered",
+                        }[kind],
+                    )
+                    state, chosen, _, questions = prefix(store, case)
+                    bad_return = {
+                        "tool": "propose_return",
+                        "arguments": {
+                            "order_id": case["answers"]["order_id"],
+                            "item_id": case["answers"]["item_id"],
+                            "payment_method": "original",
+                        },
+                    }
+                    if kind == "return":
+                        add(
+                            state,
+                            chosen,
+                            {"tool": "handoff", "arguments": {"reason": "Variant unavailable."}},
+                            original,
+                            scenario,
+                        )
+                        alt = next(
+                            v
+                            for v in variants
+                            if v["available"] and v["item_id"] != case["answers"]["item_id"]
+                        )
+                        add(
+                            state,
+                            chosen,
+                            {
+                                "tool": "propose_exchange",
+                                "arguments": {**bad_return["arguments"], "new_item_id": alt["item_id"]},
+                            },
+                            original,
+                            scenario,
+                        )
+                    else:
+                        add(state, chosen, bad_return, original, scenario)
+                    audits.append(
+                        {
+                            "source_case_id": original["id"],
+                            "scenario": scenario,
+                            **finish(store, case, state, chosen, questions),
+                        }
+                    )
+            elif original["family"] in {"exchange_shortfall", "exchange_gift"}:
+                state, chosen, _, questions = prefix(store, original)
+                if original["family"] == "exchange_shortfall":
+                    rejected = {
+                        "tool": "propose_return",
+                        "arguments": {
+                            "order_id": original["answers"]["order_id"],
+                            "item_id": original["answers"]["item_id"],
+                            "payment_method": original["answers"]["payment_method"],
+                        },
+                    }
+                    field = None
+                else:
+                    rejected = copy.deepcopy(chosen)
+                    rejected["arguments"]["payment_method"] = "original"
+                    field = "payment_method"
+                add(state, chosen, rejected, original, original["family"], field)
+                audits.append(
+                    {
+                        "source_case_id": original["id"],
+                        "scenario": original["family"],
+                        **finish(store, original, state, chosen, questions),
+                    }
+                )
+    assert len(pairs) == 24 and all(a["task_success"] for a in audits)
+    PAIR_PATH.write_text("".join(json.dumps(p) + "\n" for p in pairs))
+    (REPORTS / "calibration-reference-audit.json").write_text(json.dumps(audits, indent=2) + "\n")
+    config = {
+        "method": "Balanced conditional action/payment-span preference plus chosen NLL",
+        "beta": 2.0,
+        "margin": 0.5,
+        "sft_weight": 1.0,
+        "learning_rate": 0.000003,
+        "seed": 2026102744,
+        "updates": 48,
+        "epochs": 2,
+        "batch_size": 1,
+        "projection_window": 256,
+        "max_seq_length": 3072,
+        "initialization": previous["protocol"]["output"],
+        "output": "data/finetuning/retail-qlora-v4/calibration",
+        "best_path": "data/finetuning/retail-qlora-v4/best-calibration",
+        "selection": (
+            "Validation-only compare recovery696 vs calibration744. Preserve "
+            "exchange/H/clarification/return/overall counts and question repeats, zero "
+            "exchange-as-return; then prefer fallback, overall, fewer questions/calls. Frozen "
+            "choice helper defines exact rule. "
+        ),
+        "pair_count": 24,
+        "distinct_contexts": 20,
+        "source_worlds": 12,
+        "scope": (
+            "Training worlds only; stock/return permission counterfactuals share worlds. Eight "
+            "return, eight exchange and eight handoff labels. Same-tool gift-card contrasts use "
+            "only payment-value tokens as reward, never identical action tokens. Two repetitions of "
+            "one seeded shuffled 24-pair order; no new independent tasks claimed. "
+        ),
+    }
+    PROTOCOL.write_text(json.dumps(config, indent=2) + "\n")
+    files = [
+        Path(__file__),
+        PROTOCOL,
+        PAIR_PATH,
+        ROOT / "training/v4/calibration_select.py",
+        ROOT / "training/v4/calibration_choice.py",
+        REPORTS / "calibration-reference-audit.json",
+    ]
+    manifest = {
+        "previous_manifest_sha256": sha(previous_manifest),
+        "initial_weights_sha256": previous["adapter_sha256"],
+        "previous_validation_sha256": sha(REPORTS / "validation-696.json"),
+        "files": {str(p.relative_to(ROOT)): sha(p) for p in files},
+        "pair_count": 24,
+        "test_inference_started_at_freeze": False,
+    }
+    MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n")
+    print(json.dumps({"pairs": 24, "epochs": 2, "reference_audits": len(audits)}))
+
+
+def verify_protocol():
+    from training.v4.recovery import MANIFEST as previous_manifest
+    from training.v4.recovery import verify_protocol as verify_previous
+
+    verify_previous()
+    manifest = json.loads(MANIFEST.read_text())
+    assert manifest["previous_manifest_sha256"] == sha(previous_manifest)
+    assert manifest["previous_validation_sha256"] == sha(REPORTS / "validation-696.json")
+    for name, digest in manifest["files"].items():
+        assert sha(ROOT / name) == digest, name
+    return manifest
+
+
+def train(preflight=False):
+    from functools import partial
+
+    import mlx.core as mx
+    import mlx.nn as nn
+    import mlx.optimizers as optim
+    from mlx.utils import tree_flatten, tree_map
+    from mlx_lm import load
+    from mlx_lm.tuner.trainer import grad_checkpoint
+    from mlx_lm.tuner.utils import linear_to_lora_layers
+    from transformers import AutoTokenizer
+
+    from training.v4.tokenization import encode_row
+
+    manifest = verify_protocol()
+    config = json.loads(PROTOCOL.read_text())
+    sft = json.loads((ROOT / "training/v4/config.json").read_text())
+    origin = ROOT / config["initialization"]
+    assert sha(origin / "adapters.safetensors") == manifest["initial_weights_sha256"]
+    destination = ROOT / (config["output"] + ("-preflight" if preflight else ""))
+    destination.mkdir(parents=True, exist_ok=False)
+    random.seed(config["seed"])
+    mx.random.seed(config["seed"])
+    wired_limit = min(mx.device_info()["max_recommended_working_set_size"], 6 * 1024**3)
+    previous_wired_limit = mx.set_wired_limit(wired_limit)
+    previous_cache_limit = mx.set_cache_limit(256 * 1024**2)
+    model, _ = load(ROOT / sft["model"], trust_remote_code=False)
+    model.freeze()
+    linear_to_lora_layers(model, sft["num_layers"], sft["lora_parameters"])
+    model.load_weights(str(origin / "adapters.safetensors"), strict=False)
+    grad_checkpoint(model.layers[0])
+    model.train()
+    initial = {k: mx.array(v) for k, v in tree_flatten(model.trainable_parameters())}
+    mx.eval(initial)
+    hf = AutoTokenizer.from_pretrained(ROOT / sft["model"], local_files_only=True, trust_remote_code=False)
+    pairs = [json.loads(line) for line in PAIR_PATH.read_text().splitlines()]
+    random.shuffle(pairs)
+
+    def encode(example, pair):
+        e = encode_row(example, hf, 2)
+        if pair.get("contrast_field"):
+            rendered = hf.apply_chat_template(example["messages"], enable_thinking=False, tokenize=False)
+            offsets = hf(rendered, add_special_tokens=False, return_offsets_mapping=True)["offset_mapping"]
+            content = example["messages"][-1]["content"]
+            marker = json.dumps(pair["contrast_field"]) + ":"
+            begin = rendered.rfind(content) + content.index(marker) + len(marker) + 1
+            value = json.dumps(json.loads(content)["arguments"][pair["contrast_field"]])
+            end = begin + len(value) - 2
+            e["weights"] = [
+                0.0 if i < e["prompt_length"] else (2.0 if a < end and b > begin else 1.0)
+                for i, (a, b) in enumerate(offsets[1:], 1)
+            ]
+        return e
+
+    encoded = [(encode(p["chosen"], p), encode(p["rejected"], p), p) for p in pairs]
+    assert max(len(e["tokens"]) for pair in encoded for e in pair[:2]) <= config["max_seq_length"]
+    window = config["projection_window"]
+
+    def batch(example):
+        size = len(example["tokens"])
+        padded = 1 + 32 * ((size + 31) // 32)
+        tokens = example["tokens"] + [0] * (padded - size)
+        weights = example["weights"] + [0.0] * (padded - size)
+        assert not any(weights[:-window]), "A supervised target would be dropped"
+        full_mask = [float(w > 0) for w in weights[-window:]]
+        action_mask = [float(w == 2) for w in weights[-window:]]
+        assert sum(action_mask) and sum(full_mask)
+        return mx.array([tokens]), mx.array([full_mask]), mx.array([action_mask])
+
+    # Audit every train pair before any updates; only output projection is shortened.
+    for chosen, rejected, _ in encoded:
+        batch(chosen)
+        batch(rejected)
+
+    def stats(model, tokens, full_mask, action_mask):
+        hidden = model.model(tokens[:, :-1])[:, -window:]
+        assert model.args.tie_word_embeddings
+        logits = model.model.embed_tokens.as_linear(hidden)
+        ce = nn.losses.cross_entropy(logits, tokens[:, -window:]).astype(mx.float32)
+        return -(ce * action_mask).sum() / action_mask.sum(), -(ce * full_mask).sum() / full_mask.sum()
+
+    def rejected_logp(model, tokens, full_mask, action_mask):
+        return stats(model, tokens, full_mask, action_mask)[0]
+
+    def chosen_loss(model, tokens, full_mask, action_mask, rejected_value):
+        action_lp, full_lp = stats(model, tokens, full_mask, action_mask)
+        z = config["beta"] * (action_lp - mx.stop_gradient(rejected_value)) - config["margin"]
+        loss = mx.logaddexp(mx.array(0.0), -z) - config["sft_weight"] * full_lp
+        return loss, (action_lp, full_lp, z)
+
+    reject_grad = nn.value_and_grad(model, rejected_logp)
+    choose_grad = nn.value_and_grad(model, chosen_loss)
+
+    @partial(mx.compile, inputs=model.state, outputs=model.state)
+    def compiled_rejected(tokens, full_mask, action_mask):
+        return reject_grad(model, tokens, full_mask, action_mask)
+
+    @partial(mx.compile, inputs=model.state, outputs=model.state)
+    def compiled_chosen(tokens, full_mask, action_mask, rejected_value):
+        return choose_grad(model, tokens, full_mask, action_mask, rejected_value)
+
+    gradient_audit = None
+    projection_audit = None
+    if preflight:
+        theta = mx.array([0.2, -0.7, 0.9])
+
+        def fa(t):
+            return nn.log_softmax(t)[0]
+
+        def fr(t):
+            return nn.log_softmax(2 * t)[1]
+
+        def fp(t):
+            return (nn.log_softmax(t)[0] + nn.log_softmax(t)[2]) / 2
+
+        def objective(t):
+            z = config["beta"] * (fa(t) - fr(t)) - config["margin"]
+            return mx.logaddexp(mx.array(0.0), -z) - config["sft_weight"] * fp(t)
+
+        rv = fr(theta)
+
+        def chosen_only(t):
+            z = config["beta"] * (fa(t) - rv) - config["margin"]
+            return mx.logaddexp(mx.array(0.0), -z) - config["sft_weight"] * fp(t)
+
+        z = config["beta"] * (fa(theta) - rv) - config["margin"]
+        combined = mx.grad(chosen_only)(theta) + config["beta"] * mx.sigmoid(-z) * mx.grad(fr)(theta)
+        exact = mx.grad(objective)(theta)
+        error = float(mx.max(mx.abs(combined - exact)))
+        eps = mx.array([0.001, 0.0, 0.0])
+        finite = float((objective(theta + eps) - objective(theta - eps)) / 0.002)
+        assert error < 1e-6 and abs(finite - float(exact[0])) < 1e-3
+        gradient_audit = {
+            "chain_rule_max_absolute_error": error,
+            "finite_difference_error": abs(finite - float(exact[0])),
+        }
+        tokens, fm, am = batch(encoded[0][0])
+        full_logits = model(tokens[:, :-1])[:, -window:]
+        ce = nn.losses.cross_entropy(full_logits, tokens[:, -window:]).astype(mx.float32)
+        full_stats = (-(ce * am).sum() / am.sum(), -(ce * fm).sum() / fm.sum())
+        tail_stats = stats(model, tokens, fm, am)
+        mx.eval(full_stats, tail_stats)
+        projection_error = max(abs(float(a) - float(b)) for a, b in zip(full_stats, tail_stats, strict=True))
+        assert projection_error < 0.01
+        projection_audit = {
+            "window": window,
+            "all_train_targets_covered": True,
+            "mean_logp_max_error_vs_full_projection": projection_error,
+        }
+        del full_logits, ce, full_stats, tail_stats
+        mx.clear_cache()
+
+    optimizer = optim.Adam(learning_rate=config["learning_rate"])
+    metrics, started = [], time.perf_counter()
+    for iteration, (chosen, rejected, pair) in enumerate(
+        encoded[:1] if preflight else encoded * config["epochs"], 1
+    ):
+        ca, cm, cam = batch(chosen)
+        ra, rm, ram = batch(rejected)
+        lr, gr = compiled_rejected(ra, rm, ram)
+        mx.eval(lr, gr)
+        (loss, (lc, lp, z)), gc = compiled_chosen(ca, cm, cam, lr)
+        mx.eval(loss, lc, lp, z, gc)
+        coefficient = config["beta"] / (1 + math.exp(max(-60, min(60, float(z)))))
+        combined = tree_map(lambda a, b, coefficient=coefficient: a + coefficient * b, gc, gr)
+        optimizer.update(model, combined)
+        mx.eval(model.parameters(), optimizer.state)
+        record = {
+            "iteration": iteration,
+            "category": pair["category"],
+            "contrast_field": pair.get("contrast_field"),
+            "loss": float(loss),
+            "chosen_action_logp": float(lc),
+            "rejected_action_logp": float(lr),
+            "chosen_completion_nll": -float(lp),
+            "pre_update_mean_logp_gap": float(lc) - float(lr),
+            "elapsed_seconds": round(time.perf_counter() - started, 3),
+        }
+        if preflight:
+            a, p = stats(model, ca, cm, cam)
+            b = rejected_logp(model, ra, rm, ram)
+            mx.eval(a, p, b)
+            record["post_update_mean_logp_gap"] = float(a) - float(b)
+            record["post_update_chosen_completion_nll"] = -float(p)
+            assert record["post_update_mean_logp_gap"] > record["pre_update_mean_logp_gap"]
+            assert record["post_update_chosen_completion_nll"] < record["chosen_completion_nll"]
+        metrics.append(record)
+        if iteration == 1 or iteration % 10 == 0 or preflight:
+            print(json.dumps(record), flush=True)
+        (destination / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n")
+        del gc, gr, combined
+        mx.clear_cache()
+    final = dict(tree_flatten(model.trainable_parameters()))
+    mx.save_safetensors(str(destination / "adapters.safetensors"), final)
+    shutil.copyfile(origin / "adapter_config.json", destination / "adapter_config.json")
+    delta = (
+        sum(
+            float(mx.sum((final[k].astype(mx.float32) - initial[k].astype(mx.float32)) ** 2)) for k in initial
+        )
+        ** 0.5
+    )
+    assert delta > 0
+    report = {
+        "protocol": config,
+        "manifest": manifest,
+        "metrics": metrics,
+        "completed_updates": len(metrics),
+        "trainable_parameters": sum(int(v.size) for v in final.values()),
+        "adapter_l2_change_from_recovery80": delta,
+        "adapter_sha256": sha(destination / "adapters.safetensors"),
+        "elapsed_seconds": round(time.perf_counter() - started, 2),
+        "peak_memory_bytes": mx.get_peak_memory(),
+        "preflight_only": preflight,
+        "gradient_audit": gradient_audit,
+        "projection_audit": projection_audit,
+        "previous_wired_limit": previous_wired_limit,
+        "wired_limit_bytes": wired_limit,
+        "cache_limit_bytes": 256 * 1024**2,
+        "previous_cache_limit": previous_cache_limit,
+        "execution": (
+            "Compiled gradient with mutable input/output state capture; masked 32-token padding. "
+            "Wired memory capped at 6 GiB, cache at 256 MiB, cleared after each pair. "
+            "Recovery80 initialization; no preflight weights reused."
+        ),
+        "test_used_for_selection": False,
+        "cloud_compute_used": False,
+    }
+    (REPORTS / ("calibration-preflight.json" if preflight else "calibration-updates.json")).write_text(
+        json.dumps(report, indent=2) + "\n"
+    )
+    print(
+        json.dumps({k: v for k, v in report.items() if k not in {"metrics", "manifest", "protocol"}}),
+        flush=True,
+    )
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("mode", choices=["prepare", "preflight", "train"])
+    args = parser.parse_args()
+    prepare() if args.mode == "prepare" else train(args.mode == "preflight")

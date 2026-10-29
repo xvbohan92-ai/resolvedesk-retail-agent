@@ -1,0 +1,35 @@
+{
+  "scope": "Exact CPU NumPy/safetensors comparison; no GPU/model inference and no tensor values exported.",
+  "stages": {
+    "preflight": {
+      "stage": "preflight",
+      "status": "pass",
+      "checked_at_utc": "2026-10-28T19:09:32.625772+00:00",
+      "source_path": "data/finetuning/retail-qlora-v6_1/best/adapters.safetensors",
+      "target_path": "data/finetuning/retail-qlora-v7/run-preflight/initial.safetensors",
+      "source_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+      "target_sha256": "748229390c3416ffd09e71c23723d6cc15832acc5b0c76d66a67b1b90a4aa5d9",
+      "expected_source_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+      "manifest_sha256": "1bbb3aba1db64e0962842411d9cb5872269dde01922c2d8731de135bbc8908ae",
+      "config_sha256": "199d48a5e96da7e790e60cbc76935c16971229173b69c4949cab0516814f72c5",
+      "audit_source_sha256": "f19b87dac03d5158083dacc2406b0ae263f10a10a8f51c84f3f6c39c4ce50082",
+      "source_tensor_count": 112,
+      "target_tensor_count": 112,
+      "source_parameter_count": 3670016,
+      "target_parameter_count": 3670016,
+      "exact_key_set": true,
+      "source_only_keys": [],
+      "target_only_keys": [],
+      "shape_mismatch_keys": [],
+      "dtype_mismatch_keys": [],
+      "value_mismatch_keys": [],
+      "all_source_values_finite": true,
+      "all_target_values_finite": true,
+      "exact_tensor_equality": true,
+      "gpu_modules_loaded": [],
+      "cpu_numpy_safetensors_only": true,
+      "planned_formal_updates": 1344,
+      "tensor_contents_exported": false
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "run_id": "resolvedesk-cuda-eval-002",
+  "status": "complete_verified_runtime_released",
+  "analysis_plan_sha256": "a547fd0790ad2003fcd3dc0a990b581484bf5decd30222c87499237fd236f704",
+  "completed_records": 96,
+  "completed_records_scope": "96 full records,509 completed calls; independently replayed with six verified figure groups",
+  "evaluation_started": true,
+  "updated_at_utc": "2026-10-29T02:03:12.975625+00:00",
+  "compute_observation": "reports/cuda-eval2/[private operator evidence omitted]",
+  "process_deadline_utc": "2026-10-29T03:20:00+00:00",
+  "runtime_disconnect_deadline_utc": "2026-10-29T03:30:00+00:00",
+  "raw_snapshot_audit": "reports/cuda-eval2/cloud-evidence/latest.json",
+  "model_process_complete": true,
+  "runtime_released": true,
+  "active_sessions_observed": 0,
+  "model_quality_report": "docs/cuda-evaluation2.zh-CN.md",
+  "actual_exact_job_cost_known": false,
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "510ad12e31cc8f46fd1bff147d36d4a9ea73cc4c462eaae1bdb1eee92780ed65",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Private non-retail account/authorization and machine-path metadata omitted. Original verification claims refer to historical unredacted local artifacts, not these public bytes."
+  }
+}

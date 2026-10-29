@@ -1,0 +1,7 @@
+{
+  "status": "development_only_retired_before_heldout",
+  "reason": "Validation found stale-evidence clarification failures and malformed option slots; exact aliases also reduced input uniqueness. Preserve the original training and validation. Final controller calibration and a fresh unique test are under v6_1.",
+  "test_model_inference_run": false,
+  "training_updates_sha256": "f3195417fb4ecc01f2ec431907eaaaa59adc197d214e2db94ac92ab0dbdfa999",
+  "selected_development_checkpoint": 384
+}

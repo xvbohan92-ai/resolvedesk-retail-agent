@@ -1,0 +1,667 @@
+{
+  "evaluation_sha256": "70e46fe0c307a6005050f75fd14c0535f878d2210969bfa88d52f09a7ae27f2c",
+  "training_sha256": "42a55d54732286c6c1b6fee20927a34782a405a8012ec07c6ab9d9f0d666ba66",
+  "analysis_source_sha256": "2d43dab505b5f9e21dac0c2401ca0d9809b16538efdb49be1ce64dd5e64d53c5",
+  "shared_visualization_sha256": "c7b9b200402efbd124c743b277747be4f1c7fa1e409c0e1fdba3aedc563d2b54",
+  "summary": {
+    "base": {
+      "tasks": 48,
+      "task_success": 21,
+      "exchange_related_tasks": 24,
+      "exchange_related_success": 7,
+      "fulfillable_exchange_tasks": 15,
+      "fulfillable_exchange_success": 6,
+      "required_clarifications": 15,
+      "clarifications_obtained": 2,
+      "model_calls": 227,
+      "schema_valid": 226,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 50,
+      "output_tokens": 6520,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 16133.665,
+      "median_model_calls": 4.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 2,
+      "ordinary_exchange_tasks": 3,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 12,
+      "direct_return_success": 6
+    },
+    "qlora_v2": {
+      "tasks": 48,
+      "task_success": 23,
+      "exchange_related_tasks": 24,
+      "exchange_related_success": 3,
+      "fulfillable_exchange_tasks": 15,
+      "fulfillable_exchange_success": 0,
+      "required_clarifications": 15,
+      "clarifications_obtained": 8,
+      "model_calls": 202,
+      "schema_valid": 202,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 1,
+      "output_tokens": 4728,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 15799.96,
+      "median_model_calls": 4.0,
+      "exchange_as_return": 15,
+      "unauthorized_return": 21,
+      "ordinary_exchange_tasks": 3,
+      "ordinary_exchange_success": 0,
+      "direct_return_tasks": 12,
+      "direct_return_success": 9
+    },
+    "qlora_v3": {
+      "tasks": 48,
+      "task_success": 20,
+      "exchange_related_tasks": 24,
+      "exchange_related_success": 6,
+      "fulfillable_exchange_tasks": 15,
+      "fulfillable_exchange_success": 6,
+      "required_clarifications": 15,
+      "clarifications_obtained": 7,
+      "model_calls": 301,
+      "schema_valid": 299,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 18,
+      "output_tokens": 7249,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 14515.845,
+      "median_model_calls": 7.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 1,
+      "ordinary_exchange_tasks": 3,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 12,
+      "direct_return_success": 8
+    }
+  },
+  "paired": {
+    "previous_to_new": {
+      "improved": 6,
+      "regressed": 9,
+      "both_pass": 14,
+      "both_fail": 19
+    },
+    "base_to_new": {
+      "improved": 7,
+      "regressed": 8,
+      "both_pass": 13,
+      "both_fail": 20
+    }
+  },
+  "family_success": {
+    "cancel": {
+      "base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "missing_reason": {
+      "base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "return": {
+      "base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "missing_payment": {
+      "base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 2,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 2,
+        "tasks": 3
+      }
+    },
+    "exchange": {
+      "base": {
+        "passed": 2,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 2,
+        "tasks": 3
+      }
+    },
+    "exchange_fallback": {
+      "base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "forbidden_status": {
+      "base": {
+        "passed": 2,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 2,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "foreign_order": {
+      "base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "missing_email": {
+      "base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 1,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "exchange_missing_option": {
+      "base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "exchange_missing_payment": {
+      "base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 1,
+        "tasks": 3
+      }
+    },
+    "exchange_gift": {
+      "base": {
+        "passed": 2,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "exchange_unavailable": {
+      "base": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "exchange_shortfall": {
+      "base": {
+        "passed": 1,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 0,
+        "tasks": 3
+      }
+    },
+    "exchange_fallback_available": {
+      "base": {
+        "passed": 2,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 0,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 3,
+        "tasks": 3
+      }
+    },
+    "return_reject_exchange": {
+      "base": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "qlora_v2": {
+        "passed": 3,
+        "tasks": 3
+      },
+      "qlora_v3": {
+        "passed": 3,
+        "tasks": 3
+      }
+    }
+  },
+  "confusion": {
+    "base": [
+      [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0,
+        1,
+        5
+      ],
+      [
+        0,
+        0,
+        13,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        3,
+        6,
+        1
+      ]
+    ],
+    "qlora_v2": [
+      [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        13,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        15,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        0,
+        5,
+        0
+      ]
+    ],
+    "qlora_v3": [
+      [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        1,
+        0,
+        5
+      ],
+      [
+        0,
+        0,
+        10,
+        0,
+        5
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        11
+      ]
+    ]
+  },
+  "failures": [
+    {
+      "case_id": "v3-test-exchange-00",
+      "base": true,
+      "previous": false,
+      "new": true
+    },
+    {
+      "case_id": "v3-test-exchange-01",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange-02",
+      "base": true,
+      "previous": false,
+      "new": true
+    },
+    {
+      "case_id": "v3-test-exchange_fallback-00",
+      "base": false,
+      "previous": true,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_fallback-01",
+      "base": false,
+      "previous": true,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_fallback-02",
+      "base": false,
+      "previous": true,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_fallback_available-00",
+      "base": true,
+      "previous": false,
+      "new": true
+    },
+    {
+      "case_id": "v3-test-exchange_fallback_available-01",
+      "base": true,
+      "previous": false,
+      "new": true
+    },
+    {
+      "case_id": "v3-test-exchange_fallback_available-02",
+      "base": false,
+      "previous": false,
+      "new": true
+    },
+    {
+      "case_id": "v3-test-exchange_gift-00",
+      "base": true,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_gift-01",
+      "base": true,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_gift-02",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_missing_option-00",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_missing_option-01",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_missing_option-02",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_missing_payment-00",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_missing_payment-01",
+      "base": false,
+      "previous": false,
+      "new": true
+    },
+    {
+      "case_id": "v3-test-exchange_missing_payment-02",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_shortfall-00",
+      "base": true,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_shortfall-01",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_shortfall-02",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_unavailable-00",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_unavailable-01",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-exchange_unavailable-02",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-forbidden_status-00",
+      "base": true,
+      "previous": true,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-forbidden_status-01",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-forbidden_status-02",
+      "base": true,
+      "previous": true,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-foreign_order-00",
+      "base": true,
+      "previous": true,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-foreign_order-01",
+      "base": true,
+      "previous": true,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-foreign_order-02",
+      "base": true,
+      "previous": true,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-missing_email-00",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-missing_email-01",
+      "base": false,
+      "previous": true,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-missing_email-02",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-missing_payment-00",
+      "base": false,
+      "previous": false,
+      "new": false
+    },
+    {
+      "case_id": "v3-test-missing_payment-01",
+      "base": false,
+      "previous": true,
+      "new": true
+    },
+    {
+      "case_id": "v3-test-missing_payment-02",
+      "base": false,
+      "previous": true,
+      "new": true
+    },
+    {
+      "case_id": "v3-test-missing_reason-00",
+      "base": false,
+      "previous": true,
+      "new": true
+    },
+    {
+      "case_id": "v3-test-missing_reason-01",
+      "base": false,
+      "previous": true,
+      "new": true
+    },
+    {
+      "case_id": "v3-test-missing_reason-02",
+      "base": false,
+      "previous": true,
+      "new": true
+    }
+  ],
+  "identical_action_repeats": {
+    "base": 33,
+    "qlora_v2": 5,
+    "qlora_v3": 106
+  },
+  "csv_sha256": "408d8a4ab9420fe4486dca655b7b539bb127c8e6669f2b44c45d9a198b1aa6a4",
+  "figure_sha256": {
+    "families.svg": "837f8c4f88925654943e57459f1e4162d6bfe4b9d99f290734b235c6f9745a32",
+    "evaluation.png": "996b56c59d6c0096c1518b30be00bcf9397692f8ad0078fad23bc554976cd97e",
+    "evaluation.svg": "8fe845c58a690cf99aadcfeccc38a640d1e29732dcc0763fb75e4b4638662e15",
+    "families.png": "22582802bd1e30dbad5afd164c227f5d6120176e3d63ed7d9a3261877b1273ff",
+    "training.svg": "5da944c3af66aa999dc55e2dde13f5e7e228bbbc8145ddf6bed2ab7ffe186034",
+    "confusion.png": "c1327c01d896b333252dca1fcfd90fd8c00f51af4b1f8e01346e5eec229f225c",
+    "confusion.svg": "f70f6007a159a26d595b91e78c3597e8ef36a0f78e97982ba7990a1c82aebfc5",
+    "training.png": "70092aa79c6beb5b3c492fa17a359aa9de9a04754c0578d3c667b9cc42854a09"
+  }
+}

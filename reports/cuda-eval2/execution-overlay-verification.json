@@ -1,0 +1,21 @@
+{
+  "run_id": "resolvedesk-cuda-eval-002",
+  "purpose": "Pre-inference existing-compute-unit authorization overlay; original268 export and53 frozen inputs unmodified",
+  "parent_source_zip_sha256": "65b9e93cd92fd3fb51d0bbbdde96df8cbacc54195c7b28c9c76fa90f1433eb4b",
+  "analysis_plan_sha256": "a547fd0790ad2003fcd3dc0a990b581484bf5decd30222c87499237fd236f704",
+  "files": {
+    "training/cuda_eval2/budgeted_run.py": "caaf5a22df9e6509dc5b79f643a69760048c9f7cafc5fec3a1b04cb6cd00189d",
+    "tests/test_cuda_eval2_budget.py": "ea11bbdca7fa060ee2388fa0af4849774b302cdae819ea51914457a2760fb3d8",
+    "training/colab/eval2_metered_ops.py": "f0f33d4fdea4898ec393fbef16b9a817d0fb727d98268640b04f85bf9e1cc381"
+  },
+  "overlay_zip": "exports/resolvedesk-colab-eval2-metered-ready/resolvedesk-eval2-metered-overlay.zip",
+  "overlay_zip_sha256": "2ee9a7b532a4c1cb0a0dc72f64f2276fd8dd640323f0f6d89e68144c67e01bd6",
+  "uploaded": false,
+  "model_inference_started": false,
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "37c6efafc4d0301f4ea5e33a36676c203f6f22fa7156866ce0a78d46a3c42f8d",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Private non-retail account/authorization and machine-path metadata omitted. Original verification claims refer to historical unredacted local artifacts, not these public bytes."
+  }
+}

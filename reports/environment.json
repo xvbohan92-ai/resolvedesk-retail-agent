@@ -1,0 +1,18 @@
+{
+  "runtime": {
+    "fastapi": "0.162.0",
+    "pydantic": "2.14.1",
+    "httpx": "0.28.1",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "pytest": "9.1.1",
+    "ruff": "0.17.2"
+  },
+  "lock_sha256": "1026b0530862fbbbec2ce7423c1d25e56137226ca466c4c4cf371a7deaa5f702",
+  "training_lock_sha256": "91f0a4366be7b20f563d148656056c2a086b356639ebf10c5a822dcd1cc4548a",
+  "hardware": "Apple M5, 16 GB unified memory",
+  "cloud_training": false,
+  "cloud_model_requests": 0,
+  "local_api_fee_usd": 0,
+  "cost_scope": "Local API fees only; hardware/electricity costs not measured."
+}

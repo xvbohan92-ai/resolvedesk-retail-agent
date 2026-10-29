@@ -1,0 +1,62 @@
+{
+  "dataset_sha256": "de87350609bb49fe9f0aa8028f0e2263adbcce4fcfad6c4a55275e4fa3c0bfac",
+  "unquoted_value_ranges_only": true,
+  "records": [
+    {
+      "side": "chosen",
+      "field": "payment_method",
+      "value": "gift_N4ZW3M",
+      "selected_token_count": 6,
+      "decoded_tokens": "gift_N4ZW3M"
+    },
+    {
+      "side": "rejected",
+      "field": "payment_method",
+      "value": "original",
+      "selected_token_count": 1,
+      "decoded_tokens": "original"
+    },
+    {
+      "side": "chosen",
+      "field": "payment_method",
+      "value": "gift_CJHV4P",
+      "selected_token_count": 6,
+      "decoded_tokens": "gift_CJHV4P"
+    },
+    {
+      "side": "rejected",
+      "field": "payment_method",
+      "value": "original",
+      "selected_token_count": 1,
+      "decoded_tokens": "original"
+    },
+    {
+      "side": "chosen",
+      "field": "payment_method",
+      "value": "gift_PA78EA",
+      "selected_token_count": 5,
+      "decoded_tokens": "gift_PA78EA"
+    },
+    {
+      "side": "rejected",
+      "field": "payment_method",
+      "value": "original",
+      "selected_token_count": 1,
+      "decoded_tokens": "original"
+    },
+    {
+      "side": "chosen",
+      "field": "payment_method",
+      "value": "gift_3K5KT5",
+      "selected_token_count": 7,
+      "decoded_tokens": "gift_3K5KT5"
+    },
+    {
+      "side": "rejected",
+      "field": "payment_method",
+      "value": "original",
+      "selected_token_count": 1,
+      "decoded_tokens": "original"
+    }
+  ]
+}

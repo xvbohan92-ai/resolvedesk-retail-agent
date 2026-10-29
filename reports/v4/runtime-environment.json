@@ -1,0 +1,11 @@
+{
+  "inference_device": "Apple Silicon / MLX Metal",
+  "serial_test_arms": true,
+  "one_trial_per_task": true,
+  "greedy_unconstrained_generation": true,
+  "background_model_contention_observed": true,
+  "observation": "An unrelated Ollama qwen3-vl:4b-instruct model was reloaded after the first 12 held-out trajectories. It was not stopped. Free memory and GPU contention were not experimentally held constant.",
+  "latency_interpretation": "Raw task times are descriptive only; do not claim causal latency or throughput gains.",
+  "automatic_unloads_of_other_model_caches": false,
+  "own_resolvedesk_cache_unloaded_before_training": true
+}

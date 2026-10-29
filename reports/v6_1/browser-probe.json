@@ -1,0 +1,598 @@
+{
+  "scope": "Actual browser NO-control smoke on a new public validation sandbox; excluded from held-out accuracy.",
+  "status": "verified",
+  "raw_response": {
+    "session": {
+      "case_id": "v6_1-valid-exchange_fallback-00",
+      "customer": {
+        "email": "buyerq4p2bxaj8@retail.example",
+        "gift_card": {
+          "balance_cents": 10000,
+          "id": "gift_L6RC3EUBZ"
+        },
+        "id": "u_X55BXZEWQ"
+      },
+      "id": "5d6e7a7be448ee67ac9a0f67",
+      "messages": [
+        {
+          "content": "For the support team: I want a replacement in rust / XS, with any difference settled through original payment. You have my permission for a return only if that particular replacement is sold out. Purchase reference ORD-LQGBB9D66. Account email buyerq4p2bxaj8@retail.example.",
+          "role": "customer"
+        },
+        {
+          "content": "NO",
+          "role": "customer"
+        }
+      ],
+      "observations": [
+        {
+          "action": {
+            "arguments": {
+              "email": "buyerq4p2bxaj8@retail.example",
+              "evidence": "You have my permission for a return only if that particular replacement is sold out.",
+              "fallback_return": "yes",
+              "operation": "exchange",
+              "order_id": "ORD-LQGBB9D66",
+              "payment_method": "original",
+              "reason": "unknown",
+              "requested_option": "rust / XS"
+            },
+            "tool": "record_request"
+          },
+          "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buyerq4p2bxaj8@retail.example\",\"order_id\":\"ORD-LQGBB9D66\",\"requested_option\":\"rust / XS\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"You have my permission for a return only if that particular replacement is sold out.\"}}",
+          "result": {
+            "evidence": "You have my permission for a return only if that particular replacement is sold out.",
+            "provenance": "Exact quotation only; semantic fields remain unverified model predictions.",
+            "resolution_request": {
+              "email": "buyerq4p2bxaj8@retail.example",
+              "fallback_return": "yes",
+              "operation": "exchange",
+              "order_id": "ORD-LQGBB9D66",
+              "payment_method": "original",
+              "reason": "unknown",
+              "requested_option": "rust / XS"
+            },
+            "slot_normalizations": [],
+            "source_message_count": 1
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 876,
+            "latency_ms": 3261.96,
+            "output_tokens": 82,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "email": "buyerq4p2bxaj8@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyerq4p2bxaj8@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 10000,
+              "id": "gift_L6RC3EUBZ"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_X55BXZEWQ"
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 935,
+            "latency_ms": 1730.8,
+            "output_tokens": 24,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-LQGBB9D66"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-LQGBB9D66\"}}",
+          "result": {
+            "id": "ORD-LQGBB9D66",
+            "items": [
+              {
+                "item_id": "item_7743P6ALB",
+                "option": "black / L",
+                "price_cents": 7704,
+                "product_id": "p_QWN3PU99Y"
+              }
+            ],
+            "original_payment": "card_V4N4AHNSM",
+            "revision": 0,
+            "status": "delivered",
+            "user_id": "u_X55BXZEWQ"
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 1007,
+            "latency_ms": 2487.87,
+            "output_tokens": 22,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "product_id": "p_QWN3PU99Y"
+            },
+            "tool": "get_product"
+          },
+          "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_QWN3PU99Y\"}}",
+          "result": {
+            "exchange_candidates": [
+              {
+                "available": true,
+                "current_item_id": "item_7743P6ALB",
+                "item_id": "item_25RWQWDTP",
+                "option": "white / S",
+                "order_id": "ORD-LQGBB9D66",
+                "price_cents": 8004,
+                "price_difference_cents": 300
+              },
+              {
+                "available": false,
+                "current_item_id": "item_7743P6ALB",
+                "item_id": "item_LRH59VQQ8",
+                "option": "rust / XS",
+                "order_id": "ORD-LQGBB9D66",
+                "price_cents": 9404,
+                "price_difference_cents": 1700
+              }
+            ],
+            "name": "Cotton overshirt",
+            "product_id": "p_QWN3PU99Y",
+            "variants": [
+              {
+                "available": true,
+                "item_id": "item_25RWQWDTP",
+                "option": "white / S",
+                "price_cents": 8004
+              },
+              {
+                "available": true,
+                "item_id": "item_7743P6ALB",
+                "option": "black / L",
+                "price_cents": 7704
+              },
+              {
+                "available": false,
+                "item_id": "item_LRH59VQQ8",
+                "option": "rust / XS",
+                "price_cents": 9404
+              }
+            ]
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 1119,
+            "latency_ms": 2291.39,
+            "output_tokens": 21,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "field": "fallback_return",
+              "message": "The exact replacement rust / XS for order ORD-LQGBB9D66 is unavailable. Do you authorize returning it using original? Reply YES or NO. A return will still need your separate confirmation."
+            },
+            "tool": "ask_customer"
+          },
+          "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"fallback_return\",\"message\":\"The exact replacement rust / XS for order ORD-LQGBB9D66 is unavailable. Do you authorize returning it using original? Reply YES or NO. A return will still need your separate confirmation.\"}}",
+          "result": {
+            "asked_at_message_count": 1,
+            "consent_protocol": "Only an exact customer YES after this question grants this scope.",
+            "consent_scope": {
+              "new_item_id": "item_LRH59VQQ8",
+              "order_id": "ORD-LQGBB9D66",
+              "order_revision": 0,
+              "request": {
+                "email": "buyerq4p2bxaj8@retail.example",
+                "operation": "exchange",
+                "order_id": "ORD-LQGBB9D66",
+                "payment_method": "original",
+                "requested_option": "rust / XS"
+              }
+            },
+            "field": "fallback_return",
+            "question": "The exact replacement rust / XS for order ORD-LQGBB9D66 is unavailable. Do you authorize returning it using original? Reply YES or NO. A return will still need your separate confirmation."
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 1526,
+            "latency_ms": 3866.45,
+            "output_tokens": 59,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "reason": "The customer declined or did not clearly confirm the scoped return fallback."
+            },
+            "tool": "handoff"
+          },
+          "raw": "{\"tool\":\"handoff\",\"arguments\":{\"reason\":\"The customer declined or did not clearly confirm the scoped return fallback.\"}}",
+          "result": {
+            "handoff": true,
+            "reason": "The customer declined or did not clearly confirm the scoped return fallback."
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 1697,
+            "latency_ms": 3499.21,
+            "output_tokens": 25,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        }
+      ],
+      "order_keys": {
+        "ORD-LQGBB9D66": "5d6e7a7be448ee67ac9a0f67:ORD-LQGBB9D66"
+      },
+      "products": {
+        "p_QWN3PU99Y": {
+          "name": "Cotton overshirt",
+          "product_id": "p_QWN3PU99Y",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_25RWQWDTP",
+              "option": "white / S",
+              "price_cents": 8004
+            },
+            {
+              "available": true,
+              "item_id": "item_7743P6ALB",
+              "option": "black / L",
+              "price_cents": 7704
+            },
+            {
+              "available": false,
+              "item_id": "item_LRH59VQQ8",
+              "option": "rust / XS",
+              "price_cents": 9404
+            }
+          ]
+        }
+      },
+      "proposal": null,
+      "read_orders": {
+        "ORD-LQGBB9D66": 0
+      },
+      "revision": 8,
+      "status": "handoff",
+      "user_id": "u_X55BXZEWQ",
+      "workflow_version": "v6_1"
+    },
+    "orders": [
+      {
+        "id": "ORD-LQGBB9D66",
+        "items": [
+          {
+            "item_id": "item_7743P6ALB",
+            "option": "black / L",
+            "price_cents": 7704,
+            "product_id": "p_QWN3PU99Y"
+          }
+        ],
+        "original_payment": "card_V4N4AHNSM",
+        "status": "delivered",
+        "user_id": "u_X55BXZEWQ"
+      }
+    ],
+    "timeline": [
+      {
+        "id": 255,
+        "kind": "session_created",
+        "created": 1793167809.429523,
+        "detail": {
+          "case_id": "v6_1-valid-exchange_fallback-00"
+        }
+      },
+      {
+        "id": 258,
+        "kind": "model_tool",
+        "created": 1793167814.055797,
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "buyerq4p2bxaj8@retail.example",
+              "evidence": "You have my permission for a return only if that particular replacement is sold out.",
+              "fallback_return": "yes",
+              "operation": "exchange",
+              "order_id": "ORD-LQGBB9D66",
+              "payment_method": "original",
+              "reason": "unknown",
+              "requested_option": "rust / XS"
+            },
+            "tool": "record_request"
+          },
+          "raw": "{\"tool\":\"record_request\",\"arguments\":{\"operation\":\"exchange\",\"email\":\"buyerq4p2bxaj8@retail.example\",\"order_id\":\"ORD-LQGBB9D66\",\"requested_option\":\"rust / XS\",\"payment_method\":\"original\",\"reason\":\"unknown\",\"fallback_return\":\"yes\",\"evidence\":\"You have my permission for a return only if that particular replacement is sold out.\"}}",
+          "result": {
+            "evidence": "You have my permission for a return only if that particular replacement is sold out.",
+            "provenance": "Exact quotation only; semantic fields remain unverified model predictions.",
+            "resolution_request": {
+              "email": "buyerq4p2bxaj8@retail.example",
+              "fallback_return": "yes",
+              "operation": "exchange",
+              "order_id": "ORD-LQGBB9D66",
+              "payment_method": "original",
+              "reason": "unknown",
+              "requested_option": "rust / XS"
+            },
+            "slot_normalizations": [],
+            "source_message_count": 1
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 876,
+            "latency_ms": 3261.96,
+            "output_tokens": 82,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        }
+      },
+      {
+        "id": 260,
+        "kind": "model_tool",
+        "created": 1793167817.8671072,
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "buyerq4p2bxaj8@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyerq4p2bxaj8@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 10000,
+              "id": "gift_L6RC3EUBZ"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_X55BXZEWQ"
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 935,
+            "latency_ms": 1730.8,
+            "output_tokens": 24,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        }
+      },
+      {
+        "id": 262,
+        "kind": "model_tool",
+        "created": 1793167822.354722,
+        "detail": {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-LQGBB9D66"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-LQGBB9D66\"}}",
+          "result": {
+            "id": "ORD-LQGBB9D66",
+            "items": [
+              {
+                "item_id": "item_7743P6ALB",
+                "option": "black / L",
+                "price_cents": 7704,
+                "product_id": "p_QWN3PU99Y"
+              }
+            ],
+            "original_payment": "card_V4N4AHNSM",
+            "revision": 0,
+            "status": "delivered",
+            "user_id": "u_X55BXZEWQ"
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 1007,
+            "latency_ms": 2487.87,
+            "output_tokens": 22,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        }
+      },
+      {
+        "id": 266,
+        "kind": "model_tool",
+        "created": 1793167827.4422112,
+        "detail": {
+          "action": {
+            "arguments": {
+              "product_id": "p_QWN3PU99Y"
+            },
+            "tool": "get_product"
+          },
+          "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_QWN3PU99Y\"}}",
+          "result": {
+            "exchange_candidates": [
+              {
+                "available": true,
+                "current_item_id": "item_7743P6ALB",
+                "item_id": "item_25RWQWDTP",
+                "option": "white / S",
+                "order_id": "ORD-LQGBB9D66",
+                "price_cents": 8004,
+                "price_difference_cents": 300
+              },
+              {
+                "available": false,
+                "current_item_id": "item_7743P6ALB",
+                "item_id": "item_LRH59VQQ8",
+                "option": "rust / XS",
+                "order_id": "ORD-LQGBB9D66",
+                "price_cents": 9404,
+                "price_difference_cents": 1700
+              }
+            ],
+            "name": "Cotton overshirt",
+            "product_id": "p_QWN3PU99Y",
+            "variants": [
+              {
+                "available": true,
+                "item_id": "item_25RWQWDTP",
+                "option": "white / S",
+                "price_cents": 8004
+              },
+              {
+                "available": true,
+                "item_id": "item_7743P6ALB",
+                "option": "black / L",
+                "price_cents": 7704
+              },
+              {
+                "available": false,
+                "item_id": "item_LRH59VQQ8",
+                "option": "rust / XS",
+                "price_cents": 9404
+              }
+            ]
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 1119,
+            "latency_ms": 2291.39,
+            "output_tokens": 21,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        }
+      },
+      {
+        "id": 267,
+        "kind": "model_tool",
+        "created": 1793167831.342401,
+        "detail": {
+          "action": {
+            "arguments": {
+              "field": "fallback_return",
+              "message": "The exact replacement rust / XS for order ORD-LQGBB9D66 is unavailable. Do you authorize returning it using original? Reply YES or NO. A return will still need your separate confirmation."
+            },
+            "tool": "ask_customer"
+          },
+          "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"fallback_return\",\"message\":\"The exact replacement rust / XS for order ORD-LQGBB9D66 is unavailable. Do you authorize returning it using original? Reply YES or NO. A return will still need your separate confirmation.\"}}",
+          "result": {
+            "asked_at_message_count": 1,
+            "consent_protocol": "Only an exact customer YES after this question grants this scope.",
+            "consent_scope": {
+              "new_item_id": "item_LRH59VQQ8",
+              "order_id": "ORD-LQGBB9D66",
+              "order_revision": 0,
+              "request": {
+                "email": "buyerq4p2bxaj8@retail.example",
+                "operation": "exchange",
+                "order_id": "ORD-LQGBB9D66",
+                "payment_method": "original",
+                "requested_option": "rust / XS"
+              }
+            },
+            "field": "fallback_return",
+            "question": "The exact replacement rust / XS for order ORD-LQGBB9D66 is unavailable. Do you authorize returning it using original? Reply YES or NO. A return will still need your separate confirmation."
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 1526,
+            "latency_ms": 3866.45,
+            "output_tokens": 59,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        }
+      },
+      {
+        "id": 283,
+        "kind": "customer_message",
+        "created": 1793167865.966611,
+        "detail": {
+          "content": "NO"
+        }
+      },
+      {
+        "id": 287,
+        "kind": "model_tool",
+        "created": 1793167873.087471,
+        "detail": {
+          "action": {
+            "arguments": {
+              "reason": "The customer declined or did not clearly confirm the scoped return fallback."
+            },
+            "tool": "handoff"
+          },
+          "raw": "{\"tool\":\"handoff\",\"arguments\":{\"reason\":\"The customer declined or did not clearly confirm the scoped return fallback.\"}}",
+          "result": {
+            "handoff": true,
+            "reason": "The customer declined or did not clearly confirm the scoped return fallback."
+          },
+          "timing": {
+            "adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+            "finish_reason": "stop",
+            "input_tokens": 1697,
+            "latency_ms": 3499.21,
+            "output_tokens": 25,
+            "provider": "mlx",
+            "variant": "qlora_v6_1",
+            "workflow": "v6_1"
+          }
+        }
+      }
+    ],
+    "interpretation": {
+      "email": "buyerq4p2bxaj8@retail.example",
+      "fallback_return": "yes",
+      "operation": "exchange",
+      "order_id": "ORD-LQGBB9D66",
+      "payment_method": "original",
+      "reason": "unknown",
+      "requested_option": "rust / XS"
+    }
+  },
+  "original_pending_session_untouched": true,
+  "image_sha256": {
+    "consent-v6_1-browser.png": "e20937ac0aae4a1187cdab5ac1fcdec1c11a23a92469306e1eec0a9d783182ae",
+    "handoff-v6_1-browser.png": "73e6e837c98664627770512d15c3b9ae990fb6d52a5c874f2c1551c6d0e34670"
+  },
+  "frontend_sha256": "0ee8bcb4022a6fe55fe1f24d92e081b3c9e6238b354a243bd438ed87a1d4ecfb"
+}

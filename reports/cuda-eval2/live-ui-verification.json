@@ -1,0 +1,29 @@
+{
+  "run_id": "resolvedesk-cuda-eval-002",
+  "checked_at_utc": "2026-10-29T02:03:12.975625+00:00",
+  "evidence_available": true,
+  "completed_records": 96,
+  "journal_completed": 509,
+  "task_success": [
+    46,
+    45
+  ],
+  "tasks_per_arm": 48,
+  "all_six_figures_http_200": true,
+  "all_six_browser_images_loaded": true,
+  "browser_console_errors": 0,
+  "horizontal_overflow": false,
+  "public_validation_cases": 270,
+  "fresh_test_cases_exposed": 0,
+  "local_api_port": 8771,
+  "runtime_released": true,
+  "active_sessions_observed": 0,
+  "actual_model_requests_during_ui_checks": 0,
+  "scope": "Read-only live API and rendered UI; no demo session or inference started",
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "3585bea76c184adbb1c893f0bc2986826ed4b14d84980302f72d34876eb76b55",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Private non-retail account/authorization and machine-path metadata omitted. Original verification claims refer to historical unredacted local artifacts, not these public bytes."
+  }
+}

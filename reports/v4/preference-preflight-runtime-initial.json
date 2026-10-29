@@ -1,0 +1,60 @@
+{
+  "protocol": {
+    "method": "SimPO-style reference-free length-normalized preference objective",
+    "reference": "https://arxiv.org/html/2405.14734v2",
+    "formula": "softplus(-(beta * (mean_logp_chosen - mean_logp_rejected) - margin))",
+    "beta": 2.0,
+    "margin": 0.5,
+    "learning_rate": 1e-05,
+    "seed": 2026102741,
+    "updates": 124,
+    "batch_size": 1,
+    "initialization": "data/finetuning/retail-qlora-v4/run/candidates/480",
+    "output": "data/finetuning/retail-qlora-v4/preference",
+    "selection": "Fixed 124-update final checkpoint; validation is diagnostic, never test-based selection.",
+    "revision_reason": "SFT-240 validation over-handed off; SFT-480 validation interrupted after similar failures. Original SFT records retained. Revision frozen before any v4 test inference.",
+    "training_pairs": {
+      "avoid_unnecessary_handoff": 48,
+      "ask_missing_information": 20,
+      "continue_after_answer": 20,
+      "preserve_exchange_intent": 20,
+      "preserve_policy_handoff": 16
+    },
+    "scope": "Authored negatives from original training cases only; no validation or test examples used as preference pairs. Full completion mean includes end-of-turn tokens; prompt masked. Original tool-name 2x weighting applies to SFT only."
+  },
+  "manifest": {
+    "original_sft_manifest_sha256": "251d5e3c82f2de3cfc759eed9c3a6e3a04c0245807df84090c8c1de23853b52f",
+    "files": {
+      "training/v4/preference.py": "a8a12b89c44690fd2e4d8cef2a7257b4a87c07dc3d5bcc227a862525bb0cfa4c",
+      "training/v4/preference-protocol.json": "b55d2ba7e2ff78de562742da9f233a51cef878d3fd5f541084fc8d74dafdebdd",
+      "training/v4/datasets/preference.jsonl": "982a9f07c13e700e8a26f8b5c4f421c628258acc45e4c85ee7b0ea84a6fa0709",
+      "training/v4/preference_select.py": "5c7532baa95a9a54196d79850e16721c3a42083746cfa34bff8d3cae3f70f0a0"
+    },
+    "sft_480_sha256": "bb3aa1e1cc85d6d1c1223746852f41df206984ec3e9b47011241226649ecc89c",
+    "original_frozen_inputs": 31,
+    "test_inference_started_at_freeze": false,
+    "pair_count": 124
+  },
+  "metrics": [
+    {
+      "iteration": 1,
+      "category": "continue_after_answer",
+      "loss": 0.5785219563932181,
+      "pre_update_mean_logp_gap": 0.3720555854961276,
+      "elapsed_seconds": 45.802,
+      "post_update_mean_logp_gap": 0.496974122710526
+    }
+  ],
+  "completed_updates": 1,
+  "adapter_l2_change_from_sft480": 0.060245663370901044,
+  "adapter_sha256": "13cb032aef10e44d9c96087f97b8f4e219b2e275e13ca4c3c72201e4857e4ab9",
+  "elapsed_seconds": 94.24,
+  "peak_memory_bytes": 3761653516,
+  "preflight_only": true,
+  "gradient_audit": {
+    "chain_rule_max_absolute_error": 8.940696716308594e-08,
+    "finite_difference_error": 3.688037395477295e-07
+  },
+  "test_used_for_selection": false,
+  "cloud_compute_used": false
+}

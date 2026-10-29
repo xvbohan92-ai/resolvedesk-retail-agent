@@ -1,0 +1,3 @@
+from training.v6.scoring import score
+
+__all__ = ["score"]

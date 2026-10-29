@@ -1,0 +1,46 @@
+{
+  "since": "2026-10-28T06:09:50.802Z",
+  "documentWidth": 1280,
+  "figures": [
+    {
+      "alt": "Four-arm recovery outcomes and raw attempts",
+      "loaded": true,
+      "src": "/api/figure/evaluation.png?experiment=v6_1",
+      "width": 1957
+    },
+    {
+      "alt": "All 24 final scenario families",
+      "loaded": true,
+      "src": "/api/figure/families.png?experiment=v6_1",
+      "width": 1704
+    },
+    {
+      "alt": "Seven initial intent fields across all four arms",
+      "loaded": true,
+      "src": "/api/figure/intent.png?experiment=v6_1",
+      "width": 1737
+    },
+    {
+      "alt": "Model permission predictions and actual unauthorized return attempts",
+      "loaded": true,
+      "src": "/api/figure/consent.png?experiment=v6_1",
+      "width": 2182
+    },
+    {
+      "alt": "Expected versus proposed operations",
+      "loaded": true,
+      "src": "/api/figure/confusion.png?experiment=v6_1",
+      "width": 2980
+    },
+    {
+      "alt": "Actual optimizer loss and validation-only checkpoint selection",
+      "loaded": true,
+      "src": "/api/figure/training.png?experiment=v6_1",
+      "width": 2618
+    }
+  ],
+  "recallGap": true,
+  "url": "http://127.0.0.1:8771/",
+  "viewportWidth": 1280,
+  "consoleErrors": []
+}

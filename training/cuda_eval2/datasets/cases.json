@@ -1,0 +1,4792 @@
+[
+  {
+    "id": "cuda-fresh2-test-cancel-00",
+    "family": "cancel",
+    "split": "test",
+    "initial_message": "Hello support, This order went through after an accidental checkout tap. Please cancel it; I did not intend to buy the jacket. The order reference is NE-RXSG9YSPZC3RB. You can find my account using shopper74u5hl9zc4smq@purchases.example.",
+    "evidence_initial": "This order went through after an accidental checkout tap. Please cancel it; I did not intend to buy the jacket.",
+    "customer": {
+      "id": "ne_u_ZSBGK2RY4XJZ8",
+      "email": "shopper74u5hl9zc4smq@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_WJKBFH7VT9V3H",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_FK3RPK5Q4CK7Q": {
+        "product_id": "ne_p_FK3RPK5Q4CK7Q",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_8MYHLQJDRKPU4",
+            "option": "buttermilk / XS",
+            "price_cents": 10314,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_YZCSH72U7BCYS",
+            "option": "hematite / XL",
+            "price_cents": 9689,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_JHXHXY3PWSRJH",
+            "option": "topaz / M",
+            "price_cents": 11239,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-RXSG9YSPZC3RB",
+        "user_id": "ne_u_ZSBGK2RY4XJZ8",
+        "status": "pending",
+        "original_payment": "ne_card_SJ2MYFWP2J8EA",
+        "items": [
+          {
+            "item_id": "ne_i_YZCSH72U7BCYS",
+            "product_id": "ne_p_FK3RPK5Q4CK7Q",
+            "option": "hematite / XL",
+            "price_cents": 9689
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopper74u5hl9zc4smq@purchases.example>.",
+      "order_id": "NE-RXSG9YSPZC3RB",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_YZCSH72U7BCYS",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "shopper74u5hl9zc4smq@purchases.example",
+      "order_id": "NE-RXSG9YSPZC3RB",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "shopper74u5hl9zc4smq@purchases.example",
+      "order_id": "NE-RXSG9YSPZC3RB",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "NE-RXSG9YSPZC3RB",
+      "item_id": "ne_i_YZCSH72U7BCYS",
+      "new_item_id": "ne_i_JHXHXY3PWSRJH",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 9689,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-cancel-01",
+    "family": "cancel",
+    "split": "test",
+    "initial_message": "Regarding order NE-8USJV75GGX6W6. You can find my account using shoppergc5snx62q9f6c@purchases.example.\nPlease cancel this purchase. The event I bought it for was called off, so I do not need the jacket now.",
+    "evidence_initial": "Please cancel this purchase. The event I bought it for was called off, so I do not need the jacket now.",
+    "customer": {
+      "id": "ne_u_6D2Y6TLBTTVV4",
+      "email": "shoppergc5snx62q9f6c@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_B8ABCCUM3PR8W",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_TPS6JTPAB326L": {
+        "product_id": "ne_p_TPS6JTPAB326L",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_FAPLDM6XTZRPT",
+            "option": "eucalyptus / S",
+            "price_cents": 9338,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_XT4DKR3A6BG3P",
+            "option": "hematite / XL",
+            "price_cents": 10313,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_X7PPZ7PVXXFYP",
+            "option": "buttermilk / XS",
+            "price_cents": 10938,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-8USJV75GGX6W6",
+        "user_id": "ne_u_6D2Y6TLBTTVV4",
+        "status": "pending",
+        "original_payment": "ne_card_J7GZ99KC9GBVM",
+        "items": [
+          {
+            "item_id": "ne_i_XT4DKR3A6BG3P",
+            "product_id": "ne_p_TPS6JTPAB326L",
+            "option": "hematite / XL",
+            "price_cents": 10313
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shoppergc5snx62q9f6c@purchases.example",
+      "order_id": "NE-8USJV75GGX6W6",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_XT4DKR3A6BG3P",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "shoppergc5snx62q9f6c@purchases.example",
+      "order_id": "NE-8USJV75GGX6W6",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "shoppergc5snx62q9f6c@purchases.example",
+      "order_id": "NE-8USJV75GGX6W6",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "NE-8USJV75GGX6W6",
+      "item_id": "ne_i_XT4DKR3A6BG3P",
+      "new_item_id": "ne_i_FAPLDM6XTZRPT",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 10313,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-missing_reason-00",
+    "family": "missing_reason",
+    "split": "test",
+    "initial_message": "Hello support, Could you cancel my jacket order? I can explain why when you ask. The order reference is NE-QWV843S7K2C24. You can find my account using shopper2ejdy753yg3nd@purchases.example.",
+    "evidence_initial": "Could you cancel my jacket order? I can explain why when you ask.",
+    "customer": {
+      "id": "ne_u_B7HXWNH9LL7KZ",
+      "email": "shopper2ejdy753yg3nd@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_CE2B88LYTBL9K",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_AYRELMMX7RNQ9": {
+        "product_id": "ne_p_AYRELMMX7RNQ9",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_998UP3JVXXF2M",
+            "option": "hematite / XL",
+            "price_cents": 6924,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_ADJHQHEFMBK4E",
+            "option": "buttermilk / XS",
+            "price_cents": 7549,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_XYUTV7758ZN5V",
+            "option": "topaz / M",
+            "price_cents": 5949,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-QWV843S7K2C24",
+        "user_id": "ne_u_B7HXWNH9LL7KZ",
+        "status": "pending",
+        "original_payment": "ne_card_H9LYARXUY9BGD",
+        "items": [
+          {
+            "item_id": "ne_i_998UP3JVXXF2M",
+            "product_id": "ne_p_AYRELMMX7RNQ9",
+            "option": "hematite / XL",
+            "price_cents": 6924
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopper2ejdy753yg3nd@purchases.example>.",
+      "order_id": "NE-QWV843S7K2C24",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_998UP3JVXXF2M",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "shopper2ejdy753yg3nd@purchases.example",
+      "order_id": "NE-QWV843S7K2C24",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "shopper2ejdy753yg3nd@purchases.example",
+      "order_id": "NE-QWV843S7K2C24",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "reason",
+    "required_answers": [
+      "reason"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "NE-QWV843S7K2C24",
+      "item_id": "ne_i_998UP3JVXXF2M",
+      "new_item_id": "ne_i_XYUTV7758ZN5V",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 6924,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-missing_reason-01",
+    "family": "missing_reason",
+    "split": "test",
+    "initial_message": "Regarding order NE-MTQHT8TTUVPWK. You can find my account using shopper8b42zg2xf4rfm@purchases.example.\nI am contacting you to stop this purchase order. You have not received my reason yet.",
+    "evidence_initial": "I am contacting you to stop this purchase order. You have not received my reason yet.",
+    "customer": {
+      "id": "ne_u_556T785DDHN39",
+      "email": "shopper8b42zg2xf4rfm@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_FDMUEYX6PP69U",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_H9SLWLGTS3SNS": {
+        "product_id": "ne_p_H9SLWLGTS3SNS",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_CV9PJDARPAS5Z",
+            "option": "eucalyptus / S",
+            "price_cents": 14920,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_GPZV5MCSAWATX",
+            "option": "hematite / XL",
+            "price_cents": 12620,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_FVKVT77848WBG",
+            "option": "buttermilk / XS",
+            "price_cents": 13245,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-MTQHT8TTUVPWK",
+        "user_id": "ne_u_556T785DDHN39",
+        "status": "pending",
+        "original_payment": "ne_card_VRDGF2AUBPVMU",
+        "items": [
+          {
+            "item_id": "ne_i_GPZV5MCSAWATX",
+            "product_id": "ne_p_H9SLWLGTS3SNS",
+            "option": "hematite / XL",
+            "price_cents": 12620
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopper8b42zg2xf4rfm@purchases.example",
+      "order_id": "NE-MTQHT8TTUVPWK",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_GPZV5MCSAWATX",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "shopper8b42zg2xf4rfm@purchases.example",
+      "order_id": "NE-MTQHT8TTUVPWK",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "shopper8b42zg2xf4rfm@purchases.example",
+      "order_id": "NE-MTQHT8TTUVPWK",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "reason",
+    "required_answers": [
+      "reason"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "NE-MTQHT8TTUVPWK",
+      "item_id": "ne_i_GPZV5MCSAWATX",
+      "new_item_id": "ne_i_CV9PJDARPAS5Z",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 12620,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-return-00",
+    "family": "return",
+    "split": "test",
+    "initial_message": "Hello support, I have the jacket and want to return all of it. Please issue the refund back to original payment. The order reference is NE-NMVMUEG7TY4AL. You can find my account using shopper9ggl9xquxwd43@purchases.example.",
+    "evidence_initial": "I have the jacket and want to return all of it. Please issue the refund back to original payment.",
+    "customer": {
+      "id": "ne_u_6JMZCJGZR75KA",
+      "email": "shopper9ggl9xquxwd43@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_HQJEHZQQYGAWH",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_4LBW9JYLX574C": {
+        "product_id": "ne_p_4LBW9JYLX574C",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_3UA6SYTZMAA24",
+            "option": "topaz / M",
+            "price_cents": 14925,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_W4BXE9QBTGWR6",
+            "option": "buttermilk / XS",
+            "price_cents": 13250,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_LJ7LH4XCN37XW",
+            "option": "hematite / XL",
+            "price_cents": 12625,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-NMVMUEG7TY4AL",
+        "user_id": "ne_u_6JMZCJGZR75KA",
+        "status": "delivered",
+        "original_payment": "ne_card_NCBKGYPGPADJM",
+        "items": [
+          {
+            "item_id": "ne_i_LJ7LH4XCN37XW",
+            "product_id": "ne_p_4LBW9JYLX574C",
+            "option": "hematite / XL",
+            "price_cents": 12625
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopper9ggl9xquxwd43@purchases.example>.",
+      "order_id": "NE-NMVMUEG7TY4AL",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_LJ7LH4XCN37XW",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "shopper9ggl9xquxwd43@purchases.example",
+      "order_id": "NE-NMVMUEG7TY4AL",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopper9ggl9xquxwd43@purchases.example",
+      "order_id": "NE-NMVMUEG7TY4AL",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-NMVMUEG7TY4AL",
+      "item_id": "ne_i_LJ7LH4XCN37XW",
+      "new_item_id": "ne_i_3UA6SYTZMAA24",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 12625,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-return-01",
+    "family": "return",
+    "split": "test",
+    "initial_message": "Regarding order NE-ATNS39AGRB6XP. You can find my account using shoppertjdjj5466rlc4@purchases.example.\nA complete jacket return is my decision; put the reimbursement through original payment.",
+    "evidence_initial": "A complete jacket return is my decision; put the reimbursement through original payment.",
+    "customer": {
+      "id": "ne_u_7HE539PJ78Z84",
+      "email": "shoppertjdjj5466rlc4@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_QSAYNW8P63XYA",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_QCMUFCUEA6DNK": {
+        "product_id": "ne_p_QCMUFCUEA6DNK",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_Q398VSPACU4EX",
+            "option": "eucalyptus / S",
+            "price_cents": 12363,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_QBM57QKTQMJUP",
+            "option": "hematite / XL",
+            "price_cents": 10813,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_2E3GC9KTG72UV",
+            "option": "buttermilk / XS",
+            "price_cents": 11438,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-ATNS39AGRB6XP",
+        "user_id": "ne_u_7HE539PJ78Z84",
+        "status": "delivered",
+        "original_payment": "ne_card_7X6UWP4RW4U53",
+        "items": [
+          {
+            "item_id": "ne_i_QBM57QKTQMJUP",
+            "product_id": "ne_p_QCMUFCUEA6DNK",
+            "option": "hematite / XL",
+            "price_cents": 10813
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shoppertjdjj5466rlc4@purchases.example",
+      "order_id": "NE-ATNS39AGRB6XP",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_QBM57QKTQMJUP",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "shoppertjdjj5466rlc4@purchases.example",
+      "order_id": "NE-ATNS39AGRB6XP",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shoppertjdjj5466rlc4@purchases.example",
+      "order_id": "NE-ATNS39AGRB6XP",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-ATNS39AGRB6XP",
+      "item_id": "ne_i_QBM57QKTQMJUP",
+      "new_item_id": "ne_i_Q398VSPACU4EX",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 10813,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-missing_payment-00",
+    "family": "missing_payment",
+    "split": "test",
+    "initial_message": "Hello support, I would like to return the jacket. I can choose the refund route once you have found the order. The order reference is NE-Y52LFNYLCGL6U. You can find my account using shopper7a98r75scwpxy@purchases.example.",
+    "evidence_initial": "I would like to return the jacket. I can choose the refund route once you have found the order.",
+    "customer": {
+      "id": "ne_u_6ZNFKPHFELC6F",
+      "email": "shopper7a98r75scwpxy@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_DL7DVFTPPWD8Q",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_2AK7N3HY8QCFC": {
+        "product_id": "ne_p_2AK7N3HY8QCFC",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_VGHCLDRFHFTVY",
+            "option": "hematite / XL",
+            "price_cents": 12731,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_DJESUF58ZRQ6W",
+            "option": "topaz / M",
+            "price_cents": 14281,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_V7CKMPYX3ZTFA",
+            "option": "buttermilk / XS",
+            "price_cents": 13356,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-Y52LFNYLCGL6U",
+        "user_id": "ne_u_6ZNFKPHFELC6F",
+        "status": "delivered",
+        "original_payment": "ne_card_XBJSEJKTACZJZ",
+        "items": [
+          {
+            "item_id": "ne_i_VGHCLDRFHFTVY",
+            "product_id": "ne_p_2AK7N3HY8QCFC",
+            "option": "hematite / XL",
+            "price_cents": 12731
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopper7a98r75scwpxy@purchases.example>.",
+      "order_id": "NE-Y52LFNYLCGL6U",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_VGHCLDRFHFTVY",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "shopper7a98r75scwpxy@purchases.example",
+      "order_id": "NE-Y52LFNYLCGL6U",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopper7a98r75scwpxy@purchases.example",
+      "order_id": "NE-Y52LFNYLCGL6U",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-Y52LFNYLCGL6U",
+      "item_id": "ne_i_VGHCLDRFHFTVY",
+      "new_item_id": "ne_i_DJESUF58ZRQ6W",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 12731,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-missing_payment-01",
+    "family": "missing_payment",
+    "split": "test",
+    "initial_message": "Regarding order NE-B28PTVX5NUV64. You can find my account using shopperfevdwqpa3mbkg@purchases.example.\nPlease take back the jacket from my original order. We have not discussed how the refund should be issued.",
+    "evidence_initial": "Please take back the jacket from my original order. We have not discussed how the refund should be issued.",
+    "customer": {
+      "id": "ne_u_XS2TX4FKA8D7J",
+      "email": "shopperfevdwqpa3mbkg@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_C5Y5FHJUCN7YM",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_GM2UCGA3S8PEA": {
+        "product_id": "ne_p_GM2UCGA3S8PEA",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_YFJBNHCJ4F9XH",
+            "option": "eucalyptus / S",
+            "price_cents": 9604,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_33R68Q8DPW2H3",
+            "option": "hematite / XL",
+            "price_cents": 10579,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_ZGKSG6EUYZV6J",
+            "option": "buttermilk / XS",
+            "price_cents": 11204,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-B28PTVX5NUV64",
+        "user_id": "ne_u_XS2TX4FKA8D7J",
+        "status": "delivered",
+        "original_payment": "ne_card_5QUSW8ZMZNASB",
+        "items": [
+          {
+            "item_id": "ne_i_33R68Q8DPW2H3",
+            "product_id": "ne_p_GM2UCGA3S8PEA",
+            "option": "hematite / XL",
+            "price_cents": 10579
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperfevdwqpa3mbkg@purchases.example",
+      "order_id": "NE-B28PTVX5NUV64",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_33R68Q8DPW2H3",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "shopperfevdwqpa3mbkg@purchases.example",
+      "order_id": "NE-B28PTVX5NUV64",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopperfevdwqpa3mbkg@purchases.example",
+      "order_id": "NE-B28PTVX5NUV64",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-B28PTVX5NUV64",
+      "item_id": "ne_i_33R68Q8DPW2H3",
+      "new_item_id": "ne_i_YFJBNHCJ4F9XH",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 10579,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange-00",
+    "family": "exchange",
+    "split": "test",
+    "initial_message": "Hello support, Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. Please check the stated size as well as the color. The order reference is NE-NQXH7DNS44XMN. You can find my account using shopperp5snze63gaekc@purchases.example.",
+    "evidence_initial": "Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. Please check the stated size as well as the color.",
+    "customer": {
+      "id": "ne_u_BA82XLVBZZ78R",
+      "email": "shopperp5snze63gaekc@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_VPHQGK5VD85P8",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_PW5XDTHEDZLUW": {
+        "product_id": "ne_p_PW5XDTHEDZLUW",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_EH9LVLQR4R82B",
+            "option": "buttermilk / XS",
+            "price_cents": 8248,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_9M27QC5MS37WL",
+            "option": "topaz / M",
+            "price_cents": 6648,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_89LHZQHVSYR8W",
+            "option": "hematite / XL",
+            "price_cents": 7623,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-NQXH7DNS44XMN",
+        "user_id": "ne_u_BA82XLVBZZ78R",
+        "status": "delivered",
+        "original_payment": "ne_card_B9RQDKZRRTLBC",
+        "items": [
+          {
+            "item_id": "ne_i_89LHZQHVSYR8W",
+            "product_id": "ne_p_PW5XDTHEDZLUW",
+            "option": "hematite / XL",
+            "price_cents": 7623
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperp5snze63gaekc@purchases.example>.",
+      "order_id": "NE-NQXH7DNS44XMN",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_89LHZQHVSYR8W",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperp5snze63gaekc@purchases.example",
+      "order_id": "NE-NQXH7DNS44XMN",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperp5snze63gaekc@purchases.example",
+      "order_id": "NE-NQXH7DNS44XMN",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-NQXH7DNS44XMN",
+      "item_id": "ne_i_89LHZQHVSYR8W",
+      "new_item_id": "ne_i_9M27QC5MS37WL",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": -975,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange-01",
+    "family": "exchange",
+    "split": "test",
+    "initial_message": "Regarding order NE-B3LARVQSJWPN5. You can find my account using shopperjzcu3ermvuflm@purchases.example.\nI would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. Both variant attributes should match my selection.",
+    "evidence_initial": "I would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. Both variant attributes should match my selection.",
+    "customer": {
+      "id": "ne_u_E8GK4J7RR2ZT2",
+      "email": "shopperjzcu3ermvuflm@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_4XPVL4AH69VNZ",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_QMJR96E83YP95": {
+        "product_id": "ne_p_QMJR96E83YP95",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_EFEJKXBTMTP5M",
+            "option": "eucalyptus / S",
+            "price_cents": 16442,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_EFBATEV2Y9RXJ",
+            "option": "hematite / XL",
+            "price_cents": 14142,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_VRXYVXJLBERYS",
+            "option": "buttermilk / XS",
+            "price_cents": 14767,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-B3LARVQSJWPN5",
+        "user_id": "ne_u_E8GK4J7RR2ZT2",
+        "status": "delivered",
+        "original_payment": "ne_card_GMLR9ZAET75L2",
+        "items": [
+          {
+            "item_id": "ne_i_EFBATEV2Y9RXJ",
+            "product_id": "ne_p_QMJR96E83YP95",
+            "option": "hematite / XL",
+            "price_cents": 14142
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperjzcu3ermvuflm@purchases.example",
+      "order_id": "NE-B3LARVQSJWPN5",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_EFBATEV2Y9RXJ",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperjzcu3ermvuflm@purchases.example",
+      "order_id": "NE-B3LARVQSJWPN5",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperjzcu3ermvuflm@purchases.example",
+      "order_id": "NE-B3LARVQSJWPN5",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-B3LARVQSJWPN5",
+      "item_id": "ne_i_EFBATEV2Y9RXJ",
+      "new_item_id": "ne_i_EFEJKXBTMTP5M",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 2300,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_fallback-00",
+    "family": "exchange_fallback",
+    "split": "test",
+    "initial_message": "Hello support, Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. I need that particular combination. If there is no stock in the exact color and size above, I am happy for you to set up a return instead. The order reference is NE-SPC32BEKSFRDQ. You can find my account using shopperj67bc87gl79mz@purchases.example.",
+    "evidence_initial": "Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. I need that particular combination. If there is no stock in the exact color and size above, I am happy for you to set up a return instead.",
+    "customer": {
+      "id": "ne_u_5V6E68EH8GVRS",
+      "email": "shopperj67bc87gl79mz@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_A34ECMDQ24A6R",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_UDSCK36MJ552W": {
+        "product_id": "ne_p_UDSCK36MJ552W",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_HS4Y9ZKFQ2QAG",
+            "option": "buttermilk / XS",
+            "price_cents": 8576,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_HLYLUVF25RHES",
+            "option": "hematite / XL",
+            "price_cents": 7951,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_BSG4TG2K4MESL",
+            "option": "topaz / M",
+            "price_cents": 10251,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-SPC32BEKSFRDQ",
+        "user_id": "ne_u_5V6E68EH8GVRS",
+        "status": "delivered",
+        "original_payment": "ne_card_6LX9G87TPGGUB",
+        "items": [
+          {
+            "item_id": "ne_i_HLYLUVF25RHES",
+            "product_id": "ne_p_UDSCK36MJ552W",
+            "option": "hematite / XL",
+            "price_cents": 7951
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperj67bc87gl79mz@purchases.example>.",
+      "order_id": "NE-SPC32BEKSFRDQ",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_HLYLUVF25RHES",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperj67bc87gl79mz@purchases.example",
+      "order_id": "NE-SPC32BEKSFRDQ",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperj67bc87gl79mz@purchases.example",
+      "order_id": "NE-SPC32BEKSFRDQ",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-SPC32BEKSFRDQ",
+      "item_id": "ne_i_HLYLUVF25RHES",
+      "new_item_id": "ne_i_BSG4TG2K4MESL",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 7951,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_fallback-01",
+    "family": "exchange_fallback",
+    "split": "test",
+    "initial_message": "Regarding order NE-CQRNMTNU24TGE. You can find my account using shopper3xw93e3lzjc4c@purchases.example.\nI would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. Check that precise option, please. My fallback instruction is to return this jacket should you be unable to provide that exact replacement.",
+    "evidence_initial": "I would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. Check that precise option, please. My fallback instruction is to return this jacket should you be unable to provide that exact replacement.",
+    "customer": {
+      "id": "ne_u_E5YFM8WW6JBNN",
+      "email": "shopper3xw93e3lzjc4c@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_QA8MVX4R3JT6W",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_VVHKME5Z2J94T": {
+        "product_id": "ne_p_VVHKME5Z2J94T",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_EFTZRXW6LV23Q",
+            "option": "hematite / XL",
+            "price_cents": 9543,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_LATRFMBKXHJ52",
+            "option": "eucalyptus / S",
+            "price_cents": 11093,
+            "available": false
+          },
+          {
+            "item_id": "ne_i_JM46J2C5K6JT2",
+            "option": "buttermilk / XS",
+            "price_cents": 10168,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-CQRNMTNU24TGE",
+        "user_id": "ne_u_E5YFM8WW6JBNN",
+        "status": "delivered",
+        "original_payment": "ne_card_YWB5JVXRVPVT9",
+        "items": [
+          {
+            "item_id": "ne_i_EFTZRXW6LV23Q",
+            "product_id": "ne_p_VVHKME5Z2J94T",
+            "option": "hematite / XL",
+            "price_cents": 9543
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopper3xw93e3lzjc4c@purchases.example",
+      "order_id": "NE-CQRNMTNU24TGE",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_EFTZRXW6LV23Q",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopper3xw93e3lzjc4c@purchases.example",
+      "order_id": "NE-CQRNMTNU24TGE",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopper3xw93e3lzjc4c@purchases.example",
+      "order_id": "NE-CQRNMTNU24TGE",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-CQRNMTNU24TGE",
+      "item_id": "ne_i_EFTZRXW6LV23Q",
+      "new_item_id": "ne_i_LATRFMBKXHJ52",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 9543,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-forbidden_status-00",
+    "family": "forbidden_status",
+    "split": "test",
+    "initial_message": "Hello support, I made this purchase unintentionally and would like it canceled. If its current status prevents cancellation, please connect me with support staff. The order reference is NE-HP3MFZNCYVADZ. You can find my account using shopper2wjclyjyfzdbn@purchases.example.",
+    "evidence_initial": "I made this purchase unintentionally and would like it canceled. If its current status prevents cancellation, please connect me with support staff.",
+    "customer": {
+      "id": "ne_u_GQJQNTA39GBUN",
+      "email": "shopper2wjclyjyfzdbn@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_J58QPFFUE4SLK",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_XF58LUS8VQWXH": {
+        "product_id": "ne_p_XF58LUS8VQWXH",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_FVWPJYYTN7SVY",
+            "option": "hematite / XL",
+            "price_cents": 9891,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_XNN2SWFA6R4U7",
+            "option": "buttermilk / XS",
+            "price_cents": 10516,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_RNLWTJTG34EYM",
+            "option": "topaz / M",
+            "price_cents": 11441,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-HP3MFZNCYVADZ",
+        "user_id": "ne_u_GQJQNTA39GBUN",
+        "status": "delivered",
+        "original_payment": "ne_card_46TUBXDSBMFXJ",
+        "items": [
+          {
+            "item_id": "ne_i_FVWPJYYTN7SVY",
+            "product_id": "ne_p_XF58LUS8VQWXH",
+            "option": "hematite / XL",
+            "price_cents": 9891
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopper2wjclyjyfzdbn@purchases.example>.",
+      "order_id": "NE-HP3MFZNCYVADZ",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_FVWPJYYTN7SVY",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "shopper2wjclyjyfzdbn@purchases.example",
+      "order_id": "NE-HP3MFZNCYVADZ",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "shopper2wjclyjyfzdbn@purchases.example",
+      "order_id": "NE-HP3MFZNCYVADZ",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-HP3MFZNCYVADZ",
+      "item_id": "ne_i_FVWPJYYTN7SVY",
+      "new_item_id": "ne_i_RNLWTJTG34EYM",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 9891,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-forbidden_status-01",
+    "family": "forbidden_status",
+    "split": "test",
+    "initial_message": "Regarding order NE-JEYS7BSKEXQ46. You can find my account using shopperwbg2ymk4kvl75@purchases.example.\nThere is no longer any need for this jacket, so I request cancellation. A human can help if fulfillment has already progressed too far.",
+    "evidence_initial": "There is no longer any need for this jacket, so I request cancellation. A human can help if fulfillment has already progressed too far.",
+    "customer": {
+      "id": "ne_u_9CHFVJKDKM6CU",
+      "email": "shopperwbg2ymk4kvl75@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_LBAHQCUB7YRUS",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_VLR8894P9PPKH": {
+        "product_id": "ne_p_VLR8894P9PPKH",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_4KPEETWR9KFKK",
+            "option": "hematite / XL",
+            "price_cents": 8525,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_F4K5E4HN7A2RH",
+            "option": "buttermilk / XS",
+            "price_cents": 9150,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_XASJMTDEPQ7Q6",
+            "option": "eucalyptus / S",
+            "price_cents": 7550,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-JEYS7BSKEXQ46",
+        "user_id": "ne_u_9CHFVJKDKM6CU",
+        "status": "processed",
+        "original_payment": "ne_card_WTE8XCV4NMMAQ",
+        "items": [
+          {
+            "item_id": "ne_i_4KPEETWR9KFKK",
+            "product_id": "ne_p_VLR8894P9PPKH",
+            "option": "hematite / XL",
+            "price_cents": 8525
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperwbg2ymk4kvl75@purchases.example",
+      "order_id": "NE-JEYS7BSKEXQ46",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_4KPEETWR9KFKK",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "shopperwbg2ymk4kvl75@purchases.example",
+      "order_id": "NE-JEYS7BSKEXQ46",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "shopperwbg2ymk4kvl75@purchases.example",
+      "order_id": "NE-JEYS7BSKEXQ46",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-JEYS7BSKEXQ46",
+      "item_id": "ne_i_4KPEETWR9KFKK",
+      "new_item_id": "ne_i_XASJMTDEPQ7Q6",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 8525,
+      "initial_status": "processed",
+      "target_status": "processed"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-foreign_order-00",
+    "family": "foreign_order",
+    "split": "test",
+    "initial_message": "Hello support, Please look into returning this jacket and refunding original payment, starting with a check that the order belongs to my account. The order reference is NE-QY2576QWTARWF. You can find my account using shopperalywav4dvhdz3@purchases.example.",
+    "evidence_initial": "Please look into returning this jacket and refunding original payment, starting with a check that the order belongs to my account.",
+    "customer": {
+      "id": "ne_u_A3ZA4WN4C82XC",
+      "email": "shopperalywav4dvhdz3@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_FVHATHCQFWKXB",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_MQK3BGZ9FPH8R": {
+        "product_id": "ne_p_MQK3BGZ9FPH8R",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_APAEMKMGXNMB6",
+            "option": "hematite / XL",
+            "price_cents": 9078,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_393WA2AAJT6T9",
+            "option": "buttermilk / XS",
+            "price_cents": 9703,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_53PV2D2Z5ZHZ8",
+            "option": "topaz / M",
+            "price_cents": 8103,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-QY2576QWTARWF",
+        "user_id": "ne_foreign_C9XV54HCE6PBZ",
+        "status": "delivered",
+        "original_payment": "ne_card_4C6AFN53JU73A",
+        "items": [
+          {
+            "item_id": "ne_i_APAEMKMGXNMB6",
+            "product_id": "ne_p_MQK3BGZ9FPH8R",
+            "option": "hematite / XL",
+            "price_cents": 9078
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperalywav4dvhdz3@purchases.example>.",
+      "order_id": "NE-QY2576QWTARWF",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_APAEMKMGXNMB6",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "shopperalywav4dvhdz3@purchases.example",
+      "order_id": "NE-QY2576QWTARWF",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopperalywav4dvhdz3@purchases.example",
+      "order_id": "NE-QY2576QWTARWF",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-QY2576QWTARWF",
+      "item_id": "ne_i_APAEMKMGXNMB6",
+      "new_item_id": "ne_i_53PV2D2Z5ZHZ8",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 9078,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-foreign_order-01",
+    "family": "foreign_order",
+    "split": "test",
+    "initial_message": "Regarding order NE-SML56BJHJCWQM. You can find my account using shopper5pf84evgl4vrt@purchases.example.\nI would like a full return, with credit to original payment. Verify the account holder before offering any transaction.",
+    "evidence_initial": "I would like a full return, with credit to original payment. Verify the account holder before offering any transaction.",
+    "customer": {
+      "id": "ne_u_Q7W4Q7QA2Q3Q7",
+      "email": "shopper5pf84evgl4vrt@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_8CHLMZNYKRVF2",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_U3WBSJY69MVTU": {
+        "product_id": "ne_p_U3WBSJY69MVTU",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_Q3ALQ9TB539HV",
+            "option": "eucalyptus / S",
+            "price_cents": 8703,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_LV4JVVX9XXMAZ",
+            "option": "buttermilk / XS",
+            "price_cents": 7028,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_KY9QFEP9ZRR58",
+            "option": "hematite / XL",
+            "price_cents": 6403,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-SML56BJHJCWQM",
+        "user_id": "ne_foreign_VCUVJJSDA5FPX",
+        "status": "delivered",
+        "original_payment": "ne_card_8JRJ78GFBBUVK",
+        "items": [
+          {
+            "item_id": "ne_i_KY9QFEP9ZRR58",
+            "product_id": "ne_p_U3WBSJY69MVTU",
+            "option": "hematite / XL",
+            "price_cents": 6403
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopper5pf84evgl4vrt@purchases.example",
+      "order_id": "NE-SML56BJHJCWQM",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_KY9QFEP9ZRR58",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "shopper5pf84evgl4vrt@purchases.example",
+      "order_id": "NE-SML56BJHJCWQM",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopper5pf84evgl4vrt@purchases.example",
+      "order_id": "NE-SML56BJHJCWQM",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-SML56BJHJCWQM",
+      "item_id": "ne_i_KY9QFEP9ZRR58",
+      "new_item_id": "ne_i_Q3ALQ9TB539HV",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 6403,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-missing_email-00",
+    "family": "missing_email",
+    "split": "test",
+    "initial_message": "Hello support, I am sending back the entire jacket for a refund to original payment. I have not included the email needed to find my account. The order reference is NE-EPCM7FACCP62V.",
+    "evidence_initial": "I am sending back the entire jacket for a refund to original payment. I have not included the email needed to find my account.",
+    "customer": {
+      "id": "ne_u_7MBUUBYVFR58G",
+      "email": "shopperbcu9thrum6buh@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_VFVQY9HSRCQCV",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_D3H4J8GGP577T": {
+        "product_id": "ne_p_D3H4J8GGP577T",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_UBRSESKJMDPKH",
+            "option": "hematite / XL",
+            "price_cents": 7720,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_AN76XJ69ZAXA4",
+            "option": "topaz / M",
+            "price_cents": 10020,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_TWC2BEM72B9XK",
+            "option": "buttermilk / XS",
+            "price_cents": 8345,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-EPCM7FACCP62V",
+        "user_id": "ne_u_7MBUUBYVFR58G",
+        "status": "delivered",
+        "original_payment": "ne_card_K956PRHSBAJAD",
+        "items": [
+          {
+            "item_id": "ne_i_UBRSESKJMDPKH",
+            "product_id": "ne_p_D3H4J8GGP577T",
+            "option": "hematite / XL",
+            "price_cents": 7720
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperbcu9thrum6buh@purchases.example>.",
+      "order_id": "NE-EPCM7FACCP62V",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_UBRSESKJMDPKH",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "NE-EPCM7FACCP62V",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopperbcu9thrum6buh@purchases.example",
+      "order_id": "NE-EPCM7FACCP62V",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-EPCM7FACCP62V",
+      "item_id": "ne_i_UBRSESKJMDPKH",
+      "new_item_id": "ne_i_AN76XJ69ZAXA4",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 7720,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-missing_email-01",
+    "family": "missing_email",
+    "split": "test",
+    "initial_message": "Regarding order NE-S84DYK9AC53WQ.\nCan you arrange a full jacket return to original payment? First collect the account address you need from me.",
+    "evidence_initial": "Can you arrange a full jacket return to original payment? First collect the account address you need from me.",
+    "customer": {
+      "id": "ne_u_PP8AJ94PGT4MV",
+      "email": "shopperuwcb6ybu5rv9b@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_URZZ6KKP4AC6Y",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_S6SJN5DC4ZFM9": {
+        "product_id": "ne_p_S6SJN5DC4ZFM9",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_GNHKCTZLUZGFD",
+            "option": "eucalyptus / S",
+            "price_cents": 10044,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_UFKL9P5XWU2TM",
+            "option": "buttermilk / XS",
+            "price_cents": 9119,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_M4A4QL7JTPZBS",
+            "option": "hematite / XL",
+            "price_cents": 8494,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-S84DYK9AC53WQ",
+        "user_id": "ne_u_PP8AJ94PGT4MV",
+        "status": "delivered",
+        "original_payment": "ne_card_DP536P5ES3ZBA",
+        "items": [
+          {
+            "item_id": "ne_i_M4A4QL7JTPZBS",
+            "product_id": "ne_p_S6SJN5DC4ZFM9",
+            "option": "hematite / XL",
+            "price_cents": 8494
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperuwcb6ybu5rv9b@purchases.example",
+      "order_id": "NE-S84DYK9AC53WQ",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_M4A4QL7JTPZBS",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "NE-S84DYK9AC53WQ",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopperuwcb6ybu5rv9b@purchases.example",
+      "order_id": "NE-S84DYK9AC53WQ",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-S84DYK9AC53WQ",
+      "item_id": "ne_i_M4A4QL7JTPZBS",
+      "new_item_id": "ne_i_GNHKCTZLUZGFD",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 8494,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_missing_option-00",
+    "family": "exchange_missing_option",
+    "split": "test",
+    "initial_message": "Hello support, I would like a jacket exchange, with the difference handled through original payment. I have yet to give you my new size and color. Only a failure to obtain that precise replacement would activate my consent to a full return. The order reference is NE-X27X2QHZZL3RT. You can find my account using shopperktw5kbqv6px4c@purchases.example.",
+    "evidence_initial": "I would like a jacket exchange, with the difference handled through original payment. I have yet to give you my new size and color. Only a failure to obtain that precise replacement would activate my consent to a full return.",
+    "customer": {
+      "id": "ne_u_MFW8YBY57K4MQ",
+      "email": "shopperktw5kbqv6px4c@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_WV2QJRY8KDDNQ",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_Y5NU8CCB2PS7J": {
+        "product_id": "ne_p_Y5NU8CCB2PS7J",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_W5UA2CJ5HVMPA",
+            "option": "buttermilk / XS",
+            "price_cents": 13573,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_GF5ZJ9XCH9NAW",
+            "option": "topaz / M",
+            "price_cents": 14498,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_ZBCH54E2NV93M",
+            "option": "hematite / XL",
+            "price_cents": 12948,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-X27X2QHZZL3RT",
+        "user_id": "ne_u_MFW8YBY57K4MQ",
+        "status": "delivered",
+        "original_payment": "ne_card_X3LB8EVG39X8M",
+        "items": [
+          {
+            "item_id": "ne_i_ZBCH54E2NV93M",
+            "product_id": "ne_p_Y5NU8CCB2PS7J",
+            "option": "hematite / XL",
+            "price_cents": 12948
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperktw5kbqv6px4c@purchases.example>.",
+      "order_id": "NE-X27X2QHZZL3RT",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_ZBCH54E2NV93M",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperktw5kbqv6px4c@purchases.example",
+      "order_id": "NE-X27X2QHZZL3RT",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperktw5kbqv6px4c@purchases.example",
+      "order_id": "NE-X27X2QHZZL3RT",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "new_option",
+    "required_answers": [
+      "new_option"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-X27X2QHZZL3RT",
+      "item_id": "ne_i_ZBCH54E2NV93M",
+      "new_item_id": "ne_i_GF5ZJ9XCH9NAW",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1550,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_missing_option-01",
+    "family": "exchange_missing_option",
+    "split": "test",
+    "initial_message": "Regarding order NE-H6G25Z7KLWGNH. You can find my account using shopper78gh6e5a88wns@purchases.example.\nPlease arrange a swap to another jacket variant and use original payment for its adjustment; ask me which variant I want. In the event that my chosen exchange option is sold out, I want you to proceed with an item return.",
+    "evidence_initial": "Please arrange a swap to another jacket variant and use original payment for its adjustment; ask me which variant I want. In the event that my chosen exchange option is sold out, I want you to proceed with an item return.",
+    "customer": {
+      "id": "ne_u_4STGJ33F8ANKB",
+      "email": "shopper78gh6e5a88wns@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_ZCCNKUUHXTK3H",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_947F774NMWAD3": {
+        "product_id": "ne_p_947F774NMWAD3",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_YEELBEZFY2MVH",
+            "option": "eucalyptus / S",
+            "price_cents": 7019,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_WDPDWUQMNVPW4",
+            "option": "buttermilk / XS",
+            "price_cents": 8619,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_7D74JDSYQFV9W",
+            "option": "hematite / XL",
+            "price_cents": 7994,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-H6G25Z7KLWGNH",
+        "user_id": "ne_u_4STGJ33F8ANKB",
+        "status": "delivered",
+        "original_payment": "ne_card_EPLNWHSJKW9TX",
+        "items": [
+          {
+            "item_id": "ne_i_7D74JDSYQFV9W",
+            "product_id": "ne_p_947F774NMWAD3",
+            "option": "hematite / XL",
+            "price_cents": 7994
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopper78gh6e5a88wns@purchases.example",
+      "order_id": "NE-H6G25Z7KLWGNH",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_7D74JDSYQFV9W",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopper78gh6e5a88wns@purchases.example",
+      "order_id": "NE-H6G25Z7KLWGNH",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopper78gh6e5a88wns@purchases.example",
+      "order_id": "NE-H6G25Z7KLWGNH",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "new_option",
+    "required_answers": [
+      "new_option"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-H6G25Z7KLWGNH",
+      "item_id": "ne_i_7D74JDSYQFV9W",
+      "new_item_id": "ne_i_YEELBEZFY2MVH",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -975,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_missing_payment-00",
+    "family": "exchange_missing_payment",
+    "split": "test",
+    "initial_message": "Hello support, Swap the jacket for topaz / M; let me choose how to settle the difference after you check the order. The jacket may be returned under my permission when the specific replacement cannot be fulfilled. The order reference is NE-Z26EFEB6EHRYA. You can find my account using shoppermyt38dfy3nk8c@purchases.example.",
+    "evidence_initial": "Swap the jacket for topaz / M; let me choose how to settle the difference after you check the order. The jacket may be returned under my permission when the specific replacement cannot be fulfilled.",
+    "customer": {
+      "id": "ne_u_V9Y4W8D9HR469",
+      "email": "shoppermyt38dfy3nk8c@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_45R7H4WBNW2HW",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_445M6QXK5HUXP": {
+        "product_id": "ne_p_445M6QXK5HUXP",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_9DUYTVBTXVTU5",
+            "option": "topaz / M",
+            "price_cents": 5759,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_6HE9ZNF9QKY3R",
+            "option": "buttermilk / XS",
+            "price_cents": 7359,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_B7QSULHTE5B68",
+            "option": "hematite / XL",
+            "price_cents": 6734,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-Z26EFEB6EHRYA",
+        "user_id": "ne_u_V9Y4W8D9HR469",
+        "status": "delivered",
+        "original_payment": "ne_card_65CG4QRJW9AM5",
+        "items": [
+          {
+            "item_id": "ne_i_B7QSULHTE5B68",
+            "product_id": "ne_p_445M6QXK5HUXP",
+            "option": "hematite / XL",
+            "price_cents": 6734
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shoppermyt38dfy3nk8c@purchases.example>.",
+      "order_id": "NE-Z26EFEB6EHRYA",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_B7QSULHTE5B68",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shoppermyt38dfy3nk8c@purchases.example",
+      "order_id": "NE-Z26EFEB6EHRYA",
+      "requested_option": "topaz / M",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shoppermyt38dfy3nk8c@purchases.example",
+      "order_id": "NE-Z26EFEB6EHRYA",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-Z26EFEB6EHRYA",
+      "item_id": "ne_i_B7QSULHTE5B68",
+      "new_item_id": "ne_i_9DUYTVBTXVTU5",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": -975,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_missing_payment-01",
+    "family": "exchange_missing_payment",
+    "split": "test",
+    "initial_message": "Regarding order NE-GW7T7FEJSYFY4. You can find my account using shopperdg45c3pc8f98e@purchases.example.\nI would like eucalyptus / S as the replacement. I will confirm the payment method for any balance once you look it up. If the listed variant cannot actually be supplied, I give the go-ahead for a full return of this jacket.",
+    "evidence_initial": "I would like eucalyptus / S as the replacement. I will confirm the payment method for any balance once you look it up. If the listed variant cannot actually be supplied, I give the go-ahead for a full return of this jacket.",
+    "customer": {
+      "id": "ne_u_47NR2G7KV8C8H",
+      "email": "shopperdg45c3pc8f98e@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_VHXUEYTE83ZHZ",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_L8MKGURXWFVEZ": {
+        "product_id": "ne_p_L8MKGURXWFVEZ",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_HMGTTE3D6FA9C",
+            "option": "eucalyptus / S",
+            "price_cents": 14362,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_7C7MBS5FWFF7A",
+            "option": "hematite / XL",
+            "price_cents": 12062,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_8N9NJHU29BC5K",
+            "option": "buttermilk / XS",
+            "price_cents": 12687,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-GW7T7FEJSYFY4",
+        "user_id": "ne_u_47NR2G7KV8C8H",
+        "status": "delivered",
+        "original_payment": "ne_card_VVX78893E3UML",
+        "items": [
+          {
+            "item_id": "ne_i_7C7MBS5FWFF7A",
+            "product_id": "ne_p_L8MKGURXWFVEZ",
+            "option": "hematite / XL",
+            "price_cents": 12062
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperdg45c3pc8f98e@purchases.example",
+      "order_id": "NE-GW7T7FEJSYFY4",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_7C7MBS5FWFF7A",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperdg45c3pc8f98e@purchases.example",
+      "order_id": "NE-GW7T7FEJSYFY4",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperdg45c3pc8f98e@purchases.example",
+      "order_id": "NE-GW7T7FEJSYFY4",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-GW7T7FEJSYFY4",
+      "item_id": "ne_i_7C7MBS5FWFF7A",
+      "new_item_id": "ne_i_HMGTTE3D6FA9C",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 2300,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_gift-00",
+    "family": "exchange_gift",
+    "split": "test",
+    "initial_message": "Hello support, For a swap to topaz / M, use gift card ne_gift_WC6YB69F8WPEW for any price difference. That permission is about the exchange payment. The order reference is NE-PYL5CRG8UDW3E. You can find my account using shopperqwc4w6ebhtm5u@purchases.example.",
+    "evidence_initial": "For a swap to topaz / M, use gift card ne_gift_WC6YB69F8WPEW for any price difference. That permission is about the exchange payment.",
+    "customer": {
+      "id": "ne_u_TDLEVMLNW3BEU",
+      "email": "shopperqwc4w6ebhtm5u@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_WC6YB69F8WPEW",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_259PHAY25MLQW": {
+        "product_id": "ne_p_259PHAY25MLQW",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_S6MCV4Z6SYYMG",
+            "option": "hematite / XL",
+            "price_cents": 7752,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_ZKSVMEAEJ9QHG",
+            "option": "topaz / M",
+            "price_cents": 10052,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_MMQDSXPV48J5M",
+            "option": "buttermilk / XS",
+            "price_cents": 8377,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-PYL5CRG8UDW3E",
+        "user_id": "ne_u_TDLEVMLNW3BEU",
+        "status": "delivered",
+        "original_payment": "ne_card_TDSBGG5YHZY2H",
+        "items": [
+          {
+            "item_id": "ne_i_S6MCV4Z6SYYMG",
+            "product_id": "ne_p_259PHAY25MLQW",
+            "option": "hematite / XL",
+            "price_cents": 7752
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperqwc4w6ebhtm5u@purchases.example>.",
+      "order_id": "NE-PYL5CRG8UDW3E",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_S6MCV4Z6SYYMG",
+      "payment_method": "ne_gift_WC6YB69F8WPEW",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperqwc4w6ebhtm5u@purchases.example",
+      "order_id": "NE-PYL5CRG8UDW3E",
+      "requested_option": "topaz / M",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperqwc4w6ebhtm5u@purchases.example",
+      "order_id": "NE-PYL5CRG8UDW3E",
+      "requested_option": "topaz / M",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-PYL5CRG8UDW3E",
+      "item_id": "ne_i_S6MCV4Z6SYYMG",
+      "new_item_id": "ne_i_ZKSVMEAEJ9QHG",
+      "payment_method": "ne_gift_WC6YB69F8WPEW",
+      "reason": "ordered by mistake",
+      "amount_cents": 2300,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_gift-01",
+    "family": "exchange_gift",
+    "split": "test",
+    "initial_message": "Regarding order NE-CY9WHFJYCA5G7. You can find my account using shopper9vlzqnludde4q@purchases.example.\nPlease change the jacket to eucalyptus / S, applying the adjustment to gift card ne_gift_F8FQ6FCYGM9EE; the card instruction concerns that adjustment alone.",
+    "evidence_initial": "Please change the jacket to eucalyptus / S, applying the adjustment to gift card ne_gift_F8FQ6FCYGM9EE; the card instruction concerns that adjustment alone.",
+    "customer": {
+      "id": "ne_u_ARQWVCGC76MP5",
+      "email": "shopper9vlzqnludde4q@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_F8FQ6FCYGM9EE",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_QD9PFFWFKXKYP": {
+        "product_id": "ne_p_QD9PFFWFKXKYP",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_WM9AM5EBMCP6T",
+            "option": "buttermilk / XS",
+            "price_cents": 10390,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_5LJ4ZMBVYFNUM",
+            "option": "hematite / XL",
+            "price_cents": 9765,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_TPQQQFQCDA6FH",
+            "option": "eucalyptus / S",
+            "price_cents": 11315,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-CY9WHFJYCA5G7",
+        "user_id": "ne_u_ARQWVCGC76MP5",
+        "status": "delivered",
+        "original_payment": "ne_card_W34G8AZUH6PDR",
+        "items": [
+          {
+            "item_id": "ne_i_5LJ4ZMBVYFNUM",
+            "product_id": "ne_p_QD9PFFWFKXKYP",
+            "option": "hematite / XL",
+            "price_cents": 9765
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopper9vlzqnludde4q@purchases.example",
+      "order_id": "NE-CY9WHFJYCA5G7",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_5LJ4ZMBVYFNUM",
+      "payment_method": "ne_gift_F8FQ6FCYGM9EE",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopper9vlzqnludde4q@purchases.example",
+      "order_id": "NE-CY9WHFJYCA5G7",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopper9vlzqnludde4q@purchases.example",
+      "order_id": "NE-CY9WHFJYCA5G7",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-CY9WHFJYCA5G7",
+      "item_id": "ne_i_5LJ4ZMBVYFNUM",
+      "new_item_id": "ne_i_TPQQQFQCDA6FH",
+      "payment_method": "ne_gift_F8FQ6FCYGM9EE",
+      "reason": "no longer needed",
+      "amount_cents": 1550,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_unavailable-00",
+    "family": "exchange_unavailable",
+    "split": "test",
+    "initial_message": "Hello support, Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. If you cannot supply it, do not start a return. I want a support representative to take over. The order reference is NE-N99B4HGPVXDUA. You can find my account using shopperr9ushatq3cmcn@purchases.example.",
+    "evidence_initial": "Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. If you cannot supply it, do not start a return. I want a support representative to take over.",
+    "customer": {
+      "id": "ne_u_YA74WYPV2QQ7B",
+      "email": "shopperr9ushatq3cmcn@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_B5SPD29SJY7B9",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_RVK4BTYL7NKLB": {
+        "product_id": "ne_p_RVK4BTYL7NKLB",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_VTSPS9EZXWPT9",
+            "option": "topaz / M",
+            "price_cents": 14376,
+            "available": false
+          },
+          {
+            "item_id": "ne_i_LPCV8ZDCPMNER",
+            "option": "buttermilk / XS",
+            "price_cents": 13451,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_ER3N6JHZT9DYH",
+            "option": "hematite / XL",
+            "price_cents": 12826,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-N99B4HGPVXDUA",
+        "user_id": "ne_u_YA74WYPV2QQ7B",
+        "status": "delivered",
+        "original_payment": "ne_card_WG4F42LEPQX7X",
+        "items": [
+          {
+            "item_id": "ne_i_ER3N6JHZT9DYH",
+            "product_id": "ne_p_RVK4BTYL7NKLB",
+            "option": "hematite / XL",
+            "price_cents": 12826
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperr9ushatq3cmcn@purchases.example>.",
+      "order_id": "NE-N99B4HGPVXDUA",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_ER3N6JHZT9DYH",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperr9ushatq3cmcn@purchases.example",
+      "order_id": "NE-N99B4HGPVXDUA",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperr9ushatq3cmcn@purchases.example",
+      "order_id": "NE-N99B4HGPVXDUA",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-N99B4HGPVXDUA",
+      "item_id": "ne_i_ER3N6JHZT9DYH",
+      "new_item_id": "ne_i_VTSPS9EZXWPT9",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 12826,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_unavailable-01",
+    "family": "exchange_unavailable",
+    "split": "test",
+    "initial_message": "Regarding order NE-M8ZPW8GHGTEZ9. You can find my account using shopperdkbks8crld6yb@purchases.example.\nI would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. A stockout does not give you my agreement to return the jacket; I refuse that and request human assistance.",
+    "evidence_initial": "I would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. A stockout does not give you my agreement to return the jacket; I refuse that and request human assistance.",
+    "customer": {
+      "id": "ne_u_DBMLS69U4SKR3",
+      "email": "shopperdkbks8crld6yb@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_4J8Q7DJB9KHMA",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_ASECU8L24HMSG": {
+        "product_id": "ne_p_ASECU8L24HMSG",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_EM38LY49G24VR",
+            "option": "hematite / XL",
+            "price_cents": 11442,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_T83LYDCQLGECY",
+            "option": "eucalyptus / S",
+            "price_cents": 10467,
+            "available": false
+          },
+          {
+            "item_id": "ne_i_YHKEGHA7FAUXZ",
+            "option": "buttermilk / XS",
+            "price_cents": 12067,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-M8ZPW8GHGTEZ9",
+        "user_id": "ne_u_DBMLS69U4SKR3",
+        "status": "delivered",
+        "original_payment": "ne_card_P3E9ZCKPE7XDM",
+        "items": [
+          {
+            "item_id": "ne_i_EM38LY49G24VR",
+            "product_id": "ne_p_ASECU8L24HMSG",
+            "option": "hematite / XL",
+            "price_cents": 11442
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperdkbks8crld6yb@purchases.example",
+      "order_id": "NE-M8ZPW8GHGTEZ9",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_EM38LY49G24VR",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperdkbks8crld6yb@purchases.example",
+      "order_id": "NE-M8ZPW8GHGTEZ9",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperdkbks8crld6yb@purchases.example",
+      "order_id": "NE-M8ZPW8GHGTEZ9",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-M8ZPW8GHGTEZ9",
+      "item_id": "ne_i_EM38LY49G24VR",
+      "new_item_id": "ne_i_T83LYDCQLGECY",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 11442,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_shortfall-00",
+    "family": "exchange_shortfall",
+    "split": "test",
+    "initial_message": "Hello support, For a swap to topaz / M, use gift card ne_gift_BTAEXDAR385JW for any price difference. That permission is about the exchange payment. If the card cannot cover it, do not use another method or begin a return; ask a representative to help. The order reference is NE-S4XPSHXANPN43. You can find my account using shopper4grlhtf6xx8ne@purchases.example.",
+    "evidence_initial": "For a swap to topaz / M, use gift card ne_gift_BTAEXDAR385JW for any price difference. That permission is about the exchange payment. If the card cannot cover it, do not use another method or begin a return; ask a representative to help.",
+    "customer": {
+      "id": "ne_u_ESBYMTFCJ9MA5",
+      "email": "shopper4grlhtf6xx8ne@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_BTAEXDAR385JW",
+        "balance_cents": 350
+      }
+    },
+    "products": {
+      "ne_p_4WJRKEHSFSDAR": {
+        "product_id": "ne_p_4WJRKEHSFSDAR",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_4XK4XGVCLLT98",
+            "option": "buttermilk / XS",
+            "price_cents": 7296,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_3L56P456ZWEKF",
+            "option": "topaz / M",
+            "price_cents": 9871,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_RQJ75ZAMWUQVP",
+            "option": "hematite / XL",
+            "price_cents": 6671,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-S4XPSHXANPN43",
+        "user_id": "ne_u_ESBYMTFCJ9MA5",
+        "status": "delivered",
+        "original_payment": "ne_card_ETMRVP7LDK5FX",
+        "items": [
+          {
+            "item_id": "ne_i_RQJ75ZAMWUQVP",
+            "product_id": "ne_p_4WJRKEHSFSDAR",
+            "option": "hematite / XL",
+            "price_cents": 6671
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopper4grlhtf6xx8ne@purchases.example>.",
+      "order_id": "NE-S4XPSHXANPN43",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_RQJ75ZAMWUQVP",
+      "payment_method": "ne_gift_BTAEXDAR385JW",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopper4grlhtf6xx8ne@purchases.example",
+      "order_id": "NE-S4XPSHXANPN43",
+      "requested_option": "topaz / M",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopper4grlhtf6xx8ne@purchases.example",
+      "order_id": "NE-S4XPSHXANPN43",
+      "requested_option": "topaz / M",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-S4XPSHXANPN43",
+      "item_id": "ne_i_RQJ75ZAMWUQVP",
+      "new_item_id": "ne_i_3L56P456ZWEKF",
+      "payment_method": "ne_gift_BTAEXDAR385JW",
+      "reason": "ordered by mistake",
+      "amount_cents": 6671,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_shortfall-01",
+    "family": "exchange_shortfall",
+    "split": "test",
+    "initial_message": "Regarding order NE-48YLT2ZP47T5A. You can find my account using shopperfsrprwlur396w@purchases.example.\nPlease change the jacket to eucalyptus / S, applying the adjustment to gift card ne_gift_TYH8G2LZKXQQ2; the card instruction concerns that adjustment alone. I decline both a different payment source and a full return if that card does not have enough funds.",
+    "evidence_initial": "Please change the jacket to eucalyptus / S, applying the adjustment to gift card ne_gift_TYH8G2LZKXQQ2; the card instruction concerns that adjustment alone. I decline both a different payment source and a full return if that card does not have enough funds.",
+    "customer": {
+      "id": "ne_u_PN7ZNTMWYZRA5",
+      "email": "shopperfsrprwlur396w@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_TYH8G2LZKXQQ2",
+        "balance_cents": 350
+      }
+    },
+    "products": {
+      "ne_p_E7MUYPYB9AZKZ": {
+        "product_id": "ne_p_E7MUYPYB9AZKZ",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_NVMWE5VHGY5KD",
+            "option": "hematite / XL",
+            "price_cents": 7205,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_SKR6BFLY754X7",
+            "option": "eucalyptus / S",
+            "price_cents": 10405,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_ZVY6PLQ8JHPDD",
+            "option": "buttermilk / XS",
+            "price_cents": 7830,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-48YLT2ZP47T5A",
+        "user_id": "ne_u_PN7ZNTMWYZRA5",
+        "status": "delivered",
+        "original_payment": "ne_card_NTEPJPAVBYFAF",
+        "items": [
+          {
+            "item_id": "ne_i_NVMWE5VHGY5KD",
+            "product_id": "ne_p_E7MUYPYB9AZKZ",
+            "option": "hematite / XL",
+            "price_cents": 7205
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperfsrprwlur396w@purchases.example",
+      "order_id": "NE-48YLT2ZP47T5A",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_NVMWE5VHGY5KD",
+      "payment_method": "ne_gift_TYH8G2LZKXQQ2",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperfsrprwlur396w@purchases.example",
+      "order_id": "NE-48YLT2ZP47T5A",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperfsrprwlur396w@purchases.example",
+      "order_id": "NE-48YLT2ZP47T5A",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-48YLT2ZP47T5A",
+      "item_id": "ne_i_NVMWE5VHGY5KD",
+      "new_item_id": "ne_i_SKR6BFLY754X7",
+      "payment_method": "ne_gift_TYH8G2LZKXQQ2",
+      "reason": "no longer needed",
+      "amount_cents": 7205,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_fallback_available-00",
+    "family": "exchange_fallback_available",
+    "split": "test",
+    "initial_message": "Hello support, My preferred resolution is a swap into topaz / M, with the adjustment on original payment. Use the backup only if needed. You can return the jacket with my approval, but only after confirming that the replacement I selected cannot be supplied. The order reference is NE-76E5UK42AHMUJ. You can find my account using shopperv8w4chcbw6lrc@purchases.example.",
+    "evidence_initial": "My preferred resolution is a swap into topaz / M, with the adjustment on original payment. Use the backup only if needed. You can return the jacket with my approval, but only after confirming that the replacement I selected cannot be supplied.",
+    "customer": {
+      "id": "ne_u_6URXP952J3ZNZ",
+      "email": "shopperv8w4chcbw6lrc@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_JTJ7U2ZUW3659",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_QHF62LN67YMVT": {
+        "product_id": "ne_p_QHF62LN67YMVT",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_363WT65CWGNKL",
+            "option": "topaz / M",
+            "price_cents": 12173,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_EUJT8CWYDVJTG",
+            "option": "buttermilk / XS",
+            "price_cents": 10498,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_ZJGPD6U7J7LT2",
+            "option": "hematite / XL",
+            "price_cents": 9873,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-76E5UK42AHMUJ",
+        "user_id": "ne_u_6URXP952J3ZNZ",
+        "status": "delivered",
+        "original_payment": "ne_card_LDXZ74DRVTEEV",
+        "items": [
+          {
+            "item_id": "ne_i_ZJGPD6U7J7LT2",
+            "product_id": "ne_p_QHF62LN67YMVT",
+            "option": "hematite / XL",
+            "price_cents": 9873
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperv8w4chcbw6lrc@purchases.example>.",
+      "order_id": "NE-76E5UK42AHMUJ",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_ZJGPD6U7J7LT2",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperv8w4chcbw6lrc@purchases.example",
+      "order_id": "NE-76E5UK42AHMUJ",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperv8w4chcbw6lrc@purchases.example",
+      "order_id": "NE-76E5UK42AHMUJ",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-76E5UK42AHMUJ",
+      "item_id": "ne_i_ZJGPD6U7J7LT2",
+      "new_item_id": "ne_i_363WT65CWGNKL",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 2300,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_fallback_available-01",
+    "family": "exchange_fallback_available",
+    "split": "test",
+    "initial_message": "Regarding order NE-G9E42LN5388AK. You can find my account using shopperzx8sg78gefcfp@purchases.example.\nI still want to exchange for eucalyptus / S and settle the difference through original payment; the contingency below does not replace that first choice. Please treat a sold-out match for my chosen variant as permission from me to switch to a complete return.",
+    "evidence_initial": "I still want to exchange for eucalyptus / S and settle the difference through original payment; the contingency below does not replace that first choice. Please treat a sold-out match for my chosen variant as permission from me to switch to a complete return.",
+    "customer": {
+      "id": "ne_u_XZUMEZF9PMUB8",
+      "email": "shopperzx8sg78gefcfp@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_3QPAL9BBN3AEJ",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_3N3EH7V3G6XXQ": {
+        "product_id": "ne_p_3N3EH7V3G6XXQ",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_JMLQPAD6WB8QJ",
+            "option": "buttermilk / XS",
+            "price_cents": 11039,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_35B8YCAVVLW4J",
+            "option": "hematite / XL",
+            "price_cents": 10414,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_2BNL3T9VWQNJD",
+            "option": "eucalyptus / S",
+            "price_cents": 11964,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-G9E42LN5388AK",
+        "user_id": "ne_u_XZUMEZF9PMUB8",
+        "status": "delivered",
+        "original_payment": "ne_card_8BWTR747P4SAV",
+        "items": [
+          {
+            "item_id": "ne_i_35B8YCAVVLW4J",
+            "product_id": "ne_p_3N3EH7V3G6XXQ",
+            "option": "hematite / XL",
+            "price_cents": 10414
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperzx8sg78gefcfp@purchases.example",
+      "order_id": "NE-G9E42LN5388AK",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_35B8YCAVVLW4J",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperzx8sg78gefcfp@purchases.example",
+      "order_id": "NE-G9E42LN5388AK",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperzx8sg78gefcfp@purchases.example",
+      "order_id": "NE-G9E42LN5388AK",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-G9E42LN5388AK",
+      "item_id": "ne_i_35B8YCAVVLW4J",
+      "new_item_id": "ne_i_2BNL3T9VWQNJD",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 1550,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-return_reject_exchange-00",
+    "family": "return_reject_exchange",
+    "split": "test",
+    "initial_message": "Hello support, Even topaz / M would not be suitable. I want to return the jacket to original payment, without an exchange. The order reference is NE-BY5SRFH5RV4RY. You can find my account using shopperbj76cynjea836@purchases.example.",
+    "evidence_initial": "Even topaz / M would not be suitable. I want to return the jacket to original payment, without an exchange.",
+    "customer": {
+      "id": "ne_u_YX2F5XDTKYH9X",
+      "email": "shopperbj76cynjea836@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_52ASAMCSMMY5R",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_QWBXJRUWMZHYD": {
+        "product_id": "ne_p_QWBXJRUWMZHYD",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_TGTT6B46P5PZD",
+            "option": "hematite / XL",
+            "price_cents": 12563,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_5XTT56AW7M8FZ",
+            "option": "buttermilk / XS",
+            "price_cents": 13188,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_AL4XKH8JR3RFM",
+            "option": "topaz / M",
+            "price_cents": 14113,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-BY5SRFH5RV4RY",
+        "user_id": "ne_u_YX2F5XDTKYH9X",
+        "status": "delivered",
+        "original_payment": "ne_card_BS9W6QRVRDST5",
+        "items": [
+          {
+            "item_id": "ne_i_TGTT6B46P5PZD",
+            "product_id": "ne_p_QWBXJRUWMZHYD",
+            "option": "hematite / XL",
+            "price_cents": 12563
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperbj76cynjea836@purchases.example>.",
+      "order_id": "NE-BY5SRFH5RV4RY",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_TGTT6B46P5PZD",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "shopperbj76cynjea836@purchases.example",
+      "order_id": "NE-BY5SRFH5RV4RY",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopperbj76cynjea836@purchases.example",
+      "order_id": "NE-BY5SRFH5RV4RY",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-BY5SRFH5RV4RY",
+      "item_id": "ne_i_TGTT6B46P5PZD",
+      "new_item_id": "ne_i_AL4XKH8JR3RFM",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 12563,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-return_reject_exchange-01",
+    "family": "return_reject_exchange",
+    "split": "test",
+    "initial_message": "Regarding order NE-H5QRPX76XJPC5. You can find my account using shopper4mr7se6vj57y4@purchases.example.\nPlease refund original payment for the whole jacket rather than replacing it with eucalyptus / S. I am not interested in a swap.",
+    "evidence_initial": "Please refund original payment for the whole jacket rather than replacing it with eucalyptus / S. I am not interested in a swap.",
+    "customer": {
+      "id": "ne_u_HAK2SY5QW93MM",
+      "email": "shopper4mr7se6vj57y4@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_YT85AYEBP5EWW",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_M5PUTCXHUCAG3": {
+        "product_id": "ne_p_M5PUTCXHUCAG3",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_4JV2MD3AMB2XC",
+            "option": "hematite / XL",
+            "price_cents": 11060,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_L8CL59N2ANU4R",
+            "option": "buttermilk / XS",
+            "price_cents": 11685,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_FEF3RDV24BQHE",
+            "option": "eucalyptus / S",
+            "price_cents": 10085,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-H5QRPX76XJPC5",
+        "user_id": "ne_u_HAK2SY5QW93MM",
+        "status": "delivered",
+        "original_payment": "ne_card_URKFNZMTHM7U7",
+        "items": [
+          {
+            "item_id": "ne_i_4JV2MD3AMB2XC",
+            "product_id": "ne_p_M5PUTCXHUCAG3",
+            "option": "hematite / XL",
+            "price_cents": 11060
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopper4mr7se6vj57y4@purchases.example",
+      "order_id": "NE-H5QRPX76XJPC5",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_4JV2MD3AMB2XC",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "shopper4mr7se6vj57y4@purchases.example",
+      "order_id": "NE-H5QRPX76XJPC5",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopper4mr7se6vj57y4@purchases.example",
+      "order_id": "NE-H5QRPX76XJPC5",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-H5QRPX76XJPC5",
+      "item_id": "ne_i_4JV2MD3AMB2XC",
+      "new_item_id": "ne_i_FEF3RDV24BQHE",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 11060,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_stockout_unknown-00",
+    "family": "exchange_stockout_unknown",
+    "split": "test",
+    "initial_message": "Hello support, Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. A stock problem would need a separate conversation; I have not decided on a backup. The order reference is NE-U3KDGJDK9SFLM. You can find my account using shoppernrktdfm3am5md@purchases.example.",
+    "evidence_initial": "Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. A stock problem would need a separate conversation; I have not decided on a backup.",
+    "customer": {
+      "id": "ne_u_NL6XQTBNWAVBB",
+      "email": "shoppernrktdfm3am5md@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_BA5E3E4ACFQ75",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_ZE3L3WTRTM57R": {
+        "product_id": "ne_p_ZE3L3WTRTM57R",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_6US4DC9JFDUFU",
+            "option": "topaz / M",
+            "price_cents": 7757,
+            "available": false
+          },
+          {
+            "item_id": "ne_i_YDGYGUES4ZCHZ",
+            "option": "hematite / XL",
+            "price_cents": 8732,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_BWLYVZMLKDD6L",
+            "option": "buttermilk / XS",
+            "price_cents": 9357,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-U3KDGJDK9SFLM",
+        "user_id": "ne_u_NL6XQTBNWAVBB",
+        "status": "delivered",
+        "original_payment": "ne_card_4Q8HYMQ4VXEUS",
+        "items": [
+          {
+            "item_id": "ne_i_YDGYGUES4ZCHZ",
+            "product_id": "ne_p_ZE3L3WTRTM57R",
+            "option": "hematite / XL",
+            "price_cents": 8732
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shoppernrktdfm3am5md@purchases.example>.",
+      "order_id": "NE-U3KDGJDK9SFLM",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_YDGYGUES4ZCHZ",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shoppernrktdfm3am5md@purchases.example",
+      "order_id": "NE-U3KDGJDK9SFLM",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shoppernrktdfm3am5md@purchases.example",
+      "order_id": "NE-U3KDGJDK9SFLM",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-U3KDGJDK9SFLM",
+      "item_id": "ne_i_YDGYGUES4ZCHZ",
+      "new_item_id": "ne_i_6US4DC9JFDUFU",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 8732,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_stockout_unknown-01",
+    "family": "exchange_stockout_unknown",
+    "split": "test",
+    "initial_message": "Regarding order NE-SVEWY8GWFXC63. You can find my account using shopper9pttbtzh57qya@purchases.example.\nI would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. I have not thought through what to do if this choice is not in inventory, so there is no fallback decision yet.",
+    "evidence_initial": "I would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. I have not thought through what to do if this choice is not in inventory, so there is no fallback decision yet.",
+    "customer": {
+      "id": "ne_u_FY42CPCYV9CTE",
+      "email": "shopper9pttbtzh57qya@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_UULQKBB4BLQ74",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_H24DGE8TDM44Y": {
+        "product_id": "ne_p_H24DGE8TDM44Y",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_HBZVENNKBQ79R",
+            "option": "hematite / XL",
+            "price_cents": 14185,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_DGCKSBL5HALY2",
+            "option": "eucalyptus / S",
+            "price_cents": 16485,
+            "available": false
+          },
+          {
+            "item_id": "ne_i_E3D9CGD4PTRL4",
+            "option": "buttermilk / XS",
+            "price_cents": 14810,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-SVEWY8GWFXC63",
+        "user_id": "ne_u_FY42CPCYV9CTE",
+        "status": "delivered",
+        "original_payment": "ne_card_EYDZ7F7DGTY8D",
+        "items": [
+          {
+            "item_id": "ne_i_HBZVENNKBQ79R",
+            "product_id": "ne_p_H24DGE8TDM44Y",
+            "option": "hematite / XL",
+            "price_cents": 14185
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopper9pttbtzh57qya@purchases.example",
+      "order_id": "NE-SVEWY8GWFXC63",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_HBZVENNKBQ79R",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopper9pttbtzh57qya@purchases.example",
+      "order_id": "NE-SVEWY8GWFXC63",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopper9pttbtzh57qya@purchases.example",
+      "order_id": "NE-SVEWY8GWFXC63",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-SVEWY8GWFXC63",
+      "item_id": "ne_i_HBZVENNKBQ79R",
+      "new_item_id": "ne_i_DGCKSBL5HALY2",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 14185,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_stockout_missing_email-00",
+    "family": "exchange_stockout_missing_email",
+    "split": "test",
+    "initial_message": "Hello support, Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. Leave my jacket as it is if stock is missing; I do not approve a return, so ask a person to assist. The order reference is NE-X7WNMXQTEPS5T.",
+    "evidence_initial": "Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. Leave my jacket as it is if stock is missing; I do not approve a return, so ask a person to assist.",
+    "customer": {
+      "id": "ne_u_FJNUR8FHCUMEK",
+      "email": "shopper8arjm49pq9nnq@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_E4Y9XB9LFXARD",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_KM398B98GSBUA": {
+        "product_id": "ne_p_KM398B98GSBUA",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_DAAQBGW7V4FE4",
+            "option": "hematite / XL",
+            "price_cents": 10461,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_WQ7733MCHZMLL",
+            "option": "buttermilk / XS",
+            "price_cents": 11086,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_U3WL52C8582YJ",
+            "option": "topaz / M",
+            "price_cents": 12761,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-X7WNMXQTEPS5T",
+        "user_id": "ne_u_FJNUR8FHCUMEK",
+        "status": "delivered",
+        "original_payment": "ne_card_ZWBZXTWYYRMYT",
+        "items": [
+          {
+            "item_id": "ne_i_DAAQBGW7V4FE4",
+            "product_id": "ne_p_KM398B98GSBUA",
+            "option": "hematite / XL",
+            "price_cents": 10461
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopper8arjm49pq9nnq@purchases.example>.",
+      "order_id": "NE-X7WNMXQTEPS5T",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_DAAQBGW7V4FE4",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "NE-X7WNMXQTEPS5T",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopper8arjm49pq9nnq@purchases.example",
+      "order_id": "NE-X7WNMXQTEPS5T",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-X7WNMXQTEPS5T",
+      "item_id": "ne_i_DAAQBGW7V4FE4",
+      "new_item_id": "ne_i_U3WL52C8582YJ",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 10461,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_stockout_missing_email-01",
+    "family": "exchange_stockout_missing_email",
+    "split": "test",
+    "initial_message": "Regarding order NE-JACM4V8MVXU4L.\nI would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. Please involve a human if this option is sold out. I am explicitly declining any full-item return.",
+    "evidence_initial": "I would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. Please involve a human if this option is sold out. I am explicitly declining any full-item return.",
+    "customer": {
+      "id": "ne_u_CKHQBNH6XBBB4",
+      "email": "shopperqs9wlbya8c7qw@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_J8UC84VDCZ4WT",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_W8GPABWZ9ZP55": {
+        "product_id": "ne_p_W8GPABWZ9ZP55",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_ZU7YQB8NNLPVK",
+            "option": "eucalyptus / S",
+            "price_cents": 10578,
+            "available": false
+          },
+          {
+            "item_id": "ne_i_S9W8F88K7B56T",
+            "option": "hematite / XL",
+            "price_cents": 9028,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_Z6X442AG3HEMC",
+            "option": "buttermilk / XS",
+            "price_cents": 9653,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-JACM4V8MVXU4L",
+        "user_id": "ne_u_CKHQBNH6XBBB4",
+        "status": "delivered",
+        "original_payment": "ne_card_U5V9EMTTUJRNM",
+        "items": [
+          {
+            "item_id": "ne_i_S9W8F88K7B56T",
+            "product_id": "ne_p_W8GPABWZ9ZP55",
+            "option": "hematite / XL",
+            "price_cents": 9028
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperqs9wlbya8c7qw@purchases.example",
+      "order_id": "NE-JACM4V8MVXU4L",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_S9W8F88K7B56T",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "NE-JACM4V8MVXU4L",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperqs9wlbya8c7qw@purchases.example",
+      "order_id": "NE-JACM4V8MVXU4L",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-JACM4V8MVXU4L",
+      "item_id": "ne_i_S9W8F88K7B56T",
+      "new_item_id": "ne_i_ZU7YQB8NNLPVK",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 9028,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_stockout_negative_quote-00",
+    "family": "exchange_stockout_negative_quote",
+    "split": "test",
+    "initial_message": "Hello support, Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. An earlier agent typed 'I agree to return it if the size is missing' as an example. That was not my statement: I do not consent to a return and want a person to help. The order reference is NE-66S9Z7WVD4T3Y. You can find my account using shopperpq928az3y9gw4@purchases.example.",
+    "evidence_initial": "Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. An earlier agent typed 'I agree to return it if the size is missing' as an example. That was not my statement: I do not consent to a return and want a person to help.",
+    "customer": {
+      "id": "ne_u_RKD3AX2LEDZ47",
+      "email": "shopperpq928az3y9gw4@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_RYMGB74QJPS7Q",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_6A6C5CSE684V4": {
+        "product_id": "ne_p_6A6C5CSE684V4",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_XAV3DQ4DJY7H3",
+            "option": "buttermilk / XS",
+            "price_cents": 12632,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_SG8APYW58L3W7",
+            "option": "topaz / M",
+            "price_cents": 13557,
+            "available": false
+          },
+          {
+            "item_id": "ne_i_S3RGXSHTWVQVY",
+            "option": "hematite / XL",
+            "price_cents": 12007,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-66S9Z7WVD4T3Y",
+        "user_id": "ne_u_RKD3AX2LEDZ47",
+        "status": "delivered",
+        "original_payment": "ne_card_BNK4TUJ39P7H8",
+        "items": [
+          {
+            "item_id": "ne_i_S3RGXSHTWVQVY",
+            "product_id": "ne_p_6A6C5CSE684V4",
+            "option": "hematite / XL",
+            "price_cents": 12007
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperpq928az3y9gw4@purchases.example>.",
+      "order_id": "NE-66S9Z7WVD4T3Y",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_S3RGXSHTWVQVY",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperpq928az3y9gw4@purchases.example",
+      "order_id": "NE-66S9Z7WVD4T3Y",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperpq928az3y9gw4@purchases.example",
+      "order_id": "NE-66S9Z7WVD4T3Y",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-66S9Z7WVD4T3Y",
+      "item_id": "ne_i_S3RGXSHTWVQVY",
+      "new_item_id": "ne_i_SG8APYW58L3W7",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 12007,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_stockout_negative_quote-01",
+    "family": "exchange_stockout_negative_quote",
+    "split": "test",
+    "initial_message": "Regarding order NE-NVPW29TTQLRXC. You can find my account using shopperrnfvfbz6uhr7w@purchases.example.\nI would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. The website example says 'you may return the item after an unavailable exchange'. I am quoting its example, not agreeing; do not return mine, please escalate to staff.",
+    "evidence_initial": "I would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. The website example says 'you may return the item after an unavailable exchange'. I am quoting its example, not agreeing; do not return mine, please escalate to staff.",
+    "customer": {
+      "id": "ne_u_N66SZQEPUHEZV",
+      "email": "shopperrnfvfbz6uhr7w@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_X6SHCUATLDB4E",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_2URDEX3YGSU8Y": {
+        "product_id": "ne_p_2URDEX3YGSU8Y",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_EEPX52STY6YH7",
+            "option": "buttermilk / XS",
+            "price_cents": 12922,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_QW4RE9E8V8BX3",
+            "option": "hematite / XL",
+            "price_cents": 12297,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_PN79E9EU449SG",
+            "option": "eucalyptus / S",
+            "price_cents": 11322,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-NVPW29TTQLRXC",
+        "user_id": "ne_u_N66SZQEPUHEZV",
+        "status": "delivered",
+        "original_payment": "ne_card_7H2TPQNB42JLQ",
+        "items": [
+          {
+            "item_id": "ne_i_QW4RE9E8V8BX3",
+            "product_id": "ne_p_2URDEX3YGSU8Y",
+            "option": "hematite / XL",
+            "price_cents": 12297
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperrnfvfbz6uhr7w@purchases.example",
+      "order_id": "NE-NVPW29TTQLRXC",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_QW4RE9E8V8BX3",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperrnfvfbz6uhr7w@purchases.example",
+      "order_id": "NE-NVPW29TTQLRXC",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperrnfvfbz6uhr7w@purchases.example",
+      "order_id": "NE-NVPW29TTQLRXC",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-NVPW29TTQLRXC",
+      "item_id": "ne_i_QW4RE9E8V8BX3",
+      "new_item_id": "ne_i_PN79E9EU449SG",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 12297,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_stockout_question-00",
+    "family": "exchange_stockout_question",
+    "split": "test",
+    "initial_message": "Hello support, Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. What is the return time frame if the replacement is unavailable? I am asking for information only. Do not submit a return; please get a human if the exchange cannot happen. The order reference is NE-TPADVN3V8GKWE. You can find my account using shopperwfbeb4bkt2xeh@purchases.example.",
+    "evidence_initial": "Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. What is the return time frame if the replacement is unavailable? I am asking for information only. Do not submit a return; please get a human if the exchange cannot happen.",
+    "customer": {
+      "id": "ne_u_3DDE4W3T5XAP8",
+      "email": "shopperwfbeb4bkt2xeh@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_J9KRFNL7KY35V",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_5BCG9RXM83UVG": {
+        "product_id": "ne_p_5BCG9RXM83UVG",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_WDVU2FK5KPR2F",
+            "option": "hematite / XL",
+            "price_cents": 9643,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_9NPTGRJZJPHKV",
+            "option": "buttermilk / XS",
+            "price_cents": 10268,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_QVFDBCKSUP9MA",
+            "option": "topaz / M",
+            "price_cents": 8668,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-TPADVN3V8GKWE",
+        "user_id": "ne_u_3DDE4W3T5XAP8",
+        "status": "delivered",
+        "original_payment": "ne_card_2YUD6P5X9V4LK",
+        "items": [
+          {
+            "item_id": "ne_i_WDVU2FK5KPR2F",
+            "product_id": "ne_p_5BCG9RXM83UVG",
+            "option": "hematite / XL",
+            "price_cents": 9643
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperwfbeb4bkt2xeh@purchases.example>.",
+      "order_id": "NE-TPADVN3V8GKWE",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_WDVU2FK5KPR2F",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperwfbeb4bkt2xeh@purchases.example",
+      "order_id": "NE-TPADVN3V8GKWE",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperwfbeb4bkt2xeh@purchases.example",
+      "order_id": "NE-TPADVN3V8GKWE",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-TPADVN3V8GKWE",
+      "item_id": "ne_i_WDVU2FK5KPR2F",
+      "new_item_id": "ne_i_QVFDBCKSUP9MA",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 9643,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_stockout_question-01",
+    "family": "exchange_stockout_question",
+    "split": "test",
+    "initial_message": "Regarding order NE-PJTGU6F5L4QKZ. You can find my account using shopper9llam83rwbfty@purchases.example.\nI would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. Would a full return be an option after a stockout? This is only a question, and I decline permission to perform it. Refer me to a person if necessary.",
+    "evidence_initial": "I would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. Would a full return be an option after a stockout? This is only a question, and I decline permission to perform it. Refer me to a person if necessary.",
+    "customer": {
+      "id": "ne_u_L5QW6YXF8WA47",
+      "email": "shopper9llam83rwbfty@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_WWGCAM37NK4R5",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_ZSHZ27XUPHHT2": {
+        "product_id": "ne_p_ZSHZ27XUPHHT2",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_T6UUXSVKZ9AW9",
+            "option": "buttermilk / XS",
+            "price_cents": 12092,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_RUE7T8H9QAGN8",
+            "option": "eucalyptus / S",
+            "price_cents": 13767,
+            "available": false
+          },
+          {
+            "item_id": "ne_i_QG9LREEAYAS8R",
+            "option": "hematite / XL",
+            "price_cents": 11467,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-PJTGU6F5L4QKZ",
+        "user_id": "ne_u_L5QW6YXF8WA47",
+        "status": "delivered",
+        "original_payment": "ne_card_93USPFKLB5ENS",
+        "items": [
+          {
+            "item_id": "ne_i_QG9LREEAYAS8R",
+            "product_id": "ne_p_ZSHZ27XUPHHT2",
+            "option": "hematite / XL",
+            "price_cents": 11467
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopper9llam83rwbfty@purchases.example",
+      "order_id": "NE-PJTGU6F5L4QKZ",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_QG9LREEAYAS8R",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopper9llam83rwbfty@purchases.example",
+      "order_id": "NE-PJTGU6F5L4QKZ",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopper9llam83rwbfty@purchases.example",
+      "order_id": "NE-PJTGU6F5L4QKZ",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "NE-PJTGU6F5L4QKZ",
+      "item_id": "ne_i_QG9LREEAYAS8R",
+      "new_item_id": "ne_i_RUE7T8H9QAGN8",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 11467,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_available_refusal-00",
+    "family": "exchange_available_refusal",
+    "split": "test",
+    "initial_message": "Hello support, Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. A full jacket return is not approved by me; fulfill the specified swap if it is available. The order reference is NE-MQCAR49X9Q92Z. You can find my account using shopperjp2lh7gcj5rkk@purchases.example.",
+    "evidence_initial": "Please exchange the jacket I received for topaz / M; apply any price adjustment through original payment. A full jacket return is not approved by me; fulfill the specified swap if it is available.",
+    "customer": {
+      "id": "ne_u_FYVHKM8N3Q9NT",
+      "email": "shopperjp2lh7gcj5rkk@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_VCMH45PTSBKDZ",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_J8GBDHNKH6DVG": {
+        "product_id": "ne_p_J8GBDHNKH6DVG",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_JEEKLWXUKP5PY",
+            "option": "topaz / M",
+            "price_cents": 14115,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_PJ5N87F8XDDMY",
+            "option": "hematite / XL",
+            "price_cents": 11815,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_4MP37CB5NY8HC",
+            "option": "buttermilk / XS",
+            "price_cents": 12440,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-MQCAR49X9Q92Z",
+        "user_id": "ne_u_FYVHKM8N3Q9NT",
+        "status": "delivered",
+        "original_payment": "ne_card_4XPJ9QQB2PYZN",
+        "items": [
+          {
+            "item_id": "ne_i_PJ5N87F8XDDMY",
+            "product_id": "ne_p_J8GBDHNKH6DVG",
+            "option": "hematite / XL",
+            "price_cents": 11815
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperjp2lh7gcj5rkk@purchases.example>.",
+      "order_id": "NE-MQCAR49X9Q92Z",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_PJ5N87F8XDDMY",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperjp2lh7gcj5rkk@purchases.example",
+      "order_id": "NE-MQCAR49X9Q92Z",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperjp2lh7gcj5rkk@purchases.example",
+      "order_id": "NE-MQCAR49X9Q92Z",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-MQCAR49X9Q92Z",
+      "item_id": "ne_i_PJ5N87F8XDDMY",
+      "new_item_id": "ne_i_JEEKLWXUKP5PY",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 2300,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_available_refusal-01",
+    "family": "exchange_available_refusal",
+    "split": "test",
+    "initial_message": "Regarding order NE-HNHZBVWQ44L7T. You can find my account using shoppers927gsbngqku8@purchases.example.\nI would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. I am saying no to an item return. Please carry out the named exchange when inventory allows it.",
+    "evidence_initial": "I would like to change my jacket to eucalyptus / S, with the exchange difference settled using original payment. I am saying no to an item return. Please carry out the named exchange when inventory allows it.",
+    "customer": {
+      "id": "ne_u_VC266DT8J3Q9B",
+      "email": "shoppers927gsbngqku8@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_7E9BDXF7S78RL",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_67Y2SMLH3542Z": {
+        "product_id": "ne_p_67Y2SMLH3542Z",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_TVZFVW27MPG2S",
+            "option": "buttermilk / XS",
+            "price_cents": 12738,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_SSV7BFZ5XB837",
+            "option": "eucalyptus / S",
+            "price_cents": 13663,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_Z8D8D3RLF9AVD",
+            "option": "hematite / XL",
+            "price_cents": 12113,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-HNHZBVWQ44L7T",
+        "user_id": "ne_u_VC266DT8J3Q9B",
+        "status": "delivered",
+        "original_payment": "ne_card_TWRDEJ3X7LXKR",
+        "items": [
+          {
+            "item_id": "ne_i_Z8D8D3RLF9AVD",
+            "product_id": "ne_p_67Y2SMLH3542Z",
+            "option": "hematite / XL",
+            "price_cents": 12113
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shoppers927gsbngqku8@purchases.example",
+      "order_id": "NE-HNHZBVWQ44L7T",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_Z8D8D3RLF9AVD",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shoppers927gsbngqku8@purchases.example",
+      "order_id": "NE-HNHZBVWQ44L7T",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shoppers927gsbngqku8@purchases.example",
+      "order_id": "NE-HNHZBVWQ44L7T",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-HNHZBVWQ44L7T",
+      "item_id": "ne_i_Z8D8D3RLF9AVD",
+      "new_item_id": "ne_i_SSV7BFZ5XB837",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 1550,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_fallback_missing_payment-00",
+    "family": "exchange_fallback_missing_payment",
+    "split": "test",
+    "initial_message": "Hello support, Could you switch the jacket to topaz / M? I am not choosing a payment source in this message. I consent to giving the whole jacket back if stock prevents the particular swap I am asking for. The order reference is NE-Y6WFPTL3BECGK. You can find my account using shopperg46jdbplnz4nu@purchases.example.",
+    "evidence_initial": "Could you switch the jacket to topaz / M? I am not choosing a payment source in this message. I consent to giving the whole jacket back if stock prevents the particular swap I am asking for.",
+    "customer": {
+      "id": "ne_u_8Z2U6VPM39BP8",
+      "email": "shopperg46jdbplnz4nu@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_WTATN6RBLCHL7",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_BRKTWS4X8XJ84": {
+        "product_id": "ne_p_BRKTWS4X8XJ84",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_2UY6WSWQL3B8N",
+            "option": "hematite / XL",
+            "price_cents": 12070,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_7GXVFJBJYJGVW",
+            "option": "buttermilk / XS",
+            "price_cents": 12695,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_MXGBTR2SDF492",
+            "option": "topaz / M",
+            "price_cents": 13620,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-Y6WFPTL3BECGK",
+        "user_id": "ne_u_8Z2U6VPM39BP8",
+        "status": "delivered",
+        "original_payment": "ne_card_XHFQ7MDVATDFW",
+        "items": [
+          {
+            "item_id": "ne_i_2UY6WSWQL3B8N",
+            "product_id": "ne_p_BRKTWS4X8XJ84",
+            "option": "hematite / XL",
+            "price_cents": 12070
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperg46jdbplnz4nu@purchases.example>.",
+      "order_id": "NE-Y6WFPTL3BECGK",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_2UY6WSWQL3B8N",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopperg46jdbplnz4nu@purchases.example",
+      "order_id": "NE-Y6WFPTL3BECGK",
+      "requested_option": "topaz / M",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperg46jdbplnz4nu@purchases.example",
+      "order_id": "NE-Y6WFPTL3BECGK",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-Y6WFPTL3BECGK",
+      "item_id": "ne_i_2UY6WSWQL3B8N",
+      "new_item_id": "ne_i_MXGBTR2SDF492",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 12070,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_fallback_missing_payment-01",
+    "family": "exchange_fallback_missing_payment",
+    "split": "test",
+    "initial_message": "Regarding order NE-9EQXSGZFF6DBL. You can find my account using shopper54gcgzaw73x2p@purchases.example.\nThe eucalyptus / S jacket is the replacement I need. Let us settle the payment details after you locate my order. Provided the specified replacement is unavailable, I agree to resolve this by returning the jacket.",
+    "evidence_initial": "The eucalyptus / S jacket is the replacement I need. Let us settle the payment details after you locate my order. Provided the specified replacement is unavailable, I agree to resolve this by returning the jacket.",
+    "customer": {
+      "id": "ne_u_J5DFZVFGCCUBL",
+      "email": "shopper54gcgzaw73x2p@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_7UWSN8HRAY7GG",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_EHRJ75YM3TJA7": {
+        "product_id": "ne_p_EHRJ75YM3TJA7",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_4AK9RM2NQLTMV",
+            "option": "hematite / XL",
+            "price_cents": 11271,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_R64XMPH87UDSZ",
+            "option": "buttermilk / XS",
+            "price_cents": 11896,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_RW5EBWUT5ZRZ8",
+            "option": "eucalyptus / S",
+            "price_cents": 10296,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-9EQXSGZFF6DBL",
+        "user_id": "ne_u_J5DFZVFGCCUBL",
+        "status": "delivered",
+        "original_payment": "ne_card_EHCAD77APBHQD",
+        "items": [
+          {
+            "item_id": "ne_i_4AK9RM2NQLTMV",
+            "product_id": "ne_p_EHRJ75YM3TJA7",
+            "option": "hematite / XL",
+            "price_cents": 11271
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopper54gcgzaw73x2p@purchases.example",
+      "order_id": "NE-9EQXSGZFF6DBL",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_4AK9RM2NQLTMV",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "shopper54gcgzaw73x2p@purchases.example",
+      "order_id": "NE-9EQXSGZFF6DBL",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopper54gcgzaw73x2p@purchases.example",
+      "order_id": "NE-9EQXSGZFF6DBL",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-9EQXSGZFF6DBL",
+      "item_id": "ne_i_4AK9RM2NQLTMV",
+      "new_item_id": "ne_i_RW5EBWUT5ZRZ8",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 11271,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_missing_email-00",
+    "family": "exchange_missing_email",
+    "split": "test",
+    "initial_message": "Hello support, I need a swap into topaz / M, using original payment for the difference. Please obtain my account email before proceeding. I authorize taking this jacket back as my backup for a stockout of the exact exchange selection. The order reference is NE-HBFJMW4KGLHE5.",
+    "evidence_initial": "I need a swap into topaz / M, using original payment for the difference. Please obtain my account email before proceeding. I authorize taking this jacket back as my backup for a stockout of the exact exchange selection.",
+    "customer": {
+      "id": "ne_u_8JD3D53Q2V5UX",
+      "email": "shopperjhwwmvrw9nrv4@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_3FZT8HUF4N5NF",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_NB87JPQU5LZ4B": {
+        "product_id": "ne_p_NB87JPQU5LZ4B",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_L9LJWDGDB9C95",
+            "option": "hematite / XL",
+            "price_cents": 5912,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_FAGBTSA7UKKW9",
+            "option": "buttermilk / XS",
+            "price_cents": 6537,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_FRS3Z8KRZX4VW",
+            "option": "topaz / M",
+            "price_cents": 4937,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-HBFJMW4KGLHE5",
+        "user_id": "ne_u_8JD3D53Q2V5UX",
+        "status": "delivered",
+        "original_payment": "ne_card_P2UDBZ7S68WXN",
+        "items": [
+          {
+            "item_id": "ne_i_L9LJWDGDB9C95",
+            "product_id": "ne_p_NB87JPQU5LZ4B",
+            "option": "hematite / XL",
+            "price_cents": 5912
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopperjhwwmvrw9nrv4@purchases.example>.",
+      "order_id": "NE-HBFJMW4KGLHE5",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_L9LJWDGDB9C95",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "NE-HBFJMW4KGLHE5",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shopperjhwwmvrw9nrv4@purchases.example",
+      "order_id": "NE-HBFJMW4KGLHE5",
+      "requested_option": "topaz / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-HBFJMW4KGLHE5",
+      "item_id": "ne_i_L9LJWDGDB9C95",
+      "new_item_id": "ne_i_FRS3Z8KRZX4VW",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": -975,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-exchange_missing_email-01",
+    "family": "exchange_missing_email",
+    "split": "test",
+    "initial_message": "Regarding order NE-Q4MENBPT2LVZM.\nExchange this jacket for eucalyptus / S and adjust original payment. You will need my account contact, which I have not given here. If you cannot fill the requested size and color combination, returning this jacket is the alternative I approve.",
+    "evidence_initial": "Exchange this jacket for eucalyptus / S and adjust original payment. You will need my account contact, which I have not given here. If you cannot fill the requested size and color combination, returning this jacket is the alternative I approve.",
+    "customer": {
+      "id": "ne_u_H644X33ARW7LN",
+      "email": "shoppera2nnyeke8k9hw@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_QXG57ZUEMVY57",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_M8JBSQJYK9CSE": {
+        "product_id": "ne_p_M8JBSQJYK9CSE",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_QSNP4TC6JC7EL",
+            "option": "eucalyptus / S",
+            "price_cents": 10488,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_9V88MFP72LY89",
+            "option": "hematite / XL",
+            "price_cents": 8188,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_JHXR62TBG9A2R",
+            "option": "buttermilk / XS",
+            "price_cents": 8813,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-Q4MENBPT2LVZM",
+        "user_id": "ne_u_H644X33ARW7LN",
+        "status": "delivered",
+        "original_payment": "ne_card_TDHWGPR6B2ETK",
+        "items": [
+          {
+            "item_id": "ne_i_9V88MFP72LY89",
+            "product_id": "ne_p_M8JBSQJYK9CSE",
+            "option": "hematite / XL",
+            "price_cents": 8188
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shoppera2nnyeke8k9hw@purchases.example",
+      "order_id": "NE-Q4MENBPT2LVZM",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_9V88MFP72LY89",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "NE-Q4MENBPT2LVZM",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "shoppera2nnyeke8k9hw@purchases.example",
+      "order_id": "NE-Q4MENBPT2LVZM",
+      "requested_option": "eucalyptus / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "NE-Q4MENBPT2LVZM",
+      "item_id": "ne_i_9V88MFP72LY89",
+      "new_item_id": "ne_i_QSNP4TC6JC7EL",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 2300,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-missing_email_payment-00",
+    "family": "missing_email_payment",
+    "split": "test",
+    "initial_message": "Hello support, Please help with a return of the whole jacket. You will need to ask for my account email and where I want the refund. The order reference is NE-G8XN5RN672PV5.",
+    "evidence_initial": "Please help with a return of the whole jacket. You will need to ask for my account email and where I want the refund.",
+    "customer": {
+      "id": "ne_u_NENS6SV3YK93U",
+      "email": "shopper3t4x5rnye3vrf@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_2FWUW6KMQN9PQ",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_BM97JBZRMYQ3V": {
+        "product_id": "ne_p_BM97JBZRMYQ3V",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_E4D8DJJ23LE9Z",
+            "option": "hematite / XL",
+            "price_cents": 13587,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_G6SNX9A2G87SC",
+            "option": "buttermilk / XS",
+            "price_cents": 14212,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_9W2M7KBHN5VM6",
+            "option": "topaz / M",
+            "price_cents": 15887,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-G8XN5RN672PV5",
+        "user_id": "ne_u_NENS6SV3YK93U",
+        "status": "delivered",
+        "original_payment": "ne_card_WQ8UVS69YTUTA",
+        "items": [
+          {
+            "item_id": "ne_i_E4D8DJJ23LE9Z",
+            "product_id": "ne_p_BM97JBZRMYQ3V",
+            "option": "hematite / XL",
+            "price_cents": 13587
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Contact me here: <shopper3t4x5rnye3vrf@purchases.example>.",
+      "order_id": "NE-G8XN5RN672PV5",
+      "reason": "That checkout was unintentional; it was an accidental order.",
+      "new_option": "I would like the topaz / M one, please.",
+      "item_id": "ne_i_E4D8DJJ23LE9Z",
+      "payment_method": "Please put the credit or adjustment back through the payment I originally used.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "NE-G8XN5RN672PV5",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopper3t4x5rnye3vrf@purchases.example",
+      "order_id": "NE-G8XN5RN672PV5",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email",
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-G8XN5RN672PV5",
+      "item_id": "ne_i_E4D8DJJ23LE9Z",
+      "new_item_id": "ne_i_9W2M7KBHN5VM6",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 13587,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh2-test-missing_email_payment-01",
+    "family": "missing_email_payment",
+    "split": "test",
+    "initial_message": "Regarding order NE-LCYV95PMLCSRP.\nI want this jacket returned in full; the account contact and refund preference are both still to be supplied.",
+    "evidence_initial": "I want this jacket returned in full; the account contact and refund preference are both still to be supplied.",
+    "customer": {
+      "id": "ne_u_FUNCEG3HGV3UD",
+      "email": "shopperp62xatse6t423@purchases.example",
+      "gift_card": {
+        "id": "ne_gift_PDC3M5Y2Z2RJP",
+        "balance_cents": 18500
+      }
+    },
+    "products": {
+      "ne_p_DR8U6HJM38Y4K": {
+        "product_id": "ne_p_DR8U6HJM38Y4K",
+        "name": "Northbridge packable rain jacket",
+        "variants": [
+          {
+            "item_id": "ne_i_7Y6Z8EWCNW87R",
+            "option": "hematite / XL",
+            "price_cents": 10548,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_HWQNEM5JUQR33",
+            "option": "eucalyptus / S",
+            "price_cents": 12098,
+            "available": true
+          },
+          {
+            "item_id": "ne_i_X8CYJN8NFYKMZ",
+            "option": "buttermilk / XS",
+            "price_cents": 11173,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "NE-LCYV95PMLCSRP",
+        "user_id": "ne_u_FUNCEG3HGV3UD",
+        "status": "delivered",
+        "original_payment": "ne_card_74NWAAXSKT6YP",
+        "items": [
+          {
+            "item_id": "ne_i_7Y6Z8EWCNW87R",
+            "product_id": "ne_p_DR8U6HJM38Y4K",
+            "option": "hematite / XL",
+            "price_cents": 10548
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "shopperp62xatse6t423@purchases.example",
+      "order_id": "NE-LCYV95PMLCSRP",
+      "reason": "no longer needed",
+      "new_option": "eucalyptus / S",
+      "item_id": "ne_i_7Y6Z8EWCNW87R",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "NE-LCYV95PMLCSRP",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "shopperp62xatse6t423@purchases.example",
+      "order_id": "NE-LCYV95PMLCSRP",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email",
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "NE-LCYV95PMLCSRP",
+      "item_id": "ne_i_7Y6Z8EWCNW87R",
+      "new_item_id": "ne_i_HWQNEM5JUQR33",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 10548,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  }
+]

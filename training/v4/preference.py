@@ -1,0 +1,303 @@
+"""Train-only preference pairs and exact, sequential SimPO gradients.
+
+The two log-probability gradients are evaluated separately to bound Metal memory.
+Their chain-rule combination equals the ordinary paired objective gradient.
+"""
+
+import argparse
+import json
+import math
+import random
+import shutil
+import tempfile
+import time
+from collections import Counter
+from pathlib import Path
+
+from resolve_desk.progress import ProgressStore
+from training.common import ROOT, sha
+from training.v4.common import REPORTS, verify_frozen
+from training.v4.fixtures import load_cases
+from training.v4.prepare import prefix, row
+
+PAIR_PATH = ROOT / "training/v4/datasets/preference.jsonl"
+PROTOCOL = ROOT / "training/v4/preference-protocol.json"
+MANIFEST = ROOT / "reports/v4/preference-manifest.json"
+
+
+def prepare():
+    if MANIFEST.exists():
+        raise ValueError("Preference protocol already frozen")
+    original = verify_frozen()
+    assert not (REPORTS / "evaluation-partial.json").exists()
+    assert not (REPORTS / "evaluation.json").exists()
+    pairs = []
+
+    def add(state, chosen, rejected, category, case):
+        a, b = row(state, chosen, category), row(state, rejected, category)
+        assert a["messages"][:-1] == b["messages"][:-1]
+        pairs.append({"chosen": a, "rejected": b, "category": category, "case_id": case["id"]})
+
+    wrong_handoff = {
+        "tool": "handoff",
+        "arguments": {"reason": "Requested variant unavailable or authorized payment insufficient."},
+    }
+    with tempfile.TemporaryDirectory() as tmp:
+        store = ProgressStore(Path(tmp) / "pairs.sqlite")
+        for case in load_cases("train"):
+            state, action, upstream, _ = prefix(store, case)
+            if case["expected"]["kind"] != "handoff":
+                add(state, action, wrong_handoff, "avoid_unnecessary_handoff", case)
+            else:
+                add(
+                    state,
+                    action,
+                    {
+                        "tool": "ask_customer",
+                        "arguments": {"field": "reason", "message": "Please provide your reason."},
+                    },
+                    "preserve_policy_handoff",
+                    case,
+                )
+            for example in upstream:
+                asked = json.loads(example["messages"][-1]["content"])
+                if asked["tool"] != "ask_customer":
+                    continue
+                rejected = {
+                    **example,
+                    "messages": example["messages"][:-1]
+                    + [{"role": "assistant", "content": json.dumps(wrong_handoff, separators=(",", ":"))}],
+                }
+                pairs.append(
+                    {
+                        "chosen": example,
+                        "rejected": rejected,
+                        "category": "ask_missing_information",
+                        "case_id": case["id"],
+                    }
+                )
+                add(state, action, asked, "continue_after_answer", case)
+            if case["expected"]["kind"] == "exchange":
+                rejected = {
+                    "tool": "propose_return",
+                    "arguments": {k: v for k, v in action["arguments"].items() if k != "new_item_id"},
+                }
+                add(state, action, rejected, "preserve_exchange_intent", case)
+    assert len(pairs) == 124
+    assert all(p["case_id"].startswith("v4-train-") for p in pairs)
+    PAIR_PATH.write_text("".join(json.dumps(p) + "\n" for p in pairs))
+    config = {
+        "method": "SimPO-style reference-free length-normalized preference objective",
+        "reference": "https://arxiv.org/html/2405.14734v2",
+        "formula": "softplus(-(beta * (mean_logp_chosen - mean_logp_rejected) - margin))",
+        "beta": 2.0,
+        "margin": 0.5,
+        "learning_rate": 0.00001,
+        "seed": 2026102741,
+        "updates": 124,
+        "batch_size": 1,
+        "initialization": "data/finetuning/retail-qlora-v4/run/candidates/480",
+        "output": "data/finetuning/retail-qlora-v4/preference",
+        "selection": "Fixed 124-update final checkpoint; validation is diagnostic, never test-based selection.",  # noqa: E501
+        "revision_reason": (
+            "SFT-240 validation over-handed off; SFT-480 validation interrupted after similar failures. "
+            "Original SFT records retained. Revision frozen before any v4 test inference."
+        ),
+        "training_pairs": dict(Counter(p["category"] for p in pairs)),
+        "scope": (
+            "Authored negatives from original training cases only; "
+            "no validation or test examples used as preference pairs. "
+            "Full completion mean includes end-of-turn tokens; prompt masked. "
+            "Original tool-name 2x weighting applies to SFT only."
+        ),
+    }
+    PROTOCOL.write_text(json.dumps(config, indent=2) + "\n")
+    manifest = {
+        "original_sft_manifest_sha256": sha(ROOT / "training/v4/datasets/manifest.json"),
+        "files": {
+            str(p.relative_to(ROOT)): sha(p)
+            for p in [Path(__file__), PROTOCOL, PAIR_PATH, ROOT / "training/v4/preference_select.py"]
+        },
+        "sft_480_sha256": sha(ROOT / config["initialization"] / "adapters.safetensors"),
+        "original_frozen_inputs": len(original["files"]),
+        "test_inference_started_at_freeze": False,
+        "pair_count": len(pairs),
+    }
+    MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n")
+    print(json.dumps({"pairs": len(pairs), "categories": config["training_pairs"]}))
+
+
+def verify_protocol():
+    verify_frozen()
+    manifest = json.loads(MANIFEST.read_text())
+    assert manifest["original_sft_manifest_sha256"] == sha(ROOT / "training/v4/datasets/manifest.json")
+    for name, digest in manifest["files"].items():
+        assert sha(ROOT / name) == digest, name
+    return manifest
+
+
+def train(preflight=False):
+    from functools import partial
+
+    import mlx.core as mx
+    import mlx.nn as nn
+    import mlx.optimizers as optim
+    from mlx.utils import tree_flatten, tree_map
+    from mlx_lm import load
+    from mlx_lm.tuner.trainer import grad_checkpoint
+    from mlx_lm.tuner.utils import linear_to_lora_layers
+    from transformers import AutoTokenizer
+
+    from training.v4.tokenization import encode_row
+
+    manifest = verify_protocol()
+    config = json.loads(PROTOCOL.read_text())
+    sft = json.loads((ROOT / "training/v4/config.json").read_text())
+    origin = ROOT / config["initialization"]
+    assert sha(origin / "adapters.safetensors") == manifest["sft_480_sha256"]
+    destination = ROOT / (config["output"] + ("-preflight" if preflight else ""))
+    destination.mkdir(parents=True, exist_ok=False)
+    random.seed(config["seed"])
+    mx.random.seed(config["seed"])
+    wired_limit = min(mx.device_info()["max_recommended_working_set_size"], 6 * 1024**3)
+    previous_wired_limit = mx.set_wired_limit(wired_limit)
+    previous_cache_limit = mx.set_cache_limit(256 * 1024**2)
+    model, _ = load(ROOT / sft["model"], trust_remote_code=False)
+    model.freeze()
+    linear_to_lora_layers(model, sft["num_layers"], sft["lora_parameters"])
+    model.load_weights(str(origin / "adapters.safetensors"), strict=False)
+    grad_checkpoint(model.layers[0])
+    model.train()
+    initial = {k: mx.array(v) for k, v in tree_flatten(model.trainable_parameters())}
+    mx.eval(initial)
+    hf = AutoTokenizer.from_pretrained(ROOT / sft["model"], local_files_only=True, trust_remote_code=False)
+    pairs = [json.loads(line) for line in PAIR_PATH.read_text().splitlines()]
+    random.shuffle(pairs)
+    encoded = [(encode_row(p["chosen"], hf, 1), encode_row(p["rejected"], hf, 1), p) for p in pairs]
+    assert max(len(e["tokens"]) for pair in encoded for e in pair[:2]) <= sft["max_seq_length"]
+    gradient_audit = None
+    if preflight:
+        theta = mx.array([0.2, -0.7, 0.9])
+
+        def chosen_logp(t):
+            return nn.log_softmax(t)[0]
+
+        def rejected_logp(t):
+            return nn.log_softmax(2 * t)[1]
+
+        def direct_loss(t):
+            z = config["beta"] * (chosen_logp(t) - rejected_logp(t)) - config["margin"]
+            return mx.logaddexp(mx.array(0.0), -z)
+
+        z = config["beta"] * (chosen_logp(theta) - rejected_logp(theta)) - config["margin"]
+        sequential = (
+            -config["beta"] * mx.sigmoid(-z) * (mx.grad(chosen_logp)(theta) - mx.grad(rejected_logp)(theta))
+        )
+        exact = mx.grad(direct_loss)(theta)
+        error = float(mx.max(mx.abs(sequential - exact)))
+        eps = mx.array([0.001, 0.0, 0.0])
+        finite = float((direct_loss(theta + eps) - direct_loss(theta - eps)) / 0.002)
+        assert error < 1e-6 and abs(finite - float(exact[0])) < 1e-3
+        gradient_audit = {
+            "chain_rule_max_absolute_error": error,
+            "finite_difference_error": abs(finite - float(exact[0])),
+        }
+
+    def logp(model, tokens, mask):
+        logits = model(tokens[:, :-1])
+        ce = nn.losses.cross_entropy(logits, tokens[:, 1:]).astype(mx.float32)
+        return -(ce * mask).sum() / mask.sum()
+
+    value_grad = nn.value_and_grad(model, logp)
+
+    @partial(mx.compile, inputs=model.state, outputs=model.state)
+    def compiled_gradient(tokens, mask):
+        return value_grad(model, tokens, mask)
+
+    def batch(example):
+        size = len(example["tokens"])
+        padded = 1 + 32 * ((size + 31) // 32)
+        tokens = example["tokens"] + [0] * (padded - size)
+        mask = [float(example["prompt_length"] <= i < size) for i in range(1, padded)]
+        return mx.array([tokens]), mx.array([mask], dtype=mx.float32)
+
+    optimizer = optim.Adam(learning_rate=config["learning_rate"])
+    metrics, started = [], time.perf_counter()
+    for iteration, (chosen, rejected, pair) in enumerate(encoded[:1] if preflight else encoded, 1):
+        ca, cm = batch(chosen)
+        ra, rm = batch(rejected)
+        lc, gc = compiled_gradient(ca, cm)
+        mx.eval(lc, gc)
+        lr, gr = compiled_gradient(ra, rm)
+        mx.eval(lr, gr)
+        z = config["beta"] * (float(lc) - float(lr)) - config["margin"]
+        coefficient = -config["beta"] / (1 + math.exp(max(-60, min(60, z))))
+        combined = tree_map(lambda a, b, coefficient=coefficient: coefficient * (a - b), gc, gr)
+        optimizer.update(model, combined)
+        mx.eval(model.parameters(), optimizer.state)
+        record = {
+            "iteration": iteration,
+            "category": pair["category"],
+            "loss": float(math.log1p(math.exp(-abs(z))) + max(-z, 0)),
+            "pre_update_mean_logp_gap": float(lc) - float(lr),
+            "elapsed_seconds": round(time.perf_counter() - started, 3),
+        }
+        if preflight:
+            a = logp(model, ca, cm)
+            b = logp(model, ra, rm)
+            mx.eval(a, b)
+            record["post_update_mean_logp_gap"] = float(a) - float(b)
+            assert record["post_update_mean_logp_gap"] > record["pre_update_mean_logp_gap"]
+        metrics.append(record)
+        if iteration == 1 or iteration % 10 == 0 or preflight:
+            print(json.dumps(record), flush=True)
+        (destination / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n")
+        del gc, gr, combined
+        mx.clear_cache()
+    final = dict(tree_flatten(model.trainable_parameters()))
+    mx.save_safetensors(str(destination / "adapters.safetensors"), final)
+    shutil.copyfile(origin / "adapter_config.json", destination / "adapter_config.json")
+    delta = (
+        sum(
+            float(mx.sum((final[k].astype(mx.float32) - initial[k].astype(mx.float32)) ** 2)) for k in initial
+        )
+        ** 0.5
+    )
+    assert delta > 0
+    report = {
+        "protocol": config,
+        "manifest": manifest,
+        "metrics": metrics,
+        "completed_updates": len(metrics),
+        "adapter_l2_change_from_sft480": delta,
+        "adapter_sha256": sha(destination / "adapters.safetensors"),
+        "elapsed_seconds": round(time.perf_counter() - started, 2),
+        "peak_memory_bytes": mx.get_peak_memory(),
+        "preflight_only": preflight,
+        "gradient_audit": gradient_audit,
+        "previous_wired_limit": previous_wired_limit,
+        "wired_limit_bytes": wired_limit,
+        "cache_limit_bytes": 256 * 1024**2,
+        "previous_cache_limit": previous_cache_limit,
+        "execution": (
+            "Compiled gradient with mutable input/output state capture; masked 32-token padding. "
+            "Wired memory capped at 6 GiB, cache at 256 MiB, cleared after each pair. "
+            "Abandoned eager/cache-initial weights not reused."
+        ),
+        "test_used_for_selection": False,
+        "cloud_compute_used": False,
+    }
+    (REPORTS / ("preference-preflight.json" if preflight else "preference-updates.json")).write_text(
+        json.dumps(report, indent=2) + "\n"
+    )
+    print(
+        json.dumps({k: v for k, v in report.items() if k not in {"metrics", "manifest", "protocol"}}),
+        flush=True,
+    )
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("mode", choices=["prepare", "preflight", "train"])
+    args = parser.parse_args()
+    prepare() if args.mode == "prepare" else train(args.mode == "preflight")

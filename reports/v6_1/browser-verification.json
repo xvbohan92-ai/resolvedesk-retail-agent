@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "actual_browser": true,
+  "six_figures_loaded": true,
+  "document_overflow": false,
+  "console_errors": 0,
+  "authorization_recall_gap_visible": true,
+  "evaluation_sha256": "d5fb473360f6c26a82992982ef5dbdd352eb534d83c0aee36002291461797059",
+  "browser_dom_sha256": "6d2eac7f6ab16d5eb56f51a9ed1738c99e798cd6bed0d4f0a0be309a8310ce2c",
+  "browser_probe_sha256": "6a280c57f16dd76d549c79ac3d6436a885422d4480a23a79f1e8e27c3811636e",
+  "screenshot_sha256": "8271a80b9ba4ebed1a40eea9e0e9fcece49c371e634ac4ba5f9b15a9dcef6ad9",
+  "frontend_sha256": "0ee8bcb4022a6fe55fe1f24d92e081b3c9e6238b354a243bd438ed87a1d4ecfb",
+  "scope": "Real localhost browser verification and NO-to-handoff smoke; excluded from held-out accuracy.",
+  "table_screenshot_sha256": "fbee78ba61cca4b61cfdbdfcee58db3aa4b20f74023438948a587b0006b3f30f"
+}

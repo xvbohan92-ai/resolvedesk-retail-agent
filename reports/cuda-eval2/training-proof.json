@@ -1,0 +1,20 @@
+{
+  "report_path": "reports/cuda-torch/probe-003/train-1344/report.json",
+  "report_sha256": "48dcc7e07f50ff9ca8ae06ad141a16d80dd837d1d9b841f24e933fb4373c4528",
+  "plan_sha256": "d21bc5847e669834061cc809ac1b70e9629ef566a46dc8f4daf5da6e755c5ea9",
+  "verification_path": "reports/cuda-torch/probe-003/train-1344/verification.json",
+  "verification_sha256": "c91ac6e67876a470650a5fc9c9e29c85a95bc38ab8655b8fb423c559be9e41de",
+  "completed_updates": 1344,
+  "parameters": 3670016,
+  "tensor_count": 112,
+  "before_adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+  "after_adapter_sha256": "33fe5c505ddf08cd8cb4032dbd9d350fa205134417ec0f1f90648f4af658e053",
+  "adapter_l2_change": 0.6083016451797645,
+  "elapsed_seconds": 6589.48607,
+  "peak_allocated_bytes": 12454042112,
+  "peak_reserved_bytes": 15116271616,
+  "full_physical_rows_used": true,
+  "final_fixed_before_test": true,
+  "numeric_initialization_and_final_delta_verified": true,
+  "precision_scope": "Decoded-4bit-derived FP16 frozen base, FP32 LoRA masters; not NF4 QLoRA or MLX bitwise equivalence."
+}

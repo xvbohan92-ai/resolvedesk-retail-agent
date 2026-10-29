@@ -1,0 +1,148 @@
+{
+  "config": {
+    "model": "data/models/qwen3-4b-mlx",
+    "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+    "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+    "data": "training/v6/datasets",
+    "adapter_path": "data/finetuning/retail-qlora-v6/run",
+    "best_path": "data/finetuning/retail-qlora-v6/best",
+    "seed": 202610286,
+    "iters": 768,
+    "num_layers": 8,
+    "batch_size": 1,
+    "learning_rate": 8e-06,
+    "lora_parameters": {
+      "rank": 8,
+      "dropout": 0.0,
+      "scale": 16.0
+    },
+    "max_seq_length": 3072,
+    "steps_per_report": 16,
+    "steps_per_eval": 120,
+    "save_every": 240,
+    "tool_name_loss_weight": 1.0,
+    "generation_max_tokens": 512,
+    "generation_temperature": 0,
+    "max_agent_steps": 12,
+    "checkpoint_candidates_completed_updates": [
+      384,
+      768
+    ],
+    "checkpoint_selection": "Frozen validation-only: safety, unsupported affirmative permission predictions, balanced exchange/fallback/handoff/email success, overall, unnecessary handoff, repeats, calls. Ties choose earlier update.",
+    "evaluation_arms": [
+      "previous_old_flow",
+      "previous_new_flow",
+      "base_new_flow",
+      "qlora_v6"
+    ],
+    "runtime_policy": "Strict scoped YES/NO consent for stockout return; grounded email reply projection; all initial intent slots remain model predictions. Four real MLX arms; 12 total calls each.",
+    "promotion_rule": "All 4 authorized fallbacks, 14 available exchanges, 16 required handoffs, 6 missing-email cases; zero unsupported affirmative initial fallback permissions, unauthorized return attempts, exchange-as-return attempts, repeated field attempts and unnecessary handoffs; intact confirmations and overall not below new-flow comparators.",
+    "initialization": "data/finetuning/retail-qlora-v5/best",
+    "initialization_sha256": "a1ef4d4e201ba96e40286a19bf1e97d2ac8aee8b358b23f5586be580b4aadf6b",
+    "projection_window": 512,
+    "permission_slot_loss_weight": 8.0
+  },
+  "manifest_sha256": "d3568d30b14d7b2259bab06768260b3f029f72d01c9b38b8a690fc5510bc8db8",
+  "dataset": {
+    "files": {
+      "training/v6/__init__.py": "c25a5cc3f94c624054692fe74d8b4cadfa44d4c05f1bb38705fc5ad53bfb7186",
+      "training/v6/common.py": "85c4d73a151a828d83414288aac07b0b24a6889563ba58a86beaa5fa2e7a8205",
+      "training/v6/evaluate.py": "fae927bae92d2feeca1bcc0caf8889ad5f34325c482138cd0e04392aa48915cc",
+      "training/v6/evaluation.py": "f05b95a6e96c0371abbb646cabc0d9e9b7b9e765a2337c2e9b1571d35c0c382b",
+      "training/v6/fixtures.py": "fa83e812c1b530fdd893048bdbaa567da6d7a31118a09e1d1467cc82cee72549",
+      "training/v6/prepare.py": "60eb0740858e0d4b659d10a8252a9fff028da5b5df38b31a53888ee99f35422f",
+      "training/v6/provider.py": "9a7f203353deb1daf86901afbadca20cde56142ad0c7fbfd1228c7f600ec29ef",
+      "training/v6/resources.py": "e58f48171c8f6e2b3269ee458978168567d2dc5ed4565bed890177591ac8b949",
+      "training/v6/scoring.py": "d1af5058f167848849d96da8ca2cca1fa386fbcdc228fac179cbb033a347410c",
+      "training/v6/select.py": "39421c4cdeffbe64606b253b24f860d55cff505c4b7d1d9bd8f186213406a3d3",
+      "training/v6/tokenization.py": "30a104334c1805816ab9f630293046f85d3c9ab067be2e565a23e25d56bd1d57",
+      "training/v6/train.py": "3158bbb49e431a4a4c1b804854e3f27ab3121c1b3136c6336e2311a5a131d49e",
+      "training/v6/config.json": "f0f5a1649e5f6ba45854c8ea9cc538e58e0bcfef3c4038632b5a4699dc2d613f",
+      "resolve_desk/resolution_v6.py": "6e55ad7d068009094c7d4f2ccf72aa9096e859c1ffdb0811eccf8c3c125743d3",
+      "resolve_desk/agent_v6.py": "566c477351ec6527ea3b3916bc0701d84e2c1f7d424f377706844db392a68d48",
+      "resolve_desk/resolution.py": "6740724b752ddec813489c9fff68b2bc1ac825be19ad3004a24a04da49f74197",
+      "resolve_desk/progress.py": "3caa54d31efa57537263d9d819d7b0be32d71404267973e25868357751f139c0",
+      "resolve_desk/workflow.py": "2c45094c90643020bddb8d66ef5a4dfc607522620d67c3c07744a99565c0afbc",
+      "resolve_desk/store.py": "01ced6a33f0995d9c3362fc18fd8123a59e523edc408382cd38cdd990285f5bb",
+      "resolve_desk/protocol.py": "7d48eca71522d12da7e889b0fcc3b939c1f8bae12460b64b8a8dc173ef6185a2",
+      "training/base-model-spec.json": "bff5ee1bb595c89e629c7e0f93884c06ab66628f9cf6e61b8dfe02f87053a965",
+      "training/runtime.py": "70e60f56223f7161c430f6b601ae9f748548b740c9f1ee0172e7f65acdbf4531",
+      "training/scoring.py": "4408966c655a222f8d1a2aa1418594587a63163029c5477bebeacacd6db9eb6b",
+      "training/v2/scoring.py": "4cf2b7fc6c281bcbc413f84a548ce35bd330c80ec17681242ffc3d5d02235bb4",
+      "training/v4/tokenization.py": "946f01aab1b0ab6383025a552c474382ec68a8c4711739c08285f62465841fc3",
+      "training/v4/evaluation.py": "c83ad22d23a1a9563975e0265cec5ba1a463fbd678f8be6484ea3baca3c8901b",
+      "training/v3/evaluation.py": "218c2e586a162db5a994990ea6b18e5fef8049fa7c6e2a7f01d17298e547a3db",
+      "training/v2/evaluation.py": "3fc5df34e22ce08d8e5e34d3ffe4a22c313906aceb271db9139b08a2c0fdead1",
+      "training/v5/fixtures.py": "2981cc79d3c52f1323a13782148b194d9bb9897d0a636a180b87d1ee41ce86d1",
+      "training/v4/fixtures.py": "24d67289bcfca79b6cd68bbba638aa339c2835089811b993e90b52e8ee689ad8",
+      "training/v6/datasets/test.jsonl": "95df08875d4cb45deaac9f3cf68b9222e9ad87e4dfe332c0d958d5d3de1c153e",
+      "training/v6/datasets/train.jsonl": "ef59a93520d52a83c4f6418e86073e59a4eabe49b456de7052fa9a3abc1b6890",
+      "training/v6/datasets/valid.jsonl": "e861ce72647a8914a62ec1e3d9435329d66507b378737fbd600d8c034fe243a8",
+      "training/v6/datasets/cases.json": "3818c03cc614f4a696f5afb20e57c9d9be61afc27b6f2642343e5215b3fab7c3"
+    },
+    "data": {
+      "tasks": {
+        "train": 96,
+        "valid": 48,
+        "test": 48
+      },
+      "rows": {
+        "train": 590,
+        "valid": 255,
+        "test": 255
+      },
+      "recovery_trajectories": 16,
+      "train_actions": {
+        "get_order": 112,
+        "record_request": 122,
+        "identify_customer": 112,
+        "handoff": 48,
+        "get_product": 76,
+        "ask_customer": 56,
+        "propose_return": 28,
+        "propose_exchange": 28,
+        "propose_cancel": 8
+      },
+      "all_reference_tasks_pass": true,
+      "scope": "Self-authored synthetic worlds and language. Intentional within-split counterfactual sharing; recovery states are not new tasks or wrong supervised labels."
+    },
+    "previous_training_sha256": "62f91f6c7257e500fdedcb80842edf678aab5efd2d50a5c08302753c21a008ed",
+    "initial_adapter_sha256": "a1ef4d4e201ba96e40286a19bf1e97d2ac8aee8b358b23f5586be580b4aadf6b",
+    "test_inference_started_at_freeze": false,
+    "scope": "V5 tests are development evidence. V6 held-out inference starts only after validation selection."
+  },
+  "initialization_sha256": "a1ef4d4e201ba96e40286a19bf1e97d2ac8aee8b358b23f5586be580b4aadf6b",
+  "completed_updates": 1,
+  "metrics": [
+    {
+      "iteration": 1,
+      "loss": 0.0028685275465250015,
+      "case_id": "v6-train-exchange_fallback-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 1.17,
+      "post_update_same_sample_loss": 0.0008267720695585012
+    }
+  ],
+  "candidates": [],
+  "preflight_only": true,
+  "preflight_weights_reused": false,
+  "adapter_sha256": "92e1a68252d820b3959307a195afcb391e14cc45f3f185991f7340f67e8424c4",
+  "adapter_l2_change": 0.0458285714042453,
+  "trainable_parameters": 3670016,
+  "elapsed_seconds": 1.89,
+  "peak_active_memory_bytes": 3455211572,
+  "token_audit": {
+    "all_targets_covered": true,
+    "longest_train_sequence": 1669,
+    "longest_train_completion": 107,
+    "ordinary_completion_weight": 1.0,
+    "permission_value_weight": 8.0,
+    "permission_value_tokens": 122,
+    "prompt_and_padding_weight": 0.0,
+    "projection_window": 512,
+    "loss_error_vs_full_output_projection": 0.0
+  },
+  "test_used_for_selection": false,
+  "cloud_compute_used": false
+}

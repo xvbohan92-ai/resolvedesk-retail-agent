@@ -1,0 +1,374 @@
+{
+  "completed_updates": 1,
+  "path": "data/finetuning/retail-qlora-v4/preflight",
+  "adapter_sha256": "9edbbbf9b6b2f3cc0c70b8fcaa77164ac4bbd8bc14098b5b72b6a48d1d9327d8",
+  "weighted_valid_loss": 0.2950877845287323,
+  "summary": {
+    "tasks": 1,
+    "task_success": 1,
+    "exchange_related_tasks": 0,
+    "exchange_related_success": 0,
+    "fulfillable_exchange_tasks": 0,
+    "fulfillable_exchange_success": 0,
+    "required_clarifications": 0,
+    "clarifications_obtained": 0,
+    "model_calls": 3,
+    "schema_valid": 3,
+    "duplicate_read_attempts": 0,
+    "duplicate_read_executions": 0,
+    "rejected_write_attempts": 0,
+    "output_tokens": 67,
+    "confirmation_preserved": 1,
+    "latency_p50_ms": 4067.32,
+    "median_model_calls": 3,
+    "exchange_as_return": 0,
+    "unauthorized_return": 0,
+    "ordinary_exchange_tasks": 0,
+    "ordinary_exchange_success": 0,
+    "direct_return_tasks": 0,
+    "direct_return_success": 0,
+    "fallback_tasks": 0,
+    "fallback_success": 0,
+    "handoff_tasks": 0,
+    "handoff_success": 0,
+    "repeat_free_success": 1,
+    "repeated_question_attempts": 0,
+    "repeated_questions_delivered": 0,
+    "identical_action_repeats": 0
+  },
+  "records": [
+    {
+      "case_id": "v4-valid-cancel-00",
+      "family": "cancel",
+      "expected": {
+        "kind": "cancel",
+        "order_id": "ORD-P94KHA",
+        "item_id": "item_NJDEYE",
+        "new_item_id": "item_6QVXJU",
+        "payment_method": "original",
+        "reason": "no longer needed",
+        "amount_cents": 7938,
+        "initial_status": "pending",
+        "target_status": "cancelled"
+      },
+      "confirmation": true,
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true,
+      "raw_task_success": true,
+      "required_clarification": null,
+      "clarification_obtained": true,
+      "identity_and_order_checked": true,
+      "catalog_inspected": true,
+      "status_before_confirmation": "awaiting_confirmation",
+      "status_final": "completed",
+      "model_calls": 3,
+      "schema_valid": 3,
+      "rejected_write_attempts": 0,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "latency_ms": 4067.32,
+      "output_tokens": 67,
+      "questions": [],
+      "trace": [
+        {
+          "action": {
+            "arguments": {
+              "email": "buyerq9bp4p@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyerq9bp4p@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 9000,
+              "id": "gift_GL3TNY"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_JKYXJB"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 1069,
+            "latency_ms": 1279.31,
+            "output_tokens": 22,
+            "provider": "mlx",
+            "variant": "validation_candidate",
+            "workflow": "v4"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-P94KHA"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-P94KHA\"}}",
+          "result": {
+            "id": "ORD-P94KHA",
+            "items": [
+              {
+                "item_id": "item_NJDEYE",
+                "option": "black / M",
+                "price_cents": 7938,
+                "product_id": "p_4LPXL2"
+              }
+            ],
+            "original_payment": "card_US8F4L",
+            "revision": 0,
+            "status": "pending",
+            "user_id": "u_JKYXJB"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 1133,
+            "latency_ms": 1256.29,
+            "output_tokens": 19,
+            "provider": "mlx",
+            "variant": "validation_candidate",
+            "workflow": "v4"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-P94KHA",
+              "reason": "no longer needed"
+            },
+            "tool": "propose_cancel"
+          },
+          "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-P94KHA\",\"reason\":\"no longer needed\"}}",
+          "result": {
+            "proposal": {
+              "amount_cents": 7938,
+              "arguments": {
+                "order_id": "ORD-P94KHA",
+                "reason": "no longer needed"
+              },
+              "fingerprint": "39dbe511623f8c36a7592cec0993f1d2879f130e2ded90bbf5d3df3fae635b47",
+              "id": "43e98c00b82e6ac6a8116c97dfc94cef",
+              "kind": "cancel",
+              "order_id": "ORD-P94KHA",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "cancelled"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 1262,
+            "latency_ms": 1514.99,
+            "output_tokens": 26,
+            "provider": "mlx",
+            "variant": "validation_candidate",
+            "workflow": "v4"
+          }
+        }
+      ],
+      "order_before_confirmation": [
+        {
+          "id": "ORD-P94KHA",
+          "items": [
+            {
+              "item_id": "item_NJDEYE",
+              "option": "black / M",
+              "price_cents": 7938,
+              "product_id": "p_4LPXL2"
+            }
+          ],
+          "original_payment": "card_US8F4L",
+          "status": "pending",
+          "user_id": "u_JKYXJB"
+        }
+      ],
+      "order_after_confirmation": [
+        {
+          "id": "ORD-P94KHA",
+          "items": [
+            {
+              "item_id": "item_NJDEYE",
+              "option": "black / M",
+              "price_cents": 7938,
+              "product_id": "p_4LPXL2"
+            }
+          ],
+          "operation": {
+            "amount_cents": 7938,
+            "arguments": {
+              "order_id": "ORD-P94KHA",
+              "reason": "no longer needed"
+            },
+            "fingerprint": "39dbe511623f8c36a7592cec0993f1d2879f130e2ded90bbf5d3df3fae635b47",
+            "kind": "cancel",
+            "order_id": "ORD-P94KHA",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "original_payment": "card_US8F4L",
+          "status": "cancelled",
+          "user_id": "u_JKYXJB"
+        }
+      ],
+      "events": [
+        {
+          "id": 1,
+          "kind": "session_created",
+          "created": 1793125816.701988,
+          "detail": {
+            "case_id": "v4-valid-cancel-00"
+          }
+        },
+        {
+          "id": 2,
+          "kind": "model_tool",
+          "created": 1793125817.989755,
+          "detail": {
+            "action": {
+              "arguments": {
+                "email": "buyerq9bp4p@retail.example"
+              },
+              "tool": "identify_customer"
+            },
+            "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyerq9bp4p@retail.example\"}}",
+            "result": {
+              "gift_card": {
+                "balance_cents": 9000,
+                "id": "gift_GL3TNY"
+              },
+              "note": "Demo identity lookup only; not production authentication",
+              "user_id": "u_JKYXJB"
+            },
+            "timing": {
+              "finish_reason": "stop",
+              "input_tokens": 1069,
+              "latency_ms": 1279.31,
+              "output_tokens": 22,
+              "provider": "mlx",
+              "variant": "validation_candidate",
+              "workflow": "v4"
+            }
+          }
+        },
+        {
+          "id": 3,
+          "kind": "model_tool",
+          "created": 1793125819.248309,
+          "detail": {
+            "action": {
+              "arguments": {
+                "order_id": "ORD-P94KHA"
+              },
+              "tool": "get_order"
+            },
+            "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-P94KHA\"}}",
+            "result": {
+              "id": "ORD-P94KHA",
+              "items": [
+                {
+                  "item_id": "item_NJDEYE",
+                  "option": "black / M",
+                  "price_cents": 7938,
+                  "product_id": "p_4LPXL2"
+                }
+              ],
+              "original_payment": "card_US8F4L",
+              "revision": 0,
+              "status": "pending",
+              "user_id": "u_JKYXJB"
+            },
+            "timing": {
+              "finish_reason": "stop",
+              "input_tokens": 1133,
+              "latency_ms": 1256.29,
+              "output_tokens": 19,
+              "provider": "mlx",
+              "variant": "validation_candidate",
+              "workflow": "v4"
+            }
+          }
+        },
+        {
+          "id": 4,
+          "kind": "model_tool",
+          "created": 1793125820.7680871,
+          "detail": {
+            "action": {
+              "arguments": {
+                "order_id": "ORD-P94KHA",
+                "reason": "no longer needed"
+              },
+              "tool": "propose_cancel"
+            },
+            "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-P94KHA\",\"reason\":\"no longer needed\"}}",
+            "result": {
+              "proposal": {
+                "amount_cents": 7938,
+                "arguments": {
+                  "order_id": "ORD-P94KHA",
+                  "reason": "no longer needed"
+                },
+                "fingerprint": "39dbe511623f8c36a7592cec0993f1d2879f130e2ded90bbf5d3df3fae635b47",
+                "id": "43e98c00b82e6ac6a8116c97dfc94cef",
+                "kind": "cancel",
+                "order_id": "ORD-P94KHA",
+                "order_revision": 0,
+                "payment_method": "original",
+                "target_status": "cancelled"
+              },
+              "requires_customer_confirmation": true
+            },
+            "timing": {
+              "finish_reason": "stop",
+              "input_tokens": 1262,
+              "latency_ms": 1514.99,
+              "output_tokens": 26,
+              "provider": "mlx",
+              "variant": "validation_candidate",
+              "workflow": "v4"
+            }
+          }
+        },
+        {
+          "id": 5,
+          "kind": "operation_committed",
+          "created": 1793125820.768775,
+          "detail": {
+            "email_sent": false,
+            "money_moved": false,
+            "operation": {
+              "amount_cents": 7938,
+              "arguments": {
+                "order_id": "ORD-P94KHA",
+                "reason": "no longer needed"
+              },
+              "fingerprint": "39dbe511623f8c36a7592cec0993f1d2879f130e2ded90bbf5d3df3fae635b47",
+              "kind": "cancel",
+              "order_id": "ORD-P94KHA",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "cancelled"
+            },
+            "order_id": "ORD-P94KHA",
+            "order_status": "cancelled",
+            "proposal_id": "43e98c00b82e6ac6a8116c97dfc94cef",
+            "simulated": true,
+            "status": "committed"
+          }
+        }
+      ],
+      "exchange_as_return": false,
+      "unauthorized_return": false,
+      "direct_return": false,
+      "predicted_outcome": "cancel",
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 0,
+      "model_handoff": false
+    }
+  ],
+  "selection_key": [],
+  "preflight_only": true
+}

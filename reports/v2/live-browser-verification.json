@@ -1,0 +1,1297 @@
+{
+  "scope": "Actual browser integrations on validation worlds; excluded from held-out scores.",
+  "workflow_sha256": "2c45094c90643020bddb8d66ef5a4dfc607522620d67c3c07744a99565c0afbc",
+  "selected_adapter_sha256": "1dda68b7b7305086b7dfb9b0c981ba7e0dd5b20aece819176da370ab1e8d6f6a",
+  "ollama_negative_difference_exchange": {
+    "session": {
+      "case_id": "v2-valid-exchange-00",
+      "customer": {
+        "email": "buyer5jlzg@retail.example",
+        "gift_card": {
+          "balance_cents": 8500,
+          "id": "gift_6P9LZ"
+        },
+        "id": "u_DFV9M"
+      },
+      "id": "b7fda1b4d7a8c9c9430f2c43",
+      "messages": [
+        {
+          "content": "I'd appreciate help with this purchase: Swap the item for teal / S. Charge or refund the difference to the original payment method. Order ORD-5M87D. Email buyer5jlzg@retail.example.",
+          "role": "customer"
+        }
+      ],
+      "observations": [
+        {
+          "action": {
+            "arguments": {
+              "email": "buyer5jlzg@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyer5jlzg@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8500,
+              "id": "gift_6P9LZ"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_DFV9M"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 820,
+            "json_schema_constrained": true,
+            "latency_ms": 2044.45,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 21,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-5M87D"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-5M87D\"}}",
+          "result": {
+            "id": "ORD-5M87D",
+            "items": [
+              {
+                "item_id": "item_CTZ29",
+                "option": "black / M",
+                "price_cents": 4473,
+                "product_id": "p_7PT5C"
+              }
+            ],
+            "original_payment": "card_SU7ZL",
+            "revision": 0,
+            "status": "delivered",
+            "user_id": "u_DFV9M"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 885,
+            "json_schema_constrained": true,
+            "latency_ms": 2077.37,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 20,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "product_id": "p_7PT5C"
+            },
+            "tool": "get_product"
+          },
+          "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_7PT5C\"}}",
+          "result": {
+            "exchange_candidates": [
+              {
+                "available": true,
+                "current_item_id": "item_CTZ29",
+                "item_id": "item_43FGV",
+                "option": "white / XS",
+                "order_id": "ORD-5M87D",
+                "price_cents": 4748,
+                "price_difference_cents": 275
+              },
+              {
+                "available": true,
+                "current_item_id": "item_CTZ29",
+                "item_id": "item_4WF6P",
+                "option": "teal / S",
+                "order_id": "ORD-5M87D",
+                "price_cents": 4023,
+                "price_difference_cents": -450
+              }
+            ],
+            "name": "Everyday shirt",
+            "product_id": "p_7PT5C",
+            "variants": [
+              {
+                "available": true,
+                "item_id": "item_43FGV",
+                "option": "white / XS",
+                "price_cents": 4748
+              },
+              {
+                "available": true,
+                "item_id": "item_4WF6P",
+                "option": "teal / S",
+                "price_cents": 4023
+              },
+              {
+                "available": true,
+                "item_id": "item_CTZ29",
+                "option": "black / M",
+                "price_cents": 4473
+              }
+            ]
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 989,
+            "json_schema_constrained": true,
+            "latency_ms": 2382.4,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 19,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "item_id": "item_CTZ29",
+              "new_item_id": "item_4WF6P",
+              "order_id": "ORD-5M87D",
+              "payment_method": "original"
+            },
+            "tool": "propose_exchange"
+          },
+          "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-5M87D\",\"item_id\":\"item_CTZ29\",\"new_item_id\":\"item_4WF6P\",\"payment_method\":\"original\"} }",
+          "result": {
+            "proposal": {
+              "amount_cents": -450,
+              "arguments": {
+                "item_id": "item_CTZ29",
+                "new_item_id": "item_4WF6P",
+                "order_id": "ORD-5M87D",
+                "payment_method": "original"
+              },
+              "fingerprint": "8e8be3c4c0d0b12216440796f4f6f8fc53698b97e2097cb29f2deb99e72476e9",
+              "id": "fc890ec31fbe8cdafa70ca840684be75",
+              "item_id": "item_CTZ29",
+              "kind": "exchange",
+              "new_item_id": "item_4WF6P",
+              "order_id": "ORD-5M87D",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "exchange requested"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 1244,
+            "json_schema_constrained": true,
+            "latency_ms": 5601.73,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 47,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      ],
+      "order_keys": {
+        "ORD-5M87D": "b7fda1b4d7a8c9c9430f2c43:ORD-5M87D"
+      },
+      "products": {
+        "p_7PT5C": {
+          "name": "Everyday shirt",
+          "product_id": "p_7PT5C",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_43FGV",
+              "option": "white / XS",
+              "price_cents": 4748
+            },
+            {
+              "available": true,
+              "item_id": "item_4WF6P",
+              "option": "teal / S",
+              "price_cents": 4023
+            },
+            {
+              "available": true,
+              "item_id": "item_CTZ29",
+              "option": "black / M",
+              "price_cents": 4473
+            }
+          ]
+        }
+      },
+      "proposal": {
+        "amount_cents": -450,
+        "arguments": {
+          "item_id": "item_CTZ29",
+          "new_item_id": "item_4WF6P",
+          "order_id": "ORD-5M87D",
+          "payment_method": "original"
+        },
+        "fingerprint": "8e8be3c4c0d0b12216440796f4f6f8fc53698b97e2097cb29f2deb99e72476e9",
+        "id": "fc890ec31fbe8cdafa70ca840684be75",
+        "item_id": "item_CTZ29",
+        "kind": "exchange",
+        "new_item_id": "item_4WF6P",
+        "order_id": "ORD-5M87D",
+        "order_revision": 0,
+        "payment_method": "original",
+        "target_status": "exchange requested"
+      },
+      "read_orders": {
+        "ORD-5M87D": 0
+      },
+      "receipt": {
+        "email_sent": false,
+        "money_moved": false,
+        "operation": {
+          "amount_cents": -450,
+          "arguments": {
+            "item_id": "item_CTZ29",
+            "new_item_id": "item_4WF6P",
+            "order_id": "ORD-5M87D",
+            "payment_method": "original"
+          },
+          "fingerprint": "8e8be3c4c0d0b12216440796f4f6f8fc53698b97e2097cb29f2deb99e72476e9",
+          "item_id": "item_CTZ29",
+          "kind": "exchange",
+          "new_item_id": "item_4WF6P",
+          "order_id": "ORD-5M87D",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "exchange requested"
+        },
+        "order_id": "ORD-5M87D",
+        "order_status": "exchange requested",
+        "proposal_id": "fc890ec31fbe8cdafa70ca840684be75",
+        "simulated": true,
+        "status": "committed"
+      },
+      "revision": 5,
+      "status": "completed",
+      "user_id": "u_DFV9M"
+    },
+    "orders": [
+      {
+        "id": "ORD-5M87D",
+        "items": [
+          {
+            "item_id": "item_CTZ29",
+            "option": "black / M",
+            "price_cents": 4473,
+            "product_id": "p_7PT5C"
+          }
+        ],
+        "operation": {
+          "amount_cents": -450,
+          "arguments": {
+            "item_id": "item_CTZ29",
+            "new_item_id": "item_4WF6P",
+            "order_id": "ORD-5M87D",
+            "payment_method": "original"
+          },
+          "fingerprint": "8e8be3c4c0d0b12216440796f4f6f8fc53698b97e2097cb29f2deb99e72476e9",
+          "item_id": "item_CTZ29",
+          "kind": "exchange",
+          "new_item_id": "item_4WF6P",
+          "order_id": "ORD-5M87D",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "exchange requested"
+        },
+        "original_payment": "card_SU7ZL",
+        "status": "exchange requested",
+        "user_id": "u_DFV9M"
+      }
+    ],
+    "events": [
+      {
+        "id": 25,
+        "kind": "session_created",
+        "created": 1793117557.0451012,
+        "detail": {
+          "case_id": "v2-valid-exchange-00"
+        }
+      },
+      {
+        "id": 26,
+        "kind": "model_tool",
+        "created": 1793117559.1142771,
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "buyer5jlzg@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyer5jlzg@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8500,
+              "id": "gift_6P9LZ"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_DFV9M"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 820,
+            "json_schema_constrained": true,
+            "latency_ms": 2044.45,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 21,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 27,
+        "kind": "model_tool",
+        "created": 1793117561.207733,
+        "detail": {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-5M87D"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-5M87D\"}}",
+          "result": {
+            "id": "ORD-5M87D",
+            "items": [
+              {
+                "item_id": "item_CTZ29",
+                "option": "black / M",
+                "price_cents": 4473,
+                "product_id": "p_7PT5C"
+              }
+            ],
+            "original_payment": "card_SU7ZL",
+            "revision": 0,
+            "status": "delivered",
+            "user_id": "u_DFV9M"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 885,
+            "json_schema_constrained": true,
+            "latency_ms": 2077.37,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 20,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 28,
+        "kind": "model_tool",
+        "created": 1793117563.606731,
+        "detail": {
+          "action": {
+            "arguments": {
+              "product_id": "p_7PT5C"
+            },
+            "tool": "get_product"
+          },
+          "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_7PT5C\"}}",
+          "result": {
+            "exchange_candidates": [
+              {
+                "available": true,
+                "current_item_id": "item_CTZ29",
+                "item_id": "item_43FGV",
+                "option": "white / XS",
+                "order_id": "ORD-5M87D",
+                "price_cents": 4748,
+                "price_difference_cents": 275
+              },
+              {
+                "available": true,
+                "current_item_id": "item_CTZ29",
+                "item_id": "item_4WF6P",
+                "option": "teal / S",
+                "order_id": "ORD-5M87D",
+                "price_cents": 4023,
+                "price_difference_cents": -450
+              }
+            ],
+            "name": "Everyday shirt",
+            "product_id": "p_7PT5C",
+            "variants": [
+              {
+                "available": true,
+                "item_id": "item_43FGV",
+                "option": "white / XS",
+                "price_cents": 4748
+              },
+              {
+                "available": true,
+                "item_id": "item_4WF6P",
+                "option": "teal / S",
+                "price_cents": 4023
+              },
+              {
+                "available": true,
+                "item_id": "item_CTZ29",
+                "option": "black / M",
+                "price_cents": 4473
+              }
+            ]
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 989,
+            "json_schema_constrained": true,
+            "latency_ms": 2382.4,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 19,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 29,
+        "kind": "model_tool",
+        "created": 1793117569.2275789,
+        "detail": {
+          "action": {
+            "arguments": {
+              "item_id": "item_CTZ29",
+              "new_item_id": "item_4WF6P",
+              "order_id": "ORD-5M87D",
+              "payment_method": "original"
+            },
+            "tool": "propose_exchange"
+          },
+          "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-5M87D\",\"item_id\":\"item_CTZ29\",\"new_item_id\":\"item_4WF6P\",\"payment_method\":\"original\"} }",
+          "result": {
+            "proposal": {
+              "amount_cents": -450,
+              "arguments": {
+                "item_id": "item_CTZ29",
+                "new_item_id": "item_4WF6P",
+                "order_id": "ORD-5M87D",
+                "payment_method": "original"
+              },
+              "fingerprint": "8e8be3c4c0d0b12216440796f4f6f8fc53698b97e2097cb29f2deb99e72476e9",
+              "id": "fc890ec31fbe8cdafa70ca840684be75",
+              "item_id": "item_CTZ29",
+              "kind": "exchange",
+              "new_item_id": "item_4WF6P",
+              "order_id": "ORD-5M87D",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "exchange requested"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 1244,
+            "json_schema_constrained": true,
+            "latency_ms": 5601.73,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 47,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 30,
+        "kind": "operation_committed",
+        "created": 1793117625.508091,
+        "detail": {
+          "email_sent": false,
+          "money_moved": false,
+          "operation": {
+            "amount_cents": -450,
+            "arguments": {
+              "item_id": "item_CTZ29",
+              "new_item_id": "item_4WF6P",
+              "order_id": "ORD-5M87D",
+              "payment_method": "original"
+            },
+            "fingerprint": "8e8be3c4c0d0b12216440796f4f6f8fc53698b97e2097cb29f2deb99e72476e9",
+            "item_id": "item_CTZ29",
+            "kind": "exchange",
+            "new_item_id": "item_4WF6P",
+            "order_id": "ORD-5M87D",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "order_id": "ORD-5M87D",
+          "order_status": "exchange requested",
+          "proposal_id": "fc890ec31fbe8cdafa70ca840684be75",
+          "simulated": true,
+          "status": "committed"
+        }
+      }
+    ]
+  },
+  "mlx_wrong_operation_declined": {
+    "session": {
+      "case_id": "v2-valid-exchange-00",
+      "customer": {
+        "email": "buyer5jlzg@retail.example",
+        "gift_card": {
+          "balance_cents": 8500,
+          "id": "gift_6P9LZ"
+        },
+        "id": "u_DFV9M"
+      },
+      "id": "2a0c53ab1ffcac6cad82c508",
+      "messages": [
+        {
+          "content": "I'd appreciate help with this purchase: Swap the item for teal / S. Charge or refund the difference to the original payment method. Order ORD-5M87D. Email buyer5jlzg@retail.example.",
+          "role": "customer"
+        }
+      ],
+      "observations": [
+        {
+          "action": {
+            "arguments": {
+              "email": "buyer5jlzg@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyer5jlzg@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8500,
+              "id": "gift_6P9LZ"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_DFV9M"
+          },
+          "timing": {
+            "adapter_sha256": "1dda68b7b7305086b7dfb9b0c981ba7e0dd5b20aece819176da370ab1e8d6f6a",
+            "finish_reason": "stop",
+            "input_tokens": 820,
+            "latency_ms": 10126.76,
+            "output_tokens": 21,
+            "provider": "mlx",
+            "variant": "workflow_qlora_v2",
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-5M87D"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-5M87D\"}}",
+          "result": {
+            "id": "ORD-5M87D",
+            "items": [
+              {
+                "item_id": "item_CTZ29",
+                "option": "black / M",
+                "price_cents": 4473,
+                "product_id": "p_7PT5C"
+              }
+            ],
+            "original_payment": "card_SU7ZL",
+            "revision": 0,
+            "status": "delivered",
+            "user_id": "u_DFV9M"
+          },
+          "timing": {
+            "adapter_sha256": "1dda68b7b7305086b7dfb9b0c981ba7e0dd5b20aece819176da370ab1e8d6f6a",
+            "finish_reason": "stop",
+            "input_tokens": 885,
+            "latency_ms": 1293.47,
+            "output_tokens": 20,
+            "provider": "mlx",
+            "variant": "workflow_qlora_v2",
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "product_id": "p_7PT5C"
+            },
+            "tool": "get_product"
+          },
+          "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_7PT5C\"}}",
+          "result": {
+            "exchange_candidates": [
+              {
+                "available": true,
+                "current_item_id": "item_CTZ29",
+                "item_id": "item_43FGV",
+                "option": "white / XS",
+                "order_id": "ORD-5M87D",
+                "price_cents": 4748,
+                "price_difference_cents": 275
+              },
+              {
+                "available": true,
+                "current_item_id": "item_CTZ29",
+                "item_id": "item_4WF6P",
+                "option": "teal / S",
+                "order_id": "ORD-5M87D",
+                "price_cents": 4023,
+                "price_difference_cents": -450
+              }
+            ],
+            "name": "Everyday shirt",
+            "product_id": "p_7PT5C",
+            "variants": [
+              {
+                "available": true,
+                "item_id": "item_43FGV",
+                "option": "white / XS",
+                "price_cents": 4748
+              },
+              {
+                "available": true,
+                "item_id": "item_4WF6P",
+                "option": "teal / S",
+                "price_cents": 4023
+              },
+              {
+                "available": true,
+                "item_id": "item_CTZ29",
+                "option": "black / M",
+                "price_cents": 4473
+              }
+            ]
+          },
+          "timing": {
+            "adapter_sha256": "1dda68b7b7305086b7dfb9b0c981ba7e0dd5b20aece819176da370ab1e8d6f6a",
+            "finish_reason": "stop",
+            "input_tokens": 989,
+            "latency_ms": 1460.8,
+            "output_tokens": 19,
+            "provider": "mlx",
+            "variant": "workflow_qlora_v2",
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "item_id": "item_CTZ29",
+              "order_id": "ORD-5M87D",
+              "payment_method": "original"
+            },
+            "tool": "propose_return"
+          },
+          "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-5M87D\",\"item_id\":\"item_CTZ29\",\"payment_method\":\"original\"}}",
+          "result": {
+            "proposal": {
+              "amount_cents": 4473,
+              "arguments": {
+                "item_id": "item_CTZ29",
+                "order_id": "ORD-5M87D",
+                "payment_method": "original"
+              },
+              "fingerprint": "7abe55d8138ea581fd38b09a0b1218d8cb871407455c3c27488efd160550a0c4",
+              "id": "f4f1af32f82f1ade6005be30c3ebed0a",
+              "item_id": "item_CTZ29",
+              "kind": "return",
+              "order_id": "ORD-5M87D",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "return requested"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "adapter_sha256": "1dda68b7b7305086b7dfb9b0c981ba7e0dd5b20aece819176da370ab1e8d6f6a",
+            "finish_reason": "stop",
+            "input_tokens": 1244,
+            "latency_ms": 2520.55,
+            "output_tokens": 35,
+            "provider": "mlx",
+            "variant": "workflow_qlora_v2",
+            "workflow": "v2"
+          }
+        }
+      ],
+      "order_keys": {
+        "ORD-5M87D": "2a0c53ab1ffcac6cad82c508:ORD-5M87D"
+      },
+      "products": {
+        "p_7PT5C": {
+          "name": "Everyday shirt",
+          "product_id": "p_7PT5C",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_43FGV",
+              "option": "white / XS",
+              "price_cents": 4748
+            },
+            {
+              "available": true,
+              "item_id": "item_4WF6P",
+              "option": "teal / S",
+              "price_cents": 4023
+            },
+            {
+              "available": true,
+              "item_id": "item_CTZ29",
+              "option": "black / M",
+              "price_cents": 4473
+            }
+          ]
+        }
+      },
+      "proposal": null,
+      "read_orders": {
+        "ORD-5M87D": 0
+      },
+      "revision": 5,
+      "status": "awaiting_customer",
+      "user_id": "u_DFV9M"
+    },
+    "orders": [
+      {
+        "id": "ORD-5M87D",
+        "items": [
+          {
+            "item_id": "item_CTZ29",
+            "option": "black / M",
+            "price_cents": 4473,
+            "product_id": "p_7PT5C"
+          }
+        ],
+        "original_payment": "card_SU7ZL",
+        "status": "delivered",
+        "user_id": "u_DFV9M"
+      }
+    ],
+    "events": [
+      {
+        "id": 31,
+        "kind": "session_created",
+        "created": 1793117652.3910038,
+        "detail": {
+          "case_id": "v2-valid-exchange-00"
+        }
+      },
+      {
+        "id": 32,
+        "kind": "model_tool",
+        "created": 1793117662.738998,
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "buyer5jlzg@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyer5jlzg@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8500,
+              "id": "gift_6P9LZ"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_DFV9M"
+          },
+          "timing": {
+            "adapter_sha256": "1dda68b7b7305086b7dfb9b0c981ba7e0dd5b20aece819176da370ab1e8d6f6a",
+            "finish_reason": "stop",
+            "input_tokens": 820,
+            "latency_ms": 10126.76,
+            "output_tokens": 21,
+            "provider": "mlx",
+            "variant": "workflow_qlora_v2",
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 33,
+        "kind": "model_tool",
+        "created": 1793117664.073977,
+        "detail": {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-5M87D"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-5M87D\"}}",
+          "result": {
+            "id": "ORD-5M87D",
+            "items": [
+              {
+                "item_id": "item_CTZ29",
+                "option": "black / M",
+                "price_cents": 4473,
+                "product_id": "p_7PT5C"
+              }
+            ],
+            "original_payment": "card_SU7ZL",
+            "revision": 0,
+            "status": "delivered",
+            "user_id": "u_DFV9M"
+          },
+          "timing": {
+            "adapter_sha256": "1dda68b7b7305086b7dfb9b0c981ba7e0dd5b20aece819176da370ab1e8d6f6a",
+            "finish_reason": "stop",
+            "input_tokens": 885,
+            "latency_ms": 1293.47,
+            "output_tokens": 20,
+            "provider": "mlx",
+            "variant": "workflow_qlora_v2",
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 34,
+        "kind": "model_tool",
+        "created": 1793117665.5634649,
+        "detail": {
+          "action": {
+            "arguments": {
+              "product_id": "p_7PT5C"
+            },
+            "tool": "get_product"
+          },
+          "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_7PT5C\"}}",
+          "result": {
+            "exchange_candidates": [
+              {
+                "available": true,
+                "current_item_id": "item_CTZ29",
+                "item_id": "item_43FGV",
+                "option": "white / XS",
+                "order_id": "ORD-5M87D",
+                "price_cents": 4748,
+                "price_difference_cents": 275
+              },
+              {
+                "available": true,
+                "current_item_id": "item_CTZ29",
+                "item_id": "item_4WF6P",
+                "option": "teal / S",
+                "order_id": "ORD-5M87D",
+                "price_cents": 4023,
+                "price_difference_cents": -450
+              }
+            ],
+            "name": "Everyday shirt",
+            "product_id": "p_7PT5C",
+            "variants": [
+              {
+                "available": true,
+                "item_id": "item_43FGV",
+                "option": "white / XS",
+                "price_cents": 4748
+              },
+              {
+                "available": true,
+                "item_id": "item_4WF6P",
+                "option": "teal / S",
+                "price_cents": 4023
+              },
+              {
+                "available": true,
+                "item_id": "item_CTZ29",
+                "option": "black / M",
+                "price_cents": 4473
+              }
+            ]
+          },
+          "timing": {
+            "adapter_sha256": "1dda68b7b7305086b7dfb9b0c981ba7e0dd5b20aece819176da370ab1e8d6f6a",
+            "finish_reason": "stop",
+            "input_tokens": 989,
+            "latency_ms": 1460.8,
+            "output_tokens": 19,
+            "provider": "mlx",
+            "variant": "workflow_qlora_v2",
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 35,
+        "kind": "model_tool",
+        "created": 1793117668.114739,
+        "detail": {
+          "action": {
+            "arguments": {
+              "item_id": "item_CTZ29",
+              "order_id": "ORD-5M87D",
+              "payment_method": "original"
+            },
+            "tool": "propose_return"
+          },
+          "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-5M87D\",\"item_id\":\"item_CTZ29\",\"payment_method\":\"original\"}}",
+          "result": {
+            "proposal": {
+              "amount_cents": 4473,
+              "arguments": {
+                "item_id": "item_CTZ29",
+                "order_id": "ORD-5M87D",
+                "payment_method": "original"
+              },
+              "fingerprint": "7abe55d8138ea581fd38b09a0b1218d8cb871407455c3c27488efd160550a0c4",
+              "id": "f4f1af32f82f1ade6005be30c3ebed0a",
+              "item_id": "item_CTZ29",
+              "kind": "return",
+              "order_id": "ORD-5M87D",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "return requested"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "adapter_sha256": "1dda68b7b7305086b7dfb9b0c981ba7e0dd5b20aece819176da370ab1e8d6f6a",
+            "finish_reason": "stop",
+            "input_tokens": 1244,
+            "latency_ms": 2520.55,
+            "output_tokens": 35,
+            "provider": "mlx",
+            "variant": "workflow_qlora_v2",
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 36,
+        "kind": "confirmation_declined",
+        "created": 1793117748.456705,
+        "detail": {
+          "proposal_id": "f4f1af32f82f1ade6005be30c3ebed0a"
+        }
+      }
+    ]
+  },
+  "ollama_cancel_pending_confirmation": {
+    "session": {
+      "case_id": "v2-valid-cancel-00",
+      "customer": {
+        "email": "buyerbjgxu@retail.example",
+        "gift_card": {
+          "balance_cents": 8500,
+          "id": "gift_GYBZC"
+        },
+        "id": "u_5V7TN"
+      },
+      "id": "d96e5e64bc595fb3dcb961b3",
+      "messages": [
+        {
+          "content": "I'd appreciate help with this purchase: Cancel this order because I don't need it anymore. Order ORD-VSDDZ. Email buyerbjgxu@retail.example.",
+          "role": "customer"
+        }
+      ],
+      "observations": [
+        {
+          "action": {
+            "arguments": {
+              "email": "buyerbjgxu@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyerbjgxu@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8500,
+              "id": "gift_GYBZC"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_5V7TN"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 809,
+            "json_schema_constrained": true,
+            "latency_ms": 884.75,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 20,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-VSDDZ"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-VSDDZ\"}}",
+          "result": {
+            "id": "ORD-VSDDZ",
+            "items": [
+              {
+                "item_id": "item_V8XJE",
+                "option": "black / M",
+                "price_cents": 4439,
+                "product_id": "p_N8QY3"
+              }
+            ],
+            "original_payment": "card_U8KDP",
+            "revision": 0,
+            "status": "pending",
+            "user_id": "u_5V7TN"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 873,
+            "json_schema_constrained": true,
+            "latency_ms": 632.86,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 18,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-VSDDZ",
+              "reason": "no longer needed"
+            },
+            "tool": "propose_cancel"
+          },
+          "raw": "{\n  \"tool\": \"propose_cancel\",\n  \"arguments\": {\n    \"order_id\": \"ORD-VSDDZ\",\n    \"reason\": \"no longer needed\"\n  }\n}",
+          "result": {
+            "proposal": {
+              "amount_cents": 4439,
+              "arguments": {
+                "order_id": "ORD-VSDDZ",
+                "reason": "no longer needed"
+              },
+              "fingerprint": "1a2b46ca2a7272cd2dcd605a09bf176bee4266c53b3f41b07940c2cbd18620a0",
+              "id": "df53719968f3f36818b7d09c567900af",
+              "kind": "cancel",
+              "order_id": "ORD-VSDDZ",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "cancelled"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 970,
+            "json_schema_constrained": true,
+            "latency_ms": 1172.11,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 40,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      ],
+      "order_keys": {
+        "ORD-VSDDZ": "d96e5e64bc595fb3dcb961b3:ORD-VSDDZ"
+      },
+      "products": {
+        "p_N8QY3": {
+          "name": "Everyday shirt",
+          "product_id": "p_N8QY3",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_8NU6V",
+              "option": "white / XS",
+              "price_cents": 4714
+            },
+            {
+              "available": true,
+              "item_id": "item_V8XJE",
+              "option": "black / M",
+              "price_cents": 4439
+            },
+            {
+              "available": true,
+              "item_id": "item_L2KA3",
+              "option": "teal / S",
+              "price_cents": 3989
+            }
+          ]
+        }
+      },
+      "proposal": {
+        "amount_cents": 4439,
+        "arguments": {
+          "order_id": "ORD-VSDDZ",
+          "reason": "no longer needed"
+        },
+        "fingerprint": "1a2b46ca2a7272cd2dcd605a09bf176bee4266c53b3f41b07940c2cbd18620a0",
+        "id": "df53719968f3f36818b7d09c567900af",
+        "kind": "cancel",
+        "order_id": "ORD-VSDDZ",
+        "order_revision": 0,
+        "payment_method": "original",
+        "target_status": "cancelled"
+      },
+      "read_orders": {
+        "ORD-VSDDZ": 0
+      },
+      "revision": 3,
+      "status": "awaiting_confirmation",
+      "user_id": "u_5V7TN"
+    },
+    "orders": [
+      {
+        "id": "ORD-VSDDZ",
+        "items": [
+          {
+            "item_id": "item_V8XJE",
+            "option": "black / M",
+            "price_cents": 4439,
+            "product_id": "p_N8QY3"
+          }
+        ],
+        "original_payment": "card_U8KDP",
+        "status": "pending",
+        "user_id": "u_5V7TN"
+      }
+    ],
+    "events": [
+      {
+        "id": 37,
+        "kind": "session_created",
+        "created": 1793117749.2420301,
+        "detail": {
+          "case_id": "v2-valid-cancel-00"
+        }
+      },
+      {
+        "id": 38,
+        "kind": "model_tool",
+        "created": 1793117750.145028,
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "buyerbjgxu@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyerbjgxu@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 8500,
+              "id": "gift_GYBZC"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_5V7TN"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 809,
+            "json_schema_constrained": true,
+            "latency_ms": 884.75,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 20,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 39,
+        "kind": "model_tool",
+        "created": 1793117750.787793,
+        "detail": {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-VSDDZ"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-VSDDZ\"}}",
+          "result": {
+            "id": "ORD-VSDDZ",
+            "items": [
+              {
+                "item_id": "item_V8XJE",
+                "option": "black / M",
+                "price_cents": 4439,
+                "product_id": "p_N8QY3"
+              }
+            ],
+            "original_payment": "card_U8KDP",
+            "revision": 0,
+            "status": "pending",
+            "user_id": "u_5V7TN"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 873,
+            "json_schema_constrained": true,
+            "latency_ms": 632.86,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 18,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 40,
+        "kind": "model_tool",
+        "created": 1793117751.968524,
+        "detail": {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-VSDDZ",
+              "reason": "no longer needed"
+            },
+            "tool": "propose_cancel"
+          },
+          "raw": "{\n  \"tool\": \"propose_cancel\",\n  \"arguments\": {\n    \"order_id\": \"ORD-VSDDZ\",\n    \"reason\": \"no longer needed\"\n  }\n}",
+          "result": {
+            "proposal": {
+              "amount_cents": 4439,
+              "arguments": {
+                "order_id": "ORD-VSDDZ",
+                "reason": "no longer needed"
+              },
+              "fingerprint": "1a2b46ca2a7272cd2dcd605a09bf176bee4266c53b3f41b07940c2cbd18620a0",
+              "id": "df53719968f3f36818b7d09c567900af",
+              "kind": "cancel",
+              "order_id": "ORD-VSDDZ",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "cancelled"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 970,
+            "json_schema_constrained": true,
+            "latency_ms": 1172.11,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 40,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      }
+    ]
+  },
+  "interpretation": "Default Ollama completed a simulated negative-difference exchange after confirmation. The selected adapter proposed a wrong return and it was declined, leaving the independent order unchanged. No money moved or email was sent."
+}

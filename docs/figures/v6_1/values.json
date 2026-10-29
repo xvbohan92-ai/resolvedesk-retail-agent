@@ -1,0 +1,1041 @@
+{
+  "evaluation_sha256": "d5fb473360f6c26a82992982ef5dbdd352eb534d83c0aee36002291461797059",
+  "training_sha256": "eb9760f58ddaf5cbebc2a1a28688d3993706f511a565ada332776c13080d12a3",
+  "manifest_sha256": "36d4100038d683de7121ff0e494304954bd7a3bbba1f68004a12fdfa6d490426",
+  "analysis_source_sha256": "51d68f6abedd0a0ff13900087d67bf26baebcf6bce1985b8a053ff3c47047aa3",
+  "csv_sha256": "3f2202dd79a7e42d6764c205f13384639b38efee8b722a9d41054ff3e3918ffc",
+  "summary": {
+    "previous_old_flow": {
+      "tasks": 48,
+      "task_success": 28,
+      "exchange_related_tasks": 30,
+      "exchange_related_success": 14,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 7,
+      "required_clarifications": 18,
+      "clarifications_obtained": 14,
+      "model_calls": 290,
+      "schema_valid": 284,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 16697,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 10793.85,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 3,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 10,
+      "direct_return_success": 6,
+      "fallback_tasks": 4,
+      "fallback_success": 3,
+      "handoff_tasks": 16,
+      "handoff_success": 8,
+      "repeat_free_success": 28,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 80,
+      "unnecessary_handoff_attempts": 2,
+      "unnecessary_handoff_executed": 2,
+      "policy_gate_rejections": 0,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 143,
+      "quote_rejections": 93,
+      "slot_normalizations": 0,
+      "intent_tasks": 48,
+      "intent_joint_correct": 29,
+      "intent_field_correct": {
+        "operation": 43,
+        "email": 44,
+        "order_id": 44,
+        "requested_option": 40,
+        "payment_method": 43,
+        "reason": 44,
+        "fallback_return": 30
+      },
+      "missing_email_tasks": 8,
+      "missing_email_success": 0,
+      "unsupported_permission_yes": 12,
+      "non_authorized_tasks": 42,
+      "true_permission_yes": 6,
+      "authorized_tasks": 6,
+      "consent_questions": 0
+    },
+    "previous_new_flow": {
+      "tasks": 48,
+      "task_success": 42,
+      "exchange_related_tasks": 30,
+      "exchange_related_success": 24,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 12,
+      "required_clarifications": 18,
+      "clarifications_obtained": 16,
+      "model_calls": 235,
+      "schema_valid": 231,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 9163,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 13937.675,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 10,
+      "direct_return_success": 10,
+      "fallback_tasks": 4,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 14,
+      "repeat_free_success": 41,
+      "repeated_question_attempts": 2,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 3,
+      "unnecessary_handoff_attempts": 2,
+      "unnecessary_handoff_executed": 2,
+      "policy_gate_rejections": 4,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 48,
+      "quote_rejections": 2,
+      "slot_normalizations": 0,
+      "intent_tasks": 48,
+      "intent_joint_correct": 33,
+      "intent_field_correct": {
+        "operation": 44,
+        "email": 46,
+        "order_id": 46,
+        "requested_option": 45,
+        "payment_method": 46,
+        "reason": 46,
+        "fallback_return": 35
+      },
+      "missing_email_tasks": 8,
+      "missing_email_success": 8,
+      "unsupported_permission_yes": 0,
+      "non_authorized_tasks": 42,
+      "true_permission_yes": 3,
+      "authorized_tasks": 6,
+      "consent_questions": 2
+    },
+    "base_new_flow": {
+      "tasks": 48,
+      "task_success": 27,
+      "exchange_related_tasks": 30,
+      "exchange_related_success": 21,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 11,
+      "required_clarifications": 18,
+      "clarifications_obtained": 4,
+      "model_calls": 233,
+      "schema_valid": 224,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 3,
+      "output_tokens": 10117,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 12058.21,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 10,
+      "direct_return_success": 1,
+      "fallback_tasks": 4,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 11,
+      "repeat_free_success": 27,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 23,
+      "unnecessary_handoff_attempts": 0,
+      "unnecessary_handoff_executed": 0,
+      "policy_gate_rejections": 6,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 67,
+      "quote_rejections": 0,
+      "slot_normalizations": 2,
+      "intent_tasks": 48,
+      "intent_joint_correct": 0,
+      "intent_field_correct": {
+        "operation": 39,
+        "email": 39,
+        "order_id": 39,
+        "requested_option": 34,
+        "payment_method": 25,
+        "reason": 9,
+        "fallback_return": 28
+      },
+      "missing_email_tasks": 8,
+      "missing_email_success": 2,
+      "unsupported_permission_yes": 8,
+      "non_authorized_tasks": 42,
+      "true_permission_yes": 6,
+      "authorized_tasks": 6,
+      "consent_questions": 6
+    },
+    "qlora_v6_1": {
+      "tasks": 48,
+      "task_success": 44,
+      "exchange_related_tasks": 30,
+      "exchange_related_success": 26,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 13,
+      "required_clarifications": 18,
+      "clarifications_obtained": 17,
+      "model_calls": 239,
+      "schema_valid": 237,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 9143,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 12597.900000000001,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 10,
+      "direct_return_success": 10,
+      "fallback_tasks": 4,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 15,
+      "repeat_free_success": 43,
+      "repeated_question_attempts": 2,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 2,
+      "unnecessary_handoff_attempts": 2,
+      "unnecessary_handoff_executed": 2,
+      "policy_gate_rejections": 4,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 46,
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "intent_tasks": 48,
+      "intent_joint_correct": 36,
+      "intent_field_correct": {
+        "operation": 46,
+        "email": 46,
+        "order_id": 46,
+        "requested_option": 45,
+        "payment_method": 46,
+        "reason": 46,
+        "fallback_return": 37
+      },
+      "missing_email_tasks": 8,
+      "missing_email_success": 8,
+      "unsupported_permission_yes": 0,
+      "non_authorized_tasks": 42,
+      "true_permission_yes": 3,
+      "authorized_tasks": 6,
+      "consent_questions": 2
+    }
+  },
+  "primary_summary": {
+    "previous_old_flow": {
+      "tasks": 48,
+      "task_success": 28,
+      "exchange_related_tasks": 30,
+      "exchange_related_success": 14,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 7,
+      "required_clarifications": 18,
+      "clarifications_obtained": 14,
+      "model_calls": 290,
+      "schema_valid": 284,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 16697,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 10793.85,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 3,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 10,
+      "direct_return_success": 6,
+      "fallback_tasks": 4,
+      "fallback_success": 3,
+      "handoff_tasks": 16,
+      "handoff_success": 8,
+      "repeat_free_success": 28,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 80,
+      "unnecessary_handoff_attempts": 2,
+      "unnecessary_handoff_executed": 2,
+      "policy_gate_rejections": 0,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 143,
+      "quote_rejections": 93,
+      "slot_normalizations": 0,
+      "intent_tasks": 48,
+      "intent_joint_correct": 29,
+      "intent_field_correct": {
+        "operation": 43,
+        "email": 44,
+        "order_id": 44,
+        "requested_option": 40,
+        "payment_method": 43,
+        "reason": 44,
+        "fallback_return": 30
+      },
+      "missing_email_tasks": 8,
+      "missing_email_success": 0,
+      "unsupported_permission_yes": 12,
+      "non_authorized_tasks": 42,
+      "true_permission_yes": 6,
+      "authorized_tasks": 6,
+      "consent_questions": 0
+    },
+    "previous_new_flow": {
+      "tasks": 48,
+      "task_success": 42,
+      "exchange_related_tasks": 30,
+      "exchange_related_success": 24,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 12,
+      "required_clarifications": 18,
+      "clarifications_obtained": 16,
+      "model_calls": 235,
+      "schema_valid": 231,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 9163,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 13937.675,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 10,
+      "direct_return_success": 10,
+      "fallback_tasks": 4,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 14,
+      "repeat_free_success": 41,
+      "repeated_question_attempts": 2,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 3,
+      "unnecessary_handoff_attempts": 2,
+      "unnecessary_handoff_executed": 2,
+      "policy_gate_rejections": 4,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 48,
+      "quote_rejections": 2,
+      "slot_normalizations": 0,
+      "intent_tasks": 48,
+      "intent_joint_correct": 33,
+      "intent_field_correct": {
+        "operation": 44,
+        "email": 46,
+        "order_id": 46,
+        "requested_option": 45,
+        "payment_method": 46,
+        "reason": 46,
+        "fallback_return": 35
+      },
+      "missing_email_tasks": 8,
+      "missing_email_success": 8,
+      "unsupported_permission_yes": 0,
+      "non_authorized_tasks": 42,
+      "true_permission_yes": 3,
+      "authorized_tasks": 6,
+      "consent_questions": 2
+    },
+    "base_new_flow": {
+      "tasks": 48,
+      "task_success": 27,
+      "exchange_related_tasks": 30,
+      "exchange_related_success": 21,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 11,
+      "required_clarifications": 18,
+      "clarifications_obtained": 4,
+      "model_calls": 233,
+      "schema_valid": 224,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 3,
+      "output_tokens": 10117,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 12058.21,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 10,
+      "direct_return_success": 1,
+      "fallback_tasks": 4,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 11,
+      "repeat_free_success": 27,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 23,
+      "unnecessary_handoff_attempts": 0,
+      "unnecessary_handoff_executed": 0,
+      "policy_gate_rejections": 6,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 67,
+      "quote_rejections": 0,
+      "slot_normalizations": 2,
+      "intent_tasks": 48,
+      "intent_joint_correct": 0,
+      "intent_field_correct": {
+        "operation": 39,
+        "email": 39,
+        "order_id": 39,
+        "requested_option": 34,
+        "payment_method": 25,
+        "reason": 9,
+        "fallback_return": 28
+      },
+      "missing_email_tasks": 8,
+      "missing_email_success": 2,
+      "unsupported_permission_yes": 8,
+      "non_authorized_tasks": 42,
+      "true_permission_yes": 6,
+      "authorized_tasks": 6,
+      "consent_questions": 6
+    },
+    "qlora_v6_1": {
+      "tasks": 48,
+      "task_success": 44,
+      "exchange_related_tasks": 30,
+      "exchange_related_success": 26,
+      "fulfillable_exchange_tasks": 14,
+      "fulfillable_exchange_success": 13,
+      "required_clarifications": 18,
+      "clarifications_obtained": 17,
+      "model_calls": 239,
+      "schema_valid": 237,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 9143,
+      "confirmation_preserved": 48,
+      "latency_p50_ms": 12597.900000000001,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 10,
+      "direct_return_success": 10,
+      "fallback_tasks": 4,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 15,
+      "repeat_free_success": 43,
+      "repeated_question_attempts": 2,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 2,
+      "unnecessary_handoff_attempts": 2,
+      "unnecessary_handoff_executed": 2,
+      "policy_gate_rejections": 4,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 46,
+      "quote_rejections": 0,
+      "slot_normalizations": 0,
+      "intent_tasks": 48,
+      "intent_joint_correct": 36,
+      "intent_field_correct": {
+        "operation": 46,
+        "email": 46,
+        "order_id": 46,
+        "requested_option": 45,
+        "payment_method": 46,
+        "reason": 46,
+        "fallback_return": 37
+      },
+      "missing_email_tasks": 8,
+      "missing_email_success": 8,
+      "unsupported_permission_yes": 0,
+      "non_authorized_tasks": 42,
+      "true_permission_yes": 3,
+      "authorized_tasks": 6,
+      "consent_questions": 2
+    }
+  },
+  "primary_test_cases": 48,
+  "analysis_plan_sha256": "b5abd64ec3f84c11f2eb588cb1e4d89335d7168f7785d3fa289ad2c0a816b860",
+  "family_success": {
+    "cancel": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v6_1": 2
+    },
+    "missing_reason": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 0,
+      "qlora_v6_1": 2
+    },
+    "return": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 0,
+      "qlora_v6_1": 2
+    },
+    "missing_payment": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 0,
+      "qlora_v6_1": 2
+    },
+    "exchange": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v6_1": 2
+    },
+    "exchange_fallback": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 1,
+      "base_new_flow": 2,
+      "qlora_v6_1": 1
+    },
+    "forbidden_status": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v6_1": 2
+    },
+    "foreign_order": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 1,
+      "qlora_v6_1": 2
+    },
+    "missing_email": {
+      "previous_old_flow": 0,
+      "previous_new_flow": 2,
+      "base_new_flow": 0,
+      "qlora_v6_1": 2
+    },
+    "exchange_missing_option": {
+      "previous_old_flow": 0,
+      "previous_new_flow": 1,
+      "base_new_flow": 2,
+      "qlora_v6_1": 2
+    },
+    "exchange_missing_payment": {
+      "previous_old_flow": 1,
+      "previous_new_flow": 2,
+      "base_new_flow": 0,
+      "qlora_v6_1": 2
+    },
+    "exchange_gift": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v6_1": 2
+    },
+    "exchange_unavailable": {
+      "previous_old_flow": 0,
+      "previous_new_flow": 1,
+      "base_new_flow": 1,
+      "qlora_v6_1": 1
+    },
+    "exchange_shortfall": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v6_1": 2
+    },
+    "exchange_fallback_available": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v6_1": 2
+    },
+    "return_reject_exchange": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 1,
+      "qlora_v6_1": 2
+    },
+    "exchange_stockout_unknown": {
+      "previous_old_flow": 0,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v6_1": 2
+    },
+    "exchange_stockout_missing_email": {
+      "previous_old_flow": 0,
+      "previous_new_flow": 2,
+      "base_new_flow": 0,
+      "qlora_v6_1": 2
+    },
+    "exchange_stockout_negative_quote": {
+      "previous_old_flow": 1,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v6_1": 2
+    },
+    "exchange_stockout_question": {
+      "previous_old_flow": 1,
+      "previous_new_flow": 1,
+      "base_new_flow": 1,
+      "qlora_v6_1": 2
+    },
+    "exchange_available_refusal": {
+      "previous_old_flow": 0,
+      "previous_new_flow": 1,
+      "base_new_flow": 1,
+      "qlora_v6_1": 1
+    },
+    "exchange_fallback_missing_payment": {
+      "previous_old_flow": 1,
+      "previous_new_flow": 1,
+      "base_new_flow": 0,
+      "qlora_v6_1": 1
+    },
+    "exchange_missing_email": {
+      "previous_old_flow": 0,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v6_1": 2
+    },
+    "missing_email_payment": {
+      "previous_old_flow": 0,
+      "previous_new_flow": 2,
+      "base_new_flow": 0,
+      "qlora_v6_1": 2
+    }
+  },
+  "confusion": {
+    "previous_old_flow": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0,
+        0,
+        5
+      ],
+      [
+        0,
+        0,
+        7,
+        2,
+        5
+      ],
+      [
+        0,
+        3,
+        0,
+        8,
+        5
+      ]
+    ],
+    "previous_new_flow": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        12,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        12,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        14,
+        2
+      ]
+    ],
+    "base_new_flow": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0,
+        0,
+        5
+      ],
+      [
+        0,
+        0,
+        13,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        11,
+        5
+      ]
+    ],
+    "qlora_v6_1": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        12,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        13,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        15,
+        1
+      ]
+    ]
+  },
+  "permission_diagnostics": {
+    "previous_old_flow": {
+      "authorized_tasks": 6,
+      "non_authorized_tasks": 42,
+      "true_affirmative": 6,
+      "unsupported_affirmative": 12,
+      "missed_affirmative": 0
+    },
+    "previous_new_flow": {
+      "authorized_tasks": 6,
+      "non_authorized_tasks": 42,
+      "true_affirmative": 3,
+      "unsupported_affirmative": 0,
+      "missed_affirmative": 3
+    },
+    "base_new_flow": {
+      "authorized_tasks": 6,
+      "non_authorized_tasks": 42,
+      "true_affirmative": 6,
+      "unsupported_affirmative": 8,
+      "missed_affirmative": 0
+    },
+    "qlora_v6_1": {
+      "authorized_tasks": 6,
+      "non_authorized_tasks": 42,
+      "true_affirmative": 3,
+      "unsupported_affirmative": 0,
+      "missed_affirmative": 3
+    }
+  },
+  "failures": [
+    {
+      "case_id": "v6_1-test-exchange_available_refusal-00",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v6_1": false
+    },
+    {
+      "case_id": "v6_1-test-exchange_available_refusal-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_fallback-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": true,
+      "qlora_v6_1": false
+    },
+    {
+      "case_id": "v6_1-test-exchange_fallback_missing_payment-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_fallback_missing_payment-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v6_1": false
+    },
+    {
+      "case_id": "v6_1-test-exchange_missing_email-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_missing_email-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_missing_option-00",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": true,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_missing_option-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_missing_payment-00",
+      "previous_old_flow": true,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_missing_payment-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_stockout_missing_email-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_stockout_missing_email-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_stockout_negative_quote-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_stockout_question-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_stockout_question-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_stockout_unknown-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_stockout_unknown-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-exchange_unavailable-00",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v6_1": false
+    },
+    {
+      "case_id": "v6_1-test-exchange_unavailable-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-foreign_order-01",
+      "previous_old_flow": true,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-missing_email-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-missing_email-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-missing_email_payment-00",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-missing_email_payment-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-missing_payment-00",
+      "previous_old_flow": true,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-missing_payment-01",
+      "previous_old_flow": true,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-missing_reason-00",
+      "previous_old_flow": true,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-missing_reason-01",
+      "previous_old_flow": true,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-return-00",
+      "previous_old_flow": true,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-return-01",
+      "previous_old_flow": true,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    },
+    {
+      "case_id": "v6_1-test-return_reject_exchange-01",
+      "previous_old_flow": true,
+      "previous_new_flow": true,
+      "base_new_flow": false,
+      "qlora_v6_1": true
+    }
+  ],
+  "paired": {
+    "end_to_end": {
+      "improved": 18,
+      "regressed": 2,
+      "both_pass": 26,
+      "both_fail": 2
+    },
+    "workflow": {
+      "improved": 17,
+      "regressed": 3,
+      "both_pass": 25,
+      "both_fail": 3
+    },
+    "training": {
+      "improved": 2,
+      "regressed": 0,
+      "both_pass": 42,
+      "both_fail": 4
+    },
+    "base": {
+      "improved": 18,
+      "regressed": 1,
+      "both_pass": 26,
+      "both_fail": 3
+    }
+  },
+  "figure_sha256": {
+    "families.svg": "da77ab26450df19d025ca70c0001a85d8ab41415c26a6f09a733b519b5112201",
+    "intent.svg": "7359d39c632ce43446ea7b98a971e12487eb540e33847223c2964f44797a576a",
+    "evaluation.png": "6e46173758e89fb81ddfbefb108590a8218f1a1b7d820fc527f499dba8e9319d",
+    "evaluation.svg": "db1aaf2ac24d2c344aaef29851e1300543d60ee7ab256d998a366f81f6ff5d58",
+    "intent.png": "762e8598f07df05e1809ce2da92de80c4145605124b6f0c426ea0bc10b1f571b",
+    "families.png": "7b530146e9c2e0f2407d6ea97fbbe345ad5f3873cd893dbe387161b2313e8df4",
+    "consent.png": "ebe612607da066444a9b4158140a2cc247ef31d79012818704c62d3f7b01dd33",
+    "training.svg": "7c6ba8370cfe238c0d6c455b4e32dd95fea7fe7b1cce7e40c6c9ed8216d3ccec",
+    "confusion.png": "2a4ec075765b8173c3e99bd51de5885a6dd3852522239c74a1664d5c7c680fc8",
+    "confusion.svg": "c6522734df366846028a78458fc5758b6a7414ec5979835083c40c06632363bf",
+    "training.png": "7bc8d5b5756aead4b49cb0f7ad3c86f0a6065d68c48050887faed38eaaaef745",
+    "consent.svg": "56ec18005d043f8a25862b467488c230c87a5977e8188063a04dda78b31ceda9"
+  }
+}

@@ -1,0 +1,742 @@
+{
+  "scope": "Descriptive failure categories can overlap; no model or test changes were made from this analysis.",
+  "counts": {
+    "base": {
+      "missing_required_clarification": 6,
+      "wrong_or_unfinished_business_outcome": 6,
+      "call_budget_exhausted": 1,
+      "identity_or_order_not_checked": 1
+    },
+    "finetuned": {
+      "wrong_or_unfinished_business_outcome": 11,
+      "missing_required_clarification": 2,
+      "call_budget_exhausted": 2,
+      "invalid_action_json": 1,
+      "identity_or_order_not_checked": 2
+    }
+  },
+  "failures": [
+    {
+      "variant": "base",
+      "case_id": "test-missing_reason-00",
+      "status": "completed",
+      "reasons": [
+        "missing_required_clarification"
+      ],
+      "model_calls": 3,
+      "questions": [],
+      "last_decision": {
+        "arguments": {
+          "order_id": "ORD-30100",
+          "reason": "no longer needed"
+        },
+        "tool": "propose_cancel"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3200,
+          "arguments": {
+            "order_id": "ORD-30100",
+            "reason": "no longer needed"
+          },
+          "fingerprint": "410097cfe7160690902cd1a0ab17f8a82e26b193eec2b7e837c928cb4c4135a7",
+          "id": "4d1ae762843bee9b97f26f4975d2c5e9",
+          "kind": "cancel",
+          "order_id": "ORD-30100",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "cancelled"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "test-missing_reason-01",
+      "status": "completed",
+      "reasons": [
+        "missing_required_clarification",
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 3,
+      "questions": [],
+      "last_decision": {
+        "arguments": {
+          "order_id": "ORD-30101",
+          "reason": "no longer needed"
+        },
+        "tool": "propose_cancel"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3337,
+          "arguments": {
+            "order_id": "ORD-30101",
+            "reason": "no longer needed"
+          },
+          "fingerprint": "89e2cb1a980927741bd1d3a3a04de076be48b3a68cf6d34ccace4b5ed9f730e2",
+          "id": "164a7b60e0014032a8de94f82392facd",
+          "kind": "cancel",
+          "order_id": "ORD-30101",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "cancelled"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "test-missing_reason-02",
+      "status": "awaiting_customer",
+      "reasons": [
+        "missing_required_clarification"
+      ],
+      "model_calls": 3,
+      "questions": [],
+      "last_decision": {
+        "arguments": {
+          "order_id": "ORD-30102",
+          "reason": "no longer needed"
+        },
+        "tool": "propose_cancel"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3474,
+          "arguments": {
+            "order_id": "ORD-30102",
+            "reason": "no longer needed"
+          },
+          "fingerprint": "f9fe61fa5a1fd3df557bc1c21bccf100a28657936deaf5f3e2edbb514d51cae4",
+          "id": "b661b93e40da5b71335a6349fa9a5813",
+          "kind": "cancel",
+          "order_id": "ORD-30102",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "cancelled"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "test-missing_payment-00",
+      "status": "completed",
+      "reasons": [
+        "missing_required_clarification"
+      ],
+      "model_calls": 6,
+      "questions": [
+        "reason"
+      ],
+      "last_decision": {
+        "arguments": {
+          "item_id": "item_30307",
+          "order_id": "ORD-30300",
+          "payment_method": "original"
+        },
+        "tool": "propose_return"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3200,
+          "arguments": {
+            "item_id": "item_30307",
+            "order_id": "ORD-30300",
+            "payment_method": "original"
+          },
+          "fingerprint": "4a99434b4af64984dbe1b779c2139fa11215eff51d48028a0284c663bc343b16",
+          "id": "7010591720cfedc116ce92335fea920e",
+          "item_id": "item_30307",
+          "kind": "return",
+          "order_id": "ORD-30300",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "return requested"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "test-missing_payment-01",
+      "status": "completed",
+      "reasons": [
+        "missing_required_clarification"
+      ],
+      "model_calls": 3,
+      "questions": [],
+      "last_decision": {
+        "arguments": {
+          "item_id": "item_30308",
+          "order_id": "ORD-30301",
+          "payment_method": "original"
+        },
+        "tool": "propose_return"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3337,
+          "arguments": {
+            "item_id": "item_30308",
+            "order_id": "ORD-30301",
+            "payment_method": "original"
+          },
+          "fingerprint": "e13f24d8dafa388d5bf1327bcd72ac3a5577c0d1047dd03fb19166c1270e958b",
+          "id": "96ef9515b2fe019aacca9934d082d51b",
+          "item_id": "item_30308",
+          "kind": "return",
+          "order_id": "ORD-30301",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "return requested"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "test-missing_payment-02",
+      "status": "awaiting_customer",
+      "reasons": [
+        "missing_required_clarification"
+      ],
+      "model_calls": 6,
+      "questions": [
+        "reason"
+      ],
+      "last_decision": {
+        "arguments": {
+          "item_id": "item_30309",
+          "order_id": "ORD-30302",
+          "payment_method": "original"
+        },
+        "tool": "propose_return"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3474,
+          "arguments": {
+            "item_id": "item_30309",
+            "order_id": "ORD-30302",
+            "payment_method": "original"
+          },
+          "fingerprint": "670586f0c2b506e6aae5875e5874cb4bb3528dadcf71d27a5d4014d5d8d9f5c4",
+          "id": "bfc85c0c89d807cb6b0489dc310f5fa3",
+          "item_id": "item_30309",
+          "kind": "return",
+          "order_id": "ORD-30302",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "return requested"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "test-exchange-00",
+      "status": "handoff",
+      "reasons": [
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 5,
+      "questions": [
+        "reason"
+      ],
+      "last_decision": {
+        "arguments": {
+          "reason": "customer explicitly accepted return as fallback for unavailable exchange"
+        },
+        "tool": "handoff"
+      },
+      "last_result": {
+        "handoff": true,
+        "reason": "customer explicitly accepted return as fallback for unavailable exchange"
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "test-exchange-01",
+      "status": "handoff",
+      "reasons": [
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 6,
+      "questions": [
+        "reason"
+      ],
+      "last_decision": {
+        "arguments": {
+          "reason": "customer explicitly accepted return as fallback after exchange option unavailable"
+        },
+        "tool": "handoff"
+      },
+      "last_result": {
+        "handoff": true,
+        "reason": "customer explicitly accepted return as fallback after exchange option unavailable"
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "test-exchange-02",
+      "status": "awaiting_customer",
+      "reasons": [
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 4,
+      "questions": [],
+      "last_decision": {
+        "arguments": {
+          "item_id": "item_30409",
+          "order_id": "ORD-30402",
+          "payment_method": "original"
+        },
+        "tool": "propose_return"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3474,
+          "arguments": {
+            "item_id": "item_30409",
+            "order_id": "ORD-30402",
+            "payment_method": "original"
+          },
+          "fingerprint": "82c410c9c1f9a989acfed03668f48b76e351871682bb72d79e3db96cfa4fe656",
+          "id": "227fcd2f37996a9991ffe4b75f05809e",
+          "item_id": "item_30409",
+          "kind": "return",
+          "order_id": "ORD-30402",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "return requested"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "test-missing_email-00",
+      "status": "running",
+      "reasons": [
+        "call_budget_exhausted",
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 8,
+      "questions": [
+        "email",
+        "email",
+        "email"
+      ],
+      "last_decision": {
+        "arguments": {
+          "order_id": "ORD-30800"
+        },
+        "tool": "get_order"
+      },
+      "last_result": {
+        "id": "ORD-30800",
+        "items": [
+          {
+            "item_id": "item_30807",
+            "option": "black / M",
+            "price_cents": 3200,
+            "product_id": "p_30831"
+          }
+        ],
+        "original_payment": "card_30800",
+        "revision": 0,
+        "status": "delivered",
+        "user_id": "u_30800"
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "test-missing_email-01",
+      "status": "handoff",
+      "reasons": [
+        "identity_or_order_not_checked",
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 6,
+      "questions": [
+        "email",
+        "email",
+        "email"
+      ],
+      "last_decision": {
+        "arguments": {
+          "reason": "Customer provided email but no matching demo customer found"
+        },
+        "tool": "handoff"
+      },
+      "last_result": {
+        "handoff": true,
+        "reason": "Customer provided email but no matching demo customer found"
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-missing_reason-01",
+      "status": "handoff",
+      "reasons": [
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 5,
+      "questions": [
+        "reason"
+      ],
+      "last_decision": {
+        "arguments": {
+          "reason": "Unknown order_id"
+        },
+        "tool": "handoff"
+      },
+      "last_result": {
+        "handoff": true,
+        "reason": "Unknown order_id"
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-return-02",
+      "status": "handoff",
+      "reasons": [
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 8,
+      "questions": [
+        "item_id",
+        "item_id",
+        "item_id"
+      ],
+      "last_decision": {
+        "arguments": {
+          "reason": "Customer is requesting a return of item_30209, but the item_id does not match the order status."
+        },
+        "tool": "handoff"
+      },
+      "last_result": {
+        "handoff": true,
+        "reason": "Customer is requesting a return of item_30209, but the item_id does not match the order status."
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-missing_payment-01",
+      "status": "handoff",
+      "reasons": [
+        "missing_required_clarification",
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 6,
+      "questions": [
+        "item_id"
+      ],
+      "last_decision": {
+        "arguments": {
+          "reason": "Customer's order status does not match the item_id provided."
+        },
+        "tool": "handoff"
+      },
+      "last_result": {
+        "handoff": true,
+        "reason": "Customer's order status does not match the item_id provided."
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-missing_payment-02",
+      "status": "awaiting_customer",
+      "reasons": [
+        "missing_required_clarification"
+      ],
+      "model_calls": 8,
+      "questions": [
+        "item_id"
+      ],
+      "last_decision": {
+        "arguments": {
+          "item_id": "item_30309",
+          "order_id": "ORD-30302",
+          "payment_method": "original"
+        },
+        "tool": "propose_return"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3474,
+          "arguments": {
+            "item_id": "item_30309",
+            "order_id": "ORD-30302",
+            "payment_method": "original"
+          },
+          "fingerprint": "670586f0c2b506e6aae5875e5874cb4bb3528dadcf71d27a5d4014d5d8d9f5c4",
+          "id": "e5af42915ee517c203116279e069a186",
+          "item_id": "item_30309",
+          "kind": "return",
+          "order_id": "ORD-30302",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "return requested"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-exchange-00",
+      "status": "completed",
+      "reasons": [
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 6,
+      "questions": [
+        "payment_method"
+      ],
+      "last_decision": {
+        "arguments": {
+          "item_id": "item_30407",
+          "order_id": "ORD-30400",
+          "payment_method": "original"
+        },
+        "tool": "propose_return"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3200,
+          "arguments": {
+            "item_id": "item_30407",
+            "order_id": "ORD-30400",
+            "payment_method": "original"
+          },
+          "fingerprint": "6151ff50c33268162973a7374d4b0cdae639558de8c3c789bf2dba8bcce274d3",
+          "id": "f2ec261c689f01466c0e4161ac5333d8",
+          "item_id": "item_30407",
+          "kind": "return",
+          "order_id": "ORD-30400",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "return requested"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-exchange-01",
+      "status": "completed",
+      "reasons": [
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 6,
+      "questions": [
+        "payment_method"
+      ],
+      "last_decision": {
+        "arguments": {
+          "item_id": "item_30408",
+          "order_id": "ORD-30401",
+          "payment_method": "original"
+        },
+        "tool": "propose_return"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3337,
+          "arguments": {
+            "item_id": "item_30408",
+            "order_id": "ORD-30401",
+            "payment_method": "original"
+          },
+          "fingerprint": "4d2e007eeb8a4464cd3cb4c59783e37082ca23c0aae2b428ec04d36194554faf",
+          "id": "70c80c10b59702235bfd475ddc989e50",
+          "item_id": "item_30408",
+          "kind": "return",
+          "order_id": "ORD-30401",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "return requested"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-exchange-02",
+      "status": "awaiting_customer",
+      "reasons": [
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 8,
+      "questions": [
+        "payment_method"
+      ],
+      "last_decision": {
+        "arguments": {
+          "item_id": "item_30409",
+          "order_id": "ORD-30402",
+          "payment_method": "original"
+        },
+        "tool": "propose_return"
+      },
+      "last_result": {
+        "proposal": {
+          "amount_cents": 3474,
+          "arguments": {
+            "item_id": "item_30409",
+            "order_id": "ORD-30402",
+            "payment_method": "original"
+          },
+          "fingerprint": "82c410c9c1f9a989acfed03668f48b76e351871682bb72d79e3db96cfa4fe656",
+          "id": "1246256e236e5e3c054ee489c9691a96",
+          "item_id": "item_30409",
+          "kind": "return",
+          "order_id": "ORD-30402",
+          "order_revision": 0,
+          "payment_method": "original",
+          "target_status": "return requested"
+        },
+        "requires_customer_confirmation": true
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-exchange_fallback-01",
+      "status": "running",
+      "reasons": [
+        "call_budget_exhausted",
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 8,
+      "questions": [
+        "payment_method",
+        "payment_method",
+        "payment_method"
+      ],
+      "last_decision": {
+        "arguments": {
+          "product_id": "p_30532"
+        },
+        "tool": "get_product"
+      },
+      "last_result": {
+        "name": "Everyday shirt",
+        "product_id": "p_30532",
+        "variants": [
+          {
+            "available": true,
+            "item_id": "item_30508",
+            "option": "black / M",
+            "price_cents": 3337
+          },
+          {
+            "available": false,
+            "item_id": "item_30520",
+            "option": "olive / XL",
+            "price_cents": 3821
+          },
+          {
+            "available": true,
+            "item_id": "item_30544",
+            "option": "white / S",
+            "price_cents": 2900
+          }
+        ]
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-exchange_fallback-02",
+      "status": "failed",
+      "reasons": [
+        "invalid_action_json",
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 6,
+      "questions": [
+        "item_id"
+      ],
+      "last_decision": null,
+      "last_result": {
+        "detail": "Unsupported clarification field",
+        "error": "invalid_action_json"
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-missing_email-00",
+      "status": "running",
+      "reasons": [
+        "call_budget_exhausted",
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 8,
+      "questions": [
+        "reason",
+        "email"
+      ],
+      "last_decision": {
+        "arguments": {
+          "order_id": "ORD-30800",
+          "reason": "no longer needed"
+        },
+        "tool": "propose_cancel"
+      },
+      "last_result": {
+        "detail": "Cancellation requires pending status and an accepted reason",
+        "error": "policy_or_argument_rejection"
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-missing_email-01",
+      "status": "handoff",
+      "reasons": [
+        "identity_or_order_not_checked",
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 8,
+      "questions": [
+        "email",
+        "order_id"
+      ],
+      "last_decision": {
+        "arguments": {
+          "reason": "Customer does not provide email."
+        },
+        "tool": "handoff"
+      },
+      "last_result": {
+        "handoff": true,
+        "reason": "Customer does not provide email."
+      }
+    },
+    {
+      "variant": "finetuned",
+      "case_id": "test-missing_email-02",
+      "status": "handoff",
+      "reasons": [
+        "identity_or_order_not_checked",
+        "wrong_or_unfinished_business_outcome"
+      ],
+      "model_calls": 6,
+      "questions": [
+        "reason",
+        "email"
+      ],
+      "last_decision": {
+        "arguments": {
+          "reason": "Customer does not match any known customer."
+        },
+        "tool": "handoff"
+      },
+      "last_result": {
+        "handoff": true,
+        "reason": "Customer does not match any known customer."
+      }
+    }
+  ],
+  "next_experiment": "Use validation rollouts to study exposure bias, variant grounding and model capacity; freeze a new test set before further tuning."
+}

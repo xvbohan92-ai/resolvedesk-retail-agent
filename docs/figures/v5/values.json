@@ -1,0 +1,604 @@
+{
+  "evaluation_sha256": "429e9153f948306eb3da66729df9fec97feadce277b1f2447a8cf1bc200efa06",
+  "training_sha256": "62f91f6c7257e500fdedcb80842edf678aab5efd2d50a5c08302753c21a008ed",
+  "manifest_sha256": "e48cbe49e8022f9ca1a958077d618525de9953580edda1e68697c6d63d763802",
+  "analysis_source_sha256": "4c342d80b55fabe53e0316006b10d5b71eb68e192bf333851295d0446f30e34c",
+  "csv_sha256": "a078bf0ed22b0ff7108fba85af5fe30756f9530ea0b1923dd5c1a088fbf96e52",
+  "summary": {
+    "previous_old_flow": {
+      "tasks": 32,
+      "task_success": 25,
+      "exchange_related_tasks": 16,
+      "exchange_related_success": 9,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 4,
+      "required_clarifications": 10,
+      "clarifications_obtained": 6,
+      "model_calls": 132,
+      "schema_valid": 132,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 3,
+      "output_tokens": 3382,
+      "confirmation_preserved": 32,
+      "latency_p50_ms": 10602.0,
+      "median_model_calls": 4.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 8,
+      "direct_return_success": 8,
+      "fallback_tasks": 2,
+      "fallback_success": 1,
+      "handoff_tasks": 8,
+      "handoff_success": 8,
+      "repeat_free_success": 25,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 2,
+      "unnecessary_handoff_attempts": 2,
+      "unnecessary_handoff_executed": 2,
+      "policy_gate_rejections": 0,
+      "unrequested_substitute_attempts": 1,
+      "intent_record_attempts": 0,
+      "quote_rejections": 0,
+      "intent_tasks": 0,
+      "intent_joint_correct": 0,
+      "intent_field_correct": {
+        "operation": 0,
+        "email": 0,
+        "order_id": 0,
+        "requested_option": 0,
+        "payment_method": 0,
+        "reason": 0,
+        "fallback_return": 0
+      }
+    },
+    "previous_new_flow": {
+      "tasks": 32,
+      "task_success": 18,
+      "exchange_related_tasks": 16,
+      "exchange_related_success": 8,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 4,
+      "required_clarifications": 10,
+      "clarifications_obtained": 2,
+      "model_calls": 148,
+      "schema_valid": 143,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 6820,
+      "confirmation_preserved": 32,
+      "latency_p50_ms": 8174.599999999999,
+      "median_model_calls": 4.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 1,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 1,
+      "direct_return_tasks": 8,
+      "direct_return_success": 4,
+      "fallback_tasks": 2,
+      "fallback_success": 2,
+      "handoff_tasks": 8,
+      "handoff_success": 6,
+      "repeat_free_success": 18,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 21,
+      "unnecessary_handoff_attempts": 0,
+      "unnecessary_handoff_executed": 0,
+      "policy_gate_rejections": 2,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 53,
+      "quote_rejections": 26,
+      "intent_tasks": 32,
+      "intent_joint_correct": 0,
+      "intent_field_correct": {
+        "operation": 27,
+        "email": 27,
+        "order_id": 27,
+        "requested_option": 17,
+        "payment_method": 17,
+        "reason": 5,
+        "fallback_return": 4
+      }
+    },
+    "base_new_flow": {
+      "tasks": 32,
+      "task_success": 18,
+      "exchange_related_tasks": 16,
+      "exchange_related_success": 8,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 4,
+      "required_clarifications": 10,
+      "clarifications_obtained": 1,
+      "model_calls": 159,
+      "schema_valid": 155,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 9,
+      "output_tokens": 7349,
+      "confirmation_preserved": 32,
+      "latency_p50_ms": 9282.885,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 1,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 1,
+      "direct_return_tasks": 8,
+      "direct_return_success": 4,
+      "fallback_tasks": 2,
+      "fallback_success": 2,
+      "handoff_tasks": 8,
+      "handoff_success": 6,
+      "repeat_free_success": 18,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 23,
+      "unnecessary_handoff_attempts": 1,
+      "unnecessary_handoff_executed": 1,
+      "policy_gate_rejections": 12,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 54,
+      "quote_rejections": 25,
+      "intent_tasks": 32,
+      "intent_joint_correct": 0,
+      "intent_field_correct": {
+        "operation": 27,
+        "email": 27,
+        "order_id": 27,
+        "requested_option": 18,
+        "payment_method": 17,
+        "reason": 7,
+        "fallback_return": 7
+      }
+    },
+    "qlora_v5": {
+      "tasks": 32,
+      "task_success": 28,
+      "exchange_related_tasks": 16,
+      "exchange_related_success": 14,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 10,
+      "required_clarifications": 10,
+      "clarifications_obtained": 10,
+      "model_calls": 169,
+      "schema_valid": 168,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 1,
+      "output_tokens": 7184,
+      "confirmation_preserved": 32,
+      "latency_p50_ms": 11046.365000000002,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 2,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 8,
+      "direct_return_success": 6,
+      "fallback_tasks": 2,
+      "fallback_success": 2,
+      "handoff_tasks": 8,
+      "handoff_success": 6,
+      "repeat_free_success": 28,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 8,
+      "unnecessary_handoff_attempts": 0,
+      "unnecessary_handoff_executed": 0,
+      "policy_gate_rejections": 1,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 51,
+      "quote_rejections": 11,
+      "intent_tasks": 32,
+      "intent_joint_correct": 19,
+      "intent_field_correct": {
+        "operation": 32,
+        "email": 32,
+        "order_id": 32,
+        "requested_option": 32,
+        "payment_method": 32,
+        "reason": 32,
+        "fallback_return": 19
+      }
+    }
+  },
+  "family_success": {
+    "cancel": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v5": 2
+    },
+    "missing_reason": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 0,
+      "base_new_flow": 0,
+      "qlora_v5": 2
+    },
+    "return": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v5": 2
+    },
+    "missing_payment": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 0,
+      "base_new_flow": 0,
+      "qlora_v5": 2
+    },
+    "exchange": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 1,
+      "base_new_flow": 1,
+      "qlora_v5": 2
+    },
+    "exchange_fallback": {
+      "previous_old_flow": 1,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v5": 2
+    },
+    "forbidden_status": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v5": 2
+    },
+    "foreign_order": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v5": 2
+    },
+    "missing_email": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 0,
+      "base_new_flow": 0,
+      "qlora_v5": 0
+    },
+    "exchange_missing_option": {
+      "previous_old_flow": 0,
+      "previous_new_flow": 0,
+      "base_new_flow": 0,
+      "qlora_v5": 2
+    },
+    "exchange_missing_payment": {
+      "previous_old_flow": 0,
+      "previous_new_flow": 0,
+      "base_new_flow": 0,
+      "qlora_v5": 2
+    },
+    "exchange_gift": {
+      "previous_old_flow": 1,
+      "previous_new_flow": 1,
+      "base_new_flow": 1,
+      "qlora_v5": 2
+    },
+    "exchange_unavailable": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 0,
+      "base_new_flow": 0,
+      "qlora_v5": 0
+    },
+    "exchange_shortfall": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v5": 2
+    },
+    "exchange_fallback_available": {
+      "previous_old_flow": 1,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v5": 2
+    },
+    "return_reject_exchange": {
+      "previous_old_flow": 2,
+      "previous_new_flow": 2,
+      "base_new_flow": 2,
+      "qlora_v5": 2
+    }
+  },
+  "confusion": {
+    "previous_old_flow": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        9,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        8,
+        0
+      ]
+    ],
+    "previous_new_flow": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        4
+      ],
+      [
+        0,
+        1,
+        0,
+        6,
+        1
+      ]
+    ],
+    "base_new_flow": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        6,
+        1,
+        3
+      ],
+      [
+        0,
+        1,
+        0,
+        6,
+        1
+      ]
+    ],
+    "qlora_v5": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        6,
+        0
+      ]
+    ]
+  },
+  "permission_diagnostics": {
+    "previous_new_flow": {
+      "authorized_tasks": 4,
+      "non_authorized_tasks": 28,
+      "true_affirmative": 4,
+      "unsupported_affirmative": 11,
+      "missed_affirmative": 0
+    },
+    "base_new_flow": {
+      "authorized_tasks": 4,
+      "non_authorized_tasks": 28,
+      "true_affirmative": 4,
+      "unsupported_affirmative": 13,
+      "missed_affirmative": 0
+    },
+    "qlora_v5": {
+      "authorized_tasks": 4,
+      "non_authorized_tasks": 28,
+      "true_affirmative": 4,
+      "unsupported_affirmative": 12,
+      "missed_affirmative": 0
+    }
+  },
+  "failures": [
+    {
+      "case_id": "v5-test-exchange-00",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-exchange_fallback-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-exchange_fallback_available-01",
+      "previous_old_flow": false,
+      "previous_new_flow": true,
+      "base_new_flow": true,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-exchange_gift-01",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-exchange_missing_option-00",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-exchange_missing_option-01",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-exchange_missing_payment-00",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-exchange_missing_payment-01",
+      "previous_old_flow": false,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-exchange_unavailable-00",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": false
+    },
+    {
+      "case_id": "v5-test-exchange_unavailable-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": false
+    },
+    {
+      "case_id": "v5-test-missing_email-00",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": false
+    },
+    {
+      "case_id": "v5-test-missing_email-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": false
+    },
+    {
+      "case_id": "v5-test-missing_payment-00",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-missing_payment-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-missing_reason-00",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": true
+    },
+    {
+      "case_id": "v5-test-missing_reason-01",
+      "previous_old_flow": true,
+      "previous_new_flow": false,
+      "base_new_flow": false,
+      "qlora_v5": true
+    }
+  ],
+  "paired": {
+    "end_to_end": {
+      "improved": 7,
+      "regressed": 4,
+      "both_pass": 21,
+      "both_fail": 0
+    },
+    "workflow": {
+      "improved": 2,
+      "regressed": 9,
+      "both_pass": 16,
+      "both_fail": 5
+    },
+    "training": {
+      "improved": 10,
+      "regressed": 0,
+      "both_pass": 18,
+      "both_fail": 4
+    },
+    "base": {
+      "improved": 10,
+      "regressed": 0,
+      "both_pass": 18,
+      "both_fail": 4
+    }
+  },
+  "figure_sha256": {
+    "families.svg": "0e7db91c7f6651001a72fa2ffe0da69d8b8f406f53f117b551503c594a27aea1",
+    "intent.svg": "4bac30c47674a8616ec93bad82caaf773ee27808e9fd61164800abc8fc4b49e1",
+    "evaluation.png": "c2f6e6dbe6803a5c1f5bcca6744b36fd7a6f33168f760fed741bf0f2bda1352d",
+    "evaluation.svg": "955b3f8fe2aa88168a3bd918995f069e5e520f790a22405ba9e3f19e2a3e368a",
+    "intent.png": "6d9e3d53c015897a3d17ffbdd4089a39638989448570e5d82bed3303ac2e5303",
+    "families.png": "8f162d5fcbde30030543e78be0adb3e2051c9dacd17bf4e91ac90b1f50cf6958",
+    "training.svg": "b47ac365b67eb92a4795998fd9993ef8328a7cdd6ad12b771eb69870cfefad1e",
+    "confusion.png": "31500e3d347e76f7fedc0c667590257062505810f1a0c88f6bb82af353f5da5a",
+    "confusion.svg": "85a46ed513ae3149d20285c97f31df0f7db7954854f0ec3c80643cdeb5b994f3",
+    "training.png": "b9ae221a2a33fe73f760b178b0d15e6a332dd8414519c17fe334ce8159210d70"
+  }
+}

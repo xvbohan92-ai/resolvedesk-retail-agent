@@ -1,0 +1,53 @@
+{
+  "checked_at_utc": "2026-10-28T19:48:19.746463+00:00",
+  "scope": "Read-only HTTP snapshots of both original pending proposals after all 48 fresh validation integrations. No message, confirmation or decline was sent to either original session. The matching projection and serialization are stated explicitly; only matching scope can be claimed unchanged.",
+  "before_receipt_sha256": "7fc5c7b75f161d5f6e5c3cb7203a0252e4e176bfb6d45da12c7314f827ea12e4",
+  "live_api_verification_sha256": "771cee513e57ee8c2de981487243ad9e214c64a6f9ad771ca102ca1d0f635ed5",
+  "all_original_sessions_unchanged": true,
+  "fresh_validation_sessions": 48,
+  "fresh_session_ids_disjoint_from_originals": true,
+  "sessions": [
+    {
+      "session_id": "d96e5e64bc595fb3dcb961b3",
+      "status_before": "awaiting_confirmation",
+      "status_after": "awaiting_confirmation",
+      "revision_after": 3,
+      "body_sha256_before": "86809e287263c53daa19f4112240880107a5a523a428f91b2e68b247b8536042",
+      "matching_serializations": [
+        "session:sort=False,compact=True,indent=None",
+        "session:sort=True,compact=True,indent=None"
+      ],
+      "hash_match": true,
+      "http_status": 200,
+      "request_method": "GET",
+      "top_level_fields": [
+        "session",
+        "orders",
+        "timeline",
+        "interpretation"
+      ],
+      "proposal_pending": true
+    },
+    {
+      "session_id": "af1240895e611b4f40a8c030",
+      "status_before": "awaiting_confirmation",
+      "status_after": "awaiting_confirmation",
+      "revision_after": 5,
+      "body_sha256_before": "ac8ca059f6d26f05c64360966842a76e3e984801d5e0dcb19dedbce5d61a8637",
+      "matching_serializations": [
+        "session:sort=False,compact=True,indent=None",
+        "session:sort=True,compact=True,indent=None"
+      ],
+      "hash_match": true,
+      "http_status": 200,
+      "request_method": "GET",
+      "top_level_fields": [
+        "session",
+        "orders",
+        "timeline",
+        "interpretation"
+      ],
+      "proposal_pending": true
+    }
+  ]
+}

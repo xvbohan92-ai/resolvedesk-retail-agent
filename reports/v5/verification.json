@@ -1,0 +1,10 @@
+{
+  "records_reconciled": 128,
+  "fresh_test_tasks": 32,
+  "no_test_based_selection": true,
+  "business_scores_recomputed": true,
+  "intent_and_attempt_metrics_reconciled": true,
+  "evaluation_sha256": "429e9153f948306eb3da66729df9fec97feadce277b1f2447a8cf1bc200efa06",
+  "source_sha256": "283efe09077f74182f0fad7498897f2d1c25798d82a240685a14140d7d4c90c4",
+  "scope": "Independent code/trace/export reconciliation; not independent human annotation."
+}

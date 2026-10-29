@@ -1,0 +1,3251 @@
+{
+  "evaluation_sha256": "70e46fe0c307a6005050f75fd14c0535f878d2210969bfa88d52f09a7ae27f2c",
+  "records": [
+    {
+      "variant": "base",
+      "case_id": "v3-test-missing_reason-00",
+      "reasons": [
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-T7AAKM",
+            "reason": "ordered by mistake"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-T7AAKM\",\"reason\":\"ordered by mistake\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4574,
+            "arguments": {
+              "order_id": "ORD-T7AAKM",
+              "reason": "ordered by mistake"
+            },
+            "fingerprint": "2a6310436f2bfcd44caf03e8aa52fe2d228891a258fac0323f157937b56f9673",
+            "id": "cbb032f81a6890f1a2ba0da0dfef91fd",
+            "kind": "cancel",
+            "order_id": "ORD-T7AAKM",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 977,
+          "latency_ms": 3001.84,
+          "output_tokens": 25,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-missing_reason-01",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-PCEJ4V",
+            "reason": "ordered by mistake"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-PCEJ4V\",\"reason\":\"ordered by mistake\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 6773,
+            "arguments": {
+              "order_id": "ORD-PCEJ4V",
+              "reason": "ordered by mistake"
+            },
+            "fingerprint": "18d4bd4cb4e36edc34dcdf524607acc51c791148f0182b67c8d09fe885a4f4a0",
+            "id": "b43484084cb2673b4e2c64604b03c2a8",
+            "kind": "cancel",
+            "order_id": "ORD-PCEJ4V",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 976,
+          "latency_ms": 3109.62,
+          "output_tokens": 26,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-missing_reason-02",
+      "reasons": [
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "order_id": "ORD-5U2DQD",
+            "reason": "ordered by mistake"
+          },
+          "tool": "propose_cancel"
+        },
+        "raw": "{\"tool\":\"propose_cancel\",\"arguments\":{\"order_id\":\"ORD-5U2DQD\",\"reason\":\"ordered by mistake\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2786,
+            "arguments": {
+              "order_id": "ORD-5U2DQD",
+              "reason": "ordered by mistake"
+            },
+            "fingerprint": "af54c72e9f131b5ad613ff1797a17826984f3dc81dad9077679a72724bd932d0",
+            "id": "e2f0eaa01d07854b992cd06d281d0d5e",
+            "kind": "cancel",
+            "order_id": "ORD-5U2DQD",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "cancelled"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 979,
+          "latency_ms": 3370.69,
+          "output_tokens": 28,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-missing_payment-00",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_JVJK5W",
+            "order_id": "ORD-7YHHUG",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-7YHHUG\",\"item_id\":\"item_JVJK5W\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2828,
+            "arguments": {
+              "item_id": "item_JVJK5W",
+              "order_id": "ORD-7YHHUG",
+              "payment_method": "original"
+            },
+            "fingerprint": "42f4c82daecfbd9ad79b7560bc22557890b8e7dae17fae7588d7ccbed884b50a",
+            "id": "1979944e6b03ac23ee52178ae1d2e3e1",
+            "item_id": "item_JVJK5W",
+            "kind": "return",
+            "order_id": "ORD-7YHHUG",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 988,
+          "latency_ms": 5472.85,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-missing_payment-01",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_2P6VTF",
+            "order_id": "ORD-SVJRGZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-SVJRGZ\",\"item_id\":\"item_2P6VTF\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 6502,
+            "arguments": {
+              "item_id": "item_2P6VTF",
+              "order_id": "ORD-SVJRGZ",
+              "payment_method": "original"
+            },
+            "fingerprint": "0b8594b9218a1176dfe69bd2fa288dcbce113ba06f4add81c47d56e1ef9882bf",
+            "id": "25f3bc3167b7953a67c5052593086c2e",
+            "item_id": "item_2P6VTF",
+            "kind": "return",
+            "order_id": "ORD-SVJRGZ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 981,
+          "latency_ms": 5161.3,
+          "output_tokens": 36,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-missing_payment-02",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_DQEW99",
+            "order_id": "ORD-HUJUEC",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-HUJUEC\",\"item_id\":\"item_DQEW99\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2956,
+            "arguments": {
+              "item_id": "item_DQEW99",
+              "order_id": "ORD-HUJUEC",
+              "payment_method": "original"
+            },
+            "fingerprint": "99dc7b832babc8cb0243f5d528459ded0e20ccad8a44fcfa509ddabc87a03839",
+            "id": "95b5beac3326b8be86afb3a659a278d6",
+            "item_id": "item_DQEW99",
+            "kind": "return",
+            "order_id": "ORD-HUJUEC",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 978,
+          "latency_ms": 5334.01,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_WGRTNU",
+            "new_item_id": "item_WGRTNU",
+            "order_id": "ORD-ER37NK",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-ER37NK\",\"item_id\":\"item_WGRTNU\",\"new_item_id\":\"item_WGRTNU\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "item_id is not an item in this order",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1446,
+          "latency_ms": 6606.22,
+          "output_tokens": 44,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_fallback-00",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_5KHZJ5",
+            "new_item_id": "item_E7DZUR",
+            "order_id": "ORD-BC2Y9Q",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-BC2Y9Q\",\"item_id\":\"item_5KHZJ5\",\"new_item_id\":\"item_E7DZUR\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "Inspect the product; select an available different same-product variant",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1496,
+          "latency_ms": 5884.66,
+          "output_tokens": 48,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_fallback-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_V6ETB7",
+            "new_item_id": "item_5ET5YH",
+            "order_id": "ORD-N3DQTZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-N3DQTZ\",\"item_id\":\"item_V6ETB7\",\"new_item_id\":\"item_5ET5YH\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "Inspect the product; select an available different same-product variant",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1472,
+          "latency_ms": 5177.11,
+          "output_tokens": 47,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_fallback-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": null,
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-545WVW\",\"item_id\":\"item_S3MBF6\",\"new_item_id\":\"item_S3MBF6\",\"payment_method\":\"original\"}}}",
+        "result": {
+          "detail": "1 validation error for Action\n  Invalid JSON: trailing characters at line 1 column 146 [type=json_invalid, input_value='{\"tool\":\"propose_exchang...t_method\":\"original\"}}}', input_type=str]\n    For further information visit https://errors.pydantic.dev",
+          "error": "invalid_action_json"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1410,
+          "latency_ms": 5135.74,
+          "output_tokens": 49,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-forbidden_status-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_WKDQVV",
+            "new_item_id": "item_3CVM3Y",
+            "order_id": "ORD-QT66BX",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-QT66BX\",\"item_id\":\"item_WKDQVV\",\"new_item_id\":\"item_3CVM3Y\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 550,
+            "arguments": {
+              "item_id": "item_WKDQVV",
+              "new_item_id": "item_3CVM3Y",
+              "order_id": "ORD-QT66BX",
+              "payment_method": "original"
+            },
+            "fingerprint": "39e8115d68db1da14e803c240fb42293a4c67238f896962141b9f3f7bdc30683",
+            "id": "780899c9efd5030b74ca45d20460fa74",
+            "item_id": "item_WKDQVV",
+            "kind": "exchange",
+            "new_item_id": "item_3CVM3Y",
+            "order_id": "ORD-QT66BX",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1465,
+          "latency_ms": 5981.92,
+          "output_tokens": 46,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-missing_email-00",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "buyergfmlzf@retail.example"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyergfmlzf@retail.example\"}}",
+        "result": {
+          "gift_card": {
+            "balance_cents": 9000,
+            "id": "gift_LMNK8A"
+          },
+          "note": "Demo identity lookup only; not production authentication",
+          "user_id": "u_MN7VDP"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 957,
+          "latency_ms": 2932.43,
+          "output_tokens": 21,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-missing_email-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item-12345",
+            "order_id": "ORD-F9X7KZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-F9X7KZ\",\"item_id\":\"item-12345\",\"payment_method\":\"original\"}}",
+        "result": {
+          "allowed_tools": [
+            "identify_customer",
+            "ask_customer",
+            "handoff"
+          ],
+          "backend_executed": false,
+          "detail": "Inspect identity, order and exchange catalog before proposing.",
+          "error": "step_prerequisite_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 956,
+          "latency_ms": 3728.48,
+          "output_tokens": 37,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-missing_email-02",
+      "reasons": [
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "reason": "customer is returning an item and needs a refund"
+          },
+          "tool": "handoff"
+        },
+        "raw": "{\"tool\":\"handoff\",\"arguments\":{\"reason\":\"customer is returning an item and needs a refund\"}}",
+        "result": {
+          "handoff": true,
+          "reason": "customer is returning an item and needs a refund"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 958,
+          "latency_ms": 3022.11,
+          "output_tokens": 21,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_missing_option-00",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_UQCHGU",
+            "new_item_id": "item_9N97GX",
+            "order_id": "ORD-5LSBGZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-5LSBGZ\",\"item_id\":\"item_UQCHGU\",\"new_item_id\":\"item_9N97GX\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": -375,
+            "arguments": {
+              "item_id": "item_UQCHGU",
+              "new_item_id": "item_9N97GX",
+              "order_id": "ORD-5LSBGZ",
+              "payment_method": "original"
+            },
+            "fingerprint": "0be1073427571db68b10028aa7992e8cc2f09d169f92a3a9ec27bed4048d8d71",
+            "id": "75e59bc3e4b7a0165c0ed5231e74d80f",
+            "item_id": "item_UQCHGU",
+            "kind": "exchange",
+            "new_item_id": "item_9N97GX",
+            "order_id": "ORD-5LSBGZ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1338,
+          "latency_ms": 4829.36,
+          "output_tokens": 46,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_missing_option-01",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_KQH7V3",
+            "new_item_id": "item_59X8MV",
+            "order_id": "ORD-FSSNPF",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-FSSNPF\",\"item_id\":\"item_KQH7V3\",\"new_item_id\":\"item_59X8MV\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 550,
+            "arguments": {
+              "item_id": "item_KQH7V3",
+              "new_item_id": "item_59X8MV",
+              "order_id": "ORD-FSSNPF",
+              "payment_method": "original"
+            },
+            "fingerprint": "e634f31041008a200fab096ccf3c3ae96f47502a09e57e2d76fc6a2bc8ec4809",
+            "id": "3c55666b42c35e3b0c1f63f765b4e9b2",
+            "item_id": "item_KQH7V3",
+            "kind": "exchange",
+            "new_item_id": "item_59X8MV",
+            "order_id": "ORD-FSSNPF",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1337,
+          "latency_ms": 5402.08,
+          "output_tokens": 47,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_missing_option-02",
+      "reasons": [
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_QNPCGK",
+            "new_item_id": "item_ERVVY6",
+            "order_id": "ORD-CFJFBC",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-CFJFBC\",\"item_id\":\"item_QNPCGK\",\"new_item_id\":\"item_ERVVY6\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_QNPCGK",
+              "new_item_id": "item_ERVVY6",
+              "order_id": "ORD-CFJFBC",
+              "payment_method": "original"
+            },
+            "fingerprint": "811e2aaf79e693656aa82c362b4e732c9890abfcfe957405af3f4fc8ec9e2d88",
+            "id": "547727c2c2e910923b31a43148d34418",
+            "item_id": "item_QNPCGK",
+            "kind": "exchange",
+            "new_item_id": "item_ERVVY6",
+            "order_id": "ORD-CFJFBC",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1241,
+          "latency_ms": 7758.73,
+          "output_tokens": 44,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_missing_payment-00",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_WTDRPF",
+            "new_item_id": "item_B4DW85",
+            "order_id": "ORD-E9PLSJ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-E9PLSJ\",\"item_id\":\"item_WTDRPF\",\"new_item_id\":\"item_B4DW85\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 550,
+            "arguments": {
+              "item_id": "item_WTDRPF",
+              "new_item_id": "item_B4DW85",
+              "order_id": "ORD-E9PLSJ",
+              "payment_method": "original"
+            },
+            "fingerprint": "03da32a52230dab2dde3860f4e9aec4925fbc9ac7f52c1f1fc85d9982c748e75",
+            "id": "a40c383dc0d9732617c8878e632802c4",
+            "item_id": "item_WTDRPF",
+            "kind": "exchange",
+            "new_item_id": "item_B4DW85",
+            "order_id": "ORD-E9PLSJ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1235,
+          "latency_ms": 6644.03,
+          "output_tokens": 44,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_missing_payment-01",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_Y6S3JM",
+            "new_item_id": "item_FJ79MP",
+            "order_id": "ORD-REJQYZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-REJQYZ\",\"item_id\":\"item_Y6S3JM\",\"new_item_id\":\"item_FJ79MP\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 1250,
+            "arguments": {
+              "item_id": "item_Y6S3JM",
+              "new_item_id": "item_FJ79MP",
+              "order_id": "ORD-REJQYZ",
+              "payment_method": "original"
+            },
+            "fingerprint": "bc613b26b369e555f9877bdfa8fbc63abbac068dd8005e1eda168c8034e45c35",
+            "id": "d1f00311ada46bb93c7645d45fb47177",
+            "item_id": "item_Y6S3JM",
+            "kind": "exchange",
+            "new_item_id": "item_FJ79MP",
+            "order_id": "ORD-REJQYZ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1243,
+          "latency_ms": 7210.58,
+          "output_tokens": 46,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_missing_payment-02",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_BPQU3R",
+            "new_item_id": "item_HLPGDJ",
+            "order_id": "ORD-MM7QWQ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-MM7QWQ\",\"item_id\":\"item_BPQU3R\",\"new_item_id\":\"item_HLPGDJ\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": -375,
+            "arguments": {
+              "item_id": "item_BPQU3R",
+              "new_item_id": "item_HLPGDJ",
+              "order_id": "ORD-MM7QWQ",
+              "payment_method": "original"
+            },
+            "fingerprint": "25375dac42c4fceda0e78e60bfbb67e9950ffc48193965287bdb3b14a079fa61",
+            "id": "aa2ba534a8de9d6d9ffbe70bb20d817f",
+            "item_id": "item_BPQU3R",
+            "kind": "exchange",
+            "new_item_id": "item_HLPGDJ",
+            "order_id": "ORD-MM7QWQ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1243,
+          "latency_ms": 5221.45,
+          "output_tokens": 44,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_gift-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_9X2GVT",
+            "new_item_id": "item_LYCBR3",
+            "order_id": "ORD-W6C7PK",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-W6C7PK\",\"item_id\":\"item_9X2GVT\",\"new_item_id\":\"item_LYCBR3\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 550,
+            "arguments": {
+              "item_id": "item_9X2GVT",
+              "new_item_id": "item_LYCBR3",
+              "order_id": "ORD-W6C7PK",
+              "payment_method": "original"
+            },
+            "fingerprint": "ac5db42ddb27929bd296f5dcbb96857671e776ae92ab50def15b654816fdb3af",
+            "id": "47cbc5cc3fca816e591e9c99140a7320",
+            "item_id": "item_9X2GVT",
+            "kind": "exchange",
+            "new_item_id": "item_LYCBR3",
+            "order_id": "ORD-W6C7PK",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1262,
+          "latency_ms": 5927.23,
+          "output_tokens": 47,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_unavailable-00",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_NT4DJN",
+            "new_item_id": "item_CWJTM9",
+            "order_id": "ORD-FFTK77",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-FFTK77\",\"item_id\":\"item_NT4DJN\",\"new_item_id\":\"item_CWJTM9\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_NT4DJN",
+              "new_item_id": "item_CWJTM9",
+              "order_id": "ORD-FFTK77",
+              "payment_method": "original"
+            },
+            "fingerprint": "05e88403619e1d1cb24ac28f325a8a37f5cf06dee36eb710c955e0750faa6e54",
+            "id": "addd84db843ee0842ae5ffc12f87d2bc",
+            "item_id": "item_NT4DJN",
+            "kind": "exchange",
+            "new_item_id": "item_CWJTM9",
+            "order_id": "ORD-FFTK77",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1474,
+          "latency_ms": 5201.1,
+          "output_tokens": 45,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_unavailable-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_4Y8JRC",
+            "new_item_id": "item_32J7SJ",
+            "order_id": "ORD-DXUG9Y",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-DXUG9Y\",\"item_id\":\"item_4Y8JRC\",\"new_item_id\":\"item_32J7SJ\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_4Y8JRC",
+              "new_item_id": "item_32J7SJ",
+              "order_id": "ORD-DXUG9Y",
+              "payment_method": "original"
+            },
+            "fingerprint": "169d7486400a8100f8cd9c77725453d4a67d8a1466b06218edd498fff195e41f",
+            "id": "6b972319d74b9bdedb1dee7e43667eb8",
+            "item_id": "item_4Y8JRC",
+            "kind": "exchange",
+            "new_item_id": "item_32J7SJ",
+            "order_id": "ORD-DXUG9Y",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1355,
+          "latency_ms": 5274.5,
+          "output_tokens": 48,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_unavailable-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_9XQ3MK",
+            "new_item_id": "item_A9XLVJ",
+            "order_id": "ORD-GJ2649",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-GJ2649\",\"item_id\":\"item_9XQ3MK\",\"new_item_id\":\"item_A9XLVJ\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "Inspect the product; select an available different same-product variant",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1486,
+          "latency_ms": 6004.35,
+          "output_tokens": 48,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_shortfall-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_WJPLBD",
+            "order_id": "ORD-BSPMMB",
+            "payment_method": "gift_UJJNM2"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-BSPMMB\",\"item_id\":\"item_WJPLBD\",\"payment_method\":\"gift_UJJNM2\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 3152,
+            "arguments": {
+              "item_id": "item_WJPLBD",
+              "order_id": "ORD-BSPMMB",
+              "payment_method": "gift_UJJNM2"
+            },
+            "fingerprint": "75e86ff0a646b8a7d71634f03dbddd7e8c890cc6872fe2dcad625618f6ed1134",
+            "id": "feec2a673b4c05a94a5eab85761e1374",
+            "item_id": "item_WJPLBD",
+            "kind": "return",
+            "order_id": "ORD-BSPMMB",
+            "order_revision": 0,
+            "payment_method": "gift_UJJNM2",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1412,
+          "latency_ms": 4969.81,
+          "output_tokens": 37,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_shortfall-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_2QQ7NG",
+            "order_id": "ORD-3LPJWW",
+            "payment_method": "gift_Q3VQ98"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-3LPJWW\",\"item_id\":\"item_2QQ7NG\",\"payment_method\":\"gift_Q3VQ98\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2507,
+            "arguments": {
+              "item_id": "item_2QQ7NG",
+              "order_id": "ORD-3LPJWW",
+              "payment_method": "gift_Q3VQ98"
+            },
+            "fingerprint": "f29e05fb5f94d33e005d6899d1c6e48088ceefc88aaccb4794bb0b50a204cbbc",
+            "id": "20cbc4a552dab917a987d3b05be41d7b",
+            "item_id": "item_2QQ7NG",
+            "kind": "return",
+            "order_id": "ORD-3LPJWW",
+            "order_revision": 0,
+            "payment_method": "gift_Q3VQ98",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1460,
+          "latency_ms": 4923.78,
+          "output_tokens": 41,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "base",
+      "case_id": "v3-test-exchange_fallback_available-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_S3MBF6",
+            "new_item_id": "item_S3MBF6",
+            "order_id": "ORD-545WVW",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-545WVW\",\"item_id\":\"item_S3MBF6\",\"new_item_id\":\"item_S3MBF6\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "item_id is not an item in this order",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1481,
+          "latency_ms": 5595.05,
+          "output_tokens": 48,
+          "provider": "mlx",
+          "variant": "base",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-missing_payment-00",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_JVJK5W",
+            "order_id": "ORD-7YHHUG",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-7YHHUG\",\"item_id\":\"item_JVJK5W\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2828,
+            "arguments": {
+              "item_id": "item_JVJK5W",
+              "order_id": "ORD-7YHHUG",
+              "payment_method": "original"
+            },
+            "fingerprint": "42f4c82daecfbd9ad79b7560bc22557890b8e7dae17fae7588d7ccbed884b50a",
+            "id": "edda5a6bed86bc19c7dbea557ab0d8a2",
+            "item_id": "item_JVJK5W",
+            "kind": "return",
+            "order_id": "ORD-7YHHUG",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 988,
+          "latency_ms": 4489.6,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange-00",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_AFAE72",
+            "order_id": "ORD-6JXYSA",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-6JXYSA\",\"item_id\":\"item_AFAE72\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4149,
+            "arguments": {
+              "item_id": "item_AFAE72",
+              "order_id": "ORD-6JXYSA",
+              "payment_method": "original"
+            },
+            "fingerprint": "b5849ee27567668843c68a3f0a6b1a66053de75b7155341ef842fe6c6d6daec7",
+            "id": "ab690cfd9f162096281b906c1e4c9997",
+            "item_id": "item_AFAE72",
+            "kind": "return",
+            "order_id": "ORD-6JXYSA",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1299,
+          "latency_ms": 6210.17,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange-01",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_F5LPY3",
+            "order_id": "ORD-ER37NK",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-ER37NK\",\"item_id\":\"item_F5LPY3\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 6118,
+            "arguments": {
+              "item_id": "item_F5LPY3",
+              "order_id": "ORD-ER37NK",
+              "payment_method": "original"
+            },
+            "fingerprint": "5745b2c9d734a9823064cb6068af2f295947b0d8766b7f34302bbd06a09e3517",
+            "id": "6cdc66ecb0bd7daed372930f42f351c3",
+            "item_id": "item_F5LPY3",
+            "kind": "return",
+            "order_id": "ORD-ER37NK",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1296,
+          "latency_ms": 4368.18,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange-02",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_NK7MV7",
+            "order_id": "ORD-58VK4H",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-58VK4H\",\"item_id\":\"item_NK7MV7\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2989,
+            "arguments": {
+              "item_id": "item_NK7MV7",
+              "order_id": "ORD-58VK4H",
+              "payment_method": "original"
+            },
+            "fingerprint": "29e5f9f08bb55023850447813505fe167a9d493e21e87e503a9ea3d8e13e3e2f",
+            "id": "55428e75b2eafbaaa78ceea1c8596294",
+            "item_id": "item_NK7MV7",
+            "kind": "return",
+            "order_id": "ORD-58VK4H",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1301,
+          "latency_ms": 4603.08,
+          "output_tokens": 36,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-forbidden_status-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_WKDQVV",
+            "order_id": "ORD-QT66BX",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-QT66BX\",\"item_id\":\"item_WKDQVV\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 5077,
+            "arguments": {
+              "item_id": "item_WKDQVV",
+              "order_id": "ORD-QT66BX",
+              "payment_method": "original"
+            },
+            "fingerprint": "d960e258495eee7c656a984a0c550895e6cd7cccd01dea5f5a8b09fae4c9bd9b",
+            "id": "007b317d20857d3266a0b915e884a4a7",
+            "item_id": "item_WKDQVV",
+            "kind": "return",
+            "order_id": "ORD-QT66BX",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1100,
+          "latency_ms": 4642.83,
+          "output_tokens": 34,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-missing_email-00",
+      "reasons": [
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "reason": "This status does not permit cancellation."
+          },
+          "tool": "handoff"
+        },
+        "raw": "{\"tool\":\"handoff\",\"arguments\":{\"reason\":\"This status does not permit cancellation.\"}}",
+        "result": {
+          "handoff": true,
+          "reason": "This status does not permit cancellation."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 888,
+          "latency_ms": 3449.87,
+          "output_tokens": 19,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-missing_email-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "reason": "This status does not permit cancellation."
+          },
+          "tool": "handoff"
+        },
+        "raw": "{\"tool\":\"handoff\",\"arguments\":{\"reason\":\"This status does not permit cancellation.\"}}",
+        "result": {
+          "handoff": true,
+          "reason": "This status does not permit cancellation."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 951,
+          "latency_ms": 5007.02,
+          "output_tokens": 19,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_missing_option-00",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_UQCHGU",
+            "order_id": "ORD-5LSBGZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-5LSBGZ\",\"item_id\":\"item_UQCHGU\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 3010,
+            "arguments": {
+              "item_id": "item_UQCHGU",
+              "order_id": "ORD-5LSBGZ",
+              "payment_method": "original"
+            },
+            "fingerprint": "c5b6bbbc6538802060d5d1ab468782f001790717d2e24f7cac155549b99536d8",
+            "id": "cc71c8ab2c613513e83a10bbc4c2b53b",
+            "item_id": "item_UQCHGU",
+            "kind": "return",
+            "order_id": "ORD-5LSBGZ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1387,
+          "latency_ms": 6806.54,
+          "output_tokens": 34,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_missing_option-01",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_KQH7V3",
+            "order_id": "ORD-FSSNPF",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-FSSNPF\",\"item_id\":\"item_KQH7V3\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4639,
+            "arguments": {
+              "item_id": "item_KQH7V3",
+              "order_id": "ORD-FSSNPF",
+              "payment_method": "original"
+            },
+            "fingerprint": "3e0d402ca795ed30e0667dfb18e3ed81dfe1347119e682378f9039ee7fe931da",
+            "id": "dd974fcf228c10b90b7adce9393eda70",
+            "item_id": "item_KQH7V3",
+            "kind": "return",
+            "order_id": "ORD-FSSNPF",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1344,
+          "latency_ms": 4804.55,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_missing_option-02",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_QNPCGK",
+            "order_id": "ORD-CFJFBC",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-CFJFBC\",\"item_id\":\"item_QNPCGK\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 6197,
+            "arguments": {
+              "item_id": "item_QNPCGK",
+              "order_id": "ORD-CFJFBC",
+              "payment_method": "original"
+            },
+            "fingerprint": "2dfadf09d725243c40ae385ed55af951fe9ec80e9e1486225ae4cac79505c7a3",
+            "id": "dc5a1f225c0b289487f1e0c008ce28a3",
+            "item_id": "item_QNPCGK",
+            "kind": "return",
+            "order_id": "ORD-CFJFBC",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1241,
+          "latency_ms": 5253.15,
+          "output_tokens": 34,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_missing_payment-00",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_WTDRPF",
+            "order_id": "ORD-E9PLSJ",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-E9PLSJ\",\"item_id\":\"item_WTDRPF\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2826,
+            "arguments": {
+              "item_id": "item_WTDRPF",
+              "order_id": "ORD-E9PLSJ",
+              "payment_method": "original"
+            },
+            "fingerprint": "8dd4b03b7c5e33a4f96f4ff24b6c05d7b8e3ffa72d822665bd4fc8a170a5b3aa",
+            "id": "856bfbafbd966c51599feae212a675a1",
+            "item_id": "item_WTDRPF",
+            "kind": "return",
+            "order_id": "ORD-E9PLSJ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1235,
+          "latency_ms": 4936.91,
+          "output_tokens": 33,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_missing_payment-01",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_Y6S3JM",
+            "order_id": "ORD-REJQYZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-REJQYZ\",\"item_id\":\"item_Y6S3JM\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4627,
+            "arguments": {
+              "item_id": "item_Y6S3JM",
+              "order_id": "ORD-REJQYZ",
+              "payment_method": "original"
+            },
+            "fingerprint": "b024d2c879545846f180f4c7b0855e9c1af555a03b167736e9a18b7b98cc0b3c",
+            "id": "098d55215607c87f45d7a70d9455fff2",
+            "item_id": "item_Y6S3JM",
+            "kind": "return",
+            "order_id": "ORD-REJQYZ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1243,
+          "latency_ms": 4638.36,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_missing_payment-02",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_BPQU3R",
+            "order_id": "ORD-MM7QWQ",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-MM7QWQ\",\"item_id\":\"item_BPQU3R\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4634,
+            "arguments": {
+              "item_id": "item_BPQU3R",
+              "order_id": "ORD-MM7QWQ",
+              "payment_method": "original"
+            },
+            "fingerprint": "a64b8f6d1bd5cd3911b57540e3ce7db44b2c3e31ca62a0b7b243d8aaf485f8c2",
+            "id": "4806477e76bf67d2f5776de0cff0c88d",
+            "item_id": "item_BPQU3R",
+            "kind": "return",
+            "order_id": "ORD-MM7QWQ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1243,
+          "latency_ms": 4362.84,
+          "output_tokens": 34,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_gift-00",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_BF4JUD",
+            "order_id": "ORD-9W95HN",
+            "payment_method": "gift_BY46B7"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-9W95HN\",\"item_id\":\"item_BF4JUD\",\"payment_method\":\"gift_BY46B7\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 3798,
+            "arguments": {
+              "item_id": "item_BF4JUD",
+              "order_id": "ORD-9W95HN",
+              "payment_method": "gift_BY46B7"
+            },
+            "fingerprint": "d637f9ee9c9c402bbdb1c2c3cc0dd355d40db193d7e018064ba65669543b3052",
+            "id": "f05f4c945ce1120629701ef3690e6e3f",
+            "item_id": "item_BF4JUD",
+            "kind": "return",
+            "order_id": "ORD-9W95HN",
+            "order_revision": 0,
+            "payment_method": "gift_BY46B7",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1308,
+          "latency_ms": 5300.25,
+          "output_tokens": 41,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_gift-01",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_K3JZFM",
+            "order_id": "ORD-NQSHM6",
+            "payment_method": "gift_PD6A3Z"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-NQSHM6\",\"item_id\":\"item_K3JZFM\",\"payment_method\":\"gift_PD6A3Z\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 3330,
+            "arguments": {
+              "item_id": "item_K3JZFM",
+              "order_id": "ORD-NQSHM6",
+              "payment_method": "gift_PD6A3Z"
+            },
+            "fingerprint": "02d009cf474f4529bf9b880af1e8a57d6187b1880cae2bce8a2857b2fcace7a7",
+            "id": "fae32f844c3335d250affae642e7c174",
+            "item_id": "item_K3JZFM",
+            "kind": "return",
+            "order_id": "ORD-NQSHM6",
+            "order_revision": 0,
+            "payment_method": "gift_PD6A3Z",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1301,
+          "latency_ms": 5491.69,
+          "output_tokens": 40,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_gift-02",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_9X2GVT",
+            "order_id": "ORD-W6C7PK",
+            "payment_method": "gift_VJKS3A"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-W6C7PK\",\"item_id\":\"item_9X2GVT\",\"payment_method\":\"gift_VJKS3A\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4430,
+            "arguments": {
+              "item_id": "item_9X2GVT",
+              "order_id": "ORD-W6C7PK",
+              "payment_method": "gift_VJKS3A"
+            },
+            "fingerprint": "b29de9989c3c6ae8317ea1e11f374ef35a13972beca759ce8bcea76ae4adee9a",
+            "id": "ba312a1657cccf152cb7122c1d894e73",
+            "item_id": "item_9X2GVT",
+            "kind": "return",
+            "order_id": "ORD-W6C7PK",
+            "order_revision": 0,
+            "payment_method": "gift_VJKS3A",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1311,
+          "latency_ms": 5270.19,
+          "output_tokens": 41,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_unavailable-00",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_NT4DJN",
+            "order_id": "ORD-FFTK77",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-FFTK77\",\"item_id\":\"item_NT4DJN\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 7383,
+            "arguments": {
+              "item_id": "item_NT4DJN",
+              "order_id": "ORD-FFTK77",
+              "payment_method": "original"
+            },
+            "fingerprint": "aaef18c811ecec5e76c6fc549c47d4f5229a487b4a77fb519b5c913dab31c61f",
+            "id": "41049def07d6884f4219d68a0774f755",
+            "item_id": "item_NT4DJN",
+            "kind": "return",
+            "order_id": "ORD-FFTK77",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1309,
+          "latency_ms": 5287.65,
+          "output_tokens": 34,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_unavailable-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_4Y8JRC",
+            "order_id": "ORD-DXUG9Y",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-DXUG9Y\",\"item_id\":\"item_4Y8JRC\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4821,
+            "arguments": {
+              "item_id": "item_4Y8JRC",
+              "order_id": "ORD-DXUG9Y",
+              "payment_method": "original"
+            },
+            "fingerprint": "7291e7b5e5ef0ee38322d54aed1a500343478e648e312e6b1c8c31e962cb2026",
+            "id": "b3df1fbef5b7ada9e93212963e042cd2",
+            "item_id": "item_4Y8JRC",
+            "kind": "return",
+            "order_id": "ORD-DXUG9Y",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1310,
+          "latency_ms": 5226.7,
+          "output_tokens": 36,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_unavailable-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_9XQ3MK",
+            "order_id": "ORD-GJ2649",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-GJ2649\",\"item_id\":\"item_9XQ3MK\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 4093,
+            "arguments": {
+              "item_id": "item_9XQ3MK",
+              "order_id": "ORD-GJ2649",
+              "payment_method": "original"
+            },
+            "fingerprint": "b5dc2237035d82a878bd1c25a82ca3f3b6c40d3bd53d4d89d3b405b56ca0d4db",
+            "id": "4b03cb1f0315bc94d00c7411b84bbe70",
+            "item_id": "item_9XQ3MK",
+            "kind": "return",
+            "order_id": "ORD-GJ2649",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1317,
+          "latency_ms": 5172.53,
+          "output_tokens": 37,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_shortfall-00",
+      "reasons": [
+        "catalog_not_inspected",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_MZKJXM",
+            "order_id": "ORD-2G6ADT",
+            "payment_method": "gift_UPTQRB"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-2G6ADT\",\"item_id\":\"item_MZKJXM\",\"payment_method\":\"gift_UPTQRB\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2971,
+            "arguments": {
+              "item_id": "item_MZKJXM",
+              "order_id": "ORD-2G6ADT",
+              "payment_method": "gift_UPTQRB"
+            },
+            "fingerprint": "e4150e85485835e4fe388c00aea82e9b8f3a6b55c3a2b57aab789e49c1e60629",
+            "id": "10fab75be8d60ea6b17716e2e2280684",
+            "item_id": "item_MZKJXM",
+            "kind": "return",
+            "order_id": "ORD-2G6ADT",
+            "order_revision": 0,
+            "payment_method": "gift_UPTQRB",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1057,
+          "latency_ms": 5107.34,
+          "output_tokens": 40,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_shortfall-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_WJPLBD",
+            "order_id": "ORD-BSPMMB",
+            "payment_method": "gift_UJJNM2"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-BSPMMB\",\"item_id\":\"item_WJPLBD\",\"payment_method\":\"gift_UJJNM2\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 3152,
+            "arguments": {
+              "item_id": "item_WJPLBD",
+              "order_id": "ORD-BSPMMB",
+              "payment_method": "gift_UJJNM2"
+            },
+            "fingerprint": "75e86ff0a646b8a7d71634f03dbddd7e8c890cc6872fe2dcad625618f6ed1134",
+            "id": "4b2aae6c131278407f8249ff27f31fcc",
+            "item_id": "item_WJPLBD",
+            "kind": "return",
+            "order_id": "ORD-BSPMMB",
+            "order_revision": 0,
+            "payment_method": "gift_UJJNM2",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1296,
+          "latency_ms": 5716.51,
+          "output_tokens": 37,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_shortfall-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_2QQ7NG",
+            "order_id": "ORD-3LPJWW",
+            "payment_method": "gift_Q3VQ98"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-3LPJWW\",\"item_id\":\"item_2QQ7NG\",\"payment_method\":\"gift_Q3VQ98\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2507,
+            "arguments": {
+              "item_id": "item_2QQ7NG",
+              "order_id": "ORD-3LPJWW",
+              "payment_method": "gift_Q3VQ98"
+            },
+            "fingerprint": "f29e05fb5f94d33e005d6899d1c6e48088ceefc88aaccb4794bb0b50a204cbbc",
+            "id": "cdb36bedfdb45a75fbb102ba53dc9c39",
+            "item_id": "item_2QQ7NG",
+            "kind": "return",
+            "order_id": "ORD-3LPJWW",
+            "order_revision": 0,
+            "payment_method": "gift_Q3VQ98",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1313,
+          "latency_ms": 5346.23,
+          "output_tokens": 41,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_fallback_available-00",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_5KHZJ5",
+            "order_id": "ORD-BC2Y9Q",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-BC2Y9Q\",\"item_id\":\"item_5KHZJ5\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 5051,
+            "arguments": {
+              "item_id": "item_5KHZJ5",
+              "order_id": "ORD-BC2Y9Q",
+              "payment_method": "original"
+            },
+            "fingerprint": "0a09183b57ef48fa298518e14ff1d27acf324fc974a8cfa2e17ac144a115c823",
+            "id": "4bdf98807d7abfaaefcc611ad32f3ce2",
+            "item_id": "item_5KHZJ5",
+            "kind": "return",
+            "order_id": "ORD-BC2Y9Q",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1373,
+          "latency_ms": 5731.97,
+          "output_tokens": 37,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_fallback_available-01",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_V6ETB7",
+            "order_id": "ORD-N3DQTZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-N3DQTZ\",\"item_id\":\"item_V6ETB7\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 7749,
+            "arguments": {
+              "item_id": "item_V6ETB7",
+              "order_id": "ORD-N3DQTZ",
+              "payment_method": "original"
+            },
+            "fingerprint": "b575b386239f14ce4cb7ee0581831a38dceefeb0597833a8278f5f97ae017c35",
+            "id": "3126471fc383e47225460c29739ff6bc",
+            "item_id": "item_V6ETB7",
+            "kind": "return",
+            "order_id": "ORD-N3DQTZ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1307,
+          "latency_ms": 5317.73,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v2",
+      "case_id": "v3-test-exchange_fallback_available-02",
+      "reasons": [
+        "exchange_misclassified_as_return",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_S37RMX",
+            "order_id": "ORD-545WVW",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-545WVW\",\"item_id\":\"item_S37RMX\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2582,
+            "arguments": {
+              "item_id": "item_S37RMX",
+              "order_id": "ORD-545WVW",
+              "payment_method": "original"
+            },
+            "fingerprint": "1d72dfecc0ccac5714bfe45970a4c423a04d86220608b11295078b2780bdf455",
+            "id": "12ac6d7f455f4526a9692a9bf5a34337",
+            "item_id": "item_S37RMX",
+            "kind": "return",
+            "order_id": "ORD-545WVW",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1269,
+          "latency_ms": 2745.77,
+          "output_tokens": 37,
+          "provider": "mlx",
+          "variant": "qlora_v2",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-missing_payment-00",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_JVJK5W",
+            "order_id": "ORD-7YHHUG",
+            "payment_method": "original"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-7YHHUG\",\"item_id\":\"item_JVJK5W\",\"payment_method\":\"original\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 2828,
+            "arguments": {
+              "item_id": "item_JVJK5W",
+              "order_id": "ORD-7YHHUG",
+              "payment_method": "original"
+            },
+            "fingerprint": "42f4c82daecfbd9ad79b7560bc22557890b8e7dae17fae7588d7ccbed884b50a",
+            "id": "5382a4208d917a5795a848b25d4bd186",
+            "item_id": "item_JVJK5W",
+            "kind": "return",
+            "order_id": "ORD-7YHHUG",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "return requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 988,
+          "latency_ms": 2549.61,
+          "output_tokens": 35,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": null,
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-ER37NK\",\"item_id\":\"item_WGRTNU\",\"payment_method\":\"original\"}}",
+        "result": {
+          "detail": "Unknown tool or incorrect argument keys",
+          "error": "invalid_action_json"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1398,
+          "latency_ms": 3169.36,
+          "output_tokens": 34,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_fallback-00",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_5KHZJ5",
+            "new_item_id": "item_QFRLFW",
+            "order_id": "ORD-BC2Y9Q",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-BC2Y9Q\",\"item_id\":\"item_5KHZJ5\",\"payment_method\":\"original\",\"new_item_id\":\"item_QFRLFW\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_5KHZJ5",
+              "new_item_id": "item_QFRLFW",
+              "order_id": "ORD-BC2Y9Q",
+              "payment_method": "original"
+            },
+            "fingerprint": "cc72cbef3b44de2097fba84f8c7dc4f5983756ba70c822c9de0ecaad9529a40e",
+            "id": "e90ff389172d5af4f164f77398d40f59",
+            "item_id": "item_5KHZJ5",
+            "kind": "exchange",
+            "new_item_id": "item_QFRLFW",
+            "order_id": "ORD-BC2Y9Q",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1441,
+          "latency_ms": 3503.69,
+          "output_tokens": 47,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_fallback-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_V6ETB7",
+            "new_item_id": "item_5ET5YH",
+            "order_id": "ORD-N3DQTZ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-N3DQTZ\",\"item_id\":\"item_V6ETB7\",\"payment_method\":\"original\",\"new_item_id\":\"item_5ET5YH\"}}",
+        "result": {
+          "detail": "Inspect the product; select an available different same-product variant",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1441,
+          "latency_ms": 3347.54,
+          "output_tokens": 47,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_fallback-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_S37RMX",
+            "new_item_id": "item_S3MBF6",
+            "order_id": "ORD-545WVW",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-545WVW\",\"item_id\":\"item_S37RMX\",\"payment_method\":\"original\",\"new_item_id\":\"item_S3MBF6\"}}",
+        "result": {
+          "detail": "Inspect the product; select an available different same-product variant",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1497,
+          "latency_ms": 3478.01,
+          "output_tokens": 48,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-forbidden_status-00",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "reason",
+            "message": "Please provide your reason."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"reason\",\"message\":\"Please provide your reason.\"}}",
+        "result": {
+          "field": "reason",
+          "question": "Please provide your reason."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1129,
+          "latency_ms": 2118.49,
+          "output_tokens": 21,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-forbidden_status-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "reason",
+            "message": "Please provide your reason."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"reason\",\"message\":\"Please provide your reason.\"}}",
+        "result": {
+          "field": "reason",
+          "question": "Please provide your reason."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1156,
+          "latency_ms": 2128.06,
+          "output_tokens": 21,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-forbidden_status-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "reason",
+            "message": "Please provide your reason."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"reason\",\"message\":\"Please provide your reason.\"}}",
+        "result": {
+          "field": "reason",
+          "question": "Please provide your reason."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1139,
+          "latency_ms": 1952.97,
+          "output_tokens": 21,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-foreign_order-00",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "payment_method",
+            "message": "Please provide your payment method."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+        "result": {
+          "field": "payment_method",
+          "question": "Please provide your payment method."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1045,
+          "latency_ms": 1985.02,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-foreign_order-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "payment_method",
+            "message": "Please provide your payment method."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+        "result": {
+          "field": "payment_method",
+          "question": "Please provide your payment method."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1045,
+          "latency_ms": 1965.87,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-foreign_order-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "payment_method",
+            "message": "Please provide your payment method."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+        "result": {
+          "field": "payment_method",
+          "question": "Please provide your payment method."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1036,
+          "latency_ms": 2244.13,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-missing_email-00",
+      "reasons": [
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "customer@example.com"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"customer@example.com\"}}",
+        "result": {
+          "detail": "No matching demo customer",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 932,
+          "latency_ms": 1544.82,
+          "output_tokens": 15,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-missing_email-01",
+      "reasons": [
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "original"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"original\"}}",
+        "result": {
+          "detail": "No matching demo customer",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 930,
+          "latency_ms": 1521.51,
+          "output_tokens": 13,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-missing_email-02",
+      "reasons": [
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "email": "customer@example.com"
+          },
+          "tool": "identify_customer"
+        },
+        "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"customer@example.com\"}}",
+        "result": {
+          "detail": "No matching demo customer",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 937,
+          "latency_ms": 1572.65,
+          "output_tokens": 15,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_missing_option-00",
+      "reasons": [
+        "required_clarification_missing",
+        "catalog_not_inspected",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "payment_method",
+            "message": "Please provide your payment method."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+        "result": {
+          "field": "payment_method",
+          "question": "Please provide your payment method."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1150,
+          "latency_ms": 2086.63,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_missing_option-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": null,
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-FSSNPF\",\"item_id\":\"item_KQH7V3\",\"payment_method\":\"original\",\"new_option\":\"moss / L\"}}",
+        "result": {
+          "detail": "Unknown tool or incorrect argument keys",
+          "error": "invalid_action_json"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1395,
+          "latency_ms": 2991.03,
+          "output_tokens": 43,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_missing_option-02",
+      "reasons": [
+        "required_clarification_missing",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_QNPCGK",
+            "new_item_id": "item_ERVVY6",
+            "order_id": "ORD-CFJFBC",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-CFJFBC\",\"item_id\":\"item_QNPCGK\",\"payment_method\":\"original\",\"new_item_id\":\"item_ERVVY6\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_QNPCGK",
+              "new_item_id": "item_ERVVY6",
+              "order_id": "ORD-CFJFBC",
+              "payment_method": "original"
+            },
+            "fingerprint": "811e2aaf79e693656aa82c362b4e732c9890abfcfe957405af3f4fc8ec9e2d88",
+            "id": "277d488657b401c1d884df68dee770c0",
+            "item_id": "item_QNPCGK",
+            "kind": "exchange",
+            "new_item_id": "item_ERVVY6",
+            "order_id": "ORD-CFJFBC",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1405,
+          "latency_ms": 2999.51,
+          "output_tokens": 44,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_missing_payment-00",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_WTDRPF",
+            "new_item_id": "item_B4DW85",
+            "order_id": "ORD-E9PLSJ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-E9PLSJ\",\"item_id\":\"item_WTDRPF\",\"payment_method\":\"original\",\"new_item_id\":\"item_B4DW85\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 550,
+            "arguments": {
+              "item_id": "item_WTDRPF",
+              "new_item_id": "item_B4DW85",
+              "order_id": "ORD-E9PLSJ",
+              "payment_method": "original"
+            },
+            "fingerprint": "03da32a52230dab2dde3860f4e9aec4925fbc9ac7f52c1f1fc85d9982c748e75",
+            "id": "7c0f63e327c34fefa7b5f2d461740675",
+            "item_id": "item_WTDRPF",
+            "kind": "exchange",
+            "new_item_id": "item_B4DW85",
+            "order_id": "ORD-E9PLSJ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1387,
+          "latency_ms": 2898.93,
+          "output_tokens": 44,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_missing_payment-02",
+      "reasons": [
+        "required_clarification_missing"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_BPQU3R",
+            "new_item_id": "item_HLPGDJ",
+            "order_id": "ORD-MM7QWQ",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-MM7QWQ\",\"item_id\":\"item_BPQU3R\",\"payment_method\":\"original\",\"new_item_id\":\"item_HLPGDJ\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": -375,
+            "arguments": {
+              "item_id": "item_BPQU3R",
+              "new_item_id": "item_HLPGDJ",
+              "order_id": "ORD-MM7QWQ",
+              "payment_method": "original"
+            },
+            "fingerprint": "25375dac42c4fceda0e78e60bfbb67e9950ffc48193965287bdb3b14a079fa61",
+            "id": "c162f1c26c79583c9bf3dc9f90546fb1",
+            "item_id": "item_BPQU3R",
+            "kind": "exchange",
+            "new_item_id": "item_HLPGDJ",
+            "order_id": "ORD-MM7QWQ",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1392,
+          "latency_ms": 2905.6,
+          "output_tokens": 44,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_gift-00",
+      "reasons": [
+        "catalog_not_inspected",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "payment_method",
+            "message": "Please provide your payment method."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+        "result": {
+          "field": "payment_method",
+          "question": "Please provide your payment method."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1185,
+          "latency_ms": 2163.01,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_gift-01",
+      "reasons": [
+        "catalog_not_inspected",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "payment_method",
+            "message": "Please provide your payment method."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+        "result": {
+          "field": "payment_method",
+          "question": "Please provide your payment method."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1179,
+          "latency_ms": 2101.05,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_gift-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_9X2GVT",
+            "new_item_id": "item_LYCBR3",
+            "order_id": "ORD-W6C7PK",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-W6C7PK\",\"item_id\":\"item_9X2GVT\",\"payment_method\":\"original\",\"new_item_id\":\"item_LYCBR3\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 550,
+            "arguments": {
+              "item_id": "item_9X2GVT",
+              "new_item_id": "item_LYCBR3",
+              "order_id": "ORD-W6C7PK",
+              "payment_method": "original"
+            },
+            "fingerprint": "ac5db42ddb27929bd296f5dcbb96857671e776ae92ab50def15b654816fdb3af",
+            "id": "6f42de2b0000067a31c07f808ee9aacc",
+            "item_id": "item_9X2GVT",
+            "kind": "exchange",
+            "new_item_id": "item_LYCBR3",
+            "order_id": "ORD-W6C7PK",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1361,
+          "latency_ms": 3029.19,
+          "output_tokens": 47,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_unavailable-00",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "new_option",
+            "message": "Please provide your new option."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please provide your new option.\"}}",
+        "result": {
+          "field": "new_option",
+          "question": "Please provide your new option."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1464,
+          "latency_ms": 2683.1,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_unavailable-01",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_4Y8JRC",
+            "new_item_id": "item_32J7SJ",
+            "order_id": "ORD-DXUG9Y",
+            "payment_method": "original"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-DXUG9Y\",\"item_id\":\"item_4Y8JRC\",\"payment_method\":\"original\",\"new_item_id\":\"item_32J7SJ\"}}",
+        "result": {
+          "proposal": {
+            "amount_cents": 225,
+            "arguments": {
+              "item_id": "item_4Y8JRC",
+              "new_item_id": "item_32J7SJ",
+              "order_id": "ORD-DXUG9Y",
+              "payment_method": "original"
+            },
+            "fingerprint": "169d7486400a8100f8cd9c77725453d4a67d8a1466b06218edd498fff195e41f",
+            "id": "8d65a78edd33d7d6639e2d326a4eb549",
+            "item_id": "item_4Y8JRC",
+            "kind": "exchange",
+            "new_item_id": "item_32J7SJ",
+            "order_id": "ORD-DXUG9Y",
+            "order_revision": 0,
+            "payment_method": "original",
+            "target_status": "exchange requested"
+          },
+          "requires_customer_confirmation": true
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1412,
+          "latency_ms": 3074.85,
+          "output_tokens": 48,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_unavailable-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "new_option",
+            "message": "Please provide your new option."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"new_option\",\"message\":\"Please provide your new option.\"}}",
+        "result": {
+          "field": "new_option",
+          "question": "Please provide your new option."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1473,
+          "latency_ms": 2692.41,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_shortfall-00",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_MZKJXM",
+            "new_item_id": "item_DECHDH",
+            "order_id": "ORD-2G6ADT",
+            "payment_method": "gift_UPTQRB"
+          },
+          "tool": "propose_exchange"
+        },
+        "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-2G6ADT\",\"item_id\":\"item_MZKJXM\",\"payment_method\":\"gift_UPTQRB\",\"new_item_id\":\"item_DECHDH\"}}",
+        "result": {
+          "detail": "Gift card cannot cover the price difference",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1497,
+          "latency_ms": 3748.22,
+          "output_tokens": 49,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_shortfall-01",
+      "reasons": [
+        "catalog_not_inspected",
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "field": "payment_method",
+            "message": "Please provide your payment method."
+          },
+          "tool": "ask_customer"
+        },
+        "raw": "{\"tool\":\"ask_customer\",\"arguments\":{\"field\":\"payment_method\",\"message\":\"Please provide your payment method.\"}}",
+        "result": {
+          "field": "payment_method",
+          "question": "Please provide your payment method."
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1168,
+          "latency_ms": 2156.77,
+          "output_tokens": 23,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    },
+    {
+      "variant": "qlora_v3",
+      "case_id": "v3-test-exchange_shortfall-02",
+      "reasons": [
+        "wrong_or_uncompleted_business_outcome"
+      ],
+      "last_decision": {
+        "action": {
+          "arguments": {
+            "item_id": "item_2QQ7NG",
+            "order_id": "ORD-3LPJWW",
+            "payment_method": "gift_Q3V98"
+          },
+          "tool": "propose_return"
+        },
+        "raw": "{\"tool\":\"propose_return\",\"arguments\":{\"order_id\":\"ORD-3LPJWW\",\"item_id\":\"item_2QQ7NG\",\"payment_method\":\"gift_Q3V98\"}}",
+        "result": {
+          "detail": "Payment must be original or this customer's existing gift card",
+          "error": "policy_or_argument_rejection"
+        },
+        "timing": {
+          "finish_reason": "stop",
+          "input_tokens": 1442,
+          "latency_ms": 3115.04,
+          "output_tokens": 40,
+          "provider": "mlx",
+          "variant": "qlora_v3",
+          "workflow": "v2"
+        }
+      }
+    }
+  ],
+  "scope": "All failed runs retained; overlapping diagnostics, no additional model calls."
+}

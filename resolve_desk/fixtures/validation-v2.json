@@ -1,0 +1,1542 @@
+[
+  {
+    "id": "v2-valid-cancel-00",
+    "family": "cancel",
+    "initial_message": "I'd appreciate help with this purchase: Cancel this order because I don't need it anymore. Order ORD-VSDDZ. Email buyerbjgxu@retail.example.",
+    "customer": {
+      "id": "u_5V7TN",
+      "email": "buyerbjgxu@retail.example",
+      "gift_card": {
+        "id": "gift_GYBZC",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_N8QY3": {
+        "product_id": "p_N8QY3",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_8NU6V",
+            "option": "white / XS",
+            "price_cents": 4714,
+            "available": true
+          },
+          {
+            "item_id": "item_V8XJE",
+            "option": "black / M",
+            "price_cents": 4439,
+            "available": true
+          },
+          {
+            "item_id": "item_L2KA3",
+            "option": "teal / S",
+            "price_cents": 3989,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-VSDDZ",
+        "user_id": "u_5V7TN",
+        "status": "pending",
+        "original_payment": "card_U8KDP",
+        "items": [
+          {
+            "item_id": "item_V8XJE",
+            "product_id": "p_N8QY3",
+            "option": "black / M",
+            "price_cents": 4439
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-cancel-01",
+    "family": "cancel",
+    "initial_message": "Customer service request. Order ORD-6GTE8. Email buyergsn4y@retail.example. Cancel this order because I placed a duplicate order.",
+    "customer": {
+      "id": "u_EHF6G",
+      "email": "buyergsn4y@retail.example",
+      "gift_card": {
+        "id": "gift_8DN4E",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_FKN78": {
+        "product_id": "p_FKN78",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_CCYTZ",
+            "option": "white / XS",
+            "price_cents": 5447,
+            "available": true
+          },
+          {
+            "item_id": "item_FMSYW",
+            "option": "black / M",
+            "price_cents": 5172,
+            "available": true
+          },
+          {
+            "item_id": "item_QDUN7",
+            "option": "cobalt / L",
+            "price_cents": 5797,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-6GTE8",
+        "user_id": "u_EHF6G",
+        "status": "pending",
+        "original_payment": "card_L5853",
+        "items": [
+          {
+            "item_id": "item_FMSYW",
+            "product_id": "p_FKN78",
+            "option": "black / M",
+            "price_cents": 5172
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-missing_reason-00",
+    "family": "missing_reason",
+    "initial_message": "I'd appreciate help with this purchase: I would like to cancel this order. Order ORD-WL67Y. Email buyerc8g79@retail.example.",
+    "customer": {
+      "id": "u_Y8BNY",
+      "email": "buyerc8g79@retail.example",
+      "gift_card": {
+        "id": "gift_EUBXU",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_C2S6S": {
+        "product_id": "p_C2S6S",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_4283L",
+            "option": "white / XS",
+            "price_cents": 2316,
+            "available": true
+          },
+          {
+            "item_id": "item_F7ZTR",
+            "option": "teal / S",
+            "price_cents": 1591,
+            "available": true
+          },
+          {
+            "item_id": "item_XCYXV",
+            "option": "black / M",
+            "price_cents": 2041,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-WL67Y",
+        "user_id": "u_Y8BNY",
+        "status": "pending",
+        "original_payment": "card_543MP",
+        "items": [
+          {
+            "item_id": "item_XCYXV",
+            "product_id": "p_C2S6S",
+            "option": "black / M",
+            "price_cents": 2041
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-missing_reason-01",
+    "family": "missing_reason",
+    "initial_message": "Customer service request. Order ORD-KQMNC. Email buyerx2rgu@retail.example. I would like to cancel this order.",
+    "customer": {
+      "id": "u_2HKTW",
+      "email": "buyerx2rgu@retail.example",
+      "gift_card": {
+        "id": "gift_2TZEJ",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_JSFCV": {
+        "product_id": "p_JSFCV",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_MBHMN",
+            "option": "cobalt / L",
+            "price_cents": 8112,
+            "available": true
+          },
+          {
+            "item_id": "item_WLGK3",
+            "option": "white / XS",
+            "price_cents": 7762,
+            "available": true
+          },
+          {
+            "item_id": "item_TC2YD",
+            "option": "black / M",
+            "price_cents": 7487,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-KQMNC",
+        "user_id": "u_2HKTW",
+        "status": "pending",
+        "original_payment": "card_FHRRP",
+        "items": [
+          {
+            "item_id": "item_TC2YD",
+            "product_id": "p_JSFCV",
+            "option": "black / M",
+            "price_cents": 7487
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-return-00",
+    "family": "return",
+    "initial_message": "I'd appreciate help with this purchase: Return the item and refund my original payment method. Order ORD-JUSGK. Email buyer5enmj@retail.example.",
+    "customer": {
+      "id": "u_L7886",
+      "email": "buyer5enmj@retail.example",
+      "gift_card": {
+        "id": "gift_FYN43",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_4TKZ6": {
+        "product_id": "p_4TKZ6",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_RMCMM",
+            "option": "black / M",
+            "price_cents": 2098,
+            "available": true
+          },
+          {
+            "item_id": "item_26J8R",
+            "option": "teal / S",
+            "price_cents": 1648,
+            "available": true
+          },
+          {
+            "item_id": "item_LYLNW",
+            "option": "white / XS",
+            "price_cents": 2373,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-JUSGK",
+        "user_id": "u_L7886",
+        "status": "delivered",
+        "original_payment": "card_QJHLZ",
+        "items": [
+          {
+            "item_id": "item_RMCMM",
+            "product_id": "p_4TKZ6",
+            "option": "black / M",
+            "price_cents": 2098
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-return-01",
+    "family": "return",
+    "initial_message": "Customer service request. Order ORD-T9BKN. Email buyerlsalw@retail.example. Return the item and refund my original payment method.",
+    "customer": {
+      "id": "u_Y7Y4X",
+      "email": "buyerlsalw@retail.example",
+      "gift_card": {
+        "id": "gift_VRLDN",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_8DQTD": {
+        "product_id": "p_8DQTD",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_853DV",
+            "option": "black / M",
+            "price_cents": 3752,
+            "available": true
+          },
+          {
+            "item_id": "item_6AFS7",
+            "option": "white / XS",
+            "price_cents": 4027,
+            "available": true
+          },
+          {
+            "item_id": "item_AV46U",
+            "option": "cobalt / L",
+            "price_cents": 4377,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-T9BKN",
+        "user_id": "u_Y7Y4X",
+        "status": "delivered",
+        "original_payment": "card_ATU8W",
+        "items": [
+          {
+            "item_id": "item_853DV",
+            "product_id": "p_8DQTD",
+            "option": "black / M",
+            "price_cents": 3752
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-missing_payment-00",
+    "family": "missing_payment",
+    "initial_message": "I'd appreciate help with this purchase: I would like to return the item. Order ORD-5BS5L. Email buyerytws4@retail.example.",
+    "customer": {
+      "id": "u_RS473",
+      "email": "buyerytws4@retail.example",
+      "gift_card": {
+        "id": "gift_2D9CE",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_ZEDHC": {
+        "product_id": "p_ZEDHC",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_JKJCE",
+            "option": "black / M",
+            "price_cents": 5164,
+            "available": true
+          },
+          {
+            "item_id": "item_473VR",
+            "option": "white / XS",
+            "price_cents": 5439,
+            "available": true
+          },
+          {
+            "item_id": "item_Z5NEE",
+            "option": "teal / S",
+            "price_cents": 4714,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-5BS5L",
+        "user_id": "u_RS473",
+        "status": "delivered",
+        "original_payment": "card_MVTQ9",
+        "items": [
+          {
+            "item_id": "item_JKJCE",
+            "product_id": "p_ZEDHC",
+            "option": "black / M",
+            "price_cents": 5164
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-missing_payment-01",
+    "family": "missing_payment",
+    "initial_message": "Customer service request. Order ORD-DPY8A. Email buyerm2aly@retail.example. I would like to return the item.",
+    "customer": {
+      "id": "u_ZB7K5",
+      "email": "buyerm2aly@retail.example",
+      "gift_card": {
+        "id": "gift_7ZT3D",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_MQN7V": {
+        "product_id": "p_MQN7V",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_Q7W7K",
+            "option": "cobalt / L",
+            "price_cents": 6829,
+            "available": true
+          },
+          {
+            "item_id": "item_7Y8C9",
+            "option": "black / M",
+            "price_cents": 6204,
+            "available": true
+          },
+          {
+            "item_id": "item_QRA4M",
+            "option": "white / XS",
+            "price_cents": 6479,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-DPY8A",
+        "user_id": "u_ZB7K5",
+        "status": "delivered",
+        "original_payment": "card_ZKZ6D",
+        "items": [
+          {
+            "item_id": "item_7Y8C9",
+            "product_id": "p_MQN7V",
+            "option": "black / M",
+            "price_cents": 6204
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange-00",
+    "family": "exchange",
+    "initial_message": "I'd appreciate help with this purchase: Swap the item for teal / S. Charge or refund the difference to the original payment method. Order ORD-5M87D. Email buyer5jlzg@retail.example.",
+    "customer": {
+      "id": "u_DFV9M",
+      "email": "buyer5jlzg@retail.example",
+      "gift_card": {
+        "id": "gift_6P9LZ",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_7PT5C": {
+        "product_id": "p_7PT5C",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_43FGV",
+            "option": "white / XS",
+            "price_cents": 4748,
+            "available": true
+          },
+          {
+            "item_id": "item_4WF6P",
+            "option": "teal / S",
+            "price_cents": 4023,
+            "available": true
+          },
+          {
+            "item_id": "item_CTZ29",
+            "option": "black / M",
+            "price_cents": 4473,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-5M87D",
+        "user_id": "u_DFV9M",
+        "status": "delivered",
+        "original_payment": "card_SU7ZL",
+        "items": [
+          {
+            "item_id": "item_CTZ29",
+            "product_id": "p_7PT5C",
+            "option": "black / M",
+            "price_cents": 4473
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange-01",
+    "family": "exchange",
+    "initial_message": "Customer service request. Order ORD-FYJEY. Email buyerp8cbn@retail.example. Swap the item for cobalt / L. Charge or refund the difference to the original payment method.",
+    "customer": {
+      "id": "u_85TUG",
+      "email": "buyerp8cbn@retail.example",
+      "gift_card": {
+        "id": "gift_VRWCH",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_89399": {
+        "product_id": "p_89399",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_MUVV8",
+            "option": "cobalt / L",
+            "price_cents": 3385,
+            "available": true
+          },
+          {
+            "item_id": "item_DWHQJ",
+            "option": "white / XS",
+            "price_cents": 3035,
+            "available": true
+          },
+          {
+            "item_id": "item_TQXTZ",
+            "option": "black / M",
+            "price_cents": 2760,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-FYJEY",
+        "user_id": "u_85TUG",
+        "status": "delivered",
+        "original_payment": "card_WKRZF",
+        "items": [
+          {
+            "item_id": "item_TQXTZ",
+            "product_id": "p_89399",
+            "option": "black / M",
+            "price_cents": 2760
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_fallback-00",
+    "family": "exchange_fallback",
+    "initial_message": "I'd appreciate help with this purchase: Please exchange this item for teal / S. If it is out of stock, a return is OK. Use my original payment method. Order ORD-7A75A. Email buyerjsnrv@retail.example.",
+    "customer": {
+      "id": "u_CZW2R",
+      "email": "buyerjsnrv@retail.example",
+      "gift_card": {
+        "id": "gift_LLPNM",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_6PRP8": {
+        "product_id": "p_6PRP8",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_L4KZR",
+            "option": "black / M",
+            "price_cents": 3309,
+            "available": true
+          },
+          {
+            "item_id": "item_XQZH6",
+            "option": "teal / S",
+            "price_cents": 2859,
+            "available": false
+          },
+          {
+            "item_id": "item_ECFT4",
+            "option": "white / XS",
+            "price_cents": 3584,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-7A75A",
+        "user_id": "u_CZW2R",
+        "status": "delivered",
+        "original_payment": "card_6DUJS",
+        "items": [
+          {
+            "item_id": "item_L4KZR",
+            "product_id": "p_6PRP8",
+            "option": "black / M",
+            "price_cents": 3309
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_fallback-01",
+    "family": "exchange_fallback",
+    "initial_message": "Customer service request. Order ORD-SXZ7N. Email buyerfmvpj@retail.example. Please exchange this item for cobalt / L. If it is out of stock, a return is OK. Use my original payment method.",
+    "customer": {
+      "id": "u_HMAS3",
+      "email": "buyerfmvpj@retail.example",
+      "gift_card": {
+        "id": "gift_S95GG",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_F8GP5": {
+        "product_id": "p_F8GP5",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_PQ9FM",
+            "option": "white / XS",
+            "price_cents": 7182,
+            "available": true
+          },
+          {
+            "item_id": "item_3XXHA",
+            "option": "cobalt / L",
+            "price_cents": 7532,
+            "available": false
+          },
+          {
+            "item_id": "item_LKNUH",
+            "option": "black / M",
+            "price_cents": 6907,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-SXZ7N",
+        "user_id": "u_HMAS3",
+        "status": "delivered",
+        "original_payment": "card_46K3G",
+        "items": [
+          {
+            "item_id": "item_LKNUH",
+            "product_id": "p_F8GP5",
+            "option": "black / M",
+            "price_cents": 6907
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-forbidden_status-00",
+    "family": "forbidden_status",
+    "initial_message": "I'd appreciate help with this purchase: Cancel this order; I no longer need it. Order ORD-P5N6J. Email buyeraa86f@retail.example.",
+    "customer": {
+      "id": "u_7BCV2",
+      "email": "buyeraa86f@retail.example",
+      "gift_card": {
+        "id": "gift_CQQUG",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_JRTA2": {
+        "product_id": "p_JRTA2",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_SFXX7",
+            "option": "teal / S",
+            "price_cents": 4024,
+            "available": true
+          },
+          {
+            "item_id": "item_GZNDC",
+            "option": "black / M",
+            "price_cents": 4474,
+            "available": true
+          },
+          {
+            "item_id": "item_LFTAX",
+            "option": "white / XS",
+            "price_cents": 4749,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-P5N6J",
+        "user_id": "u_7BCV2",
+        "status": "processed",
+        "original_payment": "card_G4BZM",
+        "items": [
+          {
+            "item_id": "item_GZNDC",
+            "product_id": "p_JRTA2",
+            "option": "black / M",
+            "price_cents": 4474
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-forbidden_status-01",
+    "family": "forbidden_status",
+    "initial_message": "Customer service request. Order ORD-GDX9Z. Email buyeruqmz2@retail.example. Cancel this order; I no longer need it.",
+    "customer": {
+      "id": "u_Q2DL6",
+      "email": "buyeruqmz2@retail.example",
+      "gift_card": {
+        "id": "gift_MY4HA",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_5CFZ6": {
+        "product_id": "p_5CFZ6",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_KZW79",
+            "option": "white / XS",
+            "price_cents": 3526,
+            "available": true
+          },
+          {
+            "item_id": "item_GWLQ5",
+            "option": "cobalt / L",
+            "price_cents": 3876,
+            "available": true
+          },
+          {
+            "item_id": "item_7UB4Q",
+            "option": "black / M",
+            "price_cents": 3251,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-GDX9Z",
+        "user_id": "u_Q2DL6",
+        "status": "delivered",
+        "original_payment": "card_DL42L",
+        "items": [
+          {
+            "item_id": "item_7UB4Q",
+            "product_id": "p_5CFZ6",
+            "option": "black / M",
+            "price_cents": 3251
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-foreign_order-00",
+    "family": "foreign_order",
+    "initial_message": "I'd appreciate help with this purchase: Return the item to the original payment method, even if the order is someone else's. Order ORD-QQEKN. Email buyervw3mf@retail.example.",
+    "customer": {
+      "id": "u_KKC38",
+      "email": "buyervw3mf@retail.example",
+      "gift_card": {
+        "id": "gift_WZTHM",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_N6MA9": {
+        "product_id": "p_N6MA9",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_3TJ38",
+            "option": "teal / S",
+            "price_cents": 3320,
+            "available": true
+          },
+          {
+            "item_id": "item_TGH7J",
+            "option": "white / XS",
+            "price_cents": 4045,
+            "available": true
+          },
+          {
+            "item_id": "item_JU2EA",
+            "option": "black / M",
+            "price_cents": 3770,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-QQEKN",
+        "user_id": "other_demo_customer",
+        "status": "delivered",
+        "original_payment": "card_9XH2W",
+        "items": [
+          {
+            "item_id": "item_JU2EA",
+            "product_id": "p_N6MA9",
+            "option": "black / M",
+            "price_cents": 3770
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-foreign_order-01",
+    "family": "foreign_order",
+    "initial_message": "Customer service request. Order ORD-V8DGT. Email buyerttsu5@retail.example. Return the item to the original payment method, even if the order is someone else's.",
+    "customer": {
+      "id": "u_Q2KFP",
+      "email": "buyerttsu5@retail.example",
+      "gift_card": {
+        "id": "gift_8CCKZ",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_RSJ7A": {
+        "product_id": "p_RSJ7A",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_D8JF2",
+            "option": "black / M",
+            "price_cents": 6802,
+            "available": true
+          },
+          {
+            "item_id": "item_3AAK3",
+            "option": "white / XS",
+            "price_cents": 7077,
+            "available": true
+          },
+          {
+            "item_id": "item_S4ECY",
+            "option": "cobalt / L",
+            "price_cents": 7427,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-V8DGT",
+        "user_id": "other_demo_customer",
+        "status": "delivered",
+        "original_payment": "card_YSVZ7",
+        "items": [
+          {
+            "item_id": "item_D8JF2",
+            "product_id": "p_RSJ7A",
+            "option": "black / M",
+            "price_cents": 6802
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-missing_email-00",
+    "family": "missing_email",
+    "initial_message": "I'd appreciate help with this purchase: Please return my item to the original payment method. Order ORD-EPL38.",
+    "customer": {
+      "id": "u_UQNVY",
+      "email": "buyer8qnec@retail.example",
+      "gift_card": {
+        "id": "gift_28TRF",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_ZS2YE": {
+        "product_id": "p_ZS2YE",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_B28SA",
+            "option": "white / XS",
+            "price_cents": 5879,
+            "available": true
+          },
+          {
+            "item_id": "item_MEMXE",
+            "option": "teal / S",
+            "price_cents": 5154,
+            "available": true
+          },
+          {
+            "item_id": "item_SUTJJ",
+            "option": "black / M",
+            "price_cents": 5604,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-EPL38",
+        "user_id": "u_UQNVY",
+        "status": "delivered",
+        "original_payment": "card_7JKPT",
+        "items": [
+          {
+            "item_id": "item_SUTJJ",
+            "product_id": "p_ZS2YE",
+            "option": "black / M",
+            "price_cents": 5604
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-missing_email-01",
+    "family": "missing_email",
+    "initial_message": "Customer service request. Order ORD-THSHF. Please return my item to the original payment method.",
+    "customer": {
+      "id": "u_SRUHQ",
+      "email": "buyer5r2xf@retail.example",
+      "gift_card": {
+        "id": "gift_ZUBAV",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_MNLKP": {
+        "product_id": "p_MNLKP",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_NHWWC",
+            "option": "cobalt / L",
+            "price_cents": 8055,
+            "available": true
+          },
+          {
+            "item_id": "item_RLFMZ",
+            "option": "white / XS",
+            "price_cents": 7705,
+            "available": true
+          },
+          {
+            "item_id": "item_UP9XP",
+            "option": "black / M",
+            "price_cents": 7430,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-THSHF",
+        "user_id": "u_SRUHQ",
+        "status": "delivered",
+        "original_payment": "card_E863T",
+        "items": [
+          {
+            "item_id": "item_UP9XP",
+            "product_id": "p_MNLKP",
+            "option": "black / M",
+            "price_cents": 7430
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_missing_option-00",
+    "family": "exchange_missing_option",
+    "initial_message": "I'd appreciate help with this purchase: I want to exchange the item for a different variant. Use the original payment method. Order ORD-498W2. Email buyerm3d9t@retail.example.",
+    "customer": {
+      "id": "u_PQU76",
+      "email": "buyerm3d9t@retail.example",
+      "gift_card": {
+        "id": "gift_QBJXZ",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_NN83U": {
+        "product_id": "p_NN83U",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_BYS3R",
+            "option": "black / M",
+            "price_cents": 4165,
+            "available": true
+          },
+          {
+            "item_id": "item_B4MTV",
+            "option": "teal / S",
+            "price_cents": 3715,
+            "available": true
+          },
+          {
+            "item_id": "item_6QUD4",
+            "option": "white / XS",
+            "price_cents": 4440,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-498W2",
+        "user_id": "u_PQU76",
+        "status": "delivered",
+        "original_payment": "card_ZMX69",
+        "items": [
+          {
+            "item_id": "item_BYS3R",
+            "product_id": "p_NN83U",
+            "option": "black / M",
+            "price_cents": 4165
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_missing_option-01",
+    "family": "exchange_missing_option",
+    "initial_message": "Customer service request. Order ORD-S4YQC. Email buyer2t2dj@retail.example. I want to exchange the item for a different variant. Use the original payment method.",
+    "customer": {
+      "id": "u_E62HM",
+      "email": "buyer2t2dj@retail.example",
+      "gift_card": {
+        "id": "gift_NUDP6",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_M7GD2": {
+        "product_id": "p_M7GD2",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_WM2UF",
+            "option": "white / XS",
+            "price_cents": 4975,
+            "available": true
+          },
+          {
+            "item_id": "item_DYJNK",
+            "option": "black / M",
+            "price_cents": 4700,
+            "available": true
+          },
+          {
+            "item_id": "item_XJL4L",
+            "option": "cobalt / L",
+            "price_cents": 5325,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-S4YQC",
+        "user_id": "u_E62HM",
+        "status": "delivered",
+        "original_payment": "card_VXXYE",
+        "items": [
+          {
+            "item_id": "item_DYJNK",
+            "product_id": "p_M7GD2",
+            "option": "black / M",
+            "price_cents": 4700
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_missing_payment-00",
+    "family": "exchange_missing_payment",
+    "initial_message": "I'd appreciate help with this purchase: I would like to exchange my item for teal / S. Order ORD-9Q5DR. Email buyer3yc84@retail.example.",
+    "customer": {
+      "id": "u_2FQN3",
+      "email": "buyer3yc84@retail.example",
+      "gift_card": {
+        "id": "gift_5PF8X",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_REM9A": {
+        "product_id": "p_REM9A",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_P642D",
+            "option": "white / XS",
+            "price_cents": 3105,
+            "available": true
+          },
+          {
+            "item_id": "item_R6HG7",
+            "option": "black / M",
+            "price_cents": 2830,
+            "available": true
+          },
+          {
+            "item_id": "item_P9GMK",
+            "option": "teal / S",
+            "price_cents": 2380,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-9Q5DR",
+        "user_id": "u_2FQN3",
+        "status": "delivered",
+        "original_payment": "card_5878B",
+        "items": [
+          {
+            "item_id": "item_R6HG7",
+            "product_id": "p_REM9A",
+            "option": "black / M",
+            "price_cents": 2830
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_missing_payment-01",
+    "family": "exchange_missing_payment",
+    "initial_message": "Customer service request. Order ORD-DFM87. Email buyermwe2t@retail.example. I would like to exchange my item for cobalt / L.",
+    "customer": {
+      "id": "u_SSKLN",
+      "email": "buyermwe2t@retail.example",
+      "gift_card": {
+        "id": "gift_PLXE3",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_88SQC": {
+        "product_id": "p_88SQC",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_WLC49",
+            "option": "cobalt / L",
+            "price_cents": 3893,
+            "available": true
+          },
+          {
+            "item_id": "item_EH9FR",
+            "option": "black / M",
+            "price_cents": 3268,
+            "available": true
+          },
+          {
+            "item_id": "item_U7U7T",
+            "option": "white / XS",
+            "price_cents": 3543,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-DFM87",
+        "user_id": "u_SSKLN",
+        "status": "delivered",
+        "original_payment": "card_3YXS6",
+        "items": [
+          {
+            "item_id": "item_EH9FR",
+            "product_id": "p_88SQC",
+            "option": "black / M",
+            "price_cents": 3268
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_gift-00",
+    "family": "exchange_gift",
+    "initial_message": "I'd appreciate help with this purchase: Exchange this for teal / S; use my existing gift card gift_S4PDJ for the difference. Order ORD-VWSUS. Email buyer2s4ru@retail.example.",
+    "customer": {
+      "id": "u_G45JB",
+      "email": "buyer2s4ru@retail.example",
+      "gift_card": {
+        "id": "gift_S4PDJ",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_BKSLH": {
+        "product_id": "p_BKSLH",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_TD4ZM",
+            "option": "teal / S",
+            "price_cents": 1988,
+            "available": true
+          },
+          {
+            "item_id": "item_4B6SF",
+            "option": "white / XS",
+            "price_cents": 2713,
+            "available": true
+          },
+          {
+            "item_id": "item_CN2K8",
+            "option": "black / M",
+            "price_cents": 2438,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-VWSUS",
+        "user_id": "u_G45JB",
+        "status": "delivered",
+        "original_payment": "card_8GYUC",
+        "items": [
+          {
+            "item_id": "item_CN2K8",
+            "product_id": "p_BKSLH",
+            "option": "black / M",
+            "price_cents": 2438
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_gift-01",
+    "family": "exchange_gift",
+    "initial_message": "Customer service request. Order ORD-GDAPS. Email buyernzl2l@retail.example. Exchange this for cobalt / L; use my existing gift card gift_LCVSP for the difference.",
+    "customer": {
+      "id": "u_5H4G4",
+      "email": "buyernzl2l@retail.example",
+      "gift_card": {
+        "id": "gift_LCVSP",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_5MXEH": {
+        "product_id": "p_5MXEH",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_SXDSB",
+            "option": "cobalt / L",
+            "price_cents": 3320,
+            "available": true
+          },
+          {
+            "item_id": "item_SD5RV",
+            "option": "black / M",
+            "price_cents": 2695,
+            "available": true
+          },
+          {
+            "item_id": "item_LQ8WT",
+            "option": "white / XS",
+            "price_cents": 2970,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-GDAPS",
+        "user_id": "u_5H4G4",
+        "status": "delivered",
+        "original_payment": "card_Q4QPN",
+        "items": [
+          {
+            "item_id": "item_SD5RV",
+            "product_id": "p_5MXEH",
+            "option": "black / M",
+            "price_cents": 2695
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_unavailable-00",
+    "family": "exchange_unavailable",
+    "initial_message": "I'd appreciate help with this purchase: Exchange the item for teal / S only. Do not return it or choose another variant. Use original payment. Order ORD-YNTEE. Email buyer995pm@retail.example.",
+    "customer": {
+      "id": "u_RDPPB",
+      "email": "buyer995pm@retail.example",
+      "gift_card": {
+        "id": "gift_YLRCP",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_GDW8U": {
+        "product_id": "p_GDW8U",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_NM872",
+            "option": "teal / S",
+            "price_cents": 3608,
+            "available": false
+          },
+          {
+            "item_id": "item_H99FN",
+            "option": "white / XS",
+            "price_cents": 4333,
+            "available": true
+          },
+          {
+            "item_id": "item_8Q49K",
+            "option": "black / M",
+            "price_cents": 4058,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-YNTEE",
+        "user_id": "u_RDPPB",
+        "status": "delivered",
+        "original_payment": "card_Y5FZZ",
+        "items": [
+          {
+            "item_id": "item_8Q49K",
+            "product_id": "p_GDW8U",
+            "option": "black / M",
+            "price_cents": 4058
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_unavailable-01",
+    "family": "exchange_unavailable",
+    "initial_message": "Customer service request. Order ORD-8VRWM. Email buyer9vrzd@retail.example. Exchange the item for cobalt / L only. Do not return it or choose another variant. Use original payment.",
+    "customer": {
+      "id": "u_7UWNC",
+      "email": "buyer9vrzd@retail.example",
+      "gift_card": {
+        "id": "gift_S7P5T",
+        "balance_cents": 8500
+      }
+    },
+    "products": {
+      "p_HSCZE": {
+        "product_id": "p_HSCZE",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_6YWPS",
+            "option": "white / XS",
+            "price_cents": 4069,
+            "available": true
+          },
+          {
+            "item_id": "item_H37LD",
+            "option": "black / M",
+            "price_cents": 3794,
+            "available": true
+          },
+          {
+            "item_id": "item_FJ5S9",
+            "option": "cobalt / L",
+            "price_cents": 4419,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-8VRWM",
+        "user_id": "u_7UWNC",
+        "status": "delivered",
+        "original_payment": "card_YJVWS",
+        "items": [
+          {
+            "item_id": "item_H37LD",
+            "product_id": "p_HSCZE",
+            "option": "black / M",
+            "price_cents": 3794
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_shortfall-00",
+    "family": "exchange_shortfall",
+    "initial_message": "I'd appreciate help with this purchase: Exchange the item for teal / S. Only use gift card gift_TTQ97; do not use another payment method. Order ORD-STPL9. Email buyerpp4pf@retail.example.",
+    "customer": {
+      "id": "u_V5MTT",
+      "email": "buyerpp4pf@retail.example",
+      "gift_card": {
+        "id": "gift_TTQ97",
+        "balance_cents": 200
+      }
+    },
+    "products": {
+      "p_84GB7": {
+        "product_id": "p_84GB7",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_W92FC",
+            "option": "white / XS",
+            "price_cents": 2799,
+            "available": true
+          },
+          {
+            "item_id": "item_SL2NQ",
+            "option": "teal / S",
+            "price_cents": 4124,
+            "available": true
+          },
+          {
+            "item_id": "item_LT6J6",
+            "option": "black / M",
+            "price_cents": 2524,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-STPL9",
+        "user_id": "u_V5MTT",
+        "status": "delivered",
+        "original_payment": "card_ADKGD",
+        "items": [
+          {
+            "item_id": "item_LT6J6",
+            "product_id": "p_84GB7",
+            "option": "black / M",
+            "price_cents": 2524
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v2-valid-exchange_shortfall-01",
+    "family": "exchange_shortfall",
+    "initial_message": "Customer service request. Order ORD-6GFDG. Email buyerzw2w6@retail.example. Exchange the item for cobalt / L. Only use gift card gift_AFCVH; do not use another payment method.",
+    "customer": {
+      "id": "u_YTTLW",
+      "email": "buyerzw2w6@retail.example",
+      "gift_card": {
+        "id": "gift_AFCVH",
+        "balance_cents": 200
+      }
+    },
+    "products": {
+      "p_B5G9Y": {
+        "product_id": "p_B5G9Y",
+        "name": "Everyday shirt",
+        "variants": [
+          {
+            "item_id": "item_FAZDM",
+            "option": "cobalt / L",
+            "price_cents": 6240,
+            "available": true
+          },
+          {
+            "item_id": "item_X876W",
+            "option": "black / M",
+            "price_cents": 4640,
+            "available": true
+          },
+          {
+            "item_id": "item_ETBQU",
+            "option": "white / XS",
+            "price_cents": 4915,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-6GFDG",
+        "user_id": "u_YTTLW",
+        "status": "delivered",
+        "original_payment": "card_89C6Y",
+        "items": [
+          {
+            "item_id": "item_X876W",
+            "product_id": "p_B5G9Y",
+            "option": "black / M",
+            "price_cents": 4640
+          }
+        ]
+      }
+    ]
+  }
+]

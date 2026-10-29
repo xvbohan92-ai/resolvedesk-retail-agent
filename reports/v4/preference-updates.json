@@ -1,0 +1,922 @@
+{
+  "protocol": {
+    "method": "SimPO-style reference-free length-normalized preference objective",
+    "reference": "https://arxiv.org/html/2405.14734v2",
+    "formula": "softplus(-(beta * (mean_logp_chosen - mean_logp_rejected) - margin))",
+    "beta": 2.0,
+    "margin": 0.5,
+    "learning_rate": 1e-05,
+    "seed": 2026102741,
+    "updates": 124,
+    "batch_size": 1,
+    "initialization": "data/finetuning/retail-qlora-v4/run/candidates/480",
+    "output": "data/finetuning/retail-qlora-v4/preference",
+    "selection": "Fixed 124-update final checkpoint; validation is diagnostic, never test-based selection.",
+    "revision_reason": "SFT-240 validation over-handed off; SFT-480 validation interrupted after similar failures. Original SFT records retained. Revision frozen before any v4 test inference.",
+    "training_pairs": {
+      "avoid_unnecessary_handoff": 48,
+      "ask_missing_information": 20,
+      "continue_after_answer": 20,
+      "preserve_exchange_intent": 20,
+      "preserve_policy_handoff": 16
+    },
+    "scope": "Authored negatives from original training cases only; no validation or test examples used as preference pairs. Full completion mean includes end-of-turn tokens; prompt masked. Original tool-name 2x weighting applies to SFT only."
+  },
+  "manifest": {
+    "original_sft_manifest_sha256": "251d5e3c82f2de3cfc759eed9c3a6e3a04c0245807df84090c8c1de23853b52f",
+    "files": {
+      "training/v4/preference.py": "b336da699a232d454fc5c133fd09fc7d5f1ab860268dba26cec9d458aa303fa7",
+      "training/v4/preference-protocol.json": "b55d2ba7e2ff78de562742da9f233a51cef878d3fd5f541084fc8d74dafdebdd",
+      "training/v4/datasets/preference.jsonl": "982a9f07c13e700e8a26f8b5c4f421c628258acc45e4c85ee7b0ea84a6fa0709",
+      "training/v4/preference_select.py": "5c7532baa95a9a54196d79850e16721c3a42083746cfa34bff8d3cae3f70f0a0"
+    },
+    "sft_480_sha256": "bb3aa1e1cc85d6d1c1223746852f41df206984ec3e9b47011241226649ecc89c",
+    "original_frozen_inputs": 31,
+    "test_inference_started_at_freeze": false,
+    "pair_count": 124
+  },
+  "metrics": [
+    {
+      "iteration": 1,
+      "category": "continue_after_answer",
+      "loss": 0.5741619237469842,
+      "pre_update_mean_logp_gap": 0.3770322445780039,
+      "elapsed_seconds": 7.015
+    },
+    {
+      "iteration": 2,
+      "category": "preserve_exchange_intent",
+      "loss": 0.861202090546668,
+      "pre_update_mean_logp_gap": 0.09405547194182873,
+      "elapsed_seconds": 15.03
+    },
+    {
+      "iteration": 3,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.09061363032005237,
+      "pre_update_mean_logp_gap": 1.4277508612722158,
+      "elapsed_seconds": 23.236
+    },
+    {
+      "iteration": 4,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.04784936801588302,
+      "pre_update_mean_logp_gap": 1.7578386440873146,
+      "elapsed_seconds": 29.763
+    },
+    {
+      "iteration": 5,
+      "category": "preserve_policy_handoff",
+      "loss": 0.1973787344190572,
+      "pre_update_mean_logp_gap": 1.0111593902111053,
+      "elapsed_seconds": 62.187
+    },
+    {
+      "iteration": 6,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.008394256412197492,
+      "pre_update_mean_logp_gap": 2.6380037516355515,
+      "elapsed_seconds": 79.749
+    },
+    {
+      "iteration": 7,
+      "category": "preserve_policy_handoff",
+      "loss": 0.11982032695476022,
+      "pre_update_mean_logp_gap": 1.280626818537712,
+      "elapsed_seconds": 93.601
+    },
+    {
+      "iteration": 8,
+      "category": "ask_missing_information",
+      "loss": 0.00187416780782886,
+      "pre_update_mean_logp_gap": 3.38932666182518,
+      "elapsed_seconds": 103.088
+    },
+    {
+      "iteration": 9,
+      "category": "ask_missing_information",
+      "loss": 0.00012455715255774326,
+      "pre_update_mean_logp_gap": 4.745341805741191,
+      "elapsed_seconds": 110.805
+    },
+    {
+      "iteration": 10,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.00026414418433504144,
+      "pre_update_mean_logp_gap": 4.3694416880607605,
+      "elapsed_seconds": 121.943
+    },
+    {
+      "iteration": 11,
+      "category": "preserve_exchange_intent",
+      "loss": 0.5789336203390898,
+      "pre_update_mean_logp_gap": 0.3715871348977089,
+      "elapsed_seconds": 133.054
+    },
+    {
+      "iteration": 12,
+      "category": "preserve_policy_handoff",
+      "loss": 0.016034248116329877,
+      "pre_update_mean_logp_gap": 2.312500250339326,
+      "elapsed_seconds": 140.745
+    },
+    {
+      "iteration": 13,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 3.917172195488113e-05,
+      "pre_update_mean_logp_gap": 5.3237679321318865,
+      "elapsed_seconds": 148.535
+    },
+    {
+      "iteration": 14,
+      "category": "preserve_policy_handoff",
+      "loss": 0.009014791378911908,
+      "pre_update_mean_logp_gap": 2.60218889117823,
+      "elapsed_seconds": 161.852
+    },
+    {
+      "iteration": 15,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.00014666731149759016,
+      "pre_update_mean_logp_gap": 4.663635194301605,
+      "elapsed_seconds": 189.398
+    },
+    {
+      "iteration": 16,
+      "category": "preserve_exchange_intent",
+      "loss": 0.4148972764537513,
+      "pre_update_mean_logp_gap": 0.5825567245483398,
+      "elapsed_seconds": 219.583
+    },
+    {
+      "iteration": 17,
+      "category": "continue_after_answer",
+      "loss": 0.002595848241620499,
+      "pre_update_mean_logp_gap": 3.226271867752075,
+      "elapsed_seconds": 232.143
+    },
+    {
+      "iteration": 18,
+      "category": "preserve_exchange_intent",
+      "loss": 0.2780274681615713,
+      "pre_update_mean_logp_gap": 0.8189014494419098,
+      "elapsed_seconds": 246.638
+    },
+    {
+      "iteration": 19,
+      "category": "preserve_exchange_intent",
+      "loss": 0.2728077369523568,
+      "pre_update_mean_logp_gap": 0.8297425210475922,
+      "elapsed_seconds": 261.368
+    },
+    {
+      "iteration": 20,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0004519000141175648,
+      "pre_update_mean_logp_gap": 4.1009118258953094,
+      "elapsed_seconds": 276.182
+    },
+    {
+      "iteration": 21,
+      "category": "preserve_exchange_intent",
+      "loss": 0.0945229782679679,
+      "pre_update_mean_logp_gap": 1.4056392908096313,
+      "elapsed_seconds": 293.568
+    },
+    {
+      "iteration": 22,
+      "category": "preserve_exchange_intent",
+      "loss": 0.12458782311699848,
+      "pre_update_mean_logp_gap": 1.259901911020279,
+      "elapsed_seconds": 314.735
+    },
+    {
+      "iteration": 23,
+      "category": "ask_missing_information",
+      "loss": 0.0010347400334702215,
+      "pre_update_mean_logp_gap": 3.686543822288513,
+      "elapsed_seconds": 325.814
+    },
+    {
+      "iteration": 24,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 2.3988003845237654e-05,
+      "pre_update_mean_logp_gap": 5.56897234916687,
+      "elapsed_seconds": 337.767
+    },
+    {
+      "iteration": 25,
+      "category": "continue_after_answer",
+      "loss": 0.007610350027136556,
+      "pre_update_mean_logp_gap": 2.687219262123108,
+      "elapsed_seconds": 351.532
+    },
+    {
+      "iteration": 26,
+      "category": "ask_missing_information",
+      "loss": 0.0015704972919062072,
+      "pre_update_mean_logp_gap": 3.477788805961609,
+      "elapsed_seconds": 363.075
+    },
+    {
+      "iteration": 27,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 9.308535602996126e-05,
+      "pre_update_mean_logp_gap": 4.8909735679626465,
+      "elapsed_seconds": 377.608
+    },
+    {
+      "iteration": 28,
+      "category": "preserve_exchange_intent",
+      "loss": 0.010888233380842046,
+      "pre_update_mean_logp_gap": 2.507311761379242,
+      "elapsed_seconds": 396.722
+    },
+    {
+      "iteration": 29,
+      "category": "preserve_exchange_intent",
+      "loss": 0.007495560738533219,
+      "pre_update_mean_logp_gap": 2.6948471069335938,
+      "elapsed_seconds": 411.424
+    },
+    {
+      "iteration": 30,
+      "category": "continue_after_answer",
+      "loss": 0.00032789642921431285,
+      "pre_update_mean_logp_gap": 4.261324405670166,
+      "elapsed_seconds": 423.847
+    },
+    {
+      "iteration": 31,
+      "category": "preserve_exchange_intent",
+      "loss": 0.004439626303767709,
+      "pre_update_mean_logp_gap": 2.9574822187423706,
+      "elapsed_seconds": 440.533
+    },
+    {
+      "iteration": 32,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.00020615356501732556,
+      "pre_update_mean_logp_gap": 4.493393063545227,
+      "elapsed_seconds": 460.129
+    },
+    {
+      "iteration": 33,
+      "category": "preserve_policy_handoff",
+      "loss": 4.772740130901039e-06,
+      "pre_update_mean_logp_gap": 6.376293790352065,
+      "elapsed_seconds": 470.791
+    },
+    {
+      "iteration": 34,
+      "category": "preserve_exchange_intent",
+      "loss": 0.003764698777994316,
+      "pre_update_mean_logp_gap": 3.040102243423462,
+      "elapsed_seconds": 486.0
+    },
+    {
+      "iteration": 35,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.0005850305709247024,
+      "pre_update_mean_logp_gap": 3.9717769622802734,
+      "elapsed_seconds": 498.699
+    },
+    {
+      "iteration": 36,
+      "category": "continue_after_answer",
+      "loss": 0.34263130496699934,
+      "pre_update_mean_logp_gap": 0.6974489688873291,
+      "elapsed_seconds": 511.498
+    },
+    {
+      "iteration": 37,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.00011471692244721244,
+      "pre_update_mean_logp_gap": 4.786492824554443,
+      "elapsed_seconds": 532.978
+    },
+    {
+      "iteration": 38,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 0.00017237624989456274,
+      "pre_update_mean_logp_gap": 4.58287239074707,
+      "elapsed_seconds": 545.632
+    },
+    {
+      "iteration": 39,
+      "category": "continue_after_answer",
+      "loss": 0.0013810193267946326,
+      "pre_update_mean_logp_gap": 3.542121410369873,
+      "elapsed_seconds": 560.082
+    },
+    {
+      "iteration": 40,
+      "category": "ask_missing_information",
+      "loss": 0.1297587304736222,
+      "pre_update_mean_logp_gap": 1.2382488250732422,
+      "elapsed_seconds": 571.248
+    },
+    {
+      "iteration": 41,
+      "category": "ask_missing_information",
+      "loss": 3.453511510009166e-05,
+      "pre_update_mean_logp_gap": 5.386758327484131,
+      "elapsed_seconds": 584.434
+    },
+    {
+      "iteration": 42,
+      "category": "ask_missing_information",
+      "loss": 0.0023502992491670257,
+      "pre_update_mean_logp_gap": 3.2760186195373535,
+      "elapsed_seconds": 596.256
+    },
+    {
+      "iteration": 43,
+      "category": "preserve_policy_handoff",
+      "loss": 2.5773215740145723e-06,
+      "pre_update_mean_logp_gap": 6.684379279613495,
+      "elapsed_seconds": 614.148
+    },
+    {
+      "iteration": 44,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.1387141580355291e-06,
+      "pre_update_mean_logp_gap": 7.0928051471710205,
+      "elapsed_seconds": 628.532
+    },
+    {
+      "iteration": 45,
+      "category": "preserve_policy_handoff",
+      "loss": 1.9098067290718014e-05,
+      "pre_update_mean_logp_gap": 5.68295693397522,
+      "elapsed_seconds": 652.032
+    },
+    {
+      "iteration": 46,
+      "category": "preserve_exchange_intent",
+      "loss": 0.015885357677718783,
+      "pre_update_mean_logp_gap": 2.317202150821686,
+      "elapsed_seconds": 666.024
+    },
+    {
+      "iteration": 47,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 5.097595046438643e-09,
+      "pre_update_mean_logp_gap": 9.797248482704163,
+      "elapsed_seconds": 678.432
+    },
+    {
+      "iteration": 48,
+      "category": "continue_after_answer",
+      "loss": 0.0032058197358463382,
+      "pre_update_mean_logp_gap": 3.1205920577049255,
+      "elapsed_seconds": 690.462
+    },
+    {
+      "iteration": 49,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 3.3960518015081432e-09,
+      "pre_update_mean_logp_gap": 10.000326156616211,
+      "elapsed_seconds": 702.843
+    },
+    {
+      "iteration": 50,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 2.2068939289006827e-07,
+      "pre_update_mean_logp_gap": 7.913254737854004,
+      "elapsed_seconds": 729.874
+    },
+    {
+      "iteration": 51,
+      "category": "preserve_policy_handoff",
+      "loss": 0.00011553386268071763,
+      "pre_update_mean_logp_gap": 4.782944560050964,
+      "elapsed_seconds": 745.812
+    },
+    {
+      "iteration": 52,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 9.452699903947029e-09,
+      "pre_update_mean_logp_gap": 9.48848271369934,
+      "elapsed_seconds": 758.743
+    },
+    {
+      "iteration": 53,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 6.333359972566706e-06,
+      "pre_update_mean_logp_gap": 6.234838247299194,
+      "elapsed_seconds": 776.849
+    },
+    {
+      "iteration": 54,
+      "category": "preserve_policy_handoff",
+      "loss": 0.0003751132924024264,
+      "pre_update_mean_logp_gap": 4.194047451019287,
+      "elapsed_seconds": 791.722
+    },
+    {
+      "iteration": 55,
+      "category": "ask_missing_information",
+      "loss": 5.440645463067019e-07,
+      "pre_update_mean_logp_gap": 7.462098836898804,
+      "elapsed_seconds": 803.71
+    },
+    {
+      "iteration": 56,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 7.525330059197909e-09,
+      "pre_update_mean_logp_gap": 9.602495580911636,
+      "elapsed_seconds": 827.024
+    },
+    {
+      "iteration": 57,
+      "category": "ask_missing_information",
+      "loss": 8.883513344158785e-08,
+      "pre_update_mean_logp_gap": 8.368241786956787,
+      "elapsed_seconds": 838.116
+    },
+    {
+      "iteration": 58,
+      "category": "ask_missing_information",
+      "loss": 1.1846053809293276e-07,
+      "pre_update_mean_logp_gap": 8.224342942237854,
+      "elapsed_seconds": 850.646
+    },
+    {
+      "iteration": 59,
+      "category": "ask_missing_information",
+      "loss": 2.6209412879249724e-07,
+      "pre_update_mean_logp_gap": 7.8272809982299805,
+      "elapsed_seconds": 862.864
+    },
+    {
+      "iteration": 60,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 6.7818304561027e-08,
+      "pre_update_mean_logp_gap": 8.503216832876205,
+      "elapsed_seconds": 877.563
+    },
+    {
+      "iteration": 61,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 4.298159916816286e-08,
+      "pre_update_mean_logp_gap": 8.73124685883522,
+      "elapsed_seconds": 902.085
+    },
+    {
+      "iteration": 62,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 2.1063555092463943e-08,
+      "pre_update_mean_logp_gap": 9.087860763072968,
+      "elapsed_seconds": 919.377
+    },
+    {
+      "iteration": 63,
+      "category": "preserve_exchange_intent",
+      "loss": 0.0329593375412239,
+      "pre_update_mean_logp_gap": 1.9479778707027435,
+      "elapsed_seconds": 932.694
+    },
+    {
+      "iteration": 64,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 7.330361587510559e-08,
+      "pre_update_mean_logp_gap": 8.464327931404114,
+      "elapsed_seconds": 948.034
+    },
+    {
+      "iteration": 65,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.709762065450051e-08,
+      "pre_update_mean_logp_gap": 9.19216325879097,
+      "elapsed_seconds": 962.185
+    },
+    {
+      "iteration": 66,
+      "category": "ask_missing_information",
+      "loss": 1.2547565094598294e-07,
+      "pre_update_mean_logp_gap": 8.195577025413513,
+      "elapsed_seconds": 973.205
+    },
+    {
+      "iteration": 67,
+      "category": "preserve_policy_handoff",
+      "loss": 0.0003511342095465281,
+      "pre_update_mean_logp_gap": 4.22708323597908,
+      "elapsed_seconds": 996.121
+    },
+    {
+      "iteration": 68,
+      "category": "continue_after_answer",
+      "loss": 0.0005991745812042423,
+      "pre_update_mean_logp_gap": 3.9598289728164673,
+      "elapsed_seconds": 1010.57
+    },
+    {
+      "iteration": 69,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 9.682167956023237e-08,
+      "pre_update_mean_logp_gap": 8.32519742846489,
+      "elapsed_seconds": 1024.669
+    },
+    {
+      "iteration": 70,
+      "category": "continue_after_answer",
+      "loss": 0.005040960430012194,
+      "pre_update_mean_logp_gap": 2.8938185572624207,
+      "elapsed_seconds": 1036.762
+    },
+    {
+      "iteration": 71,
+      "category": "continue_after_answer",
+      "loss": 0.000539927453407114,
+      "pre_update_mean_logp_gap": 4.011902898550034,
+      "elapsed_seconds": 1050.775
+    },
+    {
+      "iteration": 72,
+      "category": "continue_after_answer",
+      "loss": 0.0005420175203121664,
+      "pre_update_mean_logp_gap": 4.009970605373383,
+      "elapsed_seconds": 1066.169
+    },
+    {
+      "iteration": 73,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.9706229509566166e-10,
+      "pre_update_mean_logp_gap": 11.42375060915947,
+      "elapsed_seconds": 1084.146
+    },
+    {
+      "iteration": 74,
+      "category": "preserve_policy_handoff",
+      "loss": 0.00015870428081763013,
+      "pre_update_mean_logp_gap": 4.624194301664829,
+      "elapsed_seconds": 1094.169
+    },
+    {
+      "iteration": 75,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.5411747107991912e-10,
+      "pre_update_mean_logp_gap": 11.546653002500534,
+      "elapsed_seconds": 1105.314
+    },
+    {
+      "iteration": 76,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 3.437168517171908e-10,
+      "pre_update_mean_logp_gap": 11.145601451396942,
+      "elapsed_seconds": 1116.567
+    },
+    {
+      "iteration": 77,
+      "category": "preserve_policy_handoff",
+      "loss": 0.0002032223726493958,
+      "pre_update_mean_logp_gap": 4.500554066896257,
+      "elapsed_seconds": 1126.814
+    },
+    {
+      "iteration": 78,
+      "category": "continue_after_answer",
+      "loss": 0.003490577798415704,
+      "pre_update_mean_logp_gap": 3.07797110080719,
+      "elapsed_seconds": 1138.301
+    },
+    {
+      "iteration": 79,
+      "category": "continue_after_answer",
+      "loss": 0.0004521653720672113,
+      "pre_update_mean_logp_gap": 4.100618243217468,
+      "elapsed_seconds": 1167.048
+    },
+    {
+      "iteration": 80,
+      "category": "ask_missing_information",
+      "loss": 1.041944346049671e-09,
+      "pre_update_mean_logp_gap": 10.591088652610779,
+      "elapsed_seconds": 1176.249
+    },
+    {
+      "iteration": 81,
+      "category": "preserve_policy_handoff",
+      "loss": 0.0003120721985221189,
+      "pre_update_mean_logp_gap": 4.2860599756240845,
+      "elapsed_seconds": 1190.049
+    },
+    {
+      "iteration": 82,
+      "category": "continue_after_answer",
+      "loss": 0.0014034170339924945,
+      "pre_update_mean_logp_gap": 3.5340717434883118,
+      "elapsed_seconds": 1204.287
+    },
+    {
+      "iteration": 83,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.5972199063620715e-09,
+      "pre_update_mean_logp_gap": 10.377500638365746,
+      "elapsed_seconds": 1215.543
+    },
+    {
+      "iteration": 84,
+      "category": "ask_missing_information",
+      "loss": 9.607516321022318e-10,
+      "pre_update_mean_logp_gap": 10.631652593612671,
+      "elapsed_seconds": 1224.38
+    },
+    {
+      "iteration": 85,
+      "category": "ask_missing_information",
+      "loss": 9.375592433614337e-08,
+      "pre_update_mean_logp_gap": 8.341285467147827,
+      "elapsed_seconds": 1240.29
+    },
+    {
+      "iteration": 86,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 7.458075282053715e-08,
+      "pre_update_mean_logp_gap": 8.455691665410995,
+      "elapsed_seconds": 1267.27
+    },
+    {
+      "iteration": 87,
+      "category": "ask_missing_information",
+      "loss": 4.091346917236042e-08,
+      "pre_update_mean_logp_gap": 8.755903244018555,
+      "elapsed_seconds": 1278.465
+    },
+    {
+      "iteration": 88,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 5.982154343246167e-08,
+      "pre_update_mean_logp_gap": 8.565949976444244,
+      "elapsed_seconds": 1293.571
+    },
+    {
+      "iteration": 89,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.145603381260151e-08,
+      "pre_update_mean_logp_gap": 9.392374634742737,
+      "elapsed_seconds": 1309.736
+    },
+    {
+      "iteration": 90,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 8.082578626142584e-10,
+      "pre_update_mean_logp_gap": 10.718069985508919,
+      "elapsed_seconds": 1323.373
+    },
+    {
+      "iteration": 91,
+      "category": "ask_missing_information",
+      "loss": 2.8973178296777087e-07,
+      "pre_update_mean_logp_gap": 7.777155041694641,
+      "elapsed_seconds": 1338.068
+    },
+    {
+      "iteration": 92,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 9.068200300354608e-10,
+      "pre_update_mean_logp_gap": 10.66053855419159,
+      "elapsed_seconds": 1357.094
+    },
+    {
+      "iteration": 93,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 4.351209079952166e-06,
+      "pre_update_mean_logp_gap": 6.422527313232422,
+      "elapsed_seconds": 1371.621
+    },
+    {
+      "iteration": 94,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.6970293120870797e-08,
+      "pre_update_mean_logp_gap": 9.195900738239288,
+      "elapsed_seconds": 1385.113
+    },
+    {
+      "iteration": 95,
+      "category": "preserve_exchange_intent",
+      "loss": 0.00777576847601541,
+      "pre_update_mean_logp_gap": 2.6764262914657593,
+      "elapsed_seconds": 1400.508
+    },
+    {
+      "iteration": 96,
+      "category": "continue_after_answer",
+      "loss": 0.0002760834752030072,
+      "pre_update_mean_logp_gap": 4.347334623336792,
+      "elapsed_seconds": 1412.31
+    },
+    {
+      "iteration": 97,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 2.823458253866425e-08,
+      "pre_update_mean_logp_gap": 8.941359132528305,
+      "elapsed_seconds": 1439.419
+    },
+    {
+      "iteration": 98,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.3557688146629875e-09,
+      "pre_update_mean_logp_gap": 10.45944857597351,
+      "elapsed_seconds": 1451.355
+    },
+    {
+      "iteration": 99,
+      "category": "preserve_exchange_intent",
+      "loss": 0.024868726989989588,
+      "pre_update_mean_logp_gap": 2.0908420383930206,
+      "elapsed_seconds": 1465.663
+    },
+    {
+      "iteration": 100,
+      "category": "preserve_exchange_intent",
+      "loss": 0.00719148971689456,
+      "pre_update_mean_logp_gap": 2.715629518032074,
+      "elapsed_seconds": 1479.451
+    },
+    {
+      "iteration": 101,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 2.7297752029386724e-08,
+      "pre_update_mean_logp_gap": 8.95823073387146,
+      "elapsed_seconds": 1493.335
+    },
+    {
+      "iteration": 102,
+      "category": "ask_missing_information",
+      "loss": 9.152116294413203e-08,
+      "pre_update_mean_logp_gap": 8.353347778320312,
+      "elapsed_seconds": 1509.201
+    },
+    {
+      "iteration": 103,
+      "category": "preserve_policy_handoff",
+      "loss": 0.00042185368471112794,
+      "pre_update_mean_logp_gap": 4.135320544242859,
+      "elapsed_seconds": 1542.521
+    },
+    {
+      "iteration": 104,
+      "category": "continue_after_answer",
+      "loss": 0.0005461390236203906,
+      "pre_update_mean_logp_gap": 4.006181955337524,
+      "elapsed_seconds": 1574.415
+    },
+    {
+      "iteration": 105,
+      "category": "preserve_exchange_intent",
+      "loss": 0.005820054679278105,
+      "pre_update_mean_logp_gap": 2.8217670917510986,
+      "elapsed_seconds": 1589.546
+    },
+    {
+      "iteration": 106,
+      "category": "preserve_exchange_intent",
+      "loss": 0.006862848910043126,
+      "pre_update_mean_logp_gap": 2.739099621772766,
+      "elapsed_seconds": 1603.953
+    },
+    {
+      "iteration": 107,
+      "category": "preserve_policy_handoff",
+      "loss": 0.0003356604019853069,
+      "pre_update_mean_logp_gap": 4.249621391296387,
+      "elapsed_seconds": 1620.129
+    },
+    {
+      "iteration": 108,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 8.00844218041606e-09,
+      "pre_update_mean_logp_gap": 9.57138478755951,
+      "elapsed_seconds": 1634.271
+    },
+    {
+      "iteration": 109,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 7.256996835369206e-08,
+      "pre_update_mean_logp_gap": 8.469357311725616,
+      "elapsed_seconds": 1648.153
+    },
+    {
+      "iteration": 110,
+      "category": "continue_after_answer",
+      "loss": 0.000641421123182841,
+      "pre_update_mean_logp_gap": 3.925751805305481,
+      "elapsed_seconds": 1666.453
+    },
+    {
+      "iteration": 111,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 2.9897899344739926e-08,
+      "pre_update_mean_logp_gap": 8.912738800048828,
+      "elapsed_seconds": 1685.107
+    },
+    {
+      "iteration": 112,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.0838229856969177e-09,
+      "pre_update_mean_logp_gap": 10.571385622024536,
+      "elapsed_seconds": 1696.025
+    },
+    {
+      "iteration": 113,
+      "category": "continue_after_answer",
+      "loss": 0.0005633288480923341,
+      "pre_update_mean_logp_gap": 3.9906826615333557,
+      "elapsed_seconds": 1707.763
+    },
+    {
+      "iteration": 114,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.0913361789502176e-08,
+      "pre_update_mean_logp_gap": 9.416638970375061,
+      "elapsed_seconds": 1721.542
+    },
+    {
+      "iteration": 115,
+      "category": "continue_after_answer",
+      "loss": 0.00024235191925069208,
+      "pre_update_mean_logp_gap": 4.412499248981476,
+      "elapsed_seconds": 1735.455
+    },
+    {
+      "iteration": 116,
+      "category": "continue_after_answer",
+      "loss": 0.000769838061146921,
+      "pre_update_mean_logp_gap": 3.8344727158546448,
+      "elapsed_seconds": 1759.512
+    },
+    {
+      "iteration": 117,
+      "category": "preserve_exchange_intent",
+      "loss": 0.0037380342373954005,
+      "pre_update_mean_logp_gap": 3.043662905693054,
+      "elapsed_seconds": 1772.376
+    },
+    {
+      "iteration": 118,
+      "category": "ask_missing_information",
+      "loss": 1.0978601931568707e-07,
+      "pre_update_mean_logp_gap": 8.26236629486084,
+      "elapsed_seconds": 1783.744
+    },
+    {
+      "iteration": 119,
+      "category": "preserve_policy_handoff",
+      "loss": 8.86739508587913e-05,
+      "pre_update_mean_logp_gap": 4.915250025689602,
+      "elapsed_seconds": 1793.758
+    },
+    {
+      "iteration": 120,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.9849153976210223e-08,
+      "pre_update_mean_logp_gap": 9.11755222082138,
+      "elapsed_seconds": 1815.911
+    },
+    {
+      "iteration": 121,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.000596619805932e-10,
+      "pre_update_mean_logp_gap": 11.762627243995667,
+      "elapsed_seconds": 1832.056
+    },
+    {
+      "iteration": 122,
+      "category": "preserve_exchange_intent",
+      "loss": 0.009558900714237128,
+      "pre_update_mean_logp_gap": 2.5727496445178986,
+      "elapsed_seconds": 1845.798
+    },
+    {
+      "iteration": 123,
+      "category": "ask_missing_information",
+      "loss": 8.250954198604113e-08,
+      "pre_update_mean_logp_gap": 8.405175924301147,
+      "elapsed_seconds": 1856.064
+    },
+    {
+      "iteration": 124,
+      "category": "avoid_unnecessary_handoff",
+      "loss": 1.4649492915860152e-09,
+      "pre_update_mean_logp_gap": 10.420722603797913,
+      "elapsed_seconds": 1868.719
+    }
+  ],
+  "completed_updates": 124,
+  "adapter_l2_change_from_sft480": 1.210790789276839,
+  "adapter_sha256": "0d33ccb44e0a861f4ae7d1e357cc8af2ad02657e60e52b13119ccfc7da168543",
+  "elapsed_seconds": 1868.91,
+  "peak_memory_bytes": 4176254160,
+  "preflight_only": false,
+  "gradient_audit": null,
+  "previous_wired_limit": 0,
+  "wired_limit_bytes": 6442450944,
+  "cache_limit_bytes": 268435456,
+  "previous_cache_limit": 16320875724,
+  "execution": "Compiled gradient with mutable input/output state capture; masked 32-token padding. Wired memory capped at 6 GiB, cache at 256 MiB, cleared after each pair. Abandoned eager/cache-initial weights not reused.",
+  "test_used_for_selection": false,
+  "cloud_compute_used": false
+}

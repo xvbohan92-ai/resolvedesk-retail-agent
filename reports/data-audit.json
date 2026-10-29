@@ -1,0 +1,859 @@
+{
+  "manifest": {
+    "cases": {
+      "train": 72,
+      "valid": 18,
+      "test": 27
+    },
+    "rows": {
+      "train": 256,
+      "valid": 64,
+      "test": 96
+    },
+    "files": {
+      "training/fixtures.py": "84a7c78eec2a4060ee858a93792a40de0be79c52610d1ade02dc0ce84577294b",
+      "training/prepare.py": "475b8cff1266a6ebf3d96ed0f3f46ac551aa570aee8d8bcc325ae1df2eefc1bc",
+      "training/scoring.py": "4408966c655a222f8d1a2aa1418594587a63163029c5477bebeacacd6db9eb6b",
+      "training/config.json": "3d68318d43e389b84763be509f1dc4491bff5413d0998d6a2078a5f43fa2b47d",
+      "resolve_desk/protocol.py": "7d48eca71522d12da7e889b0fcc3b939c1f8bae12460b64b8a8dc173ef6185a2",
+      "training/datasets/cases.json": "4175bcc6ac53b3ac267a9b001f630ef963424513d340f2475a2f7c37793492e3",
+      "training/datasets/train.jsonl": "88c58a44e0243341022698e95a46e18286e1b423d93efb86990509a2cf2fcff8",
+      "training/datasets/valid.jsonl": "9682e5339a693863c9a3beac4fc7ef475c4a2f8dd0c335c77241f7485743d99b",
+      "training/datasets/test.jsonl": "041f0f4f778b7285c4acd571fc03376455b3a5eafce652a70d11df89e78dc9a3"
+    },
+    "families": [
+      "cancel",
+      "missing_reason",
+      "return",
+      "missing_payment",
+      "exchange",
+      "exchange_fallback",
+      "forbidden_status",
+      "foreign_order",
+      "missing_email"
+    ],
+    "scope": "Self-authored synthetic English cases; disjoint IDs, numbers and request templates across splits; shared policy, schema, task families and author. Programmatic demonstrations; not human annotations, not official tau-bench scores, not real retailer outcomes."
+  },
+  "reference_outcomes": [
+    {
+      "id": "train-cancel-00",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-cancel-01",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-cancel-02",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-cancel-03",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-cancel-04",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-cancel-05",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-cancel-06",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-cancel-07",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_reason-00",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_reason-01",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_reason-02",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_reason-03",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_reason-04",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_reason-05",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_reason-06",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_reason-07",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-return-00",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-return-01",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-return-02",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-return-03",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-return-04",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-return-05",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-return-06",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-return-07",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_payment-00",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_payment-01",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_payment-02",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_payment-03",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_payment-04",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_payment-05",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_payment-06",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_payment-07",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange-00",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange-01",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange-02",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange-03",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange-04",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange-05",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange-06",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange-07",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange_fallback-00",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange_fallback-01",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange_fallback-02",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange_fallback-03",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange_fallback-04",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange_fallback-05",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange_fallback-06",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-exchange_fallback-07",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-forbidden_status-00",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-forbidden_status-01",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-forbidden_status-02",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-forbidden_status-03",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-forbidden_status-04",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-forbidden_status-05",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-forbidden_status-06",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-forbidden_status-07",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-foreign_order-00",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-foreign_order-01",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-foreign_order-02",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-foreign_order-03",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-foreign_order-04",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-foreign_order-05",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-foreign_order-06",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-foreign_order-07",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_email-00",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_email-01",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_email-02",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_email-03",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_email-04",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_email-05",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_email-06",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "train-missing_email-07",
+      "split": "train",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-cancel-00",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-cancel-01",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-missing_reason-00",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-missing_reason-01",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-return-00",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-return-01",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-missing_payment-00",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-missing_payment-01",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-exchange-00",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-exchange-01",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-exchange_fallback-00",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-exchange_fallback-01",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-forbidden_status-00",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-forbidden_status-01",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-foreign_order-00",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-foreign_order-01",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-missing_email-00",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "valid-missing_email-01",
+      "split": "valid",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-cancel-00",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-cancel-01",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-cancel-02",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-missing_reason-00",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-missing_reason-01",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-missing_reason-02",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-return-00",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-return-01",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-return-02",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-missing_payment-00",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-missing_payment-01",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-missing_payment-02",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-exchange-00",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-exchange-01",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-exchange-02",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-exchange_fallback-00",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-exchange_fallback-01",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-exchange_fallback-02",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-forbidden_status-00",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-forbidden_status-01",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-forbidden_status-02",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-foreign_order-00",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-foreign_order-01",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-foreign_order-02",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-missing_email-00",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-missing_email-01",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    },
+    {
+      "id": "test-missing_email-02",
+      "split": "test",
+      "proposal_correct": true,
+      "task_success": true,
+      "confirmation_preserved": true
+    }
+  ],
+  "all_reference_tasks_pass": true
+}

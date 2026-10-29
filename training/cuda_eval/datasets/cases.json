@@ -1,0 +1,4792 @@
+[
+  {
+    "id": "cuda-fresh-test-cancel-00",
+    "family": "cancel",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-PHLZW476AW43. Account address: clientr78dd5bw3erh@orders.example. Stop this order before fulfillment; my circumstances changed and I have no use for it now.",
+    "evidence_initial": "Stop this order before fulfillment; my circumstances changed and I have no use for it now.",
+    "customer": {
+      "id": "cu_UYSUBFP9JBNX",
+      "email": "clientr78dd5bw3erh@orders.example",
+      "gift_card": {
+        "id": "cg_8ZXH9GQ76EAY",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_XNEZMTJRTX76": {
+        "product_id": "cp_XNEZMTJRTX76",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_JE9YA7WLXZ4Q",
+            "option": "oatmeal / XXL",
+            "price_cents": 8219,
+            "available": true
+          },
+          {
+            "item_id": "ci_VDKWZ2EU6BJ2",
+            "option": "obsidian / M",
+            "price_cents": 7644,
+            "available": true
+          },
+          {
+            "item_id": "ci_SCAA4729LCST",
+            "option": "vermilion / XS",
+            "price_cents": 8944,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-PHLZW476AW43",
+        "user_id": "cu_UYSUBFP9JBNX",
+        "status": "pending",
+        "original_payment": "cc_KWW7CT8N9TJT",
+        "items": [
+          {
+            "item_id": "ci_VDKWZ2EU6BJ2",
+            "product_id": "cp_XNEZMTJRTX76",
+            "option": "obsidian / M",
+            "price_cents": 7644
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientr78dd5bw3erh@orders.example",
+      "order_id": "CX-PHLZW476AW43",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_VDKWZ2EU6BJ2",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "clientr78dd5bw3erh@orders.example",
+      "order_id": "CX-PHLZW476AW43",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "clientr78dd5bw3erh@orders.example",
+      "order_id": "CX-PHLZW476AW43",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "CX-PHLZW476AW43",
+      "item_id": "ci_VDKWZ2EU6BJ2",
+      "new_item_id": "ci_SCAA4729LCST",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 7644,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-cancel-01",
+    "family": "cancel",
+    "split": "test",
+    "initial_message": "For your retail team: Withdraw this order, please: I clicked through checkout accidentally rather than intending to buy. Reference CX-WUF9YYKSXWAP. Account address: clientpfwgpn5sm4cr@orders.example.",
+    "evidence_initial": "Withdraw this order, please: I clicked through checkout accidentally rather than intending to buy.",
+    "customer": {
+      "id": "cu_VRD5FJPMVXAQ",
+      "email": "clientpfwgpn5sm4cr@orders.example",
+      "gift_card": {
+        "id": "cg_4VRSHQ7KBLM5",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_SYD6YPN2KLYB": {
+        "product_id": "cp_SYD6YPN2KLYB",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_Z6VNVC8N2MTJ",
+            "option": "oatmeal / XXL",
+            "price_cents": 10846,
+            "available": true
+          },
+          {
+            "item_id": "ci_J43G5T72QC2W",
+            "option": "juniper / XL",
+            "price_cents": 9621,
+            "available": true
+          },
+          {
+            "item_id": "ci_TKE39PC33FN6",
+            "option": "obsidian / M",
+            "price_cents": 10271,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-WUF9YYKSXWAP",
+        "user_id": "cu_VRD5FJPMVXAQ",
+        "status": "pending",
+        "original_payment": "cc_K7G3PVQBCLGD",
+        "items": [
+          {
+            "item_id": "ci_TKE39PC33FN6",
+            "product_id": "cp_SYD6YPN2KLYB",
+            "option": "obsidian / M",
+            "price_cents": 10271
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientpfwgpn5sm4cr@orders.example>.",
+      "order_id": "CX-WUF9YYKSXWAP",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_TKE39PC33FN6",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "clientpfwgpn5sm4cr@orders.example",
+      "order_id": "CX-WUF9YYKSXWAP",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "clientpfwgpn5sm4cr@orders.example",
+      "order_id": "CX-WUF9YYKSXWAP",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "CX-WUF9YYKSXWAP",
+      "item_id": "ci_TKE39PC33FN6",
+      "new_item_id": "ci_J43G5T72QC2W",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 10271,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-missing_reason-00",
+    "family": "missing_reason",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-YDXXJKMWZPZF. Account address: clientjeahaspx84zg@orders.example. I need this order withdrawn. Please ask me for whichever cancellation detail is still missing.",
+    "evidence_initial": "I need this order withdrawn. Please ask me for whichever cancellation detail is still missing.",
+    "customer": {
+      "id": "cu_JT6RM8LLXAA4",
+      "email": "clientjeahaspx84zg@orders.example",
+      "gift_card": {
+        "id": "cg_K2TF84H74XGD",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_8QWFSJMDML5T": {
+        "product_id": "cp_8QWFSJMDML5T",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_25URWCY9XEMH",
+            "option": "oatmeal / XXL",
+            "price_cents": 8080,
+            "available": true
+          },
+          {
+            "item_id": "ci_LPS55L74DZA5",
+            "option": "obsidian / M",
+            "price_cents": 7505,
+            "available": true
+          },
+          {
+            "item_id": "ci_DKJT7U4XRNKS",
+            "option": "vermilion / XS",
+            "price_cents": 6855,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-YDXXJKMWZPZF",
+        "user_id": "cu_JT6RM8LLXAA4",
+        "status": "pending",
+        "original_payment": "cc_PRVRKG2LVCJY",
+        "items": [
+          {
+            "item_id": "ci_LPS55L74DZA5",
+            "product_id": "cp_8QWFSJMDML5T",
+            "option": "obsidian / M",
+            "price_cents": 7505
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientjeahaspx84zg@orders.example",
+      "order_id": "CX-YDXXJKMWZPZF",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_LPS55L74DZA5",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "clientjeahaspx84zg@orders.example",
+      "order_id": "CX-YDXXJKMWZPZF",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "clientjeahaspx84zg@orders.example",
+      "order_id": "CX-YDXXJKMWZPZF",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "reason",
+    "required_answers": [
+      "reason"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "CX-YDXXJKMWZPZF",
+      "item_id": "ci_LPS55L74DZA5",
+      "new_item_id": "ci_DKJT7U4XRNKS",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 7505,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-missing_reason-01",
+    "family": "missing_reason",
+    "split": "test",
+    "initial_message": "For your retail team: Please stop fulfillment of this order; I have not yet supplied my cancellation explanation. Reference CX-RHHK8XRFM25Z. Account address: client8urfuypyqkju@orders.example.",
+    "evidence_initial": "Please stop fulfillment of this order; I have not yet supplied my cancellation explanation.",
+    "customer": {
+      "id": "cu_WVQYD7B233AF",
+      "email": "client8urfuypyqkju@orders.example",
+      "gift_card": {
+        "id": "cg_UVJHZ9DCLYGE",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_XEBX77XDJMTY": {
+        "product_id": "cp_XEBX77XDJMTY",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_ZYMH4W97UDEZ",
+            "option": "juniper / XL",
+            "price_cents": 9488,
+            "available": true
+          },
+          {
+            "item_id": "ci_MDGYSWVJL48P",
+            "option": "oatmeal / XXL",
+            "price_cents": 7913,
+            "available": true
+          },
+          {
+            "item_id": "ci_BDZVLZFRWV3P",
+            "option": "obsidian / M",
+            "price_cents": 7338,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-RHHK8XRFM25Z",
+        "user_id": "cu_WVQYD7B233AF",
+        "status": "pending",
+        "original_payment": "cc_HX3MYK2KRXEK",
+        "items": [
+          {
+            "item_id": "ci_BDZVLZFRWV3P",
+            "product_id": "cp_XEBX77XDJMTY",
+            "option": "obsidian / M",
+            "price_cents": 7338
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <client8urfuypyqkju@orders.example>.",
+      "order_id": "CX-RHHK8XRFM25Z",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_BDZVLZFRWV3P",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "client8urfuypyqkju@orders.example",
+      "order_id": "CX-RHHK8XRFM25Z",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "client8urfuypyqkju@orders.example",
+      "order_id": "CX-RHHK8XRFM25Z",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "reason",
+    "required_answers": [
+      "reason"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "CX-RHHK8XRFM25Z",
+      "item_id": "ci_BDZVLZFRWV3P",
+      "new_item_id": "ci_ZYMH4W97UDEZ",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 7338,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-return-00",
+    "family": "return",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-5XERY9RXXCA8. Account address: clienthzyb2hzw8rev@orders.example. Please accept the whole vest as a return and send its refund through original payment.",
+    "evidence_initial": "Please accept the whole vest as a return and send its refund through original payment.",
+    "customer": {
+      "id": "cu_KEZ62UM7RSYE",
+      "email": "clienthzyb2hzw8rev@orders.example",
+      "gift_card": {
+        "id": "cg_GCVJABNNJGE5",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_44WVH4JAK7ND": {
+        "product_id": "cp_44WVH4JAK7ND",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_3UJ35FPZYH6H",
+            "option": "obsidian / M",
+            "price_cents": 9466,
+            "available": true
+          },
+          {
+            "item_id": "ci_LUPDAV6QXUPK",
+            "option": "oatmeal / XXL",
+            "price_cents": 10041,
+            "available": true
+          },
+          {
+            "item_id": "ci_PNERDXZ6ERBW",
+            "option": "vermilion / XS",
+            "price_cents": 11616,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-5XERY9RXXCA8",
+        "user_id": "cu_KEZ62UM7RSYE",
+        "status": "delivered",
+        "original_payment": "cc_25GHQY4VDXEQ",
+        "items": [
+          {
+            "item_id": "ci_3UJ35FPZYH6H",
+            "product_id": "cp_44WVH4JAK7ND",
+            "option": "obsidian / M",
+            "price_cents": 9466
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clienthzyb2hzw8rev@orders.example",
+      "order_id": "CX-5XERY9RXXCA8",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_3UJ35FPZYH6H",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "clienthzyb2hzw8rev@orders.example",
+      "order_id": "CX-5XERY9RXXCA8",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "clienthzyb2hzw8rev@orders.example",
+      "order_id": "CX-5XERY9RXXCA8",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-5XERY9RXXCA8",
+      "item_id": "ci_3UJ35FPZYH6H",
+      "new_item_id": "ci_PNERDXZ6ERBW",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 9466,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-return-01",
+    "family": "return",
+    "split": "test",
+    "initial_message": "For your retail team: I have decided on returning the complete vest; the refund should go through original payment. Reference CX-JS8653RCHLUR. Account address: clientsca8ttqky4b9@orders.example.",
+    "evidence_initial": "I have decided on returning the complete vest; the refund should go through original payment.",
+    "customer": {
+      "id": "cu_69AF4AFK8BKV",
+      "email": "clientsca8ttqky4b9@orders.example",
+      "gift_card": {
+        "id": "cg_PUUYS2GUWPDJ",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_64PWZWASTHST": {
+        "product_id": "cp_64PWZWASTHST",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_DQVYTHZTWWNW",
+            "option": "juniper / XL",
+            "price_cents": 7744,
+            "available": true
+          },
+          {
+            "item_id": "ci_LEJUG868AR46",
+            "option": "oatmeal / XXL",
+            "price_cents": 7019,
+            "available": true
+          },
+          {
+            "item_id": "ci_MK9LNBE3HVP8",
+            "option": "obsidian / M",
+            "price_cents": 6444,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-JS8653RCHLUR",
+        "user_id": "cu_69AF4AFK8BKV",
+        "status": "delivered",
+        "original_payment": "cc_EXEZQ8TPKBYX",
+        "items": [
+          {
+            "item_id": "ci_MK9LNBE3HVP8",
+            "product_id": "cp_64PWZWASTHST",
+            "option": "obsidian / M",
+            "price_cents": 6444
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientsca8ttqky4b9@orders.example>.",
+      "order_id": "CX-JS8653RCHLUR",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_MK9LNBE3HVP8",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "clientsca8ttqky4b9@orders.example",
+      "order_id": "CX-JS8653RCHLUR",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "clientsca8ttqky4b9@orders.example",
+      "order_id": "CX-JS8653RCHLUR",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-JS8653RCHLUR",
+      "item_id": "ci_MK9LNBE3HVP8",
+      "new_item_id": "ci_DQVYTHZTWWNW",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 6444,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-missing_payment-00",
+    "family": "missing_payment",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-6QXUEN55X6HW. Account address: clientdgc2p5pauunz@orders.example. The resolution I choose is a full return. I have not decided which refund destination to use.",
+    "evidence_initial": "The resolution I choose is a full return. I have not decided which refund destination to use.",
+    "customer": {
+      "id": "cu_HM63NNVEEXHA",
+      "email": "clientdgc2p5pauunz@orders.example",
+      "gift_card": {
+        "id": "cg_GST549A5K2P4",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_PECQQ5Y5A4TM": {
+        "product_id": "cp_PECQQ5Y5A4TM",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_2Z9FE4VKYJKJ",
+            "option": "vermilion / XS",
+            "price_cents": 8040,
+            "available": true
+          },
+          {
+            "item_id": "ci_F6UD2TQDM372",
+            "option": "oatmeal / XXL",
+            "price_cents": 7315,
+            "available": true
+          },
+          {
+            "item_id": "ci_SQE6JRMHDLAS",
+            "option": "obsidian / M",
+            "price_cents": 6740,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-6QXUEN55X6HW",
+        "user_id": "cu_HM63NNVEEXHA",
+        "status": "delivered",
+        "original_payment": "cc_6U2FS9QUQ6L6",
+        "items": [
+          {
+            "item_id": "ci_SQE6JRMHDLAS",
+            "product_id": "cp_PECQQ5Y5A4TM",
+            "option": "obsidian / M",
+            "price_cents": 6740
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientdgc2p5pauunz@orders.example",
+      "order_id": "CX-6QXUEN55X6HW",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_SQE6JRMHDLAS",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "clientdgc2p5pauunz@orders.example",
+      "order_id": "CX-6QXUEN55X6HW",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "clientdgc2p5pauunz@orders.example",
+      "order_id": "CX-6QXUEN55X6HW",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-6QXUEN55X6HW",
+      "item_id": "ci_SQE6JRMHDLAS",
+      "new_item_id": "ci_2Z9FE4VKYJKJ",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 6740,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-missing_payment-01",
+    "family": "missing_payment",
+    "split": "test",
+    "initial_message": "For your retail team: I want to send back the original garment; the phrase original garment does not specify a refund method. Reference CX-9BHVCHL7N2Z2. Account address: clientvzvf9z4uqe4j@orders.example.",
+    "evidence_initial": "I want to send back the original garment; the phrase original garment does not specify a refund method.",
+    "customer": {
+      "id": "cu_NCX2Y955D8CL",
+      "email": "clientvzvf9z4uqe4j@orders.example",
+      "gift_card": {
+        "id": "cg_GZNVDQZAY2WE",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_Q3DWB47HRSWC": {
+        "product_id": "cp_Q3DWB47HRSWC",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_EPCPMTXYSDTG",
+            "option": "oatmeal / XXL",
+            "price_cents": 6710,
+            "available": true
+          },
+          {
+            "item_id": "ci_V8J9UPMTGZ7R",
+            "option": "juniper / XL",
+            "price_cents": 5485,
+            "available": true
+          },
+          {
+            "item_id": "ci_BV64ZNQKG5GL",
+            "option": "obsidian / M",
+            "price_cents": 6135,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-9BHVCHL7N2Z2",
+        "user_id": "cu_NCX2Y955D8CL",
+        "status": "delivered",
+        "original_payment": "cc_RA2ZM4K3DZ6Z",
+        "items": [
+          {
+            "item_id": "ci_BV64ZNQKG5GL",
+            "product_id": "cp_Q3DWB47HRSWC",
+            "option": "obsidian / M",
+            "price_cents": 6135
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientvzvf9z4uqe4j@orders.example>.",
+      "order_id": "CX-9BHVCHL7N2Z2",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_BV64ZNQKG5GL",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "clientvzvf9z4uqe4j@orders.example",
+      "order_id": "CX-9BHVCHL7N2Z2",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "clientvzvf9z4uqe4j@orders.example",
+      "order_id": "CX-9BHVCHL7N2Z2",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-9BHVCHL7N2Z2",
+      "item_id": "ci_BV64ZNQKG5GL",
+      "new_item_id": "ci_V8J9UPMTGZ7R",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 6135,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange-00",
+    "family": "exchange",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-KGE4DQ8JDYGQ. Account address: client6vmfptkvwxf6@orders.example. I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. The size and color must both match.",
+    "evidence_initial": "I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. The size and color must both match.",
+    "customer": {
+      "id": "cu_ZUG46REQF3CC",
+      "email": "client6vmfptkvwxf6@orders.example",
+      "gift_card": {
+        "id": "cg_58RQX389BFS2",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_CL48EJTS2SSQ": {
+        "product_id": "cp_CL48EJTS2SSQ",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_9UT7EDPYMT9E",
+            "option": "vermilion / XS",
+            "price_cents": 10890,
+            "available": true
+          },
+          {
+            "item_id": "ci_M7SQ4UN9ZRA6",
+            "option": "obsidian / M",
+            "price_cents": 11540,
+            "available": true
+          },
+          {
+            "item_id": "ci_A5VHF7Z2NYPN",
+            "option": "oatmeal / XXL",
+            "price_cents": 12115,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-KGE4DQ8JDYGQ",
+        "user_id": "cu_ZUG46REQF3CC",
+        "status": "delivered",
+        "original_payment": "cc_FEVQFJ3L3Y38",
+        "items": [
+          {
+            "item_id": "ci_M7SQ4UN9ZRA6",
+            "product_id": "cp_CL48EJTS2SSQ",
+            "option": "obsidian / M",
+            "price_cents": 11540
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "client6vmfptkvwxf6@orders.example",
+      "order_id": "CX-KGE4DQ8JDYGQ",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_M7SQ4UN9ZRA6",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "client6vmfptkvwxf6@orders.example",
+      "order_id": "CX-KGE4DQ8JDYGQ",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "client6vmfptkvwxf6@orders.example",
+      "order_id": "CX-KGE4DQ8JDYGQ",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-KGE4DQ8JDYGQ",
+      "item_id": "ci_M7SQ4UN9ZRA6",
+      "new_item_id": "ci_9UT7EDPYMT9E",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -650,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange-01",
+    "family": "exchange",
+    "split": "test",
+    "initial_message": "For your retail team: Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. Please check both parts of the replacement's variant description. Reference CX-2LV7FAB6L52N. Account address: clientrfeq5qwmfjgs@orders.example.",
+    "evidence_initial": "Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. Please check both parts of the replacement's variant description.",
+    "customer": {
+      "id": "cu_LWWARMKAD27H",
+      "email": "clientrfeq5qwmfjgs@orders.example",
+      "gift_card": {
+        "id": "cg_PKQR2ZBB84VS",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_CQ6QPR3MU2FX": {
+        "product_id": "cp_CQ6QPR3MU2FX",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_5CW4HXNBNLSK",
+            "option": "oatmeal / XXL",
+            "price_cents": 11117,
+            "available": true
+          },
+          {
+            "item_id": "ci_F65VE38VKRZY",
+            "option": "juniper / XL",
+            "price_cents": 12692,
+            "available": true
+          },
+          {
+            "item_id": "ci_HGN4GBS9H6WB",
+            "option": "obsidian / M",
+            "price_cents": 10542,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-2LV7FAB6L52N",
+        "user_id": "cu_LWWARMKAD27H",
+        "status": "delivered",
+        "original_payment": "cc_QP94LHFDM3ZF",
+        "items": [
+          {
+            "item_id": "ci_HGN4GBS9H6WB",
+            "product_id": "cp_CQ6QPR3MU2FX",
+            "option": "obsidian / M",
+            "price_cents": 10542
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientrfeq5qwmfjgs@orders.example>.",
+      "order_id": "CX-2LV7FAB6L52N",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_HGN4GBS9H6WB",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientrfeq5qwmfjgs@orders.example",
+      "order_id": "CX-2LV7FAB6L52N",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientrfeq5qwmfjgs@orders.example",
+      "order_id": "CX-2LV7FAB6L52N",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-2LV7FAB6L52N",
+      "item_id": "ci_HGN4GBS9H6WB",
+      "new_item_id": "ci_F65VE38VKRZY",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 2150,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_fallback-00",
+    "family": "exchange_fallback",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-L7MYXNJU5G94. Account address: clientq5y7xfxazvbv@orders.example. I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. The exact variant matters to me. You may send back this garment only if its named replacement has zero availability.",
+    "evidence_initial": "I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. The exact variant matters to me. You may send back this garment only if its named replacement has zero availability.",
+    "customer": {
+      "id": "cu_Y9PKVWZZPWRL",
+      "email": "clientq5y7xfxazvbv@orders.example",
+      "gift_card": {
+        "id": "cg_CA8V8FEFWZZA",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_XJDH2N7W79VA": {
+        "product_id": "cp_XJDH2N7W79VA",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_KQ6ZEABMPKXK",
+            "option": "obsidian / M",
+            "price_cents": 8514,
+            "available": true
+          },
+          {
+            "item_id": "ci_PXLQHGZLFDXA",
+            "option": "oatmeal / XXL",
+            "price_cents": 9089,
+            "available": true
+          },
+          {
+            "item_id": "ci_AWEGZBVHRNGE",
+            "option": "vermilion / XS",
+            "price_cents": 10664,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-L7MYXNJU5G94",
+        "user_id": "cu_Y9PKVWZZPWRL",
+        "status": "delivered",
+        "original_payment": "cc_QW48CV4CAEMS",
+        "items": [
+          {
+            "item_id": "ci_KQ6ZEABMPKXK",
+            "product_id": "cp_XJDH2N7W79VA",
+            "option": "obsidian / M",
+            "price_cents": 8514
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientq5y7xfxazvbv@orders.example",
+      "order_id": "CX-L7MYXNJU5G94",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_KQ6ZEABMPKXK",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientq5y7xfxazvbv@orders.example",
+      "order_id": "CX-L7MYXNJU5G94",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientq5y7xfxazvbv@orders.example",
+      "order_id": "CX-L7MYXNJU5G94",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-L7MYXNJU5G94",
+      "item_id": "ci_KQ6ZEABMPKXK",
+      "new_item_id": "ci_AWEGZBVHRNGE",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 8514,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_fallback-01",
+    "family": "exchange_fallback",
+    "split": "test",
+    "initial_message": "For your retail team: Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. Please verify the exact combination I named. Should that precise size and color be unstocked, I give permission to arrange this item's return. Reference CX-N4DF8WHSW6FW. Account address: client4s9bt9kq3nha@orders.example.",
+    "evidence_initial": "Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. Please verify the exact combination I named. Should that precise size and color be unstocked, I give permission to arrange this item's return.",
+    "customer": {
+      "id": "cu_3HT6Y68CENKC",
+      "email": "client4s9bt9kq3nha@orders.example",
+      "gift_card": {
+        "id": "cg_9EW8DD8STUTZ",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_KB9A8UGJN8CW": {
+        "product_id": "cp_KB9A8UGJN8CW",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_2LJED5QMG6GH",
+            "option": "obsidian / M",
+            "price_cents": 9107,
+            "available": true
+          },
+          {
+            "item_id": "ci_JHNT3SZZ6984",
+            "option": "juniper / XL",
+            "price_cents": 10407,
+            "available": false
+          },
+          {
+            "item_id": "ci_5FY4V9AGUYQF",
+            "option": "oatmeal / XXL",
+            "price_cents": 9682,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-N4DF8WHSW6FW",
+        "user_id": "cu_3HT6Y68CENKC",
+        "status": "delivered",
+        "original_payment": "cc_CWE7848ZBNFP",
+        "items": [
+          {
+            "item_id": "ci_2LJED5QMG6GH",
+            "product_id": "cp_KB9A8UGJN8CW",
+            "option": "obsidian / M",
+            "price_cents": 9107
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <client4s9bt9kq3nha@orders.example>.",
+      "order_id": "CX-N4DF8WHSW6FW",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_2LJED5QMG6GH",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "client4s9bt9kq3nha@orders.example",
+      "order_id": "CX-N4DF8WHSW6FW",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "client4s9bt9kq3nha@orders.example",
+      "order_id": "CX-N4DF8WHSW6FW",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-N4DF8WHSW6FW",
+      "item_id": "ci_2LJED5QMG6GH",
+      "new_item_id": "ci_JHNT3SZZ6984",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 9107,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-forbidden_status-00",
+    "family": "forbidden_status",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-YE6DWPZ5G6QQ. Account address: client3xenka2fh6s4@orders.example. Cancel this purchase because I no longer need it; please have a specialist handle any status restriction.",
+    "evidence_initial": "Cancel this purchase because I no longer need it; please have a specialist handle any status restriction.",
+    "customer": {
+      "id": "cu_82DQWKWDQMRN",
+      "email": "client3xenka2fh6s4@orders.example",
+      "gift_card": {
+        "id": "cg_HG33SEEHDU8P",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_K5LC6HGWJPCS": {
+        "product_id": "cp_K5LC6HGWJPCS",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_WSWYRDQ5NFNL",
+            "option": "oatmeal / XXL",
+            "price_cents": 7100,
+            "available": true
+          },
+          {
+            "item_id": "ci_98YB7D7YYM7T",
+            "option": "vermilion / XS",
+            "price_cents": 7825,
+            "available": true
+          },
+          {
+            "item_id": "ci_2R3HTGKXSRXB",
+            "option": "obsidian / M",
+            "price_cents": 6525,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-YE6DWPZ5G6QQ",
+        "user_id": "cu_82DQWKWDQMRN",
+        "status": "processed",
+        "original_payment": "cc_E7V6WYZKZP79",
+        "items": [
+          {
+            "item_id": "ci_2R3HTGKXSRXB",
+            "product_id": "cp_K5LC6HGWJPCS",
+            "option": "obsidian / M",
+            "price_cents": 6525
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "client3xenka2fh6s4@orders.example",
+      "order_id": "CX-YE6DWPZ5G6QQ",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_2R3HTGKXSRXB",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "client3xenka2fh6s4@orders.example",
+      "order_id": "CX-YE6DWPZ5G6QQ",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "client3xenka2fh6s4@orders.example",
+      "order_id": "CX-YE6DWPZ5G6QQ",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-YE6DWPZ5G6QQ",
+      "item_id": "ci_2R3HTGKXSRXB",
+      "new_item_id": "ci_98YB7D7YYM7T",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 6525,
+      "initial_status": "processed",
+      "target_status": "processed"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-forbidden_status-01",
+    "family": "forbidden_status",
+    "split": "test",
+    "initial_message": "For your retail team: Checkout was accidental, so I seek cancellation. If this order is past the cancellation stage, bring in a person. Reference CX-W8J7LNBEGPY7. Account address: clientadvzhs66mq9c@orders.example.",
+    "evidence_initial": "Checkout was accidental, so I seek cancellation. If this order is past the cancellation stage, bring in a person.",
+    "customer": {
+      "id": "cu_MXBJHLV6Z6EN",
+      "email": "clientadvzhs66mq9c@orders.example",
+      "gift_card": {
+        "id": "cg_CJZL8NBX2CYM",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_P6MTHXGHPBZ5": {
+        "product_id": "cp_P6MTHXGHPBZ5",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_4ETESP6US4MF",
+            "option": "juniper / XL",
+            "price_cents": 9175,
+            "available": true
+          },
+          {
+            "item_id": "ci_STHFPVVGTRBB",
+            "option": "obsidian / M",
+            "price_cents": 9825,
+            "available": true
+          },
+          {
+            "item_id": "ci_9QD2ESC3PGUL",
+            "option": "oatmeal / XXL",
+            "price_cents": 10400,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-W8J7LNBEGPY7",
+        "user_id": "cu_MXBJHLV6Z6EN",
+        "status": "delivered",
+        "original_payment": "cc_BBGHMM3W3KX5",
+        "items": [
+          {
+            "item_id": "ci_STHFPVVGTRBB",
+            "product_id": "cp_P6MTHXGHPBZ5",
+            "option": "obsidian / M",
+            "price_cents": 9825
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientadvzhs66mq9c@orders.example>.",
+      "order_id": "CX-W8J7LNBEGPY7",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_STHFPVVGTRBB",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "clientadvzhs66mq9c@orders.example",
+      "order_id": "CX-W8J7LNBEGPY7",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "clientadvzhs66mq9c@orders.example",
+      "order_id": "CX-W8J7LNBEGPY7",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-W8J7LNBEGPY7",
+      "item_id": "ci_STHFPVVGTRBB",
+      "new_item_id": "ci_4ETESP6US4MF",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 9825,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-foreign_order-00",
+    "family": "foreign_order",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-6HN78CDX3AUT. Account address: clientw85ekzkjals3@orders.example. I seek a full return credited to original payment. Check this order against my account before doing anything.",
+    "evidence_initial": "I seek a full return credited to original payment. Check this order against my account before doing anything.",
+    "customer": {
+      "id": "cu_Y2SWE3M9SAXG",
+      "email": "clientw85ekzkjals3@orders.example",
+      "gift_card": {
+        "id": "cg_7WYCC7QL4TPL",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_5JHPYX86HEQ2": {
+        "product_id": "cp_5JHPYX86HEQ2",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_UBKJKT22E23B",
+            "option": "oatmeal / XXL",
+            "price_cents": 9784,
+            "available": true
+          },
+          {
+            "item_id": "ci_LF3952V7Q245",
+            "option": "obsidian / M",
+            "price_cents": 9209,
+            "available": true
+          },
+          {
+            "item_id": "ci_3T9ZU5Y7K2VN",
+            "option": "vermilion / XS",
+            "price_cents": 8559,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-6HN78CDX3AUT",
+        "user_id": "cu_foreign_FL2VVGWXF9BW",
+        "status": "delivered",
+        "original_payment": "cc_LQENK2GQ72VL",
+        "items": [
+          {
+            "item_id": "ci_LF3952V7Q245",
+            "product_id": "cp_5JHPYX86HEQ2",
+            "option": "obsidian / M",
+            "price_cents": 9209
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientw85ekzkjals3@orders.example",
+      "order_id": "CX-6HN78CDX3AUT",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_LF3952V7Q245",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "clientw85ekzkjals3@orders.example",
+      "order_id": "CX-6HN78CDX3AUT",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "clientw85ekzkjals3@orders.example",
+      "order_id": "CX-6HN78CDX3AUT",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-6HN78CDX3AUT",
+      "item_id": "ci_LF3952V7Q245",
+      "new_item_id": "ci_3T9ZU5Y7K2VN",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 9209,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-foreign_order-01",
+    "family": "foreign_order",
+    "split": "test",
+    "initial_message": "For your retail team: Take back this complete purchase using original payment for credit, but do not ignore any account mismatch. Reference CX-YMR3MHZWBTJU. Account address: clientuzgxqwb2hn7t@orders.example.",
+    "evidence_initial": "Take back this complete purchase using original payment for credit, but do not ignore any account mismatch.",
+    "customer": {
+      "id": "cu_K74X9TMEPMR6",
+      "email": "clientuzgxqwb2hn7t@orders.example",
+      "gift_card": {
+        "id": "cg_GXPQU8V2EKB8",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_CP48WEMRA9RB": {
+        "product_id": "cp_CP48WEMRA9RB",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_GE6MARHEADD7",
+            "option": "oatmeal / XXL",
+            "price_cents": 11995,
+            "available": true
+          },
+          {
+            "item_id": "ci_FB9JPHEWZTNJ",
+            "option": "obsidian / M",
+            "price_cents": 11420,
+            "available": true
+          },
+          {
+            "item_id": "ci_MGUZ6F9NEYLQ",
+            "option": "juniper / XL",
+            "price_cents": 13570,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-YMR3MHZWBTJU",
+        "user_id": "cu_foreign_8HEE95QSAJ5M",
+        "status": "delivered",
+        "original_payment": "cc_LX6M874XH6WM",
+        "items": [
+          {
+            "item_id": "ci_FB9JPHEWZTNJ",
+            "product_id": "cp_CP48WEMRA9RB",
+            "option": "obsidian / M",
+            "price_cents": 11420
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientuzgxqwb2hn7t@orders.example>.",
+      "order_id": "CX-YMR3MHZWBTJU",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_FB9JPHEWZTNJ",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "clientuzgxqwb2hn7t@orders.example",
+      "order_id": "CX-YMR3MHZWBTJU",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "clientuzgxqwb2hn7t@orders.example",
+      "order_id": "CX-YMR3MHZWBTJU",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-YMR3MHZWBTJU",
+      "item_id": "ci_FB9JPHEWZTNJ",
+      "new_item_id": "ci_MGUZ6F9NEYLQ",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 11420,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-missing_email-00",
+    "family": "missing_email",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-YL22APKDQXZE. This vest needs to go back in full, with credit through original payment. Obtain my account contact first.",
+    "evidence_initial": "This vest needs to go back in full, with credit through original payment. Obtain my account contact first.",
+    "customer": {
+      "id": "cu_SS8PSAW2GE26",
+      "email": "client56eqzdvkzcnn@orders.example",
+      "gift_card": {
+        "id": "cg_LJVYM6NRNA4P",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_YKD7DEU6Y556": {
+        "product_id": "cp_YKD7DEU6Y556",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_T55693PUG3QR",
+            "option": "oatmeal / XXL",
+            "price_cents": 7645,
+            "available": true
+          },
+          {
+            "item_id": "ci_K2E46BFNUJCR",
+            "option": "obsidian / M",
+            "price_cents": 7070,
+            "available": true
+          },
+          {
+            "item_id": "ci_8GR6LX79LJB8",
+            "option": "vermilion / XS",
+            "price_cents": 9220,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-YL22APKDQXZE",
+        "user_id": "cu_SS8PSAW2GE26",
+        "status": "delivered",
+        "original_payment": "cc_S9JSB4HR9LPT",
+        "items": [
+          {
+            "item_id": "ci_K2E46BFNUJCR",
+            "product_id": "cp_YKD7DEU6Y556",
+            "option": "obsidian / M",
+            "price_cents": 7070
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "client56eqzdvkzcnn@orders.example",
+      "order_id": "CX-YL22APKDQXZE",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_K2E46BFNUJCR",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "CX-YL22APKDQXZE",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "client56eqzdvkzcnn@orders.example",
+      "order_id": "CX-YL22APKDQXZE",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-YL22APKDQXZE",
+      "item_id": "ci_K2E46BFNUJCR",
+      "new_item_id": "ci_8GR6LX79LJB8",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 7070,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-missing_email-01",
+    "family": "missing_email",
+    "split": "test",
+    "initial_message": "For your retail team: Please organize a whole-vest return to original payment; my account address is not included here. Reference CX-C8UTK7ZR72LL.",
+    "evidence_initial": "Please organize a whole-vest return to original payment; my account address is not included here.",
+    "customer": {
+      "id": "cu_M85BFSYV4K3Z",
+      "email": "client9em9b2k3kac5@orders.example",
+      "gift_card": {
+        "id": "cg_S3SJ9PN5GAJM",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_9N9SUD4Z9KKS": {
+        "product_id": "cp_9N9SUD4Z9KKS",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_TJZR7MFZR4XS",
+            "option": "obsidian / M",
+            "price_cents": 10989,
+            "available": true
+          },
+          {
+            "item_id": "ci_DA25XLUEVTU7",
+            "option": "oatmeal / XXL",
+            "price_cents": 11564,
+            "available": true
+          },
+          {
+            "item_id": "ci_QCGLQKNJTZSQ",
+            "option": "juniper / XL",
+            "price_cents": 12289,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-C8UTK7ZR72LL",
+        "user_id": "cu_M85BFSYV4K3Z",
+        "status": "delivered",
+        "original_payment": "cc_8BWFBMJ88786",
+        "items": [
+          {
+            "item_id": "ci_TJZR7MFZR4XS",
+            "product_id": "cp_9N9SUD4Z9KKS",
+            "option": "obsidian / M",
+            "price_cents": 10989
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <client9em9b2k3kac5@orders.example>.",
+      "order_id": "CX-C8UTK7ZR72LL",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_TJZR7MFZR4XS",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "CX-C8UTK7ZR72LL",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "client9em9b2k3kac5@orders.example",
+      "order_id": "CX-C8UTK7ZR72LL",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-C8UTK7ZR72LL",
+      "item_id": "ci_TJZR7MFZR4XS",
+      "new_item_id": "ci_QCGLQKNJTZSQ",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 10989,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_missing_option-00",
+    "family": "exchange_missing_option",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-EB263X7VNYCK. Account address: clientd2cv873hkx5j@orders.example. Swap this vest for another variant; I still need to tell you the precise color and size. Use original payment for the difference. You have my go-ahead to return the article once you establish that the precise replacement is unavailable.",
+    "evidence_initial": "Swap this vest for another variant; I still need to tell you the precise color and size. Use original payment for the difference. You have my go-ahead to return the article once you establish that the precise replacement is unavailable.",
+    "customer": {
+      "id": "cu_KLL3YEQ9MLMW",
+      "email": "clientd2cv873hkx5j@orders.example",
+      "gift_card": {
+        "id": "cg_ZK7YTSDRCE5K",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_E66V5FPR5PR6": {
+        "product_id": "cp_E66V5FPR5PR6",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_MMZUYK96YC56",
+            "option": "obsidian / M",
+            "price_cents": 8555,
+            "available": true
+          },
+          {
+            "item_id": "ci_C63BEWU9K859",
+            "option": "vermilion / XS",
+            "price_cents": 9855,
+            "available": true
+          },
+          {
+            "item_id": "ci_ZW2PY6KNTN43",
+            "option": "oatmeal / XXL",
+            "price_cents": 9130,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-EB263X7VNYCK",
+        "user_id": "cu_KLL3YEQ9MLMW",
+        "status": "delivered",
+        "original_payment": "cc_EJB2Y46DDHEV",
+        "items": [
+          {
+            "item_id": "ci_MMZUYK96YC56",
+            "product_id": "cp_E66V5FPR5PR6",
+            "option": "obsidian / M",
+            "price_cents": 8555
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientd2cv873hkx5j@orders.example",
+      "order_id": "CX-EB263X7VNYCK",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_MMZUYK96YC56",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientd2cv873hkx5j@orders.example",
+      "order_id": "CX-EB263X7VNYCK",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientd2cv873hkx5j@orders.example",
+      "order_id": "CX-EB263X7VNYCK",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "new_option",
+    "required_answers": [
+      "new_option"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-EB263X7VNYCK",
+      "item_id": "ci_MMZUYK96YC56",
+      "new_item_id": "ci_C63BEWU9K859",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 1300,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_missing_option-01",
+    "family": "exchange_missing_option",
+    "split": "test",
+    "initial_message": "For your retail team: A variant exchange is what I want, and its adjustment belongs on original payment. My exact replacement choice is not stated yet. I allow a return of this garment strictly after the requested exchange fails for lack of stock. Reference CX-Q3AHURVJB8P2. Account address: client4jgknctyfmyn@orders.example.",
+    "evidence_initial": "A variant exchange is what I want, and its adjustment belongs on original payment. My exact replacement choice is not stated yet. I allow a return of this garment strictly after the requested exchange fails for lack of stock.",
+    "customer": {
+      "id": "cu_5L4FNZ8QLKSX",
+      "email": "client4jgknctyfmyn@orders.example",
+      "gift_card": {
+        "id": "cg_ZLWD8CCNEBGY",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_WXW94CF68JZG": {
+        "product_id": "cp_WXW94CF68JZG",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_UDS87XZNXN8R",
+            "option": "oatmeal / XXL",
+            "price_cents": 6662,
+            "available": true
+          },
+          {
+            "item_id": "ci_JPJT3GJ898NW",
+            "option": "obsidian / M",
+            "price_cents": 6087,
+            "available": true
+          },
+          {
+            "item_id": "ci_MLF4X22XZF6P",
+            "option": "juniper / XL",
+            "price_cents": 5437,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-Q3AHURVJB8P2",
+        "user_id": "cu_5L4FNZ8QLKSX",
+        "status": "delivered",
+        "original_payment": "cc_F2N8QEU5SAVZ",
+        "items": [
+          {
+            "item_id": "ci_JPJT3GJ898NW",
+            "product_id": "cp_WXW94CF68JZG",
+            "option": "obsidian / M",
+            "price_cents": 6087
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <client4jgknctyfmyn@orders.example>.",
+      "order_id": "CX-Q3AHURVJB8P2",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_JPJT3GJ898NW",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "client4jgknctyfmyn@orders.example",
+      "order_id": "CX-Q3AHURVJB8P2",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "client4jgknctyfmyn@orders.example",
+      "order_id": "CX-Q3AHURVJB8P2",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "new_option",
+    "required_answers": [
+      "new_option"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-Q3AHURVJB8P2",
+      "item_id": "ci_JPJT3GJ898NW",
+      "new_item_id": "ci_MLF4X22XZF6P",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": -650,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_missing_payment-00",
+    "family": "exchange_missing_payment",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-BVEQW8PHJVSP. Account address: clientj28c4vsxmcua@orders.example. The vest should be swapped into vermilion / XS. Before any adjustment, ask how I want the difference settled. A return has my permission, contingent on stock being absent for the exact replacement.",
+    "evidence_initial": "The vest should be swapped into vermilion / XS. Before any adjustment, ask how I want the difference settled. A return has my permission, contingent on stock being absent for the exact replacement.",
+    "customer": {
+      "id": "cu_8E236XR44B96",
+      "email": "clientj28c4vsxmcua@orders.example",
+      "gift_card": {
+        "id": "cg_84AAZXD576DU",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_AMGAKTP5YQXM": {
+        "product_id": "cp_AMGAKTP5YQXM",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_J8B3Q4D3M59L",
+            "option": "vermilion / XS",
+            "price_cents": 5430,
+            "available": true
+          },
+          {
+            "item_id": "ci_J8PHSHAQKC3Z",
+            "option": "obsidian / M",
+            "price_cents": 6080,
+            "available": true
+          },
+          {
+            "item_id": "ci_4TXZ23RCTVDN",
+            "option": "oatmeal / XXL",
+            "price_cents": 6655,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-BVEQW8PHJVSP",
+        "user_id": "cu_8E236XR44B96",
+        "status": "delivered",
+        "original_payment": "cc_F95YKLWKJCQQ",
+        "items": [
+          {
+            "item_id": "ci_J8PHSHAQKC3Z",
+            "product_id": "cp_AMGAKTP5YQXM",
+            "option": "obsidian / M",
+            "price_cents": 6080
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientj28c4vsxmcua@orders.example",
+      "order_id": "CX-BVEQW8PHJVSP",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_J8PHSHAQKC3Z",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientj28c4vsxmcua@orders.example",
+      "order_id": "CX-BVEQW8PHJVSP",
+      "requested_option": "vermilion / XS",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientj28c4vsxmcua@orders.example",
+      "order_id": "CX-BVEQW8PHJVSP",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-BVEQW8PHJVSP",
+      "item_id": "ci_J8PHSHAQKC3Z",
+      "new_item_id": "ci_J8B3Q4D3M59L",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -650,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_missing_payment-01",
+    "family": "exchange_missing_payment",
+    "split": "test",
+    "initial_message": "For your retail team: Please exchange the original garment for juniper / XL; naming the original garment is not a payment instruction. Inability to obtain my named variant is the prerequisite for the return I am permitting. Reference CX-252DDNC7X3NR. Account address: client8luefmpsun8g@orders.example.",
+    "evidence_initial": "Please exchange the original garment for juniper / XL; naming the original garment is not a payment instruction. Inability to obtain my named variant is the prerequisite for the return I am permitting.",
+    "customer": {
+      "id": "cu_XR5PM8DLFGJL",
+      "email": "client8luefmpsun8g@orders.example",
+      "gift_card": {
+        "id": "cg_ZUCR9WZV884F",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_2BAS54PJRYAP": {
+        "product_id": "cp_2BAS54PJRYAP",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_7BNU6WTTW2HX",
+            "option": "oatmeal / XXL",
+            "price_cents": 7140,
+            "available": true
+          },
+          {
+            "item_id": "ci_3LXCZHETMEVQ",
+            "option": "obsidian / M",
+            "price_cents": 6565,
+            "available": true
+          },
+          {
+            "item_id": "ci_U26GC44ZPVLV",
+            "option": "juniper / XL",
+            "price_cents": 8715,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-252DDNC7X3NR",
+        "user_id": "cu_XR5PM8DLFGJL",
+        "status": "delivered",
+        "original_payment": "cc_YTGM85ZZ3ZKU",
+        "items": [
+          {
+            "item_id": "ci_3LXCZHETMEVQ",
+            "product_id": "cp_2BAS54PJRYAP",
+            "option": "obsidian / M",
+            "price_cents": 6565
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <client8luefmpsun8g@orders.example>.",
+      "order_id": "CX-252DDNC7X3NR",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_3LXCZHETMEVQ",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "client8luefmpsun8g@orders.example",
+      "order_id": "CX-252DDNC7X3NR",
+      "requested_option": "juniper / XL",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "client8luefmpsun8g@orders.example",
+      "order_id": "CX-252DDNC7X3NR",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-252DDNC7X3NR",
+      "item_id": "ci_3LXCZHETMEVQ",
+      "new_item_id": "ci_U26GC44ZPVLV",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 2150,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_gift-00",
+    "family": "exchange_gift",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-GG33DX2XL85W. Account address: clientcde555sbq6wq@orders.example. Replace the vest with vermilion / XS; gift card cg_B5QKQEGXGK4V is permitted only for the exchange price adjustment.",
+    "evidence_initial": "Replace the vest with vermilion / XS; gift card cg_B5QKQEGXGK4V is permitted only for the exchange price adjustment.",
+    "customer": {
+      "id": "cu_JKNEBERW8D66",
+      "email": "clientcde555sbq6wq@orders.example",
+      "gift_card": {
+        "id": "cg_B5QKQEGXGK4V",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_LNCDVKQANSKJ": {
+        "product_id": "cp_LNCDVKQANSKJ",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_U7ZVRMFWNQES",
+            "option": "vermilion / XS",
+            "price_cents": 7149,
+            "available": true
+          },
+          {
+            "item_id": "ci_CQEJVH9TSP4S",
+            "option": "obsidian / M",
+            "price_cents": 4999,
+            "available": true
+          },
+          {
+            "item_id": "ci_QYWME7AYN9ZA",
+            "option": "oatmeal / XXL",
+            "price_cents": 5574,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-GG33DX2XL85W",
+        "user_id": "cu_JKNEBERW8D66",
+        "status": "delivered",
+        "original_payment": "cc_FL7LQEMUB4LS",
+        "items": [
+          {
+            "item_id": "ci_CQEJVH9TSP4S",
+            "product_id": "cp_LNCDVKQANSKJ",
+            "option": "obsidian / M",
+            "price_cents": 4999
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientcde555sbq6wq@orders.example",
+      "order_id": "CX-GG33DX2XL85W",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_CQEJVH9TSP4S",
+      "payment_method": "cg_B5QKQEGXGK4V",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientcde555sbq6wq@orders.example",
+      "order_id": "CX-GG33DX2XL85W",
+      "requested_option": "vermilion / XS",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientcde555sbq6wq@orders.example",
+      "order_id": "CX-GG33DX2XL85W",
+      "requested_option": "vermilion / XS",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-GG33DX2XL85W",
+      "item_id": "ci_CQEJVH9TSP4S",
+      "new_item_id": "ci_U7ZVRMFWNQES",
+      "payment_method": "cg_B5QKQEGXGK4V",
+      "reason": "no longer needed",
+      "amount_cents": 2150,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_gift-01",
+    "family": "exchange_gift",
+    "split": "test",
+    "initial_message": "For your retail team: I approve using existing gift card cg_793SH255RWQH for the difference on a swap into juniper / XL; that is a payment instruction only. Reference CX-RVDUTCHMDUVE. Account address: clientclpk3xk7dydc@orders.example.",
+    "evidence_initial": "I approve using existing gift card cg_793SH255RWQH for the difference on a swap into juniper / XL; that is a payment instruction only.",
+    "customer": {
+      "id": "cu_W8KC2PSRAU6R",
+      "email": "clientclpk3xk7dydc@orders.example",
+      "gift_card": {
+        "id": "cg_793SH255RWQH",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_47N2BHUC5PDN": {
+        "product_id": "cp_47N2BHUC5PDN",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_9ATQMJ3B3VWW",
+            "option": "oatmeal / XXL",
+            "price_cents": 6652,
+            "available": true
+          },
+          {
+            "item_id": "ci_A3BW5TEPJVQZ",
+            "option": "juniper / XL",
+            "price_cents": 7377,
+            "available": true
+          },
+          {
+            "item_id": "ci_J6YUW7FDK278",
+            "option": "obsidian / M",
+            "price_cents": 6077,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-RVDUTCHMDUVE",
+        "user_id": "cu_W8KC2PSRAU6R",
+        "status": "delivered",
+        "original_payment": "cc_V4MMNSMVAW6X",
+        "items": [
+          {
+            "item_id": "ci_J6YUW7FDK278",
+            "product_id": "cp_47N2BHUC5PDN",
+            "option": "obsidian / M",
+            "price_cents": 6077
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientclpk3xk7dydc@orders.example>.",
+      "order_id": "CX-RVDUTCHMDUVE",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_J6YUW7FDK278",
+      "payment_method": "cg_793SH255RWQH",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientclpk3xk7dydc@orders.example",
+      "order_id": "CX-RVDUTCHMDUVE",
+      "requested_option": "juniper / XL",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientclpk3xk7dydc@orders.example",
+      "order_id": "CX-RVDUTCHMDUVE",
+      "requested_option": "juniper / XL",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-RVDUTCHMDUVE",
+      "item_id": "ci_J6YUW7FDK278",
+      "new_item_id": "ci_A3BW5TEPJVQZ",
+      "payment_method": "cg_793SH255RWQH",
+      "reason": "ordered by mistake",
+      "amount_cents": 1300,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_unavailable-00",
+    "family": "exchange_unavailable",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-7QCH525QB6P2. Account address: clientqbmetktlrl3n@orders.example. I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. If that option is absent, I withhold permission to return my item; send the issue to a specialist.",
+    "evidence_initial": "I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. If that option is absent, I withhold permission to return my item; send the issue to a specialist.",
+    "customer": {
+      "id": "cu_GHUUUAK9FJSJ",
+      "email": "clientqbmetktlrl3n@orders.example",
+      "gift_card": {
+        "id": "cg_SET2337DTWMR",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_CPKF4PECCXJM": {
+        "product_id": "cp_CPKF4PECCXJM",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_NT6RXYFRMZRD",
+            "option": "obsidian / M",
+            "price_cents": 8045,
+            "available": true
+          },
+          {
+            "item_id": "ci_THWR3STTW826",
+            "option": "vermilion / XS",
+            "price_cents": 9345,
+            "available": false
+          },
+          {
+            "item_id": "ci_QWPFB2K4F62C",
+            "option": "oatmeal / XXL",
+            "price_cents": 8620,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-7QCH525QB6P2",
+        "user_id": "cu_GHUUUAK9FJSJ",
+        "status": "delivered",
+        "original_payment": "cc_PKZHWUMEN3BC",
+        "items": [
+          {
+            "item_id": "ci_NT6RXYFRMZRD",
+            "product_id": "cp_CPKF4PECCXJM",
+            "option": "obsidian / M",
+            "price_cents": 8045
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientqbmetktlrl3n@orders.example",
+      "order_id": "CX-7QCH525QB6P2",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_NT6RXYFRMZRD",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientqbmetktlrl3n@orders.example",
+      "order_id": "CX-7QCH525QB6P2",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientqbmetktlrl3n@orders.example",
+      "order_id": "CX-7QCH525QB6P2",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-7QCH525QB6P2",
+      "item_id": "ci_NT6RXYFRMZRD",
+      "new_item_id": "ci_THWR3STTW826",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 8045,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_unavailable-01",
+    "family": "exchange_unavailable",
+    "split": "test",
+    "initial_message": "For your retail team: Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. An unavailable replacement must not become a return: I refuse that route and need a human agent. Reference CX-GBW9BJAY7G8T. Account address: client788cfb9jz623@orders.example.",
+    "evidence_initial": "Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. An unavailable replacement must not become a return: I refuse that route and need a human agent.",
+    "customer": {
+      "id": "cu_AJUABXE3M7ZV",
+      "email": "client788cfb9jz623@orders.example",
+      "gift_card": {
+        "id": "cg_HN8LTCD26BWR",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_M3XV2JVGMDED": {
+        "product_id": "cp_M3XV2JVGMDED",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_E645TMX5F8FU",
+            "option": "oatmeal / XXL",
+            "price_cents": 8891,
+            "available": true
+          },
+          {
+            "item_id": "ci_8QTHBSH2TG3E",
+            "option": "juniper / XL",
+            "price_cents": 7666,
+            "available": false
+          },
+          {
+            "item_id": "ci_UGSVTVU5ZADZ",
+            "option": "obsidian / M",
+            "price_cents": 8316,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-GBW9BJAY7G8T",
+        "user_id": "cu_AJUABXE3M7ZV",
+        "status": "delivered",
+        "original_payment": "cc_KJTQU3C7GW8C",
+        "items": [
+          {
+            "item_id": "ci_UGSVTVU5ZADZ",
+            "product_id": "cp_M3XV2JVGMDED",
+            "option": "obsidian / M",
+            "price_cents": 8316
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <client788cfb9jz623@orders.example>.",
+      "order_id": "CX-GBW9BJAY7G8T",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_UGSVTVU5ZADZ",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "client788cfb9jz623@orders.example",
+      "order_id": "CX-GBW9BJAY7G8T",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "client788cfb9jz623@orders.example",
+      "order_id": "CX-GBW9BJAY7G8T",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-GBW9BJAY7G8T",
+      "item_id": "ci_UGSVTVU5ZADZ",
+      "new_item_id": "ci_8QTHBSH2TG3E",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 8316,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_shortfall-00",
+    "family": "exchange_shortfall",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-PQAS4CPK79NF. Account address: clientcgm3fxmgz4ft@orders.example. Replace the vest with vermilion / XS; gift card cg_YZGJND7YM4CK is permitted only for the exchange price adjustment. Do not use another funding source, and I expressly refuse a full-item return.",
+    "evidence_initial": "Replace the vest with vermilion / XS; gift card cg_YZGJND7YM4CK is permitted only for the exchange price adjustment. Do not use another funding source, and I expressly refuse a full-item return.",
+    "customer": {
+      "id": "cu_4NCMJ9AN8SN3",
+      "email": "clientcgm3fxmgz4ft@orders.example",
+      "gift_card": {
+        "id": "cg_YZGJND7YM4CK",
+        "balance_cents": 225
+      }
+    },
+    "products": {
+      "cp_Z4PJRZJEJ4RV": {
+        "product_id": "cp_Z4PJRZJEJ4RV",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_62GS2PNRTJ9E",
+            "option": "obsidian / M",
+            "price_cents": 10131,
+            "available": true
+          },
+          {
+            "item_id": "ci_TCX24RPJG6ZJ",
+            "option": "vermilion / XS",
+            "price_cents": 12831,
+            "available": true
+          },
+          {
+            "item_id": "ci_SYNRQMGJ5CTR",
+            "option": "oatmeal / XXL",
+            "price_cents": 10706,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-PQAS4CPK79NF",
+        "user_id": "cu_4NCMJ9AN8SN3",
+        "status": "delivered",
+        "original_payment": "cc_VHU5J8ZHDZPB",
+        "items": [
+          {
+            "item_id": "ci_62GS2PNRTJ9E",
+            "product_id": "cp_Z4PJRZJEJ4RV",
+            "option": "obsidian / M",
+            "price_cents": 10131
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientcgm3fxmgz4ft@orders.example",
+      "order_id": "CX-PQAS4CPK79NF",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_62GS2PNRTJ9E",
+      "payment_method": "cg_YZGJND7YM4CK",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientcgm3fxmgz4ft@orders.example",
+      "order_id": "CX-PQAS4CPK79NF",
+      "requested_option": "vermilion / XS",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientcgm3fxmgz4ft@orders.example",
+      "order_id": "CX-PQAS4CPK79NF",
+      "requested_option": "vermilion / XS",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-PQAS4CPK79NF",
+      "item_id": "ci_62GS2PNRTJ9E",
+      "new_item_id": "ci_TCX24RPJG6ZJ",
+      "payment_method": "cg_YZGJND7YM4CK",
+      "reason": "no longer needed",
+      "amount_cents": 10131,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_shortfall-01",
+    "family": "exchange_shortfall",
+    "split": "test",
+    "initial_message": "For your retail team: I approve using existing gift card cg_8MFDG8DDGKL8 for the difference on a swap into juniper / XL; that is a payment instruction only. Keep the current item if that card falls short: neither another payment method nor a return is approved. Reference CX-ASY93D6MK3CK. Account address: clienta76d3ycvduqb@orders.example.",
+    "evidence_initial": "I approve using existing gift card cg_8MFDG8DDGKL8 for the difference on a swap into juniper / XL; that is a payment instruction only. Keep the current item if that card falls short: neither another payment method nor a return is approved.",
+    "customer": {
+      "id": "cu_WZDA6GL69533",
+      "email": "clienta76d3ycvduqb@orders.example",
+      "gift_card": {
+        "id": "cg_8MFDG8DDGKL8",
+        "balance_cents": 225
+      }
+    },
+    "products": {
+      "cp_PTHDDEELBE4J": {
+        "product_id": "cp_PTHDDEELBE4J",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_W3G9CKW5D5DL",
+            "option": "oatmeal / XXL",
+            "price_cents": 12553,
+            "available": true
+          },
+          {
+            "item_id": "ci_MFVB73A97FUY",
+            "option": "obsidian / M",
+            "price_cents": 11978,
+            "available": true
+          },
+          {
+            "item_id": "ci_GUMHCD63L9SY",
+            "option": "juniper / XL",
+            "price_cents": 14678,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-ASY93D6MK3CK",
+        "user_id": "cu_WZDA6GL69533",
+        "status": "delivered",
+        "original_payment": "cc_LC6HEYYUFZUU",
+        "items": [
+          {
+            "item_id": "ci_MFVB73A97FUY",
+            "product_id": "cp_PTHDDEELBE4J",
+            "option": "obsidian / M",
+            "price_cents": 11978
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clienta76d3ycvduqb@orders.example>.",
+      "order_id": "CX-ASY93D6MK3CK",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_MFVB73A97FUY",
+      "payment_method": "cg_8MFDG8DDGKL8",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clienta76d3ycvduqb@orders.example",
+      "order_id": "CX-ASY93D6MK3CK",
+      "requested_option": "juniper / XL",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clienta76d3ycvduqb@orders.example",
+      "order_id": "CX-ASY93D6MK3CK",
+      "requested_option": "juniper / XL",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-ASY93D6MK3CK",
+      "item_id": "ci_MFVB73A97FUY",
+      "new_item_id": "ci_GUMHCD63L9SY",
+      "payment_method": "cg_8MFDG8DDGKL8",
+      "reason": "ordered by mistake",
+      "amount_cents": 11978,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_fallback_available-00",
+    "family": "exchange_fallback_available",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-R57KRXN8CRK9. Account address: clientbdlk3aw3jm7l@orders.example. Prioritize a swap to vermilion / XS, settling the difference through original payment; a backup is secondary. The permission I give for returning this item has one trigger: the exact swap I picked is unavailable.",
+    "evidence_initial": "Prioritize a swap to vermilion / XS, settling the difference through original payment; a backup is secondary. The permission I give for returning this item has one trigger: the exact swap I picked is unavailable.",
+    "customer": {
+      "id": "cu_K8DV2PXQAS3C",
+      "email": "clientbdlk3aw3jm7l@orders.example",
+      "gift_card": {
+        "id": "cg_RGDSSDSLZB3J",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_DK2YV3THX48G": {
+        "product_id": "cp_DK2YV3THX48G",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_B46ACAKSTXZX",
+            "option": "vermilion / XS",
+            "price_cents": 10206,
+            "available": true
+          },
+          {
+            "item_id": "ci_GCUTWS9XFC9C",
+            "option": "oatmeal / XXL",
+            "price_cents": 8631,
+            "available": true
+          },
+          {
+            "item_id": "ci_U9A8ERDDCMHD",
+            "option": "obsidian / M",
+            "price_cents": 8056,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-R57KRXN8CRK9",
+        "user_id": "cu_K8DV2PXQAS3C",
+        "status": "delivered",
+        "original_payment": "cc_BR74DJC8JCE8",
+        "items": [
+          {
+            "item_id": "ci_U9A8ERDDCMHD",
+            "product_id": "cp_DK2YV3THX48G",
+            "option": "obsidian / M",
+            "price_cents": 8056
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientbdlk3aw3jm7l@orders.example",
+      "order_id": "CX-R57KRXN8CRK9",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_U9A8ERDDCMHD",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientbdlk3aw3jm7l@orders.example",
+      "order_id": "CX-R57KRXN8CRK9",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientbdlk3aw3jm7l@orders.example",
+      "order_id": "CX-R57KRXN8CRK9",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-R57KRXN8CRK9",
+      "item_id": "ci_U9A8ERDDCMHD",
+      "new_item_id": "ci_B46ACAKSTXZX",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 2150,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_fallback_available-01",
+    "family": "exchange_fallback_available",
+    "split": "test",
+    "initial_message": "For your retail team: My first choice remains exchanging into juniper / XL with the adjustment on original payment, regardless of the backup permission below. A full-item return is authorized by me as the contingency for inability to supply that specific variant. Reference CX-AUJPTDEPABE5. Account address: clientrmbucf74rkql@orders.example.",
+    "evidence_initial": "My first choice remains exchanging into juniper / XL with the adjustment on original payment, regardless of the backup permission below. A full-item return is authorized by me as the contingency for inability to supply that specific variant.",
+    "customer": {
+      "id": "cu_R4U3UNGMQ8JS",
+      "email": "clientrmbucf74rkql@orders.example",
+      "gift_card": {
+        "id": "cg_BBQYAE85CTUU",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_4JGTP4UY6H2D": {
+        "product_id": "cp_4JGTP4UY6H2D",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_26EZRK9FQ4N8",
+            "option": "juniper / XL",
+            "price_cents": 6083,
+            "available": true
+          },
+          {
+            "item_id": "ci_KXA87HAJNEUU",
+            "option": "obsidian / M",
+            "price_cents": 4783,
+            "available": true
+          },
+          {
+            "item_id": "ci_EBN7AWS686RM",
+            "option": "oatmeal / XXL",
+            "price_cents": 5358,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-AUJPTDEPABE5",
+        "user_id": "cu_R4U3UNGMQ8JS",
+        "status": "delivered",
+        "original_payment": "cc_7VNCNNL42HGF",
+        "items": [
+          {
+            "item_id": "ci_KXA87HAJNEUU",
+            "product_id": "cp_4JGTP4UY6H2D",
+            "option": "obsidian / M",
+            "price_cents": 4783
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientrmbucf74rkql@orders.example>.",
+      "order_id": "CX-AUJPTDEPABE5",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_KXA87HAJNEUU",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientrmbucf74rkql@orders.example",
+      "order_id": "CX-AUJPTDEPABE5",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientrmbucf74rkql@orders.example",
+      "order_id": "CX-AUJPTDEPABE5",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-AUJPTDEPABE5",
+      "item_id": "ci_KXA87HAJNEUU",
+      "new_item_id": "ci_26EZRK9FQ4N8",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1300,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-return_reject_exchange-00",
+    "family": "return_reject_exchange",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-2H3D6CJTD7TM. Account address: client7bmx87jgcfh3@orders.example. A replacement in vermilion / XS would not solve this: I reject exchanging and request a full return to original payment.",
+    "evidence_initial": "A replacement in vermilion / XS would not solve this: I reject exchanging and request a full return to original payment.",
+    "customer": {
+      "id": "cu_ETMYNBPDT4SV",
+      "email": "client7bmx87jgcfh3@orders.example",
+      "gift_card": {
+        "id": "cg_4JQZAVKW8NWZ",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_2BA4XASXYXN6": {
+        "product_id": "cp_2BA4XASXYXN6",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_SM2ZKHBYTMSZ",
+            "option": "oatmeal / XXL",
+            "price_cents": 11441,
+            "available": true
+          },
+          {
+            "item_id": "ci_9JVARZDEUBDH",
+            "option": "vermilion / XS",
+            "price_cents": 12166,
+            "available": true
+          },
+          {
+            "item_id": "ci_2WZ58CNPVZKH",
+            "option": "obsidian / M",
+            "price_cents": 10866,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-2H3D6CJTD7TM",
+        "user_id": "cu_ETMYNBPDT4SV",
+        "status": "delivered",
+        "original_payment": "cc_S665GH9D5T6M",
+        "items": [
+          {
+            "item_id": "ci_2WZ58CNPVZKH",
+            "product_id": "cp_2BA4XASXYXN6",
+            "option": "obsidian / M",
+            "price_cents": 10866
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "client7bmx87jgcfh3@orders.example",
+      "order_id": "CX-2H3D6CJTD7TM",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_2WZ58CNPVZKH",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "client7bmx87jgcfh3@orders.example",
+      "order_id": "CX-2H3D6CJTD7TM",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "client7bmx87jgcfh3@orders.example",
+      "order_id": "CX-2H3D6CJTD7TM",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-2H3D6CJTD7TM",
+      "item_id": "ci_2WZ58CNPVZKH",
+      "new_item_id": "ci_9JVARZDEUBDH",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 10866,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-return_reject_exchange-01",
+    "family": "return_reject_exchange",
+    "split": "test",
+    "initial_message": "For your retail team: Do not swap this vest for juniper / XL; take it back completely, issuing the credit through original payment. Reference CX-Q7VDN77B6THW. Account address: clienthymjbjfqu6uz@orders.example.",
+    "evidence_initial": "Do not swap this vest for juniper / XL; take it back completely, issuing the credit through original payment.",
+    "customer": {
+      "id": "cu_LJKNXWVV7ZZN",
+      "email": "clienthymjbjfqu6uz@orders.example",
+      "gift_card": {
+        "id": "cg_2C74YKYBH52E",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_WZZ3338ZMF9V": {
+        "product_id": "cp_WZZ3338ZMF9V",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_6ZE4AVHRUBC5",
+            "option": "oatmeal / XXL",
+            "price_cents": 6437,
+            "available": true
+          },
+          {
+            "item_id": "ci_YX956V42WN83",
+            "option": "juniper / XL",
+            "price_cents": 5212,
+            "available": true
+          },
+          {
+            "item_id": "ci_KA8R6X2QC5RS",
+            "option": "obsidian / M",
+            "price_cents": 5862,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-Q7VDN77B6THW",
+        "user_id": "cu_LJKNXWVV7ZZN",
+        "status": "delivered",
+        "original_payment": "cc_BPFWMV5JGMAE",
+        "items": [
+          {
+            "item_id": "ci_KA8R6X2QC5RS",
+            "product_id": "cp_WZZ3338ZMF9V",
+            "option": "obsidian / M",
+            "price_cents": 5862
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clienthymjbjfqu6uz@orders.example>.",
+      "order_id": "CX-Q7VDN77B6THW",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_KA8R6X2QC5RS",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "clienthymjbjfqu6uz@orders.example",
+      "order_id": "CX-Q7VDN77B6THW",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "clienthymjbjfqu6uz@orders.example",
+      "order_id": "CX-Q7VDN77B6THW",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-Q7VDN77B6THW",
+      "item_id": "ci_KA8R6X2QC5RS",
+      "new_item_id": "ci_YX956V42WN83",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 5862,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_stockout_unknown-00",
+    "family": "exchange_stockout_unknown",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-5UP7XAVPMAB9. Account address: clientnrf9v3c3qvfq@orders.example. I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. I have not chosen any action for the case where the replacement is missing.",
+    "evidence_initial": "I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. I have not chosen any action for the case where the replacement is missing.",
+    "customer": {
+      "id": "cu_FL488Z87JFBW",
+      "email": "clientnrf9v3c3qvfq@orders.example",
+      "gift_card": {
+        "id": "cg_SL6VJUFH7YBD",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_G2HFTNZ8YJBL": {
+        "product_id": "cp_G2HFTNZ8YJBL",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_USYKKWARH2SB",
+            "option": "vermilion / XS",
+            "price_cents": 11627,
+            "available": false
+          },
+          {
+            "item_id": "ci_5T6EVRF72PW4",
+            "option": "oatmeal / XXL",
+            "price_cents": 12852,
+            "available": true
+          },
+          {
+            "item_id": "ci_7558E7STPAAJ",
+            "option": "obsidian / M",
+            "price_cents": 12277,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-5UP7XAVPMAB9",
+        "user_id": "cu_FL488Z87JFBW",
+        "status": "delivered",
+        "original_payment": "cc_FWT64JE6ETUM",
+        "items": [
+          {
+            "item_id": "ci_7558E7STPAAJ",
+            "product_id": "cp_G2HFTNZ8YJBL",
+            "option": "obsidian / M",
+            "price_cents": 12277
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientnrf9v3c3qvfq@orders.example",
+      "order_id": "CX-5UP7XAVPMAB9",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_7558E7STPAAJ",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientnrf9v3c3qvfq@orders.example",
+      "order_id": "CX-5UP7XAVPMAB9",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientnrf9v3c3qvfq@orders.example",
+      "order_id": "CX-5UP7XAVPMAB9",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-5UP7XAVPMAB9",
+      "item_id": "ci_7558E7STPAAJ",
+      "new_item_id": "ci_USYKKWARH2SB",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 12277,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_stockout_unknown-01",
+    "family": "exchange_stockout_unknown",
+    "split": "test",
+    "initial_message": "For your retail team: Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. I have made no decision about an unavailable replacement and have given no fallback instruction. Reference CX-86S57CWTVMWA. Account address: client2mbrmt4ds676@orders.example.",
+    "evidence_initial": "Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. I have made no decision about an unavailable replacement and have given no fallback instruction.",
+    "customer": {
+      "id": "cu_9ZAQQ4VHMFT9",
+      "email": "client2mbrmt4ds676@orders.example",
+      "gift_card": {
+        "id": "cg_WBBYWG28C7FP",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_9L4DP72Y6XRM": {
+        "product_id": "cp_9L4DP72Y6XRM",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_XDFQWT2PM5ML",
+            "option": "juniper / XL",
+            "price_cents": 14008,
+            "available": false
+          },
+          {
+            "item_id": "ci_6GVBLJ2HATY6",
+            "option": "oatmeal / XXL",
+            "price_cents": 12433,
+            "available": true
+          },
+          {
+            "item_id": "ci_K6B3ASX5392B",
+            "option": "obsidian / M",
+            "price_cents": 11858,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-86S57CWTVMWA",
+        "user_id": "cu_9ZAQQ4VHMFT9",
+        "status": "delivered",
+        "original_payment": "cc_N63DHFWVKJKJ",
+        "items": [
+          {
+            "item_id": "ci_K6B3ASX5392B",
+            "product_id": "cp_9L4DP72Y6XRM",
+            "option": "obsidian / M",
+            "price_cents": 11858
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <client2mbrmt4ds676@orders.example>.",
+      "order_id": "CX-86S57CWTVMWA",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_K6B3ASX5392B",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "client2mbrmt4ds676@orders.example",
+      "order_id": "CX-86S57CWTVMWA",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "client2mbrmt4ds676@orders.example",
+      "order_id": "CX-86S57CWTVMWA",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-86S57CWTVMWA",
+      "item_id": "ci_K6B3ASX5392B",
+      "new_item_id": "ci_XDFQWT2PM5ML",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 11858,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_stockout_missing_email-00",
+    "family": "exchange_stockout_missing_email",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-4KQNSAU5YE6R. I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. An out-of-stock replacement is a reason to seek a person, not permission to send my vest back.",
+    "evidence_initial": "I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. An out-of-stock replacement is a reason to seek a person, not permission to send my vest back.",
+    "customer": {
+      "id": "cu_VNG3A2TQATR4",
+      "email": "clientmfmyuzfwd57j@orders.example",
+      "gift_card": {
+        "id": "cg_ANS44RD7BXTB",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_G8LFKZ7XQ2ZL": {
+        "product_id": "cp_G8LFKZ7XQ2ZL",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_6EE58XZGHKE4",
+            "option": "obsidian / M",
+            "price_cents": 9362,
+            "available": true
+          },
+          {
+            "item_id": "ci_LNVTHXDBW4Y6",
+            "option": "vermilion / XS",
+            "price_cents": 11512,
+            "available": false
+          },
+          {
+            "item_id": "ci_VZ7DJNR278MH",
+            "option": "oatmeal / XXL",
+            "price_cents": 9937,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-4KQNSAU5YE6R",
+        "user_id": "cu_VNG3A2TQATR4",
+        "status": "delivered",
+        "original_payment": "cc_37C32SCQDM86",
+        "items": [
+          {
+            "item_id": "ci_6EE58XZGHKE4",
+            "product_id": "cp_G8LFKZ7XQ2ZL",
+            "option": "obsidian / M",
+            "price_cents": 9362
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientmfmyuzfwd57j@orders.example",
+      "order_id": "CX-4KQNSAU5YE6R",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_6EE58XZGHKE4",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "CX-4KQNSAU5YE6R",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientmfmyuzfwd57j@orders.example",
+      "order_id": "CX-4KQNSAU5YE6R",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-4KQNSAU5YE6R",
+      "item_id": "ci_6EE58XZGHKE4",
+      "new_item_id": "ci_LNVTHXDBW4Y6",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 9362,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_stockout_missing_email-01",
+    "family": "exchange_stockout_missing_email",
+    "split": "test",
+    "initial_message": "For your retail team: Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. Do not return my vest if this combination is unavailable. Arrange human assistance instead. Reference CX-5M2H5GC325HV.",
+    "evidence_initial": "Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. Do not return my vest if this combination is unavailable. Arrange human assistance instead.",
+    "customer": {
+      "id": "cu_FBBQY7ND34HE",
+      "email": "clientletskupkdfdt@orders.example",
+      "gift_card": {
+        "id": "cg_3V9GQTAECG3L",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_YS3EQG2T9SW2": {
+        "product_id": "cp_YS3EQG2T9SW2",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_5BQDG2HNGBJ6",
+            "option": "oatmeal / XXL",
+            "price_cents": 9332,
+            "available": true
+          },
+          {
+            "item_id": "ci_2C49R2NS9CS5",
+            "option": "obsidian / M",
+            "price_cents": 8757,
+            "available": true
+          },
+          {
+            "item_id": "ci_ENKBC8TS6WJH",
+            "option": "juniper / XL",
+            "price_cents": 10057,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-5M2H5GC325HV",
+        "user_id": "cu_FBBQY7ND34HE",
+        "status": "delivered",
+        "original_payment": "cc_4ZV9GAAYGHAC",
+        "items": [
+          {
+            "item_id": "ci_2C49R2NS9CS5",
+            "product_id": "cp_YS3EQG2T9SW2",
+            "option": "obsidian / M",
+            "price_cents": 8757
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientletskupkdfdt@orders.example>.",
+      "order_id": "CX-5M2H5GC325HV",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_2C49R2NS9CS5",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "CX-5M2H5GC325HV",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientletskupkdfdt@orders.example",
+      "order_id": "CX-5M2H5GC325HV",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-5M2H5GC325HV",
+      "item_id": "ci_2C49R2NS9CS5",
+      "new_item_id": "ci_ENKBC8TS6WJH",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 8757,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_stockout_negative_quote-00",
+    "family": "exchange_stockout_negative_quote",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-EPE7VV6MHUXG. Account address: clientcvb74uy92tau@orders.example. I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. A sample ticket says, 'I approve returning the item after a stockout.' Those quoted words are not my instruction; I reject returning mine and request a person.",
+    "evidence_initial": "I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. A sample ticket says, 'I approve returning the item after a stockout.' Those quoted words are not my instruction; I reject returning mine and request a person.",
+    "customer": {
+      "id": "cu_S5C6NWLLLMYL",
+      "email": "clientcvb74uy92tau@orders.example",
+      "gift_card": {
+        "id": "cg_XE3ZFUDMU2AH",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_UCUU2LJNRPG6": {
+        "product_id": "cp_UCUU2LJNRPG6",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_HKNGURAMFAWC",
+            "option": "obsidian / M",
+            "price_cents": 4218,
+            "available": true
+          },
+          {
+            "item_id": "ci_5TE6GLWRQ2UN",
+            "option": "oatmeal / XXL",
+            "price_cents": 4793,
+            "available": true
+          },
+          {
+            "item_id": "ci_8XY84UP95EG8",
+            "option": "vermilion / XS",
+            "price_cents": 5518,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-EPE7VV6MHUXG",
+        "user_id": "cu_S5C6NWLLLMYL",
+        "status": "delivered",
+        "original_payment": "cc_ELLRCW7UQJPG",
+        "items": [
+          {
+            "item_id": "ci_HKNGURAMFAWC",
+            "product_id": "cp_UCUU2LJNRPG6",
+            "option": "obsidian / M",
+            "price_cents": 4218
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientcvb74uy92tau@orders.example",
+      "order_id": "CX-EPE7VV6MHUXG",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_HKNGURAMFAWC",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientcvb74uy92tau@orders.example",
+      "order_id": "CX-EPE7VV6MHUXG",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientcvb74uy92tau@orders.example",
+      "order_id": "CX-EPE7VV6MHUXG",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-EPE7VV6MHUXG",
+      "item_id": "ci_HKNGURAMFAWC",
+      "new_item_id": "ci_8XY84UP95EG8",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 4218,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_stockout_negative_quote-01",
+    "family": "exchange_stockout_negative_quote",
+    "split": "test",
+    "initial_message": "For your retail team: Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. The FAQ example reads 'a return is authorized if the replacement is missing'. I am quoting an example, not consenting; no return for my order, please escalate. Reference CX-XQF6CHYKRV6F. Account address: clientdwrksjxjzhzw@orders.example.",
+    "evidence_initial": "Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. The FAQ example reads 'a return is authorized if the replacement is missing'. I am quoting an example, not consenting; no return for my order, please escalate.",
+    "customer": {
+      "id": "cu_MPXEFKJXVWLG",
+      "email": "clientdwrksjxjzhzw@orders.example",
+      "gift_card": {
+        "id": "cg_ZTSRSSW5MWEA",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_VLCPCPZEKQNC": {
+        "product_id": "cp_VLCPCPZEKQNC",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_XWUT5H9PQZG2",
+            "option": "obsidian / M",
+            "price_cents": 11191,
+            "available": true
+          },
+          {
+            "item_id": "ci_PV9STT9BKB9G",
+            "option": "oatmeal / XXL",
+            "price_cents": 11766,
+            "available": true
+          },
+          {
+            "item_id": "ci_D6UY7WDB47CA",
+            "option": "juniper / XL",
+            "price_cents": 10541,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-XQF6CHYKRV6F",
+        "user_id": "cu_MPXEFKJXVWLG",
+        "status": "delivered",
+        "original_payment": "cc_TFT2ADPH2RWX",
+        "items": [
+          {
+            "item_id": "ci_XWUT5H9PQZG2",
+            "product_id": "cp_VLCPCPZEKQNC",
+            "option": "obsidian / M",
+            "price_cents": 11191
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientdwrksjxjzhzw@orders.example>.",
+      "order_id": "CX-XQF6CHYKRV6F",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_XWUT5H9PQZG2",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientdwrksjxjzhzw@orders.example",
+      "order_id": "CX-XQF6CHYKRV6F",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientdwrksjxjzhzw@orders.example",
+      "order_id": "CX-XQF6CHYKRV6F",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-XQF6CHYKRV6F",
+      "item_id": "ci_XWUT5H9PQZG2",
+      "new_item_id": "ci_D6UY7WDB47CA",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 11191,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_stockout_question-00",
+    "family": "exchange_stockout_question",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-NJ5H9RUHREJH. Account address: clientvtz72t8z2j9f@orders.example. I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. Is a return theoretically possible when stock is absent? That is a policy question, not consent: I decline a return and want human help.",
+    "evidence_initial": "I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. Is a return theoretically possible when stock is absent? That is a policy question, not consent: I decline a return and want human help.",
+    "customer": {
+      "id": "cu_6BX9TPL5E3WS",
+      "email": "clientvtz72t8z2j9f@orders.example",
+      "gift_card": {
+        "id": "cg_NKAQYLENPTSF",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_TA9PPUMCFVGB": {
+        "product_id": "cp_TA9PPUMCFVGB",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_C7GRHEPUVCBA",
+            "option": "oatmeal / XXL",
+            "price_cents": 11056,
+            "available": true
+          },
+          {
+            "item_id": "ci_WQPHERZYCPV9",
+            "option": "obsidian / M",
+            "price_cents": 10481,
+            "available": true
+          },
+          {
+            "item_id": "ci_598UE75NVFVX",
+            "option": "vermilion / XS",
+            "price_cents": 9831,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-NJ5H9RUHREJH",
+        "user_id": "cu_6BX9TPL5E3WS",
+        "status": "delivered",
+        "original_payment": "cc_TFG4QT4JRGAB",
+        "items": [
+          {
+            "item_id": "ci_WQPHERZYCPV9",
+            "product_id": "cp_TA9PPUMCFVGB",
+            "option": "obsidian / M",
+            "price_cents": 10481
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientvtz72t8z2j9f@orders.example",
+      "order_id": "CX-NJ5H9RUHREJH",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_WQPHERZYCPV9",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientvtz72t8z2j9f@orders.example",
+      "order_id": "CX-NJ5H9RUHREJH",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientvtz72t8z2j9f@orders.example",
+      "order_id": "CX-NJ5H9RUHREJH",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-NJ5H9RUHREJH",
+      "item_id": "ci_WQPHERZYCPV9",
+      "new_item_id": "ci_598UE75NVFVX",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 10481,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_stockout_question-01",
+    "family": "exchange_stockout_question",
+    "split": "test",
+    "initial_message": "For your retail team: Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. How would a full-item return work after a stockout? I am only asking; I am not authorizing one, so refer this to a person if the swap fails. Reference CX-VRX36593GZHW. Account address: clientccjjudwjvhj7@orders.example.",
+    "evidence_initial": "Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. How would a full-item return work after a stockout? I am only asking; I am not authorizing one, so refer this to a person if the swap fails.",
+    "customer": {
+      "id": "cu_MNXCSTNPXBVF",
+      "email": "clientccjjudwjvhj7@orders.example",
+      "gift_card": {
+        "id": "cg_B3M8QX5L7M38",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_EQF7CJBUS4XQ": {
+        "product_id": "cp_EQF7CJBUS4XQ",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_2TG4ZRY2LEAY",
+            "option": "oatmeal / XXL",
+            "price_cents": 9951,
+            "available": true
+          },
+          {
+            "item_id": "ci_7BQMT8E5TSCC",
+            "option": "juniper / XL",
+            "price_cents": 11526,
+            "available": false
+          },
+          {
+            "item_id": "ci_CVZM4HSZN235",
+            "option": "obsidian / M",
+            "price_cents": 9376,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-VRX36593GZHW",
+        "user_id": "cu_MNXCSTNPXBVF",
+        "status": "delivered",
+        "original_payment": "cc_GVMDPP7DAFQL",
+        "items": [
+          {
+            "item_id": "ci_CVZM4HSZN235",
+            "product_id": "cp_EQF7CJBUS4XQ",
+            "option": "obsidian / M",
+            "price_cents": 9376
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientccjjudwjvhj7@orders.example>.",
+      "order_id": "CX-VRX36593GZHW",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_CVZM4HSZN235",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientccjjudwjvhj7@orders.example",
+      "order_id": "CX-VRX36593GZHW",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientccjjudwjvhj7@orders.example",
+      "order_id": "CX-VRX36593GZHW",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "CX-VRX36593GZHW",
+      "item_id": "ci_CVZM4HSZN235",
+      "new_item_id": "ci_7BQMT8E5TSCC",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 9376,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_available_refusal-00",
+    "family": "exchange_available_refusal",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-BH9EQ9478ENF. Account address: clientm7ntsfqfw226@orders.example. I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. I forbid a full return; fulfill the exchange if the named variant is on hand.",
+    "evidence_initial": "I want vermilion / XS instead of the vest I received; process an exchange with the adjustment through original payment. I forbid a full return; fulfill the exchange if the named variant is on hand.",
+    "customer": {
+      "id": "cu_LWDVQXWQGNL3",
+      "email": "clientm7ntsfqfw226@orders.example",
+      "gift_card": {
+        "id": "cg_Z853BAUK2P33",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_VGTFSMXS34HX": {
+        "product_id": "cp_VGTFSMXS34HX",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_5JPFVEVPF544",
+            "option": "oatmeal / XXL",
+            "price_cents": 6459,
+            "available": true
+          },
+          {
+            "item_id": "ci_DN9VPZV3CXWB",
+            "option": "vermilion / XS",
+            "price_cents": 8034,
+            "available": true
+          },
+          {
+            "item_id": "ci_BEK45MSESQGJ",
+            "option": "obsidian / M",
+            "price_cents": 5884,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-BH9EQ9478ENF",
+        "user_id": "cu_LWDVQXWQGNL3",
+        "status": "delivered",
+        "original_payment": "cc_4PPFPF9ERTCH",
+        "items": [
+          {
+            "item_id": "ci_BEK45MSESQGJ",
+            "product_id": "cp_VGTFSMXS34HX",
+            "option": "obsidian / M",
+            "price_cents": 5884
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientm7ntsfqfw226@orders.example",
+      "order_id": "CX-BH9EQ9478ENF",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_BEK45MSESQGJ",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientm7ntsfqfw226@orders.example",
+      "order_id": "CX-BH9EQ9478ENF",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientm7ntsfqfw226@orders.example",
+      "order_id": "CX-BH9EQ9478ENF",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-BH9EQ9478ENF",
+      "item_id": "ci_BEK45MSESQGJ",
+      "new_item_id": "ci_DN9VPZV3CXWB",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 2150,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_available_refusal-01",
+    "family": "exchange_available_refusal",
+    "split": "test",
+    "initial_message": "For your retail team: Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. Keep to the requested swap. You have no approval to take the whole item back. Reference CX-4AB6QZJJMZPK. Account address: client9e8t2pmvtqyj@orders.example.",
+    "evidence_initial": "Substitute the purchased vest with juniper / XL, charging or crediting the exchange difference through original payment. Keep to the requested swap. You have no approval to take the whole item back.",
+    "customer": {
+      "id": "cu_CRP56RLX6VK3",
+      "email": "client9e8t2pmvtqyj@orders.example",
+      "gift_card": {
+        "id": "cg_G96XEVV5GG3L",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_PS8B83ADYASA": {
+        "product_id": "cp_PS8B83ADYASA",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_KZY8TAFPEUMW",
+            "option": "juniper / XL",
+            "price_cents": 12739,
+            "available": true
+          },
+          {
+            "item_id": "ci_VBFWE67LUJFQ",
+            "option": "oatmeal / XXL",
+            "price_cents": 12014,
+            "available": true
+          },
+          {
+            "item_id": "ci_G8UTNWC45X8C",
+            "option": "obsidian / M",
+            "price_cents": 11439,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-4AB6QZJJMZPK",
+        "user_id": "cu_CRP56RLX6VK3",
+        "status": "delivered",
+        "original_payment": "cc_5R8VR7D9KTHY",
+        "items": [
+          {
+            "item_id": "ci_G8UTNWC45X8C",
+            "product_id": "cp_PS8B83ADYASA",
+            "option": "obsidian / M",
+            "price_cents": 11439
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <client9e8t2pmvtqyj@orders.example>.",
+      "order_id": "CX-4AB6QZJJMZPK",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_G8UTNWC45X8C",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "client9e8t2pmvtqyj@orders.example",
+      "order_id": "CX-4AB6QZJJMZPK",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "client9e8t2pmvtqyj@orders.example",
+      "order_id": "CX-4AB6QZJJMZPK",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-4AB6QZJJMZPK",
+      "item_id": "ci_G8UTNWC45X8C",
+      "new_item_id": "ci_KZY8TAFPEUMW",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1300,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_fallback_missing_payment-00",
+    "family": "exchange_fallback_missing_payment",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-VCN9MN9XSVEL. Account address: clientd4my8xgqw5ns@orders.example. My requested replacement is vermilion / XS. No method for settling or refunding the purchase has been specified. Treat the lack of my specified replacement as the sole condition permitting you to return this item.",
+    "evidence_initial": "My requested replacement is vermilion / XS. No method for settling or refunding the purchase has been specified. Treat the lack of my specified replacement as the sole condition permitting you to return this item.",
+    "customer": {
+      "id": "cu_H3DYD4PCLCXG",
+      "email": "clientd4my8xgqw5ns@orders.example",
+      "gift_card": {
+        "id": "cg_N354TNBPQLTF",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_8LYJ7GDKAZ6A": {
+        "product_id": "cp_8LYJ7GDKAZ6A",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_8V89BR55HW3Z",
+            "option": "obsidian / M",
+            "price_cents": 8904,
+            "available": true
+          },
+          {
+            "item_id": "ci_6LZBX47F8423",
+            "option": "vermilion / XS",
+            "price_cents": 10204,
+            "available": false
+          },
+          {
+            "item_id": "ci_DS6QE3FZXMWH",
+            "option": "oatmeal / XXL",
+            "price_cents": 9479,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-VCN9MN9XSVEL",
+        "user_id": "cu_H3DYD4PCLCXG",
+        "status": "delivered",
+        "original_payment": "cc_J6U4AQX4T9JZ",
+        "items": [
+          {
+            "item_id": "ci_8V89BR55HW3Z",
+            "product_id": "cp_8LYJ7GDKAZ6A",
+            "option": "obsidian / M",
+            "price_cents": 8904
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientd4my8xgqw5ns@orders.example",
+      "order_id": "CX-VCN9MN9XSVEL",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_8V89BR55HW3Z",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientd4my8xgqw5ns@orders.example",
+      "order_id": "CX-VCN9MN9XSVEL",
+      "requested_option": "vermilion / XS",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientd4my8xgqw5ns@orders.example",
+      "order_id": "CX-VCN9MN9XSVEL",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-VCN9MN9XSVEL",
+      "item_id": "ci_8V89BR55HW3Z",
+      "new_item_id": "ci_6LZBX47F8423",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 8904,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_fallback_missing_payment-01",
+    "family": "exchange_fallback_missing_payment",
+    "split": "test",
+    "initial_message": "For your retail team: Swap the vest I originally purchased into juniper / XL. I still owe you my preferred payment route. I approve an item return in the event, and only the event, that the requested replacement cannot be sourced. Reference CX-23P7HFY4UF63. Account address: clientf4pzf568tzeq@orders.example.",
+    "evidence_initial": "Swap the vest I originally purchased into juniper / XL. I still owe you my preferred payment route. I approve an item return in the event, and only the event, that the requested replacement cannot be sourced.",
+    "customer": {
+      "id": "cu_KGSTHKRA8YHA",
+      "email": "clientf4pzf568tzeq@orders.example",
+      "gift_card": {
+        "id": "cg_LEVNW6RZHNYE",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_WYVNFZFYDTUK": {
+        "product_id": "cp_WYVNFZFYDTUK",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_U8UZ8U78WDES",
+            "option": "obsidian / M",
+            "price_cents": 4605,
+            "available": true
+          },
+          {
+            "item_id": "ci_A7HKSENGTB8U",
+            "option": "juniper / XL",
+            "price_cents": 3955,
+            "available": false
+          },
+          {
+            "item_id": "ci_3T3LPWDE2WSF",
+            "option": "oatmeal / XXL",
+            "price_cents": 5180,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-23P7HFY4UF63",
+        "user_id": "cu_KGSTHKRA8YHA",
+        "status": "delivered",
+        "original_payment": "cc_26KK4N5AMVMV",
+        "items": [
+          {
+            "item_id": "ci_U8UZ8U78WDES",
+            "product_id": "cp_WYVNFZFYDTUK",
+            "option": "obsidian / M",
+            "price_cents": 4605
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientf4pzf568tzeq@orders.example>.",
+      "order_id": "CX-23P7HFY4UF63",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_U8UZ8U78WDES",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "clientf4pzf568tzeq@orders.example",
+      "order_id": "CX-23P7HFY4UF63",
+      "requested_option": "juniper / XL",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientf4pzf568tzeq@orders.example",
+      "order_id": "CX-23P7HFY4UF63",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-23P7HFY4UF63",
+      "item_id": "ci_U8UZ8U78WDES",
+      "new_item_id": "ci_A7HKSENGTB8U",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 4605,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_missing_email-00",
+    "family": "exchange_missing_email",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-72AHSVSR8CJS. Please swap my vest into vermilion / XS and use original payment for its adjustment. Ask for my account contact when needed. My consent covers sending this item back when the selected swap is genuinely out of inventory.",
+    "evidence_initial": "Please swap my vest into vermilion / XS and use original payment for its adjustment. Ask for my account contact when needed. My consent covers sending this item back when the selected swap is genuinely out of inventory.",
+    "customer": {
+      "id": "cu_3TTFDW8L8YUN",
+      "email": "clientlapqmyqvlqwb@orders.example",
+      "gift_card": {
+        "id": "cg_G5HQCBD5AQCD",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_HK7LMGYYYK5U": {
+        "product_id": "cp_HK7LMGYYYK5U",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_678ZJ5KP5X8V",
+            "option": "vermilion / XS",
+            "price_cents": 5566,
+            "available": true
+          },
+          {
+            "item_id": "ci_8TMVDXUK97V5",
+            "option": "oatmeal / XXL",
+            "price_cents": 6791,
+            "available": true
+          },
+          {
+            "item_id": "ci_R3AGRGQXD2N2",
+            "option": "obsidian / M",
+            "price_cents": 6216,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-72AHSVSR8CJS",
+        "user_id": "cu_3TTFDW8L8YUN",
+        "status": "delivered",
+        "original_payment": "cc_EYVNGXXXCL3T",
+        "items": [
+          {
+            "item_id": "ci_R3AGRGQXD2N2",
+            "product_id": "cp_HK7LMGYYYK5U",
+            "option": "obsidian / M",
+            "price_cents": 6216
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientlapqmyqvlqwb@orders.example",
+      "order_id": "CX-72AHSVSR8CJS",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_R3AGRGQXD2N2",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "CX-72AHSVSR8CJS",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientlapqmyqvlqwb@orders.example",
+      "order_id": "CX-72AHSVSR8CJS",
+      "requested_option": "vermilion / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-72AHSVSR8CJS",
+      "item_id": "ci_R3AGRGQXD2N2",
+      "new_item_id": "ci_678ZJ5KP5X8V",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -650,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-exchange_missing_email-01",
+    "family": "exchange_missing_email",
+    "split": "test",
+    "initial_message": "For your retail team: I need juniper / XL in place of this vest, with its difference on original payment; my account address is omitted. If the catalog cannot deliver that particular option, proceed with a full return under my authorization. Reference CX-L4MYRK3DF5LH.",
+    "evidence_initial": "I need juniper / XL in place of this vest, with its difference on original payment; my account address is omitted. If the catalog cannot deliver that particular option, proceed with a full return under my authorization.",
+    "customer": {
+      "id": "cu_9BXTMAMLKGF2",
+      "email": "clientcfwlt23flt8u@orders.example",
+      "gift_card": {
+        "id": "cg_8CLZAHVU3HBS",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_57GXSDRXFZVU": {
+        "product_id": "cp_57GXSDRXFZVU",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_YLT66AJ8GG6P",
+            "option": "juniper / XL",
+            "price_cents": 12809,
+            "available": true
+          },
+          {
+            "item_id": "ci_AAMEJ5X6QKRV",
+            "option": "oatmeal / XXL",
+            "price_cents": 11234,
+            "available": true
+          },
+          {
+            "item_id": "ci_3USZ7RWHN359",
+            "option": "obsidian / M",
+            "price_cents": 10659,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-L4MYRK3DF5LH",
+        "user_id": "cu_9BXTMAMLKGF2",
+        "status": "delivered",
+        "original_payment": "cc_U3ZTYAVYAUZJ",
+        "items": [
+          {
+            "item_id": "ci_3USZ7RWHN359",
+            "product_id": "cp_57GXSDRXFZVU",
+            "option": "obsidian / M",
+            "price_cents": 10659
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientcfwlt23flt8u@orders.example>.",
+      "order_id": "CX-L4MYRK3DF5LH",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_3USZ7RWHN359",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "CX-L4MYRK3DF5LH",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "clientcfwlt23flt8u@orders.example",
+      "order_id": "CX-L4MYRK3DF5LH",
+      "requested_option": "juniper / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "CX-L4MYRK3DF5LH",
+      "item_id": "ci_3USZ7RWHN359",
+      "new_item_id": "ci_YLT66AJ8GG6P",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 2150,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-missing_email_payment-00",
+    "family": "missing_email_payment",
+    "split": "test",
+    "initial_message": "Service note: Reference CX-EEM6ZE7N977P. Help me give back the complete vest. Both my account contact and preferred refund route still need collecting.",
+    "evidence_initial": "Help me give back the complete vest. Both my account contact and preferred refund route still need collecting.",
+    "customer": {
+      "id": "cu_5R3BVKKMPR4V",
+      "email": "clientmrzu7eruzgfa@orders.example",
+      "gift_card": {
+        "id": "cg_DEYBAR5WWR8G",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_3ZCHLJ2Y3QWG": {
+        "product_id": "cp_3ZCHLJ2Y3QWG",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_PFEY33U7DQ6G",
+            "option": "oatmeal / XXL",
+            "price_cents": 6316,
+            "available": true
+          },
+          {
+            "item_id": "ci_PNFAR63GJRRL",
+            "option": "vermilion / XS",
+            "price_cents": 7891,
+            "available": true
+          },
+          {
+            "item_id": "ci_58NZTEDKWGMH",
+            "option": "obsidian / M",
+            "price_cents": 5741,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-EEM6ZE7N977P",
+        "user_id": "cu_5R3BVKKMPR4V",
+        "status": "delivered",
+        "original_payment": "cc_HN2VEVU7HM9Q",
+        "items": [
+          {
+            "item_id": "ci_58NZTEDKWGMH",
+            "product_id": "cp_3ZCHLJ2Y3QWG",
+            "option": "obsidian / M",
+            "price_cents": 5741
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "clientmrzu7eruzgfa@orders.example",
+      "order_id": "CX-EEM6ZE7N977P",
+      "reason": "no longer needed",
+      "new_option": "vermilion / XS",
+      "item_id": "ci_58NZTEDKWGMH",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "CX-EEM6ZE7N977P",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "clientmrzu7eruzgfa@orders.example",
+      "order_id": "CX-EEM6ZE7N977P",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email",
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-EEM6ZE7N977P",
+      "item_id": "ci_58NZTEDKWGMH",
+      "new_item_id": "ci_PNFAR63GJRRL",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 5741,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "cuda-fresh-test-missing_email_payment-01",
+    "family": "missing_email_payment",
+    "split": "test",
+    "initial_message": "For your retail team: Returning the whole vest is my request. I have supplied neither an account address nor a payment choice. Reference CX-8KB6BQKF3R4K.",
+    "evidence_initial": "Returning the whole vest is my request. I have supplied neither an account address nor a payment choice.",
+    "customer": {
+      "id": "cu_FY2P3386RCFL",
+      "email": "clientbts6dwyqh44g@orders.example",
+      "gift_card": {
+        "id": "cg_UMGRTL3LKMP9",
+        "balance_cents": 16000
+      }
+    },
+    "products": {
+      "cp_FXQSFDSYR7DK": {
+        "product_id": "cp_FXQSFDSYR7DK",
+        "name": "Ridgeway recycled fleece vest",
+        "variants": [
+          {
+            "item_id": "ci_JBWWGVUE85FQ",
+            "option": "obsidian / M",
+            "price_cents": 9914,
+            "available": true
+          },
+          {
+            "item_id": "ci_9BK5L55DULUP",
+            "option": "juniper / XL",
+            "price_cents": 11214,
+            "available": true
+          },
+          {
+            "item_id": "ci_DLZBLDGJN5WE",
+            "option": "oatmeal / XXL",
+            "price_cents": 10489,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "CX-8KB6BQKF3R4K",
+        "user_id": "cu_FY2P3386RCFL",
+        "status": "delivered",
+        "original_payment": "cc_L8KY5C2BGXNX",
+        "items": [
+          {
+            "item_id": "ci_JBWWGVUE85FQ",
+            "product_id": "cp_FXQSFDSYR7DK",
+            "option": "obsidian / M",
+            "price_cents": 9914
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please contact me at: <clientbts6dwyqh44g@orders.example>.",
+      "order_id": "CX-8KB6BQKF3R4K",
+      "reason": "I accidentally completed checkout; I did not mean to place this order.",
+      "new_option": "Select juniper / XL as the replacement, please.",
+      "item_id": "ci_JBWWGVUE85FQ",
+      "payment_method": "My choice for the adjustment is the original payment instrument.",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "CX-8KB6BQKF3R4K",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "clientbts6dwyqh44g@orders.example",
+      "order_id": "CX-8KB6BQKF3R4K",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email",
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "CX-8KB6BQKF3R4K",
+      "item_id": "ci_JBWWGVUE85FQ",
+      "new_item_id": "ci_9BK5L55DULUP",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 9914,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  }
+]

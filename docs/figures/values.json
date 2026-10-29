@@ -1,0 +1,130 @@
+{
+  "evaluation_sha256": "516fd38f9f73bce49c2962f0e72f449718c39c99b9065c192b0a8ae1b32fd4a9",
+  "training_sha256": "98edfcea6d3cecc68d134fae46906e03cd32e82ccd8bfce22c343352fa7a53ba",
+  "csv_sha256": "ac9f8a7b77e6b2b536470b9683edf925bca63bda7db5b2c6bf909e3faa09014b",
+  "summary": {
+    "base": {
+      "tasks": 27,
+      "task_success": 16,
+      "raw_outcome_matches": 21,
+      "proposal_correct": 21,
+      "model_calls": 118,
+      "schema_valid": 118,
+      "reference_next_action_matches": 68,
+      "required_clarifications": 9,
+      "clarifications_obtained": 3,
+      "identity_and_order_checked": 26,
+      "rejected_write_attempts": 14,
+      "confirmation_preserved": 27,
+      "latency_p50_ms": 4474.33,
+      "median_model_calls": 4,
+      "output_tokens": 3133
+    },
+    "finetuned": {
+      "tasks": 27,
+      "task_success": 15,
+      "raw_outcome_matches": 16,
+      "proposal_correct": 16,
+      "model_calls": 152,
+      "schema_valid": 151,
+      "reference_next_action_matches": 76,
+      "required_clarifications": 9,
+      "clarifications_obtained": 7,
+      "identity_and_order_checked": 25,
+      "rejected_write_attempts": 16,
+      "confirmation_preserved": 27,
+      "latency_p50_ms": 8268.93,
+      "median_model_calls": 6,
+      "output_tokens": 3483
+    }
+  },
+  "paired": {
+    "improved": 3,
+    "regressed": 4,
+    "both_pass": 12,
+    "both_fail": 8
+  },
+  "failures": [
+    {
+      "case_id": "test-exchange-00",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-exchange-01",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-exchange-02",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-exchange_fallback-01",
+      "base": true,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-exchange_fallback-02",
+      "base": true,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-missing_email-00",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-missing_email-01",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-missing_email-02",
+      "base": true,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-missing_payment-00",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "test-missing_payment-01",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-missing_payment-02",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-missing_reason-00",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "test-missing_reason-01",
+      "base": false,
+      "finetuned": false
+    },
+    {
+      "case_id": "test-missing_reason-02",
+      "base": false,
+      "finetuned": true
+    },
+    {
+      "case_id": "test-return-02",
+      "base": true,
+      "finetuned": false
+    }
+  ],
+  "figure_sha256": {
+    "evaluation.png": "a849e87c4cebdab298a5c0b4b8c0813232ed1a1c5718808e1f13989afab665a9",
+    "evaluation.svg": "84db6d9d008783808c93d1671a07d8b62cfc637a0a873c9a1d39b8300775d447",
+    "training.png": "e9d5e57ed759d4092a91cfa3508d7a539f00c0a4ac37b0677e73486f7561d06c",
+    "training.svg": "0634f9e1140cbefc74c7f63d8ab673d996ec8930bb9c937020394b9e978a99ba"
+  }
+}

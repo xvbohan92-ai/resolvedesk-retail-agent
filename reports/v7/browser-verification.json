@@ -1,0 +1,56 @@
+{
+  "documentWidth": 522,
+  "images": [
+    {
+      "alt": "Four-arm business recovery outcomes and retained protections",
+      "loaded": true,
+      "naturalWidth": 1957,
+      "src": "/api/figure/evaluation.png?experiment=v7"
+    },
+    {
+      "alt": "All 24 scenario families in the new test",
+      "loaded": true,
+      "naturalWidth": 1704,
+      "src": "/api/figure/families.png?experiment=v7"
+    },
+    {
+      "alt": "Raw first-output intent fields before correction",
+      "loaded": true,
+      "naturalWidth": 1737,
+      "src": "/api/figure/intent.png?experiment=v7"
+    },
+    {
+      "alt": "Explicit permission recognition and unsupported affirmative predictions",
+      "loaded": true,
+      "naturalWidth": 2784,
+      "src": "/api/figure/consent.png?experiment=v7"
+    },
+    {
+      "alt": "Initial enum failures versus model-issued corrections",
+      "loaded": true,
+      "naturalWidth": 1957,
+      "src": "/api/figure/recovery.png?experiment=v7"
+    },
+    {
+      "alt": "Expected versus proposed operations including unfinished tasks",
+      "loaded": true,
+      "naturalWidth": 2980,
+      "src": "/api/figure/confusion.png?experiment=v7"
+    },
+    {
+      "alt": "Actual optimizer updates and validation-only checkpoint selection",
+      "loaded": true,
+      "naturalWidth": 2784,
+      "src": "/api/figure/training.png?experiment=v7"
+    }
+  ],
+  "scriptSources": [
+    "/static/app.js?v=6cb666185b33"
+  ],
+  "url": "http://127.0.0.1:8771/",
+  "viewport": {
+    "height": 937,
+    "width": 522
+  },
+  "consoleErrors": []
+}

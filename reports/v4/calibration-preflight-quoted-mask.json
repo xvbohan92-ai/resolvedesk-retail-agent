@@ -1,0 +1,75 @@
+{
+  "protocol": {
+    "method": "Balanced conditional action/payment-span preference plus chosen NLL",
+    "beta": 2.0,
+    "margin": 0.5,
+    "sft_weight": 1.0,
+    "learning_rate": 3e-06,
+    "seed": 2026102744,
+    "updates": 48,
+    "epochs": 2,
+    "batch_size": 1,
+    "projection_window": 256,
+    "max_seq_length": 3072,
+    "initialization": "data/finetuning/retail-qlora-v4/recovery",
+    "output": "data/finetuning/retail-qlora-v4/calibration",
+    "best_path": "data/finetuning/retail-qlora-v4/best-calibration",
+    "selection": "Validation-only compare recovery696 vs calibration744. Preserve exchange/H/clarification/return/overall counts and question repeats, zero exchange-as-return; then prefer fallback, overall, fewer questions/calls. Frozen choice helper defines exact rule. ",
+    "pair_count": 24,
+    "distinct_contexts": 20,
+    "source_worlds": 12,
+    "scope": "Training worlds only; stock/return permission counterfactuals share worlds. Eight return, eight exchange and eight handoff labels. Same-tool gift-card contrasts use only payment-value tokens as reward, never identical action tokens. Two repetitions of one seeded shuffled 24-pair order; no new independent tasks claimed. "
+  },
+  "manifest": {
+    "previous_manifest_sha256": "82ee41bc9273cba1e714a24cf5dd86cd18aaa9677c2886dff8bebacc87d84458",
+    "initial_weights_sha256": "4cef852b19f8e493226cffdf147decc7bab3017343d2f0732e0160695befd5e4",
+    "previous_validation_sha256": "3872ece4b90a2f8df33e3848f208534e053828538a2ec978cb88931157690640",
+    "files": {
+      "training/v4/calibration.py": "9a2ff1853abc2eefa00a19dde03e32b2d6cd8e9ef7bb064a4c14e62315687a66",
+      "training/v4/calibration-protocol.json": "3f165181c262198b408b16a8328c6db4c7c3c61cb651dc3670120b38a3c5daf1",
+      "training/v4/datasets/calibration.jsonl": "de87350609bb49fe9f0aa8028f0e2263adbcce4fcfad6c4a55275e4fa3c0bfac",
+      "training/v4/calibration_select.py": "32415291ad3fce7dfe770924856abc51f120bddf79eb93640e5abf14866b0b80",
+      "training/v4/calibration_choice.py": "c330d76a4dcf6977dad39cfdd5e0947f56e36510ef075c554603034ee8b32d14",
+      "reports/v4/calibration-reference-audit.json": "de9ff3b2cb418018fca9aece7705cc65565d2eac88f20a89a3b27939409ba00b"
+    },
+    "pair_count": 24,
+    "test_inference_started_at_freeze": false
+  },
+  "metrics": [
+    {
+      "iteration": 1,
+      "category": "available_preserve_exchange",
+      "loss": 0.3817044198513031,
+      "chosen_action_logp": -0.3125,
+      "rejected_action_logp": -0.9778645634651184,
+      "chosen_completion_nll": 0.02002999372780323,
+      "pre_update_mean_logp_gap": 0.6653645634651184,
+      "elapsed_seconds": 22.937,
+      "post_update_mean_logp_gap": 0.8771158754825592,
+      "post_update_chosen_completion_nll": 0.017393533140420914
+    }
+  ],
+  "completed_updates": 1,
+  "trainable_parameters": 3670016,
+  "adapter_l2_change_from_recovery80": 0.018135573233142868,
+  "adapter_sha256": "7fb3d699f0885647876b5d247d8267fc3e5f3656146f35281c0cbb77422861f3",
+  "elapsed_seconds": 32.64,
+  "peak_memory_bytes": 3873922580,
+  "preflight_only": true,
+  "gradient_audit": {
+    "chain_rule_max_absolute_error": 7.450580596923828e-08,
+    "finite_difference_error": 1.519918441772461e-05
+  },
+  "projection_audit": {
+    "window": 256,
+    "all_train_targets_covered": true,
+    "mean_logp_max_error_vs_full_projection": 0.0
+  },
+  "previous_wired_limit": 0,
+  "wired_limit_bytes": 6442450944,
+  "cache_limit_bytes": 268435456,
+  "previous_cache_limit": 16320875724,
+  "execution": "Compiled gradient with mutable input/output state capture; masked 32-token padding. Wired memory capped at 6 GiB, cache at 256 MiB, cleared after each pair. Recovery80 initialization; no preflight weights reused.",
+  "test_used_for_selection": false,
+  "cloud_compute_used": false
+}

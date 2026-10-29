@@ -1,0 +1,10 @@
+{
+  "evaluation_sha256": "3a19cf2d2cdc9b9203489cb8842563bd5685a409cfc602342dd4a9a08079aa53",
+  "source_sha256": "ba5587ad70c3b8217f85134e10fc10083aee4bcfa5e32db086547a17ed463f5d",
+  "records_reconciled": 128,
+  "new_test_tasks": 32,
+  "no_test_based_selection": true,
+  "final_checkpoint_fixed_before_test": true,
+  "question_attempts_and_delivery_separately_reconciled": true,
+  "scope": "Source/trace/export reconciliation, not independent human adjudication."
+}

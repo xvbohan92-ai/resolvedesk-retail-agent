@@ -1,0 +1,15 @@
+{
+  "scope": "Original pending simulated proposals must neither be confirmed nor declined by new probes.",
+  "sessions": [
+    {
+      "session_id": "d96e5e64bc595fb3dcb961b3",
+      "status": "awaiting_confirmation",
+      "body_sha256": "86809e287263c53daa19f4112240880107a5a523a428f91b2e68b247b8536042"
+    },
+    {
+      "session_id": "af1240895e611b4f40a8c030",
+      "status": "awaiting_confirmation",
+      "body_sha256": "ac8ca059f6d26f05c64360966842a76e3e984801d5e0dcb19dedbce5d61a8637"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "previous_manifest_sha256": "82ee41bc9273cba1e714a24cf5dd86cd18aaa9677c2886dff8bebacc87d84458",
+  "initial_weights_sha256": "4cef852b19f8e493226cffdf147decc7bab3017343d2f0732e0160695befd5e4",
+  "previous_validation_sha256": "3872ece4b90a2f8df33e3848f208534e053828538a2ec978cb88931157690640",
+  "files": {
+    "training/v4/calibration.py": "3f15c5cf3530544fd9344627f6512094b4493970455dcadf73ad8cd9bdb9f9a7",
+    "training/v4/calibration-protocol.json": "3f165181c262198b408b16a8328c6db4c7c3c61cb651dc3670120b38a3c5daf1",
+    "training/v4/datasets/calibration.jsonl": "de87350609bb49fe9f0aa8028f0e2263adbcce4fcfad6c4a55275e4fa3c0bfac",
+    "training/v4/calibration_select.py": "32415291ad3fce7dfe770924856abc51f120bddf79eb93640e5abf14866b0b80",
+    "training/v4/calibration_choice.py": "c330d76a4dcf6977dad39cfdd5e0947f56e36510ef075c554603034ee8b32d14",
+    "reports/v4/calibration-reference-audit.json": "de9ff3b2cb418018fca9aece7705cc65565d2eac88f20a89a3b27939409ba00b"
+  },
+  "pair_count": 24,
+  "test_inference_started_at_freeze": false
+}

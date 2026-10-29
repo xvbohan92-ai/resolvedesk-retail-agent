@@ -1,0 +1,113 @@
+{
+  "dataset": {
+    "cases": {
+      "train": 128,
+      "valid": 16,
+      "test": 48
+    },
+    "rows": {
+      "train": 480,
+      "valid": 62,
+      "test": 186
+    },
+    "files": {
+      "training/v3/objective.py": "51216ce2bfe26523d627f89a92e67f2139549b64ff2351781e9a631d5734c4cf",
+      "training/v3/audit.py": "311fcbcabdbd3edd380af963d5ca42f63afd8074ab281149d2b7e79ff3408b41",
+      "training/v3/evaluation.py": "218c2e586a162db5a994990ea6b18e5fef8049fa7c6e2a7f01d17298e547a3db",
+      "training/v3/__init__.py": "469ddca7980d1898516b17ce0989e1d27e894c0ea0e92fac3299af4afc9ed633",
+      "training/v3/tokenization.py": "946f01aab1b0ab6383025a552c474382ec68a8c4711739c08285f62465841fc3",
+      "training/v3/common.py": "bbb17e0403a9c9927e102880e4a228ec5f10a664a453cecae98626f4f586f417",
+      "training/v3/train.py": "df21ce6e4b6e3fb6b8668afeb3d1765abfa55f972f41bfd17f180d3bed577d11",
+      "training/v3/evaluate.py": "3928660244073603236cf138295ff3f84da5e8e00fea8d459f3737eebae7d764",
+      "training/v3/prepare.py": "5e3709fa73c3295beb99a871322532f37560a21caef75253c0deb4db322eb401",
+      "training/v3/fixtures.py": "f66e1a09230eed3c2b93aecf89c7602306064b8d848b77994b04c69eb00469e8",
+      "training/v3/validation.py": "fa1cade5b2964c03f4f83f62fc950b63e152421b71e10601d461516e339de303",
+      "training/v3/config.json": "8b0d64436000d9f875b98f7d39e3749fdada03f40fb8f441975a03479d941f0e",
+      "resolve_desk/workflow.py": "2c45094c90643020bddb8d66ef5a4dfc607522620d67c3c07744a99565c0afbc",
+      "resolve_desk/store.py": "01ced6a33f0995d9c3362fc18fd8123a59e523edc408382cd38cdd990285f5bb",
+      "resolve_desk/protocol.py": "7d48eca71522d12da7e889b0fcc3b939c1f8bae12460b64b8a8dc173ef6185a2",
+      "training/common.py": "58b7ec8da02d4708625e8dc432fb56fa03c8ecd05c28cd9b5ba0ca1940644030",
+      "training/runtime.py": "70e60f56223f7161c430f6b601ae9f748548b740c9f1ee0172e7f65acdbf4531",
+      "training/v2/fixtures.py": "178335d3cf882ddbb10bf0d8c330785632963ec91401e5438c69d58be7cf9b17",
+      "training/v2/scoring.py": "4cf2b7fc6c281bcbc413f84a548ce35bd330c80ec17681242ffc3d5d02235bb4",
+      "training/v2/evaluation.py": "3fc5df34e22ce08d8e5e34d3ffe4a22c313906aceb271db9139b08a2c0fdead1",
+      "training/scoring.py": "4408966c655a222f8d1a2aa1418594587a63163029c5477bebeacacd6db9eb6b",
+      "training/evaluate.py": "b7b327c05caff7d66c61f4cce7a9006fc108ae6c31321e0b905fb01e57cbc0cc",
+      "training/v3/datasets/train.jsonl": "3e180feec48240ca10bbeb9010bb37a29838cf96f804a59e416370a7d79ddc4d",
+      "training/v3/datasets/test.jsonl": "96d873608040715987c50d7497b3e28cd5060599720b2fa858dff53a2445756d",
+      "training/v3/datasets/cases.json": "ef0d77a8237f937816d837dc6b8fbbe0476dfcb224ef470540a866a562dbc305",
+      "training/v3/datasets/valid.jsonl": "723226ba6e94b0e6483f095dc89029d02203384c680c28ae0fcb257cceb97a6e"
+    },
+    "families": [
+      "cancel",
+      "missing_reason",
+      "return",
+      "missing_payment",
+      "exchange",
+      "exchange_fallback",
+      "forbidden_status",
+      "foreign_order",
+      "missing_email",
+      "exchange_missing_option",
+      "exchange_missing_payment",
+      "exchange_gift",
+      "exchange_unavailable",
+      "exchange_shortfall",
+      "exchange_fallback_available",
+      "return_reject_exchange"
+    ],
+    "training_origins": {
+      "wrong_return_correction": 80,
+      "clean_terminal": 208,
+      "upstream": 168,
+      "return_after_catalog": 24
+    },
+    "training_actions": {
+      "propose_exchange": 200,
+      "propose_cancel": 16,
+      "get_order": 55,
+      "propose_return": 64,
+      "ask_customer": 40,
+      "identify_customer": 55,
+      "get_product": 18,
+      "handoff": 32
+    },
+    "scope": "Fresh self-authored synthetic data; v1/v2 errors are development evidence. Disjoint six-character IDs, price draws and split-specific utterances; shared author, policy, schema and task families. Positive exchange terminal snapshots are oversampled threefold; explicit customer correction snapshots twofold. No test model output before selection."
+  },
+  "config_sha256": "8b0d64436000d9f875b98f7d39e3749fdada03f40fb8f441975a03479d941f0e",
+  "counts": {
+    "train": {
+      "rows": 480,
+      "max_tokens": 1590,
+      "tool_tokens_upweighted": 1240,
+      "all_prompt_masks_and_offsets_valid": true,
+      "truncated": 0
+    },
+    "valid": {
+      "rows": 62,
+      "max_tokens": 1353,
+      "tool_tokens_upweighted": 136,
+      "all_prompt_masks_and_offsets_valid": true,
+      "truncated": 0
+    },
+    "test": {
+      "rows": 186,
+      "max_tokens": 1341,
+      "tool_tokens_upweighted": 408,
+      "all_prompt_masks_and_offsets_valid": true,
+      "truncated": 0
+    }
+  },
+  "numerical_objective_audit": {
+    "equal_single_token_error_tool_vs_argument_loss_ratio": 7.9999680519104,
+    "expected_ratio": 8.0,
+    "prompt_loss_masked": true
+  },
+  "versions": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "transformers": "5.21.0",
+    "tokenizers": "0.23.3"
+  },
+  "test_model_inference_performed": false
+}

@@ -1,0 +1,39 @@
+[project]
+name = "resolvedesk"
+version = "0.7.0"
+description = "Retail action agent with transactional approval and auditable LoRA evaluation"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "httpx>=0.28,<1", "pydantic>=2.10,<3"]
+
+[dependency-groups]
+dev = [
+    "numpy==2.2.6",
+    "pytest>=8,<10",
+    "ruff>=0.11,<1",
+]
+viz = ["matplotlib>=3.9,<4"]
+
+[project.scripts]
+resolvedesk = "resolve_desk.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["resolve_desk"]
+
+[tool.hatch.build.targets.sdist]
+# A build receipt cannot fingerprint the archive that contains that receipt.
+exclude = ["/reports/v3/package-verification.json", "/reports/v4/package-verification.json", "/reports/v5/package-verification.json", "/reports/v6/package-verification.json", "/reports/v6_1/package-verification.json", "/reports/v7/package-verification.json"]
+
+[tool.pytest.ini_options]
+# Public CI covers application behavior; private historical seal tests require the original local archive.
+testpaths = ["tests/test_api.py", "tests/test_boundaries.py", "tests/test_workflow.py", "tests/test_workflow_v2.py", "tests/test_resolution_v5.py", "tests/test_resolution_v6.py", "tests/test_resolution_v6_1.py", "tests/test_resolution_v7.py", "tests/test_resolution_v8.py"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

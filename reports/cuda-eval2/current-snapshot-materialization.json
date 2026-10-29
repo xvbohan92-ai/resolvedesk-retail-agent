@@ -1,0 +1,32 @@
+{
+  "run_id": "resolvedesk-cuda-eval-002",
+  "archive_sha256": "20022b8a0925270671e1f10cf6f9f3d9c14d06720e2f6e32f8fe5753c81a0136",
+  "import_audit_sha256": "f15dcb3b949b7a13f5584cdace49f66fcba9f31a06a87f2c9126f6d6bd09141a",
+  "immutable_snapshot_directory": "reports/cuda-eval2/cloud-evidence/snapshots/20022b8a0925270671e1f10cf6f9f3d9c14d06720e2f6e32f8fe5753c81a0136",
+  "current_raw_files": [
+    "reports/cuda-eval2/analysis-plan.json",
+    "reports/cuda-eval2/artifact-identity.json",
+    "reports/cuda-eval2/call-journal.json",
+    "reports/cuda-eval2/evaluation-console.log",
+    "reports/cuda-eval2/evaluation-launch.json",
+    "reports/cuda-eval2/evaluation-partial.json",
+    "reports/cuda-eval2/evaluation.json",
+    "reports/cuda-eval2/prelaunch-cpu-console.log",
+    "reports/cuda-eval2/protocol-audit.json"
+  ],
+  "no_historical_snapshot_modified": true,
+  "completed_records": 96,
+  "actual_complete_record_calls": 509,
+  "retained_journal_entries": 509,
+  "retained_inflight_started_entries": 0,
+  "extra_tail_entries_retained": 0,
+  "quality_results_published": false,
+  "materialized_at_utc": "2026-10-29T01:42:55.874630+00:00",
+  "materializer_source_sha256": "bc5c596728d8d7ebdb5f8056b9fa3a1de679109538959ba7c973ba2327c1af35",
+  "public_projection": {
+    "derived_from_original_artifact": true,
+    "original_artifact_sha256": "bf2a4307abc3b08ac1c0dcc0674fa26bac8f6be56c72d7ceb05f1afdc07eb815",
+    "redaction_manifest": "public-redactions.json",
+    "scope": "Private non-retail account/authorization and machine-path metadata omitted. Original verification claims refer to historical unredacted local artifacts, not these public bytes."
+  }
+}

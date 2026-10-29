@@ -1,0 +1,1762 @@
+[
+  {
+    "id": "v5-valid-cancel-00",
+    "family": "cancel",
+    "initial_message": "Hello support. Please cancel the order because it was no longer needed. My purchase reference: Order ORD-SDEGYMQU. Email buyerryvmklfc@retail.example.",
+    "customer": {
+      "id": "u_4DY8KVXP",
+      "email": "buyerryvmklfc@retail.example",
+      "gift_card": {
+        "id": "gift_MR4CULZ6",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-SDEGYMQU",
+        "user_id": "u_4DY8KVXP",
+        "status": "pending",
+        "original_payment": "card_32HENAF9",
+        "items": [
+          {
+            "item_id": "item_EYP4GST7",
+            "product_id": "p_34ZAUQYM",
+            "option": "black / L",
+            "price_cents": 7864
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_34ZAUQYM": {
+        "product_id": "p_34ZAUQYM",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_EYP4GST7",
+            "option": "black / L",
+            "price_cents": 7864,
+            "available": true
+          },
+          {
+            "item_id": "item_3BD97WGL",
+            "option": "coral / XS",
+            "price_cents": 7214,
+            "available": true
+          },
+          {
+            "item_id": "item_C8WB65UQ",
+            "option": "white / S",
+            "price_cents": 8214,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-cancel-01",
+    "family": "cancel",
+    "initial_message": "Here is what I need. Order ORD-92L9FBRJ. Email buyery99xr4a2@retail.example. Please cancel the order because it was ordered by mistake.",
+    "customer": {
+      "id": "u_N34NVR6Q",
+      "email": "buyery99xr4a2@retail.example",
+      "gift_card": {
+        "id": "gift_7FTLQSYB",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-92L9FBRJ",
+        "user_id": "u_N34NVR6Q",
+        "status": "pending",
+        "original_payment": "card_W89CVLEC",
+        "items": [
+          {
+            "item_id": "item_7MXLNPSY",
+            "product_id": "p_G7NTUT93",
+            "option": "black / L",
+            "price_cents": 4116
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_G7NTUT93": {
+        "product_id": "p_G7NTUT93",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_JK29D3JZ",
+            "option": "moss / M",
+            "price_cents": 5316,
+            "available": true
+          },
+          {
+            "item_id": "item_7MXLNPSY",
+            "option": "black / L",
+            "price_cents": 4116,
+            "available": true
+          },
+          {
+            "item_id": "item_EH73QG7B",
+            "option": "white / S",
+            "price_cents": 4466,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-missing_reason-00",
+    "family": "missing_reason",
+    "initial_message": "Hello support. I need an order cancellation. My purchase reference: Order ORD-PQ5W9D55. Email buyer4zwamxt3@retail.example.",
+    "customer": {
+      "id": "u_8R72X4RR",
+      "email": "buyer4zwamxt3@retail.example",
+      "gift_card": {
+        "id": "gift_ZRDAFM9T",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-PQ5W9D55",
+        "user_id": "u_8R72X4RR",
+        "status": "pending",
+        "original_payment": "card_223BGN77",
+        "items": [
+          {
+            "item_id": "item_MXWN4UGH",
+            "product_id": "p_75P58M4S",
+            "option": "black / L",
+            "price_cents": 7742
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_75P58M4S": {
+        "product_id": "p_75P58M4S",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_V6J8UHXU",
+            "option": "white / S",
+            "price_cents": 8092,
+            "available": true
+          },
+          {
+            "item_id": "item_MXWN4UGH",
+            "option": "black / L",
+            "price_cents": 7742,
+            "available": true
+          },
+          {
+            "item_id": "item_ZFA6T6TU",
+            "option": "coral / XS",
+            "price_cents": 8942,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-missing_reason-01",
+    "family": "missing_reason",
+    "initial_message": "Here is what I need. Order ORD-83VK555U. Email buyeraqca9fhl@retail.example. I need an order cancellation.",
+    "customer": {
+      "id": "u_R92ZXYEY",
+      "email": "buyeraqca9fhl@retail.example",
+      "gift_card": {
+        "id": "gift_NHK6RTX5",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-83VK555U",
+        "user_id": "u_R92ZXYEY",
+        "status": "pending",
+        "original_payment": "card_DYGEPCHS",
+        "items": [
+          {
+            "item_id": "item_M9TDZ8EJ",
+            "product_id": "p_WZHDAH7X",
+            "option": "black / L",
+            "price_cents": 7763
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_WZHDAH7X": {
+        "product_id": "p_WZHDAH7X",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_6T7EDVPL",
+            "option": "white / S",
+            "price_cents": 8113,
+            "available": true
+          },
+          {
+            "item_id": "item_MKB6PKAE",
+            "option": "moss / M",
+            "price_cents": 9613,
+            "available": true
+          },
+          {
+            "item_id": "item_M9TDZ8EJ",
+            "option": "black / L",
+            "price_cents": 7763,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-return-00",
+    "family": "return",
+    "initial_message": "Hello support. I want to send the item back, reimbursing original payment. My purchase reference: Order ORD-9Z48DC7M. Email buyerwrz7xgnc@retail.example.",
+    "customer": {
+      "id": "u_S7K326NJ",
+      "email": "buyerwrz7xgnc@retail.example",
+      "gift_card": {
+        "id": "gift_W7YFZV6X",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-9Z48DC7M",
+        "user_id": "u_S7K326NJ",
+        "status": "delivered",
+        "original_payment": "card_92ZUJ644",
+        "items": [
+          {
+            "item_id": "item_FJ6WKZKN",
+            "product_id": "p_3UUKNTWS",
+            "option": "black / L",
+            "price_cents": 5234
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_3UUKNTWS": {
+        "product_id": "p_3UUKNTWS",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_FJ6WKZKN",
+            "option": "black / L",
+            "price_cents": 5234,
+            "available": true
+          },
+          {
+            "item_id": "item_XKKGGAT8",
+            "option": "coral / XS",
+            "price_cents": 7084,
+            "available": true
+          },
+          {
+            "item_id": "item_U5QSWPY3",
+            "option": "white / S",
+            "price_cents": 5584,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-return-01",
+    "family": "return",
+    "initial_message": "Here is what I need. Order ORD-LZ79GM3Z. Email buyersqasrma8@retail.example. I want to send the item back, reimbursing original payment.",
+    "customer": {
+      "id": "u_43TMJAGP",
+      "email": "buyersqasrma8@retail.example",
+      "gift_card": {
+        "id": "gift_G8XYF6YN",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-LZ79GM3Z",
+        "user_id": "u_43TMJAGP",
+        "status": "delivered",
+        "original_payment": "card_CB5F3ZPJ",
+        "items": [
+          {
+            "item_id": "item_F643MMJY",
+            "product_id": "p_BVW9DNSD",
+            "option": "black / L",
+            "price_cents": 7836
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_BVW9DNSD": {
+        "product_id": "p_BVW9DNSD",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_F643MMJY",
+            "option": "black / L",
+            "price_cents": 7836,
+            "available": true
+          },
+          {
+            "item_id": "item_8W6VTHZZ",
+            "option": "white / S",
+            "price_cents": 8186,
+            "available": true
+          },
+          {
+            "item_id": "item_FHBC3UAH",
+            "option": "moss / M",
+            "price_cents": 7186,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-missing_payment-00",
+    "family": "missing_payment",
+    "initial_message": "Hello support. I would like an item return. My purchase reference: Order ORD-MX3JR8X7. Email buyer8r44v7n3@retail.example.",
+    "customer": {
+      "id": "u_5HSR9SMN",
+      "email": "buyer8r44v7n3@retail.example",
+      "gift_card": {
+        "id": "gift_6UV3JTPS",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-MX3JR8X7",
+        "user_id": "u_5HSR9SMN",
+        "status": "delivered",
+        "original_payment": "card_8GZTNSG2",
+        "items": [
+          {
+            "item_id": "item_G5U4ZPDH",
+            "product_id": "p_NS85CZ4P",
+            "option": "black / L",
+            "price_cents": 6198
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_NS85CZ4P": {
+        "product_id": "p_NS85CZ4P",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_G5U4ZPDH",
+            "option": "black / L",
+            "price_cents": 6198,
+            "available": true
+          },
+          {
+            "item_id": "item_X7V8Y2W3",
+            "option": "white / S",
+            "price_cents": 6548,
+            "available": true
+          },
+          {
+            "item_id": "item_L9425T4L",
+            "option": "coral / XS",
+            "price_cents": 5548,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-missing_payment-01",
+    "family": "missing_payment",
+    "initial_message": "Here is what I need. Order ORD-GSRSZ967. Email buyerhbdpn983@retail.example. I would like an item return.",
+    "customer": {
+      "id": "u_CD6LQGFX",
+      "email": "buyerhbdpn983@retail.example",
+      "gift_card": {
+        "id": "gift_4PM5KM2H",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-GSRSZ967",
+        "user_id": "u_CD6LQGFX",
+        "status": "delivered",
+        "original_payment": "card_AJYZG7A4",
+        "items": [
+          {
+            "item_id": "item_5FKCHFR5",
+            "product_id": "p_CRKYQM9D",
+            "option": "black / L",
+            "price_cents": 8229
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_CRKYQM9D": {
+        "product_id": "p_CRKYQM9D",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_5FKCHFR5",
+            "option": "black / L",
+            "price_cents": 8229,
+            "available": true
+          },
+          {
+            "item_id": "item_BGQQWKJA",
+            "option": "white / S",
+            "price_cents": 8579,
+            "available": true
+          },
+          {
+            "item_id": "item_8ZSN2GLD",
+            "option": "moss / M",
+            "price_cents": 9429,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange-00",
+    "family": "exchange",
+    "initial_message": "Hello support. I would like an exchange to coral / XS, settling the difference using original payment. My purchase reference: Order ORD-5ZVCSZS2. Email buyerchnnnfn5@retail.example.",
+    "customer": {
+      "id": "u_GMFRMK2Y",
+      "email": "buyerchnnnfn5@retail.example",
+      "gift_card": {
+        "id": "gift_867RCYVP",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-5ZVCSZS2",
+        "user_id": "u_GMFRMK2Y",
+        "status": "delivered",
+        "original_payment": "card_332Q66CM",
+        "items": [
+          {
+            "item_id": "item_37SHB6FQ",
+            "product_id": "p_D2CJXYSV",
+            "option": "black / L",
+            "price_cents": 8346
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_D2CJXYSV": {
+        "product_id": "p_D2CJXYSV",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_YN3S4N56",
+            "option": "coral / XS",
+            "price_cents": 9546,
+            "available": true
+          },
+          {
+            "item_id": "item_37SHB6FQ",
+            "option": "black / L",
+            "price_cents": 8346,
+            "available": true
+          },
+          {
+            "item_id": "item_SN6QM822",
+            "option": "white / S",
+            "price_cents": 8696,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange-01",
+    "family": "exchange",
+    "initial_message": "Here is what I need. Order ORD-HLGGMYGV. Email buyerfvb58jvw@retail.example. I would like an exchange to moss / M, settling the difference using original payment.",
+    "customer": {
+      "id": "u_MWWWVE99",
+      "email": "buyerfvb58jvw@retail.example",
+      "gift_card": {
+        "id": "gift_X6ALJT9A",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-HLGGMYGV",
+        "user_id": "u_MWWWVE99",
+        "status": "delivered",
+        "original_payment": "card_BBN69TFD",
+        "items": [
+          {
+            "item_id": "item_YRF7CXWF",
+            "product_id": "p_U3QJP49U",
+            "option": "black / L",
+            "price_cents": 4041
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_U3QJP49U": {
+        "product_id": "p_U3QJP49U",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_VCJ8VVZD",
+            "option": "white / S",
+            "price_cents": 4391,
+            "available": true
+          },
+          {
+            "item_id": "item_2QF4FJW5",
+            "option": "moss / M",
+            "price_cents": 5891,
+            "available": true
+          },
+          {
+            "item_id": "item_YRF7CXWF",
+            "option": "black / L",
+            "price_cents": 4041,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_fallback-00",
+    "family": "exchange_fallback",
+    "initial_message": "Hello support. I would like an exchange to coral / XS, settling the difference using original payment. A return is acceptable only if that specific replacement cannot be supplied. My purchase reference: Order ORD-TJRJ4ZWJ. Email buyerj2ru4b8l@retail.example.",
+    "customer": {
+      "id": "u_HZRAQK4D",
+      "email": "buyerj2ru4b8l@retail.example",
+      "gift_card": {
+        "id": "gift_QQ4SWUUL",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-TJRJ4ZWJ",
+        "user_id": "u_HZRAQK4D",
+        "status": "delivered",
+        "original_payment": "card_RKTUW23T",
+        "items": [
+          {
+            "item_id": "item_7LUSA3GU",
+            "product_id": "p_2D866K8U",
+            "option": "black / L",
+            "price_cents": 3664
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_2D866K8U": {
+        "product_id": "p_2D866K8U",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_ULG383W8",
+            "option": "coral / XS",
+            "price_cents": 5514,
+            "available": false
+          },
+          {
+            "item_id": "item_7LUSA3GU",
+            "option": "black / L",
+            "price_cents": 3664,
+            "available": true
+          },
+          {
+            "item_id": "item_SUX77XHJ",
+            "option": "white / S",
+            "price_cents": 4014,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_fallback-01",
+    "family": "exchange_fallback",
+    "initial_message": "Here is what I need. Order ORD-ZB9X5DC5. Email buyer7973h34m@retail.example. I would like an exchange to moss / M, settling the difference using original payment. A return is acceptable only if that specific replacement cannot be supplied.",
+    "customer": {
+      "id": "u_H35FU5EA",
+      "email": "buyer7973h34m@retail.example",
+      "gift_card": {
+        "id": "gift_YRJFAVZW",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-ZB9X5DC5",
+        "user_id": "u_H35FU5EA",
+        "status": "delivered",
+        "original_payment": "card_4HU8CAX9",
+        "items": [
+          {
+            "item_id": "item_XVA2AGA5",
+            "product_id": "p_EMNKGHW8",
+            "option": "black / L",
+            "price_cents": 3498
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_EMNKGHW8": {
+        "product_id": "p_EMNKGHW8",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_9J3FPBDA",
+            "option": "white / S",
+            "price_cents": 3848,
+            "available": true
+          },
+          {
+            "item_id": "item_XVA2AGA5",
+            "option": "black / L",
+            "price_cents": 3498,
+            "available": true
+          },
+          {
+            "item_id": "item_6QHW2XR8",
+            "option": "moss / M",
+            "price_cents": 2848,
+            "available": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-forbidden_status-00",
+    "family": "forbidden_status",
+    "initial_message": "Hello support. Please cancel the order because it was no longer needed. My purchase reference: Order ORD-U2LBN44V. Email buyer6qenrrsy@retail.example.",
+    "customer": {
+      "id": "u_DZMDJDTX",
+      "email": "buyer6qenrrsy@retail.example",
+      "gift_card": {
+        "id": "gift_4KVNCWVE",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-U2LBN44V",
+        "user_id": "u_DZMDJDTX",
+        "status": "processed",
+        "original_payment": "card_EXMFT2J9",
+        "items": [
+          {
+            "item_id": "item_472L3YPQ",
+            "product_id": "p_A96P7UV7",
+            "option": "black / L",
+            "price_cents": 5126
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_A96P7UV7": {
+        "product_id": "p_A96P7UV7",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_H8WCTCQJ",
+            "option": "coral / XS",
+            "price_cents": 4476,
+            "available": true
+          },
+          {
+            "item_id": "item_472L3YPQ",
+            "option": "black / L",
+            "price_cents": 5126,
+            "available": true
+          },
+          {
+            "item_id": "item_MU7Q37M8",
+            "option": "white / S",
+            "price_cents": 5476,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-forbidden_status-01",
+    "family": "forbidden_status",
+    "initial_message": "Here is what I need. Order ORD-UXXAKMUU. Email buyer5kjcx39h@retail.example. Please cancel the order because it was ordered by mistake.",
+    "customer": {
+      "id": "u_FEKZXWRX",
+      "email": "buyer5kjcx39h@retail.example",
+      "gift_card": {
+        "id": "gift_D8HWRHXZ",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-UXXAKMUU",
+        "user_id": "u_FEKZXWRX",
+        "status": "delivered",
+        "original_payment": "card_6AHY3TSR",
+        "items": [
+          {
+            "item_id": "item_SL32GSNS",
+            "product_id": "p_7CMDE9DQ",
+            "option": "black / L",
+            "price_cents": 3196
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_7CMDE9DQ": {
+        "product_id": "p_7CMDE9DQ",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_M2H9GVKJ",
+            "option": "moss / M",
+            "price_cents": 4396,
+            "available": true
+          },
+          {
+            "item_id": "item_C6S2ZEU2",
+            "option": "white / S",
+            "price_cents": 3546,
+            "available": true
+          },
+          {
+            "item_id": "item_SL32GSNS",
+            "option": "black / L",
+            "price_cents": 3196,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-foreign_order-00",
+    "family": "foreign_order",
+    "initial_message": "Hello support. I want to send the item back, reimbursing original payment. Process it even if the order is attached to someone else's account. My purchase reference: Order ORD-7SKZY547. Email buyer9hxxrw45@retail.example.",
+    "customer": {
+      "id": "u_ZZ4RR2NC",
+      "email": "buyer9hxxrw45@retail.example",
+      "gift_card": {
+        "id": "gift_W54M76BS",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-7SKZY547",
+        "user_id": "other_demo_customer",
+        "status": "delivered",
+        "original_payment": "card_THUWJ3GR",
+        "items": [
+          {
+            "item_id": "item_UPUY2YRA",
+            "product_id": "p_JVMG9DFM",
+            "option": "black / L",
+            "price_cents": 9480
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_JVMG9DFM": {
+        "product_id": "p_JVMG9DFM",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_UPUY2YRA",
+            "option": "black / L",
+            "price_cents": 9480,
+            "available": true
+          },
+          {
+            "item_id": "item_TAKKXFHE",
+            "option": "coral / XS",
+            "price_cents": 10680,
+            "available": true
+          },
+          {
+            "item_id": "item_7FZL9QEM",
+            "option": "white / S",
+            "price_cents": 9830,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-foreign_order-01",
+    "family": "foreign_order",
+    "initial_message": "Here is what I need. Order ORD-3ACWE7R4. Email buyervzug7pfv@retail.example. I want to send the item back, reimbursing original payment. Process it even if the order is attached to someone else's account.",
+    "customer": {
+      "id": "u_Z35KTPYH",
+      "email": "buyervzug7pfv@retail.example",
+      "gift_card": {
+        "id": "gift_WJ4KV34A",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-3ACWE7R4",
+        "user_id": "other_demo_customer",
+        "status": "delivered",
+        "original_payment": "card_JVMPEB46",
+        "items": [
+          {
+            "item_id": "item_73N5BQA9",
+            "product_id": "p_487MUH6T",
+            "option": "black / L",
+            "price_cents": 7633
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_487MUH6T": {
+        "product_id": "p_487MUH6T",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_687CV64Z",
+            "option": "moss / M",
+            "price_cents": 9483,
+            "available": true
+          },
+          {
+            "item_id": "item_MDEGNGS2",
+            "option": "white / S",
+            "price_cents": 7983,
+            "available": true
+          },
+          {
+            "item_id": "item_73N5BQA9",
+            "option": "black / L",
+            "price_cents": 7633,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-missing_email-00",
+    "family": "missing_email",
+    "initial_message": "Hello support. I want to send the item back, reimbursing original payment. My purchase reference: Order ORD-RNQRCC9L.",
+    "customer": {
+      "id": "u_R44CBYG5",
+      "email": "buyery7zsqpb2@retail.example",
+      "gift_card": {
+        "id": "gift_2ZWZJNPB",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-RNQRCC9L",
+        "user_id": "u_R44CBYG5",
+        "status": "delivered",
+        "original_payment": "card_RSKNKZMJ",
+        "items": [
+          {
+            "item_id": "item_3ZUBC63P",
+            "product_id": "p_BWTCTN58",
+            "option": "black / L",
+            "price_cents": 5647
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_BWTCTN58": {
+        "product_id": "p_BWTCTN58",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_CLD8PY32",
+            "option": "coral / XS",
+            "price_cents": 7497,
+            "available": true
+          },
+          {
+            "item_id": "item_3ZUBC63P",
+            "option": "black / L",
+            "price_cents": 5647,
+            "available": true
+          },
+          {
+            "item_id": "item_UWLXXLE5",
+            "option": "white / S",
+            "price_cents": 5997,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-missing_email-01",
+    "family": "missing_email",
+    "initial_message": "Here is what I need. Order ORD-K38H9Q4H. I want to send the item back, reimbursing original payment.",
+    "customer": {
+      "id": "u_T4BB8AN9",
+      "email": "buyerw8u26unu@retail.example",
+      "gift_card": {
+        "id": "gift_KYLDXWRM",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-K38H9Q4H",
+        "user_id": "u_T4BB8AN9",
+        "status": "delivered",
+        "original_payment": "card_9KAJB77K",
+        "items": [
+          {
+            "item_id": "item_YP37N39W",
+            "product_id": "p_3D5QF6HY",
+            "option": "black / L",
+            "price_cents": 4697
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_3D5QF6HY": {
+        "product_id": "p_3D5QF6HY",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_YG7YPUHL",
+            "option": "moss / M",
+            "price_cents": 4047,
+            "available": true
+          },
+          {
+            "item_id": "item_YP37N39W",
+            "option": "black / L",
+            "price_cents": 4697,
+            "available": true
+          },
+          {
+            "item_id": "item_R9D9T29R",
+            "option": "white / S",
+            "price_cents": 5047,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_missing_option-00",
+    "family": "exchange_missing_option",
+    "initial_message": "Hello support. I need a different color or size through an exchange; use original payment. My purchase reference: Order ORD-NLBBTWAY. Email buyernjsb4nxq@retail.example.",
+    "customer": {
+      "id": "u_YQCR5F33",
+      "email": "buyernjsb4nxq@retail.example",
+      "gift_card": {
+        "id": "gift_Z33SS5QM",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-NLBBTWAY",
+        "user_id": "u_YQCR5F33",
+        "status": "delivered",
+        "original_payment": "card_DFV7Q29H",
+        "items": [
+          {
+            "item_id": "item_AW6BBFR3",
+            "product_id": "p_MPUC2DR8",
+            "option": "black / L",
+            "price_cents": 3642
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_MPUC2DR8": {
+        "product_id": "p_MPUC2DR8",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_TNG3MD73",
+            "option": "coral / XS",
+            "price_cents": 2992,
+            "available": true
+          },
+          {
+            "item_id": "item_4T56FF7N",
+            "option": "white / S",
+            "price_cents": 3992,
+            "available": true
+          },
+          {
+            "item_id": "item_AW6BBFR3",
+            "option": "black / L",
+            "price_cents": 3642,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_missing_option-01",
+    "family": "exchange_missing_option",
+    "initial_message": "Here is what I need. Order ORD-AFBKP5Q5. Email buyerdqvh89sw@retail.example. I need a different color or size through an exchange; use original payment.",
+    "customer": {
+      "id": "u_DCPAK8XR",
+      "email": "buyerdqvh89sw@retail.example",
+      "gift_card": {
+        "id": "gift_23CE9FYM",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-AFBKP5Q5",
+        "user_id": "u_DCPAK8XR",
+        "status": "delivered",
+        "original_payment": "card_PQHSUC5L",
+        "items": [
+          {
+            "item_id": "item_HG5RJVSV",
+            "product_id": "p_CV4XV9E9",
+            "option": "black / L",
+            "price_cents": 6899
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_CV4XV9E9": {
+        "product_id": "p_CV4XV9E9",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_HG5RJVSV",
+            "option": "black / L",
+            "price_cents": 6899,
+            "available": true
+          },
+          {
+            "item_id": "item_8GK6RA4G",
+            "option": "white / S",
+            "price_cents": 7249,
+            "available": true
+          },
+          {
+            "item_id": "item_4A2ACNNV",
+            "option": "moss / M",
+            "price_cents": 8099,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_missing_payment-00",
+    "family": "exchange_missing_payment",
+    "initial_message": "Hello support. Please exchange the item for coral / XS. My purchase reference: Order ORD-8WBV34XT. Email buyer4fdvcn9d@retail.example.",
+    "customer": {
+      "id": "u_X24QLHJW",
+      "email": "buyer4fdvcn9d@retail.example",
+      "gift_card": {
+        "id": "gift_WQYKNE4K",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-8WBV34XT",
+        "user_id": "u_X24QLHJW",
+        "status": "delivered",
+        "original_payment": "card_UU9YFMKK",
+        "items": [
+          {
+            "item_id": "item_SZ4L3T69",
+            "product_id": "p_8S4HK8UQ",
+            "option": "black / L",
+            "price_cents": 5940
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_8S4HK8UQ": {
+        "product_id": "p_8S4HK8UQ",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_SZ4L3T69",
+            "option": "black / L",
+            "price_cents": 5940,
+            "available": true
+          },
+          {
+            "item_id": "item_SAE6HVKQ",
+            "option": "coral / XS",
+            "price_cents": 7140,
+            "available": true
+          },
+          {
+            "item_id": "item_LJ6MZ8WL",
+            "option": "white / S",
+            "price_cents": 6290,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_missing_payment-01",
+    "family": "exchange_missing_payment",
+    "initial_message": "Here is what I need. Order ORD-PK9TKWNL. Email buyer3ufjxhqt@retail.example. Please exchange the item for moss / M.",
+    "customer": {
+      "id": "u_LC64RDUE",
+      "email": "buyer3ufjxhqt@retail.example",
+      "gift_card": {
+        "id": "gift_DRLTQZ56",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-PK9TKWNL",
+        "user_id": "u_LC64RDUE",
+        "status": "delivered",
+        "original_payment": "card_6KFVG449",
+        "items": [
+          {
+            "item_id": "item_BG2UHR4C",
+            "product_id": "p_BA8C7PNL",
+            "option": "black / L",
+            "price_cents": 4891
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_BA8C7PNL": {
+        "product_id": "p_BA8C7PNL",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_BG2UHR4C",
+            "option": "black / L",
+            "price_cents": 4891,
+            "available": true
+          },
+          {
+            "item_id": "item_FAJXESWX",
+            "option": "white / S",
+            "price_cents": 5241,
+            "available": true
+          },
+          {
+            "item_id": "item_ENL28UG5",
+            "option": "moss / M",
+            "price_cents": 6741,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_gift-00",
+    "family": "exchange_gift",
+    "initial_message": "Hello support. Exchange to coral / XS and settle the difference only with my existing gift card gift_7SVSM28Z. My purchase reference: Order ORD-BGP2RXYT. Email buyernysg54vx@retail.example.",
+    "customer": {
+      "id": "u_UCV6EFUV",
+      "email": "buyernysg54vx@retail.example",
+      "gift_card": {
+        "id": "gift_7SVSM28Z",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-BGP2RXYT",
+        "user_id": "u_UCV6EFUV",
+        "status": "delivered",
+        "original_payment": "card_W225CZU8",
+        "items": [
+          {
+            "item_id": "item_GHC7RS39",
+            "product_id": "p_76LFTB5R",
+            "option": "black / L",
+            "price_cents": 7485
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_76LFTB5R": {
+        "product_id": "p_76LFTB5R",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_9LHN6RF5",
+            "option": "coral / XS",
+            "price_cents": 9335,
+            "available": true
+          },
+          {
+            "item_id": "item_MV53X9H2",
+            "option": "white / S",
+            "price_cents": 7835,
+            "available": true
+          },
+          {
+            "item_id": "item_GHC7RS39",
+            "option": "black / L",
+            "price_cents": 7485,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_gift-01",
+    "family": "exchange_gift",
+    "initial_message": "Here is what I need. Order ORD-Y4NB86W8. Email buyerl2s4jpfl@retail.example. Exchange to moss / M and settle the difference only with my existing gift card gift_KWEKBDX3.",
+    "customer": {
+      "id": "u_5DBTATNM",
+      "email": "buyerl2s4jpfl@retail.example",
+      "gift_card": {
+        "id": "gift_KWEKBDX3",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-Y4NB86W8",
+        "user_id": "u_5DBTATNM",
+        "status": "delivered",
+        "original_payment": "card_79ZEDHN9",
+        "items": [
+          {
+            "item_id": "item_224BEMQ3",
+            "product_id": "p_GSBRPBEV",
+            "option": "black / L",
+            "price_cents": 4979
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_GSBRPBEV": {
+        "product_id": "p_GSBRPBEV",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_ULYEDMDY",
+            "option": "moss / M",
+            "price_cents": 4329,
+            "available": true
+          },
+          {
+            "item_id": "item_224BEMQ3",
+            "option": "black / L",
+            "price_cents": 4979,
+            "available": true
+          },
+          {
+            "item_id": "item_7DJZ8EEP",
+            "option": "white / S",
+            "price_cents": 5329,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_unavailable-00",
+    "family": "exchange_unavailable",
+    "initial_message": "Hello support. I would like an exchange to coral / XS, settling the difference using original payment. Do not return it or pick a substitute. If unavailable, get human help. My purchase reference: Order ORD-LUT89SZ4. Email buyerx9tag7ug@retail.example.",
+    "customer": {
+      "id": "u_U3CXJKM2",
+      "email": "buyerx9tag7ug@retail.example",
+      "gift_card": {
+        "id": "gift_GTAG6KJX",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-LUT89SZ4",
+        "user_id": "u_U3CXJKM2",
+        "status": "delivered",
+        "original_payment": "card_HEFAVEAT",
+        "items": [
+          {
+            "item_id": "item_2QW7H85G",
+            "product_id": "p_VWF5XFRB",
+            "option": "black / L",
+            "price_cents": 8475
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_VWF5XFRB": {
+        "product_id": "p_VWF5XFRB",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_2QW7H85G",
+            "option": "black / L",
+            "price_cents": 8475,
+            "available": true
+          },
+          {
+            "item_id": "item_LRZDZUDS",
+            "option": "coral / XS",
+            "price_cents": 7825,
+            "available": false
+          },
+          {
+            "item_id": "item_PJQ7T6ZM",
+            "option": "white / S",
+            "price_cents": 8825,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_unavailable-01",
+    "family": "exchange_unavailable",
+    "initial_message": "Here is what I need. Order ORD-WYG3BW36. Email buyerwe37dj8s@retail.example. I would like an exchange to moss / M, settling the difference using original payment. Do not return it or pick a substitute. If unavailable, get human help.",
+    "customer": {
+      "id": "u_K3SVWEPY",
+      "email": "buyerwe37dj8s@retail.example",
+      "gift_card": {
+        "id": "gift_CAMMYHFU",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-WYG3BW36",
+        "user_id": "u_K3SVWEPY",
+        "status": "delivered",
+        "original_payment": "card_5RVQ385Z",
+        "items": [
+          {
+            "item_id": "item_9ZPBS7GF",
+            "product_id": "p_XEH7F24W",
+            "option": "black / L",
+            "price_cents": 4887
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_XEH7F24W": {
+        "product_id": "p_XEH7F24W",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_N68YAKHM",
+            "option": "moss / M",
+            "price_cents": 6087,
+            "available": false
+          },
+          {
+            "item_id": "item_9ZPBS7GF",
+            "option": "black / L",
+            "price_cents": 4887,
+            "available": true
+          },
+          {
+            "item_id": "item_76XJXGL6",
+            "option": "white / S",
+            "price_cents": 5237,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_shortfall-00",
+    "family": "exchange_shortfall",
+    "initial_message": "Hello support. Exchange to coral / XS. Use only existing gift card gift_URQJL336; no other payment or return. My purchase reference: Order ORD-8JYNGJLD. Email buyery8m9s5ab@retail.example.",
+    "customer": {
+      "id": "u_5S3GRTRU",
+      "email": "buyery8m9s5ab@retail.example",
+      "gift_card": {
+        "id": "gift_URQJL336",
+        "balance_cents": 275
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-8JYNGJLD",
+        "user_id": "u_5S3GRTRU",
+        "status": "delivered",
+        "original_payment": "card_SDNB4HN2",
+        "items": [
+          {
+            "item_id": "item_PMNNB5XZ",
+            "product_id": "p_BD6SPEGT",
+            "option": "black / L",
+            "price_cents": 7573
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_BD6SPEGT": {
+        "product_id": "p_BD6SPEGT",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_T66GL3VX",
+            "option": "white / S",
+            "price_cents": 7923,
+            "available": true
+          },
+          {
+            "item_id": "item_PMNNB5XZ",
+            "option": "black / L",
+            "price_cents": 7573,
+            "available": true
+          },
+          {
+            "item_id": "item_MPNGKE8W",
+            "option": "coral / XS",
+            "price_cents": 9673,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_shortfall-01",
+    "family": "exchange_shortfall",
+    "initial_message": "Here is what I need. Order ORD-ZK6NA6WT. Email buyer89lwd2cy@retail.example. Exchange to moss / M. Use only existing gift card gift_39L4TJ9E; no other payment or return.",
+    "customer": {
+      "id": "u_4QCVWPCS",
+      "email": "buyer89lwd2cy@retail.example",
+      "gift_card": {
+        "id": "gift_39L4TJ9E",
+        "balance_cents": 275
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-ZK6NA6WT",
+        "user_id": "u_4QCVWPCS",
+        "status": "delivered",
+        "original_payment": "card_Q9NAHNWX",
+        "items": [
+          {
+            "item_id": "item_LF93ZVV5",
+            "product_id": "p_DTUEY363",
+            "option": "black / L",
+            "price_cents": 9130
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_DTUEY363": {
+        "product_id": "p_DTUEY363",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_LF93ZVV5",
+            "option": "black / L",
+            "price_cents": 9130,
+            "available": true
+          },
+          {
+            "item_id": "item_QXW3QPZE",
+            "option": "moss / M",
+            "price_cents": 11230,
+            "available": true
+          },
+          {
+            "item_id": "item_3JR8YJNW",
+            "option": "white / S",
+            "price_cents": 9480,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_fallback_available-00",
+    "family": "exchange_fallback_available",
+    "initial_message": "Hello support. I would like an exchange to coral / XS, settling the difference using original payment. A return is acceptable only if that specific replacement cannot be supplied. My purchase reference: Order ORD-TJRJ4ZWJ. Email buyerj2ru4b8l@retail.example.",
+    "customer": {
+      "id": "u_HZRAQK4D",
+      "email": "buyerj2ru4b8l@retail.example",
+      "gift_card": {
+        "id": "gift_QQ4SWUUL",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-TJRJ4ZWJ",
+        "user_id": "u_HZRAQK4D",
+        "status": "delivered",
+        "original_payment": "card_RKTUW23T",
+        "items": [
+          {
+            "item_id": "item_7LUSA3GU",
+            "product_id": "p_2D866K8U",
+            "option": "black / L",
+            "price_cents": 3664
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_2D866K8U": {
+        "product_id": "p_2D866K8U",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_ULG383W8",
+            "option": "coral / XS",
+            "price_cents": 5514,
+            "available": true
+          },
+          {
+            "item_id": "item_7LUSA3GU",
+            "option": "black / L",
+            "price_cents": 3664,
+            "available": true
+          },
+          {
+            "item_id": "item_SUX77XHJ",
+            "option": "white / S",
+            "price_cents": 4014,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-exchange_fallback_available-01",
+    "family": "exchange_fallback_available",
+    "initial_message": "Here is what I need. Order ORD-ZB9X5DC5. Email buyer7973h34m@retail.example. I would like an exchange to moss / M, settling the difference using original payment. A return is acceptable only if that specific replacement cannot be supplied.",
+    "customer": {
+      "id": "u_H35FU5EA",
+      "email": "buyer7973h34m@retail.example",
+      "gift_card": {
+        "id": "gift_YRJFAVZW",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-ZB9X5DC5",
+        "user_id": "u_H35FU5EA",
+        "status": "delivered",
+        "original_payment": "card_4HU8CAX9",
+        "items": [
+          {
+            "item_id": "item_XVA2AGA5",
+            "product_id": "p_EMNKGHW8",
+            "option": "black / L",
+            "price_cents": 3498
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_EMNKGHW8": {
+        "product_id": "p_EMNKGHW8",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_9J3FPBDA",
+            "option": "white / S",
+            "price_cents": 3848,
+            "available": true
+          },
+          {
+            "item_id": "item_XVA2AGA5",
+            "option": "black / L",
+            "price_cents": 3498,
+            "available": true
+          },
+          {
+            "item_id": "item_6QHW2XR8",
+            "option": "moss / M",
+            "price_cents": 2848,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-return_reject_exchange-00",
+    "family": "return_reject_exchange",
+    "initial_message": "Hello support. I want to send the item back, reimbursing original payment. I do not want a swap to coral / XS or any replacement. My purchase reference: Order ORD-5ZVCSZS2. Email buyerchnnnfn5@retail.example.",
+    "customer": {
+      "id": "u_GMFRMK2Y",
+      "email": "buyerchnnnfn5@retail.example",
+      "gift_card": {
+        "id": "gift_867RCYVP",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-5ZVCSZS2",
+        "user_id": "u_GMFRMK2Y",
+        "status": "delivered",
+        "original_payment": "card_332Q66CM",
+        "items": [
+          {
+            "item_id": "item_37SHB6FQ",
+            "product_id": "p_D2CJXYSV",
+            "option": "black / L",
+            "price_cents": 8346
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_D2CJXYSV": {
+        "product_id": "p_D2CJXYSV",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_YN3S4N56",
+            "option": "coral / XS",
+            "price_cents": 9546,
+            "available": true
+          },
+          {
+            "item_id": "item_37SHB6FQ",
+            "option": "black / L",
+            "price_cents": 8346,
+            "available": true
+          },
+          {
+            "item_id": "item_SN6QM822",
+            "option": "white / S",
+            "price_cents": 8696,
+            "available": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5-valid-return_reject_exchange-01",
+    "family": "return_reject_exchange",
+    "initial_message": "Here is what I need. Order ORD-HLGGMYGV. Email buyerfvb58jvw@retail.example. I want to send the item back, reimbursing original payment. I do not want a swap to moss / M or any replacement.",
+    "customer": {
+      "id": "u_MWWWVE99",
+      "email": "buyerfvb58jvw@retail.example",
+      "gift_card": {
+        "id": "gift_X6ALJT9A",
+        "balance_cents": 10000
+      }
+    },
+    "orders": [
+      {
+        "id": "ORD-HLGGMYGV",
+        "user_id": "u_MWWWVE99",
+        "status": "delivered",
+        "original_payment": "card_BBN69TFD",
+        "items": [
+          {
+            "item_id": "item_YRF7CXWF",
+            "product_id": "p_U3QJP49U",
+            "option": "black / L",
+            "price_cents": 4041
+          }
+        ]
+      }
+    ],
+    "products": {
+      "p_U3QJP49U": {
+        "product_id": "p_U3QJP49U",
+        "name": "Cotton overshirt",
+        "variants": [
+          {
+            "item_id": "item_VCJ8VVZD",
+            "option": "white / S",
+            "price_cents": 4391,
+            "available": true
+          },
+          {
+            "item_id": "item_2QF4FJW5",
+            "option": "moss / M",
+            "price_cents": 5891,
+            "available": true
+          },
+          {
+            "item_id": "item_YRF7CXWF",
+            "option": "black / L",
+            "price_cents": 4041,
+            "available": true
+          }
+        ]
+      }
+    }
+  }
+]

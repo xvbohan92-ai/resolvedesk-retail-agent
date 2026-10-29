@@ -1,0 +1,8 @@
+{
+  "optimizer_updates": 1,
+  "adapter_l2_change": 0.22110937323785107,
+  "all_nine_base_files_verified": true,
+  "test_inference": false,
+  "reused_for_main_training": false,
+  "source": "One-row weighted training integration and clean-process validation reload; not an experimental result."
+}

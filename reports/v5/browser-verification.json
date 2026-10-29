@@ -1,0 +1,33 @@
+{
+  "bodyWidth": 1280,
+  "experiment": "v5",
+  "images": [
+    {
+      "alt": "Four-arm recovery outcomes and raw attempts",
+      "loaded": true
+    },
+    {
+      "alt": "All sixteen scenario families",
+      "loaded": true
+    },
+    {
+      "alt": "Seven initial intent fields across three weight variants",
+      "loaded": true
+    },
+    {
+      "alt": "Expected versus proposed operations",
+      "loaded": true
+    },
+    {
+      "alt": "Actual optimizer loss and validation-only checkpoint selection",
+      "loaded": true
+    }
+  ],
+  "unmet": true,
+  "viewport": 1280,
+  "url": "http://127.0.0.1:8771/",
+  "screenshot": "docs/evaluation-v5-browser.png",
+  "scope": "Read-only DOM and actual viewport screenshot; original pending customer proposal was not confirmed or declined.",
+  "screenshot_sha256": "b9e82f5a5a78d52c73c466c3659e1e4566e0643f3432e7ccb48711a27d8b584b",
+  "evaluation_sha256": "429e9153f948306eb3da66729df9fec97feadce277b1f2447a8cf1bc200efa06"
+}

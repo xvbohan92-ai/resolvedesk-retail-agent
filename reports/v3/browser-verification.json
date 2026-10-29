@@ -1,0 +1,561 @@
+{
+  "scope": "Actual desktop browser verification and separate Ollama validation smoke; not held-out accuracy.",
+  "viewport": {
+    "width": 1280,
+    "body_width": 1280
+  },
+  "all_four_v3_images_rendered": true,
+  "archived_experiments_available": {
+    "v1": true,
+    "v2": true,
+    "v3": true
+  },
+  "rapid_archive_switch_shows_matching_experiment": true,
+  "default_provider": "ollama",
+  "ollama_pending_validation": {
+    "session": {
+      "case_id": "v3-valid-exchange-00",
+      "customer": {
+        "email": "buyere3kxfs@retail.example",
+        "gift_card": {
+          "balance_cents": 9000,
+          "id": "gift_G39JTY"
+        },
+        "id": "u_Q7QX6Z"
+      },
+      "id": "af1240895e611b4f40a8c030",
+      "messages": [
+        {
+          "content": "Please resolve this purchase issue. Order ORD-6CME6L. Email buyere3kxfs@retail.example. Replace this variant with teal / S. Settle only the difference on the original payment.",
+          "role": "customer"
+        }
+      ],
+      "observations": [
+        {
+          "action": {
+            "arguments": {
+              "email": "buyere3kxfs@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyere3kxfs@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 9000,
+              "id": "gift_G39JTY"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_Q7QX6Z"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 818,
+            "json_schema_constrained": true,
+            "latency_ms": 3463.83,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 22,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-6CME6L"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-6CME6L\"}}",
+          "result": {
+            "id": "ORD-6CME6L",
+            "items": [
+              {
+                "item_id": "item_QJW82Q",
+                "option": "black / M",
+                "price_cents": 4891,
+                "product_id": "p_4F3C5Y"
+              }
+            ],
+            "original_payment": "card_TS8Y4D",
+            "revision": 0,
+            "status": "delivered",
+            "user_id": "u_Q7QX6Z"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 885,
+            "json_schema_constrained": true,
+            "latency_ms": 578.95,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 20,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "item_id": "item_QJW82Q",
+              "new_item_id": "item_QJW82Q",
+              "order_id": "ORD-6CME6L",
+              "payment_method": "original"
+            },
+            "tool": "propose_exchange"
+          },
+          "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-6CME6L\",\"item_id\":\"item_QJW82Q\",\"new_item_id\":\"item_QJW82Q\",\"payment_method\":\"original\"}}",
+          "result": {
+            "allowed_tools": [
+              "ask_customer",
+              "handoff",
+              "get_order",
+              "get_product",
+              "propose_return"
+            ],
+            "backend_executed": false,
+            "detail": "Inspect identity, order and exchange catalog before proposing.",
+            "error": "step_prerequisite_rejection"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 996,
+            "json_schema_constrained": true,
+            "latency_ms": 1375.96,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 49,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "product_id": "p_4F3C5Y"
+            },
+            "tool": "get_product"
+          },
+          "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_4F3C5Y\"}}",
+          "result": {
+            "exchange_candidates": [
+              {
+                "available": true,
+                "current_item_id": "item_QJW82Q",
+                "item_id": "item_VFKWXU",
+                "option": "white / XS",
+                "order_id": "ORD-6CME6L",
+                "price_cents": 5116,
+                "price_difference_cents": 225
+              },
+              {
+                "available": true,
+                "current_item_id": "item_QJW82Q",
+                "item_id": "item_2VPU4N",
+                "option": "teal / S",
+                "order_id": "ORD-6CME6L",
+                "price_cents": 5441,
+                "price_difference_cents": 550
+              }
+            ],
+            "name": "Everyday shirt",
+            "product_id": "p_4F3C5Y",
+            "variants": [
+              {
+                "available": true,
+                "item_id": "item_VFKWXU",
+                "option": "white / XS",
+                "price_cents": 5116
+              },
+              {
+                "available": true,
+                "item_id": "item_QJW82Q",
+                "option": "black / M",
+                "price_cents": 4891
+              },
+              {
+                "available": true,
+                "item_id": "item_2VPU4N",
+                "option": "teal / S",
+                "price_cents": 5441
+              }
+            ]
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 1092,
+            "json_schema_constrained": true,
+            "latency_ms": 629.91,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 21,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        },
+        {
+          "action": {
+            "arguments": {
+              "item_id": "item_QJW82Q",
+              "new_item_id": "item_2VPU4N",
+              "order_id": "ORD-6CME6L",
+              "payment_method": "original"
+            },
+            "tool": "propose_exchange"
+          },
+          "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-6CME6L\",\"item_id\":\"item_QJW82Q\",\"new_item_id\":\"item_2VPU4N\",\"payment_method\":\"original\"}}",
+          "result": {
+            "proposal": {
+              "amount_cents": 550,
+              "arguments": {
+                "item_id": "item_QJW82Q",
+                "new_item_id": "item_2VPU4N",
+                "order_id": "ORD-6CME6L",
+                "payment_method": "original"
+              },
+              "fingerprint": "d00982d177d6b81651108f040b4fdfb6b6bb11e818bb8868039bfdda412cbfea",
+              "id": "2dfa79f9332c30aa9edd17c3d500bbe1",
+              "item_id": "item_QJW82Q",
+              "kind": "exchange",
+              "new_item_id": "item_2VPU4N",
+              "order_id": "ORD-6CME6L",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "exchange requested"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 1357,
+            "json_schema_constrained": true,
+            "latency_ms": 1697.77,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 49,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      ],
+      "order_keys": {
+        "ORD-6CME6L": "af1240895e611b4f40a8c030:ORD-6CME6L"
+      },
+      "products": {
+        "p_4F3C5Y": {
+          "name": "Everyday shirt",
+          "product_id": "p_4F3C5Y",
+          "variants": [
+            {
+              "available": true,
+              "item_id": "item_VFKWXU",
+              "option": "white / XS",
+              "price_cents": 5116
+            },
+            {
+              "available": true,
+              "item_id": "item_QJW82Q",
+              "option": "black / M",
+              "price_cents": 4891
+            },
+            {
+              "available": true,
+              "item_id": "item_2VPU4N",
+              "option": "teal / S",
+              "price_cents": 5441
+            }
+          ]
+        }
+      },
+      "proposal": {
+        "amount_cents": 550,
+        "arguments": {
+          "item_id": "item_QJW82Q",
+          "new_item_id": "item_2VPU4N",
+          "order_id": "ORD-6CME6L",
+          "payment_method": "original"
+        },
+        "fingerprint": "d00982d177d6b81651108f040b4fdfb6b6bb11e818bb8868039bfdda412cbfea",
+        "id": "2dfa79f9332c30aa9edd17c3d500bbe1",
+        "item_id": "item_QJW82Q",
+        "kind": "exchange",
+        "new_item_id": "item_2VPU4N",
+        "order_id": "ORD-6CME6L",
+        "order_revision": 0,
+        "payment_method": "original",
+        "target_status": "exchange requested"
+      },
+      "read_orders": {
+        "ORD-6CME6L": 0
+      },
+      "revision": 5,
+      "status": "awaiting_confirmation",
+      "user_id": "u_Q7QX6Z"
+    },
+    "orders": [
+      {
+        "id": "ORD-6CME6L",
+        "items": [
+          {
+            "item_id": "item_QJW82Q",
+            "option": "black / M",
+            "price_cents": 4891,
+            "product_id": "p_4F3C5Y"
+          }
+        ],
+        "original_payment": "card_TS8Y4D",
+        "status": "delivered",
+        "user_id": "u_Q7QX6Z"
+      }
+    ],
+    "timeline": [
+      {
+        "id": 65,
+        "kind": "session_created",
+        "created": 1793124698.185396,
+        "detail": {
+          "case_id": "v3-valid-exchange-00"
+        }
+      },
+      {
+        "id": 66,
+        "kind": "model_tool",
+        "created": 1793124701.661257,
+        "detail": {
+          "action": {
+            "arguments": {
+              "email": "buyere3kxfs@retail.example"
+            },
+            "tool": "identify_customer"
+          },
+          "raw": "{\"tool\":\"identify_customer\",\"arguments\":{\"email\":\"buyere3kxfs@retail.example\"}}",
+          "result": {
+            "gift_card": {
+              "balance_cents": 9000,
+              "id": "gift_G39JTY"
+            },
+            "note": "Demo identity lookup only; not production authentication",
+            "user_id": "u_Q7QX6Z"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 818,
+            "json_schema_constrained": true,
+            "latency_ms": 3463.83,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 22,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 67,
+        "kind": "model_tool",
+        "created": 1793124702.252228,
+        "detail": {
+          "action": {
+            "arguments": {
+              "order_id": "ORD-6CME6L"
+            },
+            "tool": "get_order"
+          },
+          "raw": "{\"tool\":\"get_order\",\"arguments\":{\"order_id\":\"ORD-6CME6L\"}}",
+          "result": {
+            "id": "ORD-6CME6L",
+            "items": [
+              {
+                "item_id": "item_QJW82Q",
+                "option": "black / M",
+                "price_cents": 4891,
+                "product_id": "p_4F3C5Y"
+              }
+            ],
+            "original_payment": "card_TS8Y4D",
+            "revision": 0,
+            "status": "delivered",
+            "user_id": "u_Q7QX6Z"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 885,
+            "json_schema_constrained": true,
+            "latency_ms": 578.95,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 20,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 68,
+        "kind": "model_tool",
+        "created": 1793124703.6344051,
+        "detail": {
+          "action": {
+            "arguments": {
+              "item_id": "item_QJW82Q",
+              "new_item_id": "item_QJW82Q",
+              "order_id": "ORD-6CME6L",
+              "payment_method": "original"
+            },
+            "tool": "propose_exchange"
+          },
+          "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-6CME6L\",\"item_id\":\"item_QJW82Q\",\"new_item_id\":\"item_QJW82Q\",\"payment_method\":\"original\"}}",
+          "result": {
+            "allowed_tools": [
+              "ask_customer",
+              "handoff",
+              "get_order",
+              "get_product",
+              "propose_return"
+            ],
+            "backend_executed": false,
+            "detail": "Inspect identity, order and exchange catalog before proposing.",
+            "error": "step_prerequisite_rejection"
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 996,
+            "json_schema_constrained": true,
+            "latency_ms": 1375.96,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 49,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 69,
+        "kind": "model_tool",
+        "created": 1793124704.2710521,
+        "detail": {
+          "action": {
+            "arguments": {
+              "product_id": "p_4F3C5Y"
+            },
+            "tool": "get_product"
+          },
+          "raw": "{\"tool\":\"get_product\",\"arguments\":{\"product_id\":\"p_4F3C5Y\"}}",
+          "result": {
+            "exchange_candidates": [
+              {
+                "available": true,
+                "current_item_id": "item_QJW82Q",
+                "item_id": "item_VFKWXU",
+                "option": "white / XS",
+                "order_id": "ORD-6CME6L",
+                "price_cents": 5116,
+                "price_difference_cents": 225
+              },
+              {
+                "available": true,
+                "current_item_id": "item_QJW82Q",
+                "item_id": "item_2VPU4N",
+                "option": "teal / S",
+                "order_id": "ORD-6CME6L",
+                "price_cents": 5441,
+                "price_difference_cents": 550
+              }
+            ],
+            "name": "Everyday shirt",
+            "product_id": "p_4F3C5Y",
+            "variants": [
+              {
+                "available": true,
+                "item_id": "item_VFKWXU",
+                "option": "white / XS",
+                "price_cents": 5116
+              },
+              {
+                "available": true,
+                "item_id": "item_QJW82Q",
+                "option": "black / M",
+                "price_cents": 4891
+              },
+              {
+                "available": true,
+                "item_id": "item_2VPU4N",
+                "option": "teal / S",
+                "price_cents": 5441
+              }
+            ]
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 1092,
+            "json_schema_constrained": true,
+            "latency_ms": 629.91,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 21,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      },
+      {
+        "id": 70,
+        "kind": "model_tool",
+        "created": 1793124705.97581,
+        "detail": {
+          "action": {
+            "arguments": {
+              "item_id": "item_QJW82Q",
+              "new_item_id": "item_2VPU4N",
+              "order_id": "ORD-6CME6L",
+              "payment_method": "original"
+            },
+            "tool": "propose_exchange"
+          },
+          "raw": "{\"tool\":\"propose_exchange\",\"arguments\":{\"order_id\":\"ORD-6CME6L\",\"item_id\":\"item_QJW82Q\",\"new_item_id\":\"item_2VPU4N\",\"payment_method\":\"original\"}}",
+          "result": {
+            "proposal": {
+              "amount_cents": 550,
+              "arguments": {
+                "item_id": "item_QJW82Q",
+                "new_item_id": "item_2VPU4N",
+                "order_id": "ORD-6CME6L",
+                "payment_method": "original"
+              },
+              "fingerprint": "d00982d177d6b81651108f040b4fdfb6b6bb11e818bb8868039bfdda412cbfea",
+              "id": "2dfa79f9332c30aa9edd17c3d500bbe1",
+              "item_id": "item_QJW82Q",
+              "kind": "exchange",
+              "new_item_id": "item_2VPU4N",
+              "order_id": "ORD-6CME6L",
+              "order_revision": 0,
+              "payment_method": "original",
+              "target_status": "exchange requested"
+            },
+            "requires_customer_confirmation": true
+          },
+          "timing": {
+            "finish_reason": "stop",
+            "input_tokens": 1357,
+            "json_schema_constrained": true,
+            "latency_ms": 1697.77,
+            "model": "resolvedesk-qwen3:4b",
+            "output_tokens": 49,
+            "provider": "ollama",
+            "thinking_returned": false,
+            "workflow": "v2"
+          }
+        }
+      }
+    ]
+  },
+  "source_sha256": {
+    "resolve_desk/static/app.js": "a319f8eebb0dd1746df15d419ae3c79aef293bf91087df07bf6d5bbbae22c81e",
+    "resolve_desk/static/index.html": "1c8f597abaf1cad66a38236b9ec0667570b280933b54da9975255136e89718ad"
+  },
+  "screenshots": {
+    "docs/evaluation-v3-browser.png": "ceaa194d4d0fb945ed50bcb81a04759ff156b59a924dbdbedf503f8db6b166ad",
+    "docs/live-v3-ollama-exchange.png": "def98f3ae931e3dea504bcda5feef50e03cdc3aa32fb2f557cfbbf932bdeba8f"
+  }
+}

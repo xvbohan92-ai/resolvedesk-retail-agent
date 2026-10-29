@@ -1,0 +1,29 @@
+{
+  "records_reconciled": 192,
+  "fresh_test_tasks": 48,
+  "unique_test_tasks": 48,
+  "analysis_plan_sha256": "07052642e5a803cf4ec736be8bd2cb3949c86debb1cf159a0c39bbb373ca99cf",
+  "no_test_based_selection": true,
+  "business_scores_recomputed": true,
+  "raw_actions_replayed": true,
+  "raw_actions_and_confirmations_replayed": true,
+  "raw_first_predictions_before_repair": true,
+  "intent_and_attempt_metrics_reconciled": true,
+  "sampling_coverage_recomputed": true,
+  "saved_initializers_exactly_match_predecessor": true,
+  "initialization_audit_sha256": "4d2ecc909644783f1a4c5f1c87a81c99d0a47a110ac3d79f7b0d135766837cae",
+  "protocol_audit_sha256": "bb9ab4e17d1dbf1dad99f5c50c6f24c8d20c79cc71ac106c2c43b4bf6372ac08",
+  "protocol_audit_records_reconciled": 192,
+  "protocol_audit_counts_recomputed": true,
+  "supplemental_protocol_safety_separate_from_business_gate": true,
+  "selected_checkpoint_training_coverage": {
+    "completed_updates": 1344,
+    "physical_training_rows": 824,
+    "unique_rows_sampled": 824,
+    "unique_cases_sampled": 96,
+    "all_physical_rows_used": true
+  },
+  "evaluation_sha256": "ed113b3a385edbe6e0339a974c213029cbf65bb6039a89c29727a86ca14b66cc",
+  "source_sha256": "8b5e2b537ed86b8a296632011d10390ca64d5e992a2e0bea81063a6dde5c591e",
+  "scope": "Independent code/trace/export verification; not independent human annotation."
+}

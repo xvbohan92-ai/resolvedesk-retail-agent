@@ -1,0 +1,18 @@
+{
+  "sealed_at_utc": "2026-10-28T21:54:36.281417+00:00",
+  "analysis_plan_sha256": "cb08373c73938335659c018b13bd2ca31e76dda43a96b73e34bc3b0e30ce5866",
+  "training_report_sha256": "48dcc7e07f50ff9ca8ae06ad141a16d80dd837d1d9b841f24e933fb4373c4528",
+  "training_plan_sha256": "d21bc5847e669834061cc809ac1b70e9629ef566a46dc8f4daf5da6e755c5ea9",
+  "completed_true_optimizer_updates": 1344,
+  "before_adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+  "after_adapter_sha256": "33fe5c505ddf08cd8cb4032dbd9d350fa205134417ec0f1f90648f4af658e053",
+  "after_adapter_config_sha256": "edfa2cd3944c566fef04ed0ac4ec035b2c5abc76aaa5664ed05e1342b3a0f3bc",
+  "base_spec_sha256": "bff5ee1bb595c89e629c7e0f93884c06ab66628f9cf6e61b8dfe02f87053a965",
+  "model_source_sha256": "d14b21fbccf93099168cf459313b77cfa8da470d8139497c74b507c25cb4dbea",
+  "parameter_count": 3670016,
+  "tensor_count": 112,
+  "canonical_shapes_sha256": "7741076f0ff52cfe108a27eda82eb7e5a33b18618dbd698422d429943c1a6185",
+  "all_final_adapter_values_finite_cpu_checked": true,
+  "selection_performed": false,
+  "scope": "New 48-case authored synthetic comparison: exact V6.1 predecessor versus fixed final cloud1344 continuation on the SAME decoded-4bit-derived FP16 base, F32 PEFT layout and frozen V7 workflow. Not base-versus-finetune, not a Metal-versus-CUDA comparison or official production benchmark. The final1344 checkpoint is predeclared, never selected using these outputs."
+}

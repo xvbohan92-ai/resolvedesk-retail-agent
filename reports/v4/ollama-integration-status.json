@@ -1,0 +1,10 @@
+{
+  "status": "deferred",
+  "fresh_generation_performed": false,
+  "other_model_observed": "qwen3:4b-instruct",
+  "loaded_vram_bytes": 5106921635,
+  "reason": "User explicitly requested waiting for natural cache release rather than unloading other models. No extra Ollama model was loaded for this optional smoke.",
+  "other_models_unloaded_by_agent": false,
+  "heldout_mlx_evaluation_complete": true,
+  "selected_mlx_live_api_validation_complete": true
+}

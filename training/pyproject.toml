@@ -1,0 +1,8 @@
+[project]
+name = "resolvedesk-qlora"
+version = "0.7.0"
+requires-python = ">=3.12,<3.13"
+dependencies = ["resolvedesk", "mlx-lm[train]==0.32.2"]
+
+[tool.uv.sources]
+resolvedesk = {path = "..", editable = true}

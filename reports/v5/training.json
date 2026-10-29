@@ -1,0 +1,4440 @@
+{
+  "config": {
+    "model": "data/models/qwen3-4b-mlx",
+    "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+    "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+    "data": "training/v5/datasets",
+    "adapter_path": "data/finetuning/retail-qlora-v5/run",
+    "best_path": "data/finetuning/retail-qlora-v5/best",
+    "seed": 202610275,
+    "iters": 512,
+    "num_layers": 8,
+    "batch_size": 1,
+    "learning_rate": 1e-05,
+    "lora_parameters": {
+      "rank": 8,
+      "dropout": 0.0,
+      "scale": 16.0
+    },
+    "max_seq_length": 3072,
+    "steps_per_report": 16,
+    "steps_per_eval": 120,
+    "save_every": 240,
+    "tool_name_loss_weight": 1.0,
+    "generation_max_tokens": 512,
+    "generation_temperature": 0,
+    "max_agent_steps": 12,
+    "checkpoint_candidates_completed_updates": [
+      256,
+      512
+    ],
+    "checkpoint_selection": "Validation-only frozen lexicographic business balance, safety, overall, unnecessary handoffs, repeated asks, total calls. Two candidates 256/512. No test inference before selection.",
+    "evaluation_arms": [
+      "previous_old_flow",
+      "previous_new_flow",
+      "base_new_flow",
+      "qlora_v5"
+    ],
+    "runtime_policy": "Typed intent is model-extracted and unverified. Exact quotation provenance only; policy gate uses completed tools, never gold labels. Both protocol changes and bundled SFT are separately compared. All actual generation calls counted, twelve total per arm, greedy unconstrained generation.",
+    "promotion_rule": "All fallback tasks correct; >=8/10 exchanges; >=7/8 handoffs; <=1 unnecessary handoff; zero repeated field/exchange-as-return/unauthorized-return attempts; all confirmations; overall not below both new-flow comparators. Frozen before training/test.",
+    "initialization": "data/finetuning/retail-qlora-v4/best-recovery",
+    "initialization_sha256": "4cef852b19f8e493226cffdf147decc7bab3017343d2f0732e0160695befd5e4",
+    "projection_window": 512
+  },
+  "manifest_sha256": "e48cbe49e8022f9ca1a958077d618525de9953580edda1e68697c6d63d763802",
+  "dataset": {
+    "files": {
+      "training/v5/__init__.py": "c25a5cc3f94c624054692fe74d8b4cadfa44d4c05f1bb38705fc5ad53bfb7186",
+      "training/v5/common.py": "d477277e24581cfff4cbdd3ef9ad7477e5d768dd2f6287fdc4346757a4ba3525",
+      "training/v5/development.py": "72bda5810e1cddeddebe5cba4aca7743fd4cf3e520f4bd594d41ad55f2340e96",
+      "training/v5/evaluate.py": "709a5701e4da24b91a5c3da425b59aa8bebdb586ec00cb40980b9ea9dd97b4d7",
+      "training/v5/evaluation.py": "1e7a145168178c64e5dc8a8cced7eeeedd397b073f20835d1f35176c4bb168d6",
+      "training/v5/fixtures.py": "2981cc79d3c52f1323a13782148b194d9bb9897d0a636a180b87d1ee41ce86d1",
+      "training/v5/prepare.py": "e15da23d31ac0a026e18e550811ea7b5abeb96e573ffb8b00aace9c22065df03",
+      "training/v5/provider.py": "9396c6d6571bfd7a7191b4b9e31df86436f4ea1f14a7ce6f44a6fb1bfb998b74",
+      "training/v5/resources.py": "e58f48171c8f6e2b3269ee458978168567d2dc5ed4565bed890177591ac8b949",
+      "training/v5/select.py": "5642c7fc29cefb10a834e5ef61db40ca10d2655070c9ee6855cb028dd656abe2",
+      "training/v5/train.py": "bd0f45e68651c4f065411011e302b00bca9fa6d9b1251bc09792e7eefd351bd5",
+      "training/v5/config.json": "b457ee96debdf12a3e93aa1c38537add89aa2f7233e6f9eaf32f87b3de912152",
+      "resolve_desk/resolution.py": "6740724b752ddec813489c9fff68b2bc1ac825be19ad3004a24a04da49f74197",
+      "resolve_desk/agent_v5.py": "392ab49dda116e38f82aaff451cf4feac09de1339f74f23b3631dd7706edc223",
+      "training/base-model-spec.json": "bff5ee1bb595c89e629c7e0f93884c06ab66628f9cf6e61b8dfe02f87053a965",
+      "training/runtime.py": "70e60f56223f7161c430f6b601ae9f748548b740c9f1ee0172e7f65acdbf4531",
+      "training/scoring.py": "4408966c655a222f8d1a2aa1418594587a63163029c5477bebeacacd6db9eb6b",
+      "training/v2/scoring.py": "4cf2b7fc6c281bcbc413f84a548ce35bd330c80ec17681242ffc3d5d02235bb4",
+      "training/v4/tokenization.py": "946f01aab1b0ab6383025a552c474382ec68a8c4711739c08285f62465841fc3",
+      "training/v4/evaluation.py": "c83ad22d23a1a9563975e0265cec5ba1a463fbd678f8be6484ea3baca3c8901b",
+      "training/v3/evaluation.py": "218c2e586a162db5a994990ea6b18e5fef8049fa7c6e2a7f01d17298e547a3db",
+      "training/v2/evaluation.py": "3fc5df34e22ce08d8e5e34d3ffe4a22c313906aceb271db9139b08a2c0fdead1",
+      "resolve_desk/progress.py": "3caa54d31efa57537263d9d819d7b0be32d71404267973e25868357751f139c0",
+      "resolve_desk/workflow.py": "2c45094c90643020bddb8d66ef5a4dfc607522620d67c3c07744a99565c0afbc",
+      "resolve_desk/store.py": "01ced6a33f0995d9c3362fc18fd8123a59e523edc408382cd38cdd990285f5bb",
+      "resolve_desk/protocol.py": "7d48eca71522d12da7e889b0fcc3b939c1f8bae12460b64b8a8dc173ef6185a2",
+      "training/v5/datasets/test.jsonl": "391d00b4816ae02a4c88ea3f65443d916a50e18bfd61226f2d478ade130c8c70",
+      "training/v5/datasets/train.jsonl": "1eafb4a85216d519c7c254d1c7ab04c84e544a1aef9a1ed4b4a67702f386e468",
+      "training/v5/datasets/valid.jsonl": "90761f72f9c0c63c4ab0b2b089d3be11e958dcaad94b77c55dbd6cd5e7a0d265",
+      "training/v5/datasets/cases.json": "b4cf68f9f4d3dc5c6488704efdedefc28668b548140f7db80ac830cef26d5092"
+    },
+    "data": {
+      "tasks": {
+        "train": 64,
+        "valid": 32,
+        "test": 32
+      },
+      "rows": {
+        "train": 344,
+        "valid": 164,
+        "test": 164
+      },
+      "duplicated_contrast_snapshots": 16,
+      "train_actions": {
+        "identify_customer": 64,
+        "get_order": 64,
+        "handoff": 16,
+        "record_request": 84,
+        "record_request_contrast_repeat": 16,
+        "propose_exchange": 20,
+        "get_product": 32,
+        "propose_cancel": 8,
+        "ask_customer": 20,
+        "propose_return": 20
+      },
+      "all_reference_tasks_pass": true,
+      "scope": "Self-authored synthetic scenarios. Counterfactual worlds share IDs within a split only."
+    },
+    "previous_training_sha256": "99d46ec53e1633218fdc4d0eb96ec200117cd17ec47d8f03a715e7f4ce3eab31",
+    "initial_adapter_sha256": "4cef852b19f8e493226cffdf147decc7bab3017343d2f0732e0160695befd5e4",
+    "test_inference_started_at_freeze": false,
+    "scope": "V4 test is development evidence. Fresh v5 test is held out until validation-only selection."
+  },
+  "initialization_sha256": "4cef852b19f8e493226cffdf147decc7bab3017343d2f0732e0160695befd5e4",
+  "completed_updates": 512,
+  "metrics": [
+    {
+      "iteration": 1,
+      "loss": 0.0035181145649403334,
+      "case_id": "v5-train-missing_reason-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 1.022
+    },
+    {
+      "iteration": 2,
+      "loss": 0.003194895340129733,
+      "case_id": "v5-train-missing_payment-01",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 2.334
+    },
+    {
+      "iteration": 3,
+      "loss": 0.4102351665496826,
+      "case_id": "v5-train-missing_email-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 3.426
+    },
+    {
+      "iteration": 4,
+      "loss": 0.0028156107291579247,
+      "case_id": "v5-train-return-03",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 4.605
+    },
+    {
+      "iteration": 5,
+      "loss": 0.0003675926709547639,
+      "case_id": "v5-train-exchange_unavailable-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 5.756
+    },
+    {
+      "iteration": 6,
+      "loss": 0.0007335146074183285,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.006,
+      "elapsed_seconds": 6.707
+    },
+    {
+      "iteration": 7,
+      "loss": 0.00025499408366158605,
+      "case_id": "v5-train-exchange_shortfall-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 7.713
+    },
+    {
+      "iteration": 8,
+      "loss": 0.0024861262645572424,
+      "case_id": "v5-train-missing_payment-02",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 8.868
+    },
+    {
+      "iteration": 9,
+      "loss": 0.12709282338619232,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 9.964
+    },
+    {
+      "iteration": 10,
+      "loss": 0.00015581738261971623,
+      "case_id": "v5-train-exchange-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 10.965
+    },
+    {
+      "iteration": 11,
+      "loss": 0.21136122941970825,
+      "case_id": "v5-train-exchange_unavailable-00",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 11.987
+    },
+    {
+      "iteration": 12,
+      "loss": 0.00045371055603027344,
+      "case_id": "v5-train-missing_email-00",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 13.302
+    },
+    {
+      "iteration": 13,
+      "loss": 0.025393929332494736,
+      "case_id": "v5-train-exchange_fallback-03",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.006,
+      "elapsed_seconds": 14.303
+    },
+    {
+      "iteration": 14,
+      "loss": 0.019719408825039864,
+      "case_id": "v5-train-cancel-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 15.252
+    },
+    {
+      "iteration": 15,
+      "loss": 0.0007453690632246435,
+      "case_id": "v5-train-return_reject_exchange-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 16.183
+    },
+    {
+      "iteration": 16,
+      "loss": 0.002389398170635104,
+      "case_id": "v5-train-missing_payment-03",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 17.331
+    },
+    {
+      "iteration": 17,
+      "loss": 0.001038810471072793,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 18.257
+    },
+    {
+      "iteration": 18,
+      "loss": 0.00024225919332820922,
+      "case_id": "v5-train-exchange_unavailable-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 19.333
+    },
+    {
+      "iteration": 19,
+      "loss": 0.07523845136165619,
+      "case_id": "v5-train-exchange_shortfall-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 20.264
+    },
+    {
+      "iteration": 20,
+      "loss": 0.005106388591229916,
+      "case_id": "v5-train-exchange_gift-01",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 22.573
+    },
+    {
+      "iteration": 21,
+      "loss": 0.00037039461312815547,
+      "case_id": "v5-train-exchange_fallback-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 23.743
+    },
+    {
+      "iteration": 22,
+      "loss": 0.027674471959471703,
+      "case_id": "v5-train-exchange_shortfall-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 24.723
+    },
+    {
+      "iteration": 23,
+      "loss": 0.004316119942814112,
+      "case_id": "v5-train-exchange_gift-03",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.031,
+      "elapsed_seconds": 26.326
+    },
+    {
+      "iteration": 24,
+      "loss": 0.0011875465279445052,
+      "case_id": "v5-train-cancel-02",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.003,
+      "elapsed_seconds": 27.493
+    },
+    {
+      "iteration": 25,
+      "loss": 0.03819799795746803,
+      "case_id": "v5-train-return_reject_exchange-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 28.421
+    },
+    {
+      "iteration": 26,
+      "loss": 0.01611371338367462,
+      "case_id": "v5-train-exchange_fallback_available-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 29.431
+    },
+    {
+      "iteration": 27,
+      "loss": 0.0007702350849285722,
+      "case_id": "v5-train-exchange_missing_option-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 30.585
+    },
+    {
+      "iteration": 28,
+      "loss": 0.0014667848590761423,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 32.311
+    },
+    {
+      "iteration": 29,
+      "loss": 0.00039389729499816895,
+      "case_id": "v5-train-exchange_missing_payment-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 33.459
+    },
+    {
+      "iteration": 30,
+      "loss": 0.008053606376051903,
+      "case_id": "v5-train-exchange_unavailable-02",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 34.458
+    },
+    {
+      "iteration": 31,
+      "loss": 0.0010843827622011304,
+      "case_id": "v5-train-return-01",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.006,
+      "elapsed_seconds": 35.626
+    },
+    {
+      "iteration": 32,
+      "loss": 0.00574688334017992,
+      "case_id": "v5-train-exchange_unavailable-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 36.617
+    },
+    {
+      "iteration": 33,
+      "loss": 0.00025573643506504595,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 37.632
+    },
+    {
+      "iteration": 34,
+      "loss": 0.016118304803967476,
+      "case_id": "v5-train-exchange_fallback-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 38.632
+    },
+    {
+      "iteration": 35,
+      "loss": 0.0005650329403579235,
+      "case_id": "v5-train-foreign_order-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 39.576
+    },
+    {
+      "iteration": 36,
+      "loss": 0.001190611976198852,
+      "case_id": "v5-train-exchange_fallback_available-02",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 41.14
+    },
+    {
+      "iteration": 37,
+      "loss": 0.0003402315196581185,
+      "case_id": "v5-train-missing_reason-00",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 42.422
+    },
+    {
+      "iteration": 38,
+      "loss": 0.003345991251990199,
+      "case_id": "v5-train-exchange_unavailable-02",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 44.262
+    },
+    {
+      "iteration": 39,
+      "loss": 0.0021490496583282948,
+      "case_id": "v5-train-cancel-03",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 45.419
+    },
+    {
+      "iteration": 40,
+      "loss": 0.00015366077423095703,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 46.44
+    },
+    {
+      "iteration": 41,
+      "loss": 0.0006155945011414587,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 48.124
+    },
+    {
+      "iteration": 42,
+      "loss": 0.00047226055175997317,
+      "case_id": "v5-train-exchange_fallback_available-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 49.06
+    },
+    {
+      "iteration": 43,
+      "loss": 0.0002451453765388578,
+      "case_id": "v5-train-return_reject_exchange-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 50.084
+    },
+    {
+      "iteration": 44,
+      "loss": 0.05776914209127426,
+      "case_id": "v5-train-exchange-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 51.04
+    },
+    {
+      "iteration": 45,
+      "loss": 0.060924310237169266,
+      "case_id": "v5-train-missing_reason-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 51.974
+    },
+    {
+      "iteration": 46,
+      "loss": 0.004419989418238401,
+      "case_id": "v5-train-foreign_order-00",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 53.071
+    },
+    {
+      "iteration": 47,
+      "loss": 0.032274506986141205,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 54.762
+    },
+    {
+      "iteration": 48,
+      "loss": 0.08270368725061417,
+      "case_id": "v5-train-exchange_fallback-03",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 56.362
+    },
+    {
+      "iteration": 49,
+      "loss": 0.002057765843346715,
+      "case_id": "v5-train-exchange_shortfall-00",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 57.884
+    },
+    {
+      "iteration": 50,
+      "loss": 0.00016456583398394287,
+      "case_id": "v5-train-cancel-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 58.821
+    },
+    {
+      "iteration": 51,
+      "loss": 0.000960629724431783,
+      "case_id": "v5-train-exchange_fallback_available-03",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 60.428
+    },
+    {
+      "iteration": 52,
+      "loss": 0.00018132300465367734,
+      "case_id": "v5-train-exchange-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 61.622
+    },
+    {
+      "iteration": 53,
+      "loss": 0.0004040705971419811,
+      "case_id": "v5-train-return_reject_exchange-02",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 62.916
+    },
+    {
+      "iteration": 54,
+      "loss": 0.0003127405943814665,
+      "case_id": "v5-train-exchange_shortfall-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 63.875
+    },
+    {
+      "iteration": 55,
+      "loss": 0.00474469643086195,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 65.569
+    },
+    {
+      "iteration": 56,
+      "loss": 0.01301270816475153,
+      "case_id": "v5-train-missing_reason-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 66.517
+    },
+    {
+      "iteration": 57,
+      "loss": 0.0030330277513712645,
+      "case_id": "v5-train-exchange_missing_payment-01",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 68.211
+    },
+    {
+      "iteration": 58,
+      "loss": 0.00533594936132431,
+      "case_id": "v5-train-exchange_gift-02",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 69.824
+    },
+    {
+      "iteration": 59,
+      "loss": 0.02211889810860157,
+      "case_id": "v5-train-exchange_shortfall-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 70.859
+    },
+    {
+      "iteration": 60,
+      "loss": 0.033526819199323654,
+      "case_id": "v5-train-exchange_fallback-01",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 71.886
+    },
+    {
+      "iteration": 61,
+      "loss": 0.00012006542965536937,
+      "case_id": "v5-train-exchange_gift-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 73.1
+    },
+    {
+      "iteration": 62,
+      "loss": 0.0001560222590342164,
+      "case_id": "v5-train-exchange_gift-02",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 74.319
+    },
+    {
+      "iteration": 63,
+      "loss": 0.0001231670321431011,
+      "case_id": "v5-train-exchange_unavailable-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 75.371
+    },
+    {
+      "iteration": 64,
+      "loss": 0.021846137940883636,
+      "case_id": "v5-train-missing_payment-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 76.739
+    },
+    {
+      "iteration": 65,
+      "loss": 0.0002310176641913131,
+      "case_id": "v5-train-foreign_order-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 77.793
+    },
+    {
+      "iteration": 66,
+      "loss": 0.00017407147970516235,
+      "case_id": "v5-train-missing_email-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 78.851
+    },
+    {
+      "iteration": 67,
+      "loss": 0.00014392354933079332,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 79.986
+    },
+    {
+      "iteration": 68,
+      "loss": 0.0001664842857280746,
+      "case_id": "v5-train-return-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 81.043
+    },
+    {
+      "iteration": 69,
+      "loss": 0.00842577125877142,
+      "case_id": "v5-train-exchange_fallback_available-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.004,
+      "elapsed_seconds": 82.091
+    },
+    {
+      "iteration": 70,
+      "loss": 0.0014626203337684274,
+      "case_id": "v5-train-missing_reason-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 83.053
+    },
+    {
+      "iteration": 71,
+      "loss": 9.928578947437927e-05,
+      "case_id": "v5-train-exchange-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 84.276
+    },
+    {
+      "iteration": 72,
+      "loss": 0.00016397496801801026,
+      "case_id": "v5-train-missing_reason-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 85.248
+    },
+    {
+      "iteration": 73,
+      "loss": 0.013133691623806953,
+      "case_id": "v5-train-exchange_missing_payment-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 86.997
+    },
+    {
+      "iteration": 74,
+      "loss": 0.0026247373316437006,
+      "case_id": "v5-train-exchange_fallback-00",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 88.077
+    },
+    {
+      "iteration": 75,
+      "loss": 0.0019621134269982576,
+      "case_id": "v5-train-missing_reason-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 89.514
+    },
+    {
+      "iteration": 76,
+      "loss": 9.311870962847024e-05,
+      "case_id": "v5-train-foreign_order-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 90.606
+    },
+    {
+      "iteration": 77,
+      "loss": 9.419237176189199e-05,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 91.858
+    },
+    {
+      "iteration": 78,
+      "loss": 8.085795707302168e-05,
+      "case_id": "v5-train-exchange_gift-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 92.95
+    },
+    {
+      "iteration": 79,
+      "loss": 0.0004495239118114114,
+      "case_id": "v5-train-foreign_order-03",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 94.132
+    },
+    {
+      "iteration": 80,
+      "loss": 7.540271326433867e-05,
+      "case_id": "v5-train-forbidden_status-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 95.218
+    },
+    {
+      "iteration": 81,
+      "loss": 0.0005712211132049561,
+      "case_id": "v5-train-exchange_shortfall-03",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 96.915
+    },
+    {
+      "iteration": 82,
+      "loss": 0.004936336074024439,
+      "case_id": "v5-train-forbidden_status-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 97.923
+    },
+    {
+      "iteration": 83,
+      "loss": 8.399145735893399e-05,
+      "case_id": "v5-train-exchange_fallback-02",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.003,
+      "elapsed_seconds": 99.193
+    },
+    {
+      "iteration": 84,
+      "loss": 0.0013024307554587722,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 100.463
+    },
+    {
+      "iteration": 85,
+      "loss": 0.0003200435603503138,
+      "case_id": "v5-train-foreign_order-02",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 101.664
+    },
+    {
+      "iteration": 86,
+      "loss": 0.02368227206170559,
+      "case_id": "v5-train-missing_payment-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 102.683
+    },
+    {
+      "iteration": 87,
+      "loss": 0.003280945587903261,
+      "case_id": "v5-train-exchange_fallback-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 103.803
+    },
+    {
+      "iteration": 88,
+      "loss": 6.04093074798584e-05,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 105.285
+    },
+    {
+      "iteration": 89,
+      "loss": 0.026067040860652924,
+      "case_id": "v5-train-exchange_missing_payment-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 106.32
+    },
+    {
+      "iteration": 90,
+      "loss": 0.002845287322998047,
+      "case_id": "v5-train-exchange_fallback_available-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 107.467
+    },
+    {
+      "iteration": 91,
+      "loss": 6.922266766196117e-05,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 108.784
+    },
+    {
+      "iteration": 92,
+      "loss": 0.0024866932071745396,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 110.32
+    },
+    {
+      "iteration": 93,
+      "loss": 5.854311530129053e-05,
+      "case_id": "v5-train-exchange-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 111.67
+    },
+    {
+      "iteration": 94,
+      "loss": 5.106131357024424e-05,
+      "case_id": "v5-train-return-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 112.747
+    },
+    {
+      "iteration": 95,
+      "loss": 0.015391540713608265,
+      "case_id": "v5-train-return-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 113.827
+    },
+    {
+      "iteration": 96,
+      "loss": 0.003264832543209195,
+      "case_id": "v5-train-missing_payment-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 114.911
+    },
+    {
+      "iteration": 97,
+      "loss": 5.078834146843292e-05,
+      "case_id": "v5-train-exchange_fallback_available-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 116.322
+    },
+    {
+      "iteration": 98,
+      "loss": 0.018513064831495285,
+      "case_id": "v5-train-exchange_shortfall-00",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 117.427
+    },
+    {
+      "iteration": 99,
+      "loss": 4.3596541217993945e-05,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 118.67
+    },
+    {
+      "iteration": 100,
+      "loss": 0.0010085543617606163,
+      "case_id": "v5-train-missing_reason-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 120.273
+    },
+    {
+      "iteration": 101,
+      "loss": 0.0007132131140679121,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 122.386
+    },
+    {
+      "iteration": 102,
+      "loss": 8.955478551797569e-05,
+      "case_id": "v5-train-exchange-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 123.566
+    },
+    {
+      "iteration": 103,
+      "loss": 9.12398099899292e-05,
+      "case_id": "v5-train-missing_email-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 124.833
+    },
+    {
+      "iteration": 104,
+      "loss": 3.62396240234375e-05,
+      "case_id": "v5-train-exchange_fallback-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 126.307
+    },
+    {
+      "iteration": 105,
+      "loss": 6.492137617897242e-05,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 127.79
+    },
+    {
+      "iteration": 106,
+      "loss": 3.2098396332003176e-05,
+      "case_id": "v5-train-exchange_fallback_available-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 129.178
+    },
+    {
+      "iteration": 107,
+      "loss": 0.00010074615420307964,
+      "case_id": "v5-train-exchange_gift-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 130.458
+    },
+    {
+      "iteration": 108,
+      "loss": 0.00043213777826167643,
+      "case_id": "v5-train-exchange_missing_payment-00",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 132.408
+    },
+    {
+      "iteration": 109,
+      "loss": 7.309436477953568e-05,
+      "case_id": "v5-train-exchange_gift-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 133.629
+    },
+    {
+      "iteration": 110,
+      "loss": 0.02781403809785843,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 134.953
+    },
+    {
+      "iteration": 111,
+      "loss": 3.684162948047742e-05,
+      "case_id": "v5-train-cancel-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 136.269
+    },
+    {
+      "iteration": 112,
+      "loss": 0.0002953438670374453,
+      "case_id": "v5-train-foreign_order-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 137.615
+    },
+    {
+      "iteration": 113,
+      "loss": 3.85224811907392e-05,
+      "case_id": "v5-train-return-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 138.958
+    },
+    {
+      "iteration": 114,
+      "loss": 2.552214209572412e-05,
+      "case_id": "v5-train-exchange_shortfall-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 140.332
+    },
+    {
+      "iteration": 115,
+      "loss": 9.013259113999084e-05,
+      "case_id": "v5-train-foreign_order-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 141.6
+    },
+    {
+      "iteration": 116,
+      "loss": 4.1539020458003506e-05,
+      "case_id": "v5-train-missing_payment-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 142.979
+    },
+    {
+      "iteration": 117,
+      "loss": 2.6782354325405322e-05,
+      "case_id": "v5-train-exchange_missing_payment-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 144.368
+    },
+    {
+      "iteration": 118,
+      "loss": 0.0002959424746222794,
+      "case_id": "v5-train-forbidden_status-02",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 145.999
+    },
+    {
+      "iteration": 119,
+      "loss": 8.427578723058105e-05,
+      "case_id": "v5-train-exchange_fallback-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 147.365
+    },
+    {
+      "iteration": 120,
+      "loss": 7.817646110197529e-05,
+      "case_id": "v5-train-exchange_shortfall-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 148.662
+    },
+    {
+      "iteration": 121,
+      "loss": 0.0006566952215507627,
+      "case_id": "v5-train-exchange_missing_payment-01",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 150.749
+    },
+    {
+      "iteration": 122,
+      "loss": 9.632110595703125e-05,
+      "case_id": "v5-train-forbidden_status-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 152.053
+    },
+    {
+      "iteration": 123,
+      "loss": 3.707950600073673e-05,
+      "case_id": "v5-train-exchange_unavailable-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 153.5
+    },
+    {
+      "iteration": 124,
+      "loss": 0.019727962091565132,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 154.836
+    },
+    {
+      "iteration": 125,
+      "loss": 0.011117476969957352,
+      "case_id": "v5-train-exchange_unavailable-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 156.273
+    },
+    {
+      "iteration": 126,
+      "loss": 2.9881795853725635e-05,
+      "case_id": "v5-train-exchange_gift-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 157.696
+    },
+    {
+      "iteration": 127,
+      "loss": 0.010906103998422623,
+      "case_id": "v5-train-missing_payment-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 159.022
+    },
+    {
+      "iteration": 128,
+      "loss": 4.617027661879547e-05,
+      "case_id": "v5-train-exchange_gift-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 160.748
+    },
+    {
+      "iteration": 129,
+      "loss": 3.901936725014821e-05,
+      "case_id": "v5-train-missing_reason-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 162.191
+    },
+    {
+      "iteration": 130,
+      "loss": 6.780416879337281e-05,
+      "case_id": "v5-train-exchange_fallback-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 163.548
+    },
+    {
+      "iteration": 131,
+      "loss": 3.056422428926453e-05,
+      "case_id": "v5-train-forbidden_status-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 164.884
+    },
+    {
+      "iteration": 132,
+      "loss": 0.005454027559608221,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 166.292
+    },
+    {
+      "iteration": 133,
+      "loss": 0.0013099214993417263,
+      "case_id": "v5-train-exchange_fallback_available-00",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 168.684
+    },
+    {
+      "iteration": 134,
+      "loss": 3.312315311632119e-05,
+      "case_id": "v5-train-cancel-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 170.182
+    },
+    {
+      "iteration": 135,
+      "loss": 2.7840787879540585e-05,
+      "case_id": "v5-train-exchange_gift-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 171.67
+    },
+    {
+      "iteration": 136,
+      "loss": 2.3435462935594842e-05,
+      "case_id": "v5-train-exchange_fallback-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 173.832
+    },
+    {
+      "iteration": 137,
+      "loss": 5.507965761353262e-05,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 175.232
+    },
+    {
+      "iteration": 138,
+      "loss": 0.001353539526462555,
+      "case_id": "v5-train-missing_payment-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 177.105
+    },
+    {
+      "iteration": 139,
+      "loss": 4.978877768735401e-05,
+      "case_id": "v5-train-missing_email-02",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 179.052
+    },
+    {
+      "iteration": 140,
+      "loss": 5.5323474953183904e-05,
+      "case_id": "v5-train-exchange_gift-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 180.437
+    },
+    {
+      "iteration": 141,
+      "loss": 2.158823554054834e-05,
+      "case_id": "v5-train-exchange_gift-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 181.966
+    },
+    {
+      "iteration": 142,
+      "loss": 0.003273277310654521,
+      "case_id": "v5-train-cancel-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 183.393
+    },
+    {
+      "iteration": 143,
+      "loss": 0.009907939471304417,
+      "case_id": "v5-train-exchange-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 184.793
+    },
+    {
+      "iteration": 144,
+      "loss": 3.597849718062207e-05,
+      "case_id": "v5-train-missing_email-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 186.388
+    },
+    {
+      "iteration": 145,
+      "loss": 0.0043238261714577675,
+      "case_id": "v5-train-exchange_missing_option-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 188.825
+    },
+    {
+      "iteration": 146,
+      "loss": 2.6135217922274023e-05,
+      "case_id": "v5-train-forbidden_status-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 190.369
+    },
+    {
+      "iteration": 147,
+      "loss": 3.984700015280396e-05,
+      "case_id": "v5-train-missing_payment-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 191.714
+    },
+    {
+      "iteration": 148,
+      "loss": 4.7719997382955626e-05,
+      "case_id": "v5-train-exchange_shortfall-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 193.119
+    },
+    {
+      "iteration": 149,
+      "loss": 0.02249915525317192,
+      "case_id": "v5-train-exchange_shortfall-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 194.604
+    },
+    {
+      "iteration": 150,
+      "loss": 0.01844002492725849,
+      "case_id": "v5-train-exchange_fallback_available-02",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 196.103
+    },
+    {
+      "iteration": 151,
+      "loss": 0.00027986231725662947,
+      "case_id": "v5-train-missing_payment-00",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 197.809
+    },
+    {
+      "iteration": 152,
+      "loss": 0.0009790011681616306,
+      "case_id": "v5-train-return-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 199.985
+    },
+    {
+      "iteration": 153,
+      "loss": 2.9693950637010857e-05,
+      "case_id": "v5-train-missing_payment-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 201.556
+    },
+    {
+      "iteration": 154,
+      "loss": 0.0033013890497386456,
+      "case_id": "v5-train-exchange_fallback_available-01",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 203.81
+    },
+    {
+      "iteration": 155,
+      "loss": 5.029638487030752e-05,
+      "case_id": "v5-train-missing_reason-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 205.23
+    },
+    {
+      "iteration": 156,
+      "loss": 0.00024058489361777902,
+      "case_id": "v5-train-missing_payment-01",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 206.986
+    },
+    {
+      "iteration": 157,
+      "loss": 2.3679300284129567e-05,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 208.555
+    },
+    {
+      "iteration": 158,
+      "loss": 1.4781951904296875e-05,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 209.902
+    },
+    {
+      "iteration": 159,
+      "loss": 3.661350638139993e-05,
+      "case_id": "v5-train-return_reject_exchange-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 211.406
+    },
+    {
+      "iteration": 160,
+      "loss": 0.000531329307705164,
+      "case_id": "v5-train-exchange-00",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 213.687
+    },
+    {
+      "iteration": 161,
+      "loss": 2.940676495200023e-05,
+      "case_id": "v5-train-exchange_unavailable-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 215.469
+    },
+    {
+      "iteration": 162,
+      "loss": 2.4172391931642778e-05,
+      "case_id": "v5-train-exchange_shortfall-02",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 217.216
+    },
+    {
+      "iteration": 163,
+      "loss": 1.8659091438166797e-05,
+      "case_id": "v5-train-exchange_missing_payment-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 218.763
+    },
+    {
+      "iteration": 164,
+      "loss": 2.2773559976485558e-05,
+      "case_id": "v5-train-exchange_missing_payment-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.004,
+      "elapsed_seconds": 220.16
+    },
+    {
+      "iteration": 165,
+      "loss": 1.8287788407178596e-05,
+      "case_id": "v5-train-exchange_shortfall-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 221.767
+    },
+    {
+      "iteration": 166,
+      "loss": 3.180404382874258e-05,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 223.129
+    },
+    {
+      "iteration": 167,
+      "loss": 2.2561653167940676e-05,
+      "case_id": "v5-train-exchange_shortfall-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 224.523
+    },
+    {
+      "iteration": 168,
+      "loss": 0.004995529539883137,
+      "case_id": "v5-train-missing_email-01",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 225.957
+    },
+    {
+      "iteration": 169,
+      "loss": 0.00042055334779433906,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 228.329
+    },
+    {
+      "iteration": 170,
+      "loss": 2.978064730996266e-05,
+      "case_id": "v5-train-exchange_gift-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 230.049
+    },
+    {
+      "iteration": 171,
+      "loss": 0.04574760049581528,
+      "case_id": "v5-train-foreign_order-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 231.405
+    },
+    {
+      "iteration": 172,
+      "loss": 2.7023512302548625e-05,
+      "case_id": "v5-train-missing_reason-01",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 233.323
+    },
+    {
+      "iteration": 173,
+      "loss": 0.0009886500192806125,
+      "case_id": "v5-train-exchange_missing_payment-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 235.77
+    },
+    {
+      "iteration": 174,
+      "loss": 2.5153160095214844e-05,
+      "case_id": "v5-train-cancel-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 237.329
+    },
+    {
+      "iteration": 175,
+      "loss": 0.018763376399874687,
+      "case_id": "v5-train-missing_email-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 238.935
+    },
+    {
+      "iteration": 176,
+      "loss": 2.6360154151916504e-05,
+      "case_id": "v5-train-foreign_order-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 240.306
+    },
+    {
+      "iteration": 177,
+      "loss": 2.3598471670993604e-05,
+      "case_id": "v5-train-missing_payment-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 241.709
+    },
+    {
+      "iteration": 178,
+      "loss": 2.0629167920560576e-05,
+      "case_id": "v5-train-exchange_missing_payment-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 243.195
+    },
+    {
+      "iteration": 179,
+      "loss": 2.065897024294827e-05,
+      "case_id": "v5-train-missing_payment-03",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 245.169
+    },
+    {
+      "iteration": 180,
+      "loss": 1.6738971680752002e-05,
+      "case_id": "v5-train-exchange_missing_payment-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 247.046
+    },
+    {
+      "iteration": 181,
+      "loss": 0.0014758723555132747,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 249.473
+    },
+    {
+      "iteration": 182,
+      "loss": 2.804669384204317e-05,
+      "case_id": "v5-train-exchange_missing_payment-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 251.075
+    },
+    {
+      "iteration": 183,
+      "loss": 2.297629544045776e-05,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 252.491
+    },
+    {
+      "iteration": 184,
+      "loss": 0.09299119561910629,
+      "case_id": "v5-train-exchange_missing_option-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 254.375
+    },
+    {
+      "iteration": 185,
+      "loss": 2.09374866244616e-05,
+      "case_id": "v5-train-return_reject_exchange-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 256.041
+    },
+    {
+      "iteration": 186,
+      "loss": 2.6549610993242823e-05,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 257.848
+    },
+    {
+      "iteration": 187,
+      "loss": 4.503001400735229e-05,
+      "case_id": "v5-train-return-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 259.209
+    },
+    {
+      "iteration": 188,
+      "loss": 2.5001440008054487e-05,
+      "case_id": "v5-train-exchange_shortfall-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 261.003
+    },
+    {
+      "iteration": 189,
+      "loss": 2.2070747945690528e-05,
+      "case_id": "v5-train-exchange_missing_option-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 262.488
+    },
+    {
+      "iteration": 190,
+      "loss": 0.035767003893852234,
+      "case_id": "v5-train-foreign_order-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 264.017
+    },
+    {
+      "iteration": 191,
+      "loss": 0.0038808954413980246,
+      "case_id": "v5-train-exchange_gift-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 265.482
+    },
+    {
+      "iteration": 192,
+      "loss": 1.4429290786210913e-05,
+      "case_id": "v5-train-exchange_fallback_available-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 266.851
+    },
+    {
+      "iteration": 193,
+      "loss": 1.5313426047214307e-05,
+      "case_id": "v5-train-exchange_fallback-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 268.226
+    },
+    {
+      "iteration": 194,
+      "loss": 0.0018178607570007443,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 270.333
+    },
+    {
+      "iteration": 195,
+      "loss": 0.001334144501015544,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 271.619
+    },
+    {
+      "iteration": 196,
+      "loss": 8.427620196016505e-05,
+      "case_id": "v5-train-exchange_fallback_available-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 273.039
+    },
+    {
+      "iteration": 197,
+      "loss": 0.007260833866894245,
+      "case_id": "v5-train-exchange_unavailable-01",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 274.452
+    },
+    {
+      "iteration": 198,
+      "loss": 2.9289722078829072e-05,
+      "case_id": "v5-train-exchange-02",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 276.083
+    },
+    {
+      "iteration": 199,
+      "loss": 3.150793054373935e-05,
+      "case_id": "v5-train-missing_payment-02",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 277.957
+    },
+    {
+      "iteration": 200,
+      "loss": 0.001625511678867042,
+      "case_id": "v5-train-exchange_fallback-00",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 280.149
+    },
+    {
+      "iteration": 201,
+      "loss": 0.0007322955643758178,
+      "case_id": "v5-train-missing_reason-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 282.02
+    },
+    {
+      "iteration": 202,
+      "loss": 0.0014974517980590463,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 284.119
+    },
+    {
+      "iteration": 203,
+      "loss": 0.0006652978481724858,
+      "case_id": "v5-train-exchange_fallback-02",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 286.35
+    },
+    {
+      "iteration": 204,
+      "loss": 2.2502172214444727e-05,
+      "case_id": "v5-train-exchange_fallback_available-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 287.891
+    },
+    {
+      "iteration": 205,
+      "loss": 0.011596255004405975,
+      "case_id": "v5-train-cancel-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 289.19
+    },
+    {
+      "iteration": 206,
+      "loss": 2.3077835066942498e-05,
+      "case_id": "v5-train-missing_payment-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 290.584
+    },
+    {
+      "iteration": 207,
+      "loss": 0.00018874570378102362,
+      "case_id": "v5-train-exchange_missing_payment-03",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 292.92
+    },
+    {
+      "iteration": 208,
+      "loss": 2.094973751809448e-05,
+      "case_id": "v5-train-return-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 295.071
+    },
+    {
+      "iteration": 209,
+      "loss": 0.00016198097728192806,
+      "case_id": "v5-train-return_reject_exchange-00",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 297.047
+    },
+    {
+      "iteration": 210,
+      "loss": 2.8241247491678223e-05,
+      "case_id": "v5-train-missing_payment-00",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 299.488
+    },
+    {
+      "iteration": 211,
+      "loss": 0.0026421702932566404,
+      "case_id": "v5-train-exchange-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 300.707
+    },
+    {
+      "iteration": 212,
+      "loss": 0.0002755697933025658,
+      "case_id": "v5-train-exchange-01",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 302.864
+    },
+    {
+      "iteration": 213,
+      "loss": 1.7897649740916677e-05,
+      "case_id": "v5-train-exchange_fallback_available-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 304.316
+    },
+    {
+      "iteration": 214,
+      "loss": 2.416739152977243e-05,
+      "case_id": "v5-train-exchange_unavailable-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 305.737
+    },
+    {
+      "iteration": 215,
+      "loss": 2.616384699649643e-05,
+      "case_id": "v5-train-exchange-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 306.985
+    },
+    {
+      "iteration": 216,
+      "loss": 1.8791719412547536e-05,
+      "case_id": "v5-train-missing_reason-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 308.41
+    },
+    {
+      "iteration": 217,
+      "loss": 0.002788464305922389,
+      "case_id": "v5-train-forbidden_status-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 309.684
+    },
+    {
+      "iteration": 218,
+      "loss": 1.84263499249937e-05,
+      "case_id": "v5-train-forbidden_status-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 311.067
+    },
+    {
+      "iteration": 219,
+      "loss": 2.132710869773291e-05,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 312.493
+    },
+    {
+      "iteration": 220,
+      "loss": 2.5134821044048294e-05,
+      "case_id": "v5-train-exchange_missing_payment-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 313.789
+    },
+    {
+      "iteration": 221,
+      "loss": 0.00928444229066372,
+      "case_id": "v5-train-return_reject_exchange-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 315.089
+    },
+    {
+      "iteration": 222,
+      "loss": 1.854788206401281e-05,
+      "case_id": "v5-train-exchange-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 316.511
+    },
+    {
+      "iteration": 223,
+      "loss": 0.00020294840214774013,
+      "case_id": "v5-train-forbidden_status-03",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 318.11
+    },
+    {
+      "iteration": 224,
+      "loss": 2.3643175154575147e-05,
+      "case_id": "v5-train-exchange_shortfall-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 319.72
+    },
+    {
+      "iteration": 225,
+      "loss": 0.0001636556553421542,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 322.143
+    },
+    {
+      "iteration": 226,
+      "loss": 3.654834654298611e-05,
+      "case_id": "v5-train-return_reject_exchange-01",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.004,
+      "elapsed_seconds": 323.862
+    },
+    {
+      "iteration": 227,
+      "loss": 2.1626552552334033e-05,
+      "case_id": "v5-train-exchange_missing_option-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 325.153
+    },
+    {
+      "iteration": 228,
+      "loss": 2.9358863685047254e-05,
+      "case_id": "v5-train-exchange_fallback-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 326.525
+    },
+    {
+      "iteration": 229,
+      "loss": 0.027033919468522072,
+      "case_id": "v5-train-exchange_fallback_available-03",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 327.933
+    },
+    {
+      "iteration": 230,
+      "loss": 0.0022565466351807117,
+      "case_id": "v5-train-missing_email-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 329.187
+    },
+    {
+      "iteration": 231,
+      "loss": 0.001193380681797862,
+      "case_id": "v5-train-exchange_missing_payment-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 330.48
+    },
+    {
+      "iteration": 232,
+      "loss": 0.01770961284637451,
+      "case_id": "v5-train-exchange_fallback-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 331.847
+    },
+    {
+      "iteration": 233,
+      "loss": 1.971423625946045e-05,
+      "case_id": "v5-train-exchange_unavailable-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 333.149
+    },
+    {
+      "iteration": 234,
+      "loss": 1.3731774743064307e-05,
+      "case_id": "v5-train-exchange-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 334.522
+    },
+    {
+      "iteration": 235,
+      "loss": 3.259658842580393e-05,
+      "case_id": "v5-train-missing_payment-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 335.797
+    },
+    {
+      "iteration": 236,
+      "loss": 0.01160439196974039,
+      "case_id": "v5-train-missing_email-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 337.083
+    },
+    {
+      "iteration": 237,
+      "loss": 2.216796019638423e-05,
+      "case_id": "v5-train-missing_email-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 338.47
+    },
+    {
+      "iteration": 238,
+      "loss": 0.00808636099100113,
+      "case_id": "v5-train-forbidden_status-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 339.772
+    },
+    {
+      "iteration": 239,
+      "loss": 0.00011721524060703814,
+      "case_id": "v5-train-forbidden_status-00",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.006,
+      "elapsed_seconds": 341.353
+    },
+    {
+      "iteration": 240,
+      "loss": 0.0002828913275152445,
+      "case_id": "v5-train-missing_reason-02",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 342.967
+    },
+    {
+      "iteration": 241,
+      "loss": 1.2414021512086038e-05,
+      "case_id": "v5-train-exchange_fallback_available-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 344.404
+    },
+    {
+      "iteration": 242,
+      "loss": 0.00032749128877185285,
+      "case_id": "v5-train-exchange_fallback_available-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 345.802
+    },
+    {
+      "iteration": 243,
+      "loss": 0.00031894445419311523,
+      "case_id": "v5-train-exchange_fallback-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 347.214
+    },
+    {
+      "iteration": 244,
+      "loss": 6.660461076535285e-05,
+      "case_id": "v5-train-foreign_order-01",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 348.629
+    },
+    {
+      "iteration": 245,
+      "loss": 0.0007374712149612606,
+      "case_id": "v5-train-exchange_missing_option-01",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 350.713
+    },
+    {
+      "iteration": 246,
+      "loss": 0.00026923418045043945,
+      "case_id": "v5-train-forbidden_status-01",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 352.29
+    },
+    {
+      "iteration": 247,
+      "loss": 0.0007209840696305037,
+      "case_id": "v5-train-exchange_fallback-01",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 354.572
+    },
+    {
+      "iteration": 248,
+      "loss": 1.269295080419397e-05,
+      "case_id": "v5-train-exchange_fallback_available-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 356.168
+    },
+    {
+      "iteration": 249,
+      "loss": 6.870428478578106e-05,
+      "case_id": "v5-train-exchange_shortfall-01",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 358.533
+    },
+    {
+      "iteration": 250,
+      "loss": 0.011215023696422577,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 361.026
+    },
+    {
+      "iteration": 251,
+      "loss": 3.2431038562208414e-05,
+      "case_id": "v5-train-return-02",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 363.377
+    },
+    {
+      "iteration": 252,
+      "loss": 0.0007179408567026258,
+      "case_id": "v5-train-exchange_fallback-02",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 365.247
+    },
+    {
+      "iteration": 253,
+      "loss": 0.003621415700763464,
+      "case_id": "v5-train-exchange_missing_payment-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 367.722
+    },
+    {
+      "iteration": 254,
+      "loss": 1.8218288460047916e-05,
+      "case_id": "v5-train-forbidden_status-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 370.241
+    },
+    {
+      "iteration": 255,
+      "loss": 0.0001235994859598577,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.029,
+      "elapsed_seconds": 373.382
+    },
+    {
+      "iteration": 256,
+      "loss": 8.473591151414439e-05,
+      "case_id": "v5-train-exchange_missing_payment-00",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 376.052
+    },
+    {
+      "iteration": 257,
+      "loss": 1.6998161299852654e-05,
+      "case_id": "v5-train-cancel-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 377.459
+    },
+    {
+      "iteration": 258,
+      "loss": 1.7922857296071015e-05,
+      "case_id": "v5-train-return_reject_exchange-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 378.915
+    },
+    {
+      "iteration": 259,
+      "loss": 1.2853871339757461e-05,
+      "case_id": "v5-train-exchange_fallback-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 380.721
+    },
+    {
+      "iteration": 260,
+      "loss": 2.417048926872667e-05,
+      "case_id": "v5-train-return_reject_exchange-03",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 382.778
+    },
+    {
+      "iteration": 261,
+      "loss": 1.0651090633473359e-05,
+      "case_id": "v5-train-exchange_fallback-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 384.474
+    },
+    {
+      "iteration": 262,
+      "loss": 1.2858347872679587e-05,
+      "case_id": "v5-train-missing_payment-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 386.004
+    },
+    {
+      "iteration": 263,
+      "loss": 1.021053503791336e-05,
+      "case_id": "v5-train-exchange-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 387.489
+    },
+    {
+      "iteration": 264,
+      "loss": 0.01791585050523281,
+      "case_id": "v5-train-exchange_shortfall-03",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 389.043
+    },
+    {
+      "iteration": 265,
+      "loss": 1.9933866497012787e-05,
+      "case_id": "v5-train-return_reject_exchange-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 390.495
+    },
+    {
+      "iteration": 266,
+      "loss": 0.00013124942779541016,
+      "case_id": "v5-train-missing_reason-00",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 392.309
+    },
+    {
+      "iteration": 267,
+      "loss": 1.9378132492420264e-05,
+      "case_id": "v5-train-cancel-01",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 394.12
+    },
+    {
+      "iteration": 268,
+      "loss": 0.0001227259635925293,
+      "case_id": "v5-train-exchange_shortfall-02",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 396.555
+    },
+    {
+      "iteration": 269,
+      "loss": 9.96481321635656e-06,
+      "case_id": "v5-train-exchange_shortfall-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 398.195
+    },
+    {
+      "iteration": 270,
+      "loss": 2.0529912944766693e-05,
+      "case_id": "v5-train-cancel-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 400.593
+    },
+    {
+      "iteration": 271,
+      "loss": 1.3771264093520585e-05,
+      "case_id": "v5-train-missing_email-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 402.14
+    },
+    {
+      "iteration": 272,
+      "loss": 1.8975009879795834e-05,
+      "case_id": "v5-train-exchange_fallback_available-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 403.664
+    },
+    {
+      "iteration": 273,
+      "loss": 0.0069699217565357685,
+      "case_id": "v5-train-return-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 405.183
+    },
+    {
+      "iteration": 274,
+      "loss": 1.7853009921964258e-05,
+      "case_id": "v5-train-forbidden_status-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 406.948
+    },
+    {
+      "iteration": 275,
+      "loss": 0.00019615037308540195,
+      "case_id": "v5-train-exchange-03",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 409.442
+    },
+    {
+      "iteration": 276,
+      "loss": 0.00019329070346429944,
+      "case_id": "v5-train-exchange-02",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 411.862
+    },
+    {
+      "iteration": 277,
+      "loss": 0.02287931740283966,
+      "case_id": "v5-train-exchange_gift-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 413.407
+    },
+    {
+      "iteration": 278,
+      "loss": 0.0004075041797477752,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 415.705
+    },
+    {
+      "iteration": 279,
+      "loss": 1.7063957784557715e-05,
+      "case_id": "v5-train-cancel-00",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 417.584
+    },
+    {
+      "iteration": 280,
+      "loss": 0.00013516041508410126,
+      "case_id": "v5-train-missing_email-02",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.0,
+      "elapsed_seconds": 419.039
+    },
+    {
+      "iteration": 281,
+      "loss": 1.3308091183716897e-05,
+      "case_id": "v5-train-foreign_order-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 420.672
+    },
+    {
+      "iteration": 282,
+      "loss": 2.7711192160495557e-05,
+      "case_id": "v5-train-missing_reason-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 422.107
+    },
+    {
+      "iteration": 283,
+      "loss": 0.00021012569777667522,
+      "case_id": "v5-train-forbidden_status-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 423.559
+    },
+    {
+      "iteration": 284,
+      "loss": 1.253400569112273e-05,
+      "case_id": "v5-train-exchange_fallback_available-02",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 425.444
+    },
+    {
+      "iteration": 285,
+      "loss": 0.0011388593120500445,
+      "case_id": "v5-train-return-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 426.83
+    },
+    {
+      "iteration": 286,
+      "loss": 0.003261210396885872,
+      "case_id": "v5-train-missing_payment-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 428.968
+    },
+    {
+      "iteration": 287,
+      "loss": 1.4709263268741779e-05,
+      "case_id": "v5-train-missing_email-01",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 431.105
+    },
+    {
+      "iteration": 288,
+      "loss": 1.2966719623364042e-05,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 432.956
+    },
+    {
+      "iteration": 289,
+      "loss": 0.00965757668018341,
+      "case_id": "v5-train-exchange_shortfall-01",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 434.487
+    },
+    {
+      "iteration": 290,
+      "loss": 0.020451046526432037,
+      "case_id": "v5-train-return_reject_exchange-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 436.03
+    },
+    {
+      "iteration": 291,
+      "loss": 0.0018648492405191064,
+      "case_id": "v5-train-exchange_gift-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 437.661
+    },
+    {
+      "iteration": 292,
+      "loss": 1.1654126865323633e-05,
+      "case_id": "v5-train-exchange_fallback_available-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.003,
+      "elapsed_seconds": 439.494
+    },
+    {
+      "iteration": 293,
+      "loss": 4.15345020883251e-05,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 441.847
+    },
+    {
+      "iteration": 294,
+      "loss": 0.004467180464416742,
+      "case_id": "v5-train-exchange-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 443.349
+    },
+    {
+      "iteration": 295,
+      "loss": 0.009213213808834553,
+      "case_id": "v5-train-exchange_shortfall-02",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 446.39
+    },
+    {
+      "iteration": 296,
+      "loss": 1.6416111975559033e-05,
+      "case_id": "v5-train-cancel-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 448.502
+    },
+    {
+      "iteration": 297,
+      "loss": 7.797370926709846e-06,
+      "case_id": "v5-train-exchange_fallback-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.041,
+      "elapsed_seconds": 450.289
+    },
+    {
+      "iteration": 298,
+      "loss": 0.011102025397121906,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 451.775
+    },
+    {
+      "iteration": 299,
+      "loss": 0.00015433788939844817,
+      "case_id": "v5-train-cancel-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 453.222
+    },
+    {
+      "iteration": 300,
+      "loss": 1.628484096727334e-05,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 455.268
+    },
+    {
+      "iteration": 301,
+      "loss": 0.02238323912024498,
+      "case_id": "v5-train-foreign_order-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 456.815
+    },
+    {
+      "iteration": 302,
+      "loss": 1.0717482837208081e-05,
+      "case_id": "v5-train-exchange_missing_payment-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 458.732
+    },
+    {
+      "iteration": 303,
+      "loss": 0.0008455670322291553,
+      "case_id": "v5-train-missing_payment-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 460.183
+    },
+    {
+      "iteration": 304,
+      "loss": 1.0859398571483325e-05,
+      "case_id": "v5-train-foreign_order-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 461.823
+    },
+    {
+      "iteration": 305,
+      "loss": 3.616015237639658e-05,
+      "case_id": "v5-train-exchange_unavailable-01",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 464.377
+    },
+    {
+      "iteration": 306,
+      "loss": 0.005305218510329723,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 465.851
+    },
+    {
+      "iteration": 307,
+      "loss": 1.0257675967295654e-05,
+      "case_id": "v5-train-return-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 467.403
+    },
+    {
+      "iteration": 308,
+      "loss": 0.006285935174673796,
+      "case_id": "v5-train-exchange_gift-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 468.85
+    },
+    {
+      "iteration": 309,
+      "loss": 0.025299077853560448,
+      "case_id": "v5-train-foreign_order-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 470.286
+    },
+    {
+      "iteration": 310,
+      "loss": 7.424354407703504e-06,
+      "case_id": "v5-train-return-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 471.738
+    },
+    {
+      "iteration": 311,
+      "loss": 1.0768572792585474e-05,
+      "case_id": "v5-train-cancel-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 473.298
+    },
+    {
+      "iteration": 312,
+      "loss": 7.068117611197522e-06,
+      "case_id": "v5-train-forbidden_status-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 474.788
+    },
+    {
+      "iteration": 313,
+      "loss": 1.220405101776123e-05,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 476.405
+    },
+    {
+      "iteration": 314,
+      "loss": 0.0034728862810879946,
+      "case_id": "v5-train-return_reject_exchange-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 477.806
+    },
+    {
+      "iteration": 315,
+      "loss": 9.05429624253884e-05,
+      "case_id": "v5-train-exchange_missing_option-01",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 480.561
+    },
+    {
+      "iteration": 316,
+      "loss": 0.009513652883470058,
+      "case_id": "v5-train-exchange_fallback_available-00",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 482.254
+    },
+    {
+      "iteration": 317,
+      "loss": 1.4204728358890861e-05,
+      "case_id": "v5-train-exchange_shortfall-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 484.099
+    },
+    {
+      "iteration": 318,
+      "loss": 0.0032186442986130714,
+      "case_id": "v5-train-missing_email-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 485.773
+    },
+    {
+      "iteration": 319,
+      "loss": 9.434564162802417e-06,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 487.35
+    },
+    {
+      "iteration": 320,
+      "loss": 1.2197801879665349e-05,
+      "case_id": "v5-train-missing_reason-02",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 489.375
+    },
+    {
+      "iteration": 321,
+      "loss": 7.76563410909148e-06,
+      "case_id": "v5-train-return-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 490.974
+    },
+    {
+      "iteration": 322,
+      "loss": 6.096703600633191e-06,
+      "case_id": "v5-train-exchange-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 492.585
+    },
+    {
+      "iteration": 323,
+      "loss": 9.83192785497522e-06,
+      "case_id": "v5-train-return_reject_exchange-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 494.156
+    },
+    {
+      "iteration": 324,
+      "loss": 0.003790533635765314,
+      "case_id": "v5-train-exchange_unavailable-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 495.737
+    },
+    {
+      "iteration": 325,
+      "loss": 8.422395694651641e-06,
+      "case_id": "v5-train-missing_email-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 497.53
+    },
+    {
+      "iteration": 326,
+      "loss": 8.100270861177705e-06,
+      "case_id": "v5-train-exchange_unavailable-02",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 499.377
+    },
+    {
+      "iteration": 327,
+      "loss": 1.180648814624874e-05,
+      "case_id": "v5-train-return_reject_exchange-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 501.004
+    },
+    {
+      "iteration": 328,
+      "loss": 0.0004383016494102776,
+      "case_id": "v5-train-exchange_gift-00",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 503.432
+    },
+    {
+      "iteration": 329,
+      "loss": 8.810388681013137e-05,
+      "case_id": "v5-train-exchange_missing_payment-03",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 505.896
+    },
+    {
+      "iteration": 330,
+      "loss": 0.0006717963260598481,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 507.405
+    },
+    {
+      "iteration": 331,
+      "loss": 7.610321063111769e-06,
+      "case_id": "v5-train-exchange_gift-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 508.915
+    },
+    {
+      "iteration": 332,
+      "loss": 0.00045604430488310754,
+      "case_id": "v5-train-missing_email-00",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 510.335
+    },
+    {
+      "iteration": 333,
+      "loss": 9.892063826555386e-05,
+      "case_id": "v5-train-missing_reason-01",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 512.241
+    },
+    {
+      "iteration": 334,
+      "loss": 0.001367477118037641,
+      "case_id": "v5-train-missing_email-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 513.513
+    },
+    {
+      "iteration": 335,
+      "loss": 0.0011722319759428501,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 515.07
+    },
+    {
+      "iteration": 336,
+      "loss": 0.03898744657635689,
+      "case_id": "v5-train-exchange_missing_payment-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 516.549
+    },
+    {
+      "iteration": 337,
+      "loss": 7.82116603659233e-06,
+      "case_id": "v5-train-exchange-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 518.026
+    },
+    {
+      "iteration": 338,
+      "loss": 1.2755393981933594e-05,
+      "case_id": "v5-train-return-00",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 519.891
+    },
+    {
+      "iteration": 339,
+      "loss": 6.772223059670068e-06,
+      "case_id": "v5-train-exchange_fallback-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 521.842
+    },
+    {
+      "iteration": 340,
+      "loss": 0.010584942065179348,
+      "case_id": "v5-train-exchange_fallback_available-01",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 523.995
+    },
+    {
+      "iteration": 341,
+      "loss": 0.0002696684387046844,
+      "case_id": "v5-train-missing_payment-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 526.331
+    },
+    {
+      "iteration": 342,
+      "loss": 4.236400127410889e-05,
+      "case_id": "v5-train-exchange_unavailable-00",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 529.16
+    },
+    {
+      "iteration": 343,
+      "loss": 5.7866177485266235e-06,
+      "case_id": "v5-train-missing_payment-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 530.772
+    },
+    {
+      "iteration": 344,
+      "loss": 4.038214683532715e-06,
+      "case_id": "v5-train-exchange_unavailable-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 532.24
+    },
+    {
+      "iteration": 345,
+      "loss": 0.003769843839108944,
+      "case_id": "v5-train-exchange_unavailable-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 533.915
+    },
+    {
+      "iteration": 346,
+      "loss": 8.560362402931787e-06,
+      "case_id": "v5-train-exchange_shortfall-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 535.929
+    },
+    {
+      "iteration": 347,
+      "loss": 0.0004113444301765412,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 538.35
+    },
+    {
+      "iteration": 348,
+      "loss": 0.001991075463593006,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 540.327
+    },
+    {
+      "iteration": 349,
+      "loss": 0.0020406520925462246,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 541.816
+    },
+    {
+      "iteration": 350,
+      "loss": 0.00010653102799551561,
+      "case_id": "v5-train-exchange_missing_payment-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 544.263
+    },
+    {
+      "iteration": 351,
+      "loss": 8.751045243116096e-06,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 546.004
+    },
+    {
+      "iteration": 352,
+      "loss": 6.073997155908728e-06,
+      "case_id": "v5-train-exchange_fallback-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 547.711
+    },
+    {
+      "iteration": 353,
+      "loss": 5.8846039792115334e-06,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 549.37
+    },
+    {
+      "iteration": 354,
+      "loss": 9.189481716020964e-06,
+      "case_id": "v5-train-exchange_shortfall-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 550.843
+    },
+    {
+      "iteration": 355,
+      "loss": 5.792487627331866e-06,
+      "case_id": "v5-train-exchange_gift-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 552.654
+    },
+    {
+      "iteration": 356,
+      "loss": 7.811046998540405e-06,
+      "case_id": "v5-train-return_reject_exchange-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 554.265
+    },
+    {
+      "iteration": 357,
+      "loss": 0.010170023888349533,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 555.837
+    },
+    {
+      "iteration": 358,
+      "loss": 7.185069080151152e-06,
+      "case_id": "v5-train-missing_reason-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 557.395
+    },
+    {
+      "iteration": 359,
+      "loss": 0.00638969661667943,
+      "case_id": "v5-train-exchange-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 558.829
+    },
+    {
+      "iteration": 360,
+      "loss": 0.00698330532759428,
+      "case_id": "v5-train-return_reject_exchange-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 560.264
+    },
+    {
+      "iteration": 361,
+      "loss": 4.659528258343926e-06,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 561.701
+    },
+    {
+      "iteration": 362,
+      "loss": 0.0017916769720613956,
+      "case_id": "v5-train-forbidden_status-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 563.171
+    },
+    {
+      "iteration": 363,
+      "loss": 0.0003694721672218293,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 565.459
+    },
+    {
+      "iteration": 364,
+      "loss": 6.18804597252165e-06,
+      "case_id": "v5-train-missing_payment-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 567.038
+    },
+    {
+      "iteration": 365,
+      "loss": 4.162788172834553e-06,
+      "case_id": "v5-train-return-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 568.482
+    },
+    {
+      "iteration": 366,
+      "loss": 5.3163232223596424e-05,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 570.796
+    },
+    {
+      "iteration": 367,
+      "loss": 5.157097348273965e-06,
+      "case_id": "v5-train-cancel-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 572.263
+    },
+    {
+      "iteration": 368,
+      "loss": 0.0048667206428945065,
+      "case_id": "v5-train-exchange_fallback-03",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 573.801
+    },
+    {
+      "iteration": 369,
+      "loss": 4.798173904418945e-06,
+      "case_id": "v5-train-exchange_missing_payment-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 575.484
+    },
+    {
+      "iteration": 370,
+      "loss": 0.00042481542914174497,
+      "case_id": "v5-train-exchange_gift-02",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 577.906
+    },
+    {
+      "iteration": 371,
+      "loss": 3.66667918569874e-05,
+      "case_id": "v5-train-exchange_unavailable-02",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 580.282
+    },
+    {
+      "iteration": 372,
+      "loss": 0.0037697232328355312,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.008,
+      "elapsed_seconds": 581.761
+    },
+    {
+      "iteration": 373,
+      "loss": 5.211149073147681e-06,
+      "case_id": "v5-train-exchange_fallback-02",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 583.576
+    },
+    {
+      "iteration": 374,
+      "loss": 0.007049655541777611,
+      "case_id": "v5-train-foreign_order-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 585.175
+    },
+    {
+      "iteration": 375,
+      "loss": 2.283573121530935e-05,
+      "case_id": "v5-train-foreign_order-03",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 588.162
+    },
+    {
+      "iteration": 376,
+      "loss": 4.939411155646667e-06,
+      "case_id": "v5-train-missing_email-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 590.624
+    },
+    {
+      "iteration": 377,
+      "loss": 3.4570693969726562e-06,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 592.313
+    },
+    {
+      "iteration": 378,
+      "loss": 0.0012357949744910002,
+      "case_id": "v5-train-exchange_fallback-03",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 594.73
+    },
+    {
+      "iteration": 379,
+      "loss": 3.8314949051709846e-05,
+      "case_id": "v5-train-forbidden_status-03",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 596.614
+    },
+    {
+      "iteration": 380,
+      "loss": 0.002745244186371565,
+      "case_id": "v5-train-exchange_fallback-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 598.174
+    },
+    {
+      "iteration": 381,
+      "loss": 0.00013152245082892478,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 599.98
+    },
+    {
+      "iteration": 382,
+      "loss": 4.697929853136884e-06,
+      "case_id": "v5-train-missing_payment-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 601.542
+    },
+    {
+      "iteration": 383,
+      "loss": 0.0033993732649832964,
+      "case_id": "v5-train-exchange_fallback_available-01",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 603.123
+    },
+    {
+      "iteration": 384,
+      "loss": 3.053813270526007e-05,
+      "case_id": "v5-train-missing_payment-00",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 604.945
+    },
+    {
+      "iteration": 385,
+      "loss": 6.207245314726606e-05,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 607.544
+    },
+    {
+      "iteration": 386,
+      "loss": 0.00014736101729795337,
+      "case_id": "v5-train-exchange_fallback-02",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 610.022
+    },
+    {
+      "iteration": 387,
+      "loss": 2.9802322387695312e-06,
+      "case_id": "v5-train-exchange_unavailable-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.004,
+      "elapsed_seconds": 611.753
+    },
+    {
+      "iteration": 388,
+      "loss": 4.195031579001807e-06,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 613.388
+    },
+    {
+      "iteration": 389,
+      "loss": 3.1164713618636597e-06,
+      "case_id": "v5-train-exchange_gift-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 614.946
+    },
+    {
+      "iteration": 390,
+      "loss": 4.557462943921564e-06,
+      "case_id": "v5-train-missing_payment-02",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 617.028
+    },
+    {
+      "iteration": 391,
+      "loss": 0.007631095591932535,
+      "case_id": "v5-train-exchange-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 618.516
+    },
+    {
+      "iteration": 392,
+      "loss": 3.42597127200861e-06,
+      "case_id": "v5-train-missing_email-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 620.175
+    },
+    {
+      "iteration": 393,
+      "loss": 6.138347089290619e-05,
+      "case_id": "v5-train-missing_payment-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 622.209
+    },
+    {
+      "iteration": 394,
+      "loss": 0.00014935288345441222,
+      "case_id": "v5-train-exchange_fallback-00",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 623.816
+    },
+    {
+      "iteration": 395,
+      "loss": 0.0002852590987458825,
+      "case_id": "v5-train-exchange_fallback-00",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 627.221
+    },
+    {
+      "iteration": 396,
+      "loss": 3.43322744811303e-06,
+      "case_id": "v5-train-return-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 628.72
+    },
+    {
+      "iteration": 397,
+      "loss": 0.00022454011195804924,
+      "case_id": "v5-train-exchange_missing_payment-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 630.202
+    },
+    {
+      "iteration": 398,
+      "loss": 0.0028503320645540953,
+      "case_id": "v5-train-return_reject_exchange-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 631.614
+    },
+    {
+      "iteration": 399,
+      "loss": 9.959697490558028e-05,
+      "case_id": "v5-train-exchange-02",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 634.056
+    },
+    {
+      "iteration": 400,
+      "loss": 0.00010195119102718309,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.004,
+      "elapsed_seconds": 636.674
+    },
+    {
+      "iteration": 401,
+      "loss": 0.00023535150103271008,
+      "case_id": "v5-train-missing_payment-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 638.197
+    },
+    {
+      "iteration": 402,
+      "loss": 5.421638434199849e-06,
+      "case_id": "v5-train-exchange_fallback-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 639.808
+    },
+    {
+      "iteration": 403,
+      "loss": 0.000190197562915273,
+      "case_id": "v5-train-missing_payment-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 641.251
+    },
+    {
+      "iteration": 404,
+      "loss": 3.0053288355702534e-06,
+      "case_id": "v5-train-missing_email-00",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 643.336
+    },
+    {
+      "iteration": 405,
+      "loss": 3.078709369219723e-06,
+      "case_id": "v5-train-return_reject_exchange-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 644.852
+    },
+    {
+      "iteration": 406,
+      "loss": 3.3946264466067078e-06,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 646.456
+    },
+    {
+      "iteration": 407,
+      "loss": 0.00022257844102568924,
+      "case_id": "v5-train-cancel-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 647.913
+    },
+    {
+      "iteration": 408,
+      "loss": 3.3171279483212857e-06,
+      "case_id": "v5-train-exchange-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 649.769
+    },
+    {
+      "iteration": 409,
+      "loss": 0.002992941765114665,
+      "case_id": "v5-train-return-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 651.213
+    },
+    {
+      "iteration": 410,
+      "loss": 2.5715146421134705e-06,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 652.836
+    },
+    {
+      "iteration": 411,
+      "loss": 5.206465630180901e-06,
+      "case_id": "v5-train-return-00",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 654.674
+    },
+    {
+      "iteration": 412,
+      "loss": 0.00022530555725097656,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 656.173
+    },
+    {
+      "iteration": 413,
+      "loss": 2.6342821001890115e-05,
+      "case_id": "v5-train-exchange_missing_payment-00",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 658.798
+    },
+    {
+      "iteration": 414,
+      "loss": 3.019968744411017e-06,
+      "case_id": "v5-train-exchange_gift-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 660.597
+    },
+    {
+      "iteration": 415,
+      "loss": 4.275985247659264e-06,
+      "case_id": "v5-train-return_reject_exchange-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 662.073
+    },
+    {
+      "iteration": 416,
+      "loss": 0.0012288751313462853,
+      "case_id": "v5-train-missing_reason-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 663.554
+    },
+    {
+      "iteration": 417,
+      "loss": 0.0002689702087081969,
+      "case_id": "v5-train-exchange_missing_option-01",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 665.918
+    },
+    {
+      "iteration": 418,
+      "loss": 9.686518751550466e-06,
+      "case_id": "v5-train-return_reject_exchange-02",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 667.921
+    },
+    {
+      "iteration": 419,
+      "loss": 7.971669401740655e-05,
+      "case_id": "v5-train-exchange_missing_payment-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 670.53
+    },
+    {
+      "iteration": 420,
+      "loss": 5.924183369643288e-06,
+      "case_id": "v5-train-return-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 672.044
+    },
+    {
+      "iteration": 421,
+      "loss": 0.00016058866458479315,
+      "case_id": "v5-train-exchange_fallback_available-03",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 674.503
+    },
+    {
+      "iteration": 422,
+      "loss": 3.183881517543341e-06,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 676.124
+    },
+    {
+      "iteration": 423,
+      "loss": 2.594221314211609e-06,
+      "case_id": "v5-train-exchange-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 677.968
+    },
+    {
+      "iteration": 424,
+      "loss": 0.0002134323149221018,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 680.572
+    },
+    {
+      "iteration": 425,
+      "loss": 9.098052942135837e-06,
+      "case_id": "v5-train-foreign_order-01",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 682.343
+    },
+    {
+      "iteration": 426,
+      "loss": 5.211149073147681e-06,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 684.46
+    },
+    {
+      "iteration": 427,
+      "loss": 1.1568267836992163e-05,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 686.788
+    },
+    {
+      "iteration": 428,
+      "loss": 2.8230927000549855e-06,
+      "case_id": "v5-train-foreign_order-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 688.377
+    },
+    {
+      "iteration": 429,
+      "loss": 2.5129318146355217e-06,
+      "case_id": "v5-train-exchange-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 689.838
+    },
+    {
+      "iteration": 430,
+      "loss": 0.0001310638035647571,
+      "case_id": "v5-train-missing_reason-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 691.928
+    },
+    {
+      "iteration": 431,
+      "loss": 2.6226043701171875e-06,
+      "case_id": "v5-train-missing_reason-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 693.536
+    },
+    {
+      "iteration": 432,
+      "loss": 0.000136342307087034,
+      "case_id": "v5-train-exchange_gift-00",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 695.994
+    },
+    {
+      "iteration": 433,
+      "loss": 1.6639629620840424e-06,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 697.513
+    },
+    {
+      "iteration": 434,
+      "loss": 3.0235810299927834e-06,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 699.349
+    },
+    {
+      "iteration": 435,
+      "loss": 3.18001038976945e-05,
+      "case_id": "v5-train-exchange_missing_payment-01",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 701.663
+    },
+    {
+      "iteration": 436,
+      "loss": 0.00022352208907250315,
+      "case_id": "v5-train-exchange_fallback_available-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.004,
+      "elapsed_seconds": 703.253
+    },
+    {
+      "iteration": 437,
+      "loss": 4.150650511292042e-06,
+      "case_id": "v5-train-return_reject_exchange-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 704.853
+    },
+    {
+      "iteration": 438,
+      "loss": 1.9619862996478332e-06,
+      "case_id": "v5-train-exchange_missing_option-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 706.314
+    },
+    {
+      "iteration": 439,
+      "loss": 5.142108875588747e-06,
+      "case_id": "v5-train-return_reject_exchange-03",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 708.283
+    },
+    {
+      "iteration": 440,
+      "loss": 2.0811955891986145e-06,
+      "case_id": "v5-train-missing_email-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 709.874
+    },
+    {
+      "iteration": 441,
+      "loss": 3.5866446523868944e-06,
+      "case_id": "v5-train-exchange_gift-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 711.695
+    },
+    {
+      "iteration": 442,
+      "loss": 0.0034829152282327414,
+      "case_id": "v5-train-exchange_missing_payment-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 713.161
+    },
+    {
+      "iteration": 443,
+      "loss": 7.611054570588749e-06,
+      "case_id": "v5-train-return-02",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 714.98
+    },
+    {
+      "iteration": 444,
+      "loss": 3.78063737116463e-06,
+      "case_id": "v5-train-missing_email-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 716.709
+    },
+    {
+      "iteration": 445,
+      "loss": 0.002803096082061529,
+      "case_id": "v5-train-missing_payment-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 718.126
+    },
+    {
+      "iteration": 446,
+      "loss": 0.013590343296527863,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 719.74
+    },
+    {
+      "iteration": 447,
+      "loss": 0.0011568896006792784,
+      "case_id": "v5-train-missing_email-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 721.431
+    },
+    {
+      "iteration": 448,
+      "loss": 2.53048801823752e-06,
+      "case_id": "v5-train-missing_payment-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 723.08
+    },
+    {
+      "iteration": 449,
+      "loss": 3.530581670929678e-05,
+      "case_id": "v5-train-missing_reason-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 724.587
+    },
+    {
+      "iteration": 450,
+      "loss": 3.283254409325309e-05,
+      "case_id": "v5-train-missing_reason-00",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 726.415
+    },
+    {
+      "iteration": 451,
+      "loss": 2.139264870493207e-05,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 728.515
+    },
+    {
+      "iteration": 452,
+      "loss": 1.7881393432617188e-06,
+      "case_id": "v5-train-exchange_fallback-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 730.357
+    },
+    {
+      "iteration": 453,
+      "loss": 2.4239222966571106e-06,
+      "case_id": "v5-train-return-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 731.973
+    },
+    {
+      "iteration": 454,
+      "loss": 1.5373030691989698e-05,
+      "case_id": "v5-train-exchange_shortfall-00",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 734.275
+    },
+    {
+      "iteration": 455,
+      "loss": 2.2351741790771484e-06,
+      "case_id": "v5-train-missing_payment-03",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 736.37
+    },
+    {
+      "iteration": 456,
+      "loss": 3.085036951233633e-05,
+      "case_id": "v5-train-exchange_shortfall-02",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 738.824
+    },
+    {
+      "iteration": 457,
+      "loss": 1.1256108336965553e-05,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 741.562
+    },
+    {
+      "iteration": 458,
+      "loss": 0.003154794918373227,
+      "case_id": "v5-train-exchange_shortfall-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 743.069
+    },
+    {
+      "iteration": 459,
+      "loss": 0.002790137892588973,
+      "case_id": "v5-train-exchange_shortfall-03",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 744.721
+    },
+    {
+      "iteration": 460,
+      "loss": 1.5383675417979248e-06,
+      "case_id": "v5-train-exchange_shortfall-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 746.326
+    },
+    {
+      "iteration": 461,
+      "loss": 5.471079020935576e-06,
+      "case_id": "v5-train-exchange_shortfall-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 748.121
+    },
+    {
+      "iteration": 462,
+      "loss": 8.344650268554688e-05,
+      "case_id": "v5-train-missing_email-01",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 749.611
+    },
+    {
+      "iteration": 463,
+      "loss": 0.0001272005756618455,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "ask_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 751.915
+    },
+    {
+      "iteration": 464,
+      "loss": 2.4636585749249207e-06,
+      "case_id": "v5-train-exchange_unavailable-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 753.812
+    },
+    {
+      "iteration": 465,
+      "loss": 0.0014385709073394537,
+      "case_id": "v5-train-exchange_fallback_available-00",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 755.439
+    },
+    {
+      "iteration": 466,
+      "loss": 2.3375387172563933e-06,
+      "case_id": "v5-train-exchange-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 756.92
+    },
+    {
+      "iteration": 467,
+      "loss": 2.3785091798345093e-06,
+      "case_id": "v5-train-exchange-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 758.754
+    },
+    {
+      "iteration": 468,
+      "loss": 1.1713608500940609e-06,
+      "case_id": "v5-train-exchange-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 760.204
+    },
+    {
+      "iteration": 469,
+      "loss": 2.0653010324167553e-06,
+      "case_id": "v5-train-missing_email-03",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 762.313
+    },
+    {
+      "iteration": 470,
+      "loss": 2.0921229406667408e-06,
+      "case_id": "v5-train-cancel-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 763.864
+    },
+    {
+      "iteration": 471,
+      "loss": 1.5213375945677399e-06,
+      "case_id": "v5-train-exchange_fallback_available-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 765.725
+    },
+    {
+      "iteration": 472,
+      "loss": 5.449598393170163e-05,
+      "case_id": "v5-train-exchange_gift-01",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 768.297
+    },
+    {
+      "iteration": 473,
+      "loss": 0.001490132650360465,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 769.797
+    },
+    {
+      "iteration": 474,
+      "loss": 1.197275878439541e-06,
+      "case_id": "v5-train-return-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 771.242
+    },
+    {
+      "iteration": 475,
+      "loss": 0.0014842096716165543,
+      "case_id": "v5-train-exchange_fallback_available-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 772.803
+    },
+    {
+      "iteration": 476,
+      "loss": 0.001270333188585937,
+      "case_id": "v5-train-exchange_unavailable-02",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 774.404
+    },
+    {
+      "iteration": 477,
+      "loss": 2.2933595573704224e-06,
+      "case_id": "v5-train-forbidden_status-01",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 775.958
+    },
+    {
+      "iteration": 478,
+      "loss": 3.9849281165516004e-05,
+      "case_id": "v5-train-forbidden_status-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 777.411
+    },
+    {
+      "iteration": 479,
+      "loss": 0.0019569445867091417,
+      "case_id": "v5-train-return-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 778.864
+    },
+    {
+      "iteration": 480,
+      "loss": 1.3162692766854889e-06,
+      "case_id": "v5-train-exchange_missing_payment-02",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 780.296
+    },
+    {
+      "iteration": 481,
+      "loss": 2.32032357416756e-06,
+      "case_id": "v5-train-cancel-00",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 782.128
+    },
+    {
+      "iteration": 482,
+      "loss": 1.6119169004014111e-06,
+      "case_id": "v5-train-missing_payment-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 783.583
+    },
+    {
+      "iteration": 483,
+      "loss": 8.765721577219665e-05,
+      "case_id": "v5-train-exchange_gift-03",
+      "tool": "propose_exchange",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 786.004
+    },
+    {
+      "iteration": 484,
+      "loss": 2.1287373783707153e-06,
+      "case_id": "v5-train-exchange_gift-02",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 787.867
+    },
+    {
+      "iteration": 485,
+      "loss": 0.005368642974644899,
+      "case_id": "v5-train-return_reject_exchange-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 789.367
+    },
+    {
+      "iteration": 486,
+      "loss": 1.4359301303557004e-06,
+      "case_id": "v5-train-exchange_shortfall-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 791.189
+    },
+    {
+      "iteration": 487,
+      "loss": 2.86102294921875e-06,
+      "case_id": "v5-train-exchange_fallback-00",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 793.036
+    },
+    {
+      "iteration": 488,
+      "loss": 0.0004741027078125626,
+      "case_id": "v5-train-exchange_fallback-01",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 794.601
+    },
+    {
+      "iteration": 489,
+      "loss": 1.67886412327789e-06,
+      "case_id": "v5-train-exchange_missing_option-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 796.056
+    },
+    {
+      "iteration": 490,
+      "loss": 4.001285560661927e-06,
+      "case_id": "v5-train-missing_reason-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 797.495
+    },
+    {
+      "iteration": 491,
+      "loss": 1.9848346255457727e-06,
+      "case_id": "v5-train-exchange_missing_option-03",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 799.294
+    },
+    {
+      "iteration": 492,
+      "loss": 0.001954364823177457,
+      "case_id": "v5-train-return-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 800.743
+    },
+    {
+      "iteration": 493,
+      "loss": 1.7831722516348236e-06,
+      "case_id": "v5-train-exchange_shortfall-00",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 802.17
+    },
+    {
+      "iteration": 494,
+      "loss": 1.855518462434702e-06,
+      "case_id": "v5-train-missing_email-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 804.0
+    },
+    {
+      "iteration": 495,
+      "loss": 0.011663267388939857,
+      "case_id": "v5-train-exchange_gift-02",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 805.636
+    },
+    {
+      "iteration": 496,
+      "loss": 2.4492089778505033e-06,
+      "case_id": "v5-train-cancel-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 807.204
+    },
+    {
+      "iteration": 497,
+      "loss": 0.0015081980964168906,
+      "case_id": "v5-train-return_reject_exchange-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 808.688
+    },
+    {
+      "iteration": 498,
+      "loss": 1.1920928955078125e-06,
+      "case_id": "v5-train-exchange-00",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 810.247
+    },
+    {
+      "iteration": 499,
+      "loss": 2.285708660565433e-06,
+      "case_id": "v5-train-missing_reason-03",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 811.712
+    },
+    {
+      "iteration": 500,
+      "loss": 5.389253146859119e-06,
+      "case_id": "v5-train-exchange_unavailable-01",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 814.138
+    },
+    {
+      "iteration": 501,
+      "loss": 1.4467673281615134e-06,
+      "case_id": "v5-train-exchange-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.002,
+      "elapsed_seconds": 815.757
+    },
+    {
+      "iteration": 502,
+      "loss": 3.719329924933845e-06,
+      "case_id": "v5-train-exchange_missing_option-01",
+      "tool": "get_product",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 817.597
+    },
+    {
+      "iteration": 503,
+      "loss": 0.011892933398485184,
+      "case_id": "v5-train-exchange_shortfall-01",
+      "tool": "record_request_contrast_repeat",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 819.074
+    },
+    {
+      "iteration": 504,
+      "loss": 5.284945018502185e-06,
+      "case_id": "v5-train-return_reject_exchange-01",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 821.059
+    },
+    {
+      "iteration": 505,
+      "loss": 7.309696684387745e-06,
+      "case_id": "v5-train-forbidden_status-00",
+      "tool": "handoff",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 822.895
+    },
+    {
+      "iteration": 506,
+      "loss": 1.0728836059570312e-06,
+      "case_id": "v5-train-missing_payment-01",
+      "tool": "identify_customer",
+      "resource_wait_seconds": 0.006,
+      "elapsed_seconds": 824.363
+    },
+    {
+      "iteration": 507,
+      "loss": 1.8950166804643231e-06,
+      "case_id": "v5-train-missing_reason-01",
+      "tool": "propose_cancel",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 826.445
+    },
+    {
+      "iteration": 508,
+      "loss": 1.1496054867166094e-05,
+      "case_id": "v5-train-return_reject_exchange-00",
+      "tool": "propose_return",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 828.268
+    },
+    {
+      "iteration": 509,
+      "loss": 0.007637655828148127,
+      "case_id": "v5-train-foreign_order-03",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 829.774
+    },
+    {
+      "iteration": 510,
+      "loss": 0.00015590229304507375,
+      "case_id": "v5-train-missing_email-00",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 831.106
+    },
+    {
+      "iteration": 511,
+      "loss": 1.5213375945677399e-06,
+      "case_id": "v5-train-exchange_missing_option-02",
+      "tool": "get_order",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 832.851
+    },
+    {
+      "iteration": 512,
+      "loss": 5.1942424761364236e-05,
+      "case_id": "v5-train-missing_payment-01",
+      "tool": "record_request",
+      "resource_wait_seconds": 0.001,
+      "elapsed_seconds": 834.393
+    }
+  ],
+  "candidates": [
+    {
+      "iteration": 256,
+      "path": "data/finetuning/retail-qlora-v5/run/candidates/256",
+      "adapter_sha256": "a1ef4d4e201ba96e40286a19bf1e97d2ac8aee8b358b23f5586be580b4aadf6b"
+    },
+    {
+      "iteration": 512,
+      "path": "data/finetuning/retail-qlora-v5/run/candidates/512",
+      "adapter_sha256": "71c1868657a47d8c367c5c5762210792e0db2e7672b41e9cf34520c2058bbaf8"
+    }
+  ],
+  "preflight_only": false,
+  "preflight_weights_reused": false,
+  "adapter_sha256": "71c1868657a47d8c367c5c5762210792e0db2e7672b41e9cf34520c2058bbaf8",
+  "adapter_l2_change": 1.0676260730531295,
+  "trainable_parameters": 3670016,
+  "elapsed_seconds": 834.48,
+  "peak_active_memory_bytes": 3755559628,
+  "token_audit": {
+    "all_targets_covered": true,
+    "longest_train_sequence": 1284,
+    "longest_train_completion": 103,
+    "uniform_completion_weight": 1.0,
+    "prompt_and_padding_weight": 0.0,
+    "projection_window": 512
+  },
+  "test_used_for_selection": false,
+  "cloud_compute_used": false,
+  "status": "trained",
+  "selected_adapter_sha256": "a1ef4d4e201ba96e40286a19bf1e97d2ac8aee8b358b23f5586be580b4aadf6b",
+  "best_checkpoint": {
+    "iteration": 256,
+    "path": "data/finetuning/retail-qlora-v5/run/candidates/256",
+    "adapter_sha256": "a1ef4d4e201ba96e40286a19bf1e97d2ac8aee8b358b23f5586be580b4aadf6b",
+    "manifest_sha256": "e48cbe49e8022f9ca1a958077d618525de9953580edda1e68697c6d63d763802",
+    "summary": {
+      "tasks": 32,
+      "task_success": 30,
+      "exchange_related_tasks": 16,
+      "exchange_related_success": 15,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 9,
+      "required_clarifications": 10,
+      "clarifications_obtained": 10,
+      "model_calls": 170,
+      "schema_valid": 169,
+      "duplicate_read_attempts": 0,
+      "duplicate_read_executions": 0,
+      "rejected_write_attempts": 0,
+      "output_tokens": 7060,
+      "confirmation_preserved": 32,
+      "latency_p50_ms": 11564.369999999999,
+      "median_model_calls": 5.0,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "ordinary_exchange_tasks": 2,
+      "ordinary_exchange_success": 2,
+      "direct_return_tasks": 8,
+      "direct_return_success": 7,
+      "fallback_tasks": 2,
+      "fallback_success": 2,
+      "handoff_tasks": 8,
+      "handoff_success": 8,
+      "repeat_free_success": 30,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 9,
+      "unnecessary_handoff_attempts": 0,
+      "unnecessary_handoff_executed": 0,
+      "policy_gate_rejections": 0,
+      "unrequested_substitute_attempts": 0,
+      "intent_record_attempts": 51,
+      "quote_rejections": 10,
+      "intent_tasks": 32,
+      "intent_joint_correct": 20,
+      "intent_field_correct": {
+        "operation": 32,
+        "email": 32,
+        "order_id": 32,
+        "requested_option": 32,
+        "payment_method": 32,
+        "reason": 32,
+        "fallback_return": 20
+      }
+    },
+    "selection_key": [
+      1,
+      0.9,
+      30,
+      0,
+      0,
+      0,
+      -170
+    ]
+  },
+  "validation_candidates": [
+    {
+      "iteration": 256,
+      "path": "data/finetuning/retail-qlora-v5/run/candidates/256",
+      "adapter_sha256": "a1ef4d4e201ba96e40286a19bf1e97d2ac8aee8b358b23f5586be580b4aadf6b",
+      "manifest_sha256": "e48cbe49e8022f9ca1a958077d618525de9953580edda1e68697c6d63d763802",
+      "summary": {
+        "tasks": 32,
+        "task_success": 30,
+        "exchange_related_tasks": 16,
+        "exchange_related_success": 15,
+        "fulfillable_exchange_tasks": 10,
+        "fulfillable_exchange_success": 9,
+        "required_clarifications": 10,
+        "clarifications_obtained": 10,
+        "model_calls": 170,
+        "schema_valid": 169,
+        "duplicate_read_attempts": 0,
+        "duplicate_read_executions": 0,
+        "rejected_write_attempts": 0,
+        "output_tokens": 7060,
+        "confirmation_preserved": 32,
+        "latency_p50_ms": 11564.369999999999,
+        "median_model_calls": 5.0,
+        "exchange_as_return": 0,
+        "unauthorized_return": 0,
+        "ordinary_exchange_tasks": 2,
+        "ordinary_exchange_success": 2,
+        "direct_return_tasks": 8,
+        "direct_return_success": 7,
+        "fallback_tasks": 2,
+        "fallback_success": 2,
+        "handoff_tasks": 8,
+        "handoff_success": 8,
+        "repeat_free_success": 30,
+        "repeated_question_attempts": 0,
+        "repeated_questions_delivered": 0,
+        "identical_action_repeats": 9,
+        "unnecessary_handoff_attempts": 0,
+        "unnecessary_handoff_executed": 0,
+        "policy_gate_rejections": 0,
+        "unrequested_substitute_attempts": 0,
+        "intent_record_attempts": 51,
+        "quote_rejections": 10,
+        "intent_tasks": 32,
+        "intent_joint_correct": 20,
+        "intent_field_correct": {
+          "operation": 32,
+          "email": 32,
+          "order_id": 32,
+          "requested_option": 32,
+          "payment_method": 32,
+          "reason": 32,
+          "fallback_return": 20
+        }
+      },
+      "selection_key": [
+        1,
+        0.9,
+        30,
+        0,
+        0,
+        0,
+        -170
+      ]
+    },
+    {
+      "iteration": 512,
+      "path": "data/finetuning/retail-qlora-v5/run/candidates/512",
+      "adapter_sha256": "71c1868657a47d8c367c5c5762210792e0db2e7672b41e9cf34520c2058bbaf8",
+      "manifest_sha256": "e48cbe49e8022f9ca1a958077d618525de9953580edda1e68697c6d63d763802",
+      "summary": {
+        "tasks": 32,
+        "task_success": 30,
+        "exchange_related_tasks": 16,
+        "exchange_related_success": 15,
+        "fulfillable_exchange_tasks": 10,
+        "fulfillable_exchange_success": 9,
+        "required_clarifications": 10,
+        "clarifications_obtained": 10,
+        "model_calls": 172,
+        "schema_valid": 171,
+        "duplicate_read_attempts": 0,
+        "duplicate_read_executions": 0,
+        "rejected_write_attempts": 0,
+        "output_tokens": 7179,
+        "confirmation_preserved": 32,
+        "latency_p50_ms": 11746.255000000001,
+        "median_model_calls": 5.0,
+        "exchange_as_return": 0,
+        "unauthorized_return": 0,
+        "ordinary_exchange_tasks": 2,
+        "ordinary_exchange_success": 2,
+        "direct_return_tasks": 8,
+        "direct_return_success": 7,
+        "fallback_tasks": 2,
+        "fallback_success": 2,
+        "handoff_tasks": 8,
+        "handoff_success": 8,
+        "repeat_free_success": 30,
+        "repeated_question_attempts": 0,
+        "repeated_questions_delivered": 0,
+        "identical_action_repeats": 9,
+        "unnecessary_handoff_attempts": 0,
+        "unnecessary_handoff_executed": 0,
+        "policy_gate_rejections": 0,
+        "unrequested_substitute_attempts": 0,
+        "intent_record_attempts": 52,
+        "quote_rejections": 10,
+        "intent_tasks": 32,
+        "intent_joint_correct": 31,
+        "intent_field_correct": {
+          "operation": 32,
+          "email": 32,
+          "order_id": 32,
+          "requested_option": 31,
+          "payment_method": 32,
+          "reason": 32,
+          "fallback_return": 32
+        }
+      },
+      "selection_key": [
+        1,
+        0.9,
+        30,
+        0,
+        0,
+        0,
+        -172
+      ]
+    }
+  ],
+  "updates_sha256": "d5fc71e7a4cbd1e3f3ff68fd9d54489ca77ffe675396c3fa19435888e428172e",
+  "checkpoint_selection": "Validation-only frozen lexicographic business balance, safety, overall, unnecessary handoffs, repeated asks, total calls. Two candidates 256/512. No test inference before selection."
+}

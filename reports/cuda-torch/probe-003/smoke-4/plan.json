@@ -1,0 +1,379 @@
+{
+  "created_at_utc": "2026-10-28T19:55:10.164572+00:00",
+  "scope": "Separate CUDA PyTorch/PEFT FP16 performance path on the unchanged 824 V7 training pairs. The same weighted next-token objective retains full context; projection changes 512 to 192, backend/precision/gradient scaling/checkpointing differ. This is not an isolated GPU hardware speed comparison, a fresh held-out experiment, or evidence of accuracy. Smoke weights are discarded.",
+  "kind": "smoke",
+  "planned_true_optimizer_updates": 4,
+  "smoke_weights_discarded": true,
+  "fresh_predecessor_initialization": true,
+  "smoke_weights_reused": false,
+  "source_inputs_sha256": {
+    "training/cuda_torch/train.py": "48d9839fa635bd060f42270f697a7db0dbf016870853cd8921901acd9665b6c9",
+    "training/cuda_torch/model.py": "d14b21fbccf93099168cf459313b77cfa8da470d8139497c74b507c25cb4dbea",
+    "training/v7/config.json": "199d48a5e96da7e790e60cbc76935c16971229173b69c4949cab0516814f72c5",
+    "training/v7/tokenization.py": "956ca58a86b9d3e93bf218906690a3c3be6b672efabca65eb6e8acaec27f70ce",
+    "training/v7/train.py": "5ce0ff7d78b32ad67a7e0756ffce522ca019968f3e6b8c26cd8a8cb69e2e1464",
+    "training/v4/tokenization.py": "946f01aab1b0ab6383025a552c474382ec68a8c4711739c08285f62465841fc3",
+    "training/base-model-spec.json": "bff5ee1bb595c89e629c7e0f93884c06ab66628f9cf6e61b8dfe02f87053a965",
+    "training/v7/datasets/manifest.json": "1bbb3aba1db64e0962842411d9cb5872269dde01922c2d8731de135bbc8908ae",
+    "training/v7/datasets/train.jsonl": "ea172ed3a9eee419a62bfbce43b2a67ab4600b33d05ea69c395d2d6d9ecff903",
+    "training/v7/datasets/cases.json": "0e92883c37678e342487137ff184a7d41d3376e46f35e2821d60f81ae7b36083"
+  },
+  "manifest_sha256": "1bbb3aba1db64e0962842411d9cb5872269dde01922c2d8731de135bbc8908ae",
+  "frozen_manifest": {
+    "files": {
+      "training/v7/common.py": "8b25564f67037332d2de786b86b0fec99ecdb0e5d499d7a1d95647a297e46e3a",
+      "training/v7/fixtures.py": "d84c6281cfc5229a303dd5a9f4fddfef8d5ffaca501f637a302a3ad7c21c0bb8",
+      "training/v7/scoring.py": "40ba2399da1fc7cfa5539334af9459b995b4520dd3989bd829a8d143e1ac8fa3",
+      "training/v7/prepare.py": "0192fb56b65d462ab20299e155e678495967f56245adeebeb6871d71e465c311",
+      "training/v7/evaluation.py": "6c7e80245fbf06c8b97cfa826e3c91632343aa7303621d1afd7905812728a6d6",
+      "training/v7/evaluate.py": "e73cfe755cf98debb1ac1bbcbfad6131802d2089ce3dd14b716979660b17f740",
+      "training/v7/select.py": "469098345c99aa2521a0e386b0fcf1b0c1dfb3a95140e378bd33f4625b4f22c8",
+      "training/v7/provider.py": "b16785a9699f03b82423189c9c37104f8e35b6a83f68575f7515e28644b91b75",
+      "training/v7/resources.py": "e58f48171c8f6e2b3269ee458978168567d2dc5ed4565bed890177591ac8b949",
+      "training/v7/train.py": "5ce0ff7d78b32ad67a7e0756ffce522ca019968f3e6b8c26cd8a8cb69e2e1464",
+      "training/v7/tokenization.py": "956ca58a86b9d3e93bf218906690a3c3be6b672efabca65eb6e8acaec27f70ce",
+      "training/v7/config.json": "199d48a5e96da7e790e60cbc76935c16971229173b69c4949cab0516814f72c5",
+      "resolve_desk/resolution_v7.py": "d878f176fad914b8525c12dd2facb72c611545855078f9cb4620dfe8739d6505",
+      "resolve_desk/agent_v7.py": "b09c947a2c708ba0553f2cfc0ceae900e51d623c0b8c1197d8ff1db66cee1ffc",
+      "resolve_desk/resolution_v6_1.py": "1f8c3d053e23cb8b93bbb3c052a10904b740ad9057aba5f48f11bc406c446a15",
+      "training/runtime.py": "70e60f56223f7161c430f6b601ae9f748548b740c9f1ee0172e7f65acdbf4531",
+      "training/v4/tokenization.py": "946f01aab1b0ab6383025a552c474382ec68a8c4711739c08285f62465841fc3",
+      "training/v4/evaluation.py": "c83ad22d23a1a9563975e0265cec5ba1a463fbd678f8be6484ea3baca3c8901b",
+      "training/v6/scoring.py": "d1af5058f167848849d96da8ca2cca1fa386fbcdc228fac179cbb033a347410c",
+      "training/v6_1/datasets/manifest.json": "36d4100038d683de7121ff0e494304954bd7a3bbba1f68004a12fdfa6d490426",
+      "reports/v6_1/training.json": "eb9760f58ddaf5cbebc2a1a28688d3993706f511a565ada332776c13080d12a3",
+      "training/base-model-spec.json": "bff5ee1bb595c89e629c7e0f93884c06ab66628f9cf6e61b8dfe02f87053a965",
+      "reports/v7/analysis-plan.json": "07052642e5a803cf4ec736be8bd2cb3949c86debb1cf159a0c39bbb373ca99cf",
+      "training/v7/datasets/test.jsonl": "91b73847f4bf4114eabc06d470cd09cb02803fc84eb816525ec308ac454926e2",
+      "training/v7/datasets/train.jsonl": "ea172ed3a9eee419a62bfbce43b2a67ab4600b33d05ea69c395d2d6d9ecff903",
+      "training/v7/datasets/valid.jsonl": "cd221befa8172212b52b13841ae0f151fce3a9395e4539978d46e54c9158cf4c",
+      "training/v7/datasets/cases.json": "0e92883c37678e342487137ff184a7d41d3376e46f35e2821d60f81ae7b36083"
+    },
+    "data": {
+      "tasks": {
+        "train": 96,
+        "valid": 48,
+        "test": 48
+      },
+      "rows": {
+        "train": 824,
+        "valid": 252,
+        "test": 252
+      },
+      "raw_train_rows_before_deduplication": 940,
+      "duplicate_training_pairs_removed": 116,
+      "recovery_trajectories": 76,
+      "recovery_types": {
+        "enum_cancel": 8,
+        "stale_evidence": 12,
+        "enum_exchange": 24,
+        "repeat_ask": 16,
+        "false_yes": 16
+      },
+      "train_actions": {
+        "record_request": 158,
+        "get_product": 100,
+        "identify_customer": 152,
+        "propose_return": 50,
+        "propose_cancel": 18,
+        "ask_customer": 90,
+        "get_order": 152,
+        "propose_exchange": 44,
+        "handoff": 60
+      },
+      "train_sample_roles": {
+        "initial_record": 96,
+        "tool_action": 666,
+        "record_recovery": 62
+      },
+      "permissions": {
+        "train": {
+          "unknown": 48,
+          "yes": 24,
+          "no": 24
+        },
+        "valid": {
+          "unknown": 24,
+          "yes": 12,
+          "no": 12
+        },
+        "test": {
+          "unknown": 24,
+          "yes": 12,
+          "no": 12
+        }
+      },
+      "training_record_permission_targets": {
+        "unknown": 72,
+        "yes": 46,
+        "no": 40
+      },
+      "all_reference_tasks_pass": true,
+      "unique_interactions": {
+        "train": 96,
+        "valid": 48,
+        "test": 48
+      },
+      "unique_initial_model_prompts": {
+        "train": 96,
+        "valid": 48,
+        "test": 48
+      },
+      "unique_order_worlds": {
+        "train": 96,
+        "valid": 48,
+        "test": 48
+      },
+      "unique_entities": {
+        "train": 868,
+        "valid": 434,
+        "test": 434
+      },
+      "unique_training_prompt_completion_pairs": 824,
+      "split_entities_and_initial_inputs_disjoint": true,
+      "no_prior_order_worlds_reused": true,
+      "no_prior_entities_or_initial_messages_reused": true,
+      "interaction_fields": [
+        "initial_message",
+        "customer",
+        "orders",
+        "products",
+        "answers",
+        "confirmation",
+        "required_answers"
+      ],
+      "scope": "Self-authored synthetic language and independent worlds. Wrong synthetic actions are recovery input state only, never supervised labels. Repeated inputs are physically removed from SFT; sampling repetitions during optimization must be reported separately."
+    },
+    "initial_adapter_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+    "previous_manifest_sha256": "36d4100038d683de7121ff0e494304954bd7a3bbba1f68004a12fdfa6d490426",
+    "previous_training_sha256": "eb9760f58ddaf5cbebc2a1a28688d3993706f511a565ada332776c13080d12a3",
+    "test_inference_started_at_freeze": false,
+    "scope": "One new V7 SFT run and separately held-out four-arm evaluation; no test-based selection."
+  },
+  "initializer_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+  "base_spec": {
+    "repo": "Qwen/Qwen3-4B-MLX-4bit",
+    "revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+    "files": [
+      {
+        "path": "model.safetensors",
+        "bytes": 2137326367,
+        "sha256": "e56a94b846a2dce7d1cc154ce58b9cfc4b8d99e8ffb74bfe256a265f4cbc7fb9"
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 11343,
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 9732,
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+      },
+      {
+        "path": "config.json",
+        "bytes": 988,
+        "sha256": "76eae114d67a444c7296be7a6bc0409ecc15c340e113f1bac7572cb7d0928b6f"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      {
+        "path": "README.md",
+        "bytes": 14708,
+        "sha256": "a3ac01d2a1fff2f02be25e1d2e9160f03db51dbee2cc17f13b774f646648adf9"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "bytes": 63924,
+        "sha256": "278844a566da15beab6e9068c57f606c50a99c440d4515206b871a8b5282b3de"
+      }
+    ],
+    "excluded_snapshot_metadata": [
+      ".gitattributes was absent in the inherited local checkout; it is not a model input."
+    ]
+  },
+  "frozen_config": {
+    "model": "data/models/qwen3-4b-mlx",
+    "model_repo": "Qwen/Qwen3-4B-MLX-4bit",
+    "model_revision": "52a5ab34fa604bc8af6d3ce0cac0cab10b7eb495",
+    "data": "training/v7/datasets",
+    "adapter_path": "data/finetuning/retail-qlora-v7/run",
+    "best_path": "data/finetuning/retail-qlora-v7/best",
+    "seed": 202610287,
+    "iters": 1344,
+    "num_layers": 8,
+    "batch_size": 1,
+    "learning_rate": 6e-06,
+    "lora_parameters": {
+      "rank": 8,
+      "dropout": 0.0,
+      "scale": 16.0
+    },
+    "max_seq_length": 3072,
+    "steps_per_report": 16,
+    "steps_per_eval": 672,
+    "save_every": 672,
+    "tool_name_loss_weight": 1.0,
+    "generation_max_tokens": 512,
+    "generation_temperature": 0,
+    "max_agent_steps": 12,
+    "checkpoint_candidates_completed_updates": [
+      672,
+      1344
+    ],
+    "checkpoint_selection": "Validation only: safety, zero unsupported affirmative permission, positive permission recall, balanced exchange/fallback/handoff/email success, overall, enum validity, unnecessary handoff, repeats, calls. Ties prefer earlier checkpoint.",
+    "evaluation_arms": [
+      "previous_old_flow",
+      "previous_new_flow",
+      "base_new_flow",
+      "qlora_v7"
+    ],
+    "runtime_policy": "V7 observed validation feedback and bounded model repair. Model issues all actions; earliest raw slots scored before recovery; scoped actual YES and separate proposal confirmation remain.",
+    "promotion_rule": "All4fallback,14exchange,16handoff,8email and12initialexplicitgrants; zero unsupported affirmative, initial parse failures, initial enum errors, reason enum errors, unnecessary handoff, repeated-field attempts, exchange-as-return, unauthorized returns; confirmation48 and overall no lower than both new-flow comparators.",
+    "initialization": "data/finetuning/retail-qlora-v6_1/best",
+    "initialization_sha256": "041cde85d1593f27f154da5b4afbec2f0635fb2bcfe4a34940339e092925ce08",
+    "projection_window": 512,
+    "permission_slot_loss_weight": 8.0,
+    "training_updates_report": "reports/v7/updates.json",
+    "training_manifest": "training/v7/datasets/manifest.json",
+    "reason_slot_loss_weight": 4.0,
+    "sampling_policy": "50% initial record/record repair targets; 50% other execution/reply targets. Physical training rows deduplicated; sampling coverage reported."
+  },
+  "compute_config": {
+    "backend": "pytorch_cuda_peft",
+    "base_dtype": "float16",
+    "lora_master_dtype": "float32",
+    "autocast_dtype": "float16",
+    "projection_window": 192,
+    "original_mlx_projection_window": 512,
+    "attention": "sdpa_causal",
+    "gradient_checkpointing": "nonreentrant",
+    "force_embedding_output_gradients": false,
+    "use_cache": false,
+    "optimizer": "Adam",
+    "learning_rate": 6e-06,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "gradient_clipping": false,
+    "grad_scaler_initial_scale": 128.0,
+    "batch_size": 1,
+    "seed": 202610287,
+    "generation_or_evaluation": false
+  },
+  "package_pins": {
+    "torch": "2.11.0+cu128",
+    "peft": "0.19.1",
+    "accelerate": "1.14.0",
+    "transformers": "5.21.0",
+    "safetensors": "0.8.0",
+    "numpy": "2.5.4"
+  },
+  "dependency_environment": {
+    "python": "3.12.13",
+    "sys_version": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "executable": "/usr/bin/python3",
+    "platform": "linux",
+    "required_packages": {
+      "torch": "2.11.0+cu128",
+      "peft": "0.19.1",
+      "accelerate": "1.14.0",
+      "transformers": "5.21.0",
+      "safetensors": "0.8.0",
+      "numpy": "2.5.4"
+    },
+    "optional_packages": {
+      "torchao": null,
+      "bitsandbytes": null,
+      "triton": "3.6.0",
+      "xformers": null,
+      "flash-attn": null,
+      "torchvision": "0.26.0+cu128",
+      "torchaudio": "2.11.0+cu128",
+      "mlx": "0.32.4",
+      "mlx-cuda-12": "0.32.4",
+      "mlx-lm": "0.32.2",
+      "huggingface-hub": "2.3.0",
+      "tokenizers": "0.23.3",
+      "packaging": "26.2"
+    },
+    "torchao": {
+      "distribution_version": null,
+      "module_discoverable": false,
+      "module_origin": null,
+      "module_probe_error": null,
+      "in_sys_modules": false
+    },
+    "torchao_policy": "Must be genuinely uninstalled; no import masking or module stubbing."
+  },
+  "planned_schedule": [
+    {
+      "iteration": 1,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 364
+    },
+    {
+      "iteration": 2,
+      "bucket": "execution_and_reply",
+      "sample_index": 370
+    },
+    {
+      "iteration": 3,
+      "bucket": "intent_and_record_repair",
+      "sample_index": 523
+    },
+    {
+      "iteration": 4,
+      "bucket": "execution_and_reply",
+      "sample_index": 612
+    }
+  ],
+  "planned_sampling": {
+    "physical_rows": 824,
+    "unique_rows_sampled": 4,
+    "unique_cases_sampled": 4,
+    "all_physical_rows_used": false,
+    "bucket_rows": {
+      "intent_and_record_repair": 158,
+      "execution_and_reply": 666
+    },
+    "bucket_updates": {
+      "intent_and_record_repair": 2,
+      "execution_and_reply": 2
+    }
+  },
+  "full_1344_sampling": {
+    "physical_rows": 824,
+    "unique_rows_sampled": 824,
+    "unique_cases_sampled": 96,
+    "all_physical_rows_used": true,
+    "bucket_rows": {
+      "intent_and_record_repair": 158,
+      "execution_and_reply": 666
+    },
+    "bucket_updates": {
+      "intent_and_record_repair": 672,
+      "execution_and_reply": 672
+    }
+  },
+  "checkpoints": [],
+  "cloud_compute_used": true,
+  "test_used_for_selection": false,
+  "new_accuracy_claim": false
+}

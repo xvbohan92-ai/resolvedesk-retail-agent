@@ -1,0 +1,27 @@
+{
+  "method": "Action-name-span preference plus mean chosen-completion NLL",
+  "reference": "https://arxiv.org/html/2405.14734v2",
+  "formula": "softplus(-(beta * (action_logp_chosen - action_logp_rejected) - margin)) - sft_weight * completion_logp_chosen",
+  "beta": 2.0,
+  "margin": 0.5,
+  "sft_weight": 1.0,
+  "learning_rate": 3e-06,
+  "seed": 2026102742,
+  "updates": 136,
+  "batch_size": 1,
+  "initialization": "data/finetuning/retail-qlora-v4/run/candidates/480",
+  "output": "data/finetuning/retail-qlora-v4/action-preference",
+  "best_path": "data/finetuning/retail-qlora-v4/best-action",
+  "projection_window": 256,
+  "selection": "Fixed 136-update final checkpoint; complete business validation is diagnostic.",
+  "revision_reason": "Unregularized sequence preference regressed on validation. Contrast exact action-name tokens to remove negative-reason wording shortcuts; anchor all chosen completion tokens with NLL. Restart from SFT480, never the failed preference adapter. No new test inference before revision.",
+  "training_pairs": {
+    "avoid_unnecessary_handoff": 48,
+    "ask_missing_information": 20,
+    "continue_after_answer": 20,
+    "preserve_exchange_intent": 20,
+    "preserve_policy_handoff": 16,
+    "preserve_genuine_return": 12
+  },
+  "scope": "Original 124 train-only pairs plus 12 genuine-return contrasts from original training worlds. Preference uses exact action-name token masks; NLL covers every chosen completion/end-of-turn token. Prompt and padding masked. Tail projection omits only zero-loss positions, audited without truncating context or targets."
+}

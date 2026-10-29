@@ -1,0 +1,10 @@
+{
+  "base_model": "qwen3:4b",
+  "profile_model": "resolvedesk-qwen3:4b",
+  "base_template_sha256": "2d54db2b9bb29ce7db54fea63a891f5859603813c555b1f88b5e0994652897f9",
+  "profile_template_sha256": "0a3e43c71bdec4a59b0ca75916475ff79722c1681b06203ea092bc71e1d0a92f",
+  "change": "Close the empty thinking prefix for JSON dispatch; identical existing GGUF weight blobs. No training.",
+  "status": {
+    "status": "success"
+  }
+}

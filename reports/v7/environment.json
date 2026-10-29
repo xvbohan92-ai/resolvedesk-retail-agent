@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "packages": {
+    "resolvedesk": "0.7.0",
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "transformers": "5.21.0",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0",
+    "pydantic": "2.14.1"
+  },
+  "cloud_compute_used": false,
+  "other_ollama_caches_unloaded": false
+}
