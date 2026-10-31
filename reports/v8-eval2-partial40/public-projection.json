@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "scope": "Public numerical projection of the separately authorized common40 stage analysis",
+  "original_private_source_seal_recertified": false,
+  "public_raw_token_or_business_replay_supported": false,
+  "original144_gate_complete": false,
+  "files": [
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/evaluation.png",
+      "source_path": "docs/figures/v8-eval2-partial40/evaluation.png",
+      "source_sha256": "aa9f08047c994b050d12c940ca9ad7aca2916ed079c0bbbaccc48de06ff273ff",
+      "public_sha256": "aa9f08047c994b050d12c940ca9ad7aca2916ed079c0bbbaccc48de06ff273ff",
+      "source_bytes": 112334,
+      "public_bytes": 112334,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/evaluation.svg",
+      "source_path": "docs/figures/v8-eval2-partial40/evaluation.svg",
+      "source_sha256": "a35596f0c70147dbe579743bf5e4e39eca48fff4c506a54517c69ea014e13ff6",
+      "public_sha256": "a35596f0c70147dbe579743bf5e4e39eca48fff4c506a54517c69ea014e13ff6",
+      "source_bytes": 83540,
+      "public_bytes": 83540,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/intent.png",
+      "source_path": "docs/figures/v8-eval2-partial40/intent.png",
+      "source_sha256": "bd24fa1291b331731545e931881719ff47701aa9b6cbdcffd5b203c32fcbbc18",
+      "public_sha256": "bd24fa1291b331731545e931881719ff47701aa9b6cbdcffd5b203c32fcbbc18",
+      "source_bytes": 193152,
+      "public_bytes": 193152,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/intent.svg",
+      "source_path": "docs/figures/v8-eval2-partial40/intent.svg",
+      "source_sha256": "72135f9e269624c67bb393f1f3dfc3f646b0c2f55ac363426f32435d539b1a36",
+      "public_sha256": "72135f9e269624c67bb393f1f3dfc3f646b0c2f55ac363426f32435d539b1a36",
+      "source_bytes": 103975,
+      "public_bytes": 103975,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/recovery.png",
+      "source_path": "docs/figures/v8-eval2-partial40/recovery.png",
+      "source_sha256": "5e3c4493632e7b8458e7cdff8c49ffc0ad4f89929c451fc20be88766449aa856",
+      "public_sha256": "5e3c4493632e7b8458e7cdff8c49ffc0ad4f89929c451fc20be88766449aa856",
+      "source_bytes": 210500,
+      "public_bytes": 210500,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/recovery.svg",
+      "source_path": "docs/figures/v8-eval2-partial40/recovery.svg",
+      "source_sha256": "abdda7f84306ab42b3a8e9d2fc17353e88b62bab17858ec8550b039c343c8c46",
+      "public_sha256": "abdda7f84306ab42b3a8e9d2fc17353e88b62bab17858ec8550b039c343c8c46",
+      "source_bytes": 113364,
+      "public_bytes": 113364,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/families.png",
+      "source_path": "docs/figures/v8-eval2-partial40/families.png",
+      "source_sha256": "26e4958fe80b26ca029107e23fc9d33cad01b43081f34db77864b07124939b61",
+      "public_sha256": "26e4958fe80b26ca029107e23fc9d33cad01b43081f34db77864b07124939b61",
+      "source_bytes": 245135,
+      "public_bytes": 245135,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/families.svg",
+      "source_path": "docs/figures/v8-eval2-partial40/families.svg",
+      "source_sha256": "1d72e7db4b2be464231ebf1d1ffcb7bf97c8df1dd601f7213893a093c7ff7e5b",
+      "public_sha256": "1d72e7db4b2be464231ebf1d1ffcb7bf97c8df1dd601f7213893a093c7ff7e5b",
+      "source_bytes": 37821,
+      "public_bytes": 37821,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/consent.png",
+      "source_path": "docs/figures/v8-eval2-partial40/consent.png",
+      "source_sha256": "ff9ec1df0b55c6f05bea2a9a7380a398939f960341d1f9b3f61637cbdfab8538",
+      "public_sha256": "ff9ec1df0b55c6f05bea2a9a7380a398939f960341d1f9b3f61637cbdfab8538",
+      "source_bytes": 146447,
+      "public_bytes": 146447,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/consent.svg",
+      "source_path": "docs/figures/v8-eval2-partial40/consent.svg",
+      "source_sha256": "faf955b43e775f264eac35d53010ee1a40e9f6bd6f211a367c7e235448516dbc",
+      "public_sha256": "faf955b43e775f264eac35d53010ee1a40e9f6bd6f211a367c7e235448516dbc",
+      "source_bytes": 93616,
+      "public_bytes": 93616,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/training.png",
+      "source_path": "docs/figures/v8-eval2-partial40/training.png",
+      "source_sha256": "dbb68445c2278bc44f1d01272a8f6b1855c4a92dbfcd3f6048de568315c2a30d",
+      "public_sha256": "dbb68445c2278bc44f1d01272a8f6b1855c4a92dbfcd3f6048de568315c2a30d",
+      "source_bytes": 193663,
+      "public_bytes": 193663,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/training.svg",
+      "source_path": "docs/figures/v8-eval2-partial40/training.svg",
+      "source_sha256": "6a465bfee0cdcd3b593de7d221be64098c57cc00b42c99a0d6ae438653cfcb7a",
+      "public_sha256": "6a465bfee0cdcd3b593de7d221be64098c57cc00b42c99a0d6ae438653cfcb7a",
+      "source_bytes": 69691,
+      "public_bytes": 69691,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/metrics.csv",
+      "source_path": "docs/figures/v8-eval2-partial40/metrics.csv",
+      "source_sha256": "b6fc3f8bd265192876836f65c132922a0b0a22004bb426ae40f1aa985345d29a",
+      "public_sha256": "b6fc3f8bd265192876836f65c132922a0b0a22004bb426ae40f1aa985345d29a",
+      "source_bytes": 1740,
+      "public_bytes": 1740,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/case-mapping.csv",
+      "source_path": "docs/figures/v8-eval2-partial40/case-mapping.csv",
+      "source_sha256": "805ad9999e66c981b9f789c530dfedf71faa2e88e8b43886f253746d5fca0825",
+      "public_sha256": "805ad9999e66c981b9f789c530dfedf71faa2e88e8b43886f253746d5fca0825",
+      "source_bytes": 2944,
+      "public_bytes": 2944,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/training.csv",
+      "source_path": "docs/figures/v8-eval2-partial40/training.csv",
+      "source_sha256": "4f4e1ffc7a3d0ee7bc79c32c1853a45a8d472a6d4b620b7373ab4449a92b0fd9",
+      "public_sha256": "4f4e1ffc7a3d0ee7bc79c32c1853a45a8d472a6d4b620b7373ab4449a92b0fd9",
+      "source_bytes": 268018,
+      "public_bytes": 268018,
+      "changes": []
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/per-case.csv",
+      "source_path": "docs/figures/v8-eval2-partial40/per-case.csv",
+      "source_sha256": "b99f8bb818726e97dea5bf406a8030003b0f6019b94a83f1ffda99b6e6124ced",
+      "public_sha256": "cc44dc627f5b6ad076c207a02d48f7eb38cd4d119cc3f9d7c6fbb2c98b37e22c",
+      "source_bytes": 39097,
+      "public_bytes": 32531,
+      "changes": [
+        {
+          "removed_column": "raw_trace",
+          "reason": "Private cloud-snapshot path is not public material."
+        },
+        {
+          "added_columns": [
+            "source_record_sha256",
+            "original_record_index"
+          ],
+          "source": "Fixed original selection record references; hashes/indexes only, no raw model content."
+        }
+      ]
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/values.json",
+      "source_path": "docs/figures/v8-eval2-partial40/values.json",
+      "source_sha256": "22dcb0bcca9f91e188d219fac78b8dece150f2e23f3bc2736545d883acf40f37",
+      "public_sha256": "4a4fffc738f73200236e36b848ca40d735864d776e6f2cce708b1c699459a4cf",
+      "source_bytes": 74033,
+      "public_bytes": 42536,
+      "changes": [
+        {
+          "removed_json_paths": [
+            "/files",
+            "/coverage/selection_audit_path",
+            "/coverage/selection_audit_sha256"
+          ]
+        },
+        {
+          "updated_json_paths": [
+            "/output_files_sha256/per-case.csv"
+          ],
+          "reason": "Public derived CSV has different bytes."
+        },
+        {
+          "added_json_paths": [
+            "/public_projection"
+          ],
+          "reason": "Explicit projection lineage and verification limits."
+        }
+      ]
+    },
+    {
+      "public_path": "reports/v8-eval2-partial40/public-summary.json",
+      "source_path": null,
+      "source_sha256": null,
+      "public_sha256": "747a405d83b7f79e64f03488037a1485123cbcb102269e6cc61a5cfce58729f5",
+      "source_bytes": null,
+      "public_bytes": 38920,
+      "changes": [
+        {
+          "derived_from": [
+            "Aggregate values and selected case indexes",
+            "Local verification numerical scope only"
+          ],
+          "explicitly_not_copied": [
+            "Raw model requests, responses and tokens",
+            "Full verification receipt",
+            "Private analysis plan and source-file map",
+            "Cloud/resource/account/human authorization or operator files"
+          ]
+        }
+      ]
+    },
+    {
+      "public_path": "docs/figures/v8-eval2-partial40/README.md",
+      "source_path": null,
+      "source_sha256": null,
+      "public_sha256": "b8feb117658e23ac33779897be4a861572c3369cdf15d5aa0de0614039d128e0",
+      "source_bytes": null,
+      "public_bytes": 2133,
+      "changes": [
+        {
+          "purpose": "Disclosure of public projection, retained failures, fixed-prefix truncation, omitted branches and non-replayability."
+        }
+      ]
+    }
+  ],
+  "public_summary_sha256": "747a405d83b7f79e64f03488037a1485123cbcb102269e6cc61a5cfce58729f5",
+  "public_values_sha256": "4a4fffc738f73200236e36b848ca40d735864d776e6f2cce708b1c699459a4cf",
+  "all12_figures_byte_identical_to_local_checked_figures": true,
+  "no_result_or_failure_removed": true,
+  "opaque_record_hashes_not_recomputed_from_absent_raw_records": true
+}

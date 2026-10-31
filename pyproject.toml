@@ -30,7 +30,7 @@ exclude = ["/reports/v3/package-verification.json", "/reports/v4/package-verific
 
 [tool.pytest.ini_options]
 # Public CI covers application behavior; private historical seal tests require the original local archive.
-testpaths = ["tests/test_api.py", "tests/test_boundaries.py", "tests/test_workflow.py", "tests/test_workflow_v2.py", "tests/test_resolution_v5.py", "tests/test_resolution_v6.py", "tests/test_resolution_v6_1.py", "tests/test_resolution_v7.py", "tests/test_resolution_v8.py"]
+testpaths = ["tests/test_api.py", "tests/test_boundaries.py", "tests/test_workflow.py", "tests/test_workflow_v2.py", "tests/test_resolution_v5.py", "tests/test_resolution_v6.py", "tests/test_resolution_v6_1.py", "tests/test_resolution_v7.py", "tests/test_resolution_v8.py", "tests/test_v8_eval2_partial_verification.py", "tests/test_v8_eval2_partial_reporting.py", "tests/test_v8_eval2_partial_viewer.py", "tests/test_public_partial40_results.py", "tests/test_public_partial40_viewer.py"]
 
 [tool.ruff]
 line-length = 110

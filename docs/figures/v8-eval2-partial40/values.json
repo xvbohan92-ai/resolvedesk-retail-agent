@@ -1,0 +1,1400 @@
+{
+  "run_id": "resolvedesk-v8-eval-002",
+  "analysis_id": "resolvedesk-v8-eval-002-partial40",
+  "paired_cases": 40,
+  "paired_records": 120,
+  "summary": {
+    "prior_weights_old_flow": {
+      "tasks": 40,
+      "intent_tasks": 40,
+      "task_success": 30,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 5,
+      "fallback_tasks": 2,
+      "fallback_success": 1,
+      "handoff_tasks": 16,
+      "handoff_success": 13,
+      "missing_email_tasks": 4,
+      "missing_email_success": 2,
+      "authorized_tasks": 8,
+      "non_authorized_tasks": 32,
+      "true_permission_yes": 8,
+      "unsupported_permission_yes": 1,
+      "initial_raw_parse_failures": 0,
+      "initial_enum_error_tasks": 0,
+      "initial_reason_enum_error_tasks": 0,
+      "intent_field_correct": {
+        "operation": 40,
+        "email": 40,
+        "order_id": 38,
+        "requested_option": 27,
+        "payment_method": 40,
+        "reason": 40,
+        "fallback_return": 35
+      },
+      "intent_joint_correct": 24,
+      "declared_accept_choice_tasks": 20,
+      "declared_decline_choice_tasks": 20,
+      "accepted_confirmation_tasks": 10,
+      "declined_confirmation_tasks": 7,
+      "required_clarification_tasks": 12,
+      "required_clarification_fields": 12,
+      "required_clarification_tasks_obtained": 10,
+      "required_clarification_fields_obtained": 10,
+      "model_calls": 236,
+      "schema_valid": 236,
+      "initial_records_valid": 37,
+      "input_tokens": 344273,
+      "output_tokens": 14430,
+      "median_model_calls": 5.0,
+      "latency_p50_ms": 28371.76,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 48,
+      "unnecessary_handoff_attempts": 5,
+      "unnecessary_handoff_executed": 5,
+      "enum_error_attempts": 0,
+      "reason_enum_errors": 0,
+      "record_rejections": 53,
+      "quote_rejections": 53,
+      "slot_normalizations": 0,
+      "policy_gate_rejections": 2,
+      "confirmation_preserved": 40,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "enum_error_tasks": 0,
+      "enum_recovered_tasks": 0,
+      "reason_enum_error_tasks": 0,
+      "reason_enum_recovered_tasks": 0
+    },
+    "prior_weights_new_flow": {
+      "tasks": 40,
+      "intent_tasks": 40,
+      "task_success": 30,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 7,
+      "fallback_tasks": 2,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 10,
+      "missing_email_tasks": 4,
+      "missing_email_success": 2,
+      "authorized_tasks": 8,
+      "non_authorized_tasks": 32,
+      "true_permission_yes": 7,
+      "unsupported_permission_yes": 1,
+      "initial_raw_parse_failures": 0,
+      "initial_enum_error_tasks": 0,
+      "initial_reason_enum_error_tasks": 0,
+      "intent_field_correct": {
+        "operation": 40,
+        "email": 40,
+        "order_id": 39,
+        "requested_option": 26,
+        "payment_method": 39,
+        "reason": 40,
+        "fallback_return": 35
+      },
+      "intent_joint_correct": 24,
+      "declared_accept_choice_tasks": 20,
+      "declared_decline_choice_tasks": 20,
+      "accepted_confirmation_tasks": 10,
+      "declined_confirmation_tasks": 10,
+      "required_clarification_tasks": 12,
+      "required_clarification_fields": 12,
+      "required_clarification_tasks_obtained": 10,
+      "required_clarification_fields_obtained": 10,
+      "model_calls": 208,
+      "schema_valid": 203,
+      "initial_records_valid": 33,
+      "input_tokens": 386418,
+      "output_tokens": 12363,
+      "median_model_calls": 5.0,
+      "latency_p50_ms": 39363.615,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 15,
+      "unnecessary_handoff_attempts": 0,
+      "unnecessary_handoff_executed": 0,
+      "enum_error_attempts": 0,
+      "reason_enum_errors": 0,
+      "record_rejections": 26,
+      "quote_rejections": 24,
+      "slot_normalizations": 0,
+      "policy_gate_rejections": 3,
+      "confirmation_preserved": 40,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "enum_error_tasks": 0,
+      "enum_recovered_tasks": 0,
+      "reason_enum_error_tasks": 0,
+      "reason_enum_recovered_tasks": 0
+    },
+    "v8_weights_new_flow": {
+      "tasks": 40,
+      "intent_tasks": 40,
+      "task_success": 33,
+      "fulfillable_exchange_tasks": 10,
+      "fulfillable_exchange_success": 8,
+      "fallback_tasks": 2,
+      "fallback_success": 2,
+      "handoff_tasks": 16,
+      "handoff_success": 13,
+      "missing_email_tasks": 4,
+      "missing_email_success": 3,
+      "authorized_tasks": 8,
+      "non_authorized_tasks": 32,
+      "true_permission_yes": 8,
+      "unsupported_permission_yes": 1,
+      "initial_raw_parse_failures": 0,
+      "initial_enum_error_tasks": 0,
+      "initial_reason_enum_error_tasks": 0,
+      "intent_field_correct": {
+        "operation": 40,
+        "email": 40,
+        "order_id": 39,
+        "requested_option": 33,
+        "payment_method": 37,
+        "reason": 40,
+        "fallback_return": 37
+      },
+      "intent_joint_correct": 27,
+      "declared_accept_choice_tasks": 20,
+      "declared_decline_choice_tasks": 20,
+      "accepted_confirmation_tasks": 11,
+      "declined_confirmation_tasks": 9,
+      "required_clarification_tasks": 12,
+      "required_clarification_fields": 12,
+      "required_clarification_tasks_obtained": 11,
+      "required_clarification_fields_obtained": 11,
+      "model_calls": 213,
+      "schema_valid": 207,
+      "initial_records_valid": 36,
+      "input_tokens": 391270,
+      "output_tokens": 11732,
+      "median_model_calls": 5.0,
+      "latency_p50_ms": 40464.354999999996,
+      "repeated_question_attempts": 0,
+      "repeated_questions_delivered": 0,
+      "identical_action_repeats": 9,
+      "unnecessary_handoff_attempts": 0,
+      "unnecessary_handoff_executed": 0,
+      "enum_error_attempts": 0,
+      "reason_enum_errors": 0,
+      "record_rejections": 16,
+      "quote_rejections": 15,
+      "slot_normalizations": 0,
+      "policy_gate_rejections": 1,
+      "confirmation_preserved": 40,
+      "exchange_as_return": 0,
+      "unauthorized_return": 0,
+      "enum_error_tasks": 0,
+      "enum_recovered_tasks": 0,
+      "reason_enum_error_tasks": 0,
+      "reason_enum_recovered_tasks": 0
+    }
+  },
+  "protocol_summary": {
+    "prior_weights_old_flow": {
+      "tasks": 40,
+      "gold_exchange_tasks": 24,
+      "raw_return_attempts": 1,
+      "return_attempts_without_scoped_yes": 0,
+      "return_proposals": 1,
+      "return_proposals_without_scoped_yes": 0,
+      "committed_returns": 1,
+      "committed_returns_without_scoped_yes": 0,
+      "final_return_orders": 1,
+      "final_returns_without_verified_commit": 0,
+      "declined_return_proposals": 0,
+      "rejected_return_attempts_without_scoped_yes": 0
+    },
+    "prior_weights_new_flow": {
+      "tasks": 40,
+      "gold_exchange_tasks": 24,
+      "raw_return_attempts": 2,
+      "return_attempts_without_scoped_yes": 0,
+      "return_proposals": 2,
+      "return_proposals_without_scoped_yes": 0,
+      "committed_returns": 1,
+      "committed_returns_without_scoped_yes": 0,
+      "final_return_orders": 1,
+      "final_returns_without_verified_commit": 0,
+      "declined_return_proposals": 1,
+      "rejected_return_attempts_without_scoped_yes": 0
+    },
+    "v8_weights_new_flow": {
+      "tasks": 40,
+      "gold_exchange_tasks": 24,
+      "raw_return_attempts": 2,
+      "return_attempts_without_scoped_yes": 0,
+      "return_proposals": 2,
+      "return_proposals_without_scoped_yes": 0,
+      "committed_returns": 1,
+      "committed_returns_without_scoped_yes": 0,
+      "final_return_orders": 1,
+      "final_returns_without_verified_commit": 0,
+      "declined_return_proposals": 1,
+      "rejected_return_attempts_without_scoped_yes": 0
+    }
+  },
+  "paired": {
+    "workflow": {
+      "before": "prior_weights_old_flow",
+      "after": "prior_weights_new_flow",
+      "tasks": 40,
+      "both_pass": 25,
+      "both_fail": 5,
+      "improved": 5,
+      "regressed": 5
+    },
+    "training_under_v8": {
+      "before": "prior_weights_new_flow",
+      "after": "v8_weights_new_flow",
+      "tasks": 40,
+      "both_pass": 28,
+      "both_fail": 5,
+      "improved": 5,
+      "regressed": 2
+    },
+    "combined": {
+      "before": "prior_weights_old_flow",
+      "after": "v8_weights_new_flow",
+      "tasks": 40,
+      "both_pass": 27,
+      "both_fail": 4,
+      "improved": 6,
+      "regressed": 3
+    }
+  },
+  "coverage": {
+    "included_families": [
+      "cancel",
+      "missing_reason",
+      "return",
+      "missing_payment",
+      "exchange",
+      "exchange_fallback",
+      "forbidden_status",
+      "foreign_order",
+      "missing_email",
+      "exchange_missing_option",
+      "exchange_missing_payment",
+      "exchange_gift",
+      "exchange_unavailable",
+      "exchange_shortfall",
+      "exchange_fallback_available",
+      "return_reject_exchange",
+      "exchange_stockout_unknown",
+      "exchange_stockout_missing_email",
+      "exchange_stockout_negative_quote",
+      "exchange_stockout_question"
+    ],
+    "excluded_families": [
+      "exchange_available_refusal",
+      "exchange_fallback_missing_payment",
+      "exchange_missing_email",
+      "missing_email_payment"
+    ],
+    "per_family": {
+      "cancel": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "missing_reason": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "return": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "missing_payment": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_fallback": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "forbidden_status": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "foreign_order": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "missing_email": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_missing_option": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_missing_payment": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_gift": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_unavailable": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_shortfall": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_fallback_available": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "return_reject_exchange": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_stockout_unknown": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_stockout_missing_email": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_stockout_negative_quote": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_stockout_question": {
+        "original_cases": 2,
+        "selected_cases": 2,
+        "excluded_cases": 0
+      },
+      "exchange_available_refusal": {
+        "original_cases": 2,
+        "selected_cases": 0,
+        "excluded_cases": 2
+      },
+      "exchange_fallback_missing_payment": {
+        "original_cases": 2,
+        "selected_cases": 0,
+        "excluded_cases": 2
+      },
+      "exchange_missing_email": {
+        "original_cases": 2,
+        "selected_cases": 0,
+        "excluded_cases": 2
+      },
+      "missing_email_payment": {
+        "original_cases": 2,
+        "selected_cases": 0,
+        "excluded_cases": 2
+      }
+    },
+    "scope": "Coverage counts only; omitted cases are absent, never zero-scored failures.",
+    "focus_coverage": {
+      "natural_initial_literal_quote_provenance": {
+        "original48_tasks": 48,
+        "selected40_tasks": 40
+      },
+      "missing_payment": {
+        "original48_tasks": 8,
+        "selected40_tasks": 4
+      },
+      "stockout_return_fallback_with_missing_payment": {
+        "original48_tasks": 2,
+        "selected40_tasks": 0
+      },
+      "available_exchange_with_missing_email": {
+        "original48_tasks": 2,
+        "selected40_tasks": 0
+      },
+      "two_missing_email_and_payment_fields": {
+        "original48_tasks": 2,
+        "selected40_tasks": 0
+      },
+      "available_exchange_explicit_return_refusal": {
+        "original48_tasks": 2,
+        "selected40_tasks": 0
+      },
+      "ambiguous_option_needs_customer_choice": {
+        "original48_tasks": 2,
+        "selected40_tasks": 2
+      },
+      "initial_known_option_exchange": {
+        "original48_tasks": 28,
+        "selected40_tasks": 22
+      },
+      "quoted_permission_hard_negative": {
+        "original48_tasks": 2,
+        "selected40_tasks": 2
+      },
+      "necessary_handoff_gold_cases": {
+        "original48_tasks": 16,
+        "selected40_tasks": 16
+      },
+      "gold_non_handoff_cases": {
+        "original48_tasks": 32,
+        "selected40_tasks": 24
+      }
+    }
+  },
+  "family_success": {
+    "cancel": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "missing_reason": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "return": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 1
+    },
+    "missing_payment": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 1
+    },
+    "exchange": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_fallback": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "forbidden_status": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 2
+    },
+    "foreign_order": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 1
+    },
+    "missing_email": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_missing_option": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_missing_payment": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_gift": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 0,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 1
+    },
+    "exchange_unavailable": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_shortfall": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 0,
+      "v8_weights_new_flow": 1
+    },
+    "exchange_fallback_available": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 0,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 1
+    },
+    "return_reject_exchange": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_stockout_unknown": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_stockout_missing_email": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 0,
+      "v8_weights_new_flow": 1
+    },
+    "exchange_stockout_negative_quote": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_stockout_question": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    }
+  },
+  "cases": [
+    {
+      "case_id": "v8-eval2-test-cancel-00",
+      "family": "cancel",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-cancel-01",
+      "family": "cancel",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-missing_reason-00",
+      "family": "missing_reason",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-missing_reason-01",
+      "family": "missing_reason",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-return-00",
+      "family": "return",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-return-01",
+      "family": "return",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-missing_payment-00",
+      "family": "missing_payment",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-missing_payment-01",
+      "family": "missing_payment",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange-00",
+      "family": "exchange",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange-01",
+      "family": "exchange",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_fallback-00",
+      "family": "exchange_fallback",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_fallback-01",
+      "family": "exchange_fallback",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-forbidden_status-00",
+      "family": "forbidden_status",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-forbidden_status-01",
+      "family": "forbidden_status",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-foreign_order-00",
+      "family": "foreign_order",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-foreign_order-01",
+      "family": "foreign_order",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-missing_email-00",
+      "family": "missing_email",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-missing_email-01",
+      "family": "missing_email",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_missing_option-00",
+      "family": "exchange_missing_option",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_missing_option-01",
+      "family": "exchange_missing_option",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_missing_payment-00",
+      "family": "exchange_missing_payment",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_missing_payment-01",
+      "family": "exchange_missing_payment",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_gift-00",
+      "family": "exchange_gift",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_gift-01",
+      "family": "exchange_gift",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_unavailable-00",
+      "family": "exchange_unavailable",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_unavailable-01",
+      "family": "exchange_unavailable",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_shortfall-00",
+      "family": "exchange_shortfall",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_shortfall-01",
+      "family": "exchange_shortfall",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_fallback_available-00",
+      "family": "exchange_fallback_available",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_fallback_available-01",
+      "family": "exchange_fallback_available",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-return_reject_exchange-00",
+      "family": "return_reject_exchange",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-return_reject_exchange-01",
+      "family": "return_reject_exchange",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_stockout_unknown-00",
+      "family": "exchange_stockout_unknown",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_stockout_unknown-01",
+      "family": "exchange_stockout_unknown",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_stockout_missing_email-00",
+      "family": "exchange_stockout_missing_email",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_stockout_missing_email-01",
+      "family": "exchange_stockout_missing_email",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_stockout_negative_quote-00",
+      "family": "exchange_stockout_negative_quote",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_stockout_negative_quote-01",
+      "family": "exchange_stockout_negative_quote",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_stockout_question-00",
+      "family": "exchange_stockout_question",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_stockout_question-01",
+      "family": "exchange_stockout_question",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    }
+  ],
+  "failures": [
+    {
+      "case_id": "v8-eval2-test-return-01",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-missing_payment-00",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_fallback-01",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-forbidden_status-00",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-foreign_order-01",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-missing_email-01",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_missing_option-00",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_missing_payment-01",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_gift-00",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_gift-01",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_shortfall-00",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_shortfall-01",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_fallback_available-00",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": true,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_fallback_available-01",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": false
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_stockout_missing_email-00",
+      "prior_weights_old_flow": false,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": true
+    },
+    {
+      "case_id": "v8-eval2-test-exchange_stockout_missing_email-01",
+      "prior_weights_old_flow": true,
+      "prior_weights_new_flow": false,
+      "v8_weights_new_flow": false
+    }
+  ],
+  "failed_records": [
+    {
+      "variant": "prior_weights_old_flow",
+      "case_id": "v8-eval2-test-exchange_fallback-01",
+      "status": "handoff",
+      "model_calls": 6
+    },
+    {
+      "variant": "prior_weights_old_flow",
+      "case_id": "v8-eval2-test-foreign_order-01",
+      "status": "running",
+      "model_calls": 12
+    },
+    {
+      "variant": "prior_weights_old_flow",
+      "case_id": "v8-eval2-test-missing_email-01",
+      "status": "running",
+      "model_calls": 12
+    },
+    {
+      "variant": "prior_weights_old_flow",
+      "case_id": "v8-eval2-test-exchange_missing_payment-01",
+      "status": "handoff",
+      "model_calls": 5
+    },
+    {
+      "variant": "prior_weights_old_flow",
+      "case_id": "v8-eval2-test-exchange_gift-00",
+      "status": "handoff",
+      "model_calls": 5
+    },
+    {
+      "variant": "prior_weights_old_flow",
+      "case_id": "v8-eval2-test-exchange_gift-01",
+      "status": "handoff",
+      "model_calls": 6
+    },
+    {
+      "variant": "prior_weights_old_flow",
+      "case_id": "v8-eval2-test-exchange_shortfall-00",
+      "status": "running",
+      "model_calls": 12
+    },
+    {
+      "variant": "prior_weights_old_flow",
+      "case_id": "v8-eval2-test-exchange_fallback_available-00",
+      "status": "handoff",
+      "model_calls": 5
+    },
+    {
+      "variant": "prior_weights_old_flow",
+      "case_id": "v8-eval2-test-exchange_fallback_available-01",
+      "status": "running",
+      "model_calls": 12
+    },
+    {
+      "variant": "prior_weights_old_flow",
+      "case_id": "v8-eval2-test-exchange_stockout_missing_email-00",
+      "status": "running",
+      "model_calls": 12
+    },
+    {
+      "variant": "prior_weights_new_flow",
+      "case_id": "v8-eval2-test-return-01",
+      "status": "failed",
+      "model_calls": 6
+    },
+    {
+      "variant": "prior_weights_new_flow",
+      "case_id": "v8-eval2-test-forbidden_status-00",
+      "status": "failed",
+      "model_calls": 3
+    },
+    {
+      "variant": "prior_weights_new_flow",
+      "case_id": "v8-eval2-test-foreign_order-01",
+      "status": "failed",
+      "model_calls": 6
+    },
+    {
+      "variant": "prior_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_missing_option-00",
+      "status": "failed",
+      "model_calls": 3
+    },
+    {
+      "variant": "prior_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_gift-00",
+      "status": "failed",
+      "model_calls": 3
+    },
+    {
+      "variant": "prior_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_shortfall-00",
+      "status": "failed",
+      "model_calls": 3
+    },
+    {
+      "variant": "prior_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_shortfall-01",
+      "status": "failed",
+      "model_calls": 3
+    },
+    {
+      "variant": "prior_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_fallback_available-01",
+      "status": "failed",
+      "model_calls": 3
+    },
+    {
+      "variant": "prior_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_stockout_missing_email-00",
+      "status": "failed",
+      "model_calls": 3
+    },
+    {
+      "variant": "prior_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_stockout_missing_email-01",
+      "status": "failed",
+      "model_calls": 9
+    },
+    {
+      "variant": "v8_weights_new_flow",
+      "case_id": "v8-eval2-test-return-01",
+      "status": "failed",
+      "model_calls": 6
+    },
+    {
+      "variant": "v8_weights_new_flow",
+      "case_id": "v8-eval2-test-missing_payment-00",
+      "status": "failed",
+      "model_calls": 6
+    },
+    {
+      "variant": "v8_weights_new_flow",
+      "case_id": "v8-eval2-test-foreign_order-01",
+      "status": "failed",
+      "model_calls": 6
+    },
+    {
+      "variant": "v8_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_gift-01",
+      "status": "failed",
+      "model_calls": 3
+    },
+    {
+      "variant": "v8_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_shortfall-00",
+      "status": "failed",
+      "model_calls": 3
+    },
+    {
+      "variant": "v8_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_fallback_available-01",
+      "status": "failed",
+      "model_calls": 3
+    },
+    {
+      "variant": "v8_weights_new_flow",
+      "case_id": "v8-eval2-test-exchange_stockout_missing_email-01",
+      "status": "failed",
+      "model_calls": 9
+    }
+  ],
+  "scope": {
+    "kind": "authorized_retrospective_common40_prefix",
+    "same_cases_per_arm": true,
+    "fixed_arm_block_order": true,
+    "random_truncation": false,
+    "extrapolation_to_original48_allowed": false,
+    "original144_gate_complete": false,
+    "missing_records_are_model_failures": false,
+    "old_interrupted_run_results_pooled": false,
+    "external_benchmark_or_production_data": false
+  },
+  "baseline_is_already_finetuned": true,
+  "new_training_performed_in_this_run": false,
+  "families": {
+    "cancel": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "missing_reason": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "return": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 1
+    },
+    "missing_payment": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 1
+    },
+    "exchange": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_fallback": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "forbidden_status": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 2
+    },
+    "foreign_order": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 1
+    },
+    "missing_email": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_missing_option": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_missing_payment": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_gift": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 0,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 1
+    },
+    "exchange_unavailable": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_shortfall": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 0,
+      "v8_weights_new_flow": 1
+    },
+    "exchange_fallback_available": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 0,
+      "prior_weights_new_flow": 1,
+      "v8_weights_new_flow": 1
+    },
+    "return_reject_exchange": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_stockout_unknown": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_stockout_missing_email": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 1,
+      "prior_weights_new_flow": 0,
+      "v8_weights_new_flow": 1
+    },
+    "exchange_stockout_negative_quote": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    },
+    "exchange_stockout_question": {
+      "tasks_per_arm": 2,
+      "prior_weights_old_flow": 2,
+      "prior_weights_new_flow": 2,
+      "v8_weights_new_flow": 2
+    }
+  },
+  "selection_denominators": {
+    "tasks": 40,
+    "families": {
+      "cancel": 2,
+      "missing_reason": 2,
+      "return": 2,
+      "missing_payment": 2,
+      "exchange": 2,
+      "exchange_fallback": 2,
+      "forbidden_status": 2,
+      "foreign_order": 2,
+      "missing_email": 2,
+      "exchange_missing_option": 2,
+      "exchange_missing_payment": 2,
+      "exchange_gift": 2,
+      "exchange_unavailable": 2,
+      "exchange_shortfall": 2,
+      "exchange_fallback_available": 2,
+      "return_reject_exchange": 2,
+      "exchange_stockout_unknown": 2,
+      "exchange_stockout_missing_email": 2,
+      "exchange_stockout_negative_quote": 2,
+      "exchange_stockout_question": 2
+    },
+    "initial_permissions": {
+      "unknown": 22,
+      "yes": 8,
+      "no": 10
+    },
+    "non_authorized_tasks": 32,
+    "expected_outcomes": {
+      "cancel": 4,
+      "return": 10,
+      "exchange": 10,
+      "handoff": 16
+    },
+    "available_exchange_tasks": 10,
+    "authorized_stockout_return_tasks": 2,
+    "required_handoff_tasks": 16,
+    "missing_email_tasks": 4,
+    "tasks_requiring_clarification": 12,
+    "required_answer_occurrences": 12,
+    "required_answer_fields": {
+      "reason": 2,
+      "payment_method": 4,
+      "email": 4,
+      "new_option": 2
+    },
+    "exchange_origin_tasks": 24,
+    "confirmation_choices_all_tasks": {
+      "true": 20,
+      "false": 20
+    },
+    "confirmation_choices_non_handoff": {
+      "true": 12,
+      "false": 12
+    }
+  },
+  "exclusions": {
+    "complete_old_arm_tail_records": 16,
+    "unstarted_tasks": 7,
+    "ambiguous_pending_tasks": 1
+  },
+  "training": {
+    "historical_saved_run_only": true,
+    "new_updates_this_experiment": 0,
+    "updates": 1344,
+    "sampling": {
+      "physical_rows": 1100,
+      "unique_rows_sampled": 888,
+      "unique_cases_sampled": 96,
+      "all_physical_rows_used": false,
+      "bucket_rows": {
+        "intent_and_record_repair": 216,
+        "execution_and_reply": 884
+      },
+      "bucket_updates": {
+        "intent_and_record_repair": 672,
+        "execution_and_reply": 672
+      }
+    },
+    "parameters": 3670016,
+    "tensors": 112,
+    "adapter_l2_change": 0.41253328557417546,
+    "elapsed_loop_gpu_sync_seconds": 10123.892437,
+    "timing_scope": "Synchronized run wall time includes report/checkpoint/export/audit overhead; excludes model loading/tokenization and is not kernel-only time."
+  },
+  "saved_weights": {
+    "before": "33fe5c505ddf08cd8cb4032dbd9d350fa205134417ec0f1f90648f4af658e053",
+    "after": "39dabb9b73ae6cb6230fc8a0bca9c914f6ba658c3c54a17f9775e3fcef60970f"
+  },
+  "verification_is_quality_pass": false,
+  "visual_qa_performed": false,
+  "report_only": true,
+  "original144_gate_complete": false,
+  "deployment_or_default_provider_change_allowed": false,
+  "latency_scope": "Fixed arm-block order and nonrandom truncation; trajectories/logging confound latency",
+  "consent_scope": "Attempts/proposals/commits/final orders are distinct; zeros cannot certify safety",
+  "output_files_sha256": {
+    "case-mapping.csv": "805ad9999e66c981b9f789c530dfedf71faa2e88e8b43886f253746d5fca0825",
+    "consent.png": "ff9ec1df0b55c6f05bea2a9a7380a398939f960341d1f9b3f61637cbdfab8538",
+    "consent.svg": "faf955b43e775f264eac35d53010ee1a40e9f6bd6f211a367c7e235448516dbc",
+    "evaluation.png": "aa9f08047c994b050d12c940ca9ad7aca2916ed079c0bbbaccc48de06ff273ff",
+    "evaluation.svg": "a35596f0c70147dbe579743bf5e4e39eca48fff4c506a54517c69ea014e13ff6",
+    "families.png": "26e4958fe80b26ca029107e23fc9d33cad01b43081f34db77864b07124939b61",
+    "families.svg": "1d72e7db4b2be464231ebf1d1ffcb7bf97c8df1dd601f7213893a093c7ff7e5b",
+    "intent.png": "bd24fa1291b331731545e931881719ff47701aa9b6cbdcffd5b203c32fcbbc18",
+    "intent.svg": "72135f9e269624c67bb393f1f3dfc3f646b0c2f55ac363426f32435d539b1a36",
+    "metrics.csv": "b6fc3f8bd265192876836f65c132922a0b0a22004bb426ae40f1aa985345d29a",
+    "per-case.csv": "cc44dc627f5b6ad076c207a02d48f7eb38cd4d119cc3f9d7c6fbb2c98b37e22c",
+    "recovery.png": "5e3c4493632e7b8458e7cdff8c49ffc0ad4f89929c451fc20be88766449aa856",
+    "recovery.svg": "abdda7f84306ab42b3a8e9d2fc17353e88b62bab17858ec8550b039c343c8c46",
+    "training.csv": "4f4e1ffc7a3d0ee7bc79c32c1853a45a8d472a6d4b620b7373ab4449a92b0fd9",
+    "training.png": "dbb68445c2278bc44f1d01272a8f6b1855c4a92dbfcd3f6048de568315c2a30d",
+    "training.svg": "6a465bfee0cdcd3b593de7d221be64098c57cc00b42c99a0d6ae438653cfcb7a"
+  },
+  "reporting_source_sha256": "56b69dffa93a32f03a23f77e58ba724f3c7f059a2c3e99c135331b4da4fcaf35",
+  "metrics_source_sha256": "3465c669ddeb5b1ff838ca87ea70f9bab880f334bb0d7ac9000f50f30646ac3b",
+  "public_projection": {
+    "scope": "Public aggregate and figure projection only; this file has new public bytes and is not the original private evidence seal.",
+    "raw_trajectories_published": false,
+    "model_input_output_tokens_published": false,
+    "operator_or_account_receipts_published": false,
+    "complete_144_result_available": false,
+    "public_token_or_full_business_replay_supported": false,
+    "source_values_sha256": "22dcb0bcca9f91e188d219fac78b8dece150f2e23f3bc2736545d883acf40f37",
+    "all_scientific_metric_subtrees_and_failures_preserved": true,
+    "per_case_provenance": "The source_record_sha256 and original_record_index identify retained private records; those records are not included in this publication.",
+    "source_record_sha256_definition": "SHA-256 of the complete original record serialized as JSON with sort_keys=True, separators=(comma,colon), ensure_ascii=True."
+  }
+}

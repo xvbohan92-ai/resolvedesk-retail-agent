@@ -1,0 +1,5042 @@
+[
+  {
+    "id": "v8-eval2-test-cancel-00",
+    "family": "cancel",
+    "split": "test",
+    "initial_message": "Order reference R8E2-E8YH45JY897ZZ.\nThe event that required this jacket is no longer happening. Please cancel its order because I no longer need the purchase.\nAccount contact: v8e2shopper6r3srv5wxe38f@cohort-retail.example.",
+    "evidence_initial": "The event that required this jacket is no longer happening. Please cancel its order because I no longer need the purchase.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_S5AETB7KZ8ZPV",
+      "email": "v8e2shopper6r3srv5wxe38f@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_LZEGWQKE23HJT",
+        "balance_cents": 23100
+      }
+    },
+    "products": {
+      "v8e2_product_675UUNMW4QVPC": {
+        "product_id": "v8e2_product_675UUNMW4QVPC",
+        "name": "Alderreach quilted jacket",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_BH7TBYTYZM662",
+            "option": "deep auburn / XS",
+            "price_cents": 4968,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_XZX9QE547MK87",
+            "option": "citrine mist / XL",
+            "price_cents": 5588,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_WHEWALL6W995X",
+            "option": "porcelain blue / M",
+            "price_cents": 4118,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-E8YH45JY897ZZ",
+        "user_id": "v8e2_user_S5AETB7KZ8ZPV",
+        "status": "pending",
+        "original_payment": "v8e2_card_MU3FYEQBXPS8Z",
+        "items": [
+          {
+            "item_id": "v8e2_sku_BH7TBYTYZM662",
+            "product_id": "v8e2_product_675UUNMW4QVPC",
+            "option": "deep auburn / XS",
+            "price_cents": 4968
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopper6r3srv5wxe38f@cohort-retail.example as my account email.",
+      "order_id": "R8E2-E8YH45JY897ZZ",
+      "reason": "no longer needed",
+      "new_option": "My choice is porcelain blue / M for this jacket.",
+      "item_id": "v8e2_sku_BH7TBYTYZM662",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8e2shopper6r3srv5wxe38f@cohort-retail.example",
+      "order_id": "R8E2-E8YH45JY897ZZ",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8e2shopper6r3srv5wxe38f@cohort-retail.example",
+      "order_id": "R8E2-E8YH45JY897ZZ",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "R8E2-E8YH45JY897ZZ",
+      "item_id": "v8e2_sku_BH7TBYTYZM662",
+      "new_item_id": "v8e2_sku_WHEWALL6W995X",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 4968,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "v8-eval2-test-cancel-01",
+    "family": "cancel",
+    "split": "test",
+    "initial_message": "I meant to save the blouse in my cart, but bought it by mistake. Cancel that accidental order for me.\nReceipt number: R8E2-WHR552B568DRG.\nAccount contact: v8e2shopperw2jzjjq8hysvg@cohort-retail.example.",
+    "evidence_initial": "I meant to save the blouse in my cart, but bought it by mistake. Cancel that accidental order for me.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_Z49PYNGDRLJHU",
+      "email": "v8e2shopperw2jzjjq8hysvg@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_KMHY7772MQ74P",
+        "balance_cents": 23125
+      }
+    },
+    "products": {
+      "v8e2_product_298LSZ8PCHS6U": {
+        "product_id": "v8e2_product_298LSZ8PCHS6U",
+        "name": "Brackenmere cotton blouse",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_FHAKQ7PC22X4S",
+            "option": "opal bark / XXL",
+            "price_cents": 6334,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_WJN4TYETYD7MF",
+            "option": "terracotta rose / L",
+            "price_cents": 6784,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_6GVMX6D4WEEFW",
+            "option": "quarry green / S",
+            "price_cents": 5384,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-WHR552B568DRG",
+        "user_id": "v8e2_user_Z49PYNGDRLJHU",
+        "status": "pending",
+        "original_payment": "v8e2_card_JFH5VD65E94P5",
+        "items": [
+          {
+            "item_id": "v8e2_sku_6GVMX6D4WEEFW",
+            "product_id": "v8e2_product_298LSZ8PCHS6U",
+            "option": "quarry green / S",
+            "price_cents": 5384
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopperw2jzjjq8hysvg@cohort-retail.example>.",
+      "order_id": "R8E2-WHR552B568DRG",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is terracotta rose / L for this blouse.",
+      "item_id": "v8e2_sku_6GVMX6D4WEEFW",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8e2shopperw2jzjjq8hysvg@cohort-retail.example",
+      "order_id": "R8E2-WHR552B568DRG",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8e2shopperw2jzjjq8hysvg@cohort-retail.example",
+      "order_id": "R8E2-WHR552B568DRG",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "R8E2-WHR552B568DRG",
+      "item_id": "v8e2_sku_6GVMX6D4WEEFW",
+      "new_item_id": "v8e2_sku_WJN4TYETYD7MF",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 5384,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "v8-eval2-test-missing_reason-00",
+    "family": "missing_reason",
+    "split": "test",
+    "initial_message": "Order reference R8E2-TJ7FGMUA97Z4B.\nPlease put through a cancellation for the sweater. I have not told you why I am canceling yet.\nAccount contact: v8e2shopperfegus8qcgs9y3@cohort-retail.example.",
+    "evidence_initial": "Please put through a cancellation for the sweater. I have not told you why I am canceling yet.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_CE29LDU2UTEZ9",
+      "email": "v8e2shopperfegus8qcgs9y3@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_W4DT7ZA9PYZVW",
+        "balance_cents": 23150
+      }
+    },
+    "products": {
+      "v8e2_product_MR58TW27SZ8XA": {
+        "product_id": "v8e2_product_MR58TW27SZ8XA",
+        "name": "Cairnford cable sweater",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_KK39DGN83EVJZ",
+            "option": "glacial mint / XL",
+            "price_cents": 7960,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_TT427DHWGZKDZ",
+            "option": "frost plum / XS",
+            "price_cents": 5930,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_Q3MXNMG828YTL",
+            "option": "tobacco grey / M",
+            "price_cents": 5310,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-TJ7FGMUA97Z4B",
+        "user_id": "v8e2_user_CE29LDU2UTEZ9",
+        "status": "pending",
+        "original_payment": "v8e2_card_QU7UFH24B7UEM",
+        "items": [
+          {
+            "item_id": "v8e2_sku_Q3MXNMG828YTL",
+            "product_id": "v8e2_product_MR58TW27SZ8XA",
+            "option": "tobacco grey / M",
+            "price_cents": 5310
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopperfegus8qcgs9y3@cohort-retail.example as my account email.",
+      "order_id": "R8E2-TJ7FGMUA97Z4B",
+      "reason": "no longer needed",
+      "new_option": "My choice is glacial mint / XL for this sweater.",
+      "item_id": "v8e2_sku_Q3MXNMG828YTL",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8e2shopperfegus8qcgs9y3@cohort-retail.example",
+      "order_id": "R8E2-TJ7FGMUA97Z4B",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8e2shopperfegus8qcgs9y3@cohort-retail.example",
+      "order_id": "R8E2-TJ7FGMUA97Z4B",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "reason",
+    "required_answers": [
+      "reason"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "R8E2-TJ7FGMUA97Z4B",
+      "item_id": "v8e2_sku_Q3MXNMG828YTL",
+      "new_item_id": "v8e2_sku_KK39DGN83EVJZ",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 5310,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "v8-eval2-test-missing_reason-01",
+    "family": "missing_reason",
+    "split": "test",
+    "initial_message": "The overshirt order is the one I want canceled. Before closing it, ask me for the cancellation explanation.\nReceipt number: R8E2-FMTE8AV7VQM2Q.\nAccount contact: v8e2shopper52bwdweq7gnmj@cohort-retail.example.",
+    "evidence_initial": "The overshirt order is the one I want canceled. Before closing it, ask me for the cancellation explanation.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_JJTS3GML6LCDY",
+      "email": "v8e2shopper52bwdweq7gnmj@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_4UTWWSP2MTY69",
+        "balance_cents": 23175
+      }
+    },
+    "products": {
+      "v8e2_product_RVYY4UC4QDVUN": {
+        "product_id": "v8e2_product_RVYY4UC4QDVUN",
+        "name": "Dovecross twill overshirt",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_7NJQYSJ48NN5Q",
+            "option": "pistachio dusk / S",
+            "price_cents": 6543,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_Y33V4SPVMYYFX",
+            "option": "raven mauve / L",
+            "price_cents": 5593,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_AHJ2PWXZ2THQD",
+            "option": "saffron cream / XXL",
+            "price_cents": 5593,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-FMTE8AV7VQM2Q",
+        "user_id": "v8e2_user_JJTS3GML6LCDY",
+        "status": "pending",
+        "original_payment": "v8e2_card_W5XGK75BM8DSE",
+        "items": [
+          {
+            "item_id": "v8e2_sku_Y33V4SPVMYYFX",
+            "product_id": "v8e2_product_RVYY4UC4QDVUN",
+            "option": "raven mauve / L",
+            "price_cents": 5593
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopper52bwdweq7gnmj@cohort-retail.example>.",
+      "order_id": "R8E2-FMTE8AV7VQM2Q",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is saffron cream / XXL for this overshirt.",
+      "item_id": "v8e2_sku_Y33V4SPVMYYFX",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8e2shopper52bwdweq7gnmj@cohort-retail.example",
+      "order_id": "R8E2-FMTE8AV7VQM2Q",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8e2shopper52bwdweq7gnmj@cohort-retail.example",
+      "order_id": "R8E2-FMTE8AV7VQM2Q",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "reason",
+    "required_answers": [
+      "reason"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "cancel",
+      "order_id": "R8E2-FMTE8AV7VQM2Q",
+      "item_id": "v8e2_sku_Y33V4SPVMYYFX",
+      "new_item_id": "v8e2_sku_AHJ2PWXZ2THQD",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 5593,
+      "initial_status": "pending",
+      "target_status": "cancelled"
+    }
+  },
+  {
+    "id": "v8-eval2-test-return-00",
+    "family": "return",
+    "split": "test",
+    "initial_message": "Order reference R8E2-5SUS6U5HNSPTC.\nAfter trying the gilet, I have decided to send it back as a full return. Credit the refund to original payment.\nAccount contact: v8e2shopper68psryacjwar5@cohort-retail.example.",
+    "evidence_initial": "After trying the gilet, I have decided to send it back as a full return. Credit the refund to original payment.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_KK8G2ELTL8MVC",
+      "email": "v8e2shopper68psryacjwar5@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_HQ79RYF6BRTQY",
+        "balance_cents": 23200
+      }
+    },
+    "products": {
+      "v8e2_product_GT4CDA6NXBJA6": {
+        "product_id": "v8e2_product_GT4CDA6NXBJA6",
+        "name": "Elmstead fleece gilet",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_VJQCQNA4MTTDS",
+            "option": "cinder cream / XL",
+            "price_cents": 5748,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_2CGM635NVGDG5",
+            "option": "dusk violet / XS",
+            "price_cents": 4898,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_2TNMYG92H7DTF",
+            "option": "seashell brass / M",
+            "price_cents": 6368,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-5SUS6U5HNSPTC",
+        "user_id": "v8e2_user_KK8G2ELTL8MVC",
+        "status": "delivered",
+        "original_payment": "v8e2_card_GKRE3U38QP5YH",
+        "items": [
+          {
+            "item_id": "v8e2_sku_VJQCQNA4MTTDS",
+            "product_id": "v8e2_product_GT4CDA6NXBJA6",
+            "option": "cinder cream / XL",
+            "price_cents": 5748
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopper68psryacjwar5@cohort-retail.example as my account email.",
+      "order_id": "R8E2-5SUS6U5HNSPTC",
+      "reason": "no longer needed",
+      "new_option": "My choice is dusk violet / XS for this gilet.",
+      "item_id": "v8e2_sku_VJQCQNA4MTTDS",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8e2shopper68psryacjwar5@cohort-retail.example",
+      "order_id": "R8E2-5SUS6U5HNSPTC",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shopper68psryacjwar5@cohort-retail.example",
+      "order_id": "R8E2-5SUS6U5HNSPTC",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-5SUS6U5HNSPTC",
+      "item_id": "v8e2_sku_VJQCQNA4MTTDS",
+      "new_item_id": "v8e2_sku_2CGM635NVGDG5",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 5748,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-return-01",
+    "family": "return",
+    "split": "test",
+    "initial_message": "I am keeping neither the item nor a replacement: return the whole dress, reimbursing original payment.\nReceipt number: R8E2-7NYZDGK77Y7Q8.\nAccount contact: v8e2shopperdfldf2ue2as5p@cohort-retail.example.",
+    "evidence_initial": "I am keeping neither the item nor a replacement: return the whole dress, reimbursing original payment.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_YF89A2JAFWV5L",
+      "email": "v8e2shopperdfldf2ue2as5p@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_CVPPPHE85TVYC",
+        "balance_cents": 23225
+      }
+    },
+    "products": {
+      "v8e2_product_KDQ38TJH6QW98": {
+        "product_id": "v8e2_product_KDQ38TJH6QW98",
+        "name": "Fennbrook jersey dress",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_N55QDLHH3B6JK",
+            "option": "morning garnet / L",
+            "price_cents": 6871,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_E97U53AELCE4J",
+            "option": "juniper sand / XXL",
+            "price_cents": 5921,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_38JL4VTJKSPL9",
+            "option": "saltwater green / S",
+            "price_cents": 7321,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-7NYZDGK77Y7Q8",
+        "user_id": "v8e2_user_YF89A2JAFWV5L",
+        "status": "delivered",
+        "original_payment": "v8e2_card_A3B4JE8AJ3MQX",
+        "items": [
+          {
+            "item_id": "v8e2_sku_E97U53AELCE4J",
+            "product_id": "v8e2_product_KDQ38TJH6QW98",
+            "option": "juniper sand / XXL",
+            "price_cents": 5921
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopperdfldf2ue2as5p@cohort-retail.example>.",
+      "order_id": "R8E2-7NYZDGK77Y7Q8",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is saltwater green / S for this dress.",
+      "item_id": "v8e2_sku_E97U53AELCE4J",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8e2shopperdfldf2ue2as5p@cohort-retail.example",
+      "order_id": "R8E2-7NYZDGK77Y7Q8",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shopperdfldf2ue2as5p@cohort-retail.example",
+      "order_id": "R8E2-7NYZDGK77Y7Q8",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-7NYZDGK77Y7Q8",
+      "item_id": "v8e2_sku_E97U53AELCE4J",
+      "new_item_id": "v8e2_sku_38JL4VTJKSPL9",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 5921,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-missing_payment-00",
+    "family": "missing_payment",
+    "split": "test",
+    "initial_message": "Order reference R8E2-QLMDUY3RA2LA5.\nI want the rugby shirt from my original order returned in full. Original refers to that order; I still need to choose the refund destination.\nAccount contact: v8e2shopperqpuckb5fvnug6@cohort-retail.example.",
+    "evidence_initial": "I want the rugby shirt from my original order returned in full. Original refers to that order; I still need to choose the refund destination.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context",
+      "unspecified_payment_despite_original_order"
+    ],
+    "customer": {
+      "id": "v8e2_user_YR3R758TVHCPD",
+      "email": "v8e2shopperqpuckb5fvnug6@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_JNRMQ4GBW6GRT",
+        "balance_cents": 23250
+      }
+    },
+    "products": {
+      "v8e2_product_DCDH6CQYSNNNU": {
+        "product_id": "v8e2_product_DCDH6CQYSNNNU",
+        "name": "Gorsehaven rugby shirt",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_6EM7MA8U5VFBR",
+            "option": "silver fig / XL",
+            "price_cents": 6704,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_YDK4X6N88CFMQ",
+            "option": "dark marzipan / XS",
+            "price_cents": 6084,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_KYXLEQYL4NUYP",
+            "option": "burnished copper / M",
+            "price_cents": 8734,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-QLMDUY3RA2LA5",
+        "user_id": "v8e2_user_YR3R758TVHCPD",
+        "status": "delivered",
+        "original_payment": "v8e2_card_VHUPGMRC8J462",
+        "items": [
+          {
+            "item_id": "v8e2_sku_YDK4X6N88CFMQ",
+            "product_id": "v8e2_product_DCDH6CQYSNNNU",
+            "option": "dark marzipan / XS",
+            "price_cents": 6084
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopperqpuckb5fvnug6@cohort-retail.example as my account email.",
+      "order_id": "R8E2-QLMDUY3RA2LA5",
+      "reason": "no longer needed",
+      "new_option": "My choice is burnished copper / M for this rugby shirt.",
+      "item_id": "v8e2_sku_YDK4X6N88CFMQ",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8e2shopperqpuckb5fvnug6@cohort-retail.example",
+      "order_id": "R8E2-QLMDUY3RA2LA5",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shopperqpuckb5fvnug6@cohort-retail.example",
+      "order_id": "R8E2-QLMDUY3RA2LA5",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-QLMDUY3RA2LA5",
+      "item_id": "v8e2_sku_YDK4X6N88CFMQ",
+      "new_item_id": "v8e2_sku_KYXLEQYL4NUYP",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 6084,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-missing_payment-01",
+    "family": "missing_payment",
+    "split": "test",
+    "initial_message": "Please arrange the return of this tunic. I have not chosen a payment method for receiving the money back.\nReceipt number: R8E2-ZQV8B7FUHNKTE.\nAccount contact: v8e2shoppertahal8ewmr7gg@cohort-retail.example.",
+    "evidence_initial": "Please arrange the return of this tunic. I have not chosen a payment method for receiving the money back.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context",
+      "unspecified_payment_despite_original_order"
+    ],
+    "customer": {
+      "id": "v8e2_user_6P53S4VZLAMC3",
+      "email": "v8e2shoppertahal8ewmr7gg@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_ZPYTHVQLW5UGT",
+        "balance_cents": 23275
+      }
+    },
+    "products": {
+      "v8e2_product_VY4EEFHGNGRQ8": {
+        "product_id": "v8e2_product_VY4EEFHGNGRQ8",
+        "name": "Hawthornquay linen tunic",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_29WFNPT36694N",
+            "option": "cherrywood red / L",
+            "price_cents": 6328,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_PFY99N5EZ6HHL",
+            "option": "turmeric frost / XXL",
+            "price_cents": 7278,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_LDGQQ4J99HXSF",
+            "option": "currant bronze / S",
+            "price_cents": 6328,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-ZQV8B7FUHNKTE",
+        "user_id": "v8e2_user_6P53S4VZLAMC3",
+        "status": "delivered",
+        "original_payment": "v8e2_card_YJEZQFPCHZK3U",
+        "items": [
+          {
+            "item_id": "v8e2_sku_LDGQQ4J99HXSF",
+            "product_id": "v8e2_product_VY4EEFHGNGRQ8",
+            "option": "currant bronze / S",
+            "price_cents": 6328
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shoppertahal8ewmr7gg@cohort-retail.example>.",
+      "order_id": "R8E2-ZQV8B7FUHNKTE",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is cherrywood red / L for this tunic.",
+      "item_id": "v8e2_sku_LDGQQ4J99HXSF",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8e2shoppertahal8ewmr7gg@cohort-retail.example",
+      "order_id": "R8E2-ZQV8B7FUHNKTE",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shoppertahal8ewmr7gg@cohort-retail.example",
+      "order_id": "R8E2-ZQV8B7FUHNKTE",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-ZQV8B7FUHNKTE",
+      "item_id": "v8e2_sku_LDGQQ4J99HXSF",
+      "new_item_id": "v8e2_sku_29WFNPT36694N",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 6328,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange-00",
+    "family": "exchange",
+    "split": "test",
+    "initial_message": "Order reference R8E2-KGFEF45WWPS3B.\nThe polo I received is not the combination I want to keep. Exchange it for pale pewter / XL, with any difference settled on original payment.\nAccount contact: v8e2shopperkyy35hc49ajme@cohort-retail.example.",
+    "evidence_initial": "The polo I received is not the combination I want to keep. Exchange it for pale pewter / XL, with any difference settled on original payment.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_64JYUHBM82KTX",
+      "email": "v8e2shopperkyy35hc49ajme@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_77YT9ETVQ8NEW",
+        "balance_cents": 23300
+      }
+    },
+    "products": {
+      "v8e2_product_GUGJEG9RD28TD": {
+        "product_id": "v8e2_product_GUGJEG9RD28TD",
+        "name": "Iverstone knitted polo",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_9G3992MT5DQHL",
+            "option": "pale pewter / XL",
+            "price_cents": 5747,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_JHXK5AJTDGTXU",
+            "option": "loden pearl / M",
+            "price_cents": 6597,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_2P3DA2SY6E7MT",
+            "option": "petal steel / XS",
+            "price_cents": 7217,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-KGFEF45WWPS3B",
+        "user_id": "v8e2_user_64JYUHBM82KTX",
+        "status": "delivered",
+        "original_payment": "v8e2_card_U48TLZTYBBR6L",
+        "items": [
+          {
+            "item_id": "v8e2_sku_JHXK5AJTDGTXU",
+            "product_id": "v8e2_product_GUGJEG9RD28TD",
+            "option": "loden pearl / M",
+            "price_cents": 6597
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopperkyy35hc49ajme@cohort-retail.example as my account email.",
+      "order_id": "R8E2-KGFEF45WWPS3B",
+      "reason": "no longer needed",
+      "new_option": "My choice is pale pewter / XL for this polo.",
+      "item_id": "v8e2_sku_JHXK5AJTDGTXU",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperkyy35hc49ajme@cohort-retail.example",
+      "order_id": "R8E2-KGFEF45WWPS3B",
+      "requested_option": "pale pewter / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperkyy35hc49ajme@cohort-retail.example",
+      "order_id": "R8E2-KGFEF45WWPS3B",
+      "requested_option": "pale pewter / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-KGFEF45WWPS3B",
+      "item_id": "v8e2_sku_JHXK5AJTDGTXU",
+      "new_item_id": "v8e2_sku_9G3992MT5DQHL",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -850,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange-01",
+    "family": "exchange",
+    "split": "test",
+    "initial_message": "Please replace my skirt with the fern smoke / XXL skirt. Use original payment to charge or refund the exchange adjustment.\nReceipt number: R8E2-CKGM8RZMQ2RKU.\nAccount contact: v8e2shopperjlq46fmqr5jkd@cohort-retail.example.",
+    "evidence_initial": "Please replace my skirt with the fern smoke / XXL skirt. Use original payment to charge or refund the exchange adjustment.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_VQ37UAPXBGX8L",
+      "email": "v8e2shopperjlq46fmqr5jkd@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_ZJZ5F9WF2YQ8R",
+        "balance_cents": 23325
+      }
+    },
+    "products": {
+      "v8e2_product_8SVGW8DMGKF87": {
+        "product_id": "v8e2_product_8SVGW8DMGKF87",
+        "name": "Junebridge denim skirt",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_7EXZCNBQD5W2L",
+            "option": "fern smoke / XXL",
+            "price_cents": 8135,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_FDU5MVVWXTG3X",
+            "option": "verdigris oat / S",
+            "price_cents": 7685,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_9AKKW3KPFWYNQ",
+            "option": "charred jade / L",
+            "price_cents": 6735,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-CKGM8RZMQ2RKU",
+        "user_id": "v8e2_user_VQ37UAPXBGX8L",
+        "status": "delivered",
+        "original_payment": "v8e2_card_JVWNVDNTPJF5M",
+        "items": [
+          {
+            "item_id": "v8e2_sku_9AKKW3KPFWYNQ",
+            "product_id": "v8e2_product_8SVGW8DMGKF87",
+            "option": "charred jade / L",
+            "price_cents": 6735
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopperjlq46fmqr5jkd@cohort-retail.example>.",
+      "order_id": "R8E2-CKGM8RZMQ2RKU",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is fern smoke / XXL for this skirt.",
+      "item_id": "v8e2_sku_9AKKW3KPFWYNQ",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperjlq46fmqr5jkd@cohort-retail.example",
+      "order_id": "R8E2-CKGM8RZMQ2RKU",
+      "requested_option": "fern smoke / XXL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperjlq46fmqr5jkd@cohort-retail.example",
+      "order_id": "R8E2-CKGM8RZMQ2RKU",
+      "requested_option": "fern smoke / XXL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-CKGM8RZMQ2RKU",
+      "item_id": "v8e2_sku_9AKKW3KPFWYNQ",
+      "new_item_id": "v8e2_sku_7EXZCNBQD5W2L",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1400,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_fallback-00",
+    "family": "exchange_fallback",
+    "split": "test",
+    "initial_message": "Order reference R8E2-YWDPH9HWEJ2HT.\nFor the anorak, first seek the dried apricot / XS replacement and settle through original payment. I am asking for an exchange of that exact version. For the single contingency where my chosen replacement has no stock, you may return this item instead.\nAccount contact: v8e2shopperq8cm4uhfwscrj@cohort-retail.example.",
+    "evidence_initial": "For the anorak, first seek the dried apricot / XS replacement and settle through original payment. I am asking for an exchange of that exact version. For the single contingency where my chosen replacement has no stock, you may return this item instead.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_AQYD8MVXLLZHK",
+      "email": "v8e2shopperq8cm4uhfwscrj@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_2X34LZEUDGXMY",
+        "balance_cents": 23350
+      }
+    },
+    "products": {
+      "v8e2_product_A9MCV76BL9GNF": {
+        "product_id": "v8e2_product_A9MCV76BL9GNF",
+        "name": "Kilmere canvas anorak",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_FPCAYUDQF99XD",
+            "option": "amber cloud / M",
+            "price_cents": 7390,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_R6L8V7RYG4TPA",
+            "option": "dried apricot / XS",
+            "price_cents": 9420,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_QRHSWAMT59QGQ",
+            "option": "mulch blue / XL",
+            "price_cents": 6770,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-YWDPH9HWEJ2HT",
+        "user_id": "v8e2_user_AQYD8MVXLLZHK",
+        "status": "delivered",
+        "original_payment": "v8e2_card_WE9CECJM7LJUX",
+        "items": [
+          {
+            "item_id": "v8e2_sku_QRHSWAMT59QGQ",
+            "product_id": "v8e2_product_A9MCV76BL9GNF",
+            "option": "mulch blue / XL",
+            "price_cents": 6770
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopperq8cm4uhfwscrj@cohort-retail.example as my account email.",
+      "order_id": "R8E2-YWDPH9HWEJ2HT",
+      "reason": "no longer needed",
+      "new_option": "My choice is dried apricot / XS for this anorak.",
+      "item_id": "v8e2_sku_QRHSWAMT59QGQ",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperq8cm4uhfwscrj@cohort-retail.example",
+      "order_id": "R8E2-YWDPH9HWEJ2HT",
+      "requested_option": "dried apricot / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperq8cm4uhfwscrj@cohort-retail.example",
+      "order_id": "R8E2-YWDPH9HWEJ2HT",
+      "requested_option": "dried apricot / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-YWDPH9HWEJ2HT",
+      "item_id": "v8e2_sku_QRHSWAMT59QGQ",
+      "new_item_id": "v8e2_sku_R6L8V7RYG4TPA",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 6770,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_fallback-01",
+    "family": "exchange_fallback",
+    "split": "test",
+    "initial_message": "I have picked the riverglass blue / S waistcoat for a swap. Adjust original payment and check its stock before proceeding. I am authorizing a return of this item only after the replacement selection is confirmed unavailable.\nReceipt number: R8E2-JXAKJVSN75KEZ.\nAccount contact: v8e2shopper3d9s6gykn9vv9@cohort-retail.example.",
+    "evidence_initial": "I have picked the riverglass blue / S waistcoat for a swap. Adjust original payment and check its stock before proceeding. I am authorizing a return of this item only after the replacement selection is confirmed unavailable.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_2WFQUVJ4MWY9S",
+      "email": "v8e2shopper3d9s6gykn9vv9@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_Z2CDA3TBTY87J",
+        "balance_cents": 23375
+      }
+    },
+    "products": {
+      "v8e2_product_KG3559F4WWSNS": {
+        "product_id": "v8e2_product_KG3559F4WWSNS",
+        "name": "Larchgate wool waistcoat",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_74AQDL48K8V7A",
+            "option": "bleached mulberry / L",
+            "price_cents": 7913,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_9ESE4F5N9G9EV",
+            "option": "umber fog / XXL",
+            "price_cents": 6963,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_H8FQ4JB3W4ZTN",
+            "option": "riverglass blue / S",
+            "price_cents": 6963,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-JXAKJVSN75KEZ",
+        "user_id": "v8e2_user_2WFQUVJ4MWY9S",
+        "status": "delivered",
+        "original_payment": "v8e2_card_J5VGJ6YPMNDSZ",
+        "items": [
+          {
+            "item_id": "v8e2_sku_9ESE4F5N9G9EV",
+            "product_id": "v8e2_product_KG3559F4WWSNS",
+            "option": "umber fog / XXL",
+            "price_cents": 6963
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopper3d9s6gykn9vv9@cohort-retail.example>.",
+      "order_id": "R8E2-JXAKJVSN75KEZ",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is riverglass blue / S for this waistcoat.",
+      "item_id": "v8e2_sku_9ESE4F5N9G9EV",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopper3d9s6gykn9vv9@cohort-retail.example",
+      "order_id": "R8E2-JXAKJVSN75KEZ",
+      "requested_option": "riverglass blue / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper3d9s6gykn9vv9@cohort-retail.example",
+      "order_id": "R8E2-JXAKJVSN75KEZ",
+      "requested_option": "riverglass blue / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-JXAKJVSN75KEZ",
+      "item_id": "v8e2_sku_9ESE4F5N9G9EV",
+      "new_item_id": "v8e2_sku_H8FQ4JB3W4ZTN",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 6963,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-forbidden_status-00",
+    "family": "forbidden_status",
+    "split": "test",
+    "initial_message": "Order reference R8E2-SRZTCA9N8XULE.\nThe reason for canceling this shirt is that it is no longer needed. If its fulfillment status bars cancellation, a human should handle the request.\nAccount contact: v8e2shoppertc8szf83zwgxm@cohort-retail.example.",
+    "evidence_initial": "The reason for canceling this shirt is that it is no longer needed. If its fulfillment status bars cancellation, a human should handle the request.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_M9G2H8YNUR5WW",
+      "email": "v8e2shoppertc8szf83zwgxm@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_S6WHMTAJFHMNC",
+        "balance_cents": 23400
+      }
+    },
+    "products": {
+      "v8e2_product_D7LWTRHH5TVKP": {
+        "product_id": "v8e2_product_D7LWTRHH5TVKP",
+        "name": "Mallowbank corduroy shirt",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_3DJ9X69TYQXX7",
+            "option": "heather charcoal / M",
+            "price_cents": 6358,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_GS2AQ2HFPSNY3",
+            "option": "plum granite / XS",
+            "price_cents": 7208,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_H6XSZQEUNBUGT",
+            "option": "moonlit maize / XL",
+            "price_cents": 7828,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-SRZTCA9N8XULE",
+        "user_id": "v8e2_user_M9G2H8YNUR5WW",
+        "status": "processed",
+        "original_payment": "v8e2_card_WNGDL6N8M4PCN",
+        "items": [
+          {
+            "item_id": "v8e2_sku_GS2AQ2HFPSNY3",
+            "product_id": "v8e2_product_D7LWTRHH5TVKP",
+            "option": "plum granite / XS",
+            "price_cents": 7208
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shoppertc8szf83zwgxm@cohort-retail.example as my account email.",
+      "order_id": "R8E2-SRZTCA9N8XULE",
+      "reason": "no longer needed",
+      "new_option": "My choice is heather charcoal / M for this shirt.",
+      "item_id": "v8e2_sku_GS2AQ2HFPSNY3",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8e2shoppertc8szf83zwgxm@cohort-retail.example",
+      "order_id": "R8E2-SRZTCA9N8XULE",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8e2shoppertc8szf83zwgxm@cohort-retail.example",
+      "order_id": "R8E2-SRZTCA9N8XULE",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "no longer needed",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-SRZTCA9N8XULE",
+      "item_id": "v8e2_sku_GS2AQ2HFPSNY3",
+      "new_item_id": "v8e2_sku_3DJ9X69TYQXX7",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 7208,
+      "initial_status": "processed",
+      "target_status": "processed"
+    }
+  },
+  {
+    "id": "v8-eval2-test-forbidden_status-01",
+    "family": "forbidden_status",
+    "split": "test",
+    "initial_message": "This cardigan was ordered by mistake, so I request cancellation. If the existing order status prevents it, connect me with staff.\nReceipt number: R8E2-5J57HCLJ4BHWY.\nAccount contact: v8e2shopperl5g66j35h6hg7@cohort-retail.example.",
+    "evidence_initial": "This cardigan was ordered by mistake, so I request cancellation. If the existing order status prevents it, connect me with staff.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_XYGF93794SVEK",
+      "email": "v8e2shopperl5g66j35h6hg7@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_JHCK689LEQZ6K",
+        "balance_cents": 23425
+      }
+    },
+    "products": {
+      "v8e2_product_CG7HFA8RUPYEN": {
+        "product_id": "v8e2_product_CG7HFA8RUPYEN",
+        "name": "Northwren merino cardigan",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_TNR45NMXVB267",
+            "option": "coastal lilac / XXL",
+            "price_cents": 8226,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_THRA543NBMXW5",
+            "option": "moss silver / L",
+            "price_cents": 8676,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_EE35LKXJ9TED4",
+            "option": "walnut ice / S",
+            "price_cents": 7276,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-5J57HCLJ4BHWY",
+        "user_id": "v8e2_user_XYGF93794SVEK",
+        "status": "delivered",
+        "original_payment": "v8e2_card_K6PGR7MBFFLKD",
+        "items": [
+          {
+            "item_id": "v8e2_sku_EE35LKXJ9TED4",
+            "product_id": "v8e2_product_CG7HFA8RUPYEN",
+            "option": "walnut ice / S",
+            "price_cents": 7276
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopperl5g66j35h6hg7@cohort-retail.example>.",
+      "order_id": "R8E2-5J57HCLJ4BHWY",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is moss silver / L for this cardigan.",
+      "item_id": "v8e2_sku_EE35LKXJ9TED4",
+      "payment_method": "original",
+      "operation": "cancel",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "cancel",
+      "email": "v8e2shopperl5g66j35h6hg7@cohort-retail.example",
+      "order_id": "R8E2-5J57HCLJ4BHWY",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "cancel",
+      "email": "v8e2shopperl5g66j35h6hg7@cohort-retail.example",
+      "order_id": "R8E2-5J57HCLJ4BHWY",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "ordered by mistake",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-5J57HCLJ4BHWY",
+      "item_id": "v8e2_sku_EE35LKXJ9TED4",
+      "new_item_id": "v8e2_sku_THRA543NBMXW5",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 7276,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-foreign_order-00",
+    "family": "foreign_order",
+    "split": "test",
+    "initial_message": "Order reference R8E2-BW9997S4LZ8K2.\nCan you return this entire hoodie with the credit on original payment? Verify that the receipt actually belongs to my account before taking any action.\nAccount contact: v8e2shoppere2mycnkn4s4vc@cohort-retail.example.",
+    "evidence_initial": "Can you return this entire hoodie with the credit on original payment? Verify that the receipt actually belongs to my account before taking any action.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_Z92THVK7N6T6B",
+      "email": "v8e2shoppere2mycnkn4s4vc@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_EFTMGFK54HCD7",
+        "balance_cents": 23450
+      }
+    },
+    "products": {
+      "v8e2_product_CCMXT5RGAB4UH": {
+        "product_id": "v8e2_product_CCMXT5RGAB4UH",
+        "name": "Oakenshore jersey hoodie",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_FH3MWHCTH5BJH",
+            "option": "willow burgundy / M",
+            "price_cents": 7549,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_VANJWNXL5CLUP",
+            "option": "salmon quartz / XS",
+            "price_cents": 8169,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_TDG4TZ53JHFGL",
+            "option": "mulberry clay / XL",
+            "price_cents": 10199,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-BW9997S4LZ8K2",
+        "user_id": "v8e2_other_2V2D7NB8XS3DL",
+        "status": "delivered",
+        "original_payment": "v8e2_card_QUU3ZE7RREAEN",
+        "items": [
+          {
+            "item_id": "v8e2_sku_FH3MWHCTH5BJH",
+            "product_id": "v8e2_product_CCMXT5RGAB4UH",
+            "option": "willow burgundy / M",
+            "price_cents": 7549
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shoppere2mycnkn4s4vc@cohort-retail.example as my account email.",
+      "order_id": "R8E2-BW9997S4LZ8K2",
+      "reason": "no longer needed",
+      "new_option": "My choice is mulberry clay / XL for this hoodie.",
+      "item_id": "v8e2_sku_FH3MWHCTH5BJH",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8e2shoppere2mycnkn4s4vc@cohort-retail.example",
+      "order_id": "R8E2-BW9997S4LZ8K2",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shoppere2mycnkn4s4vc@cohort-retail.example",
+      "order_id": "R8E2-BW9997S4LZ8K2",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-BW9997S4LZ8K2",
+      "item_id": "v8e2_sku_FH3MWHCTH5BJH",
+      "new_item_id": "v8e2_sku_TDG4TZ53JHFGL",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 7549,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-foreign_order-01",
+    "family": "foreign_order",
+    "split": "test",
+    "initial_message": "I would like a full smock return to original payment, subject to an ownership check. A receipt for a different customer needs staff attention.\nReceipt number: R8E2-ZPSKR3MX9FNGR.\nAccount contact: v8e2shopperwtmwyxlemdaeq@cohort-retail.example.",
+    "evidence_initial": "I would like a full smock return to original payment, subject to an ownership check. A receipt for a different customer needs staff attention.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_PEEVU64EY8PBX",
+      "email": "v8e2shopperwtmwyxlemdaeq@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_B6FLWPDSJ3QU8",
+        "balance_cents": 23475
+      }
+    },
+    "products": {
+      "v8e2_product_LE4LPMB7MD8T5": {
+        "product_id": "v8e2_product_LE4LPMB7MD8T5",
+        "name": "Pineford chambray smock",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_VES2FZC7MKHEW",
+            "option": "buttercup gold / XXL",
+            "price_cents": 7857,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_7HMZGAJFEDXWW",
+            "option": "icicle rust / S",
+            "price_cents": 8807,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_B3YBTDGX2M62H",
+            "option": "bronzed oat / L",
+            "price_cents": 7857,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-ZPSKR3MX9FNGR",
+        "user_id": "v8e2_other_HVBT7426CLZTK",
+        "status": "delivered",
+        "original_payment": "v8e2_card_GTCAX9TPF9446",
+        "items": [
+          {
+            "item_id": "v8e2_sku_B3YBTDGX2M62H",
+            "product_id": "v8e2_product_LE4LPMB7MD8T5",
+            "option": "bronzed oat / L",
+            "price_cents": 7857
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopperwtmwyxlemdaeq@cohort-retail.example>.",
+      "order_id": "R8E2-ZPSKR3MX9FNGR",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is buttercup gold / XXL for this smock.",
+      "item_id": "v8e2_sku_B3YBTDGX2M62H",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8e2shopperwtmwyxlemdaeq@cohort-retail.example",
+      "order_id": "R8E2-ZPSKR3MX9FNGR",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shopperwtmwyxlemdaeq@cohort-retail.example",
+      "order_id": "R8E2-ZPSKR3MX9FNGR",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-ZPSKR3MX9FNGR",
+      "item_id": "v8e2_sku_B3YBTDGX2M62H",
+      "new_item_id": "v8e2_sku_VES2FZC7MKHEW",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 7857,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-missing_email-00",
+    "family": "missing_email",
+    "split": "test",
+    "initial_message": "Order reference R8E2-YRWCZMHJXXAWH.\nMy decision is a full return of the pullover, credited to original payment. I will give you the account email when you ask for it.",
+    "evidence_initial": "My decision is a full return of the pullover, credited to original payment. I will give you the account email when you ask for it.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_WZC8YMHQLRZF2",
+      "email": "v8e2shopperhjx3s28ju3nr2@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_6Y9H6JT8KZZM2",
+        "balance_cents": 23500
+      }
+    },
+    "products": {
+      "v8e2_product_JTLC2MWLC79UT": {
+        "product_id": "v8e2_product_JTLC2MWLC79UT",
+        "name": "Quillhaven cotton pullover",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_HFH5RMTG9W5FY",
+            "option": "sageberry pink / M",
+            "price_cents": 8502,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_BECGERAYM8GES",
+            "option": "storm lilac / XS",
+            "price_cents": 7032,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_CLG68FRHK29Z4",
+            "option": "inked copper / XL",
+            "price_cents": 7882,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-YRWCZMHJXXAWH",
+        "user_id": "v8e2_user_WZC8YMHQLRZF2",
+        "status": "delivered",
+        "original_payment": "v8e2_card_LVABDKNY9RXZX",
+        "items": [
+          {
+            "item_id": "v8e2_sku_CLG68FRHK29Z4",
+            "product_id": "v8e2_product_JTLC2MWLC79UT",
+            "option": "inked copper / XL",
+            "price_cents": 7882
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopperhjx3s28ju3nr2@cohort-retail.example as my account email.",
+      "order_id": "R8E2-YRWCZMHJXXAWH",
+      "reason": "no longer needed",
+      "new_option": "My choice is storm lilac / XS for this pullover.",
+      "item_id": "v8e2_sku_CLG68FRHK29Z4",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "R8E2-YRWCZMHJXXAWH",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shopperhjx3s28ju3nr2@cohort-retail.example",
+      "order_id": "R8E2-YRWCZMHJXXAWH",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-YRWCZMHJXXAWH",
+      "item_id": "v8e2_sku_CLG68FRHK29Z4",
+      "new_item_id": "v8e2_sku_BECGERAYM8GES",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 7882,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-missing_email-01",
+    "family": "missing_email",
+    "split": "test",
+    "initial_message": "Take the raincoat back and refund original payment. The account email needed to locate me is still missing from my message.\nReceipt number: R8E2-JQ5ZALRFA32ZF.",
+    "evidence_initial": "Take the raincoat back and refund original payment. The account email needed to locate me is still missing from my message.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_DVT6BBYVCBJK4",
+      "email": "v8e2shopper3taxe3b22em5s@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_HGEQK8TVNR4JV",
+        "balance_cents": 23525
+      }
+    },
+    "products": {
+      "v8e2_product_7ZTU8VL5V2JUY": {
+        "product_id": "v8e2_product_7ZTU8VL5V2JUY",
+        "name": "Reedcross raincoat",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_2ZA6WNC2BHNFG",
+            "option": "chalk persimmon / L",
+            "price_cents": 8878,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_CESQDGCUCWM94",
+            "option": "seagrass ivory / S",
+            "price_cents": 9328,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_APJ35F9526XYC",
+            "option": "hazelnut sky / XXL",
+            "price_cents": 7928,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-JQ5ZALRFA32ZF",
+        "user_id": "v8e2_user_DVT6BBYVCBJK4",
+        "status": "delivered",
+        "original_payment": "v8e2_card_2GBM296ZVH6H2",
+        "items": [
+          {
+            "item_id": "v8e2_sku_APJ35F9526XYC",
+            "product_id": "v8e2_product_7ZTU8VL5V2JUY",
+            "option": "hazelnut sky / XXL",
+            "price_cents": 7928
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopper3taxe3b22em5s@cohort-retail.example>.",
+      "order_id": "R8E2-JQ5ZALRFA32ZF",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is seagrass ivory / S for this raincoat.",
+      "item_id": "v8e2_sku_APJ35F9526XYC",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "R8E2-JQ5ZALRFA32ZF",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shopper3taxe3b22em5s@cohort-retail.example",
+      "order_id": "R8E2-JQ5ZALRFA32ZF",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-JQ5ZALRFA32ZF",
+      "item_id": "v8e2_sku_APJ35F9526XYC",
+      "new_item_id": "v8e2_sku_CESQDGCUCWM94",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 7928,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_missing_option-00",
+    "family": "exchange_missing_option",
+    "split": "test",
+    "initial_message": "Order reference R8E2-884R8HJESHVSS.\nFor this sweatshirt, I am weighing rosewood tan / M against granite coral / XL; neither choice is final. I want an exchange through original payment, but you need to ask which version I choose. Provided the selected replacement is unavailable, I authorize a return; a replacement in stock must still be exchanged.\nAccount contact: v8e2shopperseu7kn2wvt5ld@cohort-retail.example.",
+    "evidence_initial": "For this sweatshirt, I am weighing rosewood tan / M against granite coral / XL; neither choice is final. I want an exchange through original payment, but you need to ask which version I choose. Provided the selected replacement is unavailable, I authorize a return; a replacement in stock must still be exchanged.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context",
+      "two_unchosen_variants"
+    ],
+    "customer": {
+      "id": "v8e2_user_U4N26564FPE6J",
+      "email": "v8e2shopperseu7kn2wvt5ld@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_47C5HBR3JYF8H",
+        "balance_cents": 23550
+      }
+    },
+    "products": {
+      "v8e2_product_Q5GTDXVXC279W": {
+        "product_id": "v8e2_product_Q5GTDXVXC279W",
+        "name": "Stonecove brushed sweatshirt",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_NDKUQVP76B6VU",
+            "option": "smoked quartz / XS",
+            "price_cents": 8308,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_5BDMNXQWVS87X",
+            "option": "rosewood tan / M",
+            "price_cents": 10958,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_5WH9FZSLNGSEG",
+            "option": "granite coral / XL",
+            "price_cents": 8928,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-884R8HJESHVSS",
+        "user_id": "v8e2_user_U4N26564FPE6J",
+        "status": "delivered",
+        "original_payment": "v8e2_card_LN957UR56G2UE",
+        "items": [
+          {
+            "item_id": "v8e2_sku_NDKUQVP76B6VU",
+            "product_id": "v8e2_product_Q5GTDXVXC279W",
+            "option": "smoked quartz / XS",
+            "price_cents": 8308
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopperseu7kn2wvt5ld@cohort-retail.example as my account email.",
+      "order_id": "R8E2-884R8HJESHVSS",
+      "reason": "no longer needed",
+      "new_option": "My choice is rosewood tan / M for this sweatshirt.",
+      "item_id": "v8e2_sku_NDKUQVP76B6VU",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperseu7kn2wvt5ld@cohort-retail.example",
+      "order_id": "R8E2-884R8HJESHVSS",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperseu7kn2wvt5ld@cohort-retail.example",
+      "order_id": "R8E2-884R8HJESHVSS",
+      "requested_option": "rosewood tan / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "new_option",
+    "required_answers": [
+      "new_option"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-884R8HJESHVSS",
+      "item_id": "v8e2_sku_NDKUQVP76B6VU",
+      "new_item_id": "v8e2_sku_5BDMNXQWVS87X",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 2650,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_missing_option-01",
+    "family": "exchange_missing_option",
+    "split": "test",
+    "initial_message": "I want to exchange the top, settling original payment, but cannot yet choose between honeydew slate / XXL and cobalt haze / L. Obtain that choice rather than deciding for me. For an unavailable replacement of the specified size and color, my approved backup is a full-item return.\nReceipt number: R8E2-FQTXULS3EAD98.\nAccount contact: v8e2shopper879efxggcvc5p@cohort-retail.example.",
+    "evidence_initial": "I want to exchange the top, settling original payment, but cannot yet choose between honeydew slate / XXL and cobalt haze / L. Obtain that choice rather than deciding for me. For an unavailable replacement of the specified size and color, my approved backup is a full-item return.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context",
+      "two_unchosen_variants"
+    ],
+    "customer": {
+      "id": "v8e2_user_6LNKATDSE52KY",
+      "email": "v8e2shopper879efxggcvc5p@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_REM7ZQ3RVZKF9",
+        "balance_cents": 23575
+      }
+    },
+    "products": {
+      "v8e2_product_5XLK22TWN9TNE": {
+        "product_id": "v8e2_product_5XLK22TWN9TNE",
+        "name": "Ternbrook seersucker top",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_VJ4DFXB6HHYWN",
+            "option": "honeydew slate / XXL",
+            "price_cents": 9208,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_SJ2F8T3GTP8A7",
+            "option": "cobalt haze / L",
+            "price_cents": 8258,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_B2JWUHAP9TLKW",
+            "option": "peat blossom / S",
+            "price_cents": 8258,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-FQTXULS3EAD98",
+        "user_id": "v8e2_user_6LNKATDSE52KY",
+        "status": "delivered",
+        "original_payment": "v8e2_card_PG3F8LMWFJVJJ",
+        "items": [
+          {
+            "item_id": "v8e2_sku_B2JWUHAP9TLKW",
+            "product_id": "v8e2_product_5XLK22TWN9TNE",
+            "option": "peat blossom / S",
+            "price_cents": 8258
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopper879efxggcvc5p@cohort-retail.example>.",
+      "order_id": "R8E2-FQTXULS3EAD98",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is cobalt haze / L for this top.",
+      "item_id": "v8e2_sku_B2JWUHAP9TLKW",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopper879efxggcvc5p@cohort-retail.example",
+      "order_id": "R8E2-FQTXULS3EAD98",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper879efxggcvc5p@cohort-retail.example",
+      "order_id": "R8E2-FQTXULS3EAD98",
+      "requested_option": "cobalt haze / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "new_option",
+    "required_answers": [
+      "new_option"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-FQTXULS3EAD98",
+      "item_id": "v8e2_sku_B2JWUHAP9TLKW",
+      "new_item_id": "v8e2_sku_SJ2F8T3GTP8A7",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 0,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_missing_payment-00",
+    "family": "exchange_missing_payment",
+    "split": "test",
+    "initial_message": "Order reference R8E2-6SHCAREE8QEDJ.\nSwap the vest on my original order for faded marigold / XL. I have selected the replacement but no payment route for the price adjustment. My approval to return this purchase is restricted to a verified lack of the replacement I choose.\nAccount contact: v8e2shoppervsm6akm68c6ej@cohort-retail.example.",
+    "evidence_initial": "Swap the vest on my original order for faded marigold / XL. I have selected the replacement but no payment route for the price adjustment. My approval to return this purchase is restricted to a verified lack of the replacement I choose.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context",
+      "unspecified_payment_despite_original_order"
+    ],
+    "customer": {
+      "id": "v8e2_user_YYFLRF7NG6ENE",
+      "email": "v8e2shoppervsm6akm68c6ej@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_WG5XSFC7899WH",
+        "balance_cents": 23600
+      }
+    },
+    "products": {
+      "v8e2_product_DK5V5JE7HJY4Y": {
+        "product_id": "v8e2_product_DK5V5JE7HJY4Y",
+        "name": "Umberfield knitted vest",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_J7277QPRK4ZC9",
+            "option": "tar sage / M",
+            "price_cents": 8712,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_MPRZNHRN3J6DK",
+            "option": "frosted carmine / XS",
+            "price_cents": 9332,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_P2VXRR8M9D66P",
+            "option": "faded marigold / XL",
+            "price_cents": 7862,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-6SHCAREE8QEDJ",
+        "user_id": "v8e2_user_YYFLRF7NG6ENE",
+        "status": "delivered",
+        "original_payment": "v8e2_card_KWXSUNQD9JMXT",
+        "items": [
+          {
+            "item_id": "v8e2_sku_J7277QPRK4ZC9",
+            "product_id": "v8e2_product_DK5V5JE7HJY4Y",
+            "option": "tar sage / M",
+            "price_cents": 8712
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shoppervsm6akm68c6ej@cohort-retail.example as my account email.",
+      "order_id": "R8E2-6SHCAREE8QEDJ",
+      "reason": "no longer needed",
+      "new_option": "My choice is faded marigold / XL for this vest.",
+      "item_id": "v8e2_sku_J7277QPRK4ZC9",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shoppervsm6akm68c6ej@cohort-retail.example",
+      "order_id": "R8E2-6SHCAREE8QEDJ",
+      "requested_option": "faded marigold / XL",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shoppervsm6akm68c6ej@cohort-retail.example",
+      "order_id": "R8E2-6SHCAREE8QEDJ",
+      "requested_option": "faded marigold / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-6SHCAREE8QEDJ",
+      "item_id": "v8e2_sku_J7277QPRK4ZC9",
+      "new_item_id": "v8e2_sku_P2VXRR8M9D66P",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -850,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_missing_payment-01",
+    "family": "exchange_missing_payment",
+    "split": "test",
+    "initial_message": "The replacement should be the lapis grey / XXL blouse. This concerns the original purchase; I have not said how to settle an exchange difference. You may turn the exchange into an item return solely when the chosen catalog variant cannot be supplied from stock.\nReceipt number: R8E2-LKCPPSKLHYPQ7.\nAccount contact: v8e2shoppernwhj6586r8cex@cohort-retail.example.",
+    "evidence_initial": "The replacement should be the lapis grey / XXL blouse. This concerns the original purchase; I have not said how to settle an exchange difference. You may turn the exchange into an item return solely when the chosen catalog variant cannot be supplied from stock.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context",
+      "unspecified_payment_despite_original_order"
+    ],
+    "customer": {
+      "id": "v8e2_user_H4R7CX86Q4WVD",
+      "email": "v8e2shoppernwhj6586r8cex@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_K7TTLR5L3X56U",
+        "balance_cents": 23625
+      }
+    },
+    "products": {
+      "v8e2_product_5HJXSEVUG476H": {
+        "product_id": "v8e2_product_5HJXSEVUG476H",
+        "name": "Valewick poplin blouse",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_GYRBUUBAGUJL9",
+            "option": "lapis grey / XXL",
+            "price_cents": 10030,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_QXUKW5STM657R",
+            "option": "mauve cedar / S",
+            "price_cents": 9580,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_WR3B8LYVNPPMV",
+            "option": "pumice grape / L",
+            "price_cents": 8630,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-LKCPPSKLHYPQ7",
+        "user_id": "v8e2_user_H4R7CX86Q4WVD",
+        "status": "delivered",
+        "original_payment": "v8e2_card_WW48L7FL37EXW",
+        "items": [
+          {
+            "item_id": "v8e2_sku_WR3B8LYVNPPMV",
+            "product_id": "v8e2_product_5HJXSEVUG476H",
+            "option": "pumice grape / L",
+            "price_cents": 8630
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shoppernwhj6586r8cex@cohort-retail.example>.",
+      "order_id": "R8E2-LKCPPSKLHYPQ7",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is lapis grey / XXL for this blouse.",
+      "item_id": "v8e2_sku_WR3B8LYVNPPMV",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shoppernwhj6586r8cex@cohort-retail.example",
+      "order_id": "R8E2-LKCPPSKLHYPQ7",
+      "requested_option": "lapis grey / XXL",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shoppernwhj6586r8cex@cohort-retail.example",
+      "order_id": "R8E2-LKCPPSKLHYPQ7",
+      "requested_option": "lapis grey / XXL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-LKCPPSKLHYPQ7",
+      "item_id": "v8e2_sku_WR3B8LYVNPPMV",
+      "new_item_id": "v8e2_sku_GYRBUUBAGUJL9",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1400,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_gift-00",
+    "family": "exchange_gift",
+    "split": "test",
+    "initial_message": "Order reference R8E2-SK323SL6ZEWUJ.\nThe swap I request is the chestnut blush / XS overshirt. Settle its price difference with gift card v8e2_gift_BSDG8WT6WPZ9P; that is a payment instruction for the exchange only.\nAccount contact: v8e2shopperdjyzrtjlk2pg2@cohort-retail.example.",
+    "evidence_initial": "The swap I request is the chestnut blush / XS overshirt. Settle its price difference with gift card v8e2_gift_BSDG8WT6WPZ9P; that is a payment instruction for the exchange only.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_DS94RFVAV8FCV",
+      "email": "v8e2shopperdjyzrtjlk2pg2@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_BSDG8WT6WPZ9P",
+        "balance_cents": 23650
+      }
+    },
+    "products": {
+      "v8e2_product_NKRBD6ZW8BELT": {
+        "product_id": "v8e2_product_NKRBD6ZW8BELT",
+        "name": "Willowreach flannel overshirt",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_6UPWSEZNGBPHC",
+            "option": "russet dusk / XL",
+            "price_cents": 8970,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_WAVGJ6S8AWTJD",
+            "option": "biscuit lapis / M",
+            "price_cents": 9590,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_SSBGPM2ZB9QTN",
+            "option": "chestnut blush / XS",
+            "price_cents": 11620,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-SK323SL6ZEWUJ",
+        "user_id": "v8e2_user_DS94RFVAV8FCV",
+        "status": "delivered",
+        "original_payment": "v8e2_card_A8RT62YVCVG5A",
+        "items": [
+          {
+            "item_id": "v8e2_sku_6UPWSEZNGBPHC",
+            "product_id": "v8e2_product_NKRBD6ZW8BELT",
+            "option": "russet dusk / XL",
+            "price_cents": 8970
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopperdjyzrtjlk2pg2@cohort-retail.example as my account email.",
+      "order_id": "R8E2-SK323SL6ZEWUJ",
+      "reason": "no longer needed",
+      "new_option": "My choice is chestnut blush / XS for this overshirt.",
+      "item_id": "v8e2_sku_6UPWSEZNGBPHC",
+      "payment_method": "v8e2_gift_BSDG8WT6WPZ9P",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperdjyzrtjlk2pg2@cohort-retail.example",
+      "order_id": "R8E2-SK323SL6ZEWUJ",
+      "requested_option": "chestnut blush / XS",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperdjyzrtjlk2pg2@cohort-retail.example",
+      "order_id": "R8E2-SK323SL6ZEWUJ",
+      "requested_option": "chestnut blush / XS",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-SK323SL6ZEWUJ",
+      "item_id": "v8e2_sku_6UPWSEZNGBPHC",
+      "new_item_id": "v8e2_sku_SSBGPM2ZB9QTN",
+      "payment_method": "v8e2_gift_BSDG8WT6WPZ9P",
+      "reason": "no longer needed",
+      "amount_cents": 2650,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_gift-01",
+    "family": "exchange_gift",
+    "split": "test",
+    "initial_message": "Use gift card v8e2_gift_SRKLES6HGWD2A for an exchange into the reed yellow / S jacket. Permission to use that card says nothing about returning the item.\nReceipt number: R8E2-N7CRZVG4WVXBL.\nAccount contact: v8e2shoppervb3zyyeawgmgl@cohort-retail.example.",
+    "evidence_initial": "Use gift card v8e2_gift_SRKLES6HGWD2A for an exchange into the reed yellow / S jacket. Permission to use that card says nothing about returning the item.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_26WSQABAGCWXE",
+      "email": "v8e2shoppervb3zyyeawgmgl@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_SRKLES6HGWD2A",
+        "balance_cents": 23675
+      }
+    },
+    "products": {
+      "v8e2_product_CD7LDWDZGCC9R": {
+        "product_id": "v8e2_product_CD7LDWDZGCC9R",
+        "name": "Yarrowford padded jacket",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_5WQYX4TDFLAR7",
+            "option": "reed yellow / S",
+            "price_cents": 9268,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_AVBQCRLMKAMXS",
+            "option": "lichen navy / XXL",
+            "price_cents": 9268,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_FQ4ZWC9YWWWH9",
+            "option": "tea rose grey / L",
+            "price_cents": 10218,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-N7CRZVG4WVXBL",
+        "user_id": "v8e2_user_26WSQABAGCWXE",
+        "status": "delivered",
+        "original_payment": "v8e2_card_R5W5WD9EZNFMZ",
+        "items": [
+          {
+            "item_id": "v8e2_sku_AVBQCRLMKAMXS",
+            "product_id": "v8e2_product_CD7LDWDZGCC9R",
+            "option": "lichen navy / XXL",
+            "price_cents": 9268
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shoppervb3zyyeawgmgl@cohort-retail.example>.",
+      "order_id": "R8E2-N7CRZVG4WVXBL",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is reed yellow / S for this jacket.",
+      "item_id": "v8e2_sku_AVBQCRLMKAMXS",
+      "payment_method": "v8e2_gift_SRKLES6HGWD2A",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shoppervb3zyyeawgmgl@cohort-retail.example",
+      "order_id": "R8E2-N7CRZVG4WVXBL",
+      "requested_option": "reed yellow / S",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shoppervb3zyyeawgmgl@cohort-retail.example",
+      "order_id": "R8E2-N7CRZVG4WVXBL",
+      "requested_option": "reed yellow / S",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-N7CRZVG4WVXBL",
+      "item_id": "v8e2_sku_AVBQCRLMKAMXS",
+      "new_item_id": "v8e2_sku_5WQYX4TDFLAR7",
+      "payment_method": "v8e2_gift_SRKLES6HGWD2A",
+      "reason": "ordered by mistake",
+      "amount_cents": 0,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_unavailable-00",
+    "family": "exchange_unavailable",
+    "split": "test",
+    "initial_message": "Order reference R8E2-864RBQ67S8CHS.\nPlease attempt the shell pink / M polo exchange via original payment. I will not accept an item return as the fallback; a stock failure should go to a person.\nAccount contact: v8e2shopperl3gqwzzazlcan@cohort-retail.example.",
+    "evidence_initial": "Please attempt the shell pink / M polo exchange via original payment. I will not accept an item return as the fallback; a stock failure should go to a person.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_WZYCPAAAMQ3PR",
+      "email": "v8e2shopperl3gqwzzazlcan@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_Z2M2J6Q4AKZ4K",
+        "balance_cents": 23700
+      }
+    },
+    "products": {
+      "v8e2_product_64XNHKW93572P": {
+        "product_id": "v8e2_product_64XNHKW93572P",
+        "name": "Ashenquay pique polo",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_KPEY3Y4J86W7A",
+            "option": "ecru scarlet / XL",
+            "price_cents": 9871,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_6FJF2N34BYDZR",
+            "option": "coffee frost / XS",
+            "price_cents": 9251,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_ABT5CUB2JLXD3",
+            "option": "shell pink / M",
+            "price_cents": 8401,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-864RBQ67S8CHS",
+        "user_id": "v8e2_user_WZYCPAAAMQ3PR",
+        "status": "delivered",
+        "original_payment": "v8e2_card_EACVGCGS6XVAA",
+        "items": [
+          {
+            "item_id": "v8e2_sku_6FJF2N34BYDZR",
+            "product_id": "v8e2_product_64XNHKW93572P",
+            "option": "coffee frost / XS",
+            "price_cents": 9251
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopperl3gqwzzazlcan@cohort-retail.example as my account email.",
+      "order_id": "R8E2-864RBQ67S8CHS",
+      "reason": "no longer needed",
+      "new_option": "My choice is shell pink / M for this polo.",
+      "item_id": "v8e2_sku_6FJF2N34BYDZR",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperl3gqwzzazlcan@cohort-retail.example",
+      "order_id": "R8E2-864RBQ67S8CHS",
+      "requested_option": "shell pink / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperl3gqwzzazlcan@cohort-retail.example",
+      "order_id": "R8E2-864RBQ67S8CHS",
+      "requested_option": "shell pink / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-864RBQ67S8CHS",
+      "item_id": "v8e2_sku_6FJF2N34BYDZR",
+      "new_item_id": "v8e2_sku_ABT5CUB2JLXD3",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 9251,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_unavailable-01",
+    "family": "exchange_unavailable",
+    "split": "test",
+    "initial_message": "An original-payment swap into basalt olive / L is my request for the sweater. Do not arrange a return when it is unstocked; ask support to take over.\nReceipt number: R8E2-UQ7KZPUX9J4BM.\nAccount contact: v8e2shopperxl832c3aug45k@cohort-retail.example.",
+    "evidence_initial": "An original-payment swap into basalt olive / L is my request for the sweater. Do not arrange a return when it is unstocked; ask support to take over.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_ZB4T6AYD9CTUR",
+      "email": "v8e2shopperxl832c3aug45k@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_RSTWH86LFWYB2",
+        "balance_cents": 23725
+      }
+    },
+    "products": {
+      "v8e2_product_B8629XLUBNCJB": {
+        "product_id": "v8e2_product_B8629XLUBNCJB",
+        "name": "Briarcross wool sweater",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_29NXM8HKWGUFA",
+            "option": "ebony clay / S",
+            "price_cents": 9602,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_CSP9K9AX2HCR4",
+            "option": "glazed juniper / XXL",
+            "price_cents": 10552,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_7HZDVG2N35A3C",
+            "option": "basalt olive / L",
+            "price_cents": 11002,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-UQ7KZPUX9J4BM",
+        "user_id": "v8e2_user_ZB4T6AYD9CTUR",
+        "status": "delivered",
+        "original_payment": "v8e2_card_4YCLXWK4DNFNL",
+        "items": [
+          {
+            "item_id": "v8e2_sku_29NXM8HKWGUFA",
+            "product_id": "v8e2_product_B8629XLUBNCJB",
+            "option": "ebony clay / S",
+            "price_cents": 9602
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopperxl832c3aug45k@cohort-retail.example>.",
+      "order_id": "R8E2-UQ7KZPUX9J4BM",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is basalt olive / L for this sweater.",
+      "item_id": "v8e2_sku_29NXM8HKWGUFA",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperxl832c3aug45k@cohort-retail.example",
+      "order_id": "R8E2-UQ7KZPUX9J4BM",
+      "requested_option": "basalt olive / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperxl832c3aug45k@cohort-retail.example",
+      "order_id": "R8E2-UQ7KZPUX9J4BM",
+      "requested_option": "basalt olive / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-UQ7KZPUX9J4BM",
+      "item_id": "v8e2_sku_29NXM8HKWGUFA",
+      "new_item_id": "v8e2_sku_7HZDVG2N35A3C",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 9602,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_shortfall-00",
+    "family": "exchange_shortfall",
+    "split": "test",
+    "initial_message": "Order reference R8E2-UDV6QKQ4MZ7ES.\nTry to exchange my cardigan for winter persimmon / XL, using only gift card v8e2_gift_2T7SYTG6SUM6J for the difference. If it cannot cover the cost, I do not approve a return or another funding source; transfer me to staff.\nAccount contact: v8e2shoppery6za7eu3w5m5c@cohort-retail.example.",
+    "evidence_initial": "Try to exchange my cardigan for winter persimmon / XL, using only gift card v8e2_gift_2T7SYTG6SUM6J for the difference. If it cannot cover the cost, I do not approve a return or another funding source; transfer me to staff.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_XKK5ZMLHHVATL",
+      "email": "v8e2shoppery6za7eu3w5m5c@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_2T7SYTG6SUM6J",
+        "balance_cents": 390
+      }
+    },
+    "products": {
+      "v8e2_product_SRA96344XQUJ7": {
+        "product_id": "v8e2_product_SRA96344XQUJ7",
+        "name": "Cedarhaven cotton cardigan",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_HKYHK9URXF3UY",
+            "option": "hemp sapphire / XS",
+            "price_cents": 10202,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_U5NRVUD2VY8XY",
+            "option": "winter persimmon / XL",
+            "price_cents": 13532,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_LTYUMZBMZ58VJ",
+            "option": "truffle jade / M",
+            "price_cents": 9582,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-UDV6QKQ4MZ7ES",
+        "user_id": "v8e2_user_XKK5ZMLHHVATL",
+        "status": "delivered",
+        "original_payment": "v8e2_card_5EQ28MVMJ6FWA",
+        "items": [
+          {
+            "item_id": "v8e2_sku_LTYUMZBMZ58VJ",
+            "product_id": "v8e2_product_SRA96344XQUJ7",
+            "option": "truffle jade / M",
+            "price_cents": 9582
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shoppery6za7eu3w5m5c@cohort-retail.example as my account email.",
+      "order_id": "R8E2-UDV6QKQ4MZ7ES",
+      "reason": "no longer needed",
+      "new_option": "My choice is winter persimmon / XL for this cardigan.",
+      "item_id": "v8e2_sku_LTYUMZBMZ58VJ",
+      "payment_method": "v8e2_gift_2T7SYTG6SUM6J",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shoppery6za7eu3w5m5c@cohort-retail.example",
+      "order_id": "R8E2-UDV6QKQ4MZ7ES",
+      "requested_option": "winter persimmon / XL",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shoppery6za7eu3w5m5c@cohort-retail.example",
+      "order_id": "R8E2-UDV6QKQ4MZ7ES",
+      "requested_option": "winter persimmon / XL",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-UDV6QKQ4MZ7ES",
+      "item_id": "v8e2_sku_LTYUMZBMZ58VJ",
+      "new_item_id": "v8e2_sku_U5NRVUD2VY8XY",
+      "payment_method": "v8e2_gift_2T7SYTG6SUM6J",
+      "reason": "no longer needed",
+      "amount_cents": 9582,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_shortfall-01",
+    "family": "exchange_shortfall",
+    "split": "test",
+    "initial_message": "I choose the harvest teal / XXL dress with the adjustment on gift card v8e2_gift_TNHKDMG9NQJHN. A low balance should mean human assistance, not a return or a different payment method.\nReceipt number: R8E2-FCZHZRVNMSNNV.\nAccount contact: v8e2shoppertmdd4h2y5ttz2@cohort-retail.example.",
+    "evidence_initial": "I choose the harvest teal / XXL dress with the adjustment on gift card v8e2_gift_TNHKDMG9NQJHN. A low balance should mean human assistance, not a return or a different payment method.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_HMNHATR2SJLNM",
+      "email": "v8e2shoppertmdd4h2y5ttz2@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_TNHKDMG9NQJHN",
+        "balance_cents": 390
+      }
+    },
+    "products": {
+      "v8e2_product_H8ND2X3GYPFBB": {
+        "product_id": "v8e2_product_H8ND2X3GYPFBB",
+        "name": "Dunlinmere linen dress",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_Q65EV3REBY7GK",
+            "option": "pebble fuchsia / S",
+            "price_cents": 10858,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_MXAUQNVLTQBER",
+            "option": "harvest teal / XXL",
+            "price_cents": 14133,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_28JCGNPUHMGS8",
+            "option": "burnt agate / L",
+            "price_cents": 9908,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-FCZHZRVNMSNNV",
+        "user_id": "v8e2_user_HMNHATR2SJLNM",
+        "status": "delivered",
+        "original_payment": "v8e2_card_EQDJ25BAQ4JNJ",
+        "items": [
+          {
+            "item_id": "v8e2_sku_28JCGNPUHMGS8",
+            "product_id": "v8e2_product_H8ND2X3GYPFBB",
+            "option": "burnt agate / L",
+            "price_cents": 9908
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shoppertmdd4h2y5ttz2@cohort-retail.example>.",
+      "order_id": "R8E2-FCZHZRVNMSNNV",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is harvest teal / XXL for this dress.",
+      "item_id": "v8e2_sku_28JCGNPUHMGS8",
+      "payment_method": "v8e2_gift_TNHKDMG9NQJHN",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shoppertmdd4h2y5ttz2@cohort-retail.example",
+      "order_id": "R8E2-FCZHZRVNMSNNV",
+      "requested_option": "harvest teal / XXL",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shoppertmdd4h2y5ttz2@cohort-retail.example",
+      "order_id": "R8E2-FCZHZRVNMSNNV",
+      "requested_option": "harvest teal / XXL",
+      "payment_method": "gift_card",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-FCZHZRVNMSNNV",
+      "item_id": "v8e2_sku_28JCGNPUHMGS8",
+      "new_item_id": "v8e2_sku_MXAUQNVLTQBER",
+      "payment_method": "v8e2_gift_TNHKDMG9NQJHN",
+      "reason": "ordered by mistake",
+      "amount_cents": 9908,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_fallback_available-00",
+    "family": "exchange_fallback_available",
+    "split": "test",
+    "initial_message": "Order reference R8E2-6P7EEKS8XR7KL.\nMy requested outcome is the flax plum / XS hoodie exchange using original payment. Supply that variant if it is in stock; the contingency must not replace an available swap. A stock failure for the replacement I finally select is the sole event in which I give you leave to return mine.\nAccount contact: v8e2shoppermj7gmh2mvcnbu@cohort-retail.example.",
+    "evidence_initial": "My requested outcome is the flax plum / XS hoodie exchange using original payment. Supply that variant if it is in stock; the contingency must not replace an available swap. A stock failure for the replacement I finally select is the sole event in which I give you leave to return mine.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_WDAY4FKAH4VWE",
+      "email": "v8e2shoppermj7gmh2mvcnbu@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_P6EMEJFB3QPUJ",
+        "balance_cents": 23800
+      }
+    },
+    "products": {
+      "v8e2_product_63ZK8JX9SPSRS": {
+        "product_id": "v8e2_product_63ZK8JX9SPSRS",
+        "name": "Eidergate terry hoodie",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_8Q2SERPWK9KZR",
+            "option": "shadow maize / XL",
+            "price_cents": 10006,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_QWS4EJVCUU37F",
+            "option": "wheat aquamarine / M",
+            "price_cents": 10626,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_TK4VBEZZ27RC4",
+            "option": "flax plum / XS",
+            "price_cents": 9156,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-6P7EEKS8XR7KL",
+        "user_id": "v8e2_user_WDAY4FKAH4VWE",
+        "status": "delivered",
+        "original_payment": "v8e2_card_S9Y36ZB7Y2QYK",
+        "items": [
+          {
+            "item_id": "v8e2_sku_8Q2SERPWK9KZR",
+            "product_id": "v8e2_product_63ZK8JX9SPSRS",
+            "option": "shadow maize / XL",
+            "price_cents": 10006
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shoppermj7gmh2mvcnbu@cohort-retail.example as my account email.",
+      "order_id": "R8E2-6P7EEKS8XR7KL",
+      "reason": "no longer needed",
+      "new_option": "My choice is flax plum / XS for this hoodie.",
+      "item_id": "v8e2_sku_8Q2SERPWK9KZR",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shoppermj7gmh2mvcnbu@cohort-retail.example",
+      "order_id": "R8E2-6P7EEKS8XR7KL",
+      "requested_option": "flax plum / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shoppermj7gmh2mvcnbu@cohort-retail.example",
+      "order_id": "R8E2-6P7EEKS8XR7KL",
+      "requested_option": "flax plum / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-6P7EEKS8XR7KL",
+      "item_id": "v8e2_sku_8Q2SERPWK9KZR",
+      "new_item_id": "v8e2_sku_TK4VBEZZ27RC4",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -850,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_fallback_available-01",
+    "family": "exchange_fallback_available",
+    "split": "test",
+    "initial_message": "Check whether the chalk jade / S tunic can be exchanged through original payment. A possible backup is not a request to abandon a replacement that can be supplied. My instruction includes a return contingency, but it takes effect only when my selected exchange cannot be supplied.\nReceipt number: R8E2-KRY2XXS9QQQHT.\nAccount contact: v8e2shopper6cj9rp7r4yl4a@cohort-retail.example.",
+    "evidence_initial": "Check whether the chalk jade / S tunic can be exchanged through original payment. A possible backup is not a request to abandon a replacement that can be supplied. My instruction includes a return contingency, but it takes effect only when my selected exchange cannot be supplied.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_U8Z56RTF49Z28",
+      "email": "v8e2shopper6cj9rp7r4yl4a@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_MCPAQB2ZPV5FN",
+        "balance_cents": 23825
+      }
+    },
+    "products": {
+      "v8e2_product_A8WRFX5UALKNL": {
+        "product_id": "v8e2_product_A8WRFX5UALKNL",
+        "name": "Foxglovecove cotton tunic",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_YFVRJDRF3WMYT",
+            "option": "chalk jade / S",
+            "price_cents": 11385,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_RP7KMPRKELU9C",
+            "option": "zinc apricot / L",
+            "price_cents": 10935,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_RU8MD5GE4ZKMD",
+            "option": "iron blush / XXL",
+            "price_cents": 9985,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-KRY2XXS9QQQHT",
+        "user_id": "v8e2_user_U8Z56RTF49Z28",
+        "status": "delivered",
+        "original_payment": "v8e2_card_DHJDMPTPFJHXS",
+        "items": [
+          {
+            "item_id": "v8e2_sku_RU8MD5GE4ZKMD",
+            "product_id": "v8e2_product_A8WRFX5UALKNL",
+            "option": "iron blush / XXL",
+            "price_cents": 9985
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopper6cj9rp7r4yl4a@cohort-retail.example>.",
+      "order_id": "R8E2-KRY2XXS9QQQHT",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is chalk jade / S for this tunic.",
+      "item_id": "v8e2_sku_RU8MD5GE4ZKMD",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopper6cj9rp7r4yl4a@cohort-retail.example",
+      "order_id": "R8E2-KRY2XXS9QQQHT",
+      "requested_option": "chalk jade / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper6cj9rp7r4yl4a@cohort-retail.example",
+      "order_id": "R8E2-KRY2XXS9QQQHT",
+      "requested_option": "chalk jade / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-KRY2XXS9QQQHT",
+      "item_id": "v8e2_sku_RU8MD5GE4ZKMD",
+      "new_item_id": "v8e2_sku_YFVRJDRF3WMYT",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1400,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-return_reject_exchange-00",
+    "family": "return_reject_exchange",
+    "split": "test",
+    "initial_message": "Order reference R8E2-R4VP3VP7UR6J9.\nI have considered the aubergine mist / M windbreaker and decided against exchanging. Please return the whole item and refund original payment instead.\nAccount contact: v8e2shopper8l5f23qqgcygp@cohort-retail.example.",
+    "evidence_initial": "I have considered the aubergine mist / M windbreaker and decided against exchanging. Please return the whole item and refund original payment instead.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_6DD78GN6GJCPF",
+      "email": "v8e2shopper8l5f23qqgcygp@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_HV5MNZSNKFZR4",
+        "balance_cents": 23850
+      }
+    },
+    "products": {
+      "v8e2_product_L9DKLTB8KNS4S": {
+        "product_id": "v8e2_product_L9DKLTB8KNS4S",
+        "name": "Granitebrook windbreaker",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_7MZUP3A3QPQBE",
+            "option": "stone tangerine / XL",
+            "price_cents": 10803,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_DZRETPEELS8GY",
+            "option": "bark azure / XS",
+            "price_cents": 10183,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_H8JPBGCCBSMK9",
+            "option": "aubergine mist / M",
+            "price_cents": 12833,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-R4VP3VP7UR6J9",
+        "user_id": "v8e2_user_6DD78GN6GJCPF",
+        "status": "delivered",
+        "original_payment": "v8e2_card_AS92BJDY6NFUS",
+        "items": [
+          {
+            "item_id": "v8e2_sku_DZRETPEELS8GY",
+            "product_id": "v8e2_product_L9DKLTB8KNS4S",
+            "option": "bark azure / XS",
+            "price_cents": 10183
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopper8l5f23qqgcygp@cohort-retail.example as my account email.",
+      "order_id": "R8E2-R4VP3VP7UR6J9",
+      "reason": "no longer needed",
+      "new_option": "My choice is aubergine mist / M for this windbreaker.",
+      "item_id": "v8e2_sku_DZRETPEELS8GY",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8e2shopper8l5f23qqgcygp@cohort-retail.example",
+      "order_id": "R8E2-R4VP3VP7UR6J9",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shopper8l5f23qqgcygp@cohort-retail.example",
+      "order_id": "R8E2-R4VP3VP7UR6J9",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-R4VP3VP7UR6J9",
+      "item_id": "v8e2_sku_DZRETPEELS8GY",
+      "new_item_id": "v8e2_sku_H8JPBGCCBSMK9",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 10183,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-return_reject_exchange-01",
+    "family": "return_reject_exchange",
+    "split": "test",
+    "initial_message": "Do not place an exchange for pearl russet / L. The shirt should be a complete return, with its refund on original payment.\nReceipt number: R8E2-YC3EVTQU6GSQF.\nAccount contact: v8e2shopper24866yn5nqvcy@cohort-retail.example.",
+    "evidence_initial": "Do not place an exchange for pearl russet / L. The shirt should be a complete return, with its refund on original payment.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_MXVZ8FNCKZ9DF",
+      "email": "v8e2shopper24866yn5nqvcy@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_ZKBNQDPSCWVTW",
+        "balance_cents": 23875
+      }
+    },
+    "products": {
+      "v8e2_product_TZU289S2SC9KT": {
+        "product_id": "v8e2_product_TZU289S2SC9KT",
+        "name": "Hazelshore woven shirt",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_AGJKD7QWN57F4",
+            "option": "carbon wheat / S",
+            "price_cents": 10512,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_CM4GDEWKTT4KY",
+            "option": "misty currant / XXL",
+            "price_cents": 11462,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_PXFMEBLEQP75K",
+            "option": "pearl russet / L",
+            "price_cents": 10512,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-YC3EVTQU6GSQF",
+        "user_id": "v8e2_user_MXVZ8FNCKZ9DF",
+        "status": "delivered",
+        "original_payment": "v8e2_card_F6X8ALJ2PUKCZ",
+        "items": [
+          {
+            "item_id": "v8e2_sku_AGJKD7QWN57F4",
+            "product_id": "v8e2_product_TZU289S2SC9KT",
+            "option": "carbon wheat / S",
+            "price_cents": 10512
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopper24866yn5nqvcy@cohort-retail.example>.",
+      "order_id": "R8E2-YC3EVTQU6GSQF",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is pearl russet / L for this shirt.",
+      "item_id": "v8e2_sku_AGJKD7QWN57F4",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "v8e2shopper24866yn5nqvcy@cohort-retail.example",
+      "order_id": "R8E2-YC3EVTQU6GSQF",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shopper24866yn5nqvcy@cohort-retail.example",
+      "order_id": "R8E2-YC3EVTQU6GSQF",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-YC3EVTQU6GSQF",
+      "item_id": "v8e2_sku_AGJKD7QWN57F4",
+      "new_item_id": "v8e2_sku_PXFMEBLEQP75K",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 10512,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_stockout_unknown-00",
+    "family": "exchange_stockout_unknown",
+    "split": "test",
+    "initial_message": "Order reference R8E2-J3NH7T93JDCS9.\nSeek a moraine beige / XL pullover exchange and use original payment for its difference. I am not ready to make any decision about a stockout fallback.\nAccount contact: v8e2shopper59h6737ctjgzy@cohort-retail.example.",
+    "evidence_initial": "Seek a moraine beige / XL pullover exchange and use original payment for its difference. I am not ready to make any decision about a stockout fallback.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_33E4QXXYT9B2M",
+      "email": "v8e2shopper59h6737ctjgzy@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_M32PRH4CRLYZV",
+        "balance_cents": 23900
+      }
+    },
+    "products": {
+      "v8e2_product_CLV47QBEBVY84": {
+        "product_id": "v8e2_product_CLV47QBEBVY84",
+        "name": "Ivycross textured pullover",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_JKG96ZN6QM8UF",
+            "option": "mushroom wine / M",
+            "price_cents": 10489,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_BS7EFJPUXDLCQ",
+            "option": "moraine beige / XL",
+            "price_cents": 9639,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_5JEM3GTD8SK7M",
+            "option": "bamboo crimson / XS",
+            "price_cents": 11109,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-J3NH7T93JDCS9",
+        "user_id": "v8e2_user_33E4QXXYT9B2M",
+        "status": "delivered",
+        "original_payment": "v8e2_card_ENNJACYNBNUCV",
+        "items": [
+          {
+            "item_id": "v8e2_sku_JKG96ZN6QM8UF",
+            "product_id": "v8e2_product_CLV47QBEBVY84",
+            "option": "mushroom wine / M",
+            "price_cents": 10489
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopper59h6737ctjgzy@cohort-retail.example as my account email.",
+      "order_id": "R8E2-J3NH7T93JDCS9",
+      "reason": "no longer needed",
+      "new_option": "My choice is moraine beige / XL for this pullover.",
+      "item_id": "v8e2_sku_JKG96ZN6QM8UF",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopper59h6737ctjgzy@cohort-retail.example",
+      "order_id": "R8E2-J3NH7T93JDCS9",
+      "requested_option": "moraine beige / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper59h6737ctjgzy@cohort-retail.example",
+      "order_id": "R8E2-J3NH7T93JDCS9",
+      "requested_option": "moraine beige / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-J3NH7T93JDCS9",
+      "item_id": "v8e2_sku_JKG96ZN6QM8UF",
+      "new_item_id": "v8e2_sku_BS7EFJPUXDLCQ",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 10489,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_stockout_unknown-01",
+    "family": "exchange_stockout_unknown",
+    "split": "test",
+    "initial_message": "I would like the skirt replaced with thunder sage / XXL, adjusted through original payment. If that cannot be sourced, my next preference remains undecided.\nReceipt number: R8E2-UC5YJM7XT24KU.\nAccount contact: v8e2shopperfc892bkktapys@cohort-retail.example.",
+    "evidence_initial": "I would like the skirt replaced with thunder sage / XXL, adjusted through original payment. If that cannot be sourced, my next preference remains undecided.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_UQLXGZVR84MAV",
+      "email": "v8e2shopperfc892bkktapys@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_NALYDK6WXPVAJ",
+        "balance_cents": 23925
+      }
+    },
+    "products": {
+      "v8e2_product_2ALCT2DW49DE9": {
+        "product_id": "v8e2_product_2ALCT2DW49DE9",
+        "name": "Jackdawfield jersey skirt",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_83S9YDMZ2GPHL",
+            "option": "charcoal peach / L",
+            "price_cents": 10666,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_F6UET4UMNZ74Y",
+            "option": "thunder sage / XXL",
+            "price_cents": 12066,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_WYPMSTQJEKTU4",
+            "option": "pale damson / S",
+            "price_cents": 11616,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-UC5YJM7XT24KU",
+        "user_id": "v8e2_user_UQLXGZVR84MAV",
+        "status": "delivered",
+        "original_payment": "v8e2_card_WGHRY53GS25NH",
+        "items": [
+          {
+            "item_id": "v8e2_sku_83S9YDMZ2GPHL",
+            "product_id": "v8e2_product_2ALCT2DW49DE9",
+            "option": "charcoal peach / L",
+            "price_cents": 10666
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopperfc892bkktapys@cohort-retail.example>.",
+      "order_id": "R8E2-UC5YJM7XT24KU",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is thunder sage / XXL for this skirt.",
+      "item_id": "v8e2_sku_83S9YDMZ2GPHL",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperfc892bkktapys@cohort-retail.example",
+      "order_id": "R8E2-UC5YJM7XT24KU",
+      "requested_option": "thunder sage / XXL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperfc892bkktapys@cohort-retail.example",
+      "order_id": "R8E2-UC5YJM7XT24KU",
+      "requested_option": "thunder sage / XXL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-UC5YJM7XT24KU",
+      "item_id": "v8e2_sku_83S9YDMZ2GPHL",
+      "new_item_id": "v8e2_sku_F6UET4UMNZ74Y",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 10666,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_stockout_missing_email-00",
+    "family": "exchange_stockout_missing_email",
+    "split": "test",
+    "initial_message": "Order reference R8E2-W92CZTT8SDQKK.\nCollect my account email, then try exchanging the gilet for cerulean sand / XS through original payment. I refuse an item return if stock is missing; have a representative handle that situation.",
+    "evidence_initial": "Collect my account email, then try exchanging the gilet for cerulean sand / XS through original payment. I refuse an item return if stock is missing; have a representative handle that situation.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_M9W7AHEMWSSRR",
+      "email": "v8e2shopper5vrksphx9fx7z@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_K482RTMWZBZRT",
+        "balance_cents": 23950
+      }
+    },
+    "products": {
+      "v8e2_product_ZCWYD6567QF78": {
+        "product_id": "v8e2_product_ZCWYD6567QF78",
+        "name": "Knotgrassquay quilted gilet",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_CSSW8RHSUFN9E",
+            "option": "cerulean sand / XS",
+            "price_cents": 13615,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_EV98MSAEJA75K",
+            "option": "lichen chestnut / XL",
+            "price_cents": 10965,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_M8PBAFMCTF6V4",
+            "option": "sanded cobalt / M",
+            "price_cents": 11585,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-W92CZTT8SDQKK",
+        "user_id": "v8e2_user_M9W7AHEMWSSRR",
+        "status": "delivered",
+        "original_payment": "v8e2_card_JCK9DM8QZVF6S",
+        "items": [
+          {
+            "item_id": "v8e2_sku_EV98MSAEJA75K",
+            "product_id": "v8e2_product_ZCWYD6567QF78",
+            "option": "lichen chestnut / XL",
+            "price_cents": 10965
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopper5vrksphx9fx7z@cohort-retail.example as my account email.",
+      "order_id": "R8E2-W92CZTT8SDQKK",
+      "reason": "no longer needed",
+      "new_option": "My choice is cerulean sand / XS for this gilet.",
+      "item_id": "v8e2_sku_EV98MSAEJA75K",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "R8E2-W92CZTT8SDQKK",
+      "requested_option": "cerulean sand / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper5vrksphx9fx7z@cohort-retail.example",
+      "order_id": "R8E2-W92CZTT8SDQKK",
+      "requested_option": "cerulean sand / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-W92CZTT8SDQKK",
+      "item_id": "v8e2_sku_EV98MSAEJA75K",
+      "new_item_id": "v8e2_sku_CSSW8RHSUFN9E",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 10965,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_stockout_missing_email-01",
+    "family": "exchange_stockout_missing_email",
+    "split": "test",
+    "initial_message": "I have not provided my mailbox yet. I want the cinnamon slate / S smock as an original-payment exchange, and any stockout must go to support because I do not authorize a return.\nReceipt number: R8E2-KZMK8SAFGE29L.",
+    "evidence_initial": "I have not provided my mailbox yet. I want the cinnamon slate / S smock as an original-payment exchange, and any stockout must go to support because I do not authorize a return.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_LU56T3CTB26GE",
+      "email": "v8e2shopper9ehyqc6gcv6ze@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_V9R2SN6CXXC26",
+        "balance_cents": 23975
+      }
+    },
+    "products": {
+      "v8e2_product_PRY6HAMRJ3K5Q": {
+        "product_id": "v8e2_product_PRY6HAMRJ3K5Q",
+        "name": "Lindenreach cotton smock",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_6U4UYAHSEZPTW",
+            "option": "taupe emerald / XXL",
+            "price_cents": 11090,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_25FCW9QQGS9F5",
+            "option": "cinnamon slate / S",
+            "price_cents": 11090,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_DQR7CJ3TYV979",
+            "option": "creamy pine / L",
+            "price_cents": 12040,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-KZMK8SAFGE29L",
+        "user_id": "v8e2_user_LU56T3CTB26GE",
+        "status": "delivered",
+        "original_payment": "v8e2_card_3RDF3H88ZYVQN",
+        "items": [
+          {
+            "item_id": "v8e2_sku_6U4UYAHSEZPTW",
+            "product_id": "v8e2_product_PRY6HAMRJ3K5Q",
+            "option": "taupe emerald / XXL",
+            "price_cents": 11090
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopper9ehyqc6gcv6ze@cohort-retail.example>.",
+      "order_id": "R8E2-KZMK8SAFGE29L",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is cinnamon slate / S for this smock.",
+      "item_id": "v8e2_sku_6U4UYAHSEZPTW",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "R8E2-KZMK8SAFGE29L",
+      "requested_option": "cinnamon slate / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper9ehyqc6gcv6ze@cohort-retail.example",
+      "order_id": "R8E2-KZMK8SAFGE29L",
+      "requested_option": "cinnamon slate / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-KZMK8SAFGE29L",
+      "item_id": "v8e2_sku_6U4UYAHSEZPTW",
+      "new_item_id": "v8e2_sku_25FCW9QQGS9F5",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 11090,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_stockout_negative_quote-00",
+    "family": "exchange_stockout_negative_quote",
+    "split": "test",
+    "initial_message": "Order reference R8E2-Y7CKDL8SAMX4A.\nA help article prints 'YES, return the item if the replacement is sold out'. That is a quoted example, not my consent. I want the marsh lavender / M waistcoat exchange through original payment; refuse a fallback return and contact a person if needed.\nAccount contact: v8e2shopperjy6espxuhhva2@cohort-retail.example.",
+    "evidence_initial": "A help article prints 'YES, return the item if the replacement is sold out'. That is a quoted example, not my consent. I want the marsh lavender / M waistcoat exchange through original payment; refuse a fallback return and contact a person if needed.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_4N48Z366J9BUK",
+      "email": "v8e2shopperjy6espxuhhva2@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_QBYLYDW6FQLYK",
+        "balance_cents": 24000
+      }
+    },
+    "products": {
+      "v8e2_product_34VLDMQB3D3KM": {
+        "product_id": "v8e2_product_34VLDMQB3D3KM",
+        "name": "Meadowgate wool waistcoat",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_DT3ZUT7XHPR8H",
+            "option": "powder cinnamon / XL",
+            "price_cents": 12096,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_KXSHCBXVZSV6A",
+            "option": "dried fern / XS",
+            "price_cents": 11476,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_VYCYWUJTPLP3Y",
+            "option": "marsh lavender / M",
+            "price_cents": 10626,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-Y7CKDL8SAMX4A",
+        "user_id": "v8e2_user_4N48Z366J9BUK",
+        "status": "delivered",
+        "original_payment": "v8e2_card_4FQGRV54J7CEX",
+        "items": [
+          {
+            "item_id": "v8e2_sku_KXSHCBXVZSV6A",
+            "product_id": "v8e2_product_34VLDMQB3D3KM",
+            "option": "dried fern / XS",
+            "price_cents": 11476
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopperjy6espxuhhva2@cohort-retail.example as my account email.",
+      "order_id": "R8E2-Y7CKDL8SAMX4A",
+      "reason": "no longer needed",
+      "new_option": "My choice is marsh lavender / M for this waistcoat.",
+      "item_id": "v8e2_sku_KXSHCBXVZSV6A",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperjy6espxuhhva2@cohort-retail.example",
+      "order_id": "R8E2-Y7CKDL8SAMX4A",
+      "requested_option": "marsh lavender / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperjy6espxuhhva2@cohort-retail.example",
+      "order_id": "R8E2-Y7CKDL8SAMX4A",
+      "requested_option": "marsh lavender / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-Y7CKDL8SAMX4A",
+      "item_id": "v8e2_sku_KXSHCBXVZSV6A",
+      "new_item_id": "v8e2_sku_VYCYWUJTPLP3Y",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 11476,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_stockout_negative_quote-01",
+    "family": "exchange_stockout_negative_quote",
+    "split": "test",
+    "initial_message": "For the top, request antique coral / L and settle original payment. The phrase 'I approve a return after a stockout' appears in a sample chat I am quoting. I do not approve that return for mine; let staff handle an unavailable exchange.\nReceipt number: R8E2-VLDF9UNFG88PN.\nAccount contact: v8e2shopperb7x7b7cgc2rkc@cohort-retail.example.",
+    "evidence_initial": "For the top, request antique coral / L and settle original payment. The phrase 'I approve a return after a stockout' appears in a sample chat I am quoting. I do not approve that return for mine; let staff handle an unavailable exchange.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_3Z8XUNPBF2Z4Q",
+      "email": "v8e2shopperb7x7b7cgc2rkc@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_TUNXGCEYK7QBE",
+        "balance_cents": 24025
+      }
+    },
+    "products": {
+      "v8e2_product_GRM2E9JLMULDL": {
+        "product_id": "v8e2_product_GRM2E9JLMULDL",
+        "name": "Nettleford knit top",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_E9LVR5CJTPA5Y",
+            "option": "olive pearl / XXL",
+            "price_cents": 12349,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_M349T6ELFLCCS",
+            "option": "umber pearl / S",
+            "price_cents": 11399,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_2Y5XE6VL5MP7X",
+            "option": "antique coral / L",
+            "price_cents": 12799,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-VLDF9UNFG88PN",
+        "user_id": "v8e2_user_3Z8XUNPBF2Z4Q",
+        "status": "delivered",
+        "original_payment": "v8e2_card_YLC5SAJR337L8",
+        "items": [
+          {
+            "item_id": "v8e2_sku_M349T6ELFLCCS",
+            "product_id": "v8e2_product_GRM2E9JLMULDL",
+            "option": "umber pearl / S",
+            "price_cents": 11399
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopperb7x7b7cgc2rkc@cohort-retail.example>.",
+      "order_id": "R8E2-VLDF9UNFG88PN",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is antique coral / L for this top.",
+      "item_id": "v8e2_sku_M349T6ELFLCCS",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperb7x7b7cgc2rkc@cohort-retail.example",
+      "order_id": "R8E2-VLDF9UNFG88PN",
+      "requested_option": "antique coral / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperb7x7b7cgc2rkc@cohort-retail.example",
+      "order_id": "R8E2-VLDF9UNFG88PN",
+      "requested_option": "antique coral / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-VLDF9UNFG88PN",
+      "item_id": "v8e2_sku_M349T6ELFLCCS",
+      "new_item_id": "v8e2_sku_2Y5XE6VL5MP7X",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 11399,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_stockout_question-00",
+    "family": "exchange_stockout_question",
+    "split": "test",
+    "initial_message": "Order reference R8E2-EYNLUHYD75JKE.\nIs an item return an option if the sleet turquoise / XL anorak is sold out? I am asking about policy, not authorizing a return. My request is an original-payment exchange, and I want staff help if it cannot be filled.\nAccount contact: v8e2shopperkyb9my3fnt7sf@cohort-retail.example.",
+    "evidence_initial": "Is an item return an option if the sleet turquoise / XL anorak is sold out? I am asking about policy, not authorizing a return. My request is an original-payment exchange, and I want staff help if it cannot be filled.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_DQBV3P6C5YFN4",
+      "email": "v8e2shopperkyb9my3fnt7sf@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_LEJ7U7EKQACAR",
+        "balance_cents": 24050
+      }
+    },
+    "products": {
+      "v8e2_product_KWZD6P8P9U6JF": {
+        "product_id": "v8e2_product_KWZD6P8P9U6JF",
+        "name": "Orchardcove brushed anorak",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_A7M24LTZV777L",
+            "option": "sleet turquoise / XL",
+            "price_cents": 14278,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_SGP6B765632F5",
+            "option": "malt indigo / M",
+            "price_cents": 11628,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_3VPP58S5DKG78",
+            "option": "ginger glass / XS",
+            "price_cents": 12248,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-EYNLUHYD75JKE",
+        "user_id": "v8e2_user_DQBV3P6C5YFN4",
+        "status": "delivered",
+        "original_payment": "v8e2_card_4BFS8ENMBCKUZ",
+        "items": [
+          {
+            "item_id": "v8e2_sku_SGP6B765632F5",
+            "product_id": "v8e2_product_KWZD6P8P9U6JF",
+            "option": "malt indigo / M",
+            "price_cents": 11628
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopperkyb9my3fnt7sf@cohort-retail.example as my account email.",
+      "order_id": "R8E2-EYNLUHYD75JKE",
+      "reason": "no longer needed",
+      "new_option": "My choice is sleet turquoise / XL for this anorak.",
+      "item_id": "v8e2_sku_SGP6B765632F5",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperkyb9my3fnt7sf@cohort-retail.example",
+      "order_id": "R8E2-EYNLUHYD75JKE",
+      "requested_option": "sleet turquoise / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperkyb9my3fnt7sf@cohort-retail.example",
+      "order_id": "R8E2-EYNLUHYD75JKE",
+      "requested_option": "sleet turquoise / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-EYNLUHYD75JKE",
+      "item_id": "v8e2_sku_SGP6B765632F5",
+      "new_item_id": "v8e2_sku_A7M24LTZV777L",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 11628,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_stockout_question-01",
+    "family": "exchange_stockout_question",
+    "split": "test",
+    "initial_message": "Please check the pomegranate ash / XXL shirt exchange using original payment. What steps would a refund require after a stockout? Do not execute a return on the strength of that question; I decline it and prefer a person.\nReceipt number: R8E2-RL3HY8T4K62ZY.\nAccount contact: v8e2shopperaqm45e837uupf@cohort-retail.example.",
+    "evidence_initial": "Please check the pomegranate ash / XXL shirt exchange using original payment. What steps would a refund require after a stockout? Do not execute a return on the strength of that question; I decline it and prefer a person.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_3MHFBZUNEX4UN",
+      "email": "v8e2shopperaqm45e837uupf@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_TFZTRCLQK2W2P",
+        "balance_cents": 24075
+      }
+    },
+    "products": {
+      "v8e2_product_WTXX8TUJSXEXB": {
+        "product_id": "v8e2_product_WTXX8TUJSXEXB",
+        "name": "Plovermere denim shirt",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_SDGJZNSYELX3U",
+            "option": "grape flax / S",
+            "price_cents": 12652,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_H3DKYDZKYCH2W",
+            "option": "raven beige / L",
+            "price_cents": 11702,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_K6748XWFZZZD3",
+            "option": "pomegranate ash / XXL",
+            "price_cents": 11702,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-RL3HY8T4K62ZY",
+        "user_id": "v8e2_user_3MHFBZUNEX4UN",
+        "status": "delivered",
+        "original_payment": "v8e2_card_P5RG4EA4DH62E",
+        "items": [
+          {
+            "item_id": "v8e2_sku_H3DKYDZKYCH2W",
+            "product_id": "v8e2_product_WTXX8TUJSXEXB",
+            "option": "raven beige / L",
+            "price_cents": 11702
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopperaqm45e837uupf@cohort-retail.example>.",
+      "order_id": "R8E2-RL3HY8T4K62ZY",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is pomegranate ash / XXL for this shirt.",
+      "item_id": "v8e2_sku_H3DKYDZKYCH2W",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopperaqm45e837uupf@cohort-retail.example",
+      "order_id": "R8E2-RL3HY8T4K62ZY",
+      "requested_option": "pomegranate ash / XXL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopperaqm45e837uupf@cohort-retail.example",
+      "order_id": "R8E2-RL3HY8T4K62ZY",
+      "requested_option": "pomegranate ash / XXL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "handoff",
+      "order_id": "R8E2-RL3HY8T4K62ZY",
+      "item_id": "v8e2_sku_H3DKYDZKYCH2W",
+      "new_item_id": "v8e2_sku_K6748XWFZZZD3",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 11702,
+      "initial_status": "delivered",
+      "target_status": "delivered"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_available_refusal-00",
+    "family": "exchange_available_refusal",
+    "split": "test",
+    "initial_message": "Order reference R8E2-QJH9FV7NZPQQY.\nI approve the dandelion smoke / XS sweatshirt exchange, with the adjustment on original payment. Keep that exchange if available: I am explicitly ruling out a full return.\nAccount contact: v8e2shopper8db8spc7cl6kq@cohort-retail.example.",
+    "evidence_initial": "I approve the dandelion smoke / XS sweatshirt exchange, with the adjustment on original payment. Keep that exchange if available: I am explicitly ruling out a full return.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_KC7HYK9UCRRV5",
+      "email": "v8e2shopper8db8spc7cl6kq@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_WSBLF5Y343K6L",
+        "balance_cents": 24100
+      }
+    },
+    "products": {
+      "v8e2_product_BH8F7NERAHQZA": {
+        "product_id": "v8e2_product_BH8F7NERAHQZA",
+        "name": "Rowanfield fleece sweatshirt",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_GB8U2RQH92J5D",
+            "option": "dandelion smoke / XS",
+            "price_cents": 11231,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_AMZVUZKWF7R3A",
+            "option": "slate nutmeg / XL",
+            "price_cents": 12081,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_ZRHF6DSXTU3TJ",
+            "option": "pistachio ash / M",
+            "price_cents": 12701,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-QJH9FV7NZPQQY",
+        "user_id": "v8e2_user_KC7HYK9UCRRV5",
+        "status": "delivered",
+        "original_payment": "v8e2_card_SUBKM5CMCAGRM",
+        "items": [
+          {
+            "item_id": "v8e2_sku_AMZVUZKWF7R3A",
+            "product_id": "v8e2_product_BH8F7NERAHQZA",
+            "option": "slate nutmeg / XL",
+            "price_cents": 12081
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopper8db8spc7cl6kq@cohort-retail.example as my account email.",
+      "order_id": "R8E2-QJH9FV7NZPQQY",
+      "reason": "no longer needed",
+      "new_option": "My choice is dandelion smoke / XS for this sweatshirt.",
+      "item_id": "v8e2_sku_AMZVUZKWF7R3A",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopper8db8spc7cl6kq@cohort-retail.example",
+      "order_id": "R8E2-QJH9FV7NZPQQY",
+      "requested_option": "dandelion smoke / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper8db8spc7cl6kq@cohort-retail.example",
+      "order_id": "R8E2-QJH9FV7NZPQQY",
+      "requested_option": "dandelion smoke / XS",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-QJH9FV7NZPQQY",
+      "item_id": "v8e2_sku_AMZVUZKWF7R3A",
+      "new_item_id": "v8e2_sku_GB8U2RQH92J5D",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -850,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_available_refusal-01",
+    "family": "exchange_available_refusal",
+    "split": "test",
+    "initial_message": "Exchange this jacket into peacock stone / S and settle through original payment. A full-item return is not permitted by me, even though the swap remains requested.\nReceipt number: R8E2-SS9D9FD633DDK.\nAccount contact: v8e2shoppersjcgs5vp3g7qc@cohort-retail.example.",
+    "evidence_initial": "Exchange this jacket into peacock stone / S and settle through original payment. A full-item return is not permitted by me, even though the swap remains requested.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_LW7Z9HW99LMQ6",
+      "email": "v8e2shoppersjcgs5vp3g7qc@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_5CUY2ZBRCJBGN",
+        "balance_cents": 24125
+      }
+    },
+    "products": {
+      "v8e2_product_7SBNZBC7U3K93": {
+        "product_id": "v8e2_product_7SBNZBC7U3K93",
+        "name": "Sorrelcross rain jacket",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_DMJ48C3NR6UNL",
+            "option": "peacock stone / S",
+            "price_cents": 13474,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_7BGDD3Q3QJTX7",
+            "option": "walnut seafoam / XXL",
+            "price_cents": 12074,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_PL88Q7CPL8YRX",
+            "option": "celadon blush / L",
+            "price_cents": 13024,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-SS9D9FD633DDK",
+        "user_id": "v8e2_user_LW7Z9HW99LMQ6",
+        "status": "delivered",
+        "original_payment": "v8e2_card_57TXPVFW3KMDD",
+        "items": [
+          {
+            "item_id": "v8e2_sku_7BGDD3Q3QJTX7",
+            "product_id": "v8e2_product_7SBNZBC7U3K93",
+            "option": "walnut seafoam / XXL",
+            "price_cents": 12074
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shoppersjcgs5vp3g7qc@cohort-retail.example>.",
+      "order_id": "R8E2-SS9D9FD633DDK",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is peacock stone / S for this jacket.",
+      "item_id": "v8e2_sku_7BGDD3Q3QJTX7",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shoppersjcgs5vp3g7qc@cohort-retail.example",
+      "order_id": "R8E2-SS9D9FD633DDK",
+      "requested_option": "peacock stone / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shoppersjcgs5vp3g7qc@cohort-retail.example",
+      "order_id": "R8E2-SS9D9FD633DDK",
+      "requested_option": "peacock stone / S",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "no"
+    },
+    "required_clarification": null,
+    "required_answers": [],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-SS9D9FD633DDK",
+      "item_id": "v8e2_sku_7BGDD3Q3QJTX7",
+      "new_item_id": "v8e2_sku_DMJ48C3NR6UNL",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1400,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_fallback_missing_payment-00",
+    "family": "exchange_fallback_missing_payment",
+    "split": "test",
+    "initial_message": "Order reference R8E2-N7WH55VTYR2MT.\nThe silt raspberry / M blouse is my exchange selection for the original order. Before proposing anything, collect the payment method I want to use for its adjustment. You have my permission to arrange a return if, and only if, inventory lacks the exact replacement I pick.\nAccount contact: v8e2shopper6kyy4z8xj2vbu@cohort-retail.example.",
+    "evidence_initial": "The silt raspberry / M blouse is my exchange selection for the original order. Before proposing anything, collect the payment method I want to use for its adjustment. You have my permission to arrange a return if, and only if, inventory lacks the exact replacement I pick.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context",
+      "unspecified_payment_despite_original_order"
+    ],
+    "customer": {
+      "id": "v8e2_user_CZKHTSQU6CR3P",
+      "email": "v8e2shopper6kyy4z8xj2vbu@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_WXBNYRFDBJ9QB",
+        "balance_cents": 24150
+      }
+    },
+    "products": {
+      "v8e2_product_C9NF9AFMYNSWK": {
+        "product_id": "v8e2_product_C9NF9AFMYNSWK",
+        "name": "Thistlegate jersey blouse",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_7HBYBM2874AG7",
+            "option": "chalky wine / XL",
+            "price_cents": 13071,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_LD3CYUDK5MV3Z",
+            "option": "silt raspberry / M",
+            "price_cents": 15101,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_GF9R4FSVNXVHH",
+            "option": "deep cassis / XS",
+            "price_cents": 12451,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-N7WH55VTYR2MT",
+        "user_id": "v8e2_user_CZKHTSQU6CR3P",
+        "status": "delivered",
+        "original_payment": "v8e2_card_JHU9T7FXR4J4A",
+        "items": [
+          {
+            "item_id": "v8e2_sku_GF9R4FSVNXVHH",
+            "product_id": "v8e2_product_C9NF9AFMYNSWK",
+            "option": "deep cassis / XS",
+            "price_cents": 12451
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopper6kyy4z8xj2vbu@cohort-retail.example as my account email.",
+      "order_id": "R8E2-N7WH55VTYR2MT",
+      "reason": "no longer needed",
+      "new_option": "My choice is silt raspberry / M for this blouse.",
+      "item_id": "v8e2_sku_GF9R4FSVNXVHH",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopper6kyy4z8xj2vbu@cohort-retail.example",
+      "order_id": "R8E2-N7WH55VTYR2MT",
+      "requested_option": "silt raspberry / M",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper6kyy4z8xj2vbu@cohort-retail.example",
+      "order_id": "R8E2-N7WH55VTYR2MT",
+      "requested_option": "silt raspberry / M",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-N7WH55VTYR2MT",
+      "item_id": "v8e2_sku_GF9R4FSVNXVHH",
+      "new_item_id": "v8e2_sku_LD3CYUDK5MV3Z",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 12451,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_fallback_missing_payment-01",
+    "family": "exchange_fallback_missing_payment",
+    "split": "test",
+    "initial_message": "I want my original polo replaced by copperleaf blue / L. No funding or refund destination has been selected for this exchange yet. If the variant I choose turns out to be unstocked, consider the item return authorized by me.\nReceipt number: R8E2-U77T5XG7FXG39.\nAccount contact: v8e2shopper3g77cz655jc28@cohort-retail.example.",
+    "evidence_initial": "I want my original polo replaced by copperleaf blue / L. No funding or refund destination has been selected for this exchange yet. If the variant I choose turns out to be unstocked, consider the item return authorized by me.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context",
+      "unspecified_payment_despite_original_order"
+    ],
+    "customer": {
+      "id": "v8e2_user_3S4JWZSY92HUS",
+      "email": "v8e2shopper3g77cz655jc28@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_W65NGBP9YXNGG",
+        "balance_cents": 24175
+      }
+    },
+    "products": {
+      "v8e2_product_RV42N5N3EFEZL": {
+        "product_id": "v8e2_product_RV42N5N3EFEZL",
+        "name": "Vervainshore cotton polo",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_N66L8CM6UWV7N",
+            "option": "copperleaf blue / L",
+            "price_cents": 12718,
+            "available": false
+          },
+          {
+            "item_id": "v8e2_sku_3RJN4JUMPNZBB",
+            "option": "charred linen / S",
+            "price_cents": 12718,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_8Z6D6EEBKMBM9",
+            "option": "soft ambergreen / XXL",
+            "price_cents": 13668,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-U77T5XG7FXG39",
+        "user_id": "v8e2_user_3S4JWZSY92HUS",
+        "status": "delivered",
+        "original_payment": "v8e2_card_RSEWX995QVUZP",
+        "items": [
+          {
+            "item_id": "v8e2_sku_3RJN4JUMPNZBB",
+            "product_id": "v8e2_product_RV42N5N3EFEZL",
+            "option": "charred linen / S",
+            "price_cents": 12718
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopper3g77cz655jc28@cohort-retail.example>.",
+      "order_id": "R8E2-U77T5XG7FXG39",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is copperleaf blue / L for this polo.",
+      "item_id": "v8e2_sku_3RJN4JUMPNZBB",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "v8e2shopper3g77cz655jc28@cohort-retail.example",
+      "order_id": "R8E2-U77T5XG7FXG39",
+      "requested_option": "copperleaf blue / L",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper3g77cz655jc28@cohort-retail.example",
+      "order_id": "R8E2-U77T5XG7FXG39",
+      "requested_option": "copperleaf blue / L",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "payment_method",
+    "required_answers": [
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-U77T5XG7FXG39",
+      "item_id": "v8e2_sku_3RJN4JUMPNZBB",
+      "new_item_id": "v8e2_sku_N66L8CM6UWV7N",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 12718,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_missing_email-00",
+    "family": "exchange_missing_email",
+    "split": "test",
+    "initial_message": "Order reference R8E2-JJB5KFAF96D2V.\nPlease exchange the dress for the misted ochre / XL dress, settling any difference through original payment. You still need to obtain my account email. I consent to sending the item back as a return when the precise exchange option proves unavailable, and under no other condition.",
+    "evidence_initial": "Please exchange the dress for the misted ochre / XL dress, settling any difference through original payment. You still need to obtain my account email. I consent to sending the item back as a return when the precise exchange option proves unavailable, and under no other condition.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_E7L4XZE5NPQG4",
+      "email": "v8e2shopper4rfwz7edtkbgc@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_8T8WXSNGCYLJU",
+        "balance_cents": 24200
+      }
+    },
+    "products": {
+      "v8e2_product_UVQVH3G5C9YB7": {
+        "product_id": "v8e2_product_UVQVH3G5C9YB7",
+        "name": "Wheatbrook knitted dress",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_75QPVXPZTU4C2",
+            "option": "misted ochre / XL",
+            "price_cents": 11973,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_G3C4TEN7JBLV5",
+            "option": "lichen espresso / M",
+            "price_cents": 12823,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_46AWR98HPBDG4",
+            "option": "granite poppy / XS",
+            "price_cents": 13443,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-JJB5KFAF96D2V",
+        "user_id": "v8e2_user_E7L4XZE5NPQG4",
+        "status": "delivered",
+        "original_payment": "v8e2_card_FHGHJHD3R5MV4",
+        "items": [
+          {
+            "item_id": "v8e2_sku_G3C4TEN7JBLV5",
+            "product_id": "v8e2_product_UVQVH3G5C9YB7",
+            "option": "lichen espresso / M",
+            "price_cents": 12823
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shopper4rfwz7edtkbgc@cohort-retail.example as my account email.",
+      "order_id": "R8E2-JJB5KFAF96D2V",
+      "reason": "no longer needed",
+      "new_option": "My choice is misted ochre / XL for this dress.",
+      "item_id": "v8e2_sku_G3C4TEN7JBLV5",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "R8E2-JJB5KFAF96D2V",
+      "requested_option": "misted ochre / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper4rfwz7edtkbgc@cohort-retail.example",
+      "order_id": "R8E2-JJB5KFAF96D2V",
+      "requested_option": "misted ochre / XL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-JJB5KFAF96D2V",
+      "item_id": "v8e2_sku_G3C4TEN7JBLV5",
+      "new_item_id": "v8e2_sku_75QPVXPZTU4C2",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": -850,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-exchange_missing_email-01",
+    "family": "exchange_missing_email",
+    "split": "test",
+    "initial_message": "My replacement choice is woodland blush / XXL for the tunic, and the adjustment belongs on original payment. Ask for the missing account contact first. Only a confirmed stockout of my requested variant activates my authorization for an item return.\nReceipt number: R8E2-4SA65G24QVFPQ.",
+    "evidence_initial": "My replacement choice is woodland blush / XXL for the tunic, and the adjustment belongs on original payment. Ask for the missing account contact first. Only a confirmed stockout of my requested variant activates my authorization for an item return.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context"
+    ],
+    "customer": {
+      "id": "v8e2_user_ZTFGM6PAH95XP",
+      "email": "v8e2shopper5qqvtuc7r89z5@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_CEY9HYW3PAS6C",
+        "balance_cents": 24225
+      }
+    },
+    "products": {
+      "v8e2_product_F7P5B7TQZPST6": {
+        "product_id": "v8e2_product_F7P5B7TQZPST6",
+        "name": "Yewhaven twill tunic",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_XX8FWJKEGJTTT",
+            "option": "woodland blush / XXL",
+            "price_cents": 14412,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_F58BHMQCJPTZA",
+            "option": "peony shale / S",
+            "price_cents": 13962,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_3VV8238HKQK95",
+            "option": "plum graphite / L",
+            "price_cents": 13012,
+            "available": false
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-4SA65G24QVFPQ",
+        "user_id": "v8e2_user_ZTFGM6PAH95XP",
+        "status": "delivered",
+        "original_payment": "v8e2_card_CDHZX52FHEXJV",
+        "items": [
+          {
+            "item_id": "v8e2_sku_3VV8238HKQK95",
+            "product_id": "v8e2_product_F7P5B7TQZPST6",
+            "option": "plum graphite / L",
+            "price_cents": 13012
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shopper5qqvtuc7r89z5@cohort-retail.example>.",
+      "order_id": "R8E2-4SA65G24QVFPQ",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is woodland blush / XXL for this tunic.",
+      "item_id": "v8e2_sku_3VV8238HKQK95",
+      "payment_method": "original",
+      "operation": "exchange",
+      "fallback_return": "YES"
+    },
+    "intent_initial": {
+      "operation": "exchange",
+      "email": "unknown",
+      "order_id": "R8E2-4SA65G24QVFPQ",
+      "requested_option": "woodland blush / XXL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "intent_complete": {
+      "operation": "exchange",
+      "email": "v8e2shopper5qqvtuc7r89z5@cohort-retail.example",
+      "order_id": "R8E2-4SA65G24QVFPQ",
+      "requested_option": "woodland blush / XXL",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "yes"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "exchange",
+      "order_id": "R8E2-4SA65G24QVFPQ",
+      "item_id": "v8e2_sku_3VV8238HKQK95",
+      "new_item_id": "v8e2_sku_XX8FWJKEGJTTT",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 1400,
+      "initial_status": "delivered",
+      "target_status": "exchange requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-missing_email_payment-00",
+    "family": "missing_email_payment",
+    "split": "test",
+    "initial_message": "Order reference R8E2-SMDDSTJVKD4RD.\nReturn the cardigan from that original purchase. I have provided neither an account email nor a choice of where the refund should go.",
+    "evidence_initial": "Return the cardigan from that original purchase. I have provided neither an account email nor a choice of where the refund should go.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context",
+      "unspecified_payment_despite_original_order"
+    ],
+    "customer": {
+      "id": "v8e2_user_VK2DJ3B7FJR2L",
+      "email": "v8e2shoppertchqy4wym4ajy@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_T66RVATYKZH8Z",
+        "balance_cents": 24250
+      }
+    },
+    "products": {
+      "v8e2_product_TXXF6KZC9PDB6": {
+        "product_id": "v8e2_product_TXXF6KZC9PDB6",
+        "name": "Zephyrford linen cardigan",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_LXBEJWTYUV99Q",
+            "option": "mossed copper / XL",
+            "price_cents": 13119,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_L2KF8EHLY7SFG",
+            "option": "dusty canary / M",
+            "price_cents": 13739,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_CRED679VWU9D4",
+            "option": "bluebell rust / XS",
+            "price_cents": 15769,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-SMDDSTJVKD4RD",
+        "user_id": "v8e2_user_VK2DJ3B7FJR2L",
+        "status": "delivered",
+        "original_payment": "v8e2_card_KWH55J7BWCD6C",
+        "items": [
+          {
+            "item_id": "v8e2_sku_LXBEJWTYUV99Q",
+            "product_id": "v8e2_product_TXXF6KZC9PDB6",
+            "option": "mossed copper / XL",
+            "price_cents": 13119
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "Please use v8e2shoppertchqy4wym4ajy@cohort-retail.example as my account email.",
+      "order_id": "R8E2-SMDDSTJVKD4RD",
+      "reason": "no longer needed",
+      "new_option": "My choice is bluebell rust / XS for this cardigan.",
+      "item_id": "v8e2_sku_LXBEJWTYUV99Q",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "R8E2-SMDDSTJVKD4RD",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shoppertchqy4wym4ajy@cohort-retail.example",
+      "order_id": "R8E2-SMDDSTJVKD4RD",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email",
+      "payment_method"
+    ],
+    "confirmation": true,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-SMDDSTJVKD4RD",
+      "item_id": "v8e2_sku_LXBEJWTYUV99Q",
+      "new_item_id": "v8e2_sku_CRED679VWU9D4",
+      "payment_method": "original",
+      "reason": "no longer needed",
+      "amount_cents": 13119,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  },
+  {
+    "id": "v8-eval2-test-missing_email_payment-01",
+    "family": "missing_email_payment",
+    "split": "test",
+    "initial_message": "I wish to return the original pullover in full. You need two details from me: the account mailbox and my refund method, which I have not chosen here.\nReceipt number: R8E2-EZJX3AZTS6QZ2.",
+    "evidence_initial": "I wish to return the original pullover in full. You need two details from me: the account mailbox and my refund method, which I have not chosen here.",
+    "coverage_tags": [
+      "fresh_eval_only",
+      "literal_quote_provenance",
+      "product_noun_context",
+      "unspecified_payment_despite_original_order"
+    ],
+    "customer": {
+      "id": "v8e2_user_5XM9VCX68L5Q8",
+      "email": "v8e2shoppers9l2sj9l6vguh@cohort-retail.example",
+      "gift_card": {
+        "id": "v8e2_gift_9VL9D4EMAG9DY",
+        "balance_cents": 24275
+      }
+    },
+    "products": {
+      "v8e2_product_HLPY7AWE8LDGT": {
+        "product_id": "v8e2_product_HLPY7AWE8LDGT",
+        "name": "Bitternquay wool pullover",
+        "variants": [
+          {
+            "item_id": "v8e2_sku_KB7DWH9ZSE4T9",
+            "option": "night saffron / XXL",
+            "price_cents": 13125,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_R542HXDJ82D96",
+            "option": "almond marine / S",
+            "price_cents": 13125,
+            "available": true
+          },
+          {
+            "item_id": "v8e2_sku_3JW8839QKX3FW",
+            "option": "ivory petrol / L",
+            "price_cents": 14075,
+            "available": true
+          }
+        ]
+      }
+    },
+    "orders": [
+      {
+        "id": "R8E2-EZJX3AZTS6QZ2",
+        "user_id": "v8e2_user_5XM9VCX68L5Q8",
+        "status": "delivered",
+        "original_payment": "v8e2_card_EMK47WLNPZDAX",
+        "items": [
+          {
+            "item_id": "v8e2_sku_KB7DWH9ZSE4T9",
+            "product_id": "v8e2_product_HLPY7AWE8LDGT",
+            "option": "night saffron / XXL",
+            "price_cents": 13125
+          }
+        ]
+      }
+    ],
+    "answers": {
+      "email": "My account email is <v8e2shoppers9l2sj9l6vguh@cohort-retail.example>.",
+      "order_id": "R8E2-EZJX3AZTS6QZ2",
+      "reason": "ordered by mistake",
+      "new_option": "My choice is almond marine / S for this pullover.",
+      "item_id": "v8e2_sku_KB7DWH9ZSE4T9",
+      "payment_method": "original",
+      "operation": "return",
+      "fallback_return": "NO"
+    },
+    "intent_initial": {
+      "operation": "return",
+      "email": "unknown",
+      "order_id": "R8E2-EZJX3AZTS6QZ2",
+      "requested_option": "unknown",
+      "payment_method": "unknown",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "intent_complete": {
+      "operation": "return",
+      "email": "v8e2shoppers9l2sj9l6vguh@cohort-retail.example",
+      "order_id": "R8E2-EZJX3AZTS6QZ2",
+      "requested_option": "unknown",
+      "payment_method": "original",
+      "reason": "unknown",
+      "fallback_return": "unknown"
+    },
+    "required_clarification": "email",
+    "required_answers": [
+      "email",
+      "payment_method"
+    ],
+    "confirmation": false,
+    "expected": {
+      "kind": "return",
+      "order_id": "R8E2-EZJX3AZTS6QZ2",
+      "item_id": "v8e2_sku_KB7DWH9ZSE4T9",
+      "new_item_id": "v8e2_sku_R542HXDJ82D96",
+      "payment_method": "original",
+      "reason": "ordered by mistake",
+      "amount_cents": 13125,
+      "initial_status": "delivered",
+      "target_status": "return requested"
+    }
+  }
+]

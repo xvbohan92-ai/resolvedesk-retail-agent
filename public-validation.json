@@ -1,61 +1,61 @@
 {
-  "schema_version": 1,
-  "status": "ready_pending_github_write_authorization",
-  "checked_at_utc": "2026-10-29T15:55:02.593668+00:00",
-  "public_core_tests": {
-    "passed": 150,
-    "skipped": 0,
+  "schema_version": 2,
+  "status": "local_publication_checks_passed",
+  "checked_at_utc": "2026-10-31T05:44:13.213513+00:00",
+  "public_cpu_tests": {
+    "passed": 214,
     "failed": 0,
-    "scope": "API, boundaries, workflows and resolution controllers; original private archive tests are outside the public CI scope"
+    "skipped": 0,
+    "scope": "150 application contracts +45 isolated stage-analysis contracts +12 public projection contracts +7 public read-only viewer/JavaScript checks",
+    "private_current_run_raw_weights_or_authorization_required": false
   },
-  "locked_fresh_environment_install": "passed",
-  "python": "3.12",
   "ruff": "passed",
-  "frontend_javascript_syntax": "passed",
-  "front_document_relative_links": "all present",
-  "lossless_public_archives_verified": 75,
-  "public_projection_reconciliation": {
+  "public_partial40_reconciliation": {
+    "status": "consistent_public_partial40_aggregates",
+    "analysis_id": "resolvedesk-v8-eval-002-partial40",
+    "cases": 40,
+    "paired_rows": 120,
+    "paired_calls": 657,
+    "business_outcomes": [
+      30,
+      30,
+      33
+    ],
+    "failed_rows": 27,
+    "failure_case_ids": 16,
+    "included_families": 20,
+    "original_families": 24,
+    "historical_updates": 1344,
+    "historical_rows_sampled": 888,
+    "historical_physical_rows": 1100,
+    "original144_gate_complete": false,
+    "raw_record_or_tokens_verified": false,
+    "private_full_source_seal_verified": false,
+    "new_model_or_gpu_calls": 0,
+    "new_training_updates": 0,
+    "verification_scope": "Public aggregate/case CSV consistency and asset digests only; published outcome labels are not rescored. Opaque record digests are format/uniqueness/bound-CSV checked, not recomputed from absent raw records. Event-only confirmation/consent counters are checked between public projections, not independently replayed."
+  },
+  "historical_cuda_run002_reconciliation": {
     "status": "public_projection_consistent",
-    "counts": {
-      "cases": 48,
-      "arms": 2,
-      "records": 96,
-      "completed_model_calls": 509,
-      "csv_rows": 96,
-      "chart_groups": 6
-    },
-    "receipt_sha256": "65b13b512708a04b27fc3f1989ab5af83a4911c8c231fc2bfea4ab609f11c384"
+    "cases": 48,
+    "arms": 2,
+    "records": 96,
+    "completed_model_calls": 509,
+    "all_previous_scientific_inputs_retained": true
   },
-  "privacy_redactions_ledger_sha256": "09ab7334e018c4f6da4e7cf80c7b58ba47332612af3cf572ad09b3fb1da166f2",
-  "private_original_seal_recertified": false,
-  "private_receipts_weights_databases_credentials_published": false,
-  "v8": {
-    "actual_smoke_updates": 4,
-    "formal_updates": 0,
-    "evaluation_model_calls": 0,
-    "quality_results_available": false
+  "stage_publication": {
+    "cases_per_arm": 40,
+    "records": 120,
+    "known_model_calls": 657,
+    "failed_records_retained": 27,
+    "chart_groups": 6,
+    "full_original144_complete": false,
+    "historical_v8_training_updates": 1344,
+    "new_training_or_model_calls_during_publication": 0,
+    "public_raw_token_replay_supported": false,
+    "public_private_source_seal_recertified": false
   },
-  "remote_ci": "not_started_until_upload",
-  "private_build_path_followup": {
-    "checked_at_utc": "2026-10-29T17:45:44.424639+00:00",
-    "portable_interpreter_path_fields": 3,
-    "private_absolute_user_paths_or_private_notebook_urls_remaining": 0,
-    "scientific_reconciliation_status": "public_projection_consistent",
-    "reconciliation_counts": {
-      "cases": 48,
-      "arms": 2,
-      "records": 96,
-      "completed_model_calls": 509,
-      "csv_rows": 96,
-      "chart_groups": 6
-    },
-    "prior_public_reconciliation_receipt_sha256": "c1ef9124bcf47dc42696827cc95b16425c574e6418e1dc77f576aed34a0ab437",
-    "current_public_reconciliation_receipt_sha256": "65b13b512708a04b27fc3f1989ab5af83a4911c8c231fc2bfea4ab609f11c384",
-    "only_changed_reconciliation_input": "public-redactions.json",
-    "all18_scientific_reconciliation_inputs_unchanged": true,
-    "all_model_results_failures_scoring_token_checks_unchanged": true,
-    "public_core_tests_rerun": false,
-    "model_or_cloud_calls": 0,
-    "scope": "Privacy-only metadata and publication-wording follow-up. The prior150-test result is retained, not re-run. Reconciliation was re-executed because its ledger-input hash changed; every scientific input and result is identical."
-  }
+  "previous_public_validation_sha256": "c8f8742e370492d562cba8e5f2e07ae870b26de7cce2bd6d3577bc50cebfb772",
+  "public_partial40_projection_sha256": "841ea6c4f8ab7383c479e56c59b46f1cf8943516a453db7e3e4762a8ce4ded88",
+  "remote_ci": "See GitHub Actions for the published commit; this receipt records pre-publication checks."
 }

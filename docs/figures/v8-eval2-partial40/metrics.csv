@@ -1,0 +1,31 @@
+variant,metric,numerator,denominator,percent
+prior_weights_old_flow,Correctly handled selected tasks,30,40,75.0
+prior_weights_old_flow,Available exchange,5,10,50.0
+prior_weights_old_flow,Stockout fallback,1,2,50.0
+prior_weights_old_flow,Necessary handoff,13,16,81.25
+prior_weights_old_flow,Missing email,2,4,50.0
+prior_weights_old_flow,Joint first raw fields,24,40,60.0
+prior_weights_old_flow,Explicit initial YES,8,8,100.0
+prior_weights_old_flow,Unsupported initial YES (lower),1,32,3.125
+prior_weights_old_flow,First raw parse failures (lower),0,40,0.0
+prior_weights_old_flow,First reason enum errors (lower),0,40,0.0
+prior_weights_new_flow,Correctly handled selected tasks,30,40,75.0
+prior_weights_new_flow,Available exchange,7,10,70.0
+prior_weights_new_flow,Stockout fallback,2,2,100.0
+prior_weights_new_flow,Necessary handoff,10,16,62.5
+prior_weights_new_flow,Missing email,2,4,50.0
+prior_weights_new_flow,Joint first raw fields,24,40,60.0
+prior_weights_new_flow,Explicit initial YES,7,8,87.5
+prior_weights_new_flow,Unsupported initial YES (lower),1,32,3.125
+prior_weights_new_flow,First raw parse failures (lower),0,40,0.0
+prior_weights_new_flow,First reason enum errors (lower),0,40,0.0
+v8_weights_new_flow,Correctly handled selected tasks,33,40,82.5
+v8_weights_new_flow,Available exchange,8,10,80.0
+v8_weights_new_flow,Stockout fallback,2,2,100.0
+v8_weights_new_flow,Necessary handoff,13,16,81.25
+v8_weights_new_flow,Missing email,3,4,75.0
+v8_weights_new_flow,Joint first raw fields,27,40,67.5
+v8_weights_new_flow,Explicit initial YES,8,8,100.0
+v8_weights_new_flow,Unsupported initial YES (lower),1,32,3.125
+v8_weights_new_flow,First raw parse failures (lower),0,40,0.0
+v8_weights_new_flow,First reason enum errors (lower),0,40,0.0

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ResolveDesk · V8 三臂评测</title>
+<style>
+  :root{font-family:system-ui,-apple-system,sans-serif;color:#173046;background:#f3f5f5;line-height:1.6}
+  *{box-sizing:border-box}body{margin:0}main{max-width:1200px;margin:auto;padding:36px 22px 70px}
+  h1{font-size:clamp(26px,4vw,40px);line-height:1.2}h2{font-size:22px;margin-top:0}
+  header p,.muted{color:#526575}section{background:white;border:1px solid #dce4e7;border-radius:14px;padding:24px;margin-top:22px}
+  button,a{color:#18577a}button{border:1px solid #a1b8c7;background:#fff;border-radius:7px;padding:9px 16px;cursor:pointer}
+  button:focus-visible,a:focus-visible{outline:3px solid #c48c38;outline-offset:3px}.status{border-left:5px solid #af7a30}
+  .scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:650px;font-variant-numeric:tabular-nums}
+  td,th{text-align:left;border-bottom:1px solid #e1e8ea;padding:10px 12px;vertical-align:top}th{font-weight:650;background:#f6f8f9}
+  td:first-child{max-width:410px;overflow-wrap:anywhere}.negative{color:#9c3e22}.links{display:flex;gap:16px;flex-wrap:wrap}
+  figure{margin:28px 0 0}img{display:block;max-width:100%;height:auto;border:1px solid #e3e8e9}figcaption{font-size:14px;color:#526575;margin-top:8px}
+  .nowrap{white-space:nowrap}#content:empty{display:none}code{overflow-wrap:anywhere}footer{margin-top:30px;color:#526575;font-size:14px}
+  progress{display:block;width:100%;height:24px;accent-color:#376786}.progress-row{margin:22px 0}
+</style>
+<main>
+  <header>
+    <p>RESOLVEDESK · READ-ONLY EVIDENCE</p>
+    <h1>V8 独立三臂评测</h1>
+    <p>48 个新编写的合成场景，计划每臂 48 条轨迹。旧权重已微调；本轮仅加载保存权重，没有新增训练。</p>
+    <button id="refresh" type="button">重新读取本地核验结果</button>
+  </header>
+  <section class="status" role="status" aria-live="polite" id="status">读取本地证据完整性状态…</section>
+  <div id="content"></div>
+  <footer>本地只读展示，无聊天、写库、审批、provider 或模型调用入口。旧部分测试和历史验证保持独立。记录完成数不是模型成功率。</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
+function section(title){const n=el('section');n.append(el('h2',title));$('content').append(n);return n;}
+function table(parent,headers,rows){const wrap=el('div');wrap.className='scroll';const t=el('table');
+  const head=el('thead'),hr=el('tr');for(const h of headers)hr.append(el('th',h));head.append(hr);t.append(head);
+  const body=el('tbody');for(const row of rows){const tr=el('tr');for(const value of row)tr.append(el('td',String(value)));body.append(tr);}t.append(body);wrap.append(t);parent.append(wrap);}
+const specs=[
+ ['任务正确处理','task_success','tasks'],['可满足换货','fulfillable_exchange_success','fulfillable_exchange_tasks'],
+ ['缺货回退','fallback_success','fallback_tasks'],['必要转人工','handoff_success','handoff_tasks'],
+ ['补邮箱','missing_email_success','missing_email_tasks'],['首次七字段全部正确','intent_joint_correct','intent_tasks'],
+ ['首次明确授权识别','true_permission_yes','authorized_tasks'],['首次未获授权却预测 YES ↓','unsupported_permission_yes','non_authorized_tasks'],
+ ['首次原始解析失败 ↓','initial_raw_parse_failures','intent_tasks'],['首次 reason 枚举错误 ↓','initial_reason_enum_error_tasks','intent_tasks']];
+const counts=[['重复追问尝试 ↓','repeated_question_attempts'],['重复问题实际送达 ↓','repeated_questions_delivered'],
+ ['所有相同动作重复 ↓','identical_action_repeats'],['不必要转人工尝试 ↓','unnecessary_handoff_attempts'],
+ ['不必要转人工执行 ↓','unnecessary_handoff_executed'],['模型调用总数','model_calls']];
+function renderTerminal(d){const t=d.terminal;
+  document.querySelector('h1').textContent='V8 三臂评测 · 已终止，证据未完整';
+  document.title='ResolveDesk · V8评测已终止（非性能报告）';
+  $('status').replaceChildren(el('strong',`评测已终止，证据未完整：${t.completed_test_records}/${t.planned_test_records} 条完整任务记录`),
+    el('p',`固定截止时间 ${t.process_stopped_at_utc}，进程返回码 ${t.process_return_code}。这是完成记录数，不是模型成功率；缺少的 ${t.missing_completed_records} 条不算模型成功或失败。`));
+  const progress=section('记录保存进度 · 非性能指标');
+  for(const row of t.rows){const wrap=el('div');wrap.className='progress-row';
+    wrap.append(el('strong',`${row.label} · ${row.complete_task_records}/${row.planned_task_records} 条完整记录`));
+    const bar=el('progress');bar.max=row.planned_task_records;bar.value=row.complete_task_records;
+    bar.setAttribute('aria-label',`${row.label}: ${row.complete_task_records} of ${row.planned_task_records} task records saved, not performance`);
+    wrap.append(bar,el('span',`尚无完整记录：${row.no_complete_task_record} 条`));progress.append(wrap);}
+  const calls=section('调用与终止状态');calls.append(
+    el('p',`${t.model_calls_issued} 次已发出调用中，${t.completed_call_entries} 次保留返回并附属于完整任务记录，${t.started_response_unknown_call_entries} 次返回状态不明。`),
+    el('p',`${t.missing_completed_records} 个未完成任务：${t.unstarted_task_count} 个未启动，${t.ambiguous_pending_task_count} 个存在状态不明调用。不自动重试、续接或重放。原始证据已保留。`),
+    el('p','没有完整的 144 条匹配三臂数据，因此不发布整体效果评分、提升结论或六组最终性能图；缺失记录不填零、不计失败。'));
+  if(d.status_assets_ready){const fig=section('可下载进度图 · 非性能对照');const image=el('img');image.src='/api/status-asset/completion.png';image.alt='各臂保存48、48、40条完整记录，缺失0、0、8条；这不是模型成功率';fig.append(image);
+    const links=el('div');links.className='links';for(const name of ['completion.svg','completion.csv']){const a=el('a',name);a.href='/api/status-asset/'+name;links.append(a);}fig.append(links);}
+  const scope=section('本轮实际范围');scope.append(
+    el('p',`本轮新增训练 ${t.training_updates_this_run} 次，只加载已保存权重。V8 历史训练 ${t.saved_v8_training_updates} 次更新已经完成，与本轮评测是否完整是两件事。旧对照权重此前已微调。`),
+    el('p','48 个同作者零售合成场景不是外部 benchmark 或生产数据。旧部分测试与历史验证不混合、不重跑。'),
+    el('p',t.gpu_runtime_released?'GPU 运行时已释放，观察到本项目活动会话为 0。页面不公开账户、余额、授权或原始会话内容。':'运行时释放状态尚未核实。'));
+}
+function render(d){const arms=d.arms,headers=['指标',...arms.map(a=>d.labels[a])],s=d.summary;
+  const before=s[arms[1]].task_success,after=s[arms[2]].task_success;
+  const direction=after<before?'下降':after===before?'未提升':'增加';
+  $('status').replaceChildren(el('strong',`固定 V8 流程下任务正确处理${direction}：${before}/48 → ${after}/48`),
+    el('p','144 条轨迹、全部调用及六组图表/CSV 已通过本地证据核验。核验通过不等于效果达标或可部署；失败与退化完整保留。'));
+  const main=section('三臂结果与明确分母');table(main,headers,[...specs.map(([label,k,n])=>[label,...arms.map(a=>`${s[a][k]}/${s[a][n]} (${(100*s[a][k]/s[a][n]).toFixed(1)}%)`)]),...counts.map(([label,k])=>[label,...arms.map(a=>s[a][k])])]);
+  main.append(el('p','首次字段只取第一个原始输出，后续修复不补首次正确率。未获授权却预测 YES 不等于实际未授权交易；重复追问与所有动作重复采用不同计数。'));
+  const pair=section('拆分流程与训练组合的效果');const names={workflow:'旧权重固定：V7 → V8 流程',training_under_v8:'V8 流程固定：旧权重 → 保存 V8 权重',combined:'流程与权重同时改变'};
+  table(pair,['对照','均通过','均失败','改善','退化'],Object.entries(d.paired).map(([k,p])=>[names[k]||k,p.both_pass,p.both_fail,p.improved,p.regressed]));
+  pair.append(el('p','固定 V8 流程的权重对照衡量整套续训的差异，不能隔离某一项数据、损失权重或采样技巧。'));
+  const consent=section('Scoped-consent 观察');const keys=[['初始换货场景','gold_exchange_tasks'],['原始退货尝试','raw_return_attempts'],['退货提案','return_proposals'],['退货提交','committed_returns'],['最终退货订单','final_return_orders'],['无 scoped YES 的提案','return_proposals_without_scoped_yes'],['无 scoped YES 的提交','committed_returns_without_scoped_yes'],['无已核验提交的最终退货','final_returns_without_verified_commit'],['因缺少 scoped YES 被拒的尝试','rejected_return_attempts_without_scoped_yes']];
+  table(consent,headers,keys.map(([label,k])=>[label,...arms.map(a=>d.protocol_summary[a][k])]));
+  consent.append(el('p','以上单位不能相加。这个小型同作者合成集中的零观察值不能证明生产安全，也不证明已消除所有 operation-rewrite 绕过路径。'));
+  const fail=section(`全部失败轨迹（${d.failed_records.length}）`);
+  if(d.failed_records.length)table(fail,['臂','场景','最终状态','调用数'],d.failed_records.map(r=>[d.labels[r.variant],r.case_id,r.status,r.model_calls]));
+  else fail.append(el('p','该合成集未观察到失败；这不构成生产可靠性证明。'));
+  const figures=section('真实来源图表与 CSV');const titles={evaluation:'业务处理结果',intent:'首次原始字段',recovery:'修复、重复动作与调用',families:'24 类场景',consent:'Scoped-consent 分立单位',training:'已保存的历史训练与本轮推理'};
+  const links=el('div');links.className='links';for(const name of d.csv){const a=el('a',name);a.href='/api/asset/'+encodeURIComponent(name);links.append(a);}figures.append(links);
+  for(const name of d.figures){const f=el('figure'),img=el('img');img.src='/api/asset/'+name+'.png';img.alt=titles[name]||name;img.loading='lazy';f.append(img);const cap=el('figcaption',titles[name]||name);const a=el('a',' · SVG');a.href='/api/asset/'+name+'.svg';cap.append(a);f.append(cap);figures.append(f);}
+  const scope=section('范围与局限');scope.append(el('p','同作者、继承政策、单订单有限目录的 48 个新合成世界，不是外部人工标注或官方 benchmark。旧 34 条部分记录、223 次已返回调用及 pending 任务的 11 次响应不复用、不池化、不重放；历史 48 条验证未重跑。'),
+    el('p','每个任务的失败与纠正调用均计入同一个 12 次总调用上限。延迟包含固定臂顺序、不同轨迹与日志开销，不能视为孤立硬件加速结论。资源授权上限不等于精确任务费用。'),
+    el('p',`历史保存训练：${d.training.updates} 次更新，${d.training.sampling.unique_rows_sampled}/${d.training.sampling.physical_rows} 条物理样本实际被采样。本轮新增训练为 0；展示不会切换任何默认 provider。`),
+    el('p',d.visual_qa_performed?'已有单独视觉 QA 记录。':'图表哈希与 CSV 已核验；页面本身不会把哈希核验冒充独立视觉 QA。'));
+}
+async function load(){const button=$('refresh');button.disabled=true;$('content').replaceChildren();
+  try{const response=await fetch('/api/report',{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);const d=await response.json();
+    if(d.terminal){renderTerminal(d);return;}
+    if(!d.available){$('status').replaceChildren(el('strong',d.terminal_integrity_error?'终态完整性待核实':'完整结果待核验'),el('p',d.reason));return;}render(d);
+  }catch(error){$('content').replaceChildren();$('status').replaceChildren(el('strong','本地证据暂不可读取'),el('p','未展示分数或图表。请确认只读服务与完整性核验状态。'));}
+  finally{button.disabled=false;}}
+$('refresh').addEventListener('click',load);load();
+</script>
+</html>

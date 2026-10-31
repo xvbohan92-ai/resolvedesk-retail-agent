@@ -14,3 +14,4 @@ jobs:
       - run: uv run ruff check resolve_desk training tests scripts --exclude "*.ipynb"
       - run: uv run pytest -q
       - run: node --check --input-type=module < resolve_desk/static/app.js
+      - run: uv run python scripts/reconcile_partial40_public_results.py

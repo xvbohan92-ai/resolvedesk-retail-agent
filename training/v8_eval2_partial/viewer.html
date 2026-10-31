@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ResolveDesk · 40场景阶段性对照</title>
+<style>
+:root{font-family:system-ui,-apple-system,sans-serif;color:#173046;background:#f3f5f5;line-height:1.6}
+*{box-sizing:border-box}body{margin:0}main{max-width:1200px;margin:auto;padding:36px 22px 70px}
+h1{font-size:clamp(26px,4vw,40px);line-height:1.2}h2{font-size:22px;margin-top:0}
+header p,.muted{color:#526575}section{background:white;border:1px solid #dce4e7;border-radius:14px;padding:24px;margin-top:22px}
+button,a{color:#18577a}button{border:1px solid #a1b8c7;background:#fff;border-radius:7px;padding:9px 16px;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid #c48c38;outline-offset:3px}.status{border-left:5px solid #af7a30}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:650px;font-variant-numeric:tabular-nums}
+td,th{text-align:left;border-bottom:1px solid #e1e8ea;padding:10px 12px;vertical-align:top}th{font-weight:650;background:#f6f8f9}
+td:first-child{max-width:410px;overflow-wrap:anywhere}.links{display:flex;gap:16px;flex-wrap:wrap}
+figure{margin:28px 0 0}img{display:block;max-width:100%;height:auto;border:1px solid #e3e8e9}
+figcaption,footer{font-size:14px;color:#526575}footer{margin-top:30px}#content:empty{display:none}
+</style>
+<main>
+<header><p>RESOLVEDESK · SAVED EVIDENCE · LOCAL CPU ONLY</p>
+<h1>40 个共同场景 · 阶段性三组对照</h1>
+<p>原144条评测在预设截止时停止，保存136条记录。本页另行分析三组共同完成的40个合成场景、120条配对轨迹。</p>
+<button id="refresh" type="button">重新读取本地核验结果</button></header>
+<section class="status" role="status" aria-live="polite" id="status">读取阶段性证据核验状态…</section>
+<div id="content"></div>
+<footer>本地只读展示。没有模型调用、训练、写库、审批或provider切换入口。原144条评测保持未完成；本页不重跑任何调用。</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
+function section(title){const n=el('section');n.append(el('h2',title));$('content').append(n);return n;}
+function table(parent,headers,rows){const wrap=el('div');wrap.className='scroll';const t=el('table');
+ const head=el('thead'),hr=el('tr');for(const h of headers)hr.append(el('th',h));head.append(hr);t.append(head);
+ const body=el('tbody');for(const row of rows){const tr=el('tr');for(const value of row)tr.append(el('td',String(value)));body.append(tr);}t.append(body);wrap.append(t);parent.append(wrap);}
+const specs=[['任务正确处理','task_success','tasks'],['可满足换货','fulfillable_exchange_success','fulfillable_exchange_tasks'],
+ ['缺货回退','fallback_success','fallback_tasks'],['必要转人工','handoff_success','handoff_tasks'],['补邮箱','missing_email_success','missing_email_tasks'],
+ ['首次七字段全部正确','intent_joint_correct','intent_tasks'],['首次明确授权识别','true_permission_yes','authorized_tasks'],
+ ['首次未获授权却预测YES ↓','unsupported_permission_yes','non_authorized_tasks'],['首次原始解析失败 ↓','initial_raw_parse_failures','intent_tasks'],
+ ['首次reason枚举错误 ↓','initial_reason_enum_error_tasks','intent_tasks']];
+const counts=[['重复追问尝试 ↓','repeated_question_attempts'],['重复问题实际送达 ↓','repeated_questions_delivered'],
+ ['所有相同动作重复 ↓','identical_action_repeats'],['不必要转人工尝试 ↓','unnecessary_handoff_attempts'],
+ ['不必要转人工执行 ↓','unnecessary_handoff_executed'],['模型调用总数','model_calls']];
+function percent(n,d){const whole=Math.floor(1000*n/d),remainder=1000*n-whole*d;
+ const rounded=whole+Number(2*remainder>d||(2*remainder===d&&whole%2===1));return (rounded/10).toFixed(1);}
+const ratio=(n,d)=>d?`${n}/${d} (${percent(n,d)}%)`:`${n}/${d}（无覆盖）`;
+function render(d){const arms=d.arms,s=d.summary,headers=['指标',...arms.map(a=>d.labels[a])];
+ const n=d.paired_cases,before=s[arms[1]].task_success,after=s[arms[2]].task_success;
+ const direction=after<before?'下降':after===before?'未提升':'增加';
+ $('status').replaceChildren(el('strong',`40场景阶段性结果：固定V8流程下正确处理${direction}，${before}/${n} → ${after}/${n}`),
+  el('p','这是截止后按共同完整记录进行的另行分析，不是原48场景完整评测。固定顺序截断并非随机抽样，不能外推到被排除场景或生产环境。证据核验通过不代表效果达标。'));
+ const main=section('三组结果 · 各指标使用实际分母');
+ table(main,headers,[...specs.map(([label,k,den])=>[label,...arms.map(a=>ratio(s[a][k],s[a][den]))]),...counts.map(([label,k])=>[label,...arms.map(a=>s[a][k])])]);
+ main.append(el('p','任务正确处理包含正确提案后客户确认或拒绝；成功数不等于实际换货、退款或取消交易数，拒绝后订单应保持原状。首次字段只取第一个原始输出，后续修复不补首次正确率。'),
+ el('p','未获授权却预测YES与实际未授权交易分别计数；重复追问尝试、实际送达问题与所有动作重复也采用不同单位。'));
+ const pair=section('分别识别流程与续训权重的影响');
+ const names={workflow:'旧权重固定：V7 → V8流程',training_under_v8:'V8流程固定：旧权重 → 保存V8权重',combined:'流程与权重同时改变'};
+ table(pair,['对照','场景数','均通过','均失败','改善','退化'],Object.entries(d.paired).map(([k,p])=>[names[k]||k,p.tasks,p.both_pass,p.both_fail,p.improved,p.regressed]));
+ pair.append(el('p','旧权重已经微调。固定流程的权重对照衡量整套续训的差异，不能隔离某项数据、损失权重或采样技巧。'));
+ const coverage=section('截断与未覆盖的改进点');
+ table(coverage,['场景类','原计划','本次配对','未纳入'],Object.entries(d.coverage.per_family).map(([f,v])=>[f,v.original_cases,v.selected_cases,v.excluded_cases]));
+ coverage.append(el('p','固定臂顺序运行到截止时，三组共同保留前40个场景。两组旧权重末尾已完成的16条不进入配对计算；V8组8条缺完整记录，其中7条未启动、1条有返回状态不明调用。它们不填零、不算模型失败，也不重跑。'),
+ el('p','未覆盖的场景类：'+d.coverage.excluded_families.join('、')+'。这些类别的修复效果本次无法下结论。'));
+ const consent=section('授权审计 · 尝试、提案、提交、最终订单分别计数');
+ const keys=[['初始换货场景','gold_exchange_tasks'],['原始退货尝试','raw_return_attempts'],['退货提案','return_proposals'],['退货提交','committed_returns'],['最终退货订单','final_return_orders'],['无scoped YES的提案','return_proposals_without_scoped_yes'],['无scoped YES的提交','committed_returns_without_scoped_yes'],['无已核验提交的最终退货','final_returns_without_verified_commit'],['缺少scoped YES而被拒的尝试','rejected_return_attempts_without_scoped_yes']];
+ table(consent,headers,keys.map(([label,k])=>[label,...arms.map(a=>d.protocol_summary[a][k])]));
+ consent.append(el('p','以上单位不能相加。小型合成集中的零观察不能证明生产安全，也不能证明已消除所有绕过路径。'));
+ const fail=section(`配对120条中的全部失败轨迹（${d.failed_records.length}）`);
+ if(d.failed_records.length)table(fail,['组','场景','最终状态','调用数'],d.failed_records.map(r=>[d.labels[r.variant],r.case_id,r.status,r.model_calls]));
+ else fail.append(el('p','这40个合成场景未观察到失败；不能据此外推生产可靠性。'));
+ const figures=section('六组阶段性图表与CSV');const titles={evaluation:'业务正确处理',intent:'首次原始字段',recovery:'修复、重复调用与追问',families:'本次覆盖的场景类',consent:'授权审计的分立单位',training:'历史保存训练与本轮零新增训练'};
+ const links=el('div');links.className='links';for(const name of d.csv){const a=el('a',name);a.href='/api/asset/'+encodeURIComponent(name);links.append(a);}figures.append(links);
+ for(const name of d.figures){const f=el('figure'),img=el('img');img.src='/api/asset/'+name+'.png';img.alt='40场景阶段性对照：'+titles[name];img.loading='lazy';f.append(img);const cap=el('figcaption',titles[name]);const a=el('a',' · SVG');a.href='/api/asset/'+name+'.svg';cap.append(a);f.append(cap);figures.append(f);}
+ const scope=section('解释边界');scope.append(el('p','这是40个同作者、继承政策的合成零售场景，不是独立外部benchmark或生产评测。原始136条完整记录、765次有返回调用及1次不明调用全部保留；只有共同120条进入配对指标。历史旧部分测试与验证保持独立。'),
+ el('p','每任务全部失败和纠正调用都计入同一个12次总调用上限。延迟受固定组顺序、不同轨迹与日志开销影响，仅作描述，不能解释为硬件加速或因果成本改善。'),
+ el('p','本轮仅在本地CPU核验已有证据，没有新增GPU分配、模型调用、训练更新、默认provider替换或上线。'));
+}
+async function load(){const b=$('refresh');b.disabled=true;$('content').replaceChildren();try{
+ const r=await fetch('/api/report',{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();
+ if(!d.available){$('status').replaceChildren(el('strong','阶段性结果待核验'),el('p',d.reason));return;}render(d);
+ }catch(e){$('content').replaceChildren();$('status').replaceChildren(el('strong','本地证据暂不可读取'),el('p','未展示分数或图表。请确认独立证据与图表核验状态。'));}finally{b.disabled=false;}}
+$('refresh').addEventListener('click',load);load();
+</script>
+</html>
